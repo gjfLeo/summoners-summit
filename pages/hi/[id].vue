@@ -1,17 +1,3 @@
-<script setup lang="ts">
-const route = useRoute()
-const user = useUserStore()
-const name = route.params.id
-
-watchEffect(() => {
-  user.setNewName(route.params.id as string)
-})
-
-definePageMeta({
-  layout: 'home',
-})
-</script>
-
 <template>
   <div>
     <div i-twemoji:waving-hand inline-block animate-shake-x animate-duration-5000 text-4xl />
@@ -47,3 +33,17 @@ definePageMeta({
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+const user = useUserStore();
+const name = route.params.id;
+
+watchEffect(() => {
+  user.setNewName(route.params.id as string);
+});
+
+definePageMeta({
+  layout: "home",
+});
+</script>

@@ -1,7 +1,3 @@
-<script setup lang='ts'>
-const { count, inc, dec } = useCount()
-</script>
-
 <template>
   <div inline-flex m="y-3">
     <button rounded-full p-2 btn @click="dec()">
@@ -15,3 +11,7 @@ const { count, inc, dec } = useCount()
     </button>
   </div>
 </template>
+
+<script setup lang='ts'>
+const { count, inc, dec } = useCount();
+</script>

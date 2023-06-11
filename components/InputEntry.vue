@@ -1,13 +1,3 @@
-<script setup lang="ts">
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
-</script>
-
 <template>
   <div>
     <input
@@ -20,7 +10,7 @@ function go() {
       border="~ rounded gray-200 dark:gray-700"
       outline="none active:none"
       @keydown.enter="go"
-    >
+    />
     <div>
       <button
         m-3 text-sm btn
@@ -32,3 +22,14 @@ function go() {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const name = ref("");
+
+const router = useRouter();
+function go() {
+  if (name.value) {
+    router.push(`/hi/${encodeURIComponent(name.value)}`);
+  }
+}
+</script>
