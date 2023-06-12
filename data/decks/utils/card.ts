@@ -1,4 +1,4 @@
-import type { ActionCard, CharacterCard } from "./types";
+import type { ActionCard, CharacterCard } from "~/utils/types";
 
 const ALL_CHARACTER_CARDS = [
   "甘雨", "迪奥娜", "凯亚", "重云", "神里绫华", "优菈", "申鹤",

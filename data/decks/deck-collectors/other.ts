@@ -1,8 +1,8 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const otherDecks = {
   // 提2 星1仙1
-  "水皇草-疯猫鸽鸽": buildDeck({
+  "水皇草-疯猫鸽鸽": registerDeck({
     team: ["纳西妲", "纯水精灵·洛蒂娅", "菲谢尔"],
     actions: {
       "赌徒的耳环": 2,
@@ -24,7 +24,7 @@ const otherDecks = {
     },
   }),
   // 提2 送1仙1
-  "水皇草-魔法绵羊Tobby": buildDeck({
+  "水皇草-魔法绵羊Tobby": registerDeck({
     team: ["纳西妲", "纯水精灵·洛蒂娅", "菲谢尔"],
     actions: {
       "赌徒的耳环": 2,
@@ -46,7 +46,7 @@ const otherDecks = {
     },
   }),
   // 提2 一1 星1仙2
-  "水皇草-音尘": buildDeck({
+  "水皇草-音尘": registerDeck({
     team: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
     actions: {
       "赌徒的耳环": 2,
@@ -68,7 +68,7 @@ const otherDecks = {
     },
   }),
   // 提0 星1送2仙1
-  "水皇草-小床": buildDeck({
+  "水皇草-小床": registerDeck({
     team: ["纳西妲", "纯水精灵·洛蒂娅", "菲谢尔"],
     actions: {
       "赌徒的耳环": 2,
@@ -90,7 +90,7 @@ const otherDecks = {
     },
   }),
   // 一0运1送2仙2 披1
-  "水皇草-八重妞妞": buildDeck({
+  "水皇草-八重妞妞": registerDeck({
     team: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
     actions: {
       "赌徒的耳环": 2,
@@ -112,7 +112,7 @@ const otherDecks = {
     },
   }),
   // 派0拉2 最1换1
-  "水皇草-卡密sama": buildDeck({
+  "水皇草-卡密sama": registerDeck({
     team: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
     actions: {
       "赌徒的耳环": 1,
@@ -134,7 +134,7 @@ const otherDecks = {
       "蒙德土豆饼": 2,
     },
   }),
-  "水可草-企鹅带带北极熊": buildDeck({
+  "水可草-企鹅带带北极熊": registerDeck({
     team: ["可莉", "纯水精灵·洛蒂娅", "纳西妲"],
     actions: {
       "砰砰礼物": 2,
@@ -157,7 +157,7 @@ const otherDecks = {
       "唐杜尔烤鸭": 2,
     },
   }),
-  "莫温雷-老伯": buildDeck({
+  "莫温雷-老伯": registerDeck({
     team: ["无相之雷", "莫娜", "温迪"],
     actions: {
       "赌徒的耳环": 2,
@@ -179,7 +179,7 @@ const otherDecks = {
       "蒙德土豆饼": 2,
     },
   }),
-  "班尼特雷神绫华-兔娘": buildDeck({
+  "班尼特雷神绫华-兔娘": registerDeck({
     team: ["班尼特", "雷电将军", "神里绫华"],
     actions: {
       "冒险憧憬": 2,
@@ -201,7 +201,7 @@ const otherDecks = {
       "蒙德土豆饼": 2,
     },
   }),
-  "水债八-老伯": buildDeck({
+  "水债八-老伯": registerDeck({
     team: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
     actions: {
       "神篱之御荫": 1,

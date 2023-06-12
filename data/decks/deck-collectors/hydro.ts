@@ -1,7 +1,7 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const hydroDecks = {
-  "双水凝光-老伯": buildDeck({
+  "双水凝光-老伯": registerDeck({
     team: ["芭芭拉", "凝光", "珊瑚宫心海"],
     actions: {
       "祭礼残章": 2,
@@ -25,7 +25,7 @@ const hydroDecks = {
       "烤蘑菇披萨": 1,
     },
   }),
-  "双水凝光-古明地觉": buildDeck({
+  "双水凝光-古明地觉": registerDeck({
     team: ["珊瑚宫心海", "凝光", "芭芭拉"],
     actions: {
       "储之千日，用之一刻": 1,
@@ -49,7 +49,7 @@ const hydroDecks = {
       "烤蘑菇披萨": 1,
     },
   }),
-  "双水凝光-卡密sama": buildDeck({
+  "双水凝光-卡密sama": registerDeck({
     team: ["珊瑚宫心海", "凝光", "芭芭拉"],
     actions: {
       "储之千日，用之一刻": 1,

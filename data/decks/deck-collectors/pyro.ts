@@ -1,4 +1,4 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const elementCards = {
   "元素共鸣：交织之火": 2,
@@ -7,7 +7,7 @@ const elementCards = {
 
 const pyroDecks = {
   // 璃1派2提2立2拉2
-  "火刻-疯猫鸽鸽": buildDeck({
+  "火刻-疯猫鸽鸽": registerDeck({
     team: ["班尼特", "可莉", "刻晴"],
     actions: {
       "冒险憧憬": 2,
@@ -30,7 +30,7 @@ const pyroDecks = {
     },
   }),
   // 璃1桓2派2提2拉2寻1
-  "火刻-毕游侠": buildDeck({
+  "火刻-毕游侠": registerDeck({
     team: ["班尼特", "可莉", "刻晴"],
     actions: {
       "冒险憧憬": 2,
@@ -54,7 +54,7 @@ const pyroDecks = {
     },
   }),
   // 璃2派2立2 风2 最2 送2 莲2土2 唐1
-  "火刻-小床": buildDeck({
+  "火刻-小床": registerDeck({
     team: ["班尼特", "可莉", "刻晴"],
     actions: {
       "冒险憧憬": 2,
@@ -75,7 +75,7 @@ const pyroDecks = {
     },
   }),
   // 璃1派2提2立2
-  "火刻-古明地觉": buildDeck({
+  "火刻-古明地觉": registerDeck({
     team: ["班尼特", "可莉", "刻晴"],
     actions: {
       "冒险憧憬": 2,
@@ -97,7 +97,7 @@ const pyroDecks = {
     },
   }),
   // 璃2派2提2立2拉1 风1 最2运1 送1 莲2 唐1
-  "火刻-魔法绵阳Tobby": buildDeck({
+  "火刻-魔法绵阳Tobby": registerDeck({
     team: ["刻晴", "班尼特", "可莉"],
     actions: {
       "冒险憧憬": 2,
@@ -120,7 +120,7 @@ const pyroDecks = {
     },
   }),
   // 璃2派2提2立2
-  "火刻-卡密sama": buildDeck({
+  "火刻-卡密sama": registerDeck({
     team: ["可莉", "刻晴", "班尼特"],
     actions: {
       "冒险憧憬": 2,
@@ -143,7 +143,7 @@ const pyroDecks = {
     },
   }),
 
-  "火刻-鸭鸭": buildDeck({
+  "火刻-鸭鸭": registerDeck({
     team: ["班尼特", "可莉", "刻晴"],
     actions: {
       "冒险憧憬": 1,
@@ -165,7 +165,7 @@ const pyroDecks = {
     },
   }),
 
-  "公子-企鹅带带北极熊": buildDeck({
+  "公子-企鹅带带北极熊": registerDeck({
     team: ["达达利亚", "班尼特", "愚人众·火之债务处理人"],
     actions: {
       "冒险憧憬": 2,

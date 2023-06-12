@@ -1,4 +1,4 @@
-import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "./card";
+import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "../data/decks/utils/card";
 
 export interface Tournament {
   name: string;
@@ -19,8 +19,8 @@ export interface Match {
 }
 
 export interface Game {
-  deckA: Deck;
-  deckB: Deck;
+  deckA: string;
+  deckB: string;
   startWith: "A" | "B" | "pending";
   winner: "A" | "B" | "pending";
   turns: number | null;

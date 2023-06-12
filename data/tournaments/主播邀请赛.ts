@@ -1,5 +1,5 @@
-import { anemoDecks, cryoDecks, dendroDecks, geoDecks, hydroDecks, otherDecks, pyroDecks } from "../decks";
-import type { Tournament } from "../../../utils/types";
+import { anemoDecks, cryoDecks, dendroDecks, geoDecks, hydroDecks, otherDecks, pyroDecks } from "../decks/deck-collectors";
+import type { Tournament } from "~/utils/types";
 
 const tournament: Tournament = {
   name: "「七圣召唤主播邀请赛」",

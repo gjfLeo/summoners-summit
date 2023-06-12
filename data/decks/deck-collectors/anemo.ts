@@ -1,4 +1,4 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const elementCards = {
   "元素共鸣：交织之风": 2,
@@ -6,7 +6,7 @@ const elementCards = {
 } as const;
 
 const anemoDecks = {
-  "莫温魈-莲花": buildDeck({
+  "莫温魈-莲花": registerDeck({
     team: ["莫娜", "温迪", "魈"],
     actions: {
       "绪风之拥": 2,

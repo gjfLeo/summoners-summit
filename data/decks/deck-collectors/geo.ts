@@ -1,4 +1,4 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const elementCards = {
   "元素共鸣：交织之岩": 2,
@@ -6,7 +6,7 @@ const elementCards = {
 } as const;
 
 const geoDecks = {
-  "一斗双岩-八重妞妞": buildDeck({
+  "一斗双岩-八重妞妞": registerDeck({
     team: ["芭芭拉", "荒泷一斗", "诺艾尔"],
     actions: {
       "钟剑": 2,
@@ -28,7 +28,7 @@ const geoDecks = {
       "烤蘑菇披萨": 2,
     },
   }),
-  "一斗双岩-Sherry": buildDeck({
+  "一斗双岩-Sherry": registerDeck({
     team: ["诺艾尔", "芭芭拉", "荒泷一斗"],
     actions: {
       "钟剑": 2,
@@ -49,7 +49,7 @@ const geoDecks = {
       "烤蘑菇披萨": 2,
     },
   }),
-  "女仆双岩-狗神儿": buildDeck({
+  "女仆双岩-狗神儿": registerDeck({
     team: ["芭芭拉", "凝光", "诺艾尔"],
     actions: {
       "狼的末路": 1,
@@ -72,7 +72,7 @@ const geoDecks = {
       "黄油蟹蟹": 1,
     },
   }),
-  "钟离双岩-狗神儿": buildDeck({
+  "钟离双岩-狗神儿": registerDeck({
     team: ["钟离", "岩盔丘丘王", "珊瑚宫心海"],
     actions: {
       贯虹之槊: 2,
@@ -93,7 +93,7 @@ const geoDecks = {
       黄油蟹蟹: 1,
     },
   }),
-  "雷钟凝-鸭鸭": buildDeck({
+  "雷钟凝-鸭鸭": registerDeck({
     team: ["钟离", "雷电将军", "凝光"],
     actions: {
       "贯虹之槊": 2,

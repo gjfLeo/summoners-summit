@@ -1,4 +1,4 @@
-import { buildDeck } from "../../utils/deck";
+import { registerDeck } from "../deck-store";
 
 const elementCards = {
   "元素共鸣：交织之冰": 2,
@@ -7,7 +7,7 @@ const elementCards = {
 
 const cryoDecks = {
   // 1：岩与契约 重攻击 仙跳墙 莲花酥
-  "雷申重-毕游侠": buildDeck({
+  "雷申重-毕游侠": registerDeck({
     team: ["申鹤", "雷电将军", "重云"],
     actions: {
       "赌徒的耳环": 2,
@@ -29,7 +29,7 @@ const cryoDecks = {
     },
   }),
   // 1：星天之兆 送你一程 重攻击 仙跳墙
-  "雷申重-音尘": buildDeck({
+  "雷申重-音尘": registerDeck({
     team: ["雷电将军", "申鹤", "重云"],
     actions: {
       "赌徒的耳环": 2,
@@ -51,7 +51,7 @@ const cryoDecks = {
     },
   }),
 
-  "雷申重-Sherry": buildDeck({
+  "雷申重-Sherry": registerDeck({
     team: ["重云", "雷电将军", "申鹤"],
     actions: {
       "赌徒的耳环": 2,
@@ -72,7 +72,7 @@ const cryoDecks = {
     },
   }),
 
-  "雷申优-企鹅带带北极熊": buildDeck({
+  "雷申优-企鹅带带北极熊": registerDeck({
     team: ["优菈", "雷电将军", "申鹤"],
     actions: {
       "狼的末路": 1,
