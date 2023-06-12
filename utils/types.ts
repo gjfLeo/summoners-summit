@@ -1,4 +1,4 @@
-import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "../data/decks/utils/card";
+import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "../data/shared/utils/card";
 
 export interface Tournament {
   name: string;

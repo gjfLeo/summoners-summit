@@ -1,4 +1,4 @@
-import { actionCardSorter, hashDeck } from "../utils";
+import { actionCardSorter, hashDeck } from "../../shared/utils";
 import type { ActionCard, CharacterCard, Deck } from "~/utils/types";
 
 export const deckIdSet = new Set<string>();

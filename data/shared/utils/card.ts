@@ -93,10 +93,11 @@ const ALL_ACTION_CARDS = [
   ...SPELLS, ...FOODS,
 ];
 
-const characterCardOrder = Object.fromEntries(ALL_CHARACTER_CARDS.map((card, i) => [card, i])) as Record<CharacterCard, number>;
-const characterCardSorter = (a: CharacterCard, b: CharacterCard) => characterCardOrder[a] - characterCardOrder[b];
-const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
-const actionCardSorter = (a: ActionCard, b: ActionCard) => actionCardOrder[a] - actionCardOrder[b];
-
 export { ALL_CHARACTER_CARDS, ALL_ACTION_CARDS };
-export { characterCardSorter, actionCardSorter };
+
+const characterCardOrder = Object.fromEntries(ALL_CHARACTER_CARDS.map((card, i) => [card, i])) as Record<CharacterCard, number>;
+export const characterCardFilter = (k: string): k is CharacterCard => ALL_CHARACTER_CARDS.includes(k as CharacterCard);
+export const characterCardSorter = (a: CharacterCard, b: CharacterCard) => characterCardOrder[a] - characterCardOrder[b];
+const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
+export const actionCardFilter = (k: string): k is ActionCard => ALL_ACTION_CARDS.includes(k as ActionCard);
+export const actionCardSorter = (a: ActionCard, b: ActionCard) => actionCardOrder[a] - actionCardOrder[b];
