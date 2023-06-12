@@ -16,3 +16,4 @@ import { tournaments } from "./tournaments";
 Object.keys(tournaments);
 
 export * from "./decks";
+export * from "./tournaments";

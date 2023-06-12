@@ -6,5 +6,6 @@
   "files.associations": {
     "*.css": "postcss",
   },
+  "css.validate": false,
   "editor.formatOnSave": false,
 }

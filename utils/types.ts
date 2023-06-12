@@ -23,8 +23,8 @@ export interface Game {
   deckB: string;
   startWith: "A" | "B" | "pending";
   winner: "A" | "B" | "pending";
-  turns: number | null;
-  video: string | null;
+  turns?: number;
+  video?: string;
 }
 
 export interface Deck {

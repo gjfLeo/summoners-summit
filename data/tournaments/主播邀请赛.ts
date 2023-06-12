@@ -1,4 +1,4 @@
-import { anemoDecks, cryoDecks, dendroDecks, geoDecks, hydroDecks, otherDecks, pyroDecks } from "../decks/deck-collectors";
+import { anemoDecks, cryoDecks, dendroDecks, electroDecks, geoDecks, hydroDecks, otherDecks, pyroDecks } from "../decks/deck-collectors";
 import type { Tournament } from "~/utils/types";
 
 const tournament: Tournament = {
@@ -331,6 +331,195 @@ const tournament: Tournament = {
           ],
         },
       ],
+    },
+    {
+      name: "6月9日线上预选赛C组",
+      date: "2023-06-09",
+      matches: [
+        {
+          playerA: "男总",
+          playerB: "吴意",
+          winner: "B",
+          games: [
+            {
+              deckA: otherDecks["水皇草-男总"],
+              deckB: dendroDecks["提八激化-吴意"],
+              startWith: "B",
+              winner: "B",
+              turns: 3,
+            },
+            {
+              deckA: cryoDecks["雷申重-男总"],
+              deckB: pyroDecks["火刻-吴意"],
+              startWith: "B",
+              winner: "B",
+              turns: 4,
+            },
+          ],
+        },
+        {
+          playerA: "Soul",
+          playerB: "皮皮猪",
+          winner: "B",
+          games: [
+            {
+              deckA: otherDecks["莫皇草-Soul"],
+              deckB: dendroDecks["提八激化-皮皮猪"],
+              startWith: "B",
+              winner: "B",
+              turns: 3,
+            },
+            {
+              deckA: geoDecks["钟离魔物双岩-Soul"],
+              deckB: otherDecks["水皇草-皮皮猪"],
+              startWith: "A",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          playerA: "阿阮",
+          playerB: "齿轮",
+          winner: "B",
+          games: [
+            {
+              deckA: pyroDecks["胡桃愚人众-阿阮"],
+              deckB: cryoDecks["雷申重-齿轮"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: hydroDecks["双水莫娜凝光-阿阮"],
+              deckB: electroDecks["水皇赛-齿轮"],
+              startWith: "A",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          playerA: "唐傀",
+          playerB: "莉莉芭",
+          winner: "B",
+          games: [
+            {
+              deckA: dendroDecks["提八激化-唐傀"],
+              deckB: geoDecks["雷钟凝-莉莉芭"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: cryoDecks["雷申重-唐傀"],
+              deckB: dendroDecks["提八激化-古明地觉"],
+              startWith: "A",
+              winner: "A",
+            },
+            {
+              deckA: otherDecks["水皇草-唐傀"],
+              deckB: pyroDecks["火刻-古明地觉"],
+              startWith: "B",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          playerA: "吴意",
+          playerB: "皮皮猪",
+          winner: "B",
+          games: [
+            {
+              deckA: dendroDecks["提八激化-吴意"],
+              deckB: otherDecks["水皇草-皮皮猪"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: otherDecks["水皇草-吴意"],
+              deckB: cryoDecks["雷申重-皮皮猪"],
+              startWith: "B",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          playerA: "齿轮",
+          playerB: "莉莉芭",
+          winner: "B",
+          games: [
+            {
+              deckA: dendroDecks["提八草神-齿轮"],
+              deckB: pyroDecks["火刻-古明地觉"],
+              startWith: "A",
+              winner: "B",
+            },
+            {
+              deckA: cryoDecks["雷申重-齿轮"],
+              deckB: otherDecks["水皇草-莉莉芭"],
+              startWith: "A",
+              winner: "B",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "6月10日线上预选赛D组",
+      date: "2023-06-10",
+      matches: [
+        {
+          playerA: "雪国Ink",
+          playerB: "多肉",
+          winner: "A",
+          games: [
+            {
+              deckA: otherDecks["水债皇-雪国Ink"],
+              deckB: hydroDecks["双水凝光-多肉"],
+              startWith: "A",
+              winner: "A",
+            },
+            {
+              deckA: pyroDecks["火刻-雪国Ink"],
+              deckB: geoDecks["雷钟一斗-多肉"],
+              startWith: "B",
+              winner: "A",
+            },
+          ],
+        },
+        {
+          playerA: "周正福",
+          playerB: "长安大魔王",
+          winner: "A",
+          games: [],
+        },
+        {
+          playerA: "今天不想吃苹果",
+          playerB: "啊乔巴",
+          winner: "A",
+          games: [],
+        },
+        {
+          playerA: "柠柠七喵",
+          playerB: "月话音月",
+          winner: "B",
+          games: [],
+        },
+        {
+          playerA: "雪国Ink",
+          playerB: "周正福",
+          winner: "B",
+          games: [],
+        },
+        {
+          playerA: "今天不想吃苹果",
+          playerB: "月话音月",
+          winner: "A",
+          games: [],
+        },
+      ],
+    },
+    {
+      name: "6月11日线上晋级赛",
+      date: "2023-06-11",
+      matches: [],
     },
   ],
 };
