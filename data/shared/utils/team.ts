@@ -1,3 +1,4 @@
+import { characterCardSorter } from "./card";
 import type { CharacterCard, Deck } from "~/utils/types";
 
 export function getTeamId(deck: Pick<Deck, "characterCards">) {

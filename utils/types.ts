@@ -1,5 +1,8 @@
 import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "../data/shared/utils/card";
 
+export type CharacterCard = typeof ALL_CHARACTER_CARDS[number];
+export type ActionCard = typeof ALL_ACTION_CARDS[number];
+
 export interface Tournament {
   name: string;
   sections: Section[];
@@ -33,5 +36,11 @@ export interface Deck {
   actionCards: Partial<Record<ActionCard, 1 | 2>>;
 }
 
-export type CharacterCard = typeof ALL_CHARACTER_CARDS[number];
-export type ActionCard = typeof ALL_ACTION_CARDS[number];
+export interface DeckGameRecord {
+  deckId: string;
+  player: string;
+  opponentDeckId: string;
+  opponentPlayer: string;
+  startWith: boolean;
+  win: boolean;
+}

@@ -1,6 +1,9 @@
 import { pwa } from "./config/pwa";
 import { appDescription } from "./constants/index";
-import { deckList, teamList } from "./data";
+
+// import { deckList, teamList } from "./data";
+
+// console.log("nuxt.config", deckList.length);
 
 export default defineNuxtConfig({
   modules: [
@@ -36,8 +39,8 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: [
-        ...deckList.map(deck => `/deck/${deck.id}`),
-        ...teamList.map(team => `/team/${team}`),
+        // ...deckList.map(deck => `/deck/${deck.id}`),
+        // ...teamList.map(team => `/team/${team}`),
       ],
       ignore: ["/hi"],
     },

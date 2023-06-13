@@ -1,14 +1,30 @@
 <template>
-  <button class="outline-none" @click="sortByCount = !sortByCount">
-    <div :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
-  </button>
+  <div>
+    单卡使用率
+    <button class="translate-y-1 outline-none" @click="sortByCount = !sortByCount">
+      <div :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
+    </button>
+  </div>
   <pre>{{ actionCardAverage }}</pre>
-  <!-- <pre v-if="sortByCount">{{ actionCardAverageSortByOrder }}</pre> -->
+
+  <div>
+    <div v-for="(record, i) in deckGameRecords" :key="i">
+      <NuxtLink :to="`/deck/${record.deckId}`" class="text-lime-600 underline">
+        {{ getTeamId(findDeck(record.deckId)!) }} by {{ record.player }}
+      </NuxtLink>
+      vs
+      <NuxtLink :to="`/deck/${record.opponentDeckId}`" class="text-lime-600 underline">
+        {{ getTeamId(findDeck(record.opponentDeckId)!) }} by {{ record.opponentPlayer }}
+      </NuxtLink>
+      {{ record.startWith ? "先手" : "后手" }}
+      {{ record.win ? "胜" : "负" }}
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { add, divide, format, number, subtract } from "mathjs/number";
-import { findDecksByTeam } from "~/data";
+import { add, divide, format, multiply, number, subtract } from "mathjs/number";
+import { findDeck, findDeckGameRecords, findDecksByTeam } from "~/data";
 import type { ActionCard } from "~/utils/types";
 
 const SPLITTER = "-";
@@ -24,23 +40,7 @@ if (normalizedTeamId !== teamId) {
 }
 
 const decks = findDecksByTeam(teamId);
-
-// const commonActionCards = Object.values(decks)
-//   .reduce((common, deck) => {
-//     Object.keys(common)
-//       .forEach((cardString) => {
-//         const card = cardString as ActionCard;
-//         const countInCommon = common[card];
-//         const countInDeck = deck.actionCards[card];
-//         if (countInCommon && countInDeck) {
-//           common[card] = Math.min(countInCommon, countInDeck) as 1 | 2;
-//         }
-//         else {
-//           delete common[card];
-//         }
-//       });
-//     return common;
-//   }, decks[0].actionCards);
+const deckGameRecords = decks.flatMap(deck => findDeckGameRecords(deck.id));
 
 const actionCardSum = decks
   .reduce(
@@ -48,11 +48,12 @@ const actionCardSum = decks
       Object.entries(deck.actionCards).forEach(([card, count]) => {
         if (!actionCardFilter(card)) return;
         const summaryCount = summary[card];
+        const recordNum = deckGameRecords.filter(record => record.deckId === deck.id).length;
         if (summaryCount) {
-          summary[card] = add(summaryCount, count);
+          summary[card] = add(summaryCount, multiply(count, recordNum));
         }
         else {
-          summary[card] = count;
+          summary[card] = multiply(count, recordNum);
         }
       });
       return summary;
@@ -63,7 +64,7 @@ const sortByCount = ref(false);
 const actionCardAverage = computed(() => {
   const entries = Object.entries(actionCardSum)
     .map<[ActionCard, string]>(([card, count]) => {
-      return [card as ActionCard, format(divide(count, decks.length), { precision: 4 })];
+      return [card as ActionCard, format(divide(count, deckGameRecords.length), { precision: 4 })];
     });
   if (sortByCount.value) {
     return Object.fromEntries(entries
@@ -78,20 +79,4 @@ const actionCardAverage = computed(() => {
     );
   }
 });
-// const actionCardAverageSortByCount = Object.fromEntries(
-//   Object.entries(actionCardSum)
-//     .map<[ActionCard, string]>(([card, count]) => {
-//       return [card as ActionCard, format(divide(count, decks.length), { precision: 4 })];
-//     })
-//     .sort(([card1], [card2]) => actionCardSorter(card1, card2))
-//     .sort(([,count1], [,count2]) => subtract(number(count2), number(count1))),
-// );
-// const actionCardAverageSortByOrder = Object.fromEntries(
-//   Object.entries(actionCardSum)
-//     .map<[ActionCard, string]>(([card, count]) => {
-//       return [card as ActionCard, format(divide(count, decks.length), { precision: 4 })];
-//     })
-//     .sort(([,count1], [,count2]) => subtract(number(count2), number(count1)))
-//     .sort(([card1], [card2]) => actionCardSorter(card1, card2)),
-// );
 </script>
