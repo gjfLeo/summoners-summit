@@ -2,13 +2,13 @@
   <!-- 角色卡 -->
   <div grid grid-cols-3 m-inline-auto max-w-100 gap-2>
     <template v-for="(card, i) in characterCards" :key="i">
-      <CardImage :card="card" w-100% />
+      <CardImage :card="card" class="w-100%" />
     </template>
   </div>
   <!-- 行动卡 -->
   <div grid grid-cols="6 md:10 lg:15" mt gap-2>
     <template v-for="(card, i) in actionCards" :key="i">
-      <CardImage :card="card" w-100% />
+      <CardImage :card="card" class="w-100%" />
     </template>
   </div>
   <div mt>
