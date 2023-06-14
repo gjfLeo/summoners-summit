@@ -11,7 +11,7 @@
       >
         {{ field.label }}
         <div
-          class="i-carbon:sort-descending ml-1 inline-block transition"
+          class="i-carbon:caret-sort-down mb--3 ml-1 inline-block translate-y--3 transition"
           :class="orderBy === field.key ? '' : 'text-gray'"
         />
       </button>

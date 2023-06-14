@@ -5,7 +5,16 @@
       <div :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
     </button>
   </div>
-  <pre>{{ actionCardAverage }}</pre>
+
+  <div grid-cols-3-auto grid items-center>
+    <!-- <TransitionGroup> -->
+    <template v-for="item in actionCardAverage" :key="item.card">
+      <CardImageThumb :card="item.card" class="m-block-1" />
+      <div>{{ item.card }}</div>
+      <div>{{ item.averageUsage }}</div>
+    </template>
+    <!-- </TransitionGroup> -->
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -39,16 +48,16 @@ const actionCardAverage = computed(() => {
       return [card as ActionCard, format(divide(count, decks.length), { precision: 4 })];
     });
   if (sortByCount.value) {
-    return Object.fromEntries(entries
+    return entries
       .sort(([card1], [card2]) => actionCardSorter(card1, card2))
-      .sort(([,count1], [,count2]) => subtract(number(count2), number(count1))),
-    );
+      .sort(([,count1], [,count2]) => subtract(number(count2), number(count1)))
+      .map(([card, averageUsage]) => ({ card, averageUsage }));
   }
   else {
-    return Object.fromEntries(entries
+    return entries
       .sort(([,count1], [,count2]) => subtract(number(count2), number(count1)))
-      .sort(([card1], [card2]) => actionCardSorter(card1, card2)),
-    );
+      .sort(([card1], [card2]) => actionCardSorter(card1, card2))
+      .map(([card, averageUsage]) => ({ card, averageUsage }));
   }
 });
 </script>
