@@ -34,4 +34,20 @@ html.dark {
 pre {
   @apply font-mono;
 }
+
+.v-move,
+.v-enter-active,
+.v-leave-active {
+  @apply transition;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.v-leave-active {
+  position: absolute;
+}
 </style>
