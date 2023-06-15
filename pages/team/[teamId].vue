@@ -1,31 +1,27 @@
 <template>
+  <div>选取数：{{ teamGameList.length }}</div>
+  <div>获胜数：{{ teamGameList.filter(g => g.winner === "A").length }}</div>
+
   <div>
     单卡使用率
     <button class="translate-y-1 outline-none" @click="sortByCount = !sortByCount">
       <div :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
     </button>
   </div>
-  <pre>{{ actionCardAverage }}</pre>
 
-  <div>
-    <div v-for="(record, i) in deckGameRecords" :key="i">
-      <NuxtLink :to="`/deck/${record.deckId}`" class="text-lime-600 underline">
-        {{ getTeamId(findDeck(record.deckId)!) }} by {{ record.player }}
-      </NuxtLink>
-      vs
-      <NuxtLink :to="`/deck/${record.opponentDeckId}`" class="text-lime-600 underline">
-        {{ getTeamId(findDeck(record.opponentDeckId)!) }} by {{ record.opponentPlayer }}
-      </NuxtLink>
-      {{ record.startWith ? "先手" : "后手" }}
-      {{ record.win ? "胜" : "负" }}
-    </div>
-  </div>
+  <TransitionGroup>
+    <template v-for="item in cardUsages" :key="item.card">
+      <div>{{ item.card }}: {{ item.count }}</div>
+    </template>
+  </TransitionGroup>
+
+  <GameRecordList :list="teamGameList" />
 </template>
 
 <script lang="ts" setup>
-import { add, divide, format, multiply, number, subtract } from "mathjs/number";
-import { findDeck, findDeckGameRecords, findDecksByTeam } from "~/data";
-import type { ActionCard } from "~/utils/types";
+import { divide, format, number, subtract } from "mathjs/number";
+import { findDeck, findGamesByTeam } from "~/data";
+import type { ActionCard, Deck } from "~/utils/types";
 
 const SPLITTER = "-";
 
@@ -39,44 +35,37 @@ if (normalizedTeamId !== teamId) {
   navigateTo(`/team/${encodeURIComponent(normalizedTeamId)}`, { replace: true });
 }
 
-const decks = findDecksByTeam(teamId);
-const deckGameRecords = decks.flatMap(deck => findDeckGameRecords(deck.id));
+// const decks = findDecksByTeam(teamId);
+const teamGameList = findGamesByTeam(teamId);
 
-const actionCardSum = decks
+const actionCardSum = teamGameList.map(game => findDeck(game.deckA) as Deck)
   .reduce(
     (summary, deck) => {
-      Object.entries(deck.actionCards).forEach(([card, count]) => {
-        if (!actionCardFilter(card)) return;
-        const summaryCount = summary[card];
-        const recordNum = deckGameRecords.filter(record => record.deckId === deck.id).length;
-        if (summaryCount) {
-          summary[card] = add(summaryCount, multiply(count, recordNum));
-        }
-        else {
-          summary[card] = multiply(count, recordNum);
-        }
-      });
+      for (const entry of Object.entries(deck.actionCards)) {
+        const [card, count] = entry as [ActionCard, number];
+        const summaryCount = summary[card] ?? 0;
+        summary[card] = summaryCount + count;
+      }
       return summary;
     },
     {} as Partial<Record<ActionCard, number>>,
   );
 const sortByCount = ref(false);
-const actionCardAverage = computed(() => {
-  const entries = Object.entries(actionCardSum)
-    .map<[ActionCard, string]>(([card, count]) => {
-      return [card as ActionCard, format(divide(count, deckGameRecords.length), { precision: 4 })];
-    });
+
+const cardUsages = computed(() => {
+  const usages = Object.entries(actionCardSum)
+    .map(([card, count]) => {
+      return {
+        card: card as ActionCard,
+        count: format(divide(count, teamGameList.length), { precision: 4 }),
+      };
+    })
+    .sort((u1, u2) => actionCardSorter(u1.card, u2.card));
   if (sortByCount.value) {
-    return Object.fromEntries(entries
-      .sort(([card1], [card2]) => actionCardSorter(card1, card2))
-      .sort(([,count1], [,count2]) => subtract(number(count2), number(count1))),
-    );
+    return usages.sort((u1, u2) => subtract(number(u1.count), number(u2.count)));
   }
   else {
-    return Object.fromEntries(entries
-      .sort(([,count1], [,count2]) => subtract(number(count2), number(count1)))
-      .sort(([card1], [card2]) => actionCardSorter(card1, card2)),
-    );
+    return usages;
   }
 });
 </script>

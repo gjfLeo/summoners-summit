@@ -3,10 +3,11 @@ import type { Tournament } from "~/utils/types";
 
 const tournament: Tournament = {
   name: "「七圣召唤主播邀请赛」",
-  sections: [
+  stages: [
     {
       name: "6月7日线上预选赛A组",
       date: "2023-06-07",
+      rules: ["自备卡组", "单败淘汰", "决斗3"],
       matches: [
         {
           playerA: "毕游侠",
@@ -159,6 +160,7 @@ const tournament: Tournament = {
     {
       name: "6月8日线上预选赛B组",
       date: "2023-06-08",
+      rules: ["自备卡组", "单败淘汰", "决斗3"],
       matches: [
         {
           playerA: "Sherry",
@@ -335,6 +337,7 @@ const tournament: Tournament = {
     {
       name: "6月9日线上预选赛C组",
       date: "2023-06-09",
+      rules: ["自备卡组", "单败淘汰", "决斗3"],
       matches: [
         {
           playerA: "男总",
@@ -464,6 +467,7 @@ const tournament: Tournament = {
     {
       name: "6月10日线上预选赛D组",
       date: "2023-06-10",
+      rules: ["自备卡组", "单败淘汰", "决斗3"],
       matches: [
         {
           playerA: "雪国Ink",
@@ -602,6 +606,7 @@ const tournament: Tournament = {
     {
       name: "6月11日线上晋级赛",
       date: "2023-06-11",
+      rules: ["自备卡组", "单败淘汰", "决斗3"],
       matches: [],
     },
   ],

@@ -1,5 +1,8 @@
 <template>
-  <img :src="imageUrl" alt="card" inline-block />
+  <img
+    :src="imageUrl" alt="card"
+    class="inline-block aspect-ratio-20/20"
+  />
 </template>
 
 <script lang="ts" setup>

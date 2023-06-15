@@ -5,27 +5,28 @@ export type ActionCard = typeof ALL_ACTION_CARDS[number];
 
 export interface Tournament {
   name: string;
-  sections: Section[];
+  stages: TournamentStage[];
 }
 
-export interface Section {
+export interface TournamentStage {
   name: string;
   date: string;
-  matches: Match[];
+  rules: string[];
+  matches: TournamentMatch[];
 }
 
-export interface Match {
+export interface TournamentMatch {
   playerA: string;
   playerB: string;
-  games: Game[];
-  winner: "A" | "B" | "pending";
+  games: TournamentMatchGame[];
+  winner: "A" | "B";
 }
 
-export interface Game {
+export interface TournamentMatchGame {
   deckA: string;
   deckB: string;
-  startWith: "A" | "B" | "pending";
-  winner: "A" | "B" | "pending";
+  startWith: "A" | "B";
+  winner: "A" | "B";
   turns?: number;
   video?: string;
 }
@@ -36,11 +37,11 @@ export interface Deck {
   actionCards: Partial<Record<ActionCard, 1 | 2>>;
 }
 
-export interface DeckGameRecord {
-  deckId: string;
-  player: string;
-  opponentDeckId: string;
-  opponentPlayer: string;
-  startWith: boolean;
-  win: boolean;
+export interface Game extends TournamentMatchGame {
+  id: string;
+  name: string;
+  date: string;
+  rules: string[];
+  playerA: string;
+  playerB: string;
 }

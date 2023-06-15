@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Suspense>
+    <!-- <Suspense>
       <ClientOnly>
         <PageView v-if="online" />
         <div v-else text-gray:80>
@@ -13,10 +13,12 @@
         </div>
       </template>
     </Suspense>
-    <InputEntry />
+    <InputEntry /> -->
   </div>
 </template>
 
 <script setup lang="ts">
-const online = useOnline();
+// const online = useOnline();
+
+navigateTo("/teams", { replace: true });
 </script>

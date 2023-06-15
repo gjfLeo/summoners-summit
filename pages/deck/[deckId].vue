@@ -13,29 +13,29 @@
   </div>
   <div mt>
     <h1 text-xl>套牌战绩</h1>
-    <div v-for="(record, i) in gameRecords" :key="i">
-      {{ record.player }} VS
-      <NuxtLink :to="`/deck/${record.opponentDeckId}`" text-lime-7 underline>{{ record.opponentPlayer }}</NuxtLink>
-      ：{{ record.startWith ? "先手" : "后手" }} {{ record.win ? "胜" : "负" }}
-    </div>
+    <GameRecordList :list="games" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { findDeckGameRecords } from "~/data";
-import { findDeck, getActionCardsInDeck, getCharacterCardsInDeck } from "~/data/decks";
+import { findGamesByDeck } from "~/data";
+import { findDeck } from "~/data/decks";
 import type { Deck } from "~/utils/types";
 
+definePageMeta({
+  validate: (route) => {
+    const id = route.params.deckId as string;
+    const deck = findDeck(id);
+    if (!deck) return false;
+    return true;
+  },
+});
+
 const route = useRoute();
-const id = route.params.id as string;
-
+const id = route.params.deckId as string;
 const deck = findDeck(id) as Deck;
-
-if (!deck) {
-  navigateTo("/decks", { replace: true });
-}
 
 const characterCards = getCharacterCardsInDeck(deck);
 const actionCards = getActionCardsInDeck(deck);
-const gameRecords = findDeckGameRecords(deck.id);
+const games = findGamesByDeck(deck.id);
 </script>

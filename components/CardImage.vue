@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageUrl" alt="card" />
+  <img :src="imageUrl" alt="card" class="aspect-ratio-200/343" />
 </template>
 
 <script lang="ts" setup>

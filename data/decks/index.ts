@@ -1936,15 +1936,3 @@ export function findDeck(id: string) {
 export function findDecksByTeam(teamId: string): Deck[] {
   return deckList.filter(deck => getTeamId(deck) === teamId);
 }
-
-export function getCharacterCardsInDeck(deck: Deck): CharacterCard[] {
-  return (Object.keys(deck.characterCards) as CharacterCard[])
-    .sort((card1, card2) => deck.characterCards[card1]! - deck.characterCards[card2]!);
-}
-
-export function getActionCardsInDeck(deck: Deck): ActionCard[] {
-  return Object.entries(deck!.actionCards)
-    .flatMap(([card, count]) =>
-      Array.from({ length: count }, () => (card as ActionCard)),
-    );
-}

@@ -37,7 +37,7 @@
 
 <script lang="ts" setup>
 import { number, subtract } from "mathjs/number";
-import { teamList as allTeamList, findDeckGameRecords, findDecksByTeam, gameList } from "~/data";
+import { teamList as allTeamList, findGamesByTeam } from "~/data";
 import type { CharacterCard } from "~/utils/types";
 
 const fields = [
@@ -51,13 +51,12 @@ const teamList = [...allTeamList];
 
 const teamGrades = Object.fromEntries(
   teamList.map((teamId) => {
-    const gameRecords = findDecksByTeam(teamId)
-      .flatMap(deck => findDeckGameRecords(deck.id));
+    const gameList = findGamesByTeam(teamId);
     const grades = {
-      pick: gameRecords.length,
-      win: gameRecords.filter(record => record.win).length,
-      pickRate: percentage(gameRecords.length, gameList.length),
-      winRate: percentage(gameRecords.filter(record => record.win).length, gameRecords.length),
+      pick: gameList.length,
+      win: gameList.filter(game => game.winner === "A").length,
+      pickRate: percentage(gameList.length, gameList.length),
+      winRate: percentage(gameList.filter(game => game.winner === "A").length, gameList.length),
     };
     return [teamId, grades];
   }),
