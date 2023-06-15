@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageUrl" alt="card" class="aspect-ratio-200/343" />
+  <img :src="imageUrl" alt="card" class="pointer-events-none aspect-ratio-200/343 select-none" />
 </template>
 
 <script lang="ts" setup>

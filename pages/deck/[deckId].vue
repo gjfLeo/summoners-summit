@@ -12,7 +12,10 @@
     </template>
   </div>
   <div mt>
-    <h1 text-xl>套牌战绩</h1>
+    <h1>
+      <span text-xl>套牌战绩</span>
+      <span text ml>{{ games.filter(g => g.winner === "A").length }} 胜 / {{ games.filter(g => g.winner === "B").length }} 负</span>
+    </h1>
     <GameRecordList :list="games" />
   </div>
 </template>

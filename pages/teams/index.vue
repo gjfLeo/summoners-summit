@@ -1,9 +1,9 @@
 <template>
   <div grid grid-cols-5 items-center text-center>
-    <div class="sticky top-4 z-2 bg-#f2f2f2" />
+    <div class="sticky top-0 z-2 mt--4 h-14 bg-#f2f2f2 pt" />
     <div
       v-for="field in fields" :key="field.key"
-      class="sticky top-4 z-2 bg-#f2f2f2"
+      class="sticky top-0 z-2 mt--4 h-14 bg-#f2f2f2 pt"
     >
       <button
         inline-flex flex-col items-center justify-center
@@ -37,7 +37,7 @@
 
 <script lang="ts" setup>
 import { number, subtract } from "mathjs/number";
-import { teamList as allTeamList, findGamesByTeam } from "~/data";
+import { teamList as allTeamList, findGamesByTeam, gameList } from "~/data";
 import type { CharacterCard } from "~/utils/types";
 
 const fields = [
@@ -51,12 +51,12 @@ const teamList = [...allTeamList];
 
 const teamGrades = Object.fromEntries(
   teamList.map((teamId) => {
-    const gameList = findGamesByTeam(teamId);
+    const teamGameList = findGamesByTeam(teamId);
     const grades = {
-      pick: gameList.length,
-      win: gameList.filter(game => game.winner === "A").length,
-      pickRate: percentage(gameList.length, gameList.length),
-      winRate: percentage(gameList.filter(game => game.winner === "A").length, gameList.length),
+      pick: teamGameList.length,
+      win: teamGameList.filter(game => game.winner === "A").length,
+      pickRate: percentage(teamGameList.length, gameList.length),
+      winRate: percentage(teamGameList.filter(game => game.winner === "A").length, teamGameList.length),
     };
     return [teamId, grades];
   }),

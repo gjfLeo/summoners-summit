@@ -21,6 +21,8 @@ export default defineConfig({
   ],
   rules: [
     [/^grid-cols-(\d+)-auto$/, ([, d]) => ({ "grid-template-columns": `repeat(${d}, auto)` })],
+    [/^col-gap-(\d+)$/, ([,d]) => ({ "column-gap": `${Number(d) / 4}rem` })],
+    [/^row-gap-(\d+)$/, ([,d]) => ({ "row-gap": `${Number(d) / 4}rem` })],
   ],
   presets: [
     presetUno(),
