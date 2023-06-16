@@ -20,5 +20,7 @@
 <script setup lang="ts">
 // const online = useOnline();
 
-navigateTo("/teams", { replace: true });
+definePageMeta({
+  redirect: "/teams",
+});
 </script>
