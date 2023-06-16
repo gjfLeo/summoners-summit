@@ -15,7 +15,7 @@ const tournament: Tournament = {
           winner: "A",
           games: [
             {
-              deckA: deckIds.cryo["雷申重-毕游侠"],
+              deckA: deckIds.cryo["重申雷-毕游侠"],
               deckB: deckIds.pyro["火刻-疯猫鸽鸽"],
               startWith: "A",
               winner: "A",
@@ -78,7 +78,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.dendro["提八激化-兔娘"],
-              deckB: deckIds.cryo["雷申重-音尘"],
+              deckB: deckIds.cryo["重申雷-音尘"],
               startWith: "B",
               winner: "B",
               turns: 4,
@@ -123,7 +123,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1c14y1Q7RZ?t=220.7&p=5",
             },
             {
-              deckA: deckIds.cryo["雷申重-毕游侠"],
+              deckA: deckIds.cryo["重申雷-毕游侠"],
               deckB: deckIds.hydro["双水凝光-老伯"],
               startWith: "A",
               winner: "B",
@@ -146,7 +146,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1c14y1Q7RZ?t=188.0&p=6",
             },
             {
-              deckA: deckIds.cryo["雷申重-音尘"],
+              deckA: deckIds.cryo["重申雷-音尘"],
               deckB: deckIds.geo["一斗双岩-八重妞妞"],
               startWith: "A",
               winner: "B",
@@ -176,7 +176,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1WL411i7gF?t=649.3",
             },
             {
-              deckA: deckIds.cryo["雷申重-Sherry"],
+              deckA: deckIds.cryo["重申雷-Sherry"],
               deckB: deckIds.pyro["火刻-古明地觉"],
               startWith: "B",
               winner: "A",
@@ -231,7 +231,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.hydro["双水凝光-卡密sama"],
-              deckB: deckIds.cryo["雷申优-企鹅带带北极熊"],
+              deckB: deckIds.cryo["重优雷-企鹅带带北极熊"],
               startWith: "A",
               winner: "A",
               turns: 7,
@@ -352,7 +352,7 @@ const tournament: Tournament = {
               turns: 3,
             },
             {
-              deckA: deckIds.cryo["雷申重-男总"],
+              deckA: deckIds.cryo["重申雷-男总"],
               deckB: deckIds.pyro["火刻-吴意"],
               startWith: "B",
               winner: "B",
@@ -387,7 +387,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.pyro["胡桃愚人众-阿阮"],
-              deckB: deckIds.cryo["雷申重-齿轮"],
+              deckB: deckIds.cryo["重申雷-齿轮"],
               startWith: "B",
               winner: "B",
             },
@@ -411,7 +411,7 @@ const tournament: Tournament = {
               winner: "B",
             },
             {
-              deckA: deckIds.cryo["雷申重-唐傀"],
+              deckA: deckIds.cryo["重申雷-唐傀"],
               deckB: deckIds.dendro["提八激化-古明地觉"],
               startWith: "A",
               winner: "A",
@@ -437,7 +437,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.other["水皇草-吴意"],
-              deckB: deckIds.cryo["雷申重-皮皮猪"],
+              deckB: deckIds.cryo["重申雷-皮皮猪"],
               startWith: "B",
               winner: "B",
             },
@@ -455,7 +455,7 @@ const tournament: Tournament = {
               winner: "B",
             },
             {
-              deckA: deckIds.cryo["雷申重-齿轮"],
+              deckA: deckIds.cryo["重申雷-齿轮"],
               deckB: deckIds.other["水皇草-莉莉芭"],
               startWith: "A",
               winner: "B",
@@ -494,7 +494,7 @@ const tournament: Tournament = {
           winner: "A",
           games: [
             {
-              deckA: deckIds.cryo["雷申重-周正福"],
+              deckA: deckIds.cryo["重申雷-周正福"],
               deckB: deckIds.dendro["提八激化-长安大魔王"],
               startWith: "B",
               winner: "B",
@@ -519,14 +519,14 @@ const tournament: Tournament = {
           winner: "A",
           games: [
             {
-              deckA: deckIds.cryo["雷申重-今天不想吃苹果"],
+              deckA: deckIds.cryo["重申雷-今天不想吃苹果"],
               deckB: deckIds.geo["雷钟凝-啊乔巴"],
               startWith: "A",
               winner: "A",
             },
             {
               deckA: deckIds.other["水皇草-今天不想吃苹果"],
-              deckB: deckIds.cryo["砂糖申重-啊乔巴"],
+              deckB: deckIds.cryo["重申砂-啊乔巴"],
               startWith: "B",
               winner: "A",
             },
@@ -544,7 +544,7 @@ const tournament: Tournament = {
               winner: "B",
             },
             {
-              deckA: deckIds.cryo["雷申重-柠柠七喵"],
+              deckA: deckIds.cryo["重申雷-柠柠七喵"],
               deckB: deckIds.dendro["提八激化-月话音月"],
               startWith: "B",
               winner: "B",
@@ -564,7 +564,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.hydro["双水凝光-雪国Ink"],
-              deckB: deckIds.cryo["雷申重-周正福"],
+              deckB: deckIds.cryo["重申雷-周正福"],
               startWith: "B",
               winner: "A",
             },
@@ -594,7 +594,7 @@ const tournament: Tournament = {
               winner: "B",
             },
             {
-              deckA: deckIds.cryo["雷申重-今天不想吃苹果"],
+              deckA: deckIds.cryo["重申雷-今天不想吃苹果"],
               deckB: deckIds.pyro["火刻-月话音月"],
               startWith: "B",
               winner: "A",
@@ -607,7 +607,84 @@ const tournament: Tournament = {
       name: "6月11日线上晋级赛",
       date: "2023-06-11",
       rules: ["自备卡组", "单败淘汰", "决斗3"],
-      matches: [],
+      matches: [
+        {
+          playerA: "卡密sama",
+          playerB: "八重妞妞",
+          winner: "A",
+          games: [
+            {
+              deckA: deckIds.dendro["提八激化-卡密sama"],
+              deckB: deckIds.geo["一斗双岩-八重妞妞"],
+              startWith: "B",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.other["水债皇-卡密sama"],
+              deckB: deckIds.pyro["赛诺-八重妞妞"],
+              startWith: "A",
+              winner: "A",
+            },
+          ],
+        },
+        {
+          playerA: "周正福",
+          playerB: "莉莉芭",
+          winner: "A",
+          games: [
+            {
+              deckA: deckIds.cryo["重申雷-周正福"],
+              deckB: deckIds.cryo["重申雷-莉莉芭"],
+              startWith: "A",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.geo["一斗双岩-周正福"],
+              deckB: deckIds.other["水皇草-莉莉芭"],
+              startWith: "B",
+              winner: "A",
+            },
+          ],
+        },
+        {
+          playerA: "老伯",
+          playerB: "皮皮猪",
+          winner: "B",
+          games: [
+            {
+              deckA: deckIds.cryo["重申雷-老伯"],
+              deckB: deckIds.other["水皇草-皮皮猪"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: deckIds.pyro["火刻-老伯"],
+              deckB: deckIds.cryo["重申雷-皮皮猪晋级赛"],
+              startWith: "B",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          playerA: "今天不想吃苹果",
+          playerB: "狗神儿",
+          winner: "A",
+          games: [
+            {
+              deckA: deckIds.other["水皇草-今天不想吃苹果晋级赛"],
+              deckB: deckIds.geo["女仆双岩-狗神儿晋级赛"],
+              startWith: "B",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.geo["一斗双岩-今天不想吃苹果"],
+              deckB: deckIds.geo["钟离双岩-狗神儿晋级赛"],
+              startWith: "B",
+              winner: "A",
+            },
+          ],
+        },
+      ],
     },
   ],
 };
