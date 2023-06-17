@@ -1,12 +1,26 @@
 <template>
   <VitePwaManifest />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+
+  <n-config-provider
+    :locale="zhCN" :date-locale="dateZhCN"
+    :theme-overrides="themeOverridesLight"
+    inline-theme-disabled
+  >
+    <n-global-style />
+    <n-message-provider>
+      <n-loading-bar-provider>
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </n-loading-bar-provider>
+    </n-message-provider>
+  </n-config-provider>
 </template>
 
 <script setup lang="ts">
+import { dateZhCN, zhCN } from "naive-ui";
 import { appName } from "~/constants";
+import themeOverridesLight from "~/config/naive-ui-theme-overrides-light.json";
 
 useHead({
   title: appName,
@@ -22,17 +36,12 @@ html, body , #__nuxt{
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #f2f4f2;
   @apply font-sans text-base;
 }
 
 html.dark {
   background: #222;
   color: white;
-}
-
-pre {
-  @apply font-mono;
 }
 
 .v-move,

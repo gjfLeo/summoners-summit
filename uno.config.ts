@@ -4,6 +4,7 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
+  transformerAttributifyJsx,
   transformerDirectives,
   transformerVariantGroup,
 } from "unocss";
@@ -35,5 +36,6 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
+    transformerAttributifyJsx(),
   ],
 });

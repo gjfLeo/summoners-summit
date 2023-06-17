@@ -1,3 +1,5 @@
+import UnpluginComponents from "unplugin-vue-components/vite";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 import { pwa } from "./config/pwa";
 import { appDescription } from "./constants/index";
 
@@ -9,6 +11,32 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vite-pwa/nuxt",
   ],
+
+  build: {
+    transpile:
+      process.env.NODE_ENV === "production"
+        ? [
+            "naive-ui",
+            "vueuc",
+            "@css-render/vue3-ssr",
+            "@juggle/resize-observer",
+          ]
+        : ["@juggle/resize-observer"],
+  },
+  vite: {
+    optimizeDeps: {
+      include:
+        process.env.NODE_ENV === "development"
+          ? ["naive-ui", "vueuc", "date-fns-tz/esm/formatInTimeZone"]
+          : [],
+    },
+    plugins: [
+      UnpluginComponents({
+        dts: ".nuxt/unplugin-components.dts",
+        resolvers: [NaiveUiResolver()],
+      }),
+    ],
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -43,8 +71,8 @@ export default defineNuxtConfig({
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
-        { rel: "icon", href: "/favicon.ico", sizes: "any" },
-        { rel: "icon", type: "image/svg+xml", href: "/nuxt.svg" },
+        // { rel: "icon", href: "/favicon.ico", sizes: "any" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       ],
       meta: [

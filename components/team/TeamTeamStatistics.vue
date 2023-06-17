@@ -1,5 +1,5 @@
 <template>
-  <div class="col-gap-2 row-gap-1 grid items-center justify-start justify-items-center grid-cols-5-auto">
+  <div class="grid items-center justify-start justify-items-center grid-cols-5-auto col-gap-2 row-gap-1">
     <div />
     <button v-for="field in fields" :key="field.key" @click="orderBy = field.key">
       {{ field.label }}

@@ -3,7 +3,7 @@
   <div>获胜数：{{ teamGameList.filter(g => g.winner === "A").length }}</div>
 
   <h1 mt text-xl font-bold>单卡使用率</h1>
-  <div class="col-gap-2 row-gap-1 grid items-center justify-start grid-cols-4-auto">
+  <div class="grid items-center justify-start grid-cols-4-auto col-gap-2 row-gap-1">
     <div />
     <div />
     <button class="flex items-center outline-none" @click="sortByCount = !sortByCount">
