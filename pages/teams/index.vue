@@ -1,8 +1,10 @@
 <template>
   <n-data-table
     size="small"
-    :columns="columns" :data="teamGradeData"
-    style="height: calc(100vh - 6rem);" flex-height
+    :columns="columns"
+    :data="teamGradeData"
+    style="height: calc(100vh - 6rem);"
+    flex-height
   />
 </template>
 
@@ -39,12 +41,14 @@ const columns: DataTableColumn<RowType>[] = [
   {
     title: "",
     key: "team",
+    width: "9rem",
+    fixed: "left",
     render: (row) => {
       return h(
         NuxtLink,
         {
           to: `/team/${row.team}`,
-          class: "flex gap-2",
+          class: "flex flex-wrap gap-2 justify-center",
         },
         () => [
           h(TeamElements, { team: row.team, class: "h-8" }),
@@ -58,6 +62,7 @@ const columns: DataTableColumn<RowType>[] = [
     key: "pick",
     align: "center",
     sorter: "default",
+    width: "6rem",
   },
   {
     title: "登场率",
@@ -65,6 +70,7 @@ const columns: DataTableColumn<RowType>[] = [
     align: "center",
     render: row => toPercentageString(row.pickRate),
     sorter: "default",
+    width: "6rem",
   },
   {
     title: "胜场数",
@@ -72,6 +78,7 @@ const columns: DataTableColumn<RowType>[] = [
     align: "center",
     sorter: "default",
     defaultSortOrder: "descend",
+    width: "6rem",
   },
   {
     title: "胜率",
@@ -79,6 +86,7 @@ const columns: DataTableColumn<RowType>[] = [
     align: "center",
     render: row => toPercentageString(row.winRate),
     sorter: "default",
+    width: "6rem",
   },
 ];
 </script>

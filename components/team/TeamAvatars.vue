@@ -1,6 +1,6 @@
 <template>
-  <div class="flex gap-1">
-    <CardAvatar v-for="card in characters" :key="card" :card="card" class="w-8" />
+  <div class="mr-2 flex justify-center">
+    <CardAvatar v-for="card in characters" :key="card" :card="card" class="mr--2 h-8 w-8" />
   </div>
 </template>
 

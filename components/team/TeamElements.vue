@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-9 grid-rows-9 aspect-ratio-1" style="filter: drop-shadow(0 0 1px #888)">
+  <div class="grid grid-cols-9 grid-rows-9 aspect-ratio-1" style="filter: drop-shadow(0 0 1px #444)">
     <template v-if="teamElement.e3">
       <img :src="elementImages[teamElement.e3]" style="grid-area: 1 / 1 / 10 / 10" />
     </template>
