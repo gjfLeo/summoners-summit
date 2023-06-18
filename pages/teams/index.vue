@@ -2,14 +2,13 @@
   <n-data-table
     size="small"
     :columns="columns"
-    :data="teamGradeData"
-    style="height: calc(100vh - 6rem);"
-    flex-height
+    :data="teamUsageData"
+    max-height="60vh"
   />
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
+import { divide, subtract } from "mathjs/number";
 import type { DataTableColumn } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import { teamList as allTeamList, findGamesByTeam, gameList } from "~/data";
@@ -20,13 +19,16 @@ useHead({
 
 const teamList = [...allTeamList];
 
-const teamGradeData = teamList.map((teamId) => {
+const teamUsageData = teamList.map((teamId) => {
   const teamGameList = findGamesByTeam(teamId);
+  const pick = teamGameList.length;
+  const win = teamGameList.filter(game => game.winner === "A").length;
   const grade = {
-    pick: teamGameList.length,
-    win: teamGameList.filter(game => game.winner === "A").length,
+    pick,
+    win,
     pickRate: divide(teamGameList.length, gameList.length),
     winRate: divide(teamGameList.filter(game => game.winner === "A").length, teamGameList.length),
+    winDifferential: subtract(win, subtract(pick, win)),
   };
   return {
     key: teamId,
@@ -35,7 +37,7 @@ const teamGradeData = teamList.map((teamId) => {
   };
 });
 
-type RowType = typeof teamGradeData[number];
+type RowType = typeof teamUsageData[number];
 
 const columns: DataTableColumn<RowType>[] = [
   {
@@ -85,6 +87,13 @@ const columns: DataTableColumn<RowType>[] = [
     key: "winRate",
     align: "center",
     render: row => toPercentageString(row.winRate),
+    sorter: "default",
+    width: "6rem",
+  },
+  {
+    title: "净胜场",
+    key: "winDifferential",
+    align: "center",
     sorter: "default",
     width: "6rem",
   },
