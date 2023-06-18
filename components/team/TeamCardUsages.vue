@@ -63,13 +63,11 @@ const columns: DataTableColumn<RowType>[] = [
     title: "平均携带张数",
     key: "pick",
     sorter: "default",
-    width: "6rem",
   },
   {
     title: "胜场平均携带张数",
     key: "win",
     sorter: "default",
-    width: "6rem",
   },
 ];
 </script>
