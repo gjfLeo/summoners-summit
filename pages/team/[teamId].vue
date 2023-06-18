@@ -1,9 +1,14 @@
 <template>
-  <div>选取数：{{ teamGameList.length }}</div>
-  <div>获胜数：{{ teamGameList.filter(g => g.winner === "A").length }}</div>
+  <div flex flex-wrap gap-4>
+    <n-statistic label="选取数" :value="pick" />
+    <n-statistic label="获胜数" :value="win" />
+    <n-statistic label="胜率" :value="winRate" />
+    <n-statistic label="净胜场" :value="winDifferential" />
+  </div>
 
   <h1 mt text-xl font-bold>单卡使用率</h1>
-  <div class="grid items-center justify-start grid-cols-4-auto col-gap-2 row-gap-1">
+  <TeamCardUsages :games="teamGameList" />
+  <!-- <div class="grid items-center justify-start grid-cols-4-auto col-gap-2 row-gap-1">
     <div />
     <div />
     <button class="flex items-center outline-none" @click="sortByCount = !sortByCount">
@@ -22,7 +27,7 @@
         <div>{{ item.win }}</div>
       </template>
     </TransitionGroup>
-  </div>
+  </div> -->
 
   <h1 mt text-xl font-bold>队伍</h1>
   <TeamTeamStatistics :games="teamGameList" />
@@ -32,22 +37,19 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, format, number, subtract } from "mathjs/number";
-import { findDeck, findGamesByTeam } from "~/data";
-import type { ActionCard, Deck } from "~/utils/types";
-
-const SPLITTER = "-";
+import { divide, subtract } from "mathjs/number";
+import { findGamesByTeam } from "~/data";
 
 const route = useRoute();
 const teamId = route.params.teamId as string;
-const team = teamId.split(SPLITTER).filter(characterCardFilter).sort(characterCardSorter);
+const team = teamId.split("-").filter(characterCardFilter).sort(characterCardSorter);
 
 useHead({
   title: `${team.join(" & ")} - 阵容数据 | 召唤之颠`,
 });
 
 // 非标准则跳转
-const normalizedTeamId = team.join(SPLITTER);
+const normalizedTeamId = team.join("-");
 if (normalizedTeamId !== teamId) {
   navigateTo(`/team/${encodeURIComponent(normalizedTeamId)}`, { replace: true });
 }
@@ -55,39 +57,8 @@ if (normalizedTeamId !== teamId) {
 // const decks = findDecksByTeam(teamId);
 const teamGameList = findGamesByTeam(teamId);
 
-const actionCardSum = teamGameList.map<[Deck, boolean]>(game => [findDeck(game.deckA) as Deck, game.winner === "A"])
-  .reduce(
-    (summary, [deck, win]) => {
-      for (const entry of Object.entries(deck.actionCards)) {
-        const [card, count] = entry as [ActionCard, number];
-        const summaryCount = summary[card] ?? { pick: 0, win: 0 };
-        summaryCount.pick += count;
-        if (win) {
-          summaryCount.win += count;
-        }
-        summary[card] = summaryCount;
-      }
-      return summary;
-    },
-    {} as Partial<Record<ActionCard, { pick: number; win: number }>>,
-  );
-const sortByCount = ref(false);
-
-const cardUsages = computed(() => {
-  const usages = Object.entries(actionCardSum)
-    .map(([card, { pick, win }]) => {
-      return {
-        card: card as ActionCard,
-        pick: format(divide(pick, teamGameList.length), { precision: 4 }),
-        win: format(divide(win, teamGameList.filter(team => team.winner === "A").length), { precision: 4 }),
-      };
-    })
-    .sort((u1, u2) => actionCardSorter(u1.card, u2.card));
-  if (sortByCount.value) {
-    return usages.sort((u1, u2) => subtract(number(u2.pick), number(u1.pick)));
-  }
-  else {
-    return usages;
-  }
-});
+const pick = computed(() => teamGameList.length);
+const win = computed(() => teamGameList.filter(game => game.winner === "A").length);
+const winRate = computed(() => toPercentageString(divide(win.value, pick.value)));
+const winDifferential = computed(() => subtract(win.value, subtract(pick.value, win.value)));
 </script>
