@@ -8,7 +8,7 @@
     <TransitionGroup>
       <template v-for="row in statisticsOrdered" :key="row.opponentTeam">
         <NuxtLink :to="`/team/${row.opponentTeam}`" flex gap-1>
-          <CharacterAvatar v-for="card in row.opponentCharacters" :key="card" :card="card" w-8 />
+          <CardAvatar v-for="card in row.opponentCharacters" :key="card" :card="card" w-8 />
         </NuxtLink>
         <div>{{ row.total }}</div>
         <div>{{ row.win }}</div>

@@ -6,7 +6,7 @@
     </button>
   </div>
 
-  <div grid-cols-3-auto grid items-center>
+  <div grid items-center grid-cols-3-auto>
     <!-- <TransitionGroup> -->
     <template v-for="item in actionCardAverage" :key="item.card">
       <CardImageThumb :card="item.card" class="m-block-1" />

@@ -1,5 +1,6 @@
 <template>
   <div>
+    Home
     <!-- <Suspense>
       <ClientOnly>
         <PageView v-if="online" />
@@ -20,7 +21,7 @@
 <script setup lang="ts">
 // const online = useOnline();
 
-definePageMeta({
-  redirect: "/teams",
-});
+// definePageMeta({
+//   redirect: "/teams",
+// });
 </script>

@@ -1,5 +1,6 @@
-import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "../data/shared/utils/card";
+import type { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS, ALL_ELEMENTS } from "../data/shared/utils/card";
 
+export type GElement = typeof ALL_ELEMENTS[number];
 export type CharacterCard = typeof ALL_CHARACTER_CARDS[number];
 export type ActionCard = typeof ALL_ACTION_CARDS[number];
 

@@ -34,6 +34,10 @@ definePageMeta({
   },
 });
 
+useHead({
+  title: "牌组详情 | 召唤之颠",
+});
+
 const route = useRoute();
 const id = route.params.deckId as string;
 const deck = findDeck(id) as Deck;

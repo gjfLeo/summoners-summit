@@ -1,13 +1,20 @@
 <template>
-  <n-data-table :columns="columns" :data="teamGradeData" style="height: calc(100vh - 6rem);" flex-height />
+  <n-data-table
+    size="small"
+    :columns="columns" :data="teamGradeData"
+    style="height: calc(100vh - 6rem);" flex-height
+  />
 </template>
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import type { DataTableColumn } from "naive-ui";
-import { CharacterAvatar, NuxtLink } from "#components";
+import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import { teamList as allTeamList, findGamesByTeam, gameList } from "~/data";
-import type { CharacterCard } from "~/utils/types";
+
+useHead({
+  title: "阵容数据 | 召唤之颠",
+});
 
 const teamList = [...allTeamList];
 
@@ -20,6 +27,7 @@ const teamGradeData = teamList.map((teamId) => {
     winRate: divide(teamGameList.filter(game => game.winner === "A").length, teamGameList.length),
   };
   return {
+    key: teamId,
     team: teamId,
     ...grade,
   };
@@ -36,36 +44,41 @@ const columns: DataTableColumn<RowType>[] = [
         NuxtLink,
         {
           to: `/team/${row.team}`,
-          class: "flex gap-1",
+          class: "flex gap-2",
         },
-        () => (row.team.split("-") as CharacterCard[])
-          .map(card => h(CharacterAvatar, { card, class: "w-8" })),
+        () => [
+          h(TeamElements, { team: row.team, class: "h-8" }),
+          h(TeamAvatars, { team: row.team }),
+        ],
       );
     },
   },
   {
     title: "登场数",
     key: "pick",
-    sorter:
-   "default",
+    align: "center",
+    sorter: "default",
   },
   {
     title: "登场率",
     key: "pickRate",
-    sorter: "default",
+    align: "center",
     render: row => toPercentageString(row.pickRate),
+    sorter: "default",
   },
   {
     title: "胜场数",
     key: "win",
+    align: "center",
     sorter: "default",
     defaultSortOrder: "descend",
   },
   {
     title: "胜率",
     key: "winRate",
-    sorter: "default",
+    align: "center",
     render: row => toPercentageString(row.winRate),
+    sorter: "default",
   },
 ];
 </script>

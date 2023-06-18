@@ -6,7 +6,7 @@
         <NuxtLink :to="`/deck/${game.deckA}`" class="flex items-center justify-end gap-1">
           <div>{{ game.playerA }}</div>
           <template v-for="character in getCharacterCardsInDeck(findDeck(game.deckA)!)" :key="character">
-            <CharacterAvatar :card="character" w-8 />
+            <CardAvatar :card="character" w-8 />
           </template>
         </NuxtLink>
         <div mr-1 mt-1 text-sm>
@@ -20,7 +20,7 @@
       <div class="flex flex-col items-start">
         <NuxtLink :to="`/deck/${game.deckB}`" class="flex items-center justify-start gap-1">
           <template v-for="character in getCharacterCardsInDeck(findDeck(game.deckB)!)" :key="character">
-            <CharacterAvatar :card="character" w-8 />
+            <CardAvatar :card="character" w-8 />
           </template>
           <div>{{ game.playerB }}</div>
         </NuxtLink>

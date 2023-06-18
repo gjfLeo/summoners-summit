@@ -3,6 +3,6 @@ import { getTeamId, teamSorter } from "./shared/utils";
 
 export * from "./decks";
 export * from "./tournaments";
-export * from "./card-images";
+export * from "./images";
 
 export const teamList = [...new Set(deckList.map(getTeamId))].sort(teamSorter);
