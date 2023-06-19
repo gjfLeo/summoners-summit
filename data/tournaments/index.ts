@@ -20,7 +20,8 @@ function getGameList(tournamentId?: keyof typeof tournaments): Game[] {
         match.games.forEach((game, gameIndex) => {
           gameList.push({
             id: `${tid.slice(1)}${stageIndex.toString().padStart(2, "0")}${matchIndex.toString().padStart(2, "0")}${gameIndex.toString().padStart(2, "0")}`,
-            name: `${t.name}${stage.name}第${matchIndex}场第${gameIndex}局`,
+            tournamentName: t.name,
+            gameName: `${stage.name}第${matchIndex + 1}场第${gameIndex + 1}局`,
             date: "",
             rules: stage.rules,
             playerA: match.playerA,
