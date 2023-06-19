@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
-    "@gjfleo/eslint-config": "^0.1.19",
+    "@gjfleo/eslint-config": "^0.1.22",
     "@iconify-json/carbon": "^1.1.18",
     "@iconify-json/mdi": "^1.1.52",
     "@iconify-json/twemoji": "^1.1.11",
