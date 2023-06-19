@@ -3,7 +3,7 @@
     :columns="columns"
     :data="data"
     size="small"
-    max-height="50ch"
+    max-height="50vh"
   />
 </template>
 
