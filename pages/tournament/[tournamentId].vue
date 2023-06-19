@@ -11,7 +11,7 @@
         <div class="text-lg" :class="{ 'text-orange-500': match.winner === 'B' }">{{ match.playerB }}</div>
       </n-h3>
 
-      <div class="flex flex-wrap gap-12">
+      <div class="grid justify-items-center lg:grid-cols-3 md:grid-cols-2">
         <template v-for="(game, gameIndex) in match.games" :key="gameIndex">
           <GameRecord :game="normalizedGame(stageIndex, matchIndex, gameIndex)" />
         </template>
