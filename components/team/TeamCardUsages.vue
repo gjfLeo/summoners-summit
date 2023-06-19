@@ -1,9 +1,9 @@
 <template>
   <n-data-table
-    size="small"
-    max-height="50vh"
     :columns="columns"
     :data="data"
+    size="small"
+    max-height="50vh"
   />
 </template>
 
