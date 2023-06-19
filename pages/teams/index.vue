@@ -53,7 +53,7 @@ const columns: DataTableColumn<RowType>[] = [
           class: "flex flex-wrap gap-2 justify-center",
         },
         () => [
-          h(TeamElements, { team: row.team, class: "h-8" }),
+          h(TeamElements, { team: row.team, class: "w-8 h-8" }),
           h(TeamAvatars, { team: row.team }),
         ],
       );

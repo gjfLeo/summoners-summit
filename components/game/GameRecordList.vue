@@ -2,8 +2,8 @@
   <div class="grid mt items-center justify-center gap-4">
     <template v-for="game in list" :key="game.id">
       <div class="grid items-center items-center gap-0" style="grid-template-columns: 8rem 4rem 8rem;">
-        <div class="grid-col-1/4 text-center text-xs">{{ game.tournamentName }}</div>
-        <div class="grid-col-1/4 text-center text-xs">{{ game.gameName }}</div>
+        <div class="text-center text-xs grid-col-1/4">{{ game.tournamentName }}</div>
+        <div class="text-center text-xs grid-col-1/4">{{ game.gameName }}</div>
 
         <div class="text-right">{{ game.playerA }}</div>
         <div />

@@ -54,7 +54,7 @@ const columns: DataTableColumn<RowType>[] = [
         class: "flex flex-wrap gap-2 justify-center",
       },
       () => [
-        h(TeamElements, { team: row.opponentTeam, class: "h-8" }),
+        h(TeamElements, { team: row.opponentTeam, class: "w-8 h-8" }),
         h(TeamAvatars, { team: row.opponentTeam }),
       ],
     ),
@@ -74,6 +74,7 @@ const columns: DataTableColumn<RowType>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
+    defaultSortOrder: "descend",
   },
   {
     key: "winRate",
