@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, subtract } from "mathjs/number";
+import { divide } from "mathjs/number";
 import type { DataTableColumn } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import { teamList as allTeamList, findGamesByTeam, gameList } from "~/data";
@@ -26,9 +26,9 @@ const teamUsageData = teamList.map((teamId) => {
   const grade = {
     pick,
     win,
-    pickRate: divide(teamGameList.length, gameList.length),
+    pickRate: divide(teamGameList.length, gameList.length * 2),
     winRate: divide(teamGameList.filter(game => game.winner === "A").length, teamGameList.length),
-    winDifferential: subtract(win, subtract(pick, win)),
+    winDifferential: win - (pick - win),
   };
   return {
     key: teamId,
