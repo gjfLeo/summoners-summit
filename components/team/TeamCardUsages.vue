@@ -60,13 +60,15 @@ const columns: DataTableColumn<RowType>[] = [
     ),
   },
   {
-    title: "平均携带张数",
+    title: "平均携带",
     key: "pick",
+    align: "center",
     sorter: "default",
   },
   {
-    title: "胜场平均携带张数",
+    title: "胜场平均携带",
     key: "win",
+    align: "center",
     sorter: "default",
   },
 ];

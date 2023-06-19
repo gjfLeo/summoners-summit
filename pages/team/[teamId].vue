@@ -6,28 +6,8 @@
     <n-statistic label="净胜场" :value="winDifferential" />
   </div>
 
-  <h1 mt text-xl font-bold>单卡使用率</h1>
+  <h1 mt text-xl font-bold>行动牌选择</h1>
   <TeamCardUsages :games="teamGameList" />
-  <!-- <div class="grid items-center justify-start grid-cols-4-auto col-gap-2 row-gap-1">
-    <div />
-    <div />
-    <button class="flex items-center outline-none" @click="sortByCount = !sortByCount">
-      <div>平均携带张数</div>
-      <div ml-1 :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
-    </button>
-    <button class="flex items-center outline-none" @click="sortByCount = !sortByCount">
-      <div>胜场平均携带张数</div>
-      <div ml-1 :class="sortByCount ? 'i-carbon:sort-remove' : 'i-carbon:sort-descending'" />
-    </button>
-    <TransitionGroup>
-      <template v-for="item in cardUsages" :key="item.card">
-        <CardImage :card="item.card" h-8 />
-        <div>{{ item.card }}</div>
-        <div>{{ item.pick }}</div>
-        <div>{{ item.win }}</div>
-      </template>
-    </TransitionGroup>
-  </div> -->
 
   <h1 mt text-xl font-bold>队伍</h1>
   <TeamTeamStatistics :games="teamGameList" />
