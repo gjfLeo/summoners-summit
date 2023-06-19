@@ -8,4 +8,9 @@
   },
   "css.validate": false,
   "editor.formatOnSave": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#8000ff20",
+    "titleBar.activeBackground": "#8000ff40",
+    "titleBar.inactiveBackground": "#8000ff80",
+  },
 }
