@@ -1,6 +1,6 @@
 <template>
   <div>
-    Home
+    <NuxtLink to="/tournament/t0001">七圣召唤主播邀请赛</NuxtLink>
     <!-- <Suspense>
       <ClientOnly>
         <PageView v-if="online" />
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 // const online = useOnline();
 
-// definePageMeta({
-//   redirect: "/teams",
-// });
+definePageMeta({
+  redirect: "/teams",
+});
 </script>

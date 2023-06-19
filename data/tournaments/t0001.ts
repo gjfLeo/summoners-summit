@@ -23,8 +23,8 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1c14y1Q7RZ?t=536.0",
             },
             {
-              deckA: deckIds.dendro["提八激化-毕游侠"],
-              deckB: deckIds.dendro["提八激化-疯猫鸽鸽"],
+              deckA: deckIds.dendro["八柯提-毕游侠"],
+              deckB: deckIds.dendro["八柯提-疯猫鸽鸽"],
               startWith: "B",
               winner: "B",
               turns: 4,
@@ -77,7 +77,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1c14y1Q7RZ?t=366.3&p=3",
             },
             {
-              deckA: deckIds.dendro["提八激化-兔娘"],
+              deckA: deckIds.dendro["八柯提-兔娘"],
               deckB: deckIds.cryo["重申雷-音尘"],
               startWith: "B",
               winner: "B",
@@ -139,7 +139,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.other["水皇草-音尘"],
-              deckB: deckIds.dendro["提八激化-八重妞妞"],
+              deckB: deckIds.dendro["八柯提-八重妞妞"],
               startWith: "A",
               winner: "B",
               turns: 4,
@@ -169,7 +169,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.geo["一斗双岩-Sherry"],
-              deckB: deckIds.dendro["提八激化-古明地觉"],
+              deckB: deckIds.dendro["八柯提-古明地觉"],
               startWith: "A",
               winner: "B",
               turns: 4,
@@ -184,7 +184,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1WL411i7gF?t=1439.9",
             },
             {
-              deckA: deckIds.dendro["提八激化-Sherry"],
+              deckA: deckIds.dendro["八柯提-Sherry"],
               deckB: deckIds.hydro["双水凝光-古明地觉"],
               startWith: "A",
               winner: "A",
@@ -199,7 +199,7 @@ const tournament: Tournament = {
           winner: "B",
           games: [
             {
-              deckA: deckIds.dendro["提八激化-莲花"],
+              deckA: deckIds.dendro["八柯提-莲花"],
               deckB: deckIds.geo["女仆双岩-狗神儿"],
               startWith: "B",
               winner: "B",
@@ -254,7 +254,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.pyro["火刻-鸭鸭"],
-              deckB: deckIds.dendro["提八激化-魔法绵阳Tobby"],
+              deckB: deckIds.dendro["八柯提-魔法绵阳Tobby"],
               startWith: "A",
               winner: "A",
               turns: 4,
@@ -269,7 +269,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1WL411i7gF?t=1169.4&p=4",
             },
             {
-              deckA: deckIds.dendro["提八激化-鸭鸭"],
+              deckA: deckIds.dendro["八柯提-鸭鸭"],
               deckB: deckIds.pyro["火刻-魔法绵阳Tobby"],
               startWith: "A",
               winner: "B",
@@ -315,7 +315,7 @@ const tournament: Tournament = {
               video: "https://www.bilibili.com/video/BV1WL411i7gF?t=174.4&p=6",
             },
             {
-              deckA: deckIds.dendro["提八激化-卡密sama"],
+              deckA: deckIds.dendro["八柯提-卡密sama"],
               deckB: deckIds.other["水皇草-魔法绵羊Tobby"],
               startWith: "B",
               winner: "B",
@@ -324,7 +324,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.hydro["双水凝光-卡密sama"],
-              deckB: deckIds.dendro["提八激化-魔法绵阳Tobby"],
+              deckB: deckIds.dendro["八柯提-魔法绵阳Tobby"],
               startWith: "B",
               winner: "A",
               turns: 8,
@@ -346,7 +346,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.other["水皇草-男总"],
-              deckB: deckIds.dendro["提八激化-吴意"],
+              deckB: deckIds.dendro["八柯提-吴意"],
               startWith: "B",
               winner: "B",
               turns: 3,
@@ -367,7 +367,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.other["莫皇草-Soul"],
-              deckB: deckIds.dendro["提八激化-皮皮猪"],
+              deckB: deckIds.dendro["八柯提-皮皮猪"],
               startWith: "B",
               winner: "B",
               turns: 3,
@@ -405,14 +405,14 @@ const tournament: Tournament = {
           winner: "B",
           games: [
             {
-              deckA: deckIds.dendro["提八激化-唐傀"],
+              deckA: deckIds.dendro["八柯提-唐傀"],
               deckB: deckIds.geo["雷钟凝-莉莉芭"],
               startWith: "B",
               winner: "B",
             },
             {
               deckA: deckIds.cryo["重申雷-唐傀"],
-              deckB: deckIds.dendro["提八激化-古明地觉"],
+              deckB: deckIds.dendro["八柯提-古明地觉"],
               startWith: "A",
               winner: "A",
             },
@@ -430,7 +430,7 @@ const tournament: Tournament = {
           winner: "B",
           games: [
             {
-              deckA: deckIds.dendro["提八激化-吴意"],
+              deckA: deckIds.dendro["八柯提-吴意"],
               deckB: deckIds.other["水皇草-皮皮猪"],
               startWith: "B",
               winner: "B",
@@ -495,7 +495,7 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.cryo["重申雷-周正福"],
-              deckB: deckIds.dendro["提八激化-长安大魔王"],
+              deckB: deckIds.dendro["八柯提-长安大魔王"],
               startWith: "B",
               winner: "B",
             },
@@ -545,7 +545,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.cryo["重申雷-柠柠七喵"],
-              deckB: deckIds.dendro["提八激化-月话音月"],
+              deckB: deckIds.dendro["八柯提-月话音月"],
               startWith: "B",
               winner: "B",
             },
@@ -583,12 +583,12 @@ const tournament: Tournament = {
           games: [
             {
               deckA: deckIds.other["水皇草-今天不想吃苹果"],
-              deckB: deckIds.dendro["提八激化-月话音月"],
+              deckB: deckIds.dendro["八柯提-月话音月"],
               startWith: "B",
               winner: "A",
             },
             {
-              deckA: deckIds.dendro["提八激化-今天不想吃苹果"],
+              deckA: deckIds.dendro["八柯提-今天不想吃苹果"],
               deckB: deckIds.other["水债皇-月话音月"],
               startWith: "B",
               winner: "B",
@@ -614,7 +614,7 @@ const tournament: Tournament = {
           winner: "A",
           games: [
             {
-              deckA: deckIds.dendro["提八激化-卡密sama"],
+              deckA: deckIds.dendro["八柯提-卡密sama"],
               deckB: deckIds.geo["一斗双岩-八重妞妞"],
               startWith: "B",
               winner: "A",
@@ -680,6 +680,104 @@ const tournament: Tournament = {
               deckA: deckIds.geo["一斗双岩-今天不想吃苹果"],
               deckB: deckIds.geo["钟离双岩-狗神儿晋级赛"],
               startWith: "B",
+              winner: "A",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "6月16日线下赛DAY1",
+      date: "2023-06-16",
+      rules: ["自备卡组", "双败淘汰", "决斗3"],
+      matches: [
+        {
+          name: "第3场",
+          playerA: "甜甜花酿鸡队",
+          playerB: "提瓦特煎蛋队",
+          winner: "B",
+          games: [
+            {
+              deckA: deckIds.dendro["八柯提-甜甜花酿鸡队"],
+              deckB: deckIds.other["水皇草-今天不想吃苹果"],
+              startWith: "B",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.other["水皇草-皮皮猪"],
+              deckB: deckIds.cryo["重申雷-今天不想吃苹果"],
+              startWith: "A",
+              winner: "B",
+            },
+            {
+              deckA: deckIds.cryo["重申雷-皮皮猪晋级赛"],
+              deckB: deckIds.other["莫刻温-提瓦特煎蛋队"],
+              startWith: "A",
+              winner: "B",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "6月17日线下赛DAY2",
+      date: "2023-06-17",
+      rules: ["自备卡组", "双败淘汰", "决斗3"],
+      matches: [
+        {
+          name: "第2场",
+          playerA: "甜甜花酿鸡队",
+          playerB: "黄油蟹蟹队",
+          winner: "B",
+          games: [
+            {
+              deckA: deckIds.geo["八重钟凝-甜甜花酿鸡队"],
+              deckB: deckIds.cryo["重申雷-黄油蟹蟹队"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: deckIds.cryo["重申雷-皮皮猪晋级赛"],
+              deckB: deckIds.geo["钟离魔物双岩-黄油蟹蟹队"],
+              startWith: "A",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.other["水皇草-皮皮猪"],
+              deckB: deckIds.other["琴皇草-黄油蟹蟹队"],
+              startWith: "B",
+              winner: "B",
+            },
+          ],
+        },
+        {
+          name: "第3场",
+          playerA: "提瓦特煎蛋队",
+          playerB: "黄油蟹蟹队",
+          winner: "A",
+          games: [
+            {
+              deckA: deckIds.dendro["八柯提-今天不想吃苹果"],
+              deckB: deckIds.cryo["重申雷-黄油蟹蟹队"],
+              startWith: "B",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.cryo["重申雷-今天不想吃苹果"],
+              deckB: deckIds.geo["钟离魔物双岩-黄油蟹蟹队"],
+              startWith: "B",
+              winner: "A",
+            },
+            {
+              deckA: deckIds.other["水皇草-今天不想吃苹果"],
+              deckB: deckIds.geo["女仆双岩-黄油蟹蟹队"],
+              startWith: "B",
+              winner: "B",
+            },
+            {
+              deckA: deckIds.other["莫刻温-提瓦特煎蛋队"],
+              deckB: deckIds.other["琴皇草-黄油蟹蟹队"],
+              startWith: "A",
               winner: "A",
             },
           ],

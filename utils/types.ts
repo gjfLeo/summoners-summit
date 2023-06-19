@@ -17,6 +17,7 @@ export interface TournamentStage {
 }
 
 export interface TournamentMatch {
+  name?: string;
   playerA: string;
   playerB: string;
   games: TournamentMatchGame[];

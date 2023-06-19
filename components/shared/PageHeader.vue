@@ -11,8 +11,8 @@ import { NuxtLink } from "#components";
 const route = useRoute();
 
 const activeKey = computed(() => {
-  if (route.path === "/") {
-    return "home";
+  if (route.path === "/tournaments") {
+    return "tournaments";
   }
   if (route.path === "/teams") {
     return "teams";
@@ -24,10 +24,10 @@ const menuOptions: MenuOption[] = [
   {
     key: "home",
     label: () => (
-    <NuxtLink to="/" class="flex items-center">
-      <div class="i-carbon:home"></div>
-      <div class="ml-1">首页</div>
-    </NuxtLink>
+      <NuxtLink to="/tournaments" class="flex items-center">
+        <div class="i-mdi:tournament"></div>
+        <div class="ml-1">赛事</div>
+      </NuxtLink>
     ),
   },
   {
