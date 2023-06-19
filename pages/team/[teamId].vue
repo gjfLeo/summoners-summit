@@ -11,9 +11,6 @@
 
   <h1 mt text-xl font-bold>对阵数据</h1>
   <TeamTeamStatistics :games="teamGameList" />
-
-  <h1 mt text-xl font-bold>对局记录</h1>
-  <GameRecordList :list="teamGameList" />
 </template>
 
 <script lang="ts" setup>

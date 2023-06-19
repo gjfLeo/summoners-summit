@@ -4,6 +4,7 @@
     :data="data"
     size="small"
     max-height="50vh"
+    class="m-inline-auto max-w-3xl"
   />
 </template>
 
@@ -48,10 +49,11 @@ type RowType = typeof data["value"][number];
 const columns: DataTableColumn<RowType>[] = [
   {
     key: "card",
+    align: "center",
     render: row => h(
       "div",
       {
-        class: "flex gap-1 items-center",
+        class: "inline-flex gap-1 items-center min-w-40",
       },
       [
         h(CardImage, { card: row.card, class: "h-8" }),
