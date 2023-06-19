@@ -31,9 +31,12 @@ export default defineNuxtConfig({
           : [],
     },
     plugins: [
+      // https://github.com/antfu/unplugin-vue-components
       UnpluginComponents({
-        dts: ".nuxt/unplugin-components.dts",
+        dirs: [],
         resolvers: [NaiveUiResolver()],
+        dts: ".nuxt/unplugin-components.d.ts",
+        types: [],
       }),
     ],
   },
