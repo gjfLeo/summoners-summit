@@ -9,7 +9,7 @@
   <h1 mt text-xl font-bold>行动牌选择</h1>
   <TeamCardUsages :games="teamGameList" />
 
-  <h1 mt text-xl font-bold>队伍</h1>
+  <h1 mt text-xl font-bold>对阵数据</h1>
   <TeamTeamStatistics :games="teamGameList" />
 
   <h1 mt text-xl font-bold>对局记录</h1>

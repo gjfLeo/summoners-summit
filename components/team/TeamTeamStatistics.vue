@@ -1,78 +1,133 @@
 <template>
-  <div class="grid items-center justify-start justify-items-center grid-cols-5-auto col-gap-2 row-gap-1">
-    <div />
-    <button v-for="field in fields" :key="field.key" @click="orderBy = field.key">
-      {{ field.label }}
-    </button>
-
-    <TransitionGroup>
-      <template v-for="row in statisticsOrdered" :key="row.opponentTeam">
-        <NuxtLink :to="`/team/${row.opponentTeam}`" flex gap-1>
-          <CardAvatar v-for="card in row.opponentCharacters" :key="card" :card="card" w-8 />
-        </NuxtLink>
-        <div>{{ row.total }}</div>
-        <div>{{ row.win }}</div>
-        <div>{{ row.winRate }}%</div>
-        <div>{{ row.winDifferential }}</div>
-      </template>
-    </TransitionGroup>
-  </div>
+  <n-data-table
+    :columns="columns"
+    :data="data"
+    size="small"
+    max-height="50ch"
+  />
 </template>
 
 <script lang="ts" setup>
-import { number } from "mathjs/number";
+import { divide } from "mathjs/number";
+import type { DataTableColumn } from "naive-ui";
+import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import { findDeck } from "~/data";
-import type { CharacterCard, Game } from "~/utils/types";
+import type { Game } from "~/utils/types";
 
 const props = defineProps<{
   games: Game[];
 }>();
 
-interface Statistics {
-  opponentTeam: string;
-  opponentCharacters: CharacterCard[];
-  total: number;
-  win: number;
-  winRate: string;
-  winDifferential: number;
-}
-
-const fields = [
-  { key: "total", label: "总场数" },
-  { key: "win", label: "胜场数" },
-  { key: "winRate", label: "胜率" },
-  { key: "winDifferential", label: "净胜场数" },
-] as const;
-
-const statistics = computed<Statistics[]>(() => {
-  const map = props.games.reduce<Record<string, Pick<Statistics, "total" | "win">>>(
+const data = computed(() => {
+  const map = props.games.reduce<Record<string, { total: number; win: number }>>(
     (map, game) => {
       const opponentTeam = getTeamId(findDeck(game.deckB)!);
       const data = map[opponentTeam] ?? { total: 0, win: 0 };
       data.total++;
-      if (game.winner === "A") {
-        data.win++;
-      }
+      data.win += game.winner === "A" ? 1 : 0;
       map[opponentTeam] = data;
       return map;
     },
     {},
   );
   return Object.entries(map)
-    .map<Statistics>(([opponentTeam, data]) => {
+    .map(([opponentTeam, data]) => {
       return {
+        key: opponentTeam,
         opponentTeam,
-        opponentCharacters: opponentTeam.split("-") as CharacterCard[],
         ...data,
-        winRate: percentage(data.win, data.total),
+        winRate: divide(data.win, data.total),
         winDifferential: data.win - (data.total - data.win),
       };
     });
 });
 
-const orderBy = ref<typeof fields[number]["key"]>("win");
+type RowType = typeof data.value[number];
 
-const statisticsOrdered = computed(() => {
-  return statistics.value.sort((a, b) => number(b[orderBy.value]) - number(a[orderBy.value]));
-});
+const columns: DataTableColumn<RowType>[] = [
+  {
+    key: "opponentTeam",
+    render: row => h(
+      NuxtLink,
+      {
+        to: `/team/${row.opponentTeam}`,
+        class: "flex flex-wrap gap-2 justify-center",
+      },
+      () => [
+        h(TeamElements, { team: row.opponentTeam, class: "h-8" }),
+        h(TeamAvatars, { team: row.opponentTeam }),
+      ],
+    ),
+    width: "9rem",
+    fixed: "left",
+  },
+  {
+    key: "total",
+    title: "总场数",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+  },
+  {
+    key: "win",
+    title: "胜场数",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+  },
+  {
+    key: "winRate",
+    title: "胜率",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+    render: row => toPercentageString(row.winRate),
+  },
+  {
+    key: "winDifferential",
+    title: "净胜场",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+  },
+];
+
+// const fields = [
+//   { key: "total", label: "总场数" },
+//   { key: "win", label: "胜场数" },
+//   { key: "winRate", label: "胜率" },
+//   { key: "winDifferential", label: "净胜场数" },
+// ] as const;
+
+// const statistics = computed<Statistics[]>(() => {
+//   const map = props.games.reduce<Record<string, Pick<Statistics, "total" | "win">>>(
+//     (map, game) => {
+//       const opponentTeam = getTeamId(findDeck(game.deckB)!);
+//       const data = map[opponentTeam] ?? { total: 0, win: 0 };
+//       data.total++;
+//       if (game.winner === "A") {
+//         data.win++;
+//       }
+//       map[opponentTeam] = data;
+//       return map;
+//     },
+//     {},
+//   );
+//   return Object.entries(map)
+//     .map<Statistics>(([opponentTeam, data]) => {
+//       return {
+//         opponentTeam,
+//         opponentCharacters: opponentTeam.split("-") as CharacterCard[],
+//         ...data,
+//         winRate: percentage(data.win, data.total),
+//         winDifferential: data.win - (data.total - data.win),
+//       };
+//     });
+// });
+
+// const orderBy = ref<typeof fields[number]["key"]>("win");
+
+// const statisticsOrdered = computed(() => {
+//   return statistics.value.sort((a, b) => number(b[orderBy.value]) - number(a[orderBy.value]));
+// });
 </script>
