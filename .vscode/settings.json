@@ -13,4 +13,6 @@
     "titleBar.activeBackground": "#8000ff40",
     "titleBar.inactiveBackground": "#8000ff80",
   },
+  "vite.buildCommand": "pnpm run generate",
+  "vite.devCommand": "pnpm run dev",
 }
