@@ -1,9 +1,17 @@
 import UnpluginComponents from "unplugin-vue-components/vite";
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
+import dayjs from "dayjs";
 import { pwa } from "./config/pwa";
 import { appDescription } from "./constants/index";
 
 export default defineNuxtConfig({
+
+  runtimeConfig: {
+    public: {
+      updateTime: dayjs().format("YYYY-MM-DD HH:mm:ss"),
+    },
+  },
+
   modules: [
     "@vueuse/nuxt",
     "@unocss/nuxt",

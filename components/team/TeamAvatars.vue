@@ -1,6 +1,6 @@
 <template>
   <div class="mr-2 flex justify-center">
-    <CardAvatar v-for="card in characters" :key="card" :card="card" :class="`mr--2 h-${size} w-${size}`" />
+    <CardAvatar v-for="card in characters" :key="card" :card="card" class="mr--2" :style="{ height: `${size / 4}rem` }" />
   </div>
 </template>
 
