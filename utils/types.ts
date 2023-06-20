@@ -51,6 +51,8 @@ export interface Deck {
 export interface Game extends TournamentMatchGame {
   id: string;
   tournamentName: string;
+  stageName: string;
+  partName: string;
   matchName: string;
   gameName: string;
   date: string;

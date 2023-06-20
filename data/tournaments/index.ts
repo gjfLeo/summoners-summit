@@ -14,7 +14,6 @@ function getGameList(tournamentId?: string): Game[] {
   const selectedTournaments = tournamentId ? { [tournamentId]: tournamentById[tournamentId] } : tournamentById;
   const gameList = new Array<Game>();
   Object.entries(selectedTournaments).forEach(([_tid, t]) => {
-    const { name: tournamentName } = t;
     t.stages.forEach((stage) => {
       stage.parts.forEach((part) => {
         part.matches.forEach((match, matchIndex) => {
@@ -22,8 +21,10 @@ function getGameList(tournamentId?: string): Game[] {
           match.games.forEach((game, gameIndex) => {
             const gameName = match.games.length > 1 ? `第${gameIndex + 1}局` : "";
             gameList.push({
-              tournamentName,
-              matchName: `${stage.name}${part.name}${match.name}`,
+              tournamentName: t.name,
+              stageName: stage.name,
+              partName: part.name,
+              matchName: match.name!,
               gameName,
               date: part.date,
               playerA: match.playerA,

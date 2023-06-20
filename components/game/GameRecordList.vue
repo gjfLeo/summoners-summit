@@ -1,5 +1,5 @@
 <template>
-  <div class="grid mt items-center justify-center gap-4">
+  <div class="grid mt items-center justify-center justify-items-center lg:grid-cols-3 md:grid-cols-2">
     <template v-for="game in list" :key="game.id">
       <GameRecord :game="game" show-name />
     </template>
