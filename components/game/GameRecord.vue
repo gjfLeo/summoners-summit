@@ -2,7 +2,7 @@
   <div class="grid items-center items-center gap-0" style="grid-template-columns: 8rem 4rem 8rem;">
     <template v-if="showName">
       <div class="text-center text-xs grid-col-1/4">{{ game.tournamentName }}</div>
-      <div class="text-center text-xs grid-col-1/4">{{ game.gameName }}</div>
+      <div class="text-center text-xs grid-col-1/4">{{ game.matchName }}{{ game.gameName }}</div>
     </template>
 
     <div class="text-right">{{ game.playerA }}</div>

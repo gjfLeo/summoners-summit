@@ -3,31 +3,33 @@ import { swapGamePlayers } from "../shared/utils/game";
 import t0001 from "./t0001";
 import type { Game } from "~/utils/types";
 
-export const tournaments = {
-  t0001,
-};
+export const tournamentById = Object.fromEntries(
+  [
+    t0001,
+  ]
+    .map(tournament => [tournament.id, tournament]),
+);
 
-export function tournamentIdFilter(v: string): v is keyof typeof tournaments {
-  return Object.keys(tournaments).includes(v);
-}
-
-function getGameList(tournamentId?: keyof typeof tournaments): Game[] {
-  const selectedTournaments = tournamentId ? { [tournamentId]: tournaments[tournamentId] } : tournaments;
+function getGameList(tournamentId?: string): Game[] {
+  const selectedTournaments = tournamentId ? { [tournamentId]: tournamentById[tournamentId] } : tournamentById;
   const gameList = new Array<Game>();
-  Object.entries(selectedTournaments).forEach(([tid, t]) => {
-    t.stages.forEach((stage, stageIndex) => {
-      stage.matches.forEach((match, matchIndex) => {
-        match.games.forEach((game, gameIndex) => {
-          const matchName = match.name ?? `第${matchIndex + 1}场`;
-          gameList.push({
-            id: `${tid.slice(1)}${stageIndex.toString().padStart(2, "0")}${matchIndex.toString().padStart(2, "0")}${gameIndex.toString().padStart(2, "0")}`,
-            tournamentName: t.name,
-            gameName: `${stage.name}${matchName}第${gameIndex + 1}局`,
-            date: stage.date,
-            rules: stage.rules,
-            playerA: match.playerA,
-            playerB: match.playerB,
-            ...game,
+  Object.entries(selectedTournaments).forEach(([_tid, t]) => {
+    const { name: tournamentName } = t;
+    t.stages.forEach((stage) => {
+      stage.parts.forEach((part) => {
+        part.matches.forEach((match, matchIndex) => {
+          match.name = match.name ?? (part.matches.length > 1 ? `第${matchIndex + 1}场` : "");
+          match.games.forEach((game, gameIndex) => {
+            const gameName = match.games.length > 1 ? `第${gameIndex + 1}局` : "";
+            gameList.push({
+              tournamentName,
+              matchName: `${stage.name}${part.name}${match.name}`,
+              gameName,
+              date: part.date,
+              playerA: match.playerA,
+              playerB: match.playerB,
+              ...game,
+            });
           });
         });
       });
@@ -37,9 +39,10 @@ function getGameList(tournamentId?: keyof typeof tournaments): Game[] {
 }
 
 export const gameList = getGameList();
-export const tournamentGameLists = Object.fromEntries(Object.keys(tournaments).filter(tournamentIdFilter).map(id => [id, getGameList(id)])) as Record<keyof typeof tournaments, Game[]>;
+// export const tournamentGameLists = Object.fromEntries(Object.keys(tournaments).map(id => [id, getGameList(id)])) as Record<string, Game[]>;
+export const gameById = Object.fromEntries(Object.values(gameList).map(game => [game.id, game]));
 
-export function findGamesByTeam(teamId: string, tournamentId?: keyof typeof tournaments): Game[] {
+export function findGamesByTeam(teamId: string, tournamentId?: string): Game[] {
   const allGameList = getGameList(tournamentId);
   const gameList = new Array<Game>();
   allGameList.forEach((game) => {
@@ -55,7 +58,7 @@ export function findGamesByTeam(teamId: string, tournamentId?: keyof typeof tour
   return gameList;
 }
 
-export function findGamesByDeck(deckId: string, tournamentId?: keyof typeof tournaments): Game[] {
+export function findGamesByDeck(deckId: string, tournamentId?: string): Game[] {
   const allGameList = getGameList(tournamentId);
   const gameList = new Array<Game>();
   allGameList.forEach((game) => {

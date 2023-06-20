@@ -1,3 +1,9 @@
 <template>
-  <NuxtLink to="/tournament/t0001">七圣召唤主播邀请赛</NuxtLink>
+  <template v-for="tournament in Object.values(tournamentById)" :key="tournament.id">
+    <NuxtLink :to="`/tournament/${tournament.id}`" class="text-lime-500 underline">{{ tournament.name }}</NuxtLink>
+  </template>
 </template>
+
+<script lang="ts" setup>
+import { tournamentById } from "~/data";
+</script>
