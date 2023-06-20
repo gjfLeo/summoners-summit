@@ -798,7 +798,7 @@ const tournament: Tournament = {
           ],
         },
         {
-          name: "败者组第1场",
+          name: "败者组",
           date: "2023-06-17",
           matches: [],
         },
@@ -849,7 +849,6 @@ const tournament: Tournament = {
           },
           matches: [
             {
-              name: "第3场",
               playerA: "提瓦特煎蛋队",
               playerB: "黄油蟹蟹队",
               winner: "A",
