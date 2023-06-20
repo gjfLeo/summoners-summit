@@ -501,7 +501,7 @@ const tournament: Tournament = {
             },
             {
               deckA: deckIds.geo["一斗双岩-周正福"],
-              deckB: deckIds.electro["长安大魔王-雷神雷泽重云"],
+              deckB: deckIds.electro["雷泽重云雷神-长安大魔王"],
               startWith: "B",
               winner: "A",
             },
