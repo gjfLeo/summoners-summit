@@ -6,11 +6,16 @@
     >
       <PageHeader />
     </n-layout-header>
-    <n-layout position="absolute" :style="{ top: headerHeight }" style="bottom: 0" :native-scrollbar="false">
-      <!-- <n-layout-sider bordered content-style="padding: 1rem;">
-        Sider
-      </n-layout-sider> -->
-      <n-layout content-style="padding: 1rem;" m-inline-auto max-w-6xl>
+    <n-layout
+      position="absolute"
+      :style="{ top: headerHeight, bottom: 0 }"
+      :native-scrollbar="false"
+    >
+      <n-layout
+        content-style="padding: 1rem;"
+        m-inline-auto max-w-6xl
+        :style="{ 'min-height': `calc(100vh - ${headerHeight} - ${footerHeight} - 1px)` }"
+      >
         <slot />
       </n-layout>
       <n-layout-footer
@@ -25,5 +30,5 @@
 
 <script lang="ts" setup>
 const headerHeight = "4rem";
-const footerHeight = "4rem";
+const footerHeight = "2rem";
 </script>
