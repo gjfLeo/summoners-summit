@@ -1,5 +1,5 @@
 <template>
-  <TeamAvatars :team="teamId" :size="20" />
+  <TeamAvatars :team="teamId" :size="20" :gap="2" />
 
   <div class="mt flex flex-wrap justify-center gap-8">
     <n-statistic label="选取数" :value="pick" />

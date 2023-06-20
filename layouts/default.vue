@@ -1,14 +1,15 @@
 <template>
   <n-layout position="absolute">
     <n-layout-header
-      :style="{ height: headerHeight }"
+      position="absolute"
+      :style="{ height: headerHeight, top: 0 }"
       bordered
     >
       <PageHeader />
     </n-layout-header>
     <n-layout
       position="absolute"
-      :style="{ top: headerHeight, bottom: 0 }"
+      :style="{ top: headerHeight }"
       :native-scrollbar="false"
     >
       <n-layout
