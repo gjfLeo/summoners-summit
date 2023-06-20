@@ -1,4 +1,6 @@
 <template>
+  <TeamAvatars :team="teamId" :size="20" />
+
   <div flex flex-wrap gap-4>
     <n-statistic label="选取数" :value="pick" />
     <n-statistic label="获胜数" :value="win" />

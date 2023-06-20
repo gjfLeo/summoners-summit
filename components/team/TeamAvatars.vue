@@ -1,15 +1,21 @@
 <template>
   <div class="mr-2 flex justify-center">
-    <CardAvatar v-for="card in characters" :key="card" :card="card" class="mr--2 h-8 w-8" />
+    <CardAvatar v-for="card in characters" :key="card" :card="card" :class="`mr--2 h-${size} w-${size}`" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import type { CharacterCard } from "~/utils/types";
 
-const props = defineProps<{
-  team: string;
-}>();
+const props = withDefaults(
+  defineProps<{
+    team: string;
+    size?: number;
+  }>(),
+  {
+    size: 8,
+  },
+);
 
 const characters = computed(() => props.team.split("-") as CharacterCard[]);
 </script>
