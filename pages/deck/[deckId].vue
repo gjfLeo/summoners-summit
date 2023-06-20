@@ -18,6 +18,11 @@
     </h1>
     <GameRecordList :list="games" />
   </div>
+  <div mt>
+    <NuxtLink :to="`/team/${characterCards.join('-')}`">
+      <n-button>查看阵容统计</n-button>
+    </NuxtLink>
+  </div>
 </template>
 
 <script lang="ts" setup>
