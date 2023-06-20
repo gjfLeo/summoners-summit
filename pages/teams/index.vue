@@ -3,7 +3,7 @@
     size="small"
     :columns="columns"
     :data="teamUsageData"
-    max-height="60vh"
+    max-height="calc(100vh - 10rem)"
   />
 </template>
 
