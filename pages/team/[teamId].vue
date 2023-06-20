@@ -1,17 +1,17 @@
 <template>
   <TeamAvatars :team="teamId" :size="20" />
 
-  <div flex flex-wrap gap-4>
+  <div class="mt flex flex-wrap justify-center gap-8">
     <n-statistic label="选取数" :value="pick" />
     <n-statistic label="获胜数" :value="win" />
     <n-statistic label="胜率" :value="winRate" />
     <n-statistic label="净胜场" :value="winDifferential" />
   </div>
 
-  <h1 mt text-xl font-bold>行动牌选择</h1>
+  <h1 class="mt text-xl font-bold">行动牌选择</h1>
   <TeamCardUsages :games="teamGameList" />
 
-  <h1 mt text-xl font-bold>对阵数据</h1>
+  <h1 class="mt text-xl font-bold">对阵数据</h1>
   <TeamTeamStatistics :games="teamGameList" />
 </template>
 

@@ -49,11 +49,10 @@ type RowType = typeof data["value"][number];
 const columns: DataTableColumn<RowType>[] = [
   {
     key: "card",
-    align: "center",
     render: row => h(
       "div",
       {
-        class: "inline-flex gap-1 items-center min-w-40",
+        class: "flex gap-1 items-center",
       },
       [
         h(CardImage, { card: row.card, class: "h-8" }),
@@ -64,13 +63,13 @@ const columns: DataTableColumn<RowType>[] = [
   {
     title: "平均携带",
     key: "pick",
-    align: "center",
+    align: "left",
     sorter: "default",
   },
   {
     title: "胜场平均携带",
     key: "win",
-    align: "center",
+    align: "left",
     sorter: "default",
   },
 ];
