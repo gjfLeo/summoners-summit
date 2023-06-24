@@ -4,5 +4,6 @@
 
 <script setup lang="ts">
 definePageMeta({
+  redirect: "/tournaments",
 });
 </script>
