@@ -31,5 +31,5 @@
 
 <script lang="ts" setup>
 const headerHeight = "4rem";
-const footerHeight = "2rem";
+const footerHeight = "4rem";
 </script>

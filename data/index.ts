@@ -1,8 +1,6 @@
-import { deckList } from "./decks";
-import { getTeamId, teamSorter } from "./shared/utils";
+// 此文件暴露的内容暴露给全局
 
-export * from "./decks";
-export * from "./tournaments";
+export * from "./shared";
 export * from "./images";
-
-export const teamList = [...new Set(deckList.map(getTeamId))].sort(teamSorter);
+export * from "./tournaments";
+export * from "./decks";

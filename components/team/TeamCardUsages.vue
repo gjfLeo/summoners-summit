@@ -12,28 +12,30 @@
 import type { DataTableColumn } from "naive-ui";
 import { divide, format } from "mathjs/number";
 import { CardImage } from "#components";
-import { findDeck } from "~/data";
 import type { ActionCard, Game } from "~/utils/types";
+import { deckById } from "~/data";
 
 const props = defineProps<{
   games: Game[];
 }>();
 
 const data = computed(() => {
-  const cardUsageMap = props.games.reduce<Partial<Record<ActionCard, { pick: number; win: number }>>>(
-    (map, game) => {
-      const deck = findDeck(game.deckA);
-      for (const entry of Object.entries(deck?.actionCards ?? {})) {
-        const [card, count] = entry as [ActionCard, number];
-        const cardUsage = map[card] ?? { pick: 0, win: 0 };
-        cardUsage.pick += count;
-        cardUsage.win += game.winner === "A" ? count : 0;
-        map[card] = cardUsage;
-      }
-      return map;
-    },
-    {},
-  );
+  const cardUsageMap = props.games
+    .filter(game => game.playerADeckId)
+    .reduce<Partial<Record<ActionCard, { pick: number; win: number }>>>(
+      (map, game) => {
+        const deck = deckById[game.playerADeckId!];
+        for (const entry of Object.entries(deck?.actionCards ?? {})) {
+          const [card, count] = entry as [ActionCard, number];
+          const cardUsage = map[card] ?? { pick: 0, win: 0 };
+          cardUsage.pick += count;
+          cardUsage.win += game.winner === "A" ? count : 0;
+          map[card] = cardUsage;
+        }
+        return map;
+      },
+      {},
+    );
   return Object.entries(cardUsageMap)
     .map(([card, usage]) => {
       return {
@@ -63,13 +65,13 @@ const columns: DataTableColumn<RowType>[] = [
   {
     title: "平均携带",
     key: "pick",
-    align: "left",
+    align: "center",
     sorter: "default",
   },
   {
     title: "胜场平均携带",
     key: "win",
-    align: "left",
+    align: "center",
     sorter: "default",
   },
 ];

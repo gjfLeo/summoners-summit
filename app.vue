@@ -25,6 +25,8 @@ import themeOverridesLight from "~/config/naive-ui-theme-overrides-light.json";
 useHead({
   title: appName,
 });
+
+zhCN.DataTable.clear = "清除";
 </script>
 
 <style>

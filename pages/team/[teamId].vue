@@ -1,5 +1,9 @@
 <template>
-  <TeamAvatars :team="teamId" :size="20" :gap="2" />
+  <div class="grid justify-center gap-2" style="grid-template-columns: repeat(3, minmax(0, 8rem));">
+    <template v-for="(card, i) in team" :key="i">
+      <CardImage :card="card" class="w-100%" />
+    </template>
+  </div>
 
   <div class="mt flex flex-wrap justify-center gap-8">
     <n-statistic label="选取数" :value="pick" />
@@ -17,11 +21,12 @@
 
 <script lang="ts" setup>
 import { divide, subtract } from "mathjs/number";
-import { findGamesByTeam } from "~/data";
+import { characterCardSorter, gameList } from "~/data";
+import type { CharacterCard, Game } from "~/utils/types";
 
 const route = useRoute();
 const teamId = route.params.teamId as string;
-const team = teamId.split("-").filter(characterCardFilter).sort(characterCardSorter);
+const team = (teamId.split("-") as CharacterCard[]).sort(characterCardSorter);
 
 useHead({
   title: `${team.join(" & ")} - 阵容数据 | 召唤之颠`,
@@ -34,7 +39,29 @@ if (normalizedTeamId !== teamId) {
 }
 
 // const decks = findDecksByTeam(teamId);
-const teamGameList = findGamesByTeam(teamId);
+const teamGameList = gameList.flatMap((game) => {
+  const { playerA, playerB, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
+  const playerATeamId = getTeamId(playerACharacters);
+  const playerBTeamId = getTeamId(playerBCharacters);
+  const teamGames = new Array<Game>();
+  if (playerATeamId === teamId) {
+    teamGames.push(game);
+  }
+  if (playerBTeamId === teamId) {
+    teamGames.push({
+      ...game,
+      playerA: playerB,
+      playerB: playerA,
+      playerACharacters: playerBCharacters,
+      playerBCharacters: playerACharacters,
+      playerADeckId: playerBDeckId,
+      playerBDeckId: playerADeckId,
+      starter: starter === "A" ? "B" : "A",
+      winner: winner === "A" ? "B" : "A",
+    });
+  }
+  return teamGames;
+});
 
 const pick = computed(() => teamGameList.length);
 const win = computed(() => teamGameList.filter(game => game.winner === "A").length);

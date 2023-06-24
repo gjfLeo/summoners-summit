@@ -1,10 +1,9 @@
 <template>
   <n-data-table
-    :columns="columns"
-    :data="data"
     size="small"
-    max-height="50vh"
-    class="m-inline-auto max-w-3xl"
+    :columns="columns"
+    :data="teamStats"
+    max-height="calc(100vh - 11rem)"
   />
 </template>
 
@@ -12,11 +11,9 @@
 import { divide } from "mathjs/number";
 import { type DataTableColumn, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
-import type { Game } from "~/utils/types";
+import { gameList } from "~/data";
 
-const props = defineProps<{
-  games: Game[];
-}>();
+useHead({ title: "阵容 | 召唤之颠" });
 
 interface TeamStatRaw {
   total: number;
@@ -35,21 +32,21 @@ interface TeamStatResult extends TeamStatRaw {
   winDiff: number;
 }
 
-const data = computed(() => {
-  const map = props.games.reduce<Record<string, TeamStatRaw>>(
-    (map, game) => {
-      const opponentTeam = getTeamId(game.playerBCharacters);
-      const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
+const teamStats = computed<TeamStatResult[]>(() => {
+  const teamStatsRaw: Record<string, TeamStatRaw> = {};
+  gameList.forEach((game) => {
+    function updateStat(teamId: string, team: "A" | "B") {
+      const stat = teamStatsRaw[teamId] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
       stat.total++;
-      stat.win += game.winner === "A" ? 1 : 0;
-      stat.starterTotal += game.starter === "A" ? 1 : 0;
-      stat.starterWin += (game.starter === "A" && game.winner === "A") ? 1 : 0;
-      map[opponentTeam] = stat;
-      return map;
-    },
-    {},
-  );
-  return Object.entries(map)
+      stat.win += game.winner === team ? 1 : 0;
+      stat.starterTotal += game.starter === team ? 1 : 0;
+      stat.starterWin += (game.starter === team && game.winner === team) ? 1 : 0;
+      teamStatsRaw[teamId] = stat;
+    }
+    updateStat(getTeamId(game.playerACharacters), "A");
+    updateStat(getTeamId(game.playerBCharacters), "B");
+  });
+  return Object.entries(teamStatsRaw)
     .map(([teamId, statRaw]) => {
       const followerTotal = statRaw.total - statRaw.starterTotal;
       const followerWin = statRaw.win - statRaw.starterWin;
@@ -103,7 +100,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     defaultSortOrder: "descend",
     filterMultiple: false,
     filterOptions: [2, 3, 5].map(v => ({ label: `至少${v}场`, value: v })),
-    defaultFilterOptionValue: 2,
+    defaultFilterOptionValue: 3,
     filter: (value, row) => row.total >= Number(value),
   },
   {

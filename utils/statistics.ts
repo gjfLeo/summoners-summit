@@ -1,17 +1,7 @@
-import { divide, format, multiply, number, subtract } from "mathjs/number";
-
-export function percentage(a: number, b: number): string {
-  const percentageValue = format(
-    divide(
-      multiply(a, 100),
-      b,
-    ),
-    { precision: 4 },
-  );
-  return percentageValue;
-}
+import { format, multiply, number, subtract } from "mathjs/number";
 
 export function toPercentageString(value: number) {
+  if (Number.isNaN(value)) return "-";
   const percentageValue = format(multiply(value, 100), { precision: 4 });
   return `${percentageValue}%`;
 }

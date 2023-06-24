@@ -1,10 +1,9 @@
 <template>
-  <div class="flex justify-center" :style="{ marginRight: `${-gap / 4}rem` }">
+  <div class="mr-1 inline-flex justify-center">
     <CardAvatar
       v-for="card in characters" :key="card"
       :card="card"
-      class="border border-light-900 rd-50%"
-      :style="{ 'height': `${size / 4}rem`, 'margin-right': `${gap / 4}rem` }"
+      class="mr--1 h-8 border border-light-9 rd-50%"
     />
   </div>
 </template>
@@ -12,17 +11,16 @@
 <script lang="ts" setup>
 import type { CharacterCard } from "~/utils/types";
 
-const props = withDefaults(
-  defineProps<{
-    team: string;
-    size?: number;
-    gap?: number;
-  }>(),
-  {
-    size: 8,
-    gap: -2,
-  },
-);
+const props = defineProps<{
+  team: CharacterCard[] | string;
+}>();
 
-const characters = computed(() => props.team.split("-") as CharacterCard[]);
+const characters = computed<CharacterCard[]>(() => {
+  if (typeof props.team === "string") {
+    return props.team.split("-") as CharacterCard[];
+  }
+  else {
+    return props.team;
+  }
+});
 </script>

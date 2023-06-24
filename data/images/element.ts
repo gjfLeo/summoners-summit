@@ -1,7 +1,7 @@
 import { getImageUrl } from "../shared/utils/images";
-import type { GElement } from "~/utils/types";
+import type { Element } from "~/utils/types";
 
-const elementFilenames: Record<GElement, string> = {
+const elementFilenames: Record<Element, string> = {
   cryo: "Element Cryo.png",
   hydro: "Element Hydro.png",
   pyro: "Element Pyro.png",
@@ -14,4 +14,4 @@ const elementFilenames: Record<GElement, string> = {
 export const elementImages = Object.fromEntries(
   Object.entries(elementFilenames)
     .map(([card, filename]) => [card, getImageUrl(filename)]),
-);
+) as Record<Element, string>;

@@ -1,6 +1,6 @@
 <template>
   <img
-    :src="imageUrl" alt="card"
+    :src="imageUrl" :alt="card"
     class="inline-block aspect-ratio-20/20"
   />
 </template>

@@ -1,23 +1,4 @@
-import type { ActionCard, CharacterCard, GElement } from "~/utils/types";
-
-const ALL_ELEMENTS = ["cryo", "hydro", "pyro", "electro", "anemo", "geo", "dendro"] as const;
-
-const ALL_CHARACTER_CARDS = [
-  "甘雨", "迪奥娜", "凯亚", "重云", "神里绫华", "优菈", "申鹤",
-  "芭芭拉", "行秋", "莫娜", "达达利亚", "珊瑚宫心海", "神里绫人",
-  "迪卢克", "香菱", "班尼特", "安柏", "宵宫", "可莉", "胡桃",
-  "菲谢尔", "雷泽", "刻晴", "赛诺", "北斗", "九条裟罗", "雷电将军", "八重神子",
-  "砂糖", "琴", "温迪", "魈",
-  "凝光", "诺艾尔", "钟离", "荒泷一斗",
-  "柯莱", "提纳里", "纳西妲",
-  "愚人众·冰萤术士",
-  "纯水精灵·洛蒂娅", "愚人众·藏镜仕女",
-  "愚人众·火之债务处理人", "深渊咏者·渊火",
-  "无相之雷",
-  "魔偶剑鬼",
-  "岩盔丘丘王",
-  "翠翎恐禽",
-] as const;
+import type { ActionCard } from "~/utils/types";
 
 const TALENTS = [
   "唯此一心", "猫爪冰摇", "冷血之剑", "吐纳真定", "寒天宣命祝词", "战欲涌现", "忘玄",
@@ -88,72 +69,12 @@ const FACTIONS = [
   "风与自由", "岩与契约", "雷与永恒", "草与智慧",
 ] as const;
 
-const ALL_ACTION_CARDS = [
+export const ALL_ACTION_CARDS = [
   ...TALENTS, ...WEAPONS, ...ARTIFACTS,
   ...AREAS, ...FRIENDS, ...ITEMS,
   ...ELEMENTS, ...FACTIONS,
   ...SPELLS, ...FOODS,
 ];
 
-export const characterElement: Record<CharacterCard, GElement> = {
-  甘雨: "cryo",
-  迪奥娜: "cryo",
-  凯亚: "cryo",
-  重云: "cryo",
-  神里绫华: "cryo",
-  优菈: "cryo",
-  申鹤: "cryo",
-  芭芭拉: "hydro",
-  行秋: "hydro",
-  莫娜: "hydro",
-  达达利亚: "hydro",
-  珊瑚宫心海: "hydro",
-  神里绫人: "hydro",
-  迪卢克: "pyro",
-  香菱: "pyro",
-  班尼特: "pyro",
-  安柏: "pyro",
-  宵宫: "pyro",
-  可莉: "pyro",
-  胡桃: "pyro",
-  菲谢尔: "electro",
-  雷泽: "electro",
-  刻晴: "electro",
-  赛诺: "electro",
-  北斗: "electro",
-  九条裟罗: "electro",
-  雷电将军: "electro",
-  八重神子: "electro",
-  砂糖: "anemo",
-  琴: "anemo",
-  温迪: "anemo",
-  魈: "anemo",
-  凝光: "geo",
-  诺艾尔: "geo",
-  钟离: "geo",
-  荒泷一斗: "geo",
-  柯莱: "dendro",
-  提纳里: "dendro",
-  纳西妲: "dendro",
-  愚人众·冰萤术士: "cryo",
-  纯水精灵·洛蒂娅: "hydro",
-  愚人众·藏镜仕女: "hydro",
-  愚人众·火之债务处理人: "pyro",
-  深渊咏者·渊火: "pyro",
-  无相之雷: "electro",
-  魔偶剑鬼: "anemo",
-  岩盔丘丘王: "geo",
-  翠翎恐禽: "dendro",
-};
-
-export { ALL_ELEMENTS, ALL_CHARACTER_CARDS, ALL_ACTION_CARDS };
-
-const characterCardOrder = Object.fromEntries(ALL_CHARACTER_CARDS.map((card, i) => [card, i])) as Record<CharacterCard, number>;
-export const characterCardFilter = (k: string): k is CharacterCard => ALL_CHARACTER_CARDS.includes(k as CharacterCard);
-export const characterCardSorter = (a: CharacterCard, b: CharacterCard) => characterCardOrder[a] - characterCardOrder[b];
 const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
-export const actionCardFilter = (k: string): k is ActionCard => ALL_ACTION_CARDS.includes(k as ActionCard);
 export const actionCardSorter = (a: ActionCard, b: ActionCard) => actionCardOrder[a] - actionCardOrder[b];
-
-const elementOrder = Object.fromEntries(ALL_ELEMENTS.map((card, i) => [card, i])) as Record<GElement, number>;
-export const elementSorter = (a: GElement, b: GElement) => elementOrder[a] - elementOrder[b];
