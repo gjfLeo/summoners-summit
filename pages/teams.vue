@@ -3,7 +3,7 @@
     size="small"
     :columns="columns"
     :data="teamStats"
-    max-height="calc(100vh - 11rem)"
+    max-height="calc(100vh - 13rem)"
   />
 </template>
 
