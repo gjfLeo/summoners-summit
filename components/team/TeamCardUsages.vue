@@ -1,10 +1,16 @@
 <template>
-  <n-data-table
-    :columns="columns"
-    :data="data"
-    size="small"
-    max-height="50vh"
-  />
+  <template v-if="numGameWithDeck > 0">
+    <n-data-table
+      :columns="columns"
+      :data="data"
+      size="small"
+      max-height="50vh"
+    />
+    <div class="mt text-sm text-gray">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
+  </template>
+  <template v-else>
+    <div class="mt text-sm text-gray">此阵容没有公布卡组的对局。</div>
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -18,7 +24,9 @@ const props = defineProps<{
 }>();
 
 const { teamId } = useTeamProp(props);
-const { teamCardUsages } = useTeamInfo(teamId);
+const { teamGameList, teamCardUsages } = useTeamInfo(teamId);
+
+const numGameWithDeck = computed(() => teamGameList.value.filter(game => game.playerADeckId).length);
 
 const data = computed(() => Object.entries(teamCardUsages.value).map(([card, usage]) => ({
   key: card,

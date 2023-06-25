@@ -42,7 +42,7 @@ const getTeamCardUsages = useMemoize((teamId: string): Partial<Record<ActionCard
   const usages: Partial<Record<ActionCard, Pick<CardUsageRaw, "total" | "win">>> = {};
   const teamGameList = getTeamGameList(teamId).filter(game => game.playerADeckId);
   teamGameList.forEach((game) => {
-    const actions = deckById[game.playerADeckId!].actionCards;
+    const actions = deckById[game.playerADeckId!]?.actionCards ?? {};
     (Object.entries(actions) as [ActionCard, number][])
       .forEach(([card, count]) => {
         const usage = usages[card] ?? { total: 0, win: 0 };
@@ -74,7 +74,7 @@ const getTeamTypicalActions = useMemoize((teamId: string): Deck["actionCards"] =
       .filter(game => game.playerADeckId)
       .map(game => game.playerADeckId!)
       .map((deckId) => {
-        const actions = deckById[deckId].actionCards;
+        const actions = deckById[deckId]?.actionCards ?? {};
         const totalDiff = (Object.entries(teamCardUsages) as [ActionCard, CardUsage][])
           .reduce(
             (totalDiff, [card, usage]) => {
@@ -95,7 +95,7 @@ const getTeamTypicalActions = useMemoize((teamId: string): Deck["actionCards"] =
     },
     { deckId: "", diff: Infinity },
   );
-  return deckById[minDiff.deckId].actionCards;
+  return deckById[minDiff.deckId]?.actionCards ?? {};
 });
 
 export default function useTeamInfo(teamId: MaybeRef<string>) {

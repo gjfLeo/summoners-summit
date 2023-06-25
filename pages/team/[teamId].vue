@@ -14,11 +14,9 @@
 
   <n-h3>行动牌选择</n-h3>
   <TeamCardUsages :team="teamId" />
-  <div class="mt text-sm text-gray">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
 
   <n-h3>典型构筑</n-h3>
   <TeamDeck :team="teamId" />
-  <div class="mt text-sm text-gray">此处典型构筑指与平均携带张数差距最小的一套构筑，仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
 
   <n-h3>对阵数据</n-h3>
   <TeamTeamStatistics :team="teamId" />
@@ -48,6 +46,4 @@ const pick = computed(() => teamGameList.value.length);
 const win = computed(() => teamGameList.value.filter(game => game.winner === "A").length);
 const winRate = computed(() => toPercentageString(divide(win.value, pick.value)));
 const winDifferential = computed(() => subtract(win.value, subtract(pick.value, win.value)));
-
-const numGameWithDeck = computed(() => teamGameList.value.filter(game => game.playerADeckId).length);
 </script>
