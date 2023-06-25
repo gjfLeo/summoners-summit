@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     },
   },
 
+  devServer: {
+    port: 4000,
+  },
+
   modules: [
     "@vueuse/nuxt",
     "@unocss/nuxt",
