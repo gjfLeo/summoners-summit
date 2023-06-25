@@ -10,42 +10,22 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { divide, format } from "mathjs/number";
+import { format } from "mathjs/number";
 import { CardImage } from "#components";
-import type { ActionCard, Game } from "~/utils/types";
-import { deckById } from "~/data";
+import type { ActionCard, CharacterCard } from "~/utils/types";
 
 const props = defineProps<{
-  games: Game[];
+  team: CharacterCard[] | string;
 }>();
 
-const data = computed(() => {
-  const cardUsageMap = props.games
-    .filter(game => game.playerADeckId)
-    .reduce<Partial<Record<ActionCard, { pick: number; win: number }>>>(
-      (map, game) => {
-        const deck = deckById[game.playerADeckId!];
-        for (const entry of Object.entries(deck?.actionCards ?? {})) {
-          const [card, count] = entry as [ActionCard, number];
-          const cardUsage = map[card] ?? { pick: 0, win: 0 };
-          cardUsage.pick += count;
-          cardUsage.win += game.winner === "A" ? count : 0;
-          map[card] = cardUsage;
-        }
-        return map;
-      },
-      {},
-    );
-  return Object.entries(cardUsageMap)
-    .map(([card, usage]) => {
-      return {
-        key: card as ActionCard,
-        card: card as ActionCard,
-        pick: format(divide(usage.pick, props.games.length), { precision: 3 }),
-        win: format(divide(usage.win, props.games.filter(game => game.winner === "A").length), { precision: 3 }),
-      };
-    });
-});
+const { teamId } = useTeamProp(props);
+const { teamCardUsages } = useTeamInfo(teamId);
+
+const data = computed(() => Object.entries(teamCardUsages.value).map(([card, usage]) => ({
+  key: card,
+  card: card as ActionCard,
+  ...usage,
+})));
 
 type RowType = typeof data["value"][number];
 const columns: DataTableColumn<RowType>[] = [
@@ -64,15 +44,17 @@ const columns: DataTableColumn<RowType>[] = [
   },
   {
     title: "平均携带",
-    key: "pick",
+    key: "totalAverage",
     align: "center",
     sorter: "default",
+    render: row => format(row.totalAverage, { precision: 3 }),
   },
   {
     title: "胜场平均携带",
-    key: "win",
+    key: "winAverage",
     align: "center",
     sorter: "default",
+    render: row => format(row.winAverage, { precision: 3 }),
   },
 ];
 </script>

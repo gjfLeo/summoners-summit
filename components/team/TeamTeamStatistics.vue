@@ -12,10 +12,10 @@
 import { divide } from "mathjs/number";
 import { type DataTableColumn, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
-import type { Game } from "~/utils/types";
+import type { CharacterCard } from "~/utils/types";
 
 const props = defineProps<{
-  games: Game[];
+  team: CharacterCard[] | string;
 }>();
 
 interface TeamStatRaw {
@@ -35,8 +35,11 @@ interface TeamStatResult extends TeamStatRaw {
   winDiff: number;
 }
 
+const { teamId } = useTeamProp(props);
+const { teamGameList } = useTeamInfo(teamId);
+
 const data = computed(() => {
-  const map = props.games.reduce<Record<string, TeamStatRaw>>(
+  const map = teamGameList.value.reduce<Record<string, TeamStatRaw>>(
     (map, game) => {
       const opponentTeam = getTeamId(game.playerBCharacters);
       const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };

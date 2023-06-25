@@ -12,11 +12,26 @@
     <n-statistic label="净胜场" :value="winDifferential" />
   </div>
 
-  <h1 class="mt text-xl font-bold">行动牌选择</h1>
-  <TeamCardUsages :games="teamGameList" />
+  <n-h3>
+    行动牌选择
+    <n-tooltip trigger="hover">
+      <template #trigger><n-icon size="1rem"><div class="i-carbon:information" /></n-icon></template>
+      <span>仅计算公布卡组的对局</span>
+    </n-tooltip>
+  </n-h3>
+  <TeamCardUsages :team="teamId" />
 
-  <h1 class="mt text-xl font-bold">对阵数据</h1>
-  <TeamTeamStatistics :games="teamGameList" />
+  <n-h3>
+    典型构筑
+    <n-tooltip trigger="hover">
+      <template #trigger><n-icon size="1rem"><div class="i-carbon:information" /></n-icon></template>
+      <span>指与平均携带张数差距最小的一套构筑</span>
+    </n-tooltip>
+  </n-h3>
+  <TeamDeck :team="teamId" />
+
+  <n-h3>对阵数据</n-h3>
+  <TeamTeamStatistics :team="teamId" />
 </template>
 
 <script lang="ts" setup>
