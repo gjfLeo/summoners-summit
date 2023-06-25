@@ -4,7 +4,6 @@
     :data="data"
     size="small"
     max-height="50vh"
-    class="m-inline-auto max-w-3xl"
   />
 </template>
 

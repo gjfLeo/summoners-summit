@@ -12,23 +12,13 @@
     <n-statistic label="净胜场" :value="winDifferential" />
   </div>
 
-  <n-h3>
-    行动牌选择
-    <n-tooltip trigger="hover">
-      <template #trigger><n-icon size="1rem"><div class="i-carbon:information" /></n-icon></template>
-      <span>仅计算公布卡组的对局</span>
-    </n-tooltip>
-  </n-h3>
+  <n-h3>行动牌选择</n-h3>
   <TeamCardUsages :team="teamId" />
+  <div class="mt text-sm text-gray">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
 
-  <n-h3>
-    典型构筑
-    <n-tooltip trigger="hover">
-      <template #trigger><n-icon size="1rem"><div class="i-carbon:information" /></n-icon></template>
-      <span>指与平均携带张数差距最小的一套构筑</span>
-    </n-tooltip>
-  </n-h3>
+  <n-h3>典型构筑</n-h3>
   <TeamDeck :team="teamId" />
+  <div class="mt text-sm text-gray">此处典型构筑指与平均携带张数差距最小的一套构筑，仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
 
   <n-h3>对阵数据</n-h3>
   <TeamTeamStatistics :team="teamId" />
@@ -36,8 +26,8 @@
 
 <script lang="ts" setup>
 import { divide, subtract } from "mathjs/number";
-import { characterCardSorter, gameList } from "~/data";
-import type { CharacterCard, Game } from "~/utils/types";
+import { characterCardSorter } from "~/data";
+import type { CharacterCard } from "~/utils/types";
 
 const route = useRoute();
 const teamId = route.params.teamId as string;
@@ -54,32 +44,12 @@ if (normalizedTeamId !== teamId) {
 }
 
 // const decks = findDecksByTeam(teamId);
-const teamGameList = gameList.flatMap((game) => {
-  const { playerA, playerB, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
-  const playerATeamId = getTeamId(playerACharacters);
-  const playerBTeamId = getTeamId(playerBCharacters);
-  const teamGames = new Array<Game>();
-  if (playerATeamId === teamId) {
-    teamGames.push(game);
-  }
-  if (playerBTeamId === teamId) {
-    teamGames.push({
-      ...game,
-      playerA: playerB,
-      playerB: playerA,
-      playerACharacters: playerBCharacters,
-      playerBCharacters: playerACharacters,
-      playerADeckId: playerBDeckId,
-      playerBDeckId: playerADeckId,
-      starter: starter === "A" ? "B" : "A",
-      winner: winner === "A" ? "B" : "A",
-    });
-  }
-  return teamGames;
-});
+const { teamGameList } = useTeamInfo(teamId);
 
-const pick = computed(() => teamGameList.length);
-const win = computed(() => teamGameList.filter(game => game.winner === "A").length);
+const pick = computed(() => teamGameList.value.length);
+const win = computed(() => teamGameList.value.filter(game => game.winner === "A").length);
 const winRate = computed(() => toPercentageString(divide(win.value, pick.value)));
 const winDifferential = computed(() => subtract(win.value, subtract(pick.value, win.value)));
+
+const numGameWithDeck = computed(() => teamGameList.value.filter(game => game.playerADeckId).length);
 </script>
