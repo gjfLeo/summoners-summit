@@ -43,5 +43,5 @@ const route = useRoute();
 const tournamentId = computed(() => route.params.tournamentId as string);
 const tournament = tournamentById[tournamentId.value];
 
-useHead({ title: `${tournament.name} - 赛事记录 | 召唤之颠` });
+useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
 </script>

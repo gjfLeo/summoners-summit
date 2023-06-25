@@ -1,10 +1,10 @@
 <template>
   <div class="h-full w-full flex items-center justify-center gap-4 p-4 text-sm text-dark-1">
-    <div>召唤之颠——七圣召唤赛事资料 by gjfLeo</div>
+    <div>召唤之巅——七圣召唤赛事资料 by gjfLeo</div>
     <div class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</div>
   </div>
   <n-drawer v-model:show="showAboutDrawer" :width="502" placement="bottom" :auto-focus="false">
-    <n-drawer-content title="召唤之颠">
+    <n-drawer-content title="召唤之巅">
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
           <div>by gjfLeo</div>

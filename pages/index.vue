@@ -7,5 +7,5 @@ definePageMeta({
   redirect: "/tournaments",
 });
 
-useHead({ title: "召唤之颠" });
+useHead({ title: "召唤之巅" });
 </script>

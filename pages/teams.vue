@@ -13,7 +13,7 @@ import { type DataTableColumn, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import { gameList } from "~/data";
 
-useHead({ title: "阵容 | 召唤之颠" });
+useHead({ title: "阵容 | 召唤之巅" });
 
 interface TeamStatRaw {
   total: number;

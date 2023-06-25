@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import { tournamentById } from "~/data";
 
-useHead({ title: "赛事 | 召唤之颠" });
+useHead({ title: "赛事 | 召唤之巅" });
 
 const list = Object.keys(tournamentById);
 </script>

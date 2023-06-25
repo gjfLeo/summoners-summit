@@ -33,7 +33,7 @@ const route = useRoute();
 const teamId = route.params.teamId as string;
 const team = (teamId.split("-") as CharacterCard[]).sort(characterCardSorter);
 
-useHead({ title: `${team.join(" & ")} - 阵容数据 | 召唤之颠` });
+useHead({ title: `${team.join(" & ")} - 阵容数据 | 召唤之巅` });
 
 // 非标准则跳转
 const normalizedTeamId = team.join("-");
