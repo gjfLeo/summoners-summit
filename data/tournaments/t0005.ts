@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, FatuiPyroAgent, Fischl, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Tighnari, Venti, YaeMiko, Zhongli } from "../shared/character-cards";
+import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, Diluc, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, JadeplumeTerrorshroom, KamisatoAyato, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tighnari, Venti, YaeMiko, Zhongli } from "../shared/character-cards";
 import { defineTournament } from "../shared/utils/tournaments";
 
 export default defineTournament({
@@ -109,13 +109,12 @@ export default defineTournament({
               winner: "A",
               video: "https://www.bilibili.com/video/BV13W4y1D7fi", // 不全
               games: [
-                // 第一局没找到
-                // {
-                //   playerACharacters: [],
-                //   playerBCharacters: [],
-                //   starter: "",
-                //   winner: "A",
-                // },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "A",
+                  winner: "A",
+                },
                 {
                   playerACharacters: [Bennett, Klee, Keqing],
                   playerBCharacters: [YaeMiko, Tighnari, Collei],
@@ -131,18 +130,80 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "吾虽年迈",
-              playerB: "晚晴",
-              winner: "B",
+              playerA: "晚晴",
+              playerB: "吾虽年迈",
+              winner: "A",
               video: "https://www.bilibili.com/video/BV1fP411q7Nz",
-              games: [], // 2:3
+              games: [
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [AratakiItto, Barbara, Noelle],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [AratakiItto, Barbara, Noelle],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Ningguang, RaidenShogun, Zhongli],
+                  playerBCharacters: [Amber, AratakiItto, Noelle],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Ningguang, RaidenShogun, Zhongli],
+                  playerBCharacters: [AratakiItto, Barbara, Noelle],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
             },
             {
               playerA: "破晓",
               playerB: "雀雀",
               winner: "B",
-              video: "", // 没找到
-              games: [], // 2:3
+              video: "",
+              games: [
+                {
+                  playerACharacters: [AratakiItto, Barbara, Noelle],
+                  playerBCharacters: [SangonomiyaKokomi, Noelle, Barbara],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, Ningguang, Barbara],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, Ningguang, Barbara],
+                  playerBCharacters: [Zhongli, RaidenShogun, Ningguang],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, Ningguang, Barbara],
+                  playerBCharacters: [SangonomiyaKokomi, Noelle, Barbara],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [SangonomiyaKokomi, Noelle, Barbara],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
             },
           ],
         },
@@ -155,14 +216,52 @@ export default defineTournament({
               playerB: "吴二不作",
               winner: "A",
               video: "https://www.bilibili.com/video/BV1Fz4y1H7Zg",
-              games: [], // 3:0
+              games: [
+                {
+                  playerACharacters: [Keqing, Mona, Venti],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
             },
             {
               playerA: "燃火之蝶",
               playerB: "宇宙蓝色闪光",
               winner: "A",
               video: "https://www.bilibili.com/video/BV1Fz4y1H7Zg",
-              games: [], // 3:0
+              games: [
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [Collei, YaeMiko, Tighnari],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [Collei, YaeMiko, Tighnari],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Nahida, Mona, Fischl],
+                  playerBCharacters: [Bennett, Klee, Keqing],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
             },
           ],
         },
@@ -176,18 +275,74 @@ export default defineTournament({
           date: "2023-06-21",
           matches: [
             {
-              playerA: "「亦然」",
-              playerB: "本吃包",
-              winner: "B",
+              playerA: "本吃包",
+              playerB: "「亦然」",
+              winner: "A",
               video: "https://www.bilibili.com/video/BV14m4y1e7t8",
-              games: [], // 1:3
+              games: [
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Bennett, Klee, Keqing],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
             },
             {
-              playerA: "琉環冰",
-              playerB: "八重妞妞",
-              winner: "B",
+              playerA: "八重妞妞",
+              playerB: "琉環冰",
+              winner: "A",
               video: "https://www.bilibili.com/video/BV14m4y1e7t8",
-              games: [], // 2:3
+              games: [
+                {
+                  playerACharacters: [Amber, AratakiItto, Noelle],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Collei, YaeMiko, Tighnari],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Collei, YaeMiko, Tighnari],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
             },
           ],
         },
@@ -196,18 +351,62 @@ export default defineTournament({
           date: "2023-06-22",
           matches: [
             {
-              playerA: "雀雀",
-              playerB: "晚晴",
-              winner: "A",
+              playerA: "晚晴",
+              playerB: "雀雀",
+              winner: "B",
               video: "https://www.bilibili.com/video/BV1cj411Q7Zn",
-              games: [], // 3:1
+              games: [
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [AratakiItto, Barbara, Noelle],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [AratakiItto, Amber, Noelle],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
             },
             {
               playerA: "阿源",
               playerB: "燃火之蝶",
               winner: "B",
               video: "https://www.bilibili.com/video/BV1cj411Q7Zn",
-              games: [], // 0:3
+              games: [
+                {
+                  playerACharacters: [Keqing, Mona, Venti],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Keqing, Mona, Venti],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Nahida, Mona, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
             },
           ],
         },
@@ -225,14 +424,107 @@ export default defineTournament({
               playerB: "本吃包",
               winner: "B",
               video: "",
-              games: [], // 1:3
+              games: [
+                {
+                  playerACharacters: [RhodeiaOfLoch, YaeMiko, Nahida],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, YaeMiko, Nahida],
+                  playerBCharacters: [Chongyun, Bennett, Klee],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
             },
             {
-              playerA: "雀雀",
-              playerB: "燃火之蝶",
-              winner: "A",
+              playerA: "燃火之蝶",
+              playerB: "雀雀",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1dV411u7mJ",
+              games: [
+                {
+                  playerACharacters: [Cyno, Klee, Bennett],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [Shenhe, Venti, Sucrose],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [Zhongli, RaidenShogun, Ningguang],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Venti, Keqing],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, Noelle, Barbara],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "表演赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-06-24",
+          matches: [
+            {
+              playerA: "月话牌社-音月",
+              playerB: "小铭同学qaQ233",
+              winner: "B",
               video: "",
-              games: [], // 3:2
+              games: [
+                {
+                  playerACharacters: [KujouSara, Ningguang, Noelle],
+                  playerBCharacters: [StonehideLawachurl, Amber, Zhongli],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [KujouSara, Ningguang, Noelle],
+                  playerBCharacters: [KamisatoAyato, Zhongli, FatuiMirrorMaiden],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [KujouSara, Diluc, JadeplumeTerrorshroom],
+                  playerBCharacters: [KamisatoAyato, Zhongli, FatuiMirrorMaiden],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
             },
           ],
         },
@@ -244,7 +536,46 @@ export default defineTournament({
         {
           name: "",
           date: "2023-06-24",
-          matches: [],
+          matches: [
+            {
+              playerA: "本吃包",
+              playerB: "雀雀",
+              winner: "A",
+              video: "",
+              games: [
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Fischl, Nahida, Mona],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Mona, Venti, Keqing],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [YaeMiko, Tighnari, Collei],
+                  playerBCharacters: [Mona, Venti, Keqing],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
         },
       ],
     },
