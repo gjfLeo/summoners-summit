@@ -15,17 +15,20 @@
           <div class="text-base" :class="{ 'text-orange-500': match.winner === 'B' }">{{ match.playerB }}</div>
 
           <!-- 右侧 -->
-          <div class="ml-auto text-sm text-gray">{{ part.date }}</div>
-          <n-tooltip
-            trigger="hover"
-          >
-            <template #trigger>
-              <NuxtLink class="translate-y-1 text-sm text-gray" :to="match.video" target="_blank">
-                <div class="i-carbon:video" />
-              </NuxtLink>
-            </template>
-            <span>观看录像</span>
-          </n-tooltip>
+          <div class="ml-auto flex gap-2 text-sm text-gray">
+            <n-tooltip
+              v-if="match.video"
+              trigger="hover"
+            >
+              <template #trigger>
+                <NuxtLink :to="match.video" target="_blank">
+                  <n-icon><div class="i-carbon:video" /></n-icon>
+                </NuxtLink>
+              </template>
+              <span>观看录像</span>
+            </n-tooltip>
+            <div>{{ part.date }}</div>
+          </div>
         </n-h3>
         <GameList :list="match.games.map(game => game.id)" />
       </template>
