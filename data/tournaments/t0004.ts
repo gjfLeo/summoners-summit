@@ -160,6 +160,43 @@ const actions = {
     "蒙德土豆饼": 1,
     "唐杜尔烤鸭": 1,
   }),
+  "枫间璃-双冰": defineActions({
+    "赌徒的耳环": 2,
+    "桓纳兰那": 2,
+    "提米": 2,
+    "立本": 2,
+    "元素共鸣：交织之冰": 2,
+    "元素共鸣：粉碎之冰": 2,
+    "最好的伙伴！": 2,
+    "换班时间": 1,
+    "运筹帷幄": 2,
+    "本大爷还没有输！": 2,
+    "交给我吧！": 2,
+    "星天之兆": 1,
+    "送你一程": 2,
+    "重攻击": 1,
+    "仙跳墙": 1,
+    "莲花酥": 2,
+    "蒙德土豆饼": 2,
+  }),
+  "枫间璃-水皇草": defineActions({
+    "赌徒的耳环": 1,
+    "桓纳兰那": 2,
+    "派蒙": 2,
+    "提米": 2,
+    "立本": 2,
+    "最好的伙伴！": 2,
+    "一掷乾坤": 2,
+    "运筹帷幄": 2,
+    "本大爷还没有输！": 2,
+    "交给我吧！": 2,
+    "星天之兆": 1,
+    "白垩之术": 2,
+    "送你一程": 2,
+    "仙跳墙": 2,
+    "莲花酥": 2,
+    "蒙德土豆饼": 2,
+  }),
 };
 
 export default defineTournament({
@@ -177,24 +214,41 @@ export default defineTournament({
     //     },
     //   ],
     // },
-    // {
-    //   name: "8进4淘汰赛",
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-06-24",
-    //       matches: [
-    //         {
-    //           playerA: "那菈琉環冰",
-    //           playerB: "枫间璃",
-    //           winner: "A",
-    //           video: "https://www.bilibili.com/video/BV1ha4y1A7vD",
-    //           games: [],
-    //         }
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      name: "8进4淘汰赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-06-24",
+          matches: [
+            {
+              playerA: "那菈琉環冰",
+              playerB: "枫间璃",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1ha4y1A7vD",
+              games: [
+                {
+                  playerACharacters: [Bennett, Klee, Keqing],
+                  playerAActions: actions["那菈琉環冰-火刻"],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBActions: actions["枫间璃-双冰"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerAActions: actions["那菈琉環冰-水皇草"],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBActions: actions["枫间璃-双冰"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     {
       name: "半决赛",
       parts: [
