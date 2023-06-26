@@ -78,7 +78,7 @@ const getTeamTypicalActions = useMemoize((teamId: string): Deck["actionCards"] =
         const totalDiff = (Object.entries(teamCardUsages) as [ActionCard, CardUsage][])
           .reduce(
             (totalDiff, [card, usage]) => {
-              const diff = (actions[card] ?? 0) - usage.totalAverage;
+              const diff = (actions[card] ?? 0) - usage.winAverage;
               return add(totalDiff, multiply(diff, diff));
             },
             0,
