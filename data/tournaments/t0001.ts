@@ -1,6 +1,8 @@
 import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, Jean, KamisatoAyaka, Keqing, Klee, MaguuKenki, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Xiao, Xingqiu, YaeMiko, Zhongli } from "../shared/character-cards";
 import { defineTournament } from "../shared/utils/tournaments";
 
+// cSpell:word 卡密sama 魔法绵羊Tobby
+
 export default defineTournament({
   id: "0001",
   name: "七圣召唤主播邀请赛",

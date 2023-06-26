@@ -504,7 +504,7 @@ export default defineTournament({
               playerA: "月话牌社-音月",
               playerB: "小铭同学qaQ233",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1NX4y1p7Cg",
               games: [
                 {
                   playerACharacters: [KujouSara, Ningguang, Noelle],
@@ -541,7 +541,7 @@ export default defineTournament({
               playerA: "本吃包",
               playerB: "雀雀",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1NX4y1p7Cg",
               games: [
                 {
                   playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
