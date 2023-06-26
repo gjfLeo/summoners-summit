@@ -10,11 +10,6 @@ export default defineTournament({
   stages: [
     {
       name: "线上淘汰赛",
-      // rules: {
-      //   deckRules: ["预组", 3],
-      //   matchRules: ["决斗", 2],
-      //   stageRules: "单败淘汰",
-      // },
       parts: [
         {
           name: "预选赛A组",
@@ -3173,9 +3168,6 @@ export default defineTournament({
     },
     {
       name: "线下赛",
-      // rules: {
-      //   stageRules: "双败淘汰",
-      // },
       parts: [
         {
           name: "胜者组",
@@ -3238,10 +3230,6 @@ export default defineTournament({
         {
           name: "胜者组半决赛",
           date: "2023-06-16",
-          // rules: {
-          //   deckRules: ["预组", 3],
-          //   matchRules: ["决斗", 2],
-          // },
           matches: [
             {
               playerA: "甜甜花酿鸡队",
@@ -3421,10 +3409,6 @@ export default defineTournament({
         {
           name: "败者组半决赛",
           date: "2023-06-17",
-          // rules: {
-          //   deckRules: ["预组", 5],
-          //   matchRules: ["决斗", 2],
-          // },
           matches: [
             {
               playerA: "甜甜花酿鸡队",
@@ -3574,10 +3558,6 @@ export default defineTournament({
         {
           name: "决赛",
           date: "2023-06-17",
-          // rules: {
-          //   deckRules: ["预组", 5],
-          //   matchRules: ["决斗", 3],
-          // },
           matches: [
             {
               playerA: "提瓦特煎蛋队",
