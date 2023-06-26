@@ -11,12 +11,30 @@ export default defineTournament({
         {
           name: "DAY1",
           date: "2023-06-29",
-          matches: [],
+          matches: [
+            // {
+            //   playerA: "全都是错误",
+            //   playerB: "蒙德高达诺艾尔",
+            // },
+            // {
+            //   playerA: "桔梗",
+            //   playerB: "Dr.666",
+            // },
+          ],
         },
         {
           name: "DAY2",
           date: "2023-06-30",
-          matches: [],
+          matches: [
+            // {
+            //   playerA: "唐傀",
+            //   playerB: "昨夜风",
+            // },
+            // {
+            //   playerA: "河道迅捷蟹",
+            //   playerB: "岩van♂deep君",
+            // }
+          ],
         },
       ],
     },

@@ -7,7 +7,7 @@ export default defineTournament({
   gameVersion: "3.7",
   stages: [
     {
-      name: "16进8",
+      name: "16进8淘汰赛",
       parts: [
         {
           name: "DAY1",
@@ -268,7 +268,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "8进4",
+      name: "8进4淘汰赛",
       parts: [
         {
           name: "DAY1",

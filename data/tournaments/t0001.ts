@@ -3170,7 +3170,7 @@ export default defineTournament({
       name: "线下赛",
       parts: [
         {
-          name: "胜者组",
+          name: "胜者组淘汰赛",
           date: "2023-06-16",
           matches: [
             {
@@ -3375,7 +3375,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "败者组",
+          name: "败者组淘汰赛",
           date: "2023-06-17",
           matches: [
             {
