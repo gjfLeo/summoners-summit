@@ -30,6 +30,7 @@
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.8",
     "eslint": "^8.43.0",
+    "eslint-plugin-sort-keys-custom-order-fix": "^0.1.1",
     "mathjs": "^11.8.1",
     "naive-ui": "^2.34.4",
     "nuxt": "^3.5.3",
