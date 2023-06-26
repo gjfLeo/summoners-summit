@@ -1,8 +1,9 @@
 import t0001 from "./t0001";
+import t0004 from "./t0004";
 import t0005 from "./t0005";
 import type { Game } from "~/utils/types";
 
-export const tournamentList = [t0001, t0005];
+export const tournamentList = [t0001, t0004, t0005];
 export const tournamentById = Object.fromEntries(tournamentList.map(tournament => [tournament.id, tournament]));
 
 export const gameList = tournamentList.flatMap<Game>((tournament) => {

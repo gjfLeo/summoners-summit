@@ -1,4 +1,4 @@
-import { defineDeck } from "./decks";
+import { registerDeck } from "./decks";
 import type { Deck, Tournament, TournamentMatch, TournamentMatchGame, TournamentStage, TournamentStagePart } from "~/utils/types";
 
 interface TournamentParam extends Tournament {
@@ -37,8 +37,8 @@ export function defineTournament(tournament: TournamentParam): Tournament {
       part.matches.forEach((match) => {
         match.games.forEach((gameParam, i, games) => {
           const { playerACharacters, playerBCharacters, playerAActions, playerBActions, starter, winner, turns } = gameParam;
-          const playerADeckId = playerAActions ? defineDeck(playerACharacters, playerAActions) : undefined;
-          const playerBDeckId = playerBActions ? defineDeck(playerBCharacters, playerBActions) : undefined;
+          const playerADeckId = playerAActions ? registerDeck(playerACharacters, playerAActions) : undefined;
+          const playerBDeckId = playerBActions ? registerDeck(playerBCharacters, playerBActions) : undefined;
           (games as TournamentMatchGame[])[i] = {
             id: gameIdGenerator(),
             playerACharacters,
