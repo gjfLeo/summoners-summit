@@ -93,7 +93,7 @@ const getTeamTypicalActions = useMemoize((teamId: string): Deck["actionCards"] =
       }
       return min;
     },
-    { deckId: "", diff: Infinity },
+    { deckId: "", diff: Number.POSITIVE_INFINITY },
   );
   return deckById[minDiff.deckId]?.actionCards ?? {};
 });
