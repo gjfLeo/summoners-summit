@@ -3,7 +3,9 @@ import { defineTournament } from "../shared/utils/tournaments";
 export default defineTournament({
   id: "0002",
   name: "「燃斗无双」米游社",
+  tag: "全民积分赛",
   gameVersion: "3.7",
+  image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/22/cc44733a7266dc48ddce010b81254813_1820244986244219714.jpg",
   stages: [
     {
       name: "8进4淘汰赛",

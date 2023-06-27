@@ -1,6 +1,16 @@
 <template>
   <NuxtLink :to="link">
-    <div class="flex items-center justify-center border border-rd-2 p-4 transition hover:border-lime hover:text-lime-6">{{ tournament.name }}</div>
+    <n-card :title="tournament.name" hoverable>
+      <template v-if="tournament.image" #cover>
+        <img :src="tournament.image" />
+      </template>
+      <template #header>
+        <div class="flex flex-wrap items-center">
+          <div>{{ tournament.name }}</div>
+          <n-tag v-if="tournament.tag" class="ml-auto" size="small">{{ tournament.tag }}</n-tag>
+        </div>
+      </template>
+    </n-card>
   </NuxtLink>
 </template>
 

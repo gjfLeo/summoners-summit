@@ -202,7 +202,9 @@ const actions = {
 export default defineTournament({
   id: "0004",
   name: "NGA酒馆争霸杯",
+  tag: "全民积分赛",
   gameVersion: "3.7",
+  image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/23/bef62c35dc47d199843004a85932200c_1843667749851033260.jpg",
   stages: [
     // {
     //   name: "16进8淘汰赛",

@@ -8,6 +8,8 @@ export interface Tournament {
   id: string;
   name: string;
   gameVersion: string;
+  tag?: string;
+  image?: string;
   stages: TournamentStage[];
 }
 

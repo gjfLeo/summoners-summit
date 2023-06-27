@@ -420,7 +420,9 @@ const actions = {
 export default defineTournament({
   id: "0006",
   name: "寒天之钉杯",
+  tag: "全民积分赛",
   gameVersion: "3.7",
+  image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/23/e960a0b3bca0a59b91f864c816b7a336_8583411093250351866.jpg",
   stages: [
     {
       name: "16进8淘汰赛",
