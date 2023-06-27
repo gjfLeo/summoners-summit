@@ -102,7 +102,6 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    defaultSortOrder: "descend",
     filterMultiple: false,
     filterOptions: [2, 3, 5].map(v => ({ label: `至少${v}场`, value: v })),
     defaultFilterOptionValue: 2,
@@ -115,6 +114,14 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     align: "center",
     sorter: "default",
     render: row => winRateRender(row.win, row.total, row.winRate),
+  },
+  {
+    title: "胜场数",
+    key: "win",
+    width: "6rem",
+    align: "center",
+    defaultSortOrder: "descend",
+    sorter: "default",
   },
   {
     title: "净胜",
