@@ -82,11 +82,10 @@ module.exports = {
   overrides: [
     {
       files: "data/tournaments/*.ts",
-      plugins: ["sort-keys-custom-order-fix"],
       rules: {
-        "sort-keys-custom-order-fix/sort-keys-custom-order-fix": [
-          "warn", "custom", {
-            order: ALL_ACTION_CARDS,
+        "gjfleo/custom-sort-keys": [
+          "warn", {
+            orderedKeys: ALL_ACTION_CARDS,
           },
         ],
       },
