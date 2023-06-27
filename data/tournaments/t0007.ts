@@ -263,7 +263,26 @@ export default defineTournament({
               games: [
                 {
                   playerACharacters: [Bennett, Keqing, FatuiPyroAgent],
-                  // TODO 缺卡组
+                  playerAActions: defineActions({
+                    "冒险憧憬": 2,
+                    "悉数讨回": 1,
+                    "祭礼剑": 1,
+                    "赌徒的耳环": 2,
+                    "璃月港口": 1,
+                    "须弥城": 2,
+                    "派蒙": 2,
+                    "提米": 2,
+                    "刘苏": 1,
+                    "寻宝仙灵": 1,
+                    "元素共鸣：交织之火": 2,
+                    "元素共鸣：热诚之火": 2,
+                    "最好的伙伴！": 2,
+                    "本大爷还没有输！": 2,
+                    "交给我吧！": 2,
+                    "莲花酥": 2,
+                    "蒙德土豆饼": 2,
+                    "唐杜尔烤鸭": 1,
+                  }),
                   playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerBActions: actions["卡密sama42-双冰"],
                   starter: "B",
