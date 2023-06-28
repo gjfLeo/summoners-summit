@@ -8,15 +8,28 @@
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
           <div>by gjfLeo</div>
-          <NuxtLink to="https://github.com/gjfLeo/summoners-summit" target="_blank">
+          <NuxtLink :to="githubRepositry" target="_blank">
             <n-icon class="text-2xl"><div class="i-carbon:logo-github" /></n-icon>
           </NuxtLink>
         </div>
         <div class="flex items-center gap-2">
           <div>欢迎建议和纠错</div>
-          <NuxtLink to="https://nga.178.com/read.php?tid=36782766" target="_blank">
-            <n-icon class="text-2xl"><div class="i-nga" /></n-icon>
+          <NuxtLink :to="contactNGAThread" target="_blank">
+            <n-tooltip trigger="hover">
+              <template #trigger>
+                <n-icon class="text-lg"><div class="i-nga" /></n-icon>
+              </template>
+              <span>NGA</span>
+            </n-tooltip>
           </NuxtLink>
+          <div class="cursor-pointer" @click="handleQQClick">
+            <n-tooltip trigger="hover">
+              <template #trigger>
+                <n-icon class="text-lg"><div class="i-mdi:qqchat" /></n-icon>
+              </template>
+              <span>QQ: {{ contactQQ }}</span>
+            </n-tooltip>
+          </div>
         </div>
         <div>更新时间：{{ updateTime }}</div>
       </div>
@@ -25,18 +38,32 @@
 </template>
 
 <script lang="ts" setup>
+import { useMessage } from "naive-ui";
+
+const githubRepositry = "https://github.com/gjfLeo/summoners-summit";
+const contactQQ = "1272823636";
+const contactNGAThread = "https://nga.178.com/read.php?tid=36782766";
+
 const runtimeConfig = useRuntimeConfig();
 const updateTime = runtimeConfig.public.updateTime;
 
 const showAboutDrawer = ref(false);
+
+const { copy } = useClipboard();
+const message = useMessage();
+
+async function handleQQClick() {
+  await copy(contactQQ);
+  message.success("已复制");
+}
 </script>
 
 <style scoped>
 .i-nga {
   width: 1.2em;
   height: 1.2em;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAApFJREFUeNqsll9ojlEcx989e4uFcIELZlnExWptWrJRrKQpK9MSIkqSUiim0JJ2sXax5UabGyluVovdTMpcaEpv6C1uLLR2wwU1fzJ/hs+vvk+dTue8z3vhW5/e5/c+5znf55zzO7/zVDRs3pIroUXQAW3QBDVQCXMwBQUYg5HnTx5/iXVSETGpgi44DYtz2ZqBAejF7Lt/Mwk8UA9F6C7TIKd21r7Y2Ly1PsukFSZgnff/Hy/+GjGz5yYwao2Z2BuMwoLAw3eca2vzQtehdbDnR90RJc4aDAcMfsBJuKv4PRyFlfALLkRGZP0MY1TlmnQFpsg0CNfhg+JuGVuWXZWp6SV8DExdV5pdlqbTkUX+Bv3QCLvgHMzqd62MDsA2eBPJuuq89kEsi2y4x2G54j7H/Azsh2PQ7Iyozsu6jrw2WkiWUYfhNsyD1bBKU3XK9oTaWXwCLuql6rx+2hLtZF+2qHtlkCbAJDyCm7AJLsFPGNJ02u7fHuirKdGb+BpyMsqmagRuaQQV8Bt61PlTtXsALYG+ahLVIl/TzvVC2AOH4Brcg6W690odn9eoQqpMVOx8ufP6Fj458W54BhstoFbNQZ/+C2kuUTX1dTDtRCp499eo/Fjm5dh0KyKVwjSVVwe1fnWGG1qHWcW+LOMGMTirrIuZFPI6D/YFbjYIXz16qfWwQb+lNJa143OBWjbfiXcoq0qdM9WJKulAmefGZy9+CO9KtB+wEzMtkL3abFlaBkec2Kb7b6TtZFoVUhM7MjtVk7LUr+KYU3bVRgprZ3oUu4eWHbntZRgtgddwHy5HDNoxKMaO33Ht4Kyps5Te6VRnd4paMBjP+pAo6ii+ouwoRzNqX++OIOuT6L9+d/0TYADFM6ixD4QtSwAAAABJRU5ErkJggg==);
-  background-size: 90%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9btSIVETOIdMhQneyiIuJUqlgEC6Wt0KqDyaUfQpOGJMXFUXAtOPixWHVwcdbVwVUQBD9AXF2cFF2kxP8lhRYxHhz34929x907wN+oMNXsigGqZhnpRFzM5VfE4Ct6EMYgBMxKzNSTmYUsPMfXPXx8vYvyLO9zf45+pWAywCcSx5huWMTrxNObls55n1hgZUkhPiceN+iCxI9cl11+41xy2M8zBSObniMWiMVSB8sdzMqGSjxFHFFUjfL9OZcVzluc1UqNte7JXxgqaMsZrtMMI4FFJJGCCBk1bKACC1FaNVJMpGk/7uEfcfwpcsnk2gAjxzyqUCE5fvA/+N2tWZyccJNCcaD7xbY/RoHgLtCs2/b3sW03T4DAM3Cltf3VBjDzSXq9rUWOgIFt4OK6rcl7wOUOMPykS4bkSAGa/mIReD+jb8oDQ7dA36rbW2sfpw9AlrpaugEODoGxEmWveby7t7O3f8+0+vsB/XZy3jc0RloAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfnBhwRLCqtdPciAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAatJREFUSMftlT9oVEEQh7/TIEJ6hSjKQUjQbqPN4jYBLUUbEwikMQhqICgKNoJiE4vjBBs50WsUPEKq1HdFYHCawGBxCoIgZ7DQRlCRQECbPViO+/vuGuGmmvnt7Pve7My+B2P7L835cDXxrzgfLgyy/0AfgOfAxejngRLwNcaloSHOh7vANeBIlO4Dh4CG82EdOBrzzjofjmeCmEoBeAQUovQTeAVMAXeAHefDDLBhKrvD9ONkB73ofJh1PlSdD2+aFbXLzfUAVIBFYA/4EnvRAJ6ZytuYUwZeAJeBP6byoG+I82Gr2fA2tg8UTeVekl8F1k2l1hfE+XAbKMbwO7AGTAJngOvJvg/ADVPZzjJd6aT8MpWKqbw0lZvAAvAjrp0Cas6HJ1kg9cTPOx+OJRO3CZwDLEoHgVvOh/mBIKZSTh5CPKZ0/b2pzAHlKH0DfneCTHSpchVYAg4Dfzu8zIrz4ampvOt2XLkM9+Yh8Bn42BzjXpYFklZVM5XzQ38gWwAnWqR558PpkUJMpQG8brmUuZFCImgZ+BTDsqnURw6JoGngEvB4/Esfuf0D78qHsw5IfaAAAAAASUVORK5CYII=");
+  background-size: 110%;
   background-position: 50%;
   background-repeat: no-repeat;
 }
