@@ -83,7 +83,6 @@ export default defineNuxtConfig({
   },
 
   app: {
-    buildAssetsDir: process.env.NUXT_BUILD_ASSETS_DIR,
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
