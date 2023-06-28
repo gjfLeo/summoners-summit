@@ -68,7 +68,7 @@ jobs:
         run: pnpm run generate
         env:
           NITRO_PRESET: github-pages
-          NUXT_BUILD_ASSETS_DIR: /nuxt_static/
+          NUXT_BUILD_ASSETS_DIR: /static/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
