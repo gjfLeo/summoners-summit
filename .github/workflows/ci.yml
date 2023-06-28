@@ -52,28 +52,27 @@ jobs:
           node-version: 18.x
           cache: pnpm
 
-      # - name: Restore cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       dist
-      #       .nuxt
-      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-nuxt-build-
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            dist
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
 
       - name: Install dependencies
         run: pnpm install
       - name: Static HTML export with Nuxt
         run: pnpm run generate
         env:
-          NITRO_PRESET: github-pages
+          # NITRO_PRESET: github-pages
           NUXT_APP_BASE_URL: /summoners-summit/
-          # NUXT_APP_BUILD_ASSETS_DIR: /static/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./.output/public
+          path: ./dist
 
   deploy:
     needs: build
