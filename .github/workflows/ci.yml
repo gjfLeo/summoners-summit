@@ -57,10 +57,10 @@ jobs:
           node-version: 18.x
           cache: pnpm
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: nuxt
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v3
+      #   with:
+      #     static_site_generator: nuxt
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -79,7 +79,6 @@ jobs:
         with:
           path: ./dist
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
