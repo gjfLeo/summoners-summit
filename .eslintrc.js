@@ -81,7 +81,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: "data/tournaments/*.ts",
+      files: "data/tournaments/*/*.ts",
       rules: {
         "gjfleo/custom-sort-keys": [
           "warn", {
