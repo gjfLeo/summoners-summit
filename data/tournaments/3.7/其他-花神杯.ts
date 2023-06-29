@@ -18,7 +18,7 @@ export default defineTournament({
               playerA: "Sherry",
               playerB: "h小学生",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV11N411D7zQ",
               games: [
                 {
                   playerACharacters: [Bennett, Yoimiya, ElectroHypostasis],
