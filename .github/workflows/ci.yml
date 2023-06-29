@@ -67,7 +67,6 @@ jobs:
       - name: Static HTML export with Nuxt
         run: pnpm run generate
         env:
-          # NITRO_PRESET: github-pages
           NUXT_APP_BASE_URL: /summoners-summit/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
