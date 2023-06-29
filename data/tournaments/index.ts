@@ -1,7 +1,8 @@
+import t37 from "./3.7";
 import type { Game } from "~/utils/types";
 
 export const tournamentList = [
-  ...(await import("./3.7")).default,
+  ...t37,
 ].reverse();
 export const tournamentById = Object.fromEntries(tournamentList.map(tournament => [tournament.id, tournament]));
 

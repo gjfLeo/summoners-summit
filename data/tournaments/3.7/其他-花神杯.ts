@@ -44,7 +44,7 @@ export default defineTournament({
               playerA: "雪乃",
               playerB: "兮梦",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1tX4y1p7L6",
               games: [
                 {
                   playerACharacters: [Fischl, RhodeiaOfLoch, Nahida],
