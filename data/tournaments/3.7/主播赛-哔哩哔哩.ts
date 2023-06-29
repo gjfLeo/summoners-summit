@@ -1,5 +1,5 @@
 import { defineActions } from "../../shared/utils/decks";
-import { AratakiItto, Barbara, Bennett, Chongyun, Collei, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Zhongli } from "../../shared/character-cards";
+import { AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Jean, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Yoimiya, Zhongli } from "../../shared/character-cards";
 import { defineTournament } from "../../shared/utils/tournaments";
 
 const actions = {
@@ -1169,6 +1169,176 @@ export default defineTournament({
                   playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerBActions: actions["音月-双冰"],
                   starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "DAY3",
+          date: "2023-06-29",
+          matches: [
+            {
+              playerA: "阿源今晚吃派蒙",
+              playerB: "零之启",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6",
+              games: [
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [AratakiItto, Barbara, Noelle],
+                  playerBCharacters: [Barbara, AratakiItto, Noelle],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "圣刻",
+              playerB: "齿轮mog",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=2",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, Cyno],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Mona, Jean, Keqing],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "蓬莱寺九霄啊",
+              playerB: "柠柠七喵",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=3",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [AratakiItto, Barbara, Noelle],
+                  playerBCharacters: [ElectroHypostasis, Bennett, Yoimiya],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "幽羊",
+              playerB: "七圣召唤王师傅",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=4",
+              games: [
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Mona, Venti, Keqing],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "阿源今晚吃派蒙",
+              playerB: "齿轮mog",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=5",
+              games: [
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Mona, Jean, Keqing],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "蓬莱寺九霄啊",
+              playerB: "七圣召唤王师傅",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=6",
+              games: [
+                {
+                  playerACharacters: [AratakiItto, Barbara, Noelle],
+                  playerBCharacters: [Mona, Venti, Keqing],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "阿源今晚吃派蒙",
+              playerB: "七圣召唤王师傅",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=7",
+              games: [
+                {
+                  playerACharacters: [AratakiItto, Barbara, Noelle],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Mona, Venti, Keqing],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
                   winner: "B",
                 },
               ],
