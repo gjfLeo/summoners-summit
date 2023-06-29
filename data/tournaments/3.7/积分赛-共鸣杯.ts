@@ -1,8 +1,7 @@
-import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, Diluc, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, JadeplumeTerrorshroom, KamisatoAyato, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tighnari, Venti, YaeMiko, Zhongli } from "../shared/character-cards";
-import { defineTournament } from "../shared/utils/tournaments";
+import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, Diluc, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, JadeplumeTerrorshroom, KamisatoAyato, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tighnari, Venti, YaeMiko, Zhongli } from "../../shared/character-cards";
+import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
-  id: "0005",
   name: "「同声相应」共鸣杯",
   tag: "全民积分赛",
   gameVersion: "3.7",

@@ -1,6 +1,6 @@
-import { defineActions } from "../shared/utils/decks";
-import { AratakiItto, Barbara, Bennett, Chongyun, Collei, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Zhongli } from "../shared/character-cards";
-import { defineTournament } from "../shared/utils/tournaments";
+import { defineActions } from "../../shared/utils/decks";
+import { AratakiItto, Barbara, Bennett, Chongyun, Collei, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Zhongli } from "../../shared/character-cards";
+import { defineTournament } from "../../shared/utils/tournaments";
 
 const actions = {
   "卡密sama42-双冰": defineActions({
@@ -430,7 +430,6 @@ const actions = {
 };
 
 export default defineTournament({
-  id: "0007",
   name: "哔哩哔哩主播资格赛",
   tag: "主播资格赛",
   gameVersion: "3.7",

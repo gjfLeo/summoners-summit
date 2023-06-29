@@ -1,7 +1,7 @@
 import { registerDeck } from "./decks";
 import type { Deck, Tournament, TournamentMatch, TournamentMatchGame, TournamentStage, TournamentStagePart } from "~/utils/types";
 
-interface TournamentParam extends Tournament {
+interface TournamentParam extends Omit<Tournament, "id"> {
   stages: TournamentParamStage[];
 }
 
@@ -30,8 +30,13 @@ export function getGameIdGenerator(tournamentId: string): () => string {
   };
 }
 
+let tournamentIndex = 0;
+
 export function defineTournament(tournament: TournamentParam): Tournament {
-  const gameIdGenerator = getGameIdGenerator(tournament.id);
+  tournamentIndex++;
+  const tournamentId = tournamentIndex.toString().padStart(4, "0");
+  (tournament as Tournament).id = tournamentId;
+  const gameIdGenerator = getGameIdGenerator(tournamentId);
   tournament.stages.forEach((stage) => {
     stage.parts.forEach((part) => {
       part.matches.forEach((match) => {

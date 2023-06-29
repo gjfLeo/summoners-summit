@@ -1,6 +1,6 @@
-import { AratakiItto, Barbara, Bennett, Chongyun, Fischl, Keqing, Klee, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe } from "../shared/character-cards";
-import { defineActions } from "../shared/utils/decks";
-import { defineTournament } from "../shared/utils/tournaments";
+import { AratakiItto, Barbara, Bennett, Chongyun, Fischl, Keqing, Klee, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe } from "../../shared/character-cards";
+import { defineActions } from "../../shared/utils/decks";
+import { defineTournament } from "../../shared/utils/tournaments";
 
 const actions = {
   "蓬莱寺九霄-水皇草": defineActions({
@@ -200,7 +200,6 @@ const actions = {
 };
 
 export default defineTournament({
-  id: "0004",
   name: "NGA酒馆争霸杯",
   tag: "全民积分赛",
   gameVersion: "3.7",

@@ -1,6 +1,6 @@
-import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Collei, FatuiPyroAgent, Fischl, HuTao, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tighnari, Venti, Xingqiu, YaeMiko, Zhongli } from "../shared/character-cards";
-import { defineActions } from "../shared/utils/decks";
-import { defineTournament } from "../shared/utils/tournaments";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Collei, FatuiPyroAgent, Fischl, HuTao, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tighnari, Venti, Xingqiu, YaeMiko, Zhongli } from "../../shared/character-cards";
+import { defineActions } from "../../shared/utils/decks";
+import { defineTournament } from "../../shared/utils/tournaments";
 
 const actions = {
   "StarMeaning-双冰": defineActions({
@@ -710,7 +710,6 @@ const actions = {
 };
 
 export default defineTournament({
-  id: "0006",
   name: "寒天之钉杯",
   tag: "全民积分赛",
   gameVersion: "3.7",
@@ -974,7 +973,6 @@ export default defineTournament({
                   playerAActions: actions["RR夜莺-钟凝"],
                   playerBCharacters: [Keqing, Mona, Venti],
                   playerBActions: actions["零之启-莫温刻"],
-                  // TODO 这局录像缺了，现在先手是瞎填的
                   starter: "A",
                   winner: "A",
                 },

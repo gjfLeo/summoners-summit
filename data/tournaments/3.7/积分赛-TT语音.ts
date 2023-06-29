@@ -1,8 +1,7 @@
-import { AratakiItto, Fischl, Keqing, Mona, Nahida, Ningguang, RhodeiaOfLoch, StonehideLawachurl, Venti, YaeMiko, Zhongli } from "../shared/character-cards";
-import { defineTournament } from "../shared/utils/tournaments";
+import { AratakiItto, Fischl, Keqing, Mona, Nahida, Ningguang, RhodeiaOfLoch, StonehideLawachurl, Venti, YaeMiko, Zhongli } from "../../shared/character-cards";
+import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
-  id: "0003",
   name: "TT语音杯",
   tag: "全民积分赛",
   gameVersion: "3.7",

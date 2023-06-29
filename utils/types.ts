@@ -15,6 +15,7 @@ export interface Tournament {
 
 export interface TournamentStage {
   name: string;
+  rules?: TournamentRule[];
   parts: TournamentStagePart[];
 }
 
@@ -59,3 +60,5 @@ export interface Deck {
   characterCards: [CharacterCard, CharacterCard, CharacterCard];
   actionCards: Partial<Record<ActionCard, number>>;
 }
+
+export type TournamentRule = "征服" | "决斗" | "BO3" | "BO5" | [string, string];
