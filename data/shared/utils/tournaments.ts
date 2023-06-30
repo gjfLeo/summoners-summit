@@ -1,3 +1,4 @@
+import md5 from "crypto-js/md5";
 import { registerDeck } from "./decks";
 import type { Deck, Tournament, TournamentMatch, TournamentMatchGame, TournamentStage, TournamentStagePart } from "~/utils/types";
 
@@ -30,11 +31,8 @@ export function getGameIdGenerator(tournamentId: string): () => string {
   };
 }
 
-let tournamentIndex = 0;
-
 export function defineTournament(tournament: TournamentParam): Tournament {
-  tournamentIndex++;
-  const tournamentId = tournamentIndex.toString().padStart(4, "0");
+  const tournamentId = md5(tournament.name + tournament.gameVersion).toString().slice(8, 24);
   (tournament as Tournament).id = tournamentId;
   const gameIdGenerator = getGameIdGenerator(tournamentId);
   tournament.stages.forEach((stage) => {
