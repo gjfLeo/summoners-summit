@@ -60,7 +60,7 @@ export default defineTournament({
               playerA: "剑舞",
               playerB: "人生若只如初见",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1xV411g7nb",
               games: [
                 {
                   playerACharacters: [Bennett, ElectroHypostasis, Yoimiya],
@@ -92,7 +92,7 @@ export default defineTournament({
               playerA: "宇宙蓝色闪光",
               playerB: "零之启",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1SN411D7A9",
               games: [
                 {
                   playerACharacters: [Chongyun, RaidenShogun, Shenhe],
