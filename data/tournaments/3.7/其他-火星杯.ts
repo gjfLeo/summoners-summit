@@ -50,7 +50,7 @@ export default defineTournament({
   stages: [
     {
       name: "8进4淘汰赛",
-      rules: ["征服", "BO3"],
+      rules: ["征服", "BO5"],
       parts: [
         {
           name: "DAY1",
