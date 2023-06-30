@@ -3,6 +3,18 @@
 
   <template v-for="(stage, stageIndex) in tournament.stages" :key="stageIndex">
     <n-h2>{{ stage.name }}</n-h2>
+    <template v-if="stage.rules">
+      <div class="flex gap-2">
+        <template v-for="rule in getStageRules(stage.rules)" :key="rule.name">
+          <n-tooltip trigger="hover">
+            <template #trigger>
+              <n-tag round>{{ rule.name }}</n-tag>
+            </template>
+            <span>{{ rule.desc }}</span>
+          </n-tooltip>
+        </template>
+      </div>
+    </template>
 
     <template v-for="(part, partIndex) in stage.parts" :key="partIndex">
       <template v-for="(match, matchIndex) in part.matches" :key="matchIndex">
@@ -37,6 +49,7 @@
 </template>
 
 <script lang="ts" setup>
+import type { TournamentRule } from "~/utils/types";
 import { tournamentById } from "~/data";
 
 const route = useRoute();
@@ -44,4 +57,22 @@ const tournamentId = computed(() => route.params.tournamentId as string);
 const tournament = tournamentById[tournamentId.value];
 
 useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
+
+const ruleDesc = {
+  BO3: "三局两胜",
+  BO5: "五局三胜",
+  征服: "取得胜利的卡组不再使用",
+  决斗: "每局使用不同卡组",
+};
+
+function getStageRules(rules: TournamentRule[]): { name: string; desc: string }[] {
+  return rules.map((rule) => {
+    if (typeof rule === "string") {
+      return { name: rule, desc: ruleDesc[rule] ?? "" };
+    }
+    else {
+      return { name: rule[0], desc: rule[1] };
+    }
+  });
+}
 </script>
