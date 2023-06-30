@@ -98,8 +98,8 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     align: "center",
     sorter: "default",
     filterMultiple: false,
-    filterOptions: [2, 3, 5].map(v => ({ label: `至少${v}场`, value: v })),
-    defaultFilterOptionValue: 3,
+    filterOptions: [2, 3, 5, 10].map(v => ({ label: `至少${v}场`, value: v })),
+    defaultFilterOptionValue: 5,
     filter: (value, row) => row.total >= Number(value),
   },
   {
