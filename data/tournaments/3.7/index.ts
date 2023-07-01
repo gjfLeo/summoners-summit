@@ -5,8 +5,9 @@ import t13 from "./积分赛-NGA";
 import t14 from "./积分赛-共鸣杯";
 import t15 from "./积分赛-寒天之钉杯";
 import t21 from "./主播赛-哔哩哔哩";
-import t31 from "./其他-花神杯";
-import t32 from "./其他-火星杯";
+import t31 from "./积分赛试办赛-花神杯";
+import t32 from "./积分赛试办赛-火星杯";
+import t33 from "./积分赛试办赛-月话杯";
 import type { Tournament } from "~/utils/types";
 
 export default [
@@ -22,4 +23,5 @@ export default [
 
   t31,
   t32,
+  t33,
 ] as Tournament[];

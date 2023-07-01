@@ -1,5 +1,5 @@
 import { defineActions } from "../../shared/utils/decks";
-import { AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Jean, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Yoimiya, Zhongli } from "../../shared/character-cards";
+import { AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, HuTao, Jean, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tartaglia, Tighnari, Venti, Xingqiu, YaeMiko, Yoimiya, Zhongli } from "../../shared/character-cards";
 import { defineTournament } from "../../shared/utils/tournaments";
 
 const actions = {
@@ -871,9 +871,10 @@ export default defineTournament({
   stages: [
     {
       name: "小组赛",
+      rules: ["决斗", "BO3"],
       parts: [
         {
-          name: "DAY1",
+          name: "A组",
           date: "2023-06-27",
           matches: [
             {
@@ -1249,7 +1250,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "DAY2",
+          name: "B组",
           date: "2023-06-28",
           matches: [
             {
@@ -1610,7 +1611,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "DAY3",
+          name: "C组",
           date: "2023-06-29",
           matches: [
             {
@@ -1815,7 +1816,112 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "D组",
+          date: "2023-06-30",
+          matches: [
+            {
+              playerA: "唐傀",
+              playerB: "赤佬RedY",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk",
+              games: [
+                {
+                  playerACharacters: [Bennett, Keqing, Klee],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Barbara, AratakiItto, Noelle],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "小铭同学qaQ233",
+              playerB: "魔法绵羊Tobby",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=2",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Tighnari, YaeMiko, Collei],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Shenhe, RaidenShogun, Chongyun],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Noelle, Barbara, AratakiItto],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "梦一夕林",
+              playerB: "zjyang",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk/?p=3",
+              games: [
+                {
+                  playerACharacters: [Bennett, FatuiPyroAgent, Cyno],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Barbara, AratakiItto, Noelle],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [Noelle, Barbara, AratakiItto],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "音尘Voicend",
+              playerB: "RR抒情夜莺",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=4",
+              games: [
+                {
+                  playerACharacters: [Bennett, Klee, Cyno],
+                  playerBCharacters: [Bennett, Klee, Keqing],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [KujouSara, Shenhe, KamisatoAyaka],
+                  playerBCharacters: [Fischl, Mona, Nahida],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [YaeMiko, Zhongli, Ningguang],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
       ],
+    },
+    {
+      name: "淘汰赛",
+      rules: ["决斗", "BO3"],
+      parts: [],
     },
   ],
 });
