@@ -29,7 +29,7 @@ export interface TournamentMatch {
   playerA: string;
   playerB: string;
   winner: "A" | "B";
-  video: string;
+  video?: string;
   games: TournamentMatchGame[];
 }
 

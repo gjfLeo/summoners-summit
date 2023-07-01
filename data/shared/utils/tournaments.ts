@@ -10,11 +10,12 @@ interface TournamentParamStage extends TournamentStage {
   parts: TournamentParamStagePart[];
 }
 
-interface TournamentParamStagePart extends TournamentStagePart {
+interface TournamentParamStagePart extends Omit<TournamentStagePart, "matches"> {
   matches: TournamentParamMatch[];
 }
 
-interface TournamentParamMatch extends Omit<TournamentMatch, "games"> {
+interface TournamentParamMatch extends Omit<TournamentMatch, "winner" | "games"> {
+  winner?: "A" | "B";
   games: TournamentParamMatchGame[];
 }
 
@@ -38,6 +39,11 @@ export function defineTournament(tournament: TournamentParam): Tournament {
   tournament.stages.forEach((stage) => {
     stage.parts.forEach((part) => {
       part.matches.forEach((match) => {
+        if (!match.winner) {
+          const aWin = match.games.filter(g => g.winner === "A").length;
+          const bWin = match.games.filter(g => g.winner === "B").length;
+          match.winner = aWin > bWin ? "A" : "B";
+        }
         match.games.forEach((gameParam, i, games) => {
           const { playerACharacters, playerBCharacters, playerAActions, playerBActions, starter, winner, turns } = gameParam;
           const playerADeckId = playerAActions ? registerDeck(playerACharacters, playerAActions) : undefined;
