@@ -1076,25 +1076,40 @@ export default defineTournament({
         },
       ],
     },
-    {
-      name: "半决赛",
-      parts: [
-        {
-          name: "",
-          date: "2023-06-30",
-          matches: [],
-        },
-      ],
-    },
-    {
-      name: "决赛",
-      parts: [
-        {
-          name: "",
-          date: "2023-07-02",
-          matches: [],
-        },
-      ],
-    },
+    // {
+    //   name: "半决赛",
+    //   parts: [
+    //     {
+    //       name: "",
+    //       date: "2023-06-30",
+    //       matches: [
+    //         {
+    //           playerA: "零之启",
+    //           playerB: "曲误周郎",
+    //           winner: "B",
+    //           video: "https://www.bilibili.com/video/BV1vN411U7yM",
+    //           games: [],
+    //         },
+    //         {
+    //           playerA: "xhx",
+    //           playerB: "柚恩柚恩了",
+    //           winner: "A",
+    //           video: "https://www.bilibili.com/video/BV1Jm4y1Y7zp",
+    //           games: [],
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "决赛",
+    //   parts: [
+    //     {
+    //       name: "",
+    //       date: "2023-07-02",
+    //       matches: [],
+    //     },
+    //   ],
+    // },
   ],
 });

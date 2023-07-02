@@ -132,7 +132,35 @@ export default defineTournament({
             },
           ],
         },
+        // {
+        //   name: "DAY2",
+        //   date: "2023-06-30",
+        //   matches: [
+        //     {
+        //       playerA: "陌生",
+        //       playerB: "长门有希",
+        //       winner: "A",
+        //       video: "https://www.bilibili.com/video/BV1pj411m7gU",
+        //       games: [],
+        //     },
+        //     {
+        //       playerA: "浅忆",
+        //       playerB: "吃猫萝",
+        //       winner: "B",
+        //       video: "https://www.bilibili.com/video/BV12g4y1A7Dr",
+        //       games: [],
+        //     },
+        //   ],
+        // },
       ],
     },
+    // {
+    //   name: "半决赛",
+    //   parts: [],
+    // },
+    // {
+    //   name: "决赛",
+    //   parts: [],
+    // },
   ],
 });

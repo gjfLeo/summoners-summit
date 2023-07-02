@@ -205,16 +205,6 @@ export default defineTournament({
   gameVersion: "3.7",
   image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/23/bef62c35dc47d199843004a85932200c_1843667749851033260.jpg",
   stages: [
-    // {
-    //   name: "16进8淘汰赛",
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-06-18",
-    //       matches: [],
-    //     },
-    //   ],
-    // },
     {
       name: "8进4淘汰赛",
       parts: [
