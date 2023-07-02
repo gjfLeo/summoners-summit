@@ -2069,7 +2069,7 @@ export default defineTournament({
             {
               playerA: "梦一夕林",
               playerB: "zjyang",
-              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk/?p=3",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=3",
               games: [
                 {
                   playerACharacters: [Bennett, FatuiPyroAgent, Cyno],
@@ -2120,7 +2120,7 @@ export default defineTournament({
               playerA: "唐傀",
               playerB: "魔法绵羊Tobby",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=5",
               games: [
                 {
                   playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
@@ -2146,7 +2146,7 @@ export default defineTournament({
               playerA: "梦一夕林",
               playerB: "音尘Voicend",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=6",
               games: [
                 {
                   playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
@@ -2166,7 +2166,7 @@ export default defineTournament({
               playerA: "音尘Voicend",
               playerB: "魔法绵羊Tobby",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1eg4y1A7Qk?p=7",
               games: [
                 {
                   playerACharacters: [Bennett, Klee, Cyno],
@@ -2204,7 +2204,7 @@ export default defineTournament({
               playerA: "七圣召唤王师傅",
               playerB: "卡密sama42",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX",
               games: [
                 {
                   playerACharacters: [Mona, Venti, Keqing],
@@ -2230,7 +2230,7 @@ export default defineTournament({
               playerA: "月话牌社-音月",
               playerB: "Glyou_HZ",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=2",
               games: [
                 {
                   playerACharacters: [Bennett, Klee, ElectroHypostasis],
@@ -2256,7 +2256,7 @@ export default defineTournament({
               playerA: "阿源今晚吃派蒙",
               playerB: "音尘Voicend",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=3",
               games: [
                 {
                   playerACharacters: [AratakiItto, Barbara, Noelle],
@@ -2282,7 +2282,7 @@ export default defineTournament({
               playerA: "原皮鸭",
               playerB: "魔法绵羊Tobby",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=4",
               games: [
                 {
                   playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
@@ -2308,7 +2308,7 @@ export default defineTournament({
               playerA: "七圣召唤王师傅",
               playerB: "月话牌社-音月",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=5",
               games: [
                 {
                   playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
@@ -2328,7 +2328,7 @@ export default defineTournament({
               playerA: "音尘Voicend",
               playerB: "原皮鸭",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=6",
               games: [
                 {
                   playerACharacters: [Bennett, Klee, Cyno],
@@ -2354,7 +2354,7 @@ export default defineTournament({
               playerA: "七圣召唤王师傅",
               playerB: "原皮鸭",
               winner: "A",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=7",
               games: [
                 {
                   playerACharacters: [Mona, Venti, Keqing],
@@ -2386,7 +2386,7 @@ export default defineTournament({
               playerA: "月话牌社-音月",
               playerB: "音尘Voicend",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1js4y1c7XX?p=8",
               games: [
                 {
                   playerACharacters: [Bennett, Klee, ElectroHypostasis],
