@@ -606,7 +606,7 @@ const actions = {
     "蒙德土豆饼": 2,
     "烤蘑菇披萨": 2,
   }),
-  "柚恩柚恩了-激化": defineActions({
+  "柚恩柚恩了-双草": defineActions({
     "阿莫斯之弓": 1,
     "赌徒的耳环": 2,
     "提米": 2,
@@ -1018,7 +1018,7 @@ export default defineTournament({
                   playerACharacters: [Fischl, Nahida, Mona],
                   playerAActions: actions["StarMeaning-莫皇草"],
                   playerBCharacters: [YaeMiko, Tighnari, Collei],
-                  playerBActions: actions["柚恩柚恩了-激化"],
+                  playerBActions: actions["柚恩柚恩了-双草"],
                   starter: "A",
                   winner: "B",
                 },
@@ -1076,31 +1076,72 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "半决赛",
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-06-30",
-    //       matches: [
-    //         {
-    //           playerA: "零之启",
-    //           playerB: "曲误周郎",
-    //           winner: "B",
-    //           video: "https://www.bilibili.com/video/BV1vN411U7yM",
-    //           games: [],
-    //         },
-    //         {
-    //           playerA: "xhx",
-    //           playerB: "柚恩柚恩了",
-    //           winner: "A",
-    //           video: "https://www.bilibili.com/video/BV1Jm4y1Y7zp",
-    //           games: [],
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      name: "半决赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-06-30",
+          matches: [
+            {
+              playerA: "零之启",
+              playerB: "曲误周郎",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1vN411U7yM",
+              games: [],
+            },
+            {
+              playerA: "xhx",
+              playerB: "柚恩柚恩了",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Jm4y1Y7zp",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerAActions: actions["xhx-双冰"],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBActions: actions["柚恩柚恩了-水债皇"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Barbara, AratakiItto, Noelle],
+                  playerAActions: actions["xhx-双岩"],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBActions: actions["柚恩柚恩了-水债皇"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, HuTao],
+                  playerAActions: actions["xhx-水皇胡"],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBActions: actions["柚恩柚恩了-双冰"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Barbara, AratakiItto, Noelle],
+                  playerAActions: actions["xhx-双岩"],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  playerBActions: actions["柚恩柚恩了-双草"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, HuTao],
+                  playerAActions: actions["xhx-水皇胡"],
+                  playerBCharacters: [YaeMiko, Tighnari, Collei],
+                  playerBActions: actions["柚恩柚恩了-双草"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     // {
     //   name: "决赛",
     //   parts: [
