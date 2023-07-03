@@ -77,8 +77,8 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: ["/export-data"],
-      ignore: ["/hi"],
+      routes: [],
+      ignore: [],
     },
   },
 

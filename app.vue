@@ -3,7 +3,8 @@
 
   <n-config-provider
     :locale="zhCN" :date-locale="dateZhCN"
-    :theme-overrides="themeOverridesLight"
+    :theme="isDark ? darkTheme : undefined"
+    :theme-overrides="themeOverrides"
     inline-theme-disabled
   >
     <n-global-style />
@@ -18,15 +19,17 @@
 </template>
 
 <script setup lang="ts">
-import { dateZhCN, zhCN } from "naive-ui";
+import { darkTheme, dateZhCN, zhCN } from "naive-ui";
 import { appName } from "~/constants";
-import themeOverridesLight from "~/config/naive-ui-theme-overrides-light.json";
+import themeOverrides from "~/config/naive-ui-theme-overrides.json";
 
 useHead({
   title: appName,
 });
 
 zhCN.DataTable.clear = "清除";
+
+const isDark = useDark();
 </script>
 
 <style>
