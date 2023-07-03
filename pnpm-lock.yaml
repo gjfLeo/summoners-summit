@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 devDependencies:
   '@css-render/vue3-ssr':
@@ -52,6 +56,9 @@ devDependencies:
   eslint:
     specifier: ^8.43.0
     version: 8.43.0
+  highlight.js:
+    specifier: ^11.8.0
+    version: 11.8.0
   mathjs:
     specifier: ^11.8.2
     version: 11.8.2
@@ -10781,7 +10788,3 @@ packages:
       compress-commons: 4.1.1
       readable-stream: 3.6.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
