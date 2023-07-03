@@ -77,7 +77,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: ["/teams"],
+      routes: ["/export-data"],
       ignore: ["/hi"],
     },
   },
