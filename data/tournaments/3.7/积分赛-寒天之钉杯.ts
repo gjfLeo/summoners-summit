@@ -1197,7 +1197,7 @@ export default defineTournament({
               playerA: "柚恩柚恩了",
               playerB: "曲误周郎",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1rs4y1F7Dt",
               games: [
                 {
                   playerACharacters: [Chongyun, RaidenShogun, Shenhe],
