@@ -1186,15 +1186,48 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "决赛",
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-07-02",
-    //       matches: [],
-    //     },
-    //   ],
-    // },
+    {
+      name: "决赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-07-02",
+          matches: [
+            {
+              playerA: "柚恩柚恩了",
+              playerB: "曲误周郎",
+              winner: "B",
+              video: "",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerAActions: actions["柚恩柚恩了-双冰"],
+                  playerBCharacters: [Noelle, Barbara, AratakiItto],
+                  playerBActions: actions["曲误周郎-双岩"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerAActions: actions["柚恩柚恩了-双冰"],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBActions: actions["曲误周郎-双冰"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerAActions: actions["柚恩柚恩了-双冰"],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBActions: actions["曲误周郎-水债皇"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
