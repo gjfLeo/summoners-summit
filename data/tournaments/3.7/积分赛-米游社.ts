@@ -1,4 +1,4 @@
-import { AratakiItto, Bennett, Chongyun, FatuiPyroAgent, Fischl, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Yoimiya } from "../../shared/character-cards";
+import { AratakiItto, Bennett, Chongyun, FatuiPyroAgent, Fischl, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Sucrose, Yoimiya } from "../../shared/character-cards";
 import { defineTournament } from "../../shared/utils/tournaments";
 import { defineActions } from "../../shared/utils/decks";
 
@@ -23,6 +23,29 @@ const actions = {
     "蒙德土豆饼": 1,
     "唐杜尔烤鸭": 2,
   }),
+  "全都是错误-水债皇": defineActions({
+    "悉数讨回": 1,
+    "幸运儿银冠": 2,
+    "赌徒的耳环": 1,
+    "桓纳兰那": 1,
+    "派蒙": 1,
+    "提米": 2,
+    "立本": 1,
+    "刘苏": 1,
+    "寻宝仙灵": 1,
+    "最好的伙伴！": 2,
+    "换班时间": 2,
+    "运筹帷幄": 1,
+    "本大爷还没有输！": 2,
+    "交给我吧！": 1,
+    "星天之兆": 1,
+    "白垩之术": 1,
+    "送你一程": 2,
+    "仙跳墙": 2,
+    "莲花酥": 2,
+    "蒙德土豆饼": 2,
+    "烤蘑菇披萨": 1,
+  }),
   "全都是错误-双冰": defineActions({
     "赌徒的耳环": 2,
     "桓纳兰那": 2,
@@ -42,6 +65,26 @@ const actions = {
     "仙跳墙": 1,
     "莲花酥": 2,
     "蒙德土豆饼": 2,
+  }),
+  "全都是错误-莫砂刻": defineActions({
+    "祭礼残章": 1,
+    "祭礼剑": 1,
+    "赌徒的耳环": 2,
+    "桓纳兰那": 2,
+    "提米": 1,
+    "立本": 2,
+    "风与自由": 2,
+    "最好的伙伴！": 2,
+    "换班时间": 2,
+    "一掷乾坤": 1,
+    "运筹帷幄": 2,
+    "本大爷还没有输！": 2,
+    "交给我吧！": 1,
+    "白垩之术": 1,
+    "送你一程": 2,
+    "莲花酥": 2,
+    "蒙德土豆饼": 2,
+    "唐杜尔烤鸭": 2,
   }),
   "蒙德高达诺艾尔-水皇草": defineActions({
     "赌徒的耳环": 1,
@@ -180,6 +223,26 @@ const actions = {
     "莲花酥": 2,
     "蒙德土豆饼": 1,
     "唐杜尔烤鸭": 1,
+  }),
+  "唐傀-双冰": defineActions({
+    "赌徒的耳环": 2,
+    "桓纳兰那": 2,
+    "提米": 2,
+    "立本": 2,
+    "刘苏": 1,
+    "寻宝仙灵": 1,
+    "元素共鸣：交织之冰": 2,
+    "元素共鸣：粉碎之冰": 2,
+    "最好的伙伴！": 2,
+    "运筹帷幄": 2,
+    "本大爷还没有输！": 2,
+    "交给我吧！": 1,
+    "星天之兆": 1,
+    "送你一程": 2,
+    "重攻击": 1,
+    "仙跳墙": 2,
+    "莲花酥": 2,
+    "蒙德土豆饼": 1,
   }),
   "昨夜风-双冰宵宫": defineActions({
     "赌徒的耳环": 2,
@@ -434,16 +497,63 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "半决赛",
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-07-01",
-    //       matches: [],
-    //     },
-    //   ],
-    // },
+    {
+      name: "半决赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-07-01",
+          matches: [
+            {
+              playerA: "全都是错误",
+              playerB: "桔梗",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1Hu411b73n",
+              games: [
+                {
+                  playerACharacters: [Mona, Sucrose, Keqing],
+                  playerAActions: actions["全都是错误-莫砂刻"],
+                  playerBCharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  playerBActions: actions["桔梗-水皇草"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "岩van♂deep君",
+              playerB: "唐傀",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Hu411b73n?t=2705.7",
+              games: [
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerAActions: actions["岩van♂deep君-水皇草"],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  playerBActions: actions["唐傀-双火"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  playerAActions: actions["岩van♂deep君-水皇草"],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBActions: actions["唐傀-双冰"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     // {
     //   name: "决赛",
     //   parts: [
