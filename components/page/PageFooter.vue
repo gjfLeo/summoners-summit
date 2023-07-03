@@ -31,6 +31,10 @@
             </n-tooltip>
           </div>
         </div>
+        <div>
+          感谢帮助：
+          <NuxtLink class="text-lime-500 underline" to="https://nga.178.com/nuke.php?func=ucp&uid=41364075" target="_blank">念冰</NuxtLink>
+        </div>
         <div>更新时间：{{ updateTime }}</div>
       </div>
     </n-drawer-content>
