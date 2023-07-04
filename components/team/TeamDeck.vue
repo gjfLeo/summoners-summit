@@ -5,10 +5,14 @@
         <CardImage :card="card" class="w-100%" />
       </template>
     </div>
-    <div class="mt text-sm text-gray">此处典型构筑指与胜场平均携带张数差距最小的一套构筑，仅统计公布卡组的{{ numWinGameWithDeck }}场获胜对局。</div>
+    <div class="mt text-sm">
+      <n-text :depth="3">此处典型构筑指与胜场平均携带张数差距最小的一套构筑，仅统计公布卡组的{{ numWinGameWithDeck }}场获胜对局。</n-text>
+    </div>
   </template>
   <template v-else>
-    <div class="mt text-sm text-gray">此阵容没有公布卡组的获胜对局。</div>
+    <div class="mt text-sm">
+      <n-text :depth="3">此阵容没有公布卡组的获胜对局。</n-text>
+    </div>
   </template>
 </template>
 

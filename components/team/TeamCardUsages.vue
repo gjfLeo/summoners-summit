@@ -6,10 +6,14 @@
       size="small"
       max-height="50vh"
     />
-    <div class="mt text-sm text-gray">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</div>
+    <div class="mt text-sm">
+      <n-text :depth="3">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</n-text>
+    </div>
   </template>
   <template v-else>
-    <div class="mt text-sm text-gray">此阵容没有公布卡组的对局。</div>
+    <div class="mt text-sm">
+      <n-text :depth="3">此阵容没有公布卡组的对局。</n-text>
+    </div>
   </template>
 </template>
 

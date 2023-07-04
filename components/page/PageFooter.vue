@@ -1,19 +1,19 @@
 <template>
-  <div class="h-full w-full flex items-center justify-center gap-4 p-4 text-sm text-dark-1">
-    <div>召唤之巅——七圣召唤赛事资料 by gjfLeo</div>
-    <div class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</div>
+  <div class="h-full w-full flex items-center justify-center gap-4 p-4 text-sm">
+    <n-text depth="3">召唤之巅——七圣召唤赛事资料 by gjfLeo</n-text>
+    <n-text depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</n-text>
   </div>
   <n-drawer v-model:show="showAboutDrawer" :width="502" placement="bottom" :auto-focus="false">
     <n-drawer-content title="召唤之巅">
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
-          <div>by gjfLeo</div>
+          <n-text>by gjfLeo</n-text>
           <NuxtLink :to="githubRepositry" target="_blank">
             <n-icon class="text-2xl"><div class="i-carbon:logo-github" /></n-icon>
           </NuxtLink>
         </div>
         <div class="flex items-center gap-2">
-          <div>欢迎建议和纠错</div>
+          <n-text>欢迎建议和纠错</n-text>
           <NuxtLink :to="contactNGAThread" target="_blank">
             <n-tooltip trigger="hover">
               <template #trigger>
@@ -31,11 +31,11 @@
             </n-tooltip>
           </div>
         </div>
-        <div>
+        <n-text>
           感谢帮助：
-          <NuxtLink class="text-lime-500 underline" to="https://nga.178.com/nuke.php?func=ucp&uid=41364075" target="_blank">念冰</NuxtLink>
-        </div>
-        <div>更新时间：{{ updateTime }}</div>
+          <NuxtLink class="underline" to="https://nga.178.com/nuke.php?func=ucp&uid=41364075" target="_blank"><n-a>念冰</n-a></NuxtLink>
+        </n-text>
+        <n-text :depth="3">更新时间：{{ updateTime }}</n-text>
       </div>
     </n-drawer-content>
   </n-drawer>
@@ -70,5 +70,9 @@ async function handleQQClick() {
   background-size: 110%;
   background-position: 50%;
   background-repeat: no-repeat;
+
+  .dark & {
+    filter: invert(1);
+  }
 }
 </style>
