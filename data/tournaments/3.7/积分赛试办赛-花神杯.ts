@@ -1,4 +1,4 @@
-import { AratakiItto, Barbara, Bennett, Chongyun, Collei, ElectroHypostasis, Fischl, Keqing, Klee, Mona, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tighnari, YaeMiko, Yoimiya } from "../../shared/character-cards";
+import { AratakiItto, Barbara, Bennett, Chongyun, Collei, ElectroHypostasis, FatuiPyroAgent, Fischl, Keqing, Klee, Mona, Nahida, Noelle, RaidenShogun, RhodeiaOfLoch, Shenhe, Tighnari, YaeMiko, Yoimiya } from "../../shared/character-cards";
 import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
@@ -75,6 +75,130 @@ export default defineTournament({
                   playerBCharacters: [Bennett, Klee, Keqing],
                   starter: "A",
                   winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "8进4淘汰赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-06-30",
+          matches: [
+
+          ],
+        },
+      ],
+    },
+    {
+      name: "半决赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-07-01",
+          matches: [
+            {
+              playerA: "唯",
+              playerB: "岚落尘",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1rg4y1A7PW",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, Fischl, RhodeiaOfLoch],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Nahida, Fischl, RhodeiaOfLoch],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "icyteapot",
+              playerB: "雪乃",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1XX4y1n7YU",
+              games: [
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBCharacters: [Barbara, AratakiItto, Noelle],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBCharacters: [Fischl, Mona, Nahida],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Bennett, Klee, Keqing],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "决赛",
+      parts: [
+        {
+          name: "",
+          date: "2023-07-02",
+          matches: [
+            {
+              playerA: "雪乃",
+              playerB: "岚落尘",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1TV411M7QV",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
                 },
               ],
             },
