@@ -580,7 +580,9 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerAActions: actions["全都是错误-水债皇"],
                   playerBCharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  playerBActions: actions["桔梗-水皇草"],
                   starter: "B",
                   winner: "A",
                 },
