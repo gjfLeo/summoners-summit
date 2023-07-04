@@ -177,7 +177,7 @@ const actions = {
     "白垩之术": 2,
     "仙跳墙": 1,
     "莲花酥": 2,
-    "唐杜尔烤鸭": 2,
+    "唐杜尔烤鸡": 2,
   }),
 
   "回忆往昔的遗憾-双冰": defineActions({
@@ -216,7 +216,7 @@ const actions = {
     "交给我吧！": 2,
     "送你一程": 2,
     "莲花酥": 2,
-    "唐杜尔烤鸭": 1,
+    "唐杜尔烤鸡": 1,
   }),
   "回忆往昔的遗憾-水皇草": defineActions({
     "赌徒的耳环": 2,
@@ -369,7 +369,7 @@ const actions = {
     "送你一程": 1,
     "莲花酥": 2,
     "蒙德土豆饼": 2,
-    "唐杜尔烤鸭": 1,
+    "唐杜尔烤鸡": 1,
   }),
   "Glyou_HZ-水皇草": defineActions({
     "赌徒的耳环": 1,
@@ -487,7 +487,7 @@ const actions = {
     "送你一程": 2,
     "仙跳墙": 2,
     "莲花酥": 2,
-    "唐杜尔烤鸭": 1,
+    "唐杜尔烤鸡": 1,
   }),
 
   "阿源今晚吃派蒙-双冰": defineActions({
@@ -703,7 +703,7 @@ const actions = {
     "仙跳墙": 1,
     "莲花酥": 1,
     "蒙德土豆饼": 2,
-    "唐杜尔烤鸭": 1,
+    "唐杜尔烤鸡": 1,
   }),
 
   "蓬莱寺九霄啊-双冰": defineActions({
@@ -905,7 +905,7 @@ const actions = {
     "交给我吧！": 2,
     "莲花酥": 2,
     "蒙德土豆饼": 1,
-    "唐杜尔烤鸭": 1,
+    "唐杜尔烤鸡": 1,
   }),
   "唐傀-水皇草": defineActions({
     "赌徒的耳环": 1,
@@ -1270,7 +1270,7 @@ const actions = {
     "交给我吧！": 2,
     "送你一程": 1,
     "莲花酥": 2,
-    "唐杜尔烤鸭": 2,
+    "唐杜尔烤鸡": 2,
   }),
   "RR抒情夜莺-双岩": defineActions({
     "贯虹之槊": 2,
@@ -1308,7 +1308,7 @@ const actions = {
     "仙跳墙": 2,
     "莲花酥": 2,
     "蒙德土豆饼": 1,
-    "唐杜尔烤鸭": 2,
+    "唐杜尔烤鸡": 2,
   }),
 };
 
@@ -1352,7 +1352,7 @@ export default defineTournament({
                     "交给我吧！": 2,
                     "莲花酥": 2,
                     "蒙德土豆饼": 2,
-                    "唐杜尔烤鸭": 1,
+                    "唐杜尔烤鸡": 1,
                   }),
                   playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerBActions: actions["卡密sama42-双冰"],
@@ -1379,7 +1379,7 @@ export default defineTournament({
                     "重攻击": 2,
                     "仙跳墙": 1,
                     "莲花酥": 2,
-                    "唐杜尔烤鸭": 1,
+                    "唐杜尔烤鸡": 1,
                   }),
                   playerBCharacters: [RhodeiaOfLoch, Fischl, Nahida],
                   playerBActions: actions["卡密sama42-水皇草"],
@@ -1435,7 +1435,7 @@ export default defineTournament({
                     "温妮莎传奇": 2,
                     "莲花酥": 2,
                     "蒙德土豆饼": 2,
-                    "唐杜尔烤鸭": 2,
+                    "唐杜尔烤鸡": 2,
                   }),
                   playerBCharacters: [Bennett, Chongyun, Shenhe],
                   playerBActions: actions["卡牌狂魔张老伯-火云鹤"],
@@ -1461,7 +1461,7 @@ export default defineTournament({
                     "愚人众的阴谋": 2,
                     "莲花酥": 2,
                     "蒙德土豆饼": 1,
-                    "唐杜尔烤鸭": 1,
+                    "唐杜尔烤鸡": 1,
                   }),
                   playerBCharacters: [Keqing, Mona, Venti],
                   playerBActions: actions["卡牌狂魔张老伯-莫温刻"],
@@ -1906,7 +1906,7 @@ export default defineTournament({
                     "仙跳墙": 1,
                     "莲花酥": 2,
                     "蒙德土豆饼": 1,
-                    "唐杜尔烤鸭": 2,
+                    "唐杜尔烤鸡": 2,
                   }),
                   starter: "B",
                   winner: "A",

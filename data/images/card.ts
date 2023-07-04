@@ -244,7 +244,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "兽肉薄荷卷": "Minty Meat Rolls Event Card.png",
   "提瓦特煎蛋": "Teyvat Fried Egg Event Card.png",
   "刺身拼盘": "Sashimi Platter Event Card.png",
-  "唐杜尔烤鸭": "Tandoori Roast Chicken Event Card.png",
+  "唐杜尔烤鸡": "Tandoori Roast Chicken Event Card.png",
   "黄油蟹蟹": "Butter Crab Event Card.png",
 };
 
