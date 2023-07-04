@@ -89,7 +89,76 @@ export default defineTournament({
           name: "",
           date: "2023-06-30",
           matches: [
-
+            {
+              playerA: "Sherry",
+              playerB: "岚落尘",
+              winner: "B",
+              video: "https://www.bilibili.com/video/BV1Va4y1w7Rp",
+              games: [
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [Bennett, Keqing, Klee],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, Nahida],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Bennett, Yoimiya, ElectroHypostasis],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "icyteapot",
+              playerB: "她和她的狐狸",
+              winner: "A",
+              video: "https://www.bilibili.com/video/BV1TV411M728",
+              games: [
+                {
+                  playerACharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Bennett, Klee, Keqing],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Nahida, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Fischl, Mona, Nahida],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
           ],
         },
       ],
