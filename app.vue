@@ -44,11 +44,6 @@ html, body , #__nuxt{
   @apply font-sans text-base;
 }
 
-html.dark {
-  background: #222;
-  color: white;
-}
-
 .v-move,
 .v-enter-active,
 .v-leave-active {
