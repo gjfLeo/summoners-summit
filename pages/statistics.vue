@@ -14,6 +14,8 @@
 import { divide } from "mathjs/number";
 import { gameList } from "~/data";
 
+useHead({ title: "统计 | 召唤之巅" });
+
 const total = gameList.length;
 const totalWithDeck = gameList.filter(game => game.playerADeckId && game.playerBDeckId).length;
 const starterWin = gameList.filter(game => game.winner === game.starter).length;
