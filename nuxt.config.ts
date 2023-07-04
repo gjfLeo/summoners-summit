@@ -87,8 +87,8 @@ export default defineNuxtConfig({
       viewport: "width=device-width,initial-scale=1",
       link: [
         // { rel: "icon", href: "/favicon.ico", sizes: "any" },
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "icon", type: "image/svg+xml", href: process.env.NUXT_APP_BASE_URL ? `${process.env.NUXT_APP_BASE_URL}favicon.svg` : "/favicon.svg" },
+        { rel: "apple-touch-icon", href: process.env.NUXT_APP_BASE_URL ? `${process.env.NUXT_APP_BASE_URL}apple-touch-icon.svg` : "/apple-touch-icon.png" },
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
