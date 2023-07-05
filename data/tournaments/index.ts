@@ -7,7 +7,7 @@ export const tournamentList = [
 export const tournamentById = Object.fromEntries(tournamentList.map(tournament => [tournament.id, tournament]));
 
 export const gameList = tournamentList.flatMap<Game>((tournament) => {
-  const tournamentName = tournament.name;
+  const { id: tournamentId, name: tournamentName, gameVersion } = tournament;
   return tournament.stages.flatMap((stage) => {
     const stageName = stage.name;
     return stage.parts.flatMap((part) => {
@@ -18,12 +18,17 @@ export const gameList = tournamentList.flatMap<Game>((tournament) => {
         return match.games.flatMap((game, gameIndex, games) => {
           const gameName = games.length > 1 ? `第${gameIndex + 1}局` : "";
           return {
+            tournamentId,
+
             tournamentName,
             stageName,
             partName,
             matchName,
             gameName,
+
             date,
+            gameVersion,
+
             playerA,
             playerB,
             ...game,

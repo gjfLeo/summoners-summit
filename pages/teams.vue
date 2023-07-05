@@ -2,67 +2,21 @@
   <n-data-table
     size="small"
     :columns="columns"
-    :data="teamStats"
+    :data="data"
     max-height="calc(100vh - 13rem)"
   />
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
 import { type DataTableColumn, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
-import { gameList } from "~/data";
 
 useHead({ title: "阵容 | 召唤之巅" });
 
-interface TeamStatRaw {
-  total: number;
-  win: number;
-  starterTotal: number;
-  starterWin: number;
-}
-interface TeamStatResult extends TeamStatRaw {
-  key: string;
-  teamId: string;
-  followerTotal: number;
-  followerWin: number;
-  winRate: number;
-  starterWinRate: number;
-  followerWinRate: number;
-  winDiff: number;
-}
+const { games } = useGameList();
+const { teamStatistics } = useTeamStatistics(games);
 
-const teamStats = computed<TeamStatResult[]>(() => {
-  const teamStatsRaw: Record<string, TeamStatRaw> = {};
-  gameList.forEach((game) => {
-    function updateStat(teamId: string, team: "A" | "B") {
-      const stat = teamStatsRaw[teamId] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
-      stat.total++;
-      stat.win += game.winner === team ? 1 : 0;
-      stat.starterTotal += game.starter === team ? 1 : 0;
-      stat.starterWin += (game.starter === team && game.winner === team) ? 1 : 0;
-      teamStatsRaw[teamId] = stat;
-    }
-    updateStat(getTeamId(game.playerACharacters), "A");
-    updateStat(getTeamId(game.playerBCharacters), "B");
-  });
-  return Object.entries(teamStatsRaw)
-    .map(([teamId, statRaw]) => {
-      const followerTotal = statRaw.total - statRaw.starterTotal;
-      const followerWin = statRaw.win - statRaw.starterWin;
-      return {
-        key: teamId,
-        teamId,
-        ...statRaw,
-        followerTotal,
-        followerWin,
-        winRate: divide(statRaw.win, statRaw.total),
-        starterWinRate: divide(statRaw.starterWin, statRaw.starterTotal),
-        followerWinRate: divide(followerWin, followerTotal),
-        winDiff: statRaw.win - (statRaw.total - statRaw.win),
-      };
-    });
-});
+const data = computed(() => Object.values(teamStatistics.value).map(statistics => ({ key: statistics.teamId, ...statistics })));
 
 function winRateRender(win: number, total: number, winRate: number) {
   return h(
@@ -77,7 +31,7 @@ function winRateRender(win: number, total: number, winRate: number) {
     });
 }
 
-const columns: DataTableColumn<TeamStatResult>[] = [
+const columns: DataTableColumn<typeof data["value"][number]>[] = [
   {
     key: "element",
     width: "3rem",

@@ -45,12 +45,16 @@ export interface TournamentMatchGame {
 }
 
 export interface Game extends TournamentMatchGame {
+  tournamentId: string;
   tournamentName: string;
   stageName: string;
   partName: string;
   matchName: string;
   gameName: string;
+
+  gameVersion: string;
   date: string;
+
   playerA: string;
   playerB: string;
 }
