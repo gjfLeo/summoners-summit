@@ -14,6 +14,7 @@ export const Mona = "莫娜";
 export const Tartaglia = "达达利亚";
 export const SangonomiyaKokomi = "珊瑚宫心海";
 export const KamisatoAyato = "神里绫人";
+export const Candace = "坎蒂丝";
 
 export const Diluc = "迪卢克";
 export const Xiangling = "香菱";
@@ -22,6 +23,7 @@ export const Amber = "安柏";
 export const Yoimiya = "宵宫";
 export const Klee = "可莉";
 export const HuTao = "胡桃";
+export const Yanfei = "烟绯";
 
 export const Fischl = "菲谢尔";
 export const Razor = "雷泽";
@@ -36,6 +38,7 @@ export const Sucrose = "砂糖";
 export const Jean = "琴";
 export const Venti = "温迪";
 export const Xiao = "魈";
+export const KaedeharaKazuha = "枫原万叶";
 
 export const Ningguang = "凝光";
 export const Noelle = "诺艾尔";
@@ -58,10 +61,10 @@ export const JadeplumeTerrorshroom = "翠翎恐禽";
 
 export const ALL_CHARACTER_CARDS = [
   Ganyu, Diona, Kaeya, Chongyun, KamisatoAyaka, Eula, Shenhe,
-  Barbara, Xingqiu, Mona, Tartaglia, SangonomiyaKokomi, KamisatoAyato,
-  Diluc, Xiangling, Bennett, Amber, Yoimiya, Klee, HuTao,
+  Barbara, Xingqiu, Mona, Tartaglia, SangonomiyaKokomi, KamisatoAyato, Candace,
+  Diluc, Xiangling, Bennett, Amber, Yoimiya, Klee, HuTao, Yanfei,
   Fischl, Razor, Keqing, Cyno, Beidou, KujouSara, RaidenShogun, YaeMiko,
-  Sucrose, Jean, Venti, Xiao,
+  Sucrose, Jean, Venti, Xiao, KaedeharaKazuha,
   Ningguang, Noelle, Zhongli, AratakiItto,
   Collei, Tighnari, Nahida,
   FatuiCyroCicinMage,
@@ -91,6 +94,7 @@ export const characterElement: Record<CharacterCard, Element> = {
   [Tartaglia]: "hydro",
   [SangonomiyaKokomi]: "hydro",
   [KamisatoAyato]: "hydro",
+  [Candace]: "hydro",
 
   [Diluc]: "pyro",
   [Xiangling]: "pyro",
@@ -99,6 +103,7 @@ export const characterElement: Record<CharacterCard, Element> = {
   [Yoimiya]: "pyro",
   [Klee]: "pyro",
   [HuTao]: "pyro",
+  [Yanfei]: "pyro",
 
   [Fischl]: "electro",
   [Razor]: "electro",
@@ -113,6 +118,7 @@ export const characterElement: Record<CharacterCard, Element> = {
   [Jean]: "anemo",
   [Venti]: "anemo",
   [Xiao]: "anemo",
+  [KaedeharaKazuha]: "anemo",
 
   [Ningguang]: "geo",
   [Noelle]: "geo",

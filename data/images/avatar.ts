@@ -1,6 +1,6 @@
 // cSpell:disable
 
-import { AbyssLectorFathomlessFlames, Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Collei, Cyno, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, MaguuKenki, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Xiangling, Xiao, Xingqiu, YaeMiko, Yoimiya, Zhongli } from "../shared/character-cards";
+import { AbyssLectorFathomlessFlames, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, Chongyun, Collei, Cyno, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, MaguuKenki, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yoimiya, Zhongli } from "../shared/character-cards";
 import { getImageUrl } from "../shared/utils/images";
 import type { CharacterCard } from "~/utils/types";
 
@@ -19,6 +19,7 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [Tartaglia]: "Tartaglia TCG Avatar Icon.png",
   [SangonomiyaKokomi]: "Sangonomiya Kokomi TCG Avatar Icon.png",
   [KamisatoAyato]: "Kamisato Ayato TCG Avatar Icon.png",
+  [Candace]: "Candace TCG Avatar Icon.png",
 
   [Diluc]: "Diluc TCG Avatar Icon.png",
   [Xiangling]: "Xiangling TCG Avatar Icon.png",
@@ -27,6 +28,7 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [Yoimiya]: "Yoimiya TCG Avatar Icon.png",
   [Klee]: "Klee TCG Avatar Icon.png",
   [HuTao]: "Hu Tao TCG Avatar Icon.png",
+  [Yanfei]: "Yanfei TCG Avatar Icon.png",
 
   [Fischl]: "Fischl TCG Avatar Icon.png",
   [Razor]: "Razor TCG Avatar Icon.png",
@@ -41,6 +43,7 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [Jean]: "Jean TCG Avatar Icon.png",
   [Venti]: "Venti TCG Avatar Icon.png",
   [Xiao]: "Xiao TCG Avatar Icon.png",
+  [KaedeharaKazuha]: "Kaedehara Kazuha TCG Avatar Icon.png",
 
   [Ningguang]: "Ningguang TCG Avatar Icon.png",
   [Noelle]: "Noelle TCG Avatar Icon.png",
