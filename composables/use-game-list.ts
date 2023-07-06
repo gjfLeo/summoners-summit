@@ -1,10 +1,11 @@
 import { gameList } from "~/data";
-import type { Game } from "~/utils/types";
+import type { CharacterCard, Game } from "~/utils/types";
 
 interface UseGameListOptions {
-  gameVersion?: string;
-  teamId?: string;
-  opponentTeamId?: string;
+  gameVersion?: MaybeRef<string>;
+  teamId?: MaybeRef<string>;
+  opponentTeamId?: MaybeRef<string>;
+  characters?: MaybeRef<CharacterCard[]>;
 }
 
 export default function useGameList(options?: UseGameListOptions) {
@@ -12,6 +13,7 @@ export default function useGameList(options?: UseGameListOptions) {
     const gameVersion = unref(options?.gameVersion);
     const teamId = unref(options?.teamId);
     const opponentTeamId = unref(options?.opponentTeamId);
+    const characters = unref(options?.characters);
 
     let list = gameList;
     if (gameVersion) {
@@ -23,6 +25,9 @@ export default function useGameList(options?: UseGameListOptions) {
     }
     if (opponentTeamId) {
       list = list.filter(game => getTeamId(game.playerBCharacters) === opponentTeamId);
+    }
+    if (characters) {
+      list = list.filter(game => characters.every(ch => game.playerACharacters.includes(ch)));
     }
     return list;
   });
