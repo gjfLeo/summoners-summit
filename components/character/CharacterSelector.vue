@@ -2,9 +2,9 @@
   <div class="inline-block w-18rem">
     <n-select
       v-model:value="characters"
-      multiple
       filterable
       clearable
+      multiple
       placeholder="角色"
       max-tag-count="responsive"
       :options="options"

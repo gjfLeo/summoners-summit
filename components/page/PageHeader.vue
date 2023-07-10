@@ -9,7 +9,7 @@
     <div class="h-full flex items-center justify-end">
       <n-button circle quaternary @click="isDark = !isDark">
         <template #icon>
-          <div class="dark:i-carbon:sun i-carbon:moon" />
+          <div class="i-carbon:moon dark:i-carbon:sun" />
         </template>
       </n-button>
     </div>
