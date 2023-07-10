@@ -1,6 +1,6 @@
 import type { CharacterCard } from "~/utils/types";
 
-export type UseTeamSource = string | CharacterCard[] | { props: string | CharacterCard[] };
+export type UseTeamSource = string | CharacterCard[] | { team: string | CharacterCard[] };
 
 function sourceToTeam(source: UseTeamSource): CharacterCard[] {
   if (typeof source === "string") {
@@ -9,7 +9,7 @@ function sourceToTeam(source: UseTeamSource): CharacterCard[] {
   else if (Array.isArray(source)) {
     return source;
   }
-  return sourceToTeam(source.props);
+  return sourceToTeam(source.team);
 }
 
 export default function useTeam(source: MaybeRef<UseTeamSource>) {

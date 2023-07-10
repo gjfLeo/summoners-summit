@@ -34,11 +34,11 @@ interface TeamStatResult extends TeamStatRaw {
   winDiff: number;
 }
 
-const { teamId } = useTeamProp(props);
-const { teamGameList } = useTeamInfo(teamId);
+const { teamId } = useTeam(props);
+const { games } = useGameList({ teamId });
 
 const data = computed(() => {
-  const map = teamGameList.value.reduce<Record<string, TeamStatRaw>>(
+  const map = games.value.reduce<Record<string, TeamStatRaw>>(
     (map, game) => {
       const opponentTeam = getTeamId(game.playerBCharacters);
       const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };

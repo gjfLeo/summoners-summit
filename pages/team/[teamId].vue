@@ -6,10 +6,10 @@
   </div>
 
   <div class="mt flex flex-wrap justify-center gap-8">
-    <n-statistic label="选取数" :value="pick" />
+    <n-statistic label="选取数" :value="total" />
     <n-statistic label="获胜数" :value="win" />
     <n-statistic label="胜率" :value="winRate" />
-    <n-statistic label="净胜场" :value="winDifferential" />
+    <n-statistic label="净胜场" :value="winDiff" />
   </div>
 
   <n-h3>行动牌选择</n-h3>
@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, subtract } from "mathjs/number";
+// import { divide, subtract } from "mathjs/number";
 import { characterCardSorter } from "~/data";
 import type { CharacterCard } from "~/utils/types";
 
@@ -40,10 +40,6 @@ if (normalizedTeamId !== teamId) {
 }
 
 // const decks = findDecksByTeam(teamId);
-const { teamGameList } = useTeamInfo(teamId);
-
-const pick = computed(() => teamGameList.value.length);
-const win = computed(() => teamGameList.value.filter(game => game.winner === "A").length);
-const winRate = computed(() => toPercentageString(divide(win.value, pick.value)));
-const winDifferential = computed(() => subtract(win.value, subtract(pick.value, win.value)));
+const { games } = useGameList({ teamId });
+const { total, win, winRate, winDiff } = useGamesStatistics(games);
 </script>

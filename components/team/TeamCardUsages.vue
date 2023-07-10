@@ -1,5 +1,5 @@
 <template>
-  <template v-if="numGameWithDeck > 0">
+  <template v-if="numGamesWithDeck > 0">
     <n-data-table
       :columns="columns"
       :data="data"
@@ -7,7 +7,7 @@
       max-height="50vh"
     />
     <div class="mt text-sm">
-      <n-text :depth="3">此数据仅统计公布卡组的{{ numGameWithDeck }}场对局。</n-text>
+      <n-text :depth="3">此数据仅统计公布卡组的{{ numGamesWithDeck }}场对局。</n-text>
     </div>
   </template>
   <template v-else>
@@ -27,12 +27,11 @@ const props = defineProps<{
   team: CharacterCard[] | string;
 }>();
 
-const { teamId } = useTeamProp(props);
-const { teamGameList, teamCardUsages } = useTeamInfo(teamId);
+const { teamId } = useTeam(props);
+const { games } = useGameList({ teamId });
+const { cardUsage, numGamesWithDeck } = useCardUsage(games);
 
-const numGameWithDeck = computed(() => teamGameList.value.filter(game => game.playerADeckId).length);
-
-const data = computed(() => Object.entries(teamCardUsages.value).map(([card, usage]) => ({
+const data = computed(() => Object.entries(cardUsage.value).map(([card, usage]) => ({
   key: card,
   card: card as ActionCard,
   ...usage,
