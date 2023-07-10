@@ -14,7 +14,7 @@ export const gameList = tournamentList.flatMap<Game>((tournament) => {
       const { name: partName, date } = part;
       return part.matches.flatMap((match, matchIndex, matches) => {
         const matchName = matches.length > 1 ? `第${matchIndex + 1}场` : "";
-        const { playerA, playerB } = match;
+        const { playerA, playerB, video } = match;
         return match.games.flatMap((game, gameIndex, games) => {
           const gameName = games.length > 1 ? `第${gameIndex + 1}局` : "";
           return {
@@ -28,6 +28,7 @@ export const gameList = tournamentList.flatMap<Game>((tournament) => {
 
             date,
             gameVersion,
+            video,
 
             playerA,
             playerB,

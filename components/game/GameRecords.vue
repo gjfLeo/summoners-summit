@@ -4,8 +4,24 @@
       <n-card>
         <div class="grid max-w-md" style="grid-template-columns: 1fr 2rem 1fr;">
           <!-- 赛事和对局名称 -->
-          <div class="text-sm grid-col-1/4">
-            <NuxtLink :to="`/tournament/${game.tournamentId}`">{{ game.tournamentName }}</NuxtLink>
+          <div class="grid-col-1/4">
+            <div class="flex items-center justify-between">
+              <NuxtLink class="text-sm" :to="`/tournament/${game.tournamentId}`">{{ game.tournamentName }}</NuxtLink>
+              <n-text :depth="3" class="flex gap-2 text-xs">
+                <n-tooltip
+                  v-if="game.video"
+                  trigger="hover"
+                >
+                  <template #trigger>
+                    <NuxtLink :to="game.video" target="_blank">
+                      <n-icon><div class="i-carbon:video" /></n-icon>
+                    </NuxtLink>
+                  </template>
+                  <span>观看录像</span>
+                </n-tooltip>
+                <div>{{ game.date }}</div>
+              </n-text>
+            </div>
           </div>
           <div class="pb-2 text-xs grid-col-1/4">
             {{ game.stageName }} {{ game.matchName }}{{ game.gameName }}

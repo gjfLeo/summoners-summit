@@ -54,6 +54,7 @@ export interface Game extends TournamentMatchGame {
 
   gameVersion: string;
   date: string;
+  video?: string;
 
   playerA: string;
   playerB: string;
