@@ -15,5 +15,6 @@ function sourceToTeam(source: UseTeamSource): CharacterCard[] {
 export default function useTeam(source: MaybeRef<UseTeamSource>) {
   const team = computed(() => sourceToTeam(unref(source)));
   const teamId = computed(() => getTeamId(team.value));
-  return { team, teamId };
+  const teamDisplayName = computed(() => team.value.join(" & "));
+  return { team, teamId, teamDisplayName };
 }

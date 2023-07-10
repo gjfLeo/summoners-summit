@@ -23,23 +23,16 @@
 </template>
 
 <script lang="ts" setup>
-// import { divide, subtract } from "mathjs/number";
-import { characterCardSorter } from "~/data";
-import type { CharacterCard } from "~/utils/types";
-
 const route = useRoute();
-const teamId = route.params.teamId as string;
-const team = (teamId.split("-") as CharacterCard[]).sort(characterCardSorter);
+const { teamId, team, teamDisplayName } = useTeam(route.params.teamId as string);
 
-useHead({ title: `${team.join(" & ")} - 阵容数据 | 召唤之巅` });
+useHead({ title: `${teamDisplayName.value} - 阵容数据 | 召唤之巅` });
 
 // 非标准则跳转
-const normalizedTeamId = team.join("-");
-if (normalizedTeamId !== teamId) {
-  navigateTo(`/team/${encodeURIComponent(normalizedTeamId)}`, { replace: true });
+if (route.params.teamId !== teamId.value) {
+  navigateTo(`/team/${encodeURIComponent(teamId.value)}`, { replace: true });
 }
 
-// const decks = findDecksByTeam(teamId);
 const { games } = useGameList({ teamId });
 const { total, win, winRate, winDiff } = useGamesStatistics(games);
 </script>

@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { type DataTableColumn, NTooltip } from "naive-ui";
+import { type DataTableColumn, NText, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 import type { CharacterCard } from "~/utils/types";
 
@@ -145,6 +145,26 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     align: "center",
     sorter: "default",
     render: row => winRateRender(row.followerWin, row.followerTotal, row.followerWinRate),
+  },
+  {
+    key: "links",
+    width: "3rem",
+    render: row => h(
+      NTooltip,
+      { trigger: "hover", placement: "right" },
+      {
+        trigger: () => h(
+          NuxtLink,
+          { to: `/team/${teamId.value}/records/${row.teamId}` },
+          () => h(
+            NText,
+            { depth: 3 },
+            () => h("div", { class: "i-carbon:view" }),
+          ),
+        ),
+        default: () => h("span", "查看对局记录"),
+      },
+    ),
   },
 ];
 </script>
