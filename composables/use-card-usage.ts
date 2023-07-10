@@ -78,5 +78,6 @@ export default function useCardUsage(games?: MaybeRef<Game[] | undefined>) {
     return getTypicalActions(gamesUnref ?? gameList, cardUsageUnref);
   });
   const numGamesWithDeck = computed(() => (unref(games) ?? gameList).filter(game => game.playerADeckId).length);
-  return { cardUsage, typicalActions, numGamesWithDeck };
+  const numWinGamesWithDeck = computed(() => (unref(games) ?? gameList).filter(game => game.playerADeckId && game.winner === "A").length);
+  return { cardUsage, typicalActions, numGamesWithDeck, numWinGamesWithDeck };
 }

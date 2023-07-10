@@ -6,6 +6,7 @@ interface UseGameListOptions {
   teamId?: MaybeRef<string>;
   opponentTeamId?: MaybeRef<string>;
   characters?: MaybeRef<CharacterCard[]>;
+  mirror?: MaybeRef<boolean>;
 }
 
 export default function useGameList(options?: UseGameListOptions) {
@@ -14,12 +15,15 @@ export default function useGameList(options?: UseGameListOptions) {
     const teamId = unref(options?.teamId);
     const opponentTeamId = unref(options?.opponentTeamId);
     const characters = unref(options?.characters);
+    const mirror = unref(options?.mirror) ?? true;
 
     let list = gameList;
     if (gameVersion) {
       list = list.filter(game => game.gameVersion === gameVersion);
     }
-    list = list.flatMap(game => [game, invertGame(game)]);
+    if (mirror) {
+      list = list.flatMap(game => [game, invertGame(game)]);
+    }
     if (teamId) {
       list = list.filter(game => getTeamId(game.playerACharacters) === teamId);
     }

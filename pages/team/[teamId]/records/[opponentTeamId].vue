@@ -14,5 +14,5 @@ if (route.params.teamId !== teamId.value || route.params.opponentTeamId !== oppo
   navigateTo(`/team/${encodeURIComponent(teamId.value)}/records/${opponentTeamId}`, { replace: true });
 }
 
-const { games } = useGameList({ teamId, opponentTeamId });
+const { games } = useGameList({ teamId, opponentTeamId, mirror: computed(() => opponentTeamId.value !== teamId.value) });
 </script>
