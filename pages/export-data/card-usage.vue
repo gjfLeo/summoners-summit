@@ -20,7 +20,7 @@ const { copy } = useClipboard();
 const cardPicks = computed(() =>
   Object.fromEntries(
     Object.entries(cardUsage.value)
-      .map(([card, usage]) => [card, usage.win] as [ActionCard, number])
+      .map(([card, usage]) => [card, usage.winCount] as [ActionCard, number])
       .sort((a, b) => b[1] - a[1]),
   ),
 );

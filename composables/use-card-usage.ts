@@ -2,25 +2,28 @@ import { add, divide, multiply } from "mathjs/number";
 import { deckById, gameList } from "~/data";
 import type { ActionCard, Deck, Game } from "~/utils/types";
 
-interface CardUsage {
-  total: number;
-  win: number;
+interface CardUsageRaw {
+  totalCount: number;
+  winCount: number;
+}
+
+interface CardUsage extends CardUsageRaw {
   totalAverage: number;
   winAverage: number;
 }
-type CardUsageRaw = Pick<CardUsage, "total" | "win">;
 
 // 计算games中playerAActions的卡牌使用率
 function getTotalCardUsages(games: Game[]): Partial<Record<ActionCard, CardUsage>> {
-  const usages: Partial<Record<ActionCard, Pick<CardUsageRaw, "total" | "win">>> = {};
   games = games.filter(game => game.playerADeckId);
+
+  const usages: Partial<Record<ActionCard, Pick<CardUsageRaw, "totalCount" | "winCount">>> = {};
   games.forEach((game) => {
     const actions = deckById[game.playerADeckId!]?.actionCards ?? {};
     (Object.entries(actions) as [ActionCard, number][])
       .forEach(([card, count]) => {
-        const usage = usages[card] ?? { total: 0, win: 0 };
-        usage.total += count;
-        usage.win += game.winner === "A" ? count : 0;
+        const usage = usages[card] ?? { totalCount: 0, winCount: 0 };
+        usage.totalCount += count;
+        usage.winCount += game.winner === "A" ? count : 0;
         usages[card] = usage;
       });
   });
@@ -29,8 +32,8 @@ function getTotalCardUsages(games: Game[]): Partial<Record<ActionCard, CardUsage
       .map<[ActionCard, CardUsage]>(([card, usageRaw]) => {
         const usage = {
           ...usageRaw,
-          totalAverage: divide(usageRaw.total, games.length),
-          winAverage: divide(usageRaw.win, games.filter(game => game.winner === "A").length),
+          totalAverage: divide(usageRaw.totalCount, games.length),
+          winAverage: divide(usageRaw.winCount, games.filter(game => game.winner === "A").length),
         };
         return [card, usage];
       }),

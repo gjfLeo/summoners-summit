@@ -37,8 +37,7 @@ const data = computed(() => Object.entries(cardUsage.value).map(([card, usage]) 
   ...usage,
 })));
 
-type RowType = typeof data["value"][number];
-const columns: DataTableColumn<RowType>[] = [
+const columns: DataTableColumn<typeof data["value"][number]>[] = [
   {
     key: "card",
     render: row => h(
