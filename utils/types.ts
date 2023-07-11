@@ -26,8 +26,8 @@ export interface TournamentStagePart {
 }
 
 export interface TournamentMatch {
-  playerA: string;
-  playerB: string;
+  playerA: string | number;
+  playerB: string | number;
   winner: "A" | "B";
   video?: string;
   games: TournamentMatchGame[];
@@ -67,3 +67,8 @@ export interface Deck {
 }
 
 export type TournamentRule = "征服" | "决斗" | "BO3" | "BO5" | [string, string];
+
+export interface Player {
+  nickname: string;
+  uid: number;
+}

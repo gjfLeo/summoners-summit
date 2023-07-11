@@ -27,9 +27,9 @@
             {{ game.stageName }} {{ game.matchName }}{{ game.gameName }}
           </div>
 
-          <div class="self-center justify-self-end">{{ game.playerA }}</div>
+          <div class="self-center justify-self-end"><PlayerName :player="game.playerA" /></div>
           <div />
-          <div class="self-center justify-self-start">{{ game.playerB }}</div>
+          <div class="self-center justify-self-start"><PlayerName :player="game.playerB" /></div>
 
           <div class="self-center justify-self-end"><TeamAvatars :team="game.playerACharacters" /></div>
           <div class="self-center justify-self-center text-sm">VS</div>

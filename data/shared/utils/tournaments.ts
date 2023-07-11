@@ -4,6 +4,7 @@ import type { Deck, Tournament, TournamentMatch, TournamentMatchGame, Tournament
 
 interface TournamentParam extends Omit<Tournament, "id"> {
   stages: TournamentParamStage[];
+  playerUidMap?: Record<string, number>;
 }
 
 interface TournamentParamStage extends TournamentStage {
@@ -35,10 +36,15 @@ export function getGameIdGenerator(tournamentId: string): () => string {
 export function defineTournament(tournament: TournamentParam): Tournament {
   const tournamentId = md5(tournament.name + tournament.gameVersion).toString().slice(8, 24);
   (tournament as Tournament).id = tournamentId;
+  const { playerUidMap } = tournament;
   const gameIdGenerator = getGameIdGenerator(tournamentId);
   tournament.stages.forEach((stage) => {
     stage.parts.forEach((part) => {
       part.matches.forEach((match) => {
+        // 用UID替换昵称
+        if (playerUidMap?.[match.playerA]) match.playerA = playerUidMap?.[match.playerA];
+        if (playerUidMap?.[match.playerB]) match.playerB = playerUidMap?.[match.playerB];
+
         if (!match.winner) {
           const aWin = match.games.filter(g => g.winner === "A").length;
           const bWin = match.games.filter(g => g.winner === "B").length;

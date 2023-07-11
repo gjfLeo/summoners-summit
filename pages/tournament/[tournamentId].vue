@@ -22,9 +22,9 @@
           <div v-if="stage.parts.length > 1">{{ part.name }}</div>
           <div v-if="part.matches.length > 1">第{{ matchIndex + 1 }}场</div>
           <div class="h-0 w-full md:hidden" />
-          <div class="text-base" :class="{ 'text-orange-500': match.winner === 'A' }">{{ match.playerA }}</div>
+          <div class="text-base" :class="{ 'text-orange-500': match.winner === 'A' }"><PlayerName :player="match.playerA " /></div>
           <div class="text-sm">VS</div>
-          <div class="text-base" :class="{ 'text-orange-500': match.winner === 'B' }">{{ match.playerB }}</div>
+          <div class="text-base" :class="{ 'text-orange-500': match.winner === 'B' }"><PlayerName :player="match.playerB " /></div>
 
           <!-- 右侧 -->
           <div class="ml-auto flex gap-2 text-sm text-gray">
