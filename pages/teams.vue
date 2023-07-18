@@ -32,10 +32,11 @@ const characters = ref<CharacterCard[]>([]);
 
 const gameVersion = ref<string>();
 const gameVersionOptions: SelectOption[] = [
-  { label: "3.7" },
+  { label: "3.8", value: "3.8" },
+  { label: "3.7", value: "3.7" },
 ];
 
-const { games } = useGameList({ characters });
+const { games } = useGameList({ gameVersion, characters });
 const { teamStatistics } = useTeamStatistics(games);
 
 const data = computed(() => Object.values(teamStatistics.value).map(statistics => ({ key: statistics.teamId, ...statistics })));

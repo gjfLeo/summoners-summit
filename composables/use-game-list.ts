@@ -2,7 +2,7 @@ import { gameList } from "~/data";
 import type { CharacterCard, Game } from "~/utils/types";
 
 interface UseGameListOptions {
-  gameVersion?: MaybeRef<string>;
+  gameVersion?: MaybeRef<string | undefined>;
   teamId?: MaybeRef<string>;
   opponentTeamId?: MaybeRef<string>;
   characters?: MaybeRef<CharacterCard[]>;

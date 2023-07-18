@@ -56,8 +56,8 @@ export interface Game extends TournamentMatchGame {
   date: string;
   video?: string;
 
-  playerA: string;
-  playerB: string;
+  playerA: string | number;
+  playerB: string | number;
 }
 
 export interface Deck {
