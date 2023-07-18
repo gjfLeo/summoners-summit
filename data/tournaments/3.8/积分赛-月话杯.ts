@@ -223,7 +223,7 @@ export default defineTournament({
             {
               playerA: "派大蒙",
               playerB: "浅冽",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1aX4y1Y7Ug",
               games: [
                 {
                   playerACharacters: [Mona, Fischl, Nahida],
@@ -262,7 +262,7 @@ export default defineTournament({
             {
               playerA: "祁音",
               playerB: "薄学",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1fV4y1b7eu",
               games: [
                 {
                   playerACharacters: [Fischl, Nahida, Klee],
@@ -293,7 +293,7 @@ export default defineTournament({
             {
               playerA: "道道不哭",
               playerB: "周正福",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1yP411k7un",
               games: [
                 {
                   playerACharacters: [Fischl, FatuiPyroAgent, RhodeiaOfLoch],
