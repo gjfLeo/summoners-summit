@@ -11,7 +11,7 @@ interface UseGameListOptions {
 
 export default function useGameList(options?: UseGameListOptions) {
   const games = computed<Game[]>(() => {
-    const gameVersion = unref(options?.gameVersion);
+    const gameVersion = unref(useGameVersion());
     const teamId = unref(options?.teamId);
     const opponentTeamId = unref(options?.opponentTeamId);
     const characters = unref(options?.characters);

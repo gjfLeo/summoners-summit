@@ -7,6 +7,13 @@
     </div>
 
     <div class="h-full flex items-center justify-end">
+      <n-select
+        v-model:value="gameVersion"
+        class="w-6.25rem"
+        filterable
+        placeholder="版本"
+        :options="gameVersionOptions"
+      />
       <n-button circle quaternary @click="isDark = !isDark">
         <template #icon>
           <div class="i-carbon:moon dark:i-carbon:sun" />
@@ -17,7 +24,8 @@
 </template>
 
 <script lang="tsx" setup>
-import { type MenuOption } from "naive-ui";
+import type { MenuOption, SelectOption } from "naive-ui";
+
 import { NuxtLink } from "#components";
 
 const route = useRoute();
@@ -50,5 +58,12 @@ const menuOptions: MenuOption[] = [
       <div class="ml-1">阵容</div>
     </NuxtLink>),
   },
+];
+
+const gameVersion = useGameVersion();
+const gameVersionOptions: SelectOption[] = [
+  { label: "全版本", value: "" },
+  { label: "3.8", value: "3.8" },
+  { label: "3.7", value: "3.7" },
 ];
 </script>

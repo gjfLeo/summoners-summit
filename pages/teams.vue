@@ -1,13 +1,5 @@
 <template>
   <div class="flex flex-wrap gap-2">
-    <n-select
-      v-model:value="gameVersion"
-      class="w-6rem"
-      clearable
-      filterable
-      placeholder="版本"
-      :options="gameVersionOptions"
-    />
     <CharacterSelector v-model="characters" />
   </div>
   <n-data-table
@@ -21,7 +13,7 @@
 
 <script lang="ts" setup>
 import { NTooltip } from "naive-ui";
-import type { DataTableColumn, SelectOption } from "naive-ui";
+import type { DataTableColumn } from "naive-ui";
 
 import type { CharacterCard } from "~/utils/types";
 import { NuxtLink, TeamAvatars, TeamElements } from "#components";
@@ -29,14 +21,7 @@ import { NuxtLink, TeamAvatars, TeamElements } from "#components";
 useHead({ title: "阵容 | 召唤之巅" });
 
 const characters = ref<CharacterCard[]>([]);
-
-const gameVersion = ref<string>();
-const gameVersionOptions: SelectOption[] = [
-  { label: "3.8", value: "3.8" },
-  { label: "3.7", value: "3.7" },
-];
-
-const { games } = useGameList({ gameVersion, characters });
+const { games } = useGameList({ characters });
 const { teamStatistics } = useTeamStatistics(games);
 
 const data = computed(() => Object.values(teamStatistics.value).map(statistics => ({ key: statistics.teamId, ...statistics })));
