@@ -26,5 +26,5 @@ const props = defineProps<{
 const { teamId } = useTeam(props);
 const { games } = useGameList({ teamId });
 const { typicalActions, numWinGamesWithDeck } = useCardUsage(games);
-const actionCards = Object.entries(typicalActions.value).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard));
+const actionCards = computed(() => Object.entries(typicalActions.value).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard)));
 </script>
