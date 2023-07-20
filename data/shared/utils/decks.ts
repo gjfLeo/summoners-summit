@@ -12,7 +12,16 @@ export function registerDeck(characters: Deck["characterCards"], actions: Deck["
       .sort((a, b) => actionCardSorter(a[0], b[0])),
   ) as Deck["actionCards"];
   const id = md5(JSON.stringify({ characterCards, actionCards })).toString().slice(8, 24);
-  decks[id] = { id, characterCards, actionCards };
+  if (!decks[id]) {
+    decks[id] = { id, characterCards, actionCards };
+
+    const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
+    if (actionCardCount !== 30) {
+      console.error(`行动牌数量≠30：${id}`);
+      console.error(JSON.stringify(decks[id]));
+    }
+  }
+
   return id;
 }
 

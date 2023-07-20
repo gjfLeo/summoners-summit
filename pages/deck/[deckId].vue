@@ -17,6 +17,9 @@
       <CardImage :card="card" class="w-100%" />
     </template>
   </div>
+
+  <n-h3>对局记录</n-h3>
+  <GameRecords :games="games" />
 </template>
 
 <script lang="ts" setup>
@@ -40,4 +43,6 @@ const deck = deckById[id];
 
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard));
+
+const { games } = useGameList({ deckId: id });
 </script>
