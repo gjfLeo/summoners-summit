@@ -1143,12 +1143,6 @@ export default defineTournament({
                 },
               ],
             },
-          ],
-        },
-        {
-          name: "DAY3",
-          date: "2023-07-19",
-          matches: [
             {
               playerA: "老伯",
               playerB: "取悦",
