@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  redirect: "/tournaments",
+  redirect: "/teams",
 });
 
 useHead({ title: "召唤之巅" });
