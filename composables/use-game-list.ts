@@ -3,6 +3,7 @@ import type { CharacterCard, Game } from "~/utils/types";
 
 interface UseGameListOptions {
   gameVersion?: MaybeRef<string | undefined>;
+  player?: MaybeRef<string | number>;
   teamId?: MaybeRef<string>;
   deckId?: MaybeRef<string>;
   opponentTeamId?: MaybeRef<string>;
@@ -13,6 +14,7 @@ interface UseGameListOptions {
 export default function useGameList(options?: UseGameListOptions) {
   const games = computed<Game[]>(() => {
     const gameVersion = unref(useGameVersion());
+    const player = unref(options?.player);
     const teamId = unref(options?.teamId);
     const deckId = unref(options?.deckId);
     const opponentTeamId = unref(options?.opponentTeamId);
@@ -25,6 +27,9 @@ export default function useGameList(options?: UseGameListOptions) {
     }
     if (mirror) {
       list = list.flatMap(game => [game, invertGame(game)]);
+    }
+    if (player) {
+      list = list.filter(game => game.playerA === player);
     }
     if (teamId) {
       list = list.filter(game => getTeamId(game.playerACharacters) === teamId);

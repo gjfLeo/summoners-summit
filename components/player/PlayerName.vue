@@ -1,5 +1,7 @@
 <template>
-  <n-text>{{ playerName }}</n-text>
+  <NuxtLink :to="`/player/${player}`">
+    <n-text>{{ playerName }}</n-text>
+  </NuxtLink>
 </template>
 
 <script lang="ts" setup>

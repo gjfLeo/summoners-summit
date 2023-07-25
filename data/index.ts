@@ -4,4 +4,3 @@ export * from "./shared";
 export * from "./images";
 export * from "./tournaments";
 export * from "./decks";
-export * from "./players";
