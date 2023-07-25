@@ -58,7 +58,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "williemkmetsch",
+              playerA: "WilliemKmetsch",
               playerB: "Zun",
               video: "",
               games: [
@@ -133,7 +133,7 @@ export default defineTournament({
             },
             {
               playerA: "夭九",
-              playerB: "williemkmetsch",
+              playerB: "WilliemKmetsch",
               video: "",
               games: [
                 {
