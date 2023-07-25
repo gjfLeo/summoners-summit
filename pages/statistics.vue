@@ -13,5 +13,6 @@
 <script lang="ts" setup>
 useHead({ title: "统计 | 召唤之巅" });
 
-const { total, totalWithActions, starterWinRate, followerWinRate } = useGamesStatistics();
+const { games } = useGameList({ mirror: false });
+const { total, totalWithActions, starterWinRate, followerWinRate } = useGamesStatistics(games);
 </script>
