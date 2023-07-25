@@ -206,5 +206,6 @@ const players: Player[] = [
 export const playerById = Object.fromEntries(players.map(player => [player.uid, player]));
 
 export const playerMap: Record<string, number | string> = {
+  水瓶子: "水瓶子丶",
   ...Object.fromEntries(players.map(player => [player.nickname, player.uid])),
 };
