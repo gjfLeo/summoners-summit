@@ -17,8 +17,8 @@ export function registerDeck(characters: Deck["characterCards"], actions: Deck["
 
     const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
     if (actionCardCount !== 30) {
-      console.error(`行动牌数量≠30：${id}`);
-      console.error(JSON.stringify(decks[id]));
+      console.error(`行动牌数量≠30：http://localhost:4000/deck/${id}`);
+      // console.error(JSON.stringify(decks[id]));
     }
   }
 
