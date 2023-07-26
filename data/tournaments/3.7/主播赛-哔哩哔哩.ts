@@ -1320,7 +1320,7 @@ export default defineTournament({
   stages: [
     {
       name: "小组赛",
-      rules: ["决斗", "BO3"],
+      rules: ["BO3", "决斗"],
       parts: [
         {
           name: "A组",
@@ -2480,7 +2480,7 @@ export default defineTournament({
     },
     {
       name: "淘汰赛",
-      rules: ["决斗", "BO3"],
+      rules: ["BO3", "决斗"],
       parts: [
         {
           name: "8进4",
