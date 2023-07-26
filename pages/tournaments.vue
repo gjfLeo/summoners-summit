@@ -1,5 +1,13 @@
 <template>
-  <TournamentList :list="list" />
+  <template v-if="gameVersion">
+    <TournamentList :list="listByVersion[gameVersion]" />
+  </template>
+  <template v-else>
+    <template v-for="(list, version) in listByVersion" :key="version">
+      <n-h2>{{ version }}</n-h2>
+      <TournamentList :list="list" />
+    </template>
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -9,9 +17,15 @@ useHead({ title: "赛事 | 召唤之巅" });
 
 const gameVersion = useGameVersion();
 
-const list = computed(() =>
-  Object.entries(tournamentById)
-    .filter(([_id, tournament]) => !gameVersion.value || tournament.gameVersion === gameVersion.value)
-    .map(([id]) => id),
-);
+const listByVersion = computed(() => {
+  return Object.values(tournamentById).reduce<Record<string, string[]>>(
+    (map, { id, gameVersion }) => {
+      const list = map[gameVersion] ?? [];
+      list.push(id);
+      map[gameVersion] = list;
+      return map;
+    },
+    {},
+  );
+});
 </script>
