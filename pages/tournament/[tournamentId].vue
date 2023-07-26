@@ -61,8 +61,8 @@ useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
 const ruleDesc = {
   BO3: "三局两胜",
   BO5: "五局三胜",
-  征服: "取得胜利的卡组不再使用",
-  决斗: "每局使用不同卡组",
+  征服: "取得胜利的阵容不再使用",
+  决斗: "每局使用不同阵容",
 };
 
 function getStageRules(rules: TournamentRule[]): { name: string; desc: string }[] {
