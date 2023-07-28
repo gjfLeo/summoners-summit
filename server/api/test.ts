@@ -1,5 +1,5 @@
-import { MD5 } from "crypto-js";
+import CryptoJS from "crypto-js";
 
 export default defineEventHandler((_event) => {
-  return { msg: MD5("hello world") };
+  return { msg: CryptoJS.MD5("hello world").toString() };
 });
