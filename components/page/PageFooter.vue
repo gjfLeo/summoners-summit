@@ -71,8 +71,9 @@ async function handleQQClick() {
   background-position: 50%;
   background-repeat: no-repeat;
 
-  .dark & {
-    filter: invert(1);
-  }
+}
+
+.dark .i-nga {
+  filter: invert(1);
 }
 </style>
