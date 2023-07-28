@@ -1,13 +1,13 @@
 <template>
   <NuxtLink :to="link">
-    <n-card :title="tournament.name" hoverable :style="{ '--n-color': tournament.tag && cardColors[tournament.tag] }">
+    <n-card :title="tournament.name" hoverable :style="{ '--n-color': tournament.type && cardColors[tournament.type] }">
       <!-- <template v-if="tournament.image" #cover>
         <img :src="tournament.image" />
       </template> -->
       <template #header>
         <div class="flex flex-wrap items-center">
           <div>{{ tournament.name }}</div>
-          <n-tag v-if="tournament.tag" class="ml-auto" size="small">{{ tournament.tag }}</n-tag>
+          <n-tag v-if="tournament.type" class="ml-auto" size="small">{{ tournament.type }}</n-tag>
         </div>
       </template>
     </n-card>
