@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Bennett, Candace, Chongyun, ElectroHypostasis, FatuiPyroAgent, Fischl, KamisatoAyaka, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Venti, YaeMiko, Yoimiya } from "../../shared/character-cards";
+import { Amber, AratakiItto, Barbara, Bennett, Candace, Chongyun, Cyno, ElectroHypostasis, FatuiPyroAgent, Fischl, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Tartaglia, Venti, YaeMiko, Yoimiya } from "../../shared/character-cards";
 import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
@@ -169,16 +169,91 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "8进4淘汰赛",
-    //   rules: [
-    //     "BO5",
-    //     "征服",
-    //     ["禁用角色", "对阵双方各禁用一张角色牌"],
-    //     ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-    //     ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
-    //   ],
-    //   parts: [],
-    // },
+    {
+      name: "8进4淘汰赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "DAY1",
+          date: "2023-07-27",
+          matches: [
+            {
+              playerA: "铃紫",
+              playerB: "雪国Ink",
+              video: "https://www.bilibili.com/video/BV1cu4y127Tc",
+              games: [
+                {
+                  playerACharacters: [Amber, AratakiItto, Noelle],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Klee, Keqing, Bennett],
+                  playerBCharacters: [Bennett, FatuiPyroAgent, Cyno],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Klee, Keqing, Bennett],
+                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Candace, Razor, RaidenShogun],
+                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Amber, AratakiItto, Noelle],
+                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "枨枘",
+              playerB: "音尘",
+              video: "https://www.bilibili.com/video/BV1cu4y127Tc",
+              games: [
+                {
+                  playerACharacters: [Chongyun, Razor, Keqing],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, Razor, Keqing],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [KamisatoAyaka, Yoimiya, Shenhe],
+                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [KamisatoAyaka, Yoimiya, Shenhe],
+                  playerBCharacters: [Shenhe, RaidenShogun, Chongyun],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
