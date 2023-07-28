@@ -1,5 +1,53 @@
-import { gameList } from "../../data";
+import { gameById } from "../data";
+import type { Game } from "../data/utils/types";
 
-export default defineEventHandler((_event) => {
-  return gameList;
+function getGameMirror(game: Game): Game {
+  const { playerA, playerB, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
+  return {
+    ...game,
+    playerA: playerB,
+    playerB: playerA,
+    playerACharacters: playerBCharacters,
+    playerBCharacters: playerACharacters,
+    playerADeckId: playerBDeckId,
+    playerBDeckId: playerADeckId,
+    starter: starter === "A" ? "B" : "A",
+    winner: winner === "A" ? "B" : "A",
+  };
+}
+
+export default defineEventHandler((event) => {
+  const {
+    gameVersion,
+    player,
+    deckId,
+    opponentCharacters,
+    characters,
+    mirror,
+  } = getQuery(event);
+
+  let list = Object.values(gameById);
+  if (gameVersion) {
+    list = list.filter(game => game.gameVersion === gameVersion);
+  }
+  if (player || deckId || characters || opponentCharacters || mirror) {
+    list = list.flatMap(game => [game, getGameMirror(game)]);
+  }
+  if (player) {
+    list = list.filter(game => game.playerA === player);
+  }
+  if (deckId) {
+    list = list.filter(game => game.playerADeckId === deckId);
+  }
+  if (characters) {
+    for (const character of (characters as string).split(",")) {
+      list = list.filter(game => (game.playerACharacters as string[]).includes(character));
+    }
+  }
+  if (opponentCharacters) {
+    for (const character of (opponentCharacters as string).split(",")) {
+      list = list.filter(game => (game.playerBCharacters as string[]).includes(character));
+    }
+  }
+  return list;
 });

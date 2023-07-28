@@ -1,18 +1,18 @@
-import type { Deck } from "./output-data";
+import type { Deck, TournamentRules } from "./output-data";
 
 export interface TournamentRawData {
   name: string;
+  type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛";
   gameVersion: string;
+  image?: string;
   stages: StageRawData[];
 }
 
 export interface StageRawData {
   name: string;
-  rules?: RulesRawData;
+  rules?: TournamentRules;
   parts: PartRawData[];
 }
-
-export type RulesRawData = ("BO3" | "BO5" | "征服" | [string, string])[];
 
 export interface PartRawData {
   name?: string;
@@ -23,6 +23,7 @@ export interface PartRawData {
 export interface MatchRawData {
   playerA: string;
   playerB: string;
+  winner?: "A" | "B";
   video?: string;
   games: GameRawData[];
 }

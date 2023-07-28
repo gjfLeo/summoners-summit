@@ -168,7 +168,7 @@ export const ALL_ACTION_CARDS = [
 
 // #endregion
 
-export type ActionCard = typeof ALL_CHARACTER_CARDS[number];
+export type ActionCard = typeof ALL_ACTION_CARDS[number];
 
 const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
 export const actionCardSorter = (a: ActionCard, b: ActionCard) => actionCardOrder[a] - actionCardOrder[b];
