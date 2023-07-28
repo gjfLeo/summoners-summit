@@ -1,5 +1,5 @@
 import { gameList } from "../../data";
 
-export default defineEventHandler(() => {
+export default defineEventHandler((_event) => {
   return gameList;
 });
