@@ -3,7 +3,7 @@ import { AratakiItto, Barbara, Bennett, Chongyun, Cyno, Eula, FatuiPyroAgent, Fi
 
 export default defineTournament({
   name: "绯雪杯",
-  tag: "积分赛试办赛",
+  type: "积分赛试办赛",
   gameVersion: "3.8",
   stages: [
     {

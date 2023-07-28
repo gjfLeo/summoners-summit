@@ -4,7 +4,7 @@ import { defineTournament } from "../../shared/utils/tournaments";
 export default defineTournament({
   name: "花神杯",
   gameVersion: "3.7",
-  tag: "积分赛试办赛",
+  type: "积分赛试办赛",
   stages: [
     {
       name: "16进8淘汰赛",

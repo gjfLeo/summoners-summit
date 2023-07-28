@@ -1314,7 +1314,7 @@ const actions = {
 
 export default defineTournament({
   name: "哔哩哔哩主播资格赛",
-  tag: "主播资格赛",
+  type: "主播资格赛",
   gameVersion: "3.7",
   image: "https://webstatic.mihoyo.com/upload/op-public/2023/06/26/3fe7c0e4365537d4654825abc224681e_1222276889799397404.jpg",
   stages: [

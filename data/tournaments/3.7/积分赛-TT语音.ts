@@ -3,7 +3,7 @@ import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
   name: "TT语音杯",
-  tag: "全民积分赛",
+  type: "全民积分赛",
   gameVersion: "3.7",
   image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/23/78b296f7dc90e6e1327e891ce3bb2fa0_4267338515669661861.jpg",
   stages: [

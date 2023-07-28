@@ -209,7 +209,7 @@ const actions = {
 
 export default defineTournament({
   name: "「逐辉星聚」月话杯",
-  tag: "全民积分赛",
+  type: "全民积分赛",
   gameVersion: "3.8",
   image: "https://webstatic.mihoyo.com/upload/op-public/2023/07/05/c9743ef25521be8191d8cbd4923d2387_333153055957663753.jpg",
   stages: [

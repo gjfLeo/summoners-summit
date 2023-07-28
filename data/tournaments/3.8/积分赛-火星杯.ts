@@ -4,7 +4,7 @@ import { defineTournament } from "../../shared/utils/tournaments";
 
 export default defineTournament({
   name: "火星杯",
-  tag: "全民积分赛",
+  type: "全民积分赛",
   gameVersion: "3.8",
   stages: [
     {

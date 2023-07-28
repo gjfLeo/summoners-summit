@@ -409,7 +409,7 @@ const actions = {
 export default defineTournament({
   name: "火星杯",
   gameVersion: "3.7",
-  tag: "积分赛试办赛",
+  type: "积分赛试办赛",
   stages: [
     {
       name: "8进4淘汰赛",
