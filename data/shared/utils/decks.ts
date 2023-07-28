@@ -1,4 +1,5 @@
-import md5 from "crypto-js/md5";
+// import md5 from "crypto-js/md5";
+import CryptoJS from "crypto-js";
 import { characterCardSorter } from "../character-cards";
 import { actionCardSorter } from "../action-cards";
 import type { ActionCard, Deck } from "~/utils/types";
@@ -11,7 +12,7 @@ export function registerDeck(characters: Deck["characterCards"], actions: Deck["
     ([...Object.entries(actions)] as [ActionCard, number][])
       .sort((a, b) => actionCardSorter(a[0], b[0])),
   ) as Deck["actionCards"];
-  const id = md5(JSON.stringify({ characterCards, actionCards })).toString().slice(8, 24);
+  const id = CryptoJS.MD5(JSON.stringify({ characterCards, actionCards })).toString().slice(8, 24);
   if (!decks[id]) {
     decks[id] = { id, characterCards, actionCards };
 
