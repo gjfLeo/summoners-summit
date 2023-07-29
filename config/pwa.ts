@@ -36,7 +36,7 @@ export const pwa: ModuleOptions = {
   workbox: {
     globPatterns: ["**/*.{js,css,html,txt,png,ico,svg}"],
     navigateFallbackDenylist: [/^\/api\//],
-    navigateFallback: process.env.NUXT_APP_BASE_URL ?? "/",
+    navigateFallback: "/",
     cleanupOutdatedCaches: true,
     runtimeCaching: [
       // {
