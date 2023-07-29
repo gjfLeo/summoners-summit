@@ -101,7 +101,8 @@ export default defineNuxtConfig({
     },
   },
 
-  pwa: process.env.NUXT_APP_BASE_URL ? undefined : pwa,
+  pwa,
+  // pwa: process.env.NUXT_APP_BASE_URL ? undefined : pwa,
 
   devtools: {
     enabled: true,

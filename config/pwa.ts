@@ -69,7 +69,7 @@ export const pwa: ModuleOptions = {
       // },
     ],
   },
-  registerWebManifestInRouteRules: true,
+  // registerWebManifestInRouteRules: true,
   writePlugin: true,
   devOptions: {
     enabled: process.env.VITE_PLUGIN_PWA === "true",
