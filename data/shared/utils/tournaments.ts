@@ -38,7 +38,7 @@ function getMappedPlayer(player: string | number): string | number {
 }
 
 export function defineTournament(tournament: TournamentParam): Tournament {
-  const tournamentId = md5(tournament.name + tournament.gameVersion).toString().slice(8, 24);
+  const tournamentId = md5(tournament.gameVersion + tournament.name).toString().slice(8, 24);
   (tournament as Tournament).id = tournamentId;
   const gameIdGenerator = getGameIdGenerator(tournamentId);
   tournament.stages.forEach((stage) => {
