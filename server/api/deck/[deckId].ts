@@ -1,6 +1,8 @@
 import { deckById } from "../../data";
+import type { Deck } from "../../data/utils/types";
+import type { R } from "../../utils/types";
 
-export default defineEventHandler((event) => {
+export default defineEventHandler<R & { deck?: Deck }>((event) => {
   const deckId = event.context.params!.deckId;
 
   const deck = deckById[deckId];
