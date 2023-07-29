@@ -23,18 +23,23 @@
 </template>
 
 <script lang="ts" setup>
+import { deckById } from "~/data";
 import type { ActionCard } from "~/utils/types";
+
+definePageMeta({
+  validate: (route) => {
+    const id = route.params.deckId as string;
+    const deck = deckById[id];
+    if (!deck) return false;
+    return true;
+  },
+});
 
 useHead({ title: "牌组详情 | 召唤之巅" });
 
 const route = useRoute();
 const id = route.params.deckId as string;
-const { data } = await useFetch(`/api/deck/${id}`);
-const deck = data.value?.deck;
-
-if (!deck) {
-  throw createError({ statusCode: 404, statusMessage: "牌组不存在" });
-}
+const deck = deckById[id];
 
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard));

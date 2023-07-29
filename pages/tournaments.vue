@@ -11,15 +11,14 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = await useFetch("/api/tournament/list");
-const tournamentList = data.value?.tournamentList ?? [];
+import { tournamentById } from "~/data";
 
 useHead({ title: "赛事 | 召唤之巅" });
 
 const gameVersion = useGameVersion();
 
 const listByVersion = computed(() => {
-  return tournamentList.reduce<Record<string, string[]>>(
+  return Object.values(tournamentById).reduce<Record<string, string[]>>(
     (map, { id, gameVersion }) => {
       const list = map[gameVersion] ?? [];
       list.push(id);
