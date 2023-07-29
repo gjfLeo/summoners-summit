@@ -1,7 +1,7 @@
 import type { ModuleOptions } from "@vite-pwa/nuxt";
 import { appDescription, appName } from "../constants/index";
 
-const scope = "/";
+const scope = process.env.NUXT_APP_BASE_URL;
 
 export const pwa: ModuleOptions = {
   registerType: "autoUpdate",
@@ -36,7 +36,7 @@ export const pwa: ModuleOptions = {
   workbox: {
     globPatterns: ["**/*.{js,css,html,txt,png,ico,svg}"],
     navigateFallbackDenylist: [/^\/api\//],
-    navigateFallback: "/",
+    navigateFallback: process.env.NUXT_APP_BASE_URL ?? "/",
     cleanupOutdatedCaches: true,
     runtimeCaching: [
       // {
