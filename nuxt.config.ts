@@ -87,7 +87,6 @@ export default defineNuxtConfig({
       viewport: "width=device-width,initial-scale=1",
       link: [
         // { rel: "icon", href: "/favicon.ico", sizes: "any" },
-        { rel: "manifest", href: `${process.env.NUXT_APP_BASE_URL ?? "/"}${pwa.manifestFilename}` },
         { rel: "icon", type: "image/svg+xml", href: `${process.env.NUXT_APP_BASE_URL ?? "/"}favicon.svg` },
         { rel: "apple-touch-icon", href: `${process.env.NUXT_APP_BASE_URL ?? "/"}apple-touch-icon.svg` },
       ],
@@ -102,7 +101,7 @@ export default defineNuxtConfig({
     },
   },
 
-  pwa,
+  pwa: process.env.NUXT_APP_BASE_URL ? undefined : pwa,
 
   devtools: {
     enabled: true,
