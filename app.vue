@@ -1,5 +1,5 @@
 <template>
-  <VitePwaManifest />
+  <VitePwaManifest v-if="pwa" />
 
   <n-config-provider
     :locale="zhCN" :date-locale="dateZhCN"
@@ -30,6 +30,7 @@ useHead({
 zhCN.DataTable.clear = "清除";
 
 const isDark = useDark();
+const pwa = !process.env.NUXT_APP_BASE_URL;
 </script>
 
 <style>

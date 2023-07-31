@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
-    "@vite-pwa/nuxt",
+    ...process.env.NUXT_APP_BASE_URL ? [] : ["@vite-pwa/nuxt"],
   ],
 
   build: {
