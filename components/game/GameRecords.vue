@@ -6,7 +6,7 @@
           <!-- 赛事和对局名称 -->
           <div class="grid-col-1/4">
             <div class="flex items-center justify-between">
-              <NuxtLink class="text-sm" :to="`/tournament/${game.tournamentId}`" :prefetch="false">
+              <NuxtLink class="text-sm" :to="`/tournament/${game.tournamentId}`" no-prefetch>
                 {{ game.gameVersion }} {{ game.tournamentName }}
               </NuxtLink>
               <n-text :depth="3" class="flex gap-2 text-xs">
@@ -15,7 +15,7 @@
                   trigger="hover"
                 >
                   <template #trigger>
-                    <NuxtLink :to="game.video" target="_blank" :prefetch="false">
+                    <NuxtLink :to="game.video" target="_blank" no-prefetch>
                       <n-icon><div class="i-carbon:video" /></n-icon>
                     </NuxtLink>
                   </template>
@@ -40,7 +40,7 @@
           <div class="flex justify-end gap-1 text-sm">
             <n-tooltip v-if="game.playerADeckId">
               <template #trigger>
-                <NuxtLink :to="`/deck/${game.playerADeckId}`" :prefetch="false"><IconDeck class="opacity-75" /></NuxtLink>
+                <NuxtLink :to="`/deck/${game.playerADeckId}`" no-prefetch><IconDeck class="opacity-75" /></NuxtLink>
               </template>
               <span>查看套牌</span>
             </n-tooltip>
@@ -53,7 +53,7 @@
             <div>{{ game.starter === 'B' ? '先手' : '后手' }}</div>
             <n-tooltip v-if="game.playerBDeckId">
               <template #trigger>
-                <NuxtLink :to="`/deck/${game.playerBDeckId}`" :prefetch="false"><IconDeck class="opacity-75" /></NuxtLink>
+                <NuxtLink :to="`/deck/${game.playerBDeckId}`" no-prefetch><IconDeck class="opacity-75" /></NuxtLink>
               </template>
               <span>查看套牌</span>
             </n-tooltip>

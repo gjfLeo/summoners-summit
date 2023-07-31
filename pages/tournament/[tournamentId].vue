@@ -33,7 +33,7 @@
               trigger="hover"
             >
               <template #trigger>
-                <NuxtLink :to="match.video" target="_blank" :prefetch="false">
+                <NuxtLink :to="match.video" target="_blank" no-prefetch>
                   <n-icon><div class="i-carbon:video" /></n-icon>
                 </NuxtLink>
               </template>

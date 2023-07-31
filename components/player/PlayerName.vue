@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/player/${player}`" :prefetch="false">
+  <NuxtLink :to="`/player/${player}`" no-prefetch>
     <n-text>{{ playerName }}</n-text>
   </NuxtLink>
 </template>
