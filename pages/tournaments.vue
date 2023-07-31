@@ -15,6 +15,9 @@ import { tournamentById } from "~/data";
 
 useHead({ title: "赛事 | 召唤之巅" });
 
+const data = await useApiData("/tournament/list");
+console.log(data);
+
 const gameVersion = useGameVersion();
 
 const listByVersion = computed(() => {
