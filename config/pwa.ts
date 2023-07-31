@@ -75,4 +75,7 @@ export const pwa: ModuleOptions = {
     enabled: process.env.VITE_PLUGIN_PWA === "true",
     navigateFallback: scope,
   },
+  client: {
+    registerPlugin: process.env.NUXT_APP_BASE_URL ? false : undefined,
+  },
 };
