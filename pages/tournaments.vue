@@ -11,12 +11,13 @@
 </template>
 
 <script lang="ts" setup>
+import type { Tournament } from "~/server/data/utils/types";
 import { tournamentById } from "~/data";
 
 useHead({ title: "赛事 | 召唤之巅" });
 
-const data = await useApiData("/tournament/list");
-console.log(data);
+const data = await useApiData<{ tournaments: Tournament[] }>("/api/tournament/list");
+console.log(JSON.stringify(data));
 
 const gameVersion = useGameVersion();
 
