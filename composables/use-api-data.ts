@@ -1,15 +1,15 @@
-import type { Deck, Tournament } from "server/data/utils/types";
+import type { Deck, Tournament } from "~/server/data/utils/types";
 
 export default async function useApiData<RetT>(route: Parameters<typeof useFetch>[0]): Promise<RetT> {
   const dataKey = route as string;
   const { data: cachedData } = useNuxtData<RetT>(dataKey);
   if (cachedData.value) {
-    // console.log("use cached data: ", JSON.stringify(cachedData.value));
+    console.log("use cached data: ", JSON.stringify(cachedData.value));
     return cachedData.value;
   }
   else {
     const { data: fetchedData } = await useFetch<RetT>(route, { key: dataKey });
-    // console.log("use fetched data: ", JSON.stringify(fetchedData.value));
+    console.log("use fetched data: ", JSON.stringify(fetchedData.value));
     return fetchedData.value as RetT;
   }
 }
