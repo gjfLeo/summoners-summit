@@ -11,9 +11,11 @@
 </template>
 
 <script lang="ts" setup>
+import { tournamentById } from "~/data";
+
 useHead({ title: "赛事 | 召唤之巅" });
 
-const { tournamentList } = await useApiTournamentList();
+const tournamentList = Object.values(tournamentById);
 
 const gameVersion = useGameVersion();
 
