@@ -94,7 +94,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     width: "7rem",
     fixed: "left",
     align: "center",
-    render: row => h(NuxtLink, { to: `/team/${row.teamId}` }, () => h(TeamAvatars, { team: row.teamId })),
+    render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
   },
   {
     title: "场数",
@@ -155,7 +155,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
       {
         trigger: () => h(
           NuxtLink,
-          { to: `/team/${teamId.value}/vs/${row.teamId}` },
+          { to: `/team/${teamId.value}/vs/${row.teamId}`, prefetch: false },
           () => h(
             NText,
             { depth: 3 },

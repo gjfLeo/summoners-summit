@@ -6,7 +6,7 @@
       <CardImage :card="card" class="w-100%" />
     </template>
     <div class="self-end justify-self-start">
-      <NuxtLink :to="`/team/${getTeamId(characterCards)}`">
+      <NuxtLink :to="`/team/${getTeamId(characterCards)}`" :prefetch="false">
         <n-button>查看阵容数据</n-button>
       </NuxtLink>
     </div>

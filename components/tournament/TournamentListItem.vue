@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="link">
+  <NuxtLink :to="link" :prefetch="false">
     <n-card :title="tournament.name" hoverable :style="{ '--n-color': tournament.type && cardColors[tournament.type] }">
       <!-- <template v-if="tournament.image" #cover>
         <img :src="tournament.image" />

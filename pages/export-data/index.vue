@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/export-data/card-usage" />
+  <NuxtLink to="/export-data/card-usage" :prefetch="false" />
 </template>
 
 <script lang="ts" setup>

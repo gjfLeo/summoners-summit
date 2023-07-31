@@ -51,7 +51,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     width: "7rem",
     fixed: "left",
     align: "center",
-    render: row => h(NuxtLink, { to: `/team/${row.teamId}` }, () => h(TeamAvatars, { team: row.teamId })),
+    render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
   },
   {
     title: "场数",
