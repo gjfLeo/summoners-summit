@@ -38,11 +38,11 @@ definePageMeta({
 useHead({ title: "牌组详情 | 召唤之巅" });
 
 const route = useRoute();
-const id = route.params.deckId as string;
-const deck = deckById[id];
+const deckId = route.params.deckId as string;
+const { deck } = await useApiDeck(deckId);
 
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard));
 
-const { games } = useGameList({ deckId: id });
+const { games } = useGameList({ deckId });
 </script>
