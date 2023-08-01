@@ -116,6 +116,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
 
           matchById[matchId] = {
             id: matchId,
+            name: matchName,
             date,
             playerA,
             playerB,

@@ -31,6 +31,7 @@ export interface TournamentPart {
 
 export interface Match {
   id: string;
+  name: string;
   date: string;
   playerA: string | number;
   playerB: string | number;

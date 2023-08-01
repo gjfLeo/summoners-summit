@@ -22,4 +22,10 @@ export default defineConfig({
       mono: '"Liger Iosevka", "LXGW Neo XiHei", monospace',
     },
   },
+  rules: [
+    [/^grid-cols-(\d+)-auto$/, ([, d]) => ({ "grid-template-columns": `repeat(${d}, auto)` })],
+    [/^(?:grid-)?col-gap-(\d+)$/, ([,d]) => ({ "column-gap": `${Number(d) / 4}rem` })],
+    [/^(?:grid-)?row-gap-(\d+)$/, ([,d]) => ({ "row-gap": `${Number(d) / 4}rem` })],
+    [/^grid-col-(.+)$/, ([,v]) => ({ "grid-column": v })],
+  ],
 });

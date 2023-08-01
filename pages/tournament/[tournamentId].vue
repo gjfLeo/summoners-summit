@@ -4,9 +4,12 @@
   <template v-for="(stage, stageIndex) in tournament.stages" :key="stageIndex">
     <NH2>{{ stage.name }}</NH2>
     <TournamentRules v-if="stage.rules" :rules="stage.rules" />
+    <template v-for="(part, partIndex) in stage.parts" :key="partIndex">
+      <template v-for="matchId in part.matchIds" :key="matchId">
+        <TournamentMatch :part-name="part.name" :match-id="matchId" />
+      </template>
+    </template>
   </template>
-
-  {{ tournament }}
 </template>
 
 <script lang="ts" setup>
