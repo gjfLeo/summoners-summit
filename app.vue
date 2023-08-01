@@ -1,6 +1,7 @@
 <template>
   <NConfigProvider
     :locale="zhCN" :date-locale="dateZhCN"
+    :theme-overrides="themeOverrides"
     inline-theme-disabled
   >
     <NMessageProvider>
@@ -20,6 +21,7 @@
 </template>
 
 <script lang="ts" setup>
+import type { GlobalThemeOverrides } from "naive-ui";
 import { NConfigProvider, NMessageProvider, NScrollbar, dateZhCN, zhCN } from "naive-ui";
 
 useHead({ title: "召唤之巅" });
@@ -28,6 +30,13 @@ zhCN.DataTable.clear = "清除";
 
 const headerHeight = "4rem";
 const footerHeight = "4rem";
+
+const themeOverrides: GlobalThemeOverrides = {
+  common: {
+    fontFamily: "\"LXGW Neo XiHei\", \"Microsoft YaHei\", sans-serif",
+    fontFamilyMono: "\"Liger Iosevka\", \"LXGW Neo XiHei\", monospace",
+  },
+};
 </script>
 
 <style>
