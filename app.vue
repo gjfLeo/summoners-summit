@@ -22,6 +22,8 @@
 <script lang="ts" setup>
 import { NConfigProvider, NMessageProvider, NScrollbar, dateZhCN, zhCN } from "naive-ui";
 
+useHead({ title: "召唤之巅" });
+
 zhCN.DataTable.clear = "清除";
 
 const headerHeight = "4rem";
