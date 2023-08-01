@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
   ],
 
+  css: [
+    "@unocss/reset/tailwind-compat.css",
+  ],
+
   build: {
     transpile:
       process.env.NODE_ENV === "production"
