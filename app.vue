@@ -9,7 +9,7 @@
         <PageHeader />
       </header>
       <NScrollbar class="absolute" :style="{ top: headerHeight, height: `calc(100vh - ${headerHeight})` }">
-        <main class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - 2rem - ${headerHeight} - ${footerHeight})` }">
+        <main class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
           <NuxtPage />
         </main>
         <footer class="w-full" :style="{ height: footerHeight }">
