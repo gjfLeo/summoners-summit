@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@gjfleo/eslint-config": "^0.1.27",
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.17.1",
+    "@unocss/eslint-config": "^0.54.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.46.0",
+    "nuxt": "^3.6.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
