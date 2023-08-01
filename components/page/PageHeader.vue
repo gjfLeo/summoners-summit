@@ -1,9 +1,58 @@
 <template>
   <NLayoutHeader bordered class="h-full flex items-center justify-center">
-    Header
+    <div class="grid h-full items-center p-inline" style="grid-template-columns: 1fr minmax(auto, 72rem) 1fr;">
+      <div class="h-full flex items-center justify-start" />
+
+      <div class="h-full flex items-center justify-center">
+        <NMenu :value="activeKey" mode="horizontal" :options="menuOptions" />
+      </div>
+
+      <div class="h-full flex items-center justify-end">
+        <!-- <n-select
+          v-model:value="gameVersion"
+          class="w-6.25rem"
+          filterable
+          placeholder="版本"
+          :options="gameVersionOptions"
+        /> -->
+        <!-- <n-button circle quaternary @click="isDark = !isDark">
+          <template #icon>
+            <div class="i-carbon:moon dark:i-carbon:sun" />
+          </template>
+        </n-button> -->
+      </div>
+    </div>
   </NLayoutHeader>
 </template>
 
-<script lang="ts" setup>
-import { NLayoutHeader } from "naive-ui";
+<script lang="tsx" setup>
+import type { MenuOption } from "naive-ui";
+import { NLayoutHeader, NMenu } from "naive-ui";
+import { NuxtLink } from "#components";
+
+const route = useRoute();
+// const isDark = useDark();
+
+const menuList = [
+  { route: "/tournaments", name: "赛事" },
+  { route: "/teams", name: "阵容" },
+];
+
+const activeKey = computed(() => {
+  return route.path;
+});
+
+const menuOptions: MenuOption[] = menuList.map((menu) => {
+  return {
+    key: menu.route,
+    label: () => (<NuxtLink to={menu.route} class="flex items-center">{menu.name}</NuxtLink>),
+  };
+});
+
+// const gameVersion = useGameVersion();
+// const gameVersionOptions: SelectOption[] = [
+//   { label: "全版本", value: "" },
+//   { label: "3.8", value: "3.8" },
+//   { label: "3.7", value: "3.7" },
+// ];
 </script>
