@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
 import { NDataTable, NTooltip } from "naive-ui";
-import { TeamAvatars } from "#components";
+import { NuxtLink, TeamAvatars } from "#components";
 
 useHead({ title: "阵容 | 召唤之巅" });
 
@@ -42,8 +42,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     width: "7rem",
     fixed: "left",
     align: "center",
-    render: row => h(TeamAvatars, { team: row.teamId }),
-    // render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
+    render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
   },
   {
     title: "场数",

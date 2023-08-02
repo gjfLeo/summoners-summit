@@ -52,5 +52,5 @@ const menuOptions: MenuOption[] = menuList.map((menu) => {
   };
 });
 
-const { gameVersion, gameVersionOptions, changeGameVersion } = useGameVersion();
+const { gameVersion, gameVersionOptions } = useGameVersion();
 </script>

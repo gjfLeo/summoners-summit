@@ -13,10 +13,16 @@ interface UseGameVersionOptions {
   detect?: boolean;
 }
 
-function changeGameVersion() {
+export function changeGameVersion(value: string) {
   const route = useRoute();
-  if (route.matched[0].path.endsWith("/:gameVersion()")) {
-    return navigateTo(route.matched[0].path.replaceAll("/:gameVersion()", ""));
+  if (typeof route.params.gameVersion === "string") {
+    return navigateTo({
+      name: route.name!,
+      params: {
+        ...route.params,
+        gameVersion: gameVersionList.find(version => version.value === value)?.path,
+      },
+    });
   }
 }
 
@@ -38,5 +44,5 @@ export default function useGameVersion(options?: UseGameVersionOptions) {
     }
   }
 
-  return { gameVersion, gameVersionOptions, gameVersionPath, changeGameVersion };
+  return { gameVersion, gameVersionOptions, gameVersionPath };
 }
