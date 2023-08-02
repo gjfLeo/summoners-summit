@@ -20,6 +20,8 @@
     "@types/qs": "^6.9.7",
     "@unocss/eslint-config": "^0.54.1",
     "@unocss/nuxt": "^0.54.1",
+    "@vueuse/core": "^10.3.0",
+    "@vueuse/nuxt": "^10.3.0",
     "crypto-js": "^4.1.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.46.0",

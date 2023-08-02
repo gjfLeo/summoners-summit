@@ -1,6 +1,6 @@
 <template>
-  <NLayoutHeader bordered class="h-full flex items-center justify-center">
-    <div class="grid h-full items-center p-inline" style="grid-template-columns: 1fr minmax(auto, 72rem) 1fr;">
+  <div class="h-full flex items-center justify-center">
+    <div class="h-full w-full p-inline" grid="~ items-center" style="grid-template-columns: 1fr minmax(auto, 72rem) 1fr;">
       <div class="h-full flex items-center justify-start" />
 
       <div class="h-full flex items-center justify-center">
@@ -15,23 +15,23 @@
           placeholder="版本"
           :options="gameVersionOptions"
         /> -->
-        <!-- <n-button circle quaternary @click="isDark = !isDark">
+        <NButton circle quaternary @click="isDark = !isDark">
           <template #icon>
             <div class="i-carbon:moon dark:i-carbon:sun" />
           </template>
-        </n-button> -->
+        </NButton>
       </div>
     </div>
-  </NLayoutHeader>
+  </div>
 </template>
 
 <script lang="tsx" setup>
 import type { MenuOption } from "naive-ui";
-import { NLayoutHeader, NMenu } from "naive-ui";
+import { NButton, NMenu } from "naive-ui";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
-// const isDark = useDark();
+const isDark = useDark();
 
 const menuList = [
   { route: "/tournaments", name: "赛事" },

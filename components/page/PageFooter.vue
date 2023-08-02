@@ -1,9 +1,8 @@
 <template>
-  <NLayoutFooter bordered class="h-full flex items-center justify-center">
+  <div class="h-full flex items-center justify-center">
     Footer
-  </NLayoutFooter>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { NLayoutFooter } from "naive-ui";
 </script>
