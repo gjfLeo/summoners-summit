@@ -42,7 +42,7 @@ const menuList = [
 ];
 
 const activeKey = computed(() => {
-  return route.path;
+  return menuList.find(item => route.path.startsWith(item.route))?.route;
 });
 
 const menuOptions: MenuOption[] = menuList.map((menu) => {
