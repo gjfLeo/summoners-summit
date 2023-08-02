@@ -8,13 +8,16 @@
       </div>
 
       <div class="h-full flex items-center justify-end">
-        <!-- <n-select
-          v-model:value="gameVersion"
-          class="w-6.25rem"
-          filterable
-          placeholder="版本"
-          :options="gameVersionOptions"
-        /> -->
+        <ClientOnly>
+          <NSelect
+            v-model:value="gameVersion"
+            class="w-6.25rem"
+            filterable
+            placeholder="版本"
+            :options="gameVersionOptions"
+            @update:value="changeGameVersion"
+          />
+        </ClientOnly>
         <NButton circle quaternary @click="isDark = !isDark">
           <template #icon>
             <div class="i-carbon:moon dark:i-carbon:sun" />
@@ -27,7 +30,7 @@
 
 <script lang="tsx" setup>
 import type { MenuOption } from "naive-ui";
-import { NButton, NMenu } from "naive-ui";
+import { NButton, NMenu, NSelect } from "naive-ui";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
@@ -49,10 +52,5 @@ const menuOptions: MenuOption[] = menuList.map((menu) => {
   };
 });
 
-// const gameVersion = useGameVersion();
-// const gameVersionOptions: SelectOption[] = [
-//   { label: "全版本", value: "" },
-//   { label: "3.8", value: "3.8" },
-//   { label: "3.7", value: "3.7" },
-// ];
+const { gameVersion, gameVersionOptions, changeGameVersion } = useGameVersion();
 </script>

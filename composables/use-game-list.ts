@@ -1,12 +1,14 @@
 import Qs from "qs";
 
 interface UseGameListOptions {
+  gameVersion?: string;
   deckId?: string;
   mirror?: boolean;
 }
 
 export default async function useGameList(options?: UseGameListOptions) {
   const qs = Qs.stringify({
+    gameVersion: options?.gameVersion === "all" ? undefined : options?.gameVersion,
     deckId: options?.deckId,
     mirror: options?.mirror ? "1" : undefined,
   });
