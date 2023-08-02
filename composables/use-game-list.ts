@@ -2,13 +2,13 @@ import Qs from "qs";
 
 interface UseGameListOptions {
   deckId?: string;
+  mirror?: boolean;
 }
 
 export default async function useGameList(options?: UseGameListOptions) {
-  const deckId = options?.deckId;
-
   const qs = Qs.stringify({
-    deckId,
+    deckId: options?.deckId,
+    mirror: options?.mirror ? "1" : undefined,
   });
 
   const { data } = await useFetch(`/api/games?${qs}`);

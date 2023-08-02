@@ -27,6 +27,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "dayjs": "^1.11.9",
     "eslint": "^8.46.0",
+    "mathjs": "^11.9.1",
     "naive-ui": "^2.34.4",
     "nuxt": "^3.6.5",
     "qs": "^6.11.2"
