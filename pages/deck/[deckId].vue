@@ -18,11 +18,12 @@
     </template>
   </div>
 
-  <!-- <n-h3>对局记录</n-h3>
-  <GameRecords :games="games" /> -->
+  <NH3>对局记录</NH3>
+  <GameRecords :games="gameList" />
 </template>
 
 <script lang="ts" setup>
+import { NH3 } from "naive-ui";
 import type { ActionCard } from "~/utils/types";
 
 useHead({ title: "牌组详情 | 召唤之巅" });
@@ -37,5 +38,5 @@ if (!deck) throw createError("数据不存在");
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard));
 
-// const { games } = useGameList({ deckId });
+const { gameList } = await useGameList({ deckId });
 </script>

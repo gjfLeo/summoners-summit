@@ -96,6 +96,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               id: gameId,
               gameVersion,
               date,
+              tournamentId,
               tournamentName,
               gameName: stageName + partName + matchName + (gamesRaw.length > 1 ? `第${gameIndex + 1}局` : ""),
               video,

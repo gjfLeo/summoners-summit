@@ -17,13 +17,15 @@
     "@nuxt/devtools": "latest",
     "@types/crypto-js": "^4.1.1",
     "@types/node": "^18.17.1",
+    "@types/qs": "^6.9.7",
     "@unocss/eslint-config": "^0.54.1",
     "@unocss/nuxt": "^0.54.1",
     "crypto-js": "^4.1.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.46.0",
     "naive-ui": "^2.34.4",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "qs": "^6.11.2"
   },
   "config": {
     "commitizen": {

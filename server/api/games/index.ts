@@ -49,5 +49,5 @@ export default defineEventHandler((event) => {
       list = list.filter(game => (game.playerBCharacters as string[]).includes(character));
     }
   }
-  return list;
+  return { code: 200, gameList: list };
 });
