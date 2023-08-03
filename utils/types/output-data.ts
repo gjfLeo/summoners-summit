@@ -21,7 +21,7 @@ export interface TournamentStage {
   parts: TournamentPart[];
 }
 
-export type TournamentRules = ("BO3" | "BO5" | "征服" | "决斗" | [string, string])[];
+export type TournamentRules = ("BO3" | "BO5" | "BO7" | "征服" | "决斗" | [string, string])[];
 
 export interface TournamentPart {
   name?: string;

@@ -22,6 +22,7 @@ const props = defineProps<{
 const ruleDesc = {
   BO3: "三局两胜",
   BO5: "五局三胜",
+  BO7: "七局四胜",
   征服: "取得胜利的阵容不再使用",
   决斗: "每局使用不同阵容",
 };
