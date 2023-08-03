@@ -1,5 +1,5 @@
 import { add, divide, multiply } from "mathjs/number";
-import type { ActionCard, Game } from "~/utils/types";
+import type { ActionCard, Deck, Game } from "~/utils/types";
 
 interface CardUsageRaw {
   totalCount: number;
@@ -11,19 +11,14 @@ interface CardUsage extends CardUsageRaw {
   winAverage: number;
 }
 
-export default async function useCardUsage(games: Game[]) {
-  const numGamesWithDeck = games.filter(game => game.playerADeckId).length;
-  const numWinGamesWithDeck = games.filter(game => game.playerADeckId && game.winner === "A").length;
+export default function useCardUsage(gameList: Game[], decks: Record<string, Deck>) {
+  const numGamesWithDeck = gameList.filter(game => game.playerADeckId).length;
+  const numWinGamesWithDeck = gameList.filter(game => game.playerADeckId && game.winner === "A").length;
 
-  games = games.filter(game => game.playerADeckId);
-
-  const deckIds = games.map(game => game.playerADeckId).join(",");
-  const { data } = await useFetch(`/api/decks/${deckIds}`);
-  if (!data.value) throw createError("获取数据失败");
-  const { decks } = data.value;
+  gameList = gameList.filter(game => game.playerADeckId);
 
   const usagesRaw: Partial<Record<ActionCard, Pick<CardUsageRaw, "totalCount" | "winCount">>> = {};
-  games.forEach((game) => {
+  gameList.forEach((game) => {
     const actions = decks[game.playerADeckId!]?.actionCards ?? {};
     (Object.entries(actions) as [ActionCard, number][])
       .forEach(([card, count]) => {
@@ -38,15 +33,15 @@ export default async function useCardUsage(games: Game[]) {
       .map<[ActionCard, CardUsage]>(([card, usageRaw]) => {
         const usage = {
           ...usageRaw,
-          totalAverage: divide(usageRaw.totalCount, games.length),
-          winAverage: divide(usageRaw.winCount, games.filter(game => game.winner === "A").length),
+          totalAverage: divide(usageRaw.totalCount, gameList.length),
+          winAverage: divide(usageRaw.winCount, gameList.filter(game => game.winner === "A").length),
         };
         return [card, usage];
       }),
   );
 
   const differences = Object.fromEntries(
-    games
+    gameList
       .filter(game => game.playerADeckId)
       .map(game => game.playerADeckId!)
       .map((deckId) => {

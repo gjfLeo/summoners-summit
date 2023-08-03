@@ -12,10 +12,11 @@ import { divide } from "mathjs/number";
 import { type DataTableColumn, NText, NTooltip } from "naive-ui";
 import { NDataTable } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
-import type { CharacterCard } from "~/utils/types";
+import type { Game } from "~/utils/types";
 
 const props = defineProps<{
-  team: CharacterCard[] | string;
+  teamId: string;
+  gameList: Game[];
 }>();
 
 interface TeamStatRaw {
@@ -35,41 +36,35 @@ interface TeamStatResult extends TeamStatRaw {
   winDiff: number;
 }
 
-const { teamId, team } = useTeam(props);
-const { gameVersion } = useGameVersion();
-const { gameList } = await useGameList({ characters: team.value, gameVersion: gameVersion.value });
-
-const data = computed(() => {
-  const map = gameList.reduce<Record<string, TeamStatRaw>>(
-    (map, game) => {
-      const opponentTeam = getTeamId(game.playerBCharacters);
-      const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
-      stat.total++;
-      stat.win += game.winner === "A" ? 1 : 0;
-      stat.starterTotal += game.starter === "A" ? 1 : 0;
-      stat.starterWin += (game.starter === "A" && game.winner === "A") ? 1 : 0;
-      map[opponentTeam] = stat;
-      return map;
-    },
-    {},
-  );
-  return Object.entries(map)
-    .map(([teamId, statRaw]) => {
-      const followerTotal = statRaw.total - statRaw.starterTotal;
-      const followerWin = statRaw.win - statRaw.starterWin;
-      return {
-        key: teamId,
-        teamId,
-        ...statRaw,
-        followerTotal,
-        followerWin,
-        winRate: divide(statRaw.win, statRaw.total),
-        starterWinRate: divide(statRaw.starterWin, statRaw.starterTotal),
-        followerWinRate: divide(followerWin, followerTotal),
-        winDiff: statRaw.win - (statRaw.total - statRaw.win),
-      };
-    });
-});
+const map = props.gameList.reduce<Record<string, TeamStatRaw>>(
+  (map, game) => {
+    const opponentTeam = getTeamId(game.playerBCharacters);
+    const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
+    stat.total++;
+    stat.win += game.winner === "A" ? 1 : 0;
+    stat.starterTotal += game.starter === "A" ? 1 : 0;
+    stat.starterWin += (game.starter === "A" && game.winner === "A") ? 1 : 0;
+    map[opponentTeam] = stat;
+    return map;
+  },
+  {},
+);
+const data = Object.entries(map)
+  .map(([teamId, statRaw]) => {
+    const followerTotal = statRaw.total - statRaw.starterTotal;
+    const followerWin = statRaw.win - statRaw.starterWin;
+    return {
+      key: teamId,
+      teamId,
+      ...statRaw,
+      followerTotal,
+      followerWin,
+      winRate: divide(statRaw.win, statRaw.total),
+      starterWinRate: divide(statRaw.starterWin, statRaw.starterTotal),
+      followerWinRate: divide(followerWin, followerTotal),
+      winDiff: statRaw.win - (statRaw.total - statRaw.win),
+    };
+  });
 
 function winRateRender(win: number, total: number, winRate: number) {
   return h(
@@ -151,7 +146,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
       {
         trigger: () => h(
           NuxtLink,
-          { to: `/team/${teamId.value}`, prefetch: false },
+          { to: `/team/${props.teamId}`, prefetch: false },
           // { to: `/team/${teamId.value}/vs/${row.teamId}`, prefetch: false },
           () => h(
             NText,
