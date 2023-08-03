@@ -5,7 +5,13 @@ interface UseGameListOptions {
   gameVersion?: string;
   deckId?: string;
   characters?: CharacterCard[];
+  opponentCharacters?: CharacterCard[];
   mirror?: boolean;
+}
+
+function getMirrorParam(mirror?: boolean) {
+  if (mirror === true) return "1";
+  if (mirror === false) return "0";
 }
 
 export default async function useGameList(options?: UseGameListOptions) {
@@ -13,7 +19,8 @@ export default async function useGameList(options?: UseGameListOptions) {
     gameVersion: options?.gameVersion === "all" ? undefined : options?.gameVersion,
     deckId: options?.deckId,
     characters: options?.characters?.join(","),
-    mirror: options?.mirror ? "1" : undefined,
+    opponentCharacters: options?.opponentCharacters?.join(","),
+    mirror: getMirrorParam(options?.mirror),
   });
 
   const { data } = await useFetch(`/api/games?${qs}`);

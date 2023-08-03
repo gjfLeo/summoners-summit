@@ -16,6 +16,11 @@ function getGameMirror(game: Game): Game {
   };
 }
 
+const mirrorOverrideMap: Record<string, boolean> = {
+  1: true,
+  0: false,
+};
+
 export default defineEventHandler((event) => {
   const {
     gameVersion,
@@ -23,14 +28,15 @@ export default defineEventHandler((event) => {
     deckId,
     opponentCharacters,
     characters,
-    mirror,
+    mirror: mirrorOverride,
   } = getQuery(event);
 
   let list = Object.values(gameById);
   if (gameVersion) {
     list = list.filter(game => game.gameVersion === gameVersion);
   }
-  if (player || deckId || characters || opponentCharacters || mirror) {
+  const mirror = mirrorOverrideMap[mirrorOverride as string] ?? (player || deckId || characters);
+  if (mirror) {
     list = list.flatMap(game => [game, getGameMirror(game)]);
   }
   if (player) {

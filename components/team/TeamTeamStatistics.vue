@@ -146,8 +146,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
       {
         trigger: () => h(
           NuxtLink,
-          { to: `/team/${props.teamId}`, prefetch: false },
-          // { to: `/team/${teamId.value}/vs/${row.teamId}`, prefetch: false },
+          { to: `/team/${props.teamId}/vs/${row.teamId}`, prefetch: false },
           () => h(
             NText,
             { depth: 3 },
