@@ -1,12 +1,12 @@
 <template>
-  <!-- <div class="flex flex-wrap gap-2">
-      <CharacterSelector v-model="characters" />
-    </div> -->
+  <div class="mb flex flex-wrap gap-2">
+    <CharacterSelector v-model="characters" />
+  </div>
   <NDataTable
     size="small"
     :columns="columns"
     :data="data"
-    max-height="calc(100vh - 13rem)"
+    max-height="calc(100vh - 16.5rem)"
   />
 </template>
 
@@ -14,14 +14,21 @@
 import type { DataTableColumn } from "naive-ui";
 import { NDataTable, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
+import type { CharacterCard } from "~/utils/types";
 
 useHead({ title: "阵容 | 召唤之巅" });
 
 const { gameVersion } = useGameVersion({ detect: true });
-// const characters = ref<CharacterCard[]>([]);
+const characters = ref<CharacterCard[]>([]);
 const { gameList } = await useGameList({ gameVersion: gameVersion.value, mirror: true });
 const { teamStatistics } = useTeamStatistics(gameList);
-const data = computed(() => Object.values(teamStatistics).map(statistics => ({ key: statistics.teamId, ...statistics })));
+const data = computed(() => Object.values(teamStatistics)
+  .filter((statistics) => {
+    const { team } = useTeam(statistics.teamId);
+    return characters.value.every(character => team.value.includes(character));
+  })
+  .map(statistics => ({ key: statistics.teamId, ...statistics })),
+);
 
 function winRateRender(win: number, total: number, winRate: number) {
   return h(

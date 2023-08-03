@@ -59,7 +59,7 @@ export const MaguuKenki = "魔偶剑鬼";
 export const StonehideLawachurl = "岩盔丘丘王";
 export const JadeplumeTerrorshroom = "翠翎恐禽";
 
-const ALL_CHARACTER_CARDS = [
+export const ALL_CHARACTER_CARDS = [
   Ganyu, Diona, Kaeya, Chongyun, KamisatoAyaka, Eula, Shenhe,
   Barbara, Xingqiu, Mona, Tartaglia, SangonomiyaKokomi, KamisatoAyato, Candace,
   Diluc, Xiangling, Bennett, Amber, Yoimiya, Klee, HuTao, Yanfei,
