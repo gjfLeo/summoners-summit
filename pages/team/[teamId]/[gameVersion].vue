@@ -21,6 +21,9 @@
 
     <NH3>典型构筑</NH3>
     <TeamDeck :typical-actions="typicalActions" />
+    <div class="mt text-sm">
+      <NText :depth="3">此数据仅统计公布卡组的{{ numWinGamesWithDeck }}场获胜对局。</NText>
+    </div>
   </template>
   <template v-else>
     <div class="mt text-sm">
@@ -58,5 +61,5 @@ if (deckIds.length > 0) {
 }
 
 const { total, win, winRate, winDiff } = useGamesStatistics(gameList);
-const { numGamesWithDeck, cardUsages, typicalActions } = useCardUsage(gameList, decks);
+const { numGamesWithDeck, numWinGamesWithDeck, cardUsages, typicalActions } = useCardUsage(gameList, decks);
 </script>
