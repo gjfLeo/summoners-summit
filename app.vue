@@ -5,37 +5,39 @@
     :theme-overrides="themeOverrides"
     inline-theme-disabled
   >
-    <NMessageProvider>
-      <NLayout class="h-screen">
-        <NLayoutHeader
-          bordered position="absolute"
-          class="top-0" :style="{ height: headerHeight }"
-        >
-          <PageHeader />
-        </NLayoutHeader>
-        <NLayoutContent
-          position="absolute"
-          :style="{ top: headerHeight, height: `calc(100vh - ${headerHeight})` }"
-        >
-          <NScrollbar class="h-full">
-            <NLayout>
-              <NLayoutContent class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
-                <NuxtPage />
-              </NLayoutContent>
-              <NLayoutFooter bordered class="w-full" :style="{ height: footerHeight }">
-                <PageFooter />
-              </NLayoutFooter>
-            </NLayout>
-          </NScrollbar>
-        </NLayoutContent>
-      </NLayout>
-    </NMessageProvider>
+    <NLoadingBarProvider>
+      <NMessageProvider>
+        <NLayout class="h-screen">
+          <NLayoutHeader
+            bordered position="absolute"
+            class="top-0" :style="{ height: headerHeight }"
+          >
+            <PageHeader />
+          </NLayoutHeader>
+          <NLayoutContent
+            position="absolute"
+            :style="{ top: headerHeight, height: `calc(100vh - ${headerHeight})` }"
+          >
+            <NScrollbar class="h-full">
+              <NLayout>
+                <NLayoutContent class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
+                  <NuxtPage />
+                </NLayoutContent>
+                <NLayoutFooter bordered class="w-full" :style="{ height: footerHeight }">
+                  <PageFooter />
+                </NLayoutFooter>
+              </NLayout>
+            </NScrollbar>
+          </NLayoutContent>
+        </NLayout>
+      </NMessageProvider>
+    </NLoadingBarProvider>
   </NConfigProvider>
 </template>
 
 <script lang="ts" setup>
 import type { GlobalThemeOverrides } from "naive-ui";
-import { NConfigProvider, NLayout, NLayoutContent, NLayoutFooter, NLayoutHeader, NMessageProvider, NScrollbar, darkTheme, dateZhCN, zhCN } from "naive-ui";
+import { NConfigProvider, NLayout, NLayoutContent, NLayoutFooter, NLayoutHeader, NLoadingBarProvider, NMessageProvider, NScrollbar, darkTheme, dateZhCN, zhCN } from "naive-ui";
 
 useHead({ title: "召唤之巅" });
 

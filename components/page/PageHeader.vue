@@ -30,7 +30,7 @@
 
 <script lang="tsx" setup>
 import type { MenuOption } from "naive-ui";
-import { NButton, NMenu, NSelect } from "naive-ui";
+import { NButton, NMenu, NSelect, useLoadingBar } from "naive-ui";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
@@ -53,4 +53,9 @@ const menuOptions: MenuOption[] = menuList.map((menu) => {
 });
 
 const { gameVersion, gameVersionOptions } = useGameVersion();
+
+const loadingBar = useLoadingBar();
+const { beforeEach, afterEach } = useRouter();
+beforeEach(() => loadingBar.start());
+afterEach(() => loadingBar.finish());
 </script>
