@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "summoners-summit",
+  "packageManager": "pnpm@8.6.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
