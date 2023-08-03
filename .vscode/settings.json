@@ -1,0 +1,18 @@
+{
+  "prettier.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "files.associations": {
+    "*.css": "postcss",
+  },
+  "css.validate": false,
+  "editor.formatOnSave": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#8000ff20",
+    "titleBar.activeBackground": "#8000ff40",
+    "titleBar.inactiveBackground": "#8000ff80",
+  },
+  "vite.buildCommand": "pnpm run generate",
+  "vite.devCommand": "pnpm run dev",
+}
