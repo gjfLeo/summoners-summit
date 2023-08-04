@@ -61,6 +61,6 @@ export interface Game {
 }
 
 export interface R {
-  code: number;
+  statusCode: number;
   message?: string;
 }

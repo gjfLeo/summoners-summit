@@ -6,8 +6,8 @@ export default defineEventHandler<R & { match?: Match }>((event) => {
 
   const match = matchById[matchId];
   if (!match) {
-    return { code: 204, message: "赛事不存在" };
+    return { statusCode: 204, message: "赛事不存在" };
   }
 
-  return { code: 200, match };
+  return { statusCode: 200, match };
 });

@@ -1,13 +1,17 @@
 import { tournamentById } from "../../data";
 import type { R, Tournament } from "~/utils/types";
 
-export default defineEventHandler<R & { tournament?: Tournament }>((event) => {
+interface TournamentData {
+  tournament?: Tournament;
+}
+
+export default defineEventHandler<R & TournamentData>((event) => {
   const tournamentId = event.context.params!.tournamentId;
 
   const tournament = tournamentById[tournamentId];
   if (!tournament) {
-    return { code: 204, message: "赛事不存在" };
+    return { statusCode: 204, message: "赛事不存在" };
   }
 
-  return { code: 200, tournament };
+  return { statusCode: 200, tournament };
 });

@@ -1,5 +1,11 @@
 import { deckById } from "../../data";
+import type { Deck, R } from "~/utils/types";
 
-export default defineEventHandler(() => {
-  return { code: 0, deckList: Object.values(deckById) };
+interface DeckListData {
+  deckList: Deck[];
+}
+
+export default defineEventHandler<R & DeckListData>(() => {
+  const deckList = Object.values(deckById);
+  return { statusCode: 200, deckList };
 });

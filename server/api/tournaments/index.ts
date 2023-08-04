@@ -1,9 +1,14 @@
 import { tournamentById } from "../../data";
+import type { R, Tournament } from "~/utils/types";
 
-export default defineEventHandler((event) => {
-  const {
-    gameVersion,
-  } = getQuery(event);
+type TournamentListItem = Pick<Tournament, "id" | "gameVersion" | "name" | "type">;
+interface TournamentsData {
+  tournamentList: TournamentListItem[];
+}
+
+export default defineEventHandler<R & TournamentsData>((event) => {
+  const { gameVersion } = getQuery(event);
+
   let list = Object.values(tournamentById);
   if (gameVersion) {
     list = list.filter(t => t.gameVersion === gameVersion);
@@ -12,5 +17,5 @@ export default defineEventHandler((event) => {
     const { stages: _stages, ...remains } = t;
     return remains;
   });
-  return { code: 200, tournamentList };
+  return { statusCode: 200, tournamentList };
 });

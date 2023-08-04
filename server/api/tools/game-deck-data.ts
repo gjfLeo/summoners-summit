@@ -1,17 +1,22 @@
 import { deckById, gameById } from "../../data";
 import type { Deck, Game, R } from "~/utils/types";
 
-type GameInfo = Pick<Game, "id" | "gameVersion" | "playerACharacters" | "playerADeckId" | "playerBCharacters" | "playerBDeckId">;
+type GameInfo = Pick<Game, "id" | "gameVersion" | "playerACharacters" | "playerADeckId" | "playerBCharacters" | "playerBDeckId" | "winner" | "starter">;
 
-export default defineCachedEventHandler<R & { gameList: GameInfo[]; decks: Record<string, Deck> }> ((event) => {
+interface GameDeckData {
+  gameList: GameInfo[];
+  decks: Record<string, Deck>;
+}
+
+export default defineCachedEventHandler<R & GameDeckData> ((event) => {
   const { gameVersion } = getQuery(event);
   let gameListRaw = Object.values(gameById);
   if (gameVersion) {
     gameListRaw = gameListRaw.filter(game => game.gameVersion === gameVersion);
   }
   const gameList = gameListRaw.map<GameInfo>((game) => {
-    const { id, gameVersion, playerACharacters, playerADeckId, playerBCharacters, playerBDeckId } = game;
-    return { id, gameVersion, playerACharacters, playerADeckId, playerBCharacters, playerBDeckId };
+    const { id, gameVersion, playerACharacters, playerADeckId, playerBCharacters, playerBDeckId, winner, starter } = game;
+    return { id, gameVersion, playerACharacters, playerADeckId, playerBCharacters, playerBDeckId, winner, starter };
   });
   const decks: Record<string, Deck> = {};
   gameList.forEach((game) => {
@@ -22,5 +27,5 @@ export default defineCachedEventHandler<R & { gameList: GameInfo[]; decks: Recor
       decks[game.playerBDeckId] = deckById[game.playerBDeckId];
     }
   });
-  return { code: 200, gameList, decks };
+  return { statusCode: 200, gameList, decks };
 });
