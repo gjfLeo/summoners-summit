@@ -11,7 +11,6 @@ export interface Tournament {
   name: string;
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛";
   gameVersion: string;
-  image?: string;
   stages: TournamentStage[];
 }
 

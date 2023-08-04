@@ -4,7 +4,6 @@ export default defineTournament({
   name: "「同声相应」共鸣杯",
   type: "全民积分赛",
   gameVersion: "3.7",
-  image: "https://webstatic.mihoyo.com/upload/op-public/2023/05/23/8d189636c2ac9dc76269ae0f28405ffd_1033763648037763590.jpg",
   stages: [
     {
       name: "16进8淘汰赛",

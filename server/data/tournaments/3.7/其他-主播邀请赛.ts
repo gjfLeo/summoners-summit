@@ -3,7 +3,6 @@ import { Amber, AratakiItto, Barbara, Bennett, Chongyun, Collei, Cyno, ElectroHy
 export default defineTournament({
   name: "七圣召唤主播邀请赛",
   gameVersion: "3.7",
-  image: "https://upload-bbs.miyoushe.com/upload/2023/06/16/384454482/b82a2121b805d19c2cfef7f4de6ccb74_5309756178794890917.png",
   stages: [
     {
       name: "线上淘汰赛",
