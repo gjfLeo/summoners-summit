@@ -1,14 +1,12 @@
 import { divide } from "mathjs/number";
-import type { Game } from "~/utils/types";
+import QueryString from "qs";
 
-interface BasicStatistic {
+interface TeamStat {
   teamId: string;
   total: number;
   win: number;
   starterTotal: number;
   starterWin: number;
-}
-interface Statistic extends BasicStatistic {
   followerTotal: number;
   followerWin: number;
   winRate: number;
@@ -17,30 +15,25 @@ interface Statistic extends BasicStatistic {
   winDiff: number;
 }
 
-export default function useTeamStatistics(gameList: Game[]) {
-  const teamBasicStatistics = gameList.reduce<Record<string, BasicStatistic>>(
-    (map, game) => {
-      const teamId = getTeamId(game.playerACharacters);
-      const statistic = map[teamId] ?? { teamId, total: 0, win: 0, starterTotal: 0, starterWin: 0 };
-      statistic.total += 1;
-      if (game.winner === "A") statistic.win++;
-      if (game.starter === "A") statistic.starterTotal++;
-      if (game.starter === "A" && game.winner === "A") statistic.starterWin++;
-      map[teamId] = statistic;
-      return map;
-    },
-    {},
-  );
+export default async function useTeamStatistics(gameVersion: MaybeRef<string>) {
+  const qs = QueryString.stringify({
+    gameVersion: unref(gameVersion),
+  });
+  const teamStatsData = (await useFetch(`/api/v1/team-stats?${qs}`)).data?.value;
+  if (teamStatsData?.statusCode !== 200) throw createError("获取数据失败");
+  const { teamStats } = teamStatsData;
+
   const teamStatistics = Object.fromEntries(
-    Object.entries(teamBasicStatistics)
-      .map(([teamId, basicStatistic]) => {
-        const { total, win, starterTotal, starterWin } = basicStatistic;
+    Object.entries(teamStats)
+      .map(([teamId, teamBasicStat]) => {
+        const { total, win, starterTotal, starterWin } = teamBasicStat;
 
         const followerTotal = total - starterTotal;
         const followerWin = win - starterWin;
 
-        const statistic: Statistic = {
-          ...basicStatistic,
+        const stat: TeamStat = {
+          teamId,
+          ...teamBasicStat,
           followerTotal,
           followerWin,
           winRate: divide(win, total),
@@ -48,7 +41,7 @@ export default function useTeamStatistics(gameList: Game[]) {
           followerWinRate: divide(followerWin, followerTotal),
           winDiff: win - (total - win),
         };
-        return [teamId, statistic];
+        return [teamId, stat];
       }),
   );
   return { teamStatistics };

@@ -1,6 +1,6 @@
 <template>
   <div class="mb flex flex-wrap gap-2">
-    <CharacterSelector v-model="characters" />
+    <CharacterSelector v-model="includedCharacters" />
   </div>
   <NDataTable
     size="small"
@@ -19,15 +19,16 @@ import type { CharacterCard } from "~/utils/types";
 useHead({ title: "阵容 | 召唤之巅" });
 
 const { gameVersion } = useGameVersion({ detect: true });
-const characters = ref<CharacterCard[]>([]);
-const { gameList } = await useGameList({ gameVersion: gameVersion.value, mirror: true });
-const { teamStatistics } = useTeamStatistics(gameList);
-const data = computed(() => Object.values(teamStatistics)
-  .filter((statistics) => {
-    const { team } = useTeam(statistics.teamId);
-    return characters.value.every(character => team.value.includes(character));
-  })
-  .map(statistics => ({ key: statistics.teamId, ...statistics })),
+const { teamStatistics } = await useTeamStatistics(gameVersion);
+
+const includedCharacters = ref<CharacterCard[]>([]);
+const data = computed(() =>
+  Object.values(teamStatistics)
+    .filter((statistics) => {
+      const { team } = useTeam(statistics.teamId);
+      return includedCharacters.value.every(character => team.value.includes(character));
+    })
+    .map(statistics => ({ key: statistics.teamId, ...statistics })),
 );
 
 function winRateRender(win: number, total: number, winRate: number) {
