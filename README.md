@@ -1,63 +1,58 @@
-# Nuxt 3 Minimal Starter
+# 召唤之巅
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+七圣召唤赛事资料。
 
-## Setup
+网站地址：https://gjfleo.github.io/summoners-summit/
 
-Make sure to install the dependencies:
+项目主要基于 [Nuxt](https://nuxt.com/)，网站部分通过 SSG 形式部署在 GitHub Pages。
 
+## 项目部署
+
+<details><summary>项目部署</summary>
+
+### 项目环境
+- Node: 18.x
+- pnpm
+
+### 安装依赖
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
+pnpm i
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+### 本地服务器
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
-
-Build the application for production:
-
+### 生成静态页面
 ```bash
-# npm
-npm run build
+pnpm run generate
+```
+预览：
+```bash
+pnpm run preview:ssg
+```
 
-# pnpm
+使用此命令生成静态页面，用于将网站部分部署至 GitHub Pages 等。
+
+### 构建
+```bash
 pnpm run build
-
-# yarn
-yarn build
 ```
-
-Locally preview production build:
-
+预览：
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm run preview
-
-# yarn
-yarn preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+使用此命令构建 Node.js Server，可用于 API 调用。
+
+</details>
+
+## API
+
+项目包含内置 API，主要用于静态生成网页时获取数据。
+
+由于不能保证稳定性且可能发生变更，外部项目如需使用，建议仅用于开发环境而非用户端。
+
+可以使用 Netlify 部署的站点调用：`https://summoners-summit.netlify.app/api/`
+
