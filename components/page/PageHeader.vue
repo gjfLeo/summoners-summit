@@ -20,13 +20,7 @@
             />
           </template>
           <template #fallback>
-            <NSelect
-              class="w-6.25rem"
-              filterable
-              placeholder="版本"
-              disabled
-              loading
-            />
+            <NSpin :size="20" />
           </template>
         </ClientOnly>
         <NButton circle quaternary @click="isDark = !isDark">
@@ -41,7 +35,7 @@
 
 <script lang="tsx" setup>
 import type { MenuOption } from "naive-ui";
-import { NButton, NMenu, NSelect, useLoadingBar } from "naive-ui";
+import { NButton, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
