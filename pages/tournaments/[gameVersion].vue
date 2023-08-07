@@ -7,14 +7,16 @@
 
 <script lang="ts" setup>
 import { NH2 } from "naive-ui";
-import Qs from "qs";
 import type { Tournament } from "~/utils/types";
 
 useHead({ title: "赛事 | 召唤之巅" });
 
 const { gameVersion } = useGameVersion({ detect: true });
 
-const { data } = await useFetch(`/api/tournaments?${Qs.stringify({ gameVersion: gameVersion.value })}`);
+const { data, error } = await useFetch("/api/v1/tournaments", {
+  query: { gameVersion: gameVersion.value },
+});
+if (error.value) throw createError({ ...error.value });
 if (!data.value) throw createError("获取数据失败");
 
 const { tournamentList } = data.value;

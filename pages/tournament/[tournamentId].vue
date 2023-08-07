@@ -18,10 +18,10 @@ import { NH1, NH2 } from "naive-ui";
 const route = useRoute();
 const tournamentId = route.params.tournamentId;
 
-const { data } = await useFetch(`/api/tournament/${tournamentId}`);
-if (!data.value) throw createError("获取数据失败");
+const { data, error } = await useFetch(`/api/v1/tournaments/${tournamentId}`);
+if (error.value) throw createError({ ...error.value });
+if (!data.value?.tournament) throw createError("获取数据失败");
 const { tournament } = data.value;
-if (!tournament) throw createError("赛事数据不存在");
 
-useHead({ title: `${tournament?.name} - 赛事记录 | 召唤之巅` });
+useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
 </script>
