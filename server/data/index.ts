@@ -38,7 +38,6 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     name: tournamentName,
     type,
     gameVersion,
-    image,
     stages: stagesRaw,
   } = tournamentRaw;
   const tournamentId = getHashValue(gameVersion + tournamentName);
@@ -97,6 +96,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               gameVersion,
               date,
               tournamentId,
+              matchId,
               tournamentName,
               gameName: stageName + partName + matchName + (gamesRaw.length > 1 ? `第${gameIndex + 1}局` : ""),
               video,
@@ -140,7 +140,6 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     name: tournamentName,
     type,
     gameVersion,
-    image,
     stages,
   };
 }

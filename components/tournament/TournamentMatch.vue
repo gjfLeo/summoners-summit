@@ -53,12 +53,17 @@ const props = defineProps<{
   matchId: string;
 }>();
 
-const { data } = await useFetch(`/api/match/${props.matchId}`);
-if (!data.value) throw createError("获取数据失败");
+const { data, error } = await useFetch(`/api/v1/matches/${props.matchId}`);
+if (error.value) throw createError({ ...error.value });
+if (!data.value?.match) throw createError("获取数据失败");
 const { match } = data.value;
-if (!match) throw createError("数据不存在");
 
-const { data: gameData } = await useFetch(`/api/games/${match.gameIds.join(",")}`);
+const { data: gameData, error: gameDataError } = await useFetch("/api/v1/games", {
+  query: { matchId: props.matchId },
+});
+if (gameDataError.value) throw createError({ ...gameDataError.value });
 if (!gameData.value) throw createError("获取数据失败");
-const { games } = gameData.value;
+const { gameList } = gameData.value;
+
+const games = Object.fromEntries(gameList.map(g => ([g.id, g])));
 </script>

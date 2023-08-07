@@ -44,6 +44,7 @@ export interface Game {
   gameVersion: string;
   date: string;
   tournamentId: string;
+  matchId: string;
   tournamentName: string;
   gameName: string;
   video?: string;
