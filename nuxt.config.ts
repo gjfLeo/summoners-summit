@@ -3,6 +3,10 @@ import dayjs from "dayjs";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
+  routeRules: {
+    "/**": { prerender: true },
+  },
+
   runtimeConfig: {
     public: {
       updateTime: dayjs().add(new Date().getTimezoneOffset() + 480, "minutes").format("YYYY-MM-DD HH:mm:ss"),
