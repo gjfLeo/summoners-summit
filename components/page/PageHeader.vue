@@ -9,14 +9,25 @@
 
       <div class="h-full flex items-center justify-end">
         <ClientOnly>
-          <NSelect
-            v-model:value="gameVersion"
-            class="w-6.25rem"
-            filterable
-            placeholder="版本"
-            :options="gameVersionOptions"
-            @update:value="changeGameVersion"
-          />
+          <template #default>
+            <NSelect
+              v-model:value="gameVersion"
+              class="w-6.25rem"
+              filterable
+              placeholder="版本"
+              :options="gameVersionOptions"
+              @update:value="changeGameVersion"
+            />
+          </template>
+          <template #fallback>
+            <NSelect
+              class="w-6.25rem"
+              filterable
+              placeholder="版本"
+              disabled
+              loading
+            />
+          </template>
         </ClientOnly>
         <NButton circle quaternary @click="isDark = !isDark">
           <template #icon>
