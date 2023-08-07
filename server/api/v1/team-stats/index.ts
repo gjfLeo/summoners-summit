@@ -1,5 +1,5 @@
-import { gameById } from "~/server/data";
 import type { R } from "~/utils/types";
+import { gameById } from "~/server/data";
 import { getTeamId } from "~/composables/use-team";
 
 interface TeamStat {
