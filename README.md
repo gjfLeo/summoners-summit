@@ -54,5 +54,19 @@ pnpm run preview
 
 由于不能保证稳定性且可能发生变更，外部项目如需使用，建议仅用于开发环境而非用户端。
 
-可以使用 Netlify 部署的站点调用：`https://summoners-summit.netlify.app/api/`
+可以使用 Netlify 部署的站点调用：`https://summoners-summit.netlify.app/api/v1`
 
+<details><summary>API示例</summary>
+
+- [`/tournaments`](https://summoners-summit.netlify.app/api/v1/tournaments) - 赛事列表
+  - [`?gameVersion=3.8`](https://summoners-summit.netlify.app/api/v1/tournaments?gameVersion=3.8) - 游戏版本，默认为空（不限）
+- [`/tournaments/:tournamentId`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80) - 赛事信息
+- [`/tournaments/:tournamentId/details`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80/details) - 赛事信息，连同该赛事场次和对局
+- [`/matches/:matchId`](https://summoners-summit.netlify.app/api/v1/matches/b7f4346442601d8001) - 场次信息
+- [`/games`](https://summoners-summit.netlify.app/api/v1/games) - 对局列表
+  - [`?limit=10&offset=10`](https://summoners-summit.netlify.app/api/v1/games?limit=10&offset=10) - 分页，默认`limit=50`
+  - 一些其他参数
+- [`/decks/:deckId`](https://summoners-summit.netlify.app/api/v1/decks/dd6dae64467a5555) - 牌组信息
+- [`/team-stats`](https://summoners-summit.netlify.app/api/v1/team-stats)
+
+</details>
