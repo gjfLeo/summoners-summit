@@ -1,9 +1,9 @@
 import type { CharacterCard } from "~/utils/types";
 
-interface UseGameListOptions {
-  gameVersion?: MaybeRef<string>;
-  matchId?: MaybeRef<string>;
-  deckId?: MaybeRef<string>;
+interface ApiGameListOptions {
+  gameVersion?: string;
+  matchId?: string;
+  deckId?: string;
   characters?: CharacterCard[];
   opponentCharacters?: CharacterCard[];
   mirror?: boolean;
@@ -14,15 +14,11 @@ function getMirrorParam(mirror?: boolean) {
   if (mirror === false) return "0";
 }
 
-export default async function useGameList(options?: UseGameListOptions) {
-  const gameVersion = unref(options?.gameVersion);
-  const matchId = unref(options?.matchId);
-  const deckId = unref(options?.deckId);
-
+export default async function useApiGameList(options?: ApiGameListOptions) {
   const query = {
-    gameVersion: gameVersion === "all" ? undefined : options?.gameVersion,
-    deckId,
-    matchId,
+    gameVersion: options?.gameVersion === "all" ? undefined : options?.gameVersion,
+    deckId: options?.deckId,
+    matchId: options?.matchId,
     characters: options?.characters?.join(","),
     opponentCharacters: options?.opponentCharacters?.join(","),
     mirror: getMirrorParam(options?.mirror),

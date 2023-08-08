@@ -20,7 +20,7 @@ if (route.params.teamId !== teamId.value || route.params.opponentTeamId !== oppo
 }
 
 const { gameVersion } = useGameVersion({ detect: true });
-const { gameList } = await useGameList({
+const { gameList } = await useApiGameList({
   gameVersion: gameVersion.value,
   characters: team.value,
   opponentCharacters: opponentTeam.value,

@@ -50,7 +50,7 @@ if (route.params.teamId !== teamId.value) {
 }
 
 const { gameVersion } = useGameVersion({ detect: true });
-const { gameList } = await useGameList({ gameVersion: gameVersion.value, characters: team.value });
+const { gameList } = await useApiGameList({ gameVersion: gameVersion.value, characters: team.value });
 
 const deckIds = gameList.map(game => game.playerADeckId).join(",");
 let decks: Record<string, Deck> = {};

@@ -38,5 +38,5 @@ if (!deck) throw createError("数据不存在");
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard));
 
-const { gameList } = await useGameList({ deckId });
+const { gameList } = await useApiGameList({ deckId });
 </script>
