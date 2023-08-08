@@ -22,6 +22,7 @@ export default async function useApiGameList(options?: ApiGameListOptions) {
     characters: options?.characters?.join(","),
     opponentCharacters: options?.opponentCharacters?.join(","),
     mirror: getMirrorParam(options?.mirror),
+    limit: 0,
   };
 
   const { data } = await useFetch("/api/v1/games", { query });

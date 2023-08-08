@@ -30,6 +30,8 @@ export default defineEventHandler((event) => {
     opponentCharacters,
     characters,
     mirror: mirrorOverride,
+    limit: limitOverride,
+    offset: offsetOverride,
   } = getQuery(event);
 
   let list = Object.values(gameById);
@@ -58,6 +60,12 @@ export default defineEventHandler((event) => {
     for (const character of (opponentCharacters as string).split(",")) {
       list = list.filter(game => (game.playerBCharacters as string[]).includes(character));
     }
+  }
+
+  const limit = limitOverride ? Number(limitOverride) : 50;
+  const offset = offsetOverride ? Number(offsetOverride) : 0;
+  if (limit) {
+    list = list.slice(offset, offset + limit);
   }
   return { code: 200, gameList: list };
 });
