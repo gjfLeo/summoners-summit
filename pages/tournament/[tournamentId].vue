@@ -6,7 +6,7 @@
     <TournamentRules v-if="stage.rules" :rules="stage.rules" />
     <template v-for="(part, partIndex) in stage.parts" :key="partIndex">
       <template v-for="matchId in part.matchIds" :key="matchId">
-        <TournamentMatch :part-name="part.name" :match-id="matchId" />
+        <TournamentMatch :part-name="part.name" :match="matches[matchId]" :games="filterGames(matchId)" />
       </template>
     </template>
   </template>
@@ -16,12 +16,16 @@
 import { NH1, NH2 } from "naive-ui";
 
 const route = useRoute();
-const tournamentId = route.params.tournamentId;
+const tournamentId = route.params.tournamentId as string;
 
-const { data, error } = await useFetch(`/api/v1/tournaments/${tournamentId}`);
-if (error.value) throw createError({ ...error.value });
-if (!data.value?.tournament) throw createError("获取数据失败");
-const { tournament } = data.value;
+const { tournament, matches, games } = await useApiTournamentDetail(tournamentId);
+
+function filterGames(matchId: string) {
+  return Object.fromEntries(
+    matches[matchId].gameIds
+      .map(gameId => [gameId, games[gameId]]),
+  );
+}
 
 useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
 </script>

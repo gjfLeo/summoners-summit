@@ -2,7 +2,7 @@ import type { R, Tournament } from "~/utils/types";
 import { tournamentById } from "~/server/data";
 
 interface TournamentData {
-  tournament?: Tournament;
+  tournament: Tournament;
 }
 
 export default defineEventHandler<R & TournamentData>((event) => {

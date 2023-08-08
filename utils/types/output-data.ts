@@ -30,21 +30,22 @@ export interface TournamentPart {
 
 export interface Match {
   id: string;
+  tournamentId: string;
   name: string;
   date: string;
+  video?: string;
   playerA: string | number;
   playerB: string | number;
-  video?: string;
   winner: "A" | "B";
   gameIds: string[];
 }
 
 export interface Game {
   id: string;
-  gameVersion: string;
-  date: string;
   tournamentId: string;
   matchId: string;
+  gameVersion: string;
+  date: string;
   tournamentName: string;
   gameName: string;
   video?: string;

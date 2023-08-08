@@ -1,9 +1,9 @@
-import Qs from "qs";
 import type { CharacterCard } from "~/utils/types";
 
 interface UseGameListOptions {
-  gameVersion?: string;
-  deckId?: string;
+  gameVersion?: MaybeRef<string>;
+  matchId?: MaybeRef<string>;
+  deckId?: MaybeRef<string>;
   characters?: CharacterCard[];
   opponentCharacters?: CharacterCard[];
   mirror?: boolean;
@@ -15,15 +15,20 @@ function getMirrorParam(mirror?: boolean) {
 }
 
 export default async function useGameList(options?: UseGameListOptions) {
-  const qs = Qs.stringify({
-    gameVersion: options?.gameVersion === "all" ? undefined : options?.gameVersion,
-    deckId: options?.deckId,
+  const gameVersion = unref(options?.gameVersion);
+  const matchId = unref(options?.matchId);
+  const deckId = unref(options?.deckId);
+
+  const query = {
+    gameVersion: gameVersion === "all" ? undefined : options?.gameVersion,
+    deckId,
+    matchId,
     characters: options?.characters?.join(","),
     opponentCharacters: options?.opponentCharacters?.join(","),
     mirror: getMirrorParam(options?.mirror),
-  });
+  };
 
-  const { data } = await useFetch(`/api/games?${qs}`);
+  const { data } = await useFetch("/api/v1/games", { query });
   if (!data.value) throw createError("获取数据失败");
   const { gameList } = data.value;
 

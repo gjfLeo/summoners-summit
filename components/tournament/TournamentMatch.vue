@@ -21,9 +21,9 @@
     <template v-for="game in games" :key="game.id">
       <!-- <div>{{ game }}</div> -->
       <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
-        <div class="self-center justify-self-end text-sm"><PlayerName :player="game.playerA" /></div>
+        <div class="self-center justify-self-end text-sm"><PlayerName :player="match.playerA" /></div>
         <div />
-        <div class="self-center justify-self-start text-sm"><PlayerName :player="game.playerB" /></div>
+        <div class="self-center justify-self-start text-sm"><PlayerName :player="match.playerB" /></div>
 
         <div class="flex self-center justify-self-end"><TeamAvatars :team="game.playerACharacters" /></div>
         <div class="self-center justify-self-center text-sm">VS</div>
@@ -47,23 +47,11 @@
 
 <script lang="ts" setup>
 import { NH3 } from "naive-ui";
+import type { ApiTournamentDetails } from "~/composables/use-api-tournament-detail";
 
-const props = defineProps<{
+defineProps<{
   partName?: string;
-  matchId: string;
+  match: ApiTournamentDetails["matches"][string];
+  games: ApiTournamentDetails["games"];
 }>();
-
-const { data, error } = await useFetch(`/api/v1/matches/${props.matchId}`);
-if (error.value) throw createError({ ...error.value });
-if (!data.value?.match) throw createError("获取数据失败");
-const { match } = data.value;
-
-const { data: gameData, error: gameDataError } = await useFetch("/api/v1/games", {
-  query: { matchId: props.matchId },
-});
-if (gameDataError.value) throw createError({ ...gameDataError.value });
-if (!gameData.value) throw createError("获取数据失败");
-const { gameList } = gameData.value;
-
-const games = Object.fromEntries(gameList.map(g => ([g.id, g])));
 </script>
