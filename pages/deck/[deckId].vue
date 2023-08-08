@@ -6,9 +6,9 @@
       <CardImage :card="card" class="w-100%" />
     </template>
     <div class="self-end justify-self-start">
-      <!-- <NuxtLink :to="`/team/${getTeamId(characterCards)}`" no-prefetch>
-        <n-button>查看阵容数据</n-button>
-      </NuxtLink> -->
+      <NuxtLink :to="`/team/${teamId}`" prefetch>
+        <NButton>查看阵容数据</NButton>
+      </NuxtLink>
     </div>
   </div>
   <!-- 行动卡 -->
@@ -23,20 +23,19 @@
 </template>
 
 <script lang="ts" setup>
-import { NH3 } from "naive-ui";
+import { NButton, NH3 } from "naive-ui";
 import type { ActionCard } from "~/utils/types";
 
 useHead({ title: "牌组详情 | 召唤之巅" });
 
 const route = useRoute();
 const deckId = route.params.deckId as string;
-const { data } = await useFetch(`/api/deck/${deckId}`);
-if (!data.value) throw createError("获取数据失败");
-const { deck } = data.value;
-if (!deck) throw createError("数据不存在");
+const { deck } = await useApiDeck(deckId);
 
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard));
+
+const teamId = getTeamId(characterCards);
 
 const { gameList } = await useApiGameList({ deckId });
 </script>

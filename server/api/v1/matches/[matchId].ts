@@ -2,7 +2,7 @@ import type { Match, R } from "~/utils/types";
 import { matchById } from "~/server/data";
 
 interface MatchData {
-  match?: Match;
+  match: Match;
 }
 
 export default defineEventHandler<R & MatchData>((event) => {
