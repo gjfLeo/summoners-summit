@@ -1,6 +1,8 @@
 <template>
   <div class="mb">
-    <NuxtLink :to="`/team/${teamId}`"><NButton>返回</NButton></NuxtLink>
+    <NuxtLink :to="`/team/${teamId}/${gameVersionPath}`" prefetch>
+      <NButton>返回</NButton>
+    </NuxtLink>
   </div>
   <GameRecords :games="gameList" />
 </template>
@@ -19,7 +21,7 @@ if (route.params.teamId !== teamId.value || route.params.opponentTeamId !== oppo
   await navigateTo(`/team/${teamId.value}/vs/${opponentTeamId.value}`, { replace: true });
 }
 
-const { gameVersion } = useGameVersion({ detect: true });
+const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
 const { gameList } = await useApiGameList({
   gameVersion: gameVersion.value,
   characters: team.value,

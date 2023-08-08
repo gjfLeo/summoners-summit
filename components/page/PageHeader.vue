@@ -33,13 +33,15 @@
   </div>
 </template>
 
-<script lang="tsx" setup>
+<script lang="ts" setup>
 import type { MenuOption } from "naive-ui";
 import { NButton, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
 const isDark = useDark();
+
+const { gameVersion, gameVersionOptions, gameVersionPath } = useGameVersion();
 
 const menuList = [
   { route: "/tournaments", name: "赛事" },
@@ -50,14 +52,21 @@ const activeKey = computed(() => {
   return menuList.find(item => route.path.startsWith(item.route))?.route;
 });
 
-const menuOptions: MenuOption[] = menuList.map((menu) => {
-  return {
-    key: menu.route,
-    label: () => (<NuxtLink to={menu.route} class="flex items-center">{menu.name}</NuxtLink>),
-  };
-});
-
-const { gameVersion, gameVersionOptions } = useGameVersion();
+const menuOptions = computed<MenuOption[]>(() =>
+  menuList.map((menu) => {
+    return {
+      key: menu.route,
+      label: () => h(
+        NuxtLink,
+        {
+          class: "flex, items-center",
+          to: `${menu.route}/${gameVersionPath.value}`,
+        },
+        () => menu.name,
+      ),
+    };
+  }),
+);
 
 const loadingBar = useLoadingBar();
 const { beforeEach, afterEach } = useRouter();

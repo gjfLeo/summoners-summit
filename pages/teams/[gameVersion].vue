@@ -18,7 +18,7 @@ import type { CharacterCard } from "~/utils/types";
 
 useHead({ title: "阵容 | 召唤之巅" });
 
-const { gameVersion } = useGameVersion({ detect: true });
+const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
 const { teamStatistics } = await useTeamStatistics(gameVersion);
 
 const includedCharacters = ref<CharacterCard[]>([]);
@@ -50,7 +50,14 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     width: "7rem",
     fixed: "left",
     align: "center",
-    render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
+    render: (row, rowIndex) => h(
+      NuxtLink,
+      {
+        to: `/team/${row.teamId}/${gameVersionPath.value}`,
+        prefetch: rowIndex < 5,
+      },
+      () => h(TeamAvatars, { team: row.teamId }),
+    ),
   },
   {
     title: "场数",

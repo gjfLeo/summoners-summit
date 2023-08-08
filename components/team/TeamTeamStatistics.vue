@@ -19,6 +19,8 @@ const props = defineProps<{
   gameList: Game[];
 }>();
 
+const { gameVersionPath } = useGameVersion();
+
 interface TeamStatRaw {
   total: number;
   win: number;
@@ -85,7 +87,14 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     width: "7rem",
     fixed: "left",
     align: "center",
-    render: row => h(NuxtLink, { to: `/team/${row.teamId}`, prefetch: false }, () => h(TeamAvatars, { team: row.teamId })),
+    render: (row, rowIndex) => h(
+      NuxtLink,
+      {
+        to: `/team/${row.teamId}/${gameVersionPath.value}`,
+        prefetch: rowIndex < 3,
+      },
+      () => h(TeamAvatars, { team: row.teamId }),
+    ),
   },
   {
     title: "场数",
@@ -146,7 +155,10 @@ const columns: DataTableColumn<TeamStatResult>[] = [
       {
         trigger: () => h(
           NuxtLink,
-          { to: `/team/${props.teamId}/vs/${row.teamId}`, prefetch: false },
+          {
+            to: `/team/${props.teamId}/vs/${row.teamId}`,
+            prefetch: false,
+          },
           () => h(
             NText,
             { depth: 3 },
