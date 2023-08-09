@@ -95,7 +95,7 @@ export default defineTournament({
               games: [
                 {
                   playerACharacters: [Bennett, Yoimiya, ElectroHypostasis],
-                  playerBCharacters: [RhodeiaOfLoch, Fischl, FatuiPyroAgent],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
                   starter: "A",
                   winner: "B",
                 },
