@@ -10,7 +10,8 @@
     "preview:ssg": "npx serve .output/public",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --fix",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "cleanup": "nuxt cleanup"
   },
   "devDependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
