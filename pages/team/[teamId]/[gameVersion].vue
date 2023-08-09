@@ -12,18 +12,25 @@
     <NStatistic label="净胜场" :value="winDiff" />
   </div>
 
-  <template v-if="numGamesWithDeck > 0">
+  <template v-if="totalWithDeck > 0">
     <NH3>行动牌选择</NH3>
     <TeamCardUsages :card-usages="cardUsages" />
     <div class="mt text-sm">
-      <NText :depth="3">此数据仅统计公布卡组的{{ numGamesWithDeck }}场对局。</NText>
+      <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
     </div>
 
     <NH3>典型构筑</NH3>
-    <TeamDeck :typical-actions="typicalActions" />
-    <div class="mt text-sm">
-      <NText :depth="3">此数据仅统计公布卡组的{{ numWinGamesWithDeck }}场获胜对局。</NText>
-    </div>
+    <template v-if="typicalDeck">
+      <TeamDeck :typical-actions="typicalDeck.actionCards" />
+      <div class="mt text-sm">
+        <NText :depth="3">此数据仅统计公布卡组的{{ winWithDeck }}场获胜对局。</NText>
+      </div>
+    </template>
+    <template v-else>
+      <div class="mt text-sm">
+        <NText :depth="3">此阵容没有公布卡组的获胜对局。</NText>
+      </div>
+    </template>
   </template>
   <template v-else>
     <div class="mt text-sm">
@@ -32,12 +39,12 @@
   </template>
 
   <NH3>对阵数据</NH3>
-  <TeamTeamStatistics :team-id="teamId" :game-list="gameList" />
+  <TeamTeamStatistics :team-id="teamId" :vs="vs" />
 </template>
 
 <script lang="ts" setup>
+import { divide } from "mathjs/number";
 import { NH3, NStatistic, NText } from "naive-ui";
-import type { Deck } from "~/utils/types";
 
 const route = useRoute();
 const { teamId, team, teamDisplayName } = useTeam(route.params.teamId as string);
@@ -50,16 +57,11 @@ if (route.params.teamId !== teamId.value) {
 }
 
 const { gameVersion } = useGameVersion({ detect: true });
-const { gameList } = await useApiGameList({ gameVersion: gameVersion.value, characters: team.value });
+const { stats, cardUsages, typicalDeckId, vs } = await useApiTeamStats(teamId.value, gameVersion.value);
 
-const deckIds = gameList.map(game => game.playerADeckId).join(",");
-let decks: Record<string, Deck> = {};
-if (deckIds.length > 0) {
-  const { data } = await useFetch(`/api/decks/${deckIds}`);
-  if (!data.value) throw createError("获取数据失败");
-  decks = data.value.decks;
-}
+const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) : { deck: undefined };
 
-const { total, win, winRate, winDiff } = useGamesStatistics(gameList);
-const { numGamesWithDeck, numWinGamesWithDeck, cardUsages, typicalActions } = useCardUsage(gameList, decks);
+const { total, win, totalWithDeck, winWithDeck } = stats;
+const winRate = toPercentageString(divide(win, total));
+const winDiff = win - (total - win);
 </script>

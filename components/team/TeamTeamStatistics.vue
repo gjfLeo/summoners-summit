@@ -12,59 +12,30 @@ import { divide } from "mathjs/number";
 import { type DataTableColumn, NText, NTooltip } from "naive-ui";
 import { NDataTable } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
-import type { Game } from "~/utils/types";
 
 const props = defineProps<{
   teamId: string;
-  gameList: Game[];
+  vs: Awaited<ReturnType<typeof useApiTeamStats>>["vs"];
 }>();
 
 const { gameVersionPath } = useGameVersion();
 
-interface TeamStatRaw {
-  total: number;
-  win: number;
-  starterTotal: number;
-  starterWin: number;
-}
-interface TeamStatResult extends TeamStatRaw {
+type TeamStatsRaw = typeof props["vs"][string];
+interface TeamStatsResult extends TeamStatsRaw {
   key: string;
   teamId: string;
-  followerTotal: number;
-  followerWin: number;
   winRate: number;
-  starterWinRate: number;
-  followerWinRate: number;
   winDiff: number;
 }
 
-const map = props.gameList.reduce<Record<string, TeamStatRaw>>(
-  (map, game) => {
-    const opponentTeam = getTeamId(game.playerBCharacters);
-    const stat: TeamStatRaw = map[opponentTeam] ?? { total: 0, win: 0, starterTotal: 0, starterWin: 0 };
-    stat.total++;
-    stat.win += game.winner === "A" ? 1 : 0;
-    stat.starterTotal += game.starter === "A" ? 1 : 0;
-    stat.starterWin += (game.starter === "A" && game.winner === "A") ? 1 : 0;
-    map[opponentTeam] = stat;
-    return map;
-  },
-  {},
-);
-const data = Object.entries(map)
-  .map(([teamId, statRaw]) => {
-    const followerTotal = statRaw.total - statRaw.starterTotal;
-    const followerWin = statRaw.win - statRaw.starterWin;
+const data = Object.entries(props.vs)
+  .map<TeamStatsResult>(([teamId, stats]) => {
     return {
       key: teamId,
       teamId,
-      ...statRaw,
-      followerTotal,
-      followerWin,
-      winRate: divide(statRaw.win, statRaw.total),
-      starterWinRate: divide(statRaw.starterWin, statRaw.starterTotal),
-      followerWinRate: divide(followerWin, followerTotal),
-      winDiff: statRaw.win - (statRaw.total - statRaw.win),
+      ...stats,
+      winRate: divide(stats.win, stats.total),
+      winDiff: stats.win - (stats.total - stats.win),
     };
   });
 
@@ -81,7 +52,7 @@ function winRateRender(win: number, total: number, winRate: number) {
     });
 }
 
-const columns: DataTableColumn<TeamStatResult>[] = [
+const columns: DataTableColumn<TeamStatsResult>[] = [
   {
     key: "teamId",
     width: "7rem",
@@ -130,25 +101,26 @@ const columns: DataTableColumn<TeamStatResult>[] = [
     align: "center",
     sorter: "default",
   },
-  {
-    title: "先手胜率",
-    key: "starterWinRate",
-    width: "6rem",
-    align: "center",
-    sorter: "default",
-    render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
-  },
-  {
-    title: "后手胜率",
-    key: "followerWinRate",
-    width: "6rem",
-    align: "center",
-    sorter: "default",
-    render: row => winRateRender(row.followerWin, row.followerTotal, row.followerWinRate),
-  },
+  // {
+  //   title: "先手胜率",
+  //   key: "starterWinRate",
+  //   width: "6rem",
+  //   align: "center",
+  //   sorter: "default",
+  //   render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
+  // },
+  // {
+  //   title: "后手胜率",
+  //   key: "followerWinRate",
+  //   width: "6rem",
+  //   align: "center",
+  //   sorter: "default",
+  //   render: row => winRateRender(row.followerWin, row.followerTotal, row.followerWinRate),
+  // },
   {
     key: "links",
     width: "3rem",
+    align: "center",
     render: row => h(
       NTooltip,
       { trigger: "hover", placement: "right" },
@@ -158,6 +130,7 @@ const columns: DataTableColumn<TeamStatResult>[] = [
           {
             to: `/team/${props.teamId}/vs/${row.teamId}`,
             prefetch: false,
+            class: "flex justify-center",
           },
           () => h(
             NText,
