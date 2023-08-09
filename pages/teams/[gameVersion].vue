@@ -19,13 +19,13 @@ import type { CharacterCard } from "~/utils/types";
 useHead({ title: "阵容 | 召唤之巅" });
 
 const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
-const { teamStatistics } = await useTeamStatistics(gameVersion);
+const { teamStatsMap } = await useTeamStatsMap(gameVersion);
 
 const includedCharacters = ref<CharacterCard[]>([]);
 const data = computed(() =>
-  Object.values(teamStatistics)
-    .filter((statistics) => {
-      const { team } = useTeam(statistics.teamId);
+  Object.values(teamStatsMap)
+    .filter((stats) => {
+      const { team } = useTeam(stats.teamId);
       return includedCharacters.value.every(character => team.value.includes(character));
     })
     .map(statistics => ({ key: statistics.teamId, ...statistics })),

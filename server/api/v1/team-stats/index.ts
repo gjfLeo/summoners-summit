@@ -2,7 +2,7 @@ import type { R } from "~/utils/types";
 import { gameById } from "~/server/data";
 import { getTeamId } from "~/composables/use-team";
 
-interface TeamStat {
+interface TeamStats {
   total: number;
   win: number;
   starterTotal: number;
@@ -10,10 +10,10 @@ interface TeamStat {
 }
 
 interface TeamStatsData {
-  teamStats: Record<string, TeamStat>;
+  teamStatsMap: Record<string, TeamStats>;
 }
 
-const initTeamStat = (): TeamStat => ({ win: 0, total: 0, starterWin: 0, starterTotal: 0 });
+const initTeamStat = (): TeamStats => ({ win: 0, total: 0, starterWin: 0, starterTotal: 0 });
 
 export default defineEventHandler<R & TeamStatsData>((event) => {
   const { gameVersion } = getQuery(event);
@@ -23,11 +23,11 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  const teamStats: Record<string, TeamStat> = {};
+  const teamStatsMap: Record<string, TeamStats> = {};
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
       const teamId = getTeamId(game[`player${player}Characters`]);
-      const teamStat = teamStats[teamId] ?? (teamStats[teamId] = initTeamStat());
+      const teamStat = teamStatsMap[teamId] ?? (teamStatsMap[teamId] = initTeamStat());
       teamStat.total++;
       if (game.winner === player) teamStat.win++;
       if (game.starter === player) teamStat.starterTotal++;
@@ -35,5 +35,5 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
     }
   }
 
-  return { statusCode: 200, teamStats };
+  return { statusCode: 200, teamStatsMap };
 });
