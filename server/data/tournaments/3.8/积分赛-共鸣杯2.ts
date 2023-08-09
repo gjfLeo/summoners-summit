@@ -1,4 +1,4 @@
-import { AratakiItto, Barbara, Beidou, Bennett, Chongyun, ElectroHypostasis, FatuiPyroAgent, Fischl, KamisatoAyaka, Keqing, Klee, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, Shenhe, Yoimiya, defineTournament } from "~/utils/types";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Diona, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, Jean, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, Shenhe, Sucrose, YaeMiko, Yoimiya, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「月映」共鸣杯",
@@ -109,12 +109,75 @@ export default defineTournament({
             },
           ],
         },
-        // {
-        //   name: "DAY2",
-        //   date: "2023-08-08",
-        //   matches: [
-        //   ],
-        // },
+        {
+          name: "DAY2",
+          date: "2023-08-08",
+          matches: [
+            {
+              playerA: "宇宙蓝色闪光",
+              playerB: "神的微笑",
+              video: "https://www.bilibili.com/video/BV1AF411Z7TL",
+              games: [
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [Beidou, Chongyun, Razor],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "六更雨",
+              playerB: "雏鹤爱",
+              video: "https://www.bilibili.com/video/BV1AF411Z7TL",
+              games: [
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [RhodeiaOfLoch, Amber, YaeMiko],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Diona, Ganyu, FatuiPyroAgent],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "Sherlock",
+              playerB: "鲶鱼精",
+              video: "https://www.bilibili.com/video/BV1AF411Z7TL",
+              games: [
+                {
+                  playerACharacters: [Shenhe, RaidenShogun, Chongyun],
+                  playerBCharacters: [Mona, Sucrose, Jean],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Mona, Ningguang, Barbara],
+                  playerBCharacters: [Mona, Sucrose, Jean],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     // {
