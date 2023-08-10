@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Diona, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, Jean, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, Shenhe, Sucrose, YaeMiko, Yoimiya, defineTournament } from "~/utils/types";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Diona, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, Jean, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Sucrose, YaeMiko, Yoimiya, Zhongli, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「月映」共鸣杯",
@@ -180,30 +180,98 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "8进4淘汰赛",
-    //   rules: [
-    //     "BO5",
-    //     "征服",
-    //     ["禁用角色", "对阵双方各禁用一张角色牌"],
-    //     ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-    //     ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
-    //   ],
-    //   parts: [
-    //     {
-    //       name: "DAY1",
-    //       date: "2023-08-09",
-    //       matches: [
-    //       ],
-    //     },
-    //     {
-    //       name: "DAY2",
-    //       date: "2023-08-10",
-    //       matches: [
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      name: "8进4淘汰赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "DAY1",
+          date: "2023-08-09",
+          matches: [
+            {
+              playerA: "多肉",
+              playerB: "水果鲨啦",
+              video: "https://www.bilibili.com/video/BV1HX4y1j71H",
+              games: [
+                {
+                  playerACharacters: [Barbara, AratakiItto, Noelle],
+                  playerBCharacters: [Amber, AratakiItto, Noelle],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, AratakiItto, Noelle],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Zhongli, RaidenShogun, AratakiItto],
+                  playerBCharacters: [Amber, AratakiItto, Noelle],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Zhongli, RaidenShogun, AratakiItto],
+                  playerBCharacters: [KamisatoAyaka, Yoimiya, Shenhe],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, AratakiItto, Noelle],
+                  playerBCharacters: [KamisatoAyaka, Yoimiya, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "云野空悠",
+              playerB: "seraphine",
+              video: "https://www.bilibili.com/video/BV1HX4y1j71H",
+              games: [
+                {
+                  playerACharacters: [Fischl, Nahida, Mona],
+                  playerBCharacters: [Fischl, Nahida, Klee],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Fischl, Nahida, Klee],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Beidou, Chongyun, Razor],
+                  playerBCharacters: [Fischl, Mona, Nahida],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+        // {
+        //   name: "DAY2",
+        //   date: "2023-08-10",
+        //   matches: [
+        //   ],
+        // },
+      ],
+    },
     // {
     //   name: "半决赛",
     //   rules: [
