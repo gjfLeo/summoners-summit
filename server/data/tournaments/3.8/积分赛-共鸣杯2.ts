@@ -264,12 +264,74 @@ export default defineTournament({
             },
           ],
         },
-        // {
-        //   name: "DAY2",
-        //   date: "2023-08-10",
-        //   matches: [
-        //   ],
-        // },
+        {
+          name: "DAY2",
+          date: "2023-08-10",
+          matches: [
+            {
+              playerA: "宇宙蓝色闪光",
+              playerB: "夭九",
+              video: "https://www.bilibili.com/video/BV1P14y1q7Wj",
+              games: [
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [Beidou, Chongyun, Razor],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Fischl, Mona, Klee],
+                  playerBCharacters: [Beidou, Chongyun, Razor],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Beidou, Chongyun, Razor],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "Sherlock",
+              playerB: "六更雨",
+              video: "https://www.bilibili.com/video/BV1P14y1q7Wj",
+              games: [
+                {
+                  playerACharacters: [RhodeiaOfLoch, Zhongli, YaeMiko],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [SangonomiyaKokomi, Ningguang, Barbara],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Mona, Ningguang, Barbara],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Ningguang, Barbara],
+                  playerBCharacters: [Fischl, Mona, Nahida],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Mona, Ningguang, Barbara],
+                  playerBCharacters: [FatuiPyroAgent, RhodeiaOfLoch, Fischl],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     // {
