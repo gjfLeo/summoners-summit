@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Diona, ElectroHypostasis, FatuiPyroAgent, Fischl, Ganyu, Jean, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Sucrose, YaeMiko, Yoimiya, Zhongli, defineTournament } from "~/utils/types";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Chongyun, Diona, ElectroHypostasis, Eula, FatuiPyroAgent, Fischl, Ganyu, Jean, KamisatoAyaka, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Sucrose, Xingqiu, YaeMiko, Yanfei, Yoimiya, Zhongli, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「月映」共鸣杯",
@@ -334,41 +334,146 @@ export default defineTournament({
         },
       ],
     },
-    // {
-    //   name: "半决赛",
-    //   rules: [
-    //     "BO5",
-    //     "征服",
-    //     ["禁用角色", "对阵双方各禁用一张角色牌"],
-    //     ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-    //     ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
-    //   ],
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-08-11",
-    //       matches: [
-    //       ],
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "决赛",
-    //   rules: [
-    //     "BO5",
-    //     "征服",
-    //     ["禁用角色", "对阵双方各禁用一张角色牌"],
-    //     ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-    //     ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
-    //   ],
-    //   parts: [
-    //     {
-    //       name: "",
-    //       date: "2023-08-12",
-    //       matches: [
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      name: "半决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-08-11",
+          matches: [
+            {
+              playerA: "seraphine",
+              playerB: "水果鲨啦",
+              video: "https://www.bilibili.com/video/BV1k14y1q75i",
+              games: [
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Klee, Mona, Yanfei],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Xingqiu, Ganyu, KamisatoAyaka],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Xingqiu, Ganyu, KamisatoAyaka],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [YaeMiko, Mona, Mona],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "宇宙蓝色闪光",
+              playerB: "六更雨",
+              video: "https://www.bilibili.com/video/BV1k14y1q75i",
+              games: [
+                {
+                  playerACharacters: [KamisatoAyaka, Yoimiya, Shenhe],
+                  playerBCharacters: [Eula, Fischl, Shenhe],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Xingqiu, KamisatoAyaka, Ganyu],
+                  playerBCharacters: [Eula, Fischl, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Xingqiu, KamisatoAyaka, Ganyu],
+                  playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Chongyun, RaidenShogun, Shenhe],
+                  playerBCharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-08-12",
+          matches: [
+            {
+              playerA: "六更雨",
+              playerB: "水果鲨啦",
+              video: "https://www.bilibili.com/video/BV1Ph4y1Q7gR",
+              games: [
+                {
+                  playerACharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  playerBCharacters: [Beidou, Chongyun, Razor],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [Fischl, RhodeiaOfLoch, Nahida],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [Fischl, Mona, Nahida],
+                  playerBCharacters: [Klee, Mona, Yanfei],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, YaeMiko],
+                  playerBCharacters: [Klee, Mona, Yanfei],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: [FatuiPyroAgent, RhodeiaOfLoch, YaeMiko],
+                  playerBCharacters: [RhodeiaOfLoch, YaeMiko, FatuiPyroAgent],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
