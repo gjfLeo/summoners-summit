@@ -110,7 +110,7 @@ export default defineTournament({
                     "烤蘑菇披萨": 1,
                   }),
                   starter: "A",
-                  winner: "B",
+                  winner: "A",
                 },
               ],
             },
