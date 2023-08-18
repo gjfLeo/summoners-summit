@@ -4,7 +4,8 @@
     v-model:value="inputValue"
     :options="options"
     :render-label="renderLabel"
-    placeholder="行动牌"
+    placeholder="角色"
+    @select="handleSelect"
   />
 </template>
 
@@ -12,20 +13,22 @@
 import { NAutoComplete, NText } from "naive-ui";
 import PinyinMatch from "pinyin-match";
 import { CardImage } from "#components";
-import type { ActionCard } from "~/utils/types";
-import { ALL_ACTION_CARDS } from "~/utils/types";
+import type { CharacterCard } from "~/utils/types";
+import { ALL_CHARACTER_CARDS } from "~/utils/types";
 
 const props = defineProps<{
-  actions?: Partial<Record<ActionCard, number>>;
+  modelValue?: CharacterCard;
+}>();
+const emit = defineEmits<{
+  (e: "update:modelValue", v: CharacterCard): void;
 }>();
 
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 
 const options = computed(() => {
-  return ALL_ACTION_CARDS
+  return ALL_CHARACTER_CARDS
     .flatMap((card) => {
-      if (props.actions?.[card]) return [];
       const match = PinyinMatch.match(card, inputValue.value);
       if (typeof match === "boolean") return [];
       return {
@@ -49,6 +52,10 @@ function renderLabel(option: typeof options["value"][number]) {
     h(NText, { type: "primary" }, () => option.label.substring(start, end + 1)),
     option.label.substring(end + 1),
   ];
+}
+
+function handleSelect(value: string | number) {
+  emit("update:modelValue", value as CharacterCard);
 }
 
 defineExpose({

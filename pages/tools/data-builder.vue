@@ -1,4 +1,29 @@
 <template>
+  <!-- <NTable class="text-center">
+    <thead>
+      <tr>
+        <th>
+          <NInput />
+        </th>
+        <th>
+          <NInput />
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <GamePlayerInput v-model="infoA" />
+        </td>
+        <td>
+          <GamePlayerInput v-model="infoB" />
+        </td>
+      </tr>
+    </tbody>
+  </NTable>
+
+  <NHr /> -->
+
   <ActionsInput v-model:actions="actions" />
   <ActionsPreview v-model:actions="actions" class="mt" />
 
@@ -16,4 +41,7 @@ import type { ActionCard } from "~/utils/types";
 hljs.registerLanguage("json", json);
 
 const actions = ref<Partial<Record<ActionCard, number>>>({});
+
+// const infoA = ref<any>({});
+// const infoB = ref<any>({});
 </script>

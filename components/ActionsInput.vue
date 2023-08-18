@@ -4,10 +4,10 @@
       <ActionCardSelector ref="cardSelectorRef" :actions="actions" @select="handleSelectCard" />
     </NFormItem>
     <NFormItem>
-      <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" @update:value="handleInputCount" />
+      <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" placeholder="数量" @update:value="handleInputCount" />
     </NFormItem>
     <NFormItem>
-      <NText>已包含 {{ Object.values(actions).reduce((a, b) => a + b, 0) }} 张</NText>
+      <NText>已包含 {{ Object.values(actions ?? {}).reduce((a, b) => a + b, 0) }} 张</NText>
     </NFormItem>
     <NFormItem>
       <NButton @click="copy()">复制</NButton>
@@ -25,7 +25,7 @@ import { type ActionCard } from "~/utils/types";
 import { ActionCardSelector } from "#components";
 
 const props = defineProps<{
-  actions: Partial<Record<ActionCard, number>>;
+  actions?: Partial<Record<ActionCard, number>>;
 }>();
 
 const emit = defineEmits<{

@@ -16,23 +16,23 @@ import { NIcon, NText } from "naive-ui";
 import { type ActionCard, actionCardSorter } from "~/utils/types";
 
 const props = defineProps<{
-  actions: Partial<Record<ActionCard, number>>;
+  actions?: Partial<Record<ActionCard, number>>;
 }>();
 
 const emit = defineEmits<{
   (e: "update:actions", v: Partial<Record<ActionCard, number>>): void;
 }>();
 
-const deckActionCards = computed(() => Object.entries(props.actions)
+const deckActionCards = computed(() => Object.entries(props.actions ?? {})
   .flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard))
   .sort(actionCardSorter),
 );
 
 function remove(card: ActionCard) {
-  if (props.actions[card] === 2) {
+  if (props.actions?.[card] === 2) {
     emit("update:actions", Object.assign({}, props.actions, { [card]: 1 }));
   }
-  else if (props.actions[card] === 1) {
+  else if (props.actions?.[card] === 1) {
     emit("update:actions", Object.fromEntries(Object.entries(props.actions).filter(([c]) => c !== card)));
   }
 }
