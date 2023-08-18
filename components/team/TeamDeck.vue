@@ -7,11 +7,14 @@
 </template>
 
 <script lang="ts" setup>
-import type { ActionCard } from "~/utils/types";
+import { type ActionCard, actionCardSorter } from "~/utils/types";
 
 const props = defineProps<{
   typicalActions: ReturnType<typeof useCardUsage>["typicalActions"];
 }>();
 
-const actionCards = Object.entries(props.typicalActions).flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard));
+const actionCards = Object.entries(props.typicalActions)
+  .flatMap(([card, count]) => Array.from({ length: count }, () => card as ActionCard))
+  .sort(actionCardSorter)
+;
 </script>
