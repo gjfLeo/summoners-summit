@@ -6,6 +6,7 @@ import t15 from "./积分赛-共鸣杯2";
 import t16 from "./积分赛-米游社";
 import t17 from "./积分赛-好游快爆杯";
 import t21 from "./主播赛-虎牙";
+import t22 from "./主播赛-斗鱼";
 import t31 from "./积分赛试办赛-绯雪杯";
 
 export default [
@@ -17,5 +18,6 @@ export default [
   t16,
   t17,
   t21,
+  t22,
   t31,
 ];
