@@ -13,13 +13,7 @@ useHead({ title: "赛事 | 召唤之巅" });
 
 const { gameVersion } = useGameVersion({ detect: true });
 
-const { data, error } = await useFetch("/api/v1/tournaments", {
-  query: { gameVersion: gameVersion.value },
-});
-if (error.value) throw createError({ ...error.value });
-if (!data.value) throw createError("获取数据失败");
-
-const { tournamentList } = data.value;
+const { tournamentList } = await useApiTournamentList(gameVersion.value);
 
 const listByVersion = tournamentList.reduce<Record<string, Tournament[]>>(
   (map, tournament) => {
