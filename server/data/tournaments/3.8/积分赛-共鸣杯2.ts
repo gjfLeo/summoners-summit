@@ -280,7 +280,7 @@ export default defineTournament({
                   winner: "A",
                 },
                 {
-                  playerACharacters: [Fischl, Mona, Klee],
+                  playerACharacters: [Fischl, Nahida, Klee],
                   playerBCharacters: [Beidou, Chongyun, Razor],
                   starter: "A",
                   winner: "A",
