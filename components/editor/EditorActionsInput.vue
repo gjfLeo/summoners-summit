@@ -1,7 +1,7 @@
 <template>
   <NForm inline :show-label="false" :show-feedback="false">
     <NFormItem>
-      <ActionCardSelector ref="cardSelectorRef" :actions="actions" @select="handleSelectCard" />
+      <EditorActionCardSelector ref="cardSelectorRef" :actions="actions" @select="handleSelectCard" />
     </NFormItem>
     <NFormItem>
       <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" placeholder="数量" @update:value="handleInputCount" />
@@ -22,7 +22,7 @@
 import type { NSelect } from "naive-ui";
 import { NAutoComplete, NButton, NForm, NFormItem, NText } from "naive-ui";
 import { type ActionCard } from "~/utils/types";
-import { ActionCardSelector } from "#components";
+import { EditorActionCardSelector } from "#components";
 
 const props = defineProps<{
   actions?: Partial<Record<ActionCard, number>>;
@@ -32,7 +32,7 @@ const emit = defineEmits<{
   (e: "update:actions", v: Partial<Record<ActionCard, number>>): void;
 }>();
 
-const cardSelectorRef = ref<InstanceType<typeof ActionCardSelector>>();
+const cardSelectorRef = ref<InstanceType<typeof EditorActionCardSelector>>();
 const countSelectorRef = ref<InstanceType<typeof NSelect>>();
 const selectedCard = ref<ActionCard>();
 const inputCount = ref("");

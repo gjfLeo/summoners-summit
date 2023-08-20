@@ -1,11 +1,14 @@
 <template>
   <img
+    v-if="imageUrl"
     :src="imageUrl" :alt="card"
     class="inline-block aspect-ratio-20/20"
   />
+  <NAvatar v-else round />
 </template>
 
 <script lang="ts" setup>
+import { NAvatar } from "naive-ui";
 import { characterAvatarImages } from "~/utils/images";
 import type { CharacterCard } from "~/utils/types";
 

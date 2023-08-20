@@ -1,47 +1,18 @@
 <template>
-  <!-- <NTable class="text-center">
-    <thead>
-      <tr>
-        <th>
-          <NInput />
-        </th>
-        <th>
-          <NInput />
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <GamePlayerInput v-model="infoA" />
-        </td>
-        <td>
-          <GamePlayerInput v-model="infoB" />
-        </td>
-      </tr>
-    </tbody>
-  </NTable>
-
-  <NHr /> -->
-
-  <ActionsInput v-model:actions="actions" />
-  <ActionsPreview v-model:actions="actions" class="mt" />
+  <EditorTournamentForm ref="tournamentFormRef" />
 
   <NHr />
 
-  <NCode :code="JSON.stringify(actions, undefined, 2)" language="json" :hljs="hljs" />
+  <NCode :hljs="hljs" language="ts" :code="tournamentFormRef?.output" />
 </template>
 
 <script lang="ts" setup>
 import { NCode, NHr } from "naive-ui";
 import hljs from "highlight.js/lib/core";
-import json from "highlight.js/lib/languages/json";
-import type { ActionCard } from "~/utils/types";
+import hljsTs from "highlight.js/lib/languages/typescript";
+import { EditorTournamentForm } from "#components";
 
-hljs.registerLanguage("json", json);
+hljs.registerLanguage("ts", hljsTs);
 
-const actions = ref<Partial<Record<ActionCard, number>>>({});
-
-// const infoA = ref<any>({});
-// const infoB = ref<any>({});
+const tournamentFormRef = ref<InstanceType<typeof EditorTournamentForm>>();
 </script>

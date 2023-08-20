@@ -1,30 +1,46 @@
 <template>
-  <NAutoComplete
-    ref="autoCompleteRef"
-    v-model:value="inputValue"
-    :options="options"
-    :render-label="renderLabel"
-    placeholder="角色"
-    @select="handleSelect"
-  />
+  <NPopover ref="popoverRef" trigger="click" placement="bottom" @update:show="handlePopoverUpdateShow">
+    <template #trigger>
+      <NAvatar
+        :src=" modelValue ? characterAvatarImages[modelValue] : ''" round
+        class="cursor-pointer"
+        @click="handleClick"
+      />
+    </template>
+    <template #default>
+      <NAutoComplete
+        ref="autoCompleteRef"
+        v-model:value="inputValue"
+        :options="options"
+        :render-label="renderLabel"
+        placeholder="角色"
+        :get-show="() => true"
+        @select="handleSelect"
+      />
+    </template>
+  </NPopover>
 </template>
 
 <script lang="ts" setup>
-import { NAutoComplete, NText } from "naive-ui";
+import { NAutoComplete, NAvatar, NPopover, NText } from "naive-ui";
 import PinyinMatch from "pinyin-match";
 import { CardImage } from "#components";
 import type { CharacterCard } from "~/utils/types";
 import { ALL_CHARACTER_CARDS } from "~/utils/types";
+import { characterAvatarImages } from "~/utils/images";
 
-const props = defineProps<{
+defineProps<{
   modelValue?: CharacterCard;
 }>();
 const emit = defineEmits<{
   (e: "update:modelValue", v: CharacterCard): void;
+  (e: "update:show", v: boolean): void;
 }>();
 
+// const show = ref(false);
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
+const popoverRef = ref<InstanceType<typeof NPopover>>();
 
 const options = computed(() => {
   return ALL_CHARACTER_CARDS
@@ -56,11 +72,30 @@ function renderLabel(option: typeof options["value"][number]) {
 
 function handleSelect(value: string | number) {
   emit("update:modelValue", value as CharacterCard);
+  popoverRef.value?.setShow(false);
+  inputValue.value = "";
+}
+
+function handleClick() {
+  // show.value = !show.value;
+}
+
+function handlePopoverUpdateShow(value: boolean) {
+  if (value) {
+    nextTick(() => {
+      inputValue.value = "";
+      autoCompleteRef.value?.focus();
+    });
+  }
 }
 
 defineExpose({
   focus() {
-    return autoCompleteRef.value?.focus();
+    popoverRef.value?.setShow(true);
+    nextTick(() => {
+      inputValue.value = "";
+      autoCompleteRef.value?.focus();
+    });
   },
   clear() {
     inputValue.value = "";
