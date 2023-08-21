@@ -10,7 +10,10 @@
       <NText>已包含 {{ Object.values(actions ?? {}).reduce((a, b) => a + b, 0) }} 张</NText>
     </NFormItem>
     <NFormItem>
-      <NButton @click="copy()">复制</NButton>
+      <NButton @click="copy">复制</NButton>
+    </NFormItem>
+    <NFormItem>
+      <NButton @click="paste">粘贴</NButton>
     </NFormItem>
     <NFormItem>
       <NButton @click="clear">清空</NButton>
@@ -20,7 +23,7 @@
 
 <script lang="ts" setup>
 import type { NSelect } from "naive-ui";
-import { NAutoComplete, NButton, NForm, NFormItem, NText } from "naive-ui";
+import { NAutoComplete, NButton, NForm, NFormItem, NText, useMessage } from "naive-ui";
 import { type ActionCard } from "~/utils/types";
 import { EditorActionCardSelector } from "#components";
 
@@ -53,9 +56,19 @@ function handleInputCount(value: string) {
   inputCount.value = "";
 }
 
-const { copy } = useClipboard({
-  source: computed(() => JSON.stringify(props.actions)),
-});
+const message = useMessage();
+const tempActionsStr = useLocalStorage("tempActions", "{}");
+
+function copy() {
+  tempActionsStr.value = JSON.stringify(props.actions);
+  message.success("已复制");
+}
+
+function paste() {
+  const actions = JSON.parse(tempActionsStr.value);
+  emit("update:actions", actions);
+  message.success("已粘贴");
+}
 
 function clear() {
   emit("update:actions", {});
