@@ -62,7 +62,7 @@
 import type { SelectGroupOption, SelectOption, SelectRenderTag } from "naive-ui";
 import { NButton, NDatePicker, NFormItem, NHr, NInput, NSelect, NTag } from "naive-ui";
 import Pinyin from "pinyin-match";
-import { saveAs } from "file-saver";
+import FileSaver from "file-saver";
 import dayjs from "dayjs";
 import type { TournamentRawData } from "~/utils/types";
 import { EditorMatchesForm } from "#components";
@@ -186,7 +186,7 @@ const issueBody = computed(() =>
 `<!-- __GENERATE_BY_DATA_TOOL__ -->
 - 赛事：${tournamentName.value}
 - 阶段：${stageName.value}
-- 比赛日：${partName.value} ${partDate.value}
+- 比赛日：${partName.value} ${partDate.value ?? ""}
 - 包含${matchesForm.value?.matchCount}场比赛、${matchesForm.value?.gameCount}场对局
 
 ${note.value ?? ""}
@@ -199,7 +199,7 @@ const ruleRenderTag: SelectRenderTag = ({ option, handleClose }) => {
 
 function submit() {
   const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
-  saveAs(blob, dayjs().format("赛事数据MMDD-HHmm.txt"));
+  FileSaver.saveAs(blob, dayjs().format("赛事数据MMDD-HHmm.txt"));
   return navigateTo(
     `https://github.com/gjfLeo/summoners-summit/issues/new?title=${issueTitle.value}&body=${encodeURIComponent(issueBody.value)}`,
     { open: { target: "_blank" } },
