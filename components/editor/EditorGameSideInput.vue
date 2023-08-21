@@ -21,9 +21,9 @@
     <div flex="~ gap-1 justify-center">
       <template v-for="i in 3" :key="i">
         <EditorCharacterCardSelector
-          :ref="bindInputCharacterRef(i)"
-          v-model="dataCharacters[i]"
-          @update:model-value="handleCharacterSelected(i)"
+          :ref="bindInputCharacterRef(i - 1)"
+          v-model="dataCharacters[i - 1]"
+          @update:model-value="handleCharacterSelected(i - 1)"
         />
       </template>
     </div>
@@ -76,7 +76,7 @@ function bindInputCharacterRef(i: number) {
 }
 
 function handleCharacterSelected(i: number) {
-  if (i < 3) {
+  if (i < 2) {
     inputCharacterRefs.value[i + 1]?.focus();
   }
 }

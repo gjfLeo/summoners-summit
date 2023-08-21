@@ -119,15 +119,39 @@ const matches = ref<MatchData[]>([newMatch()]);
 
 const output = computed<string[]>(() => matches.value.flatMap(match => [
   "{",
-  `  playerA: ${match.playerA}`,
-  `  playerB: ${match.playerA}`,
-  `  video: ${match.video}`,
+  `  playerA: "${match.playerA}",`,
+  `  playerB: "${match.playerB}",`,
+  `  video: "${match.video}",`,
   "  games: [",
-  "  ]",
+  ...match.games.flatMap(game => [
+    "    {",
+    `      playerACharacters: ["${game.playerACharacters[0] ?? ""}", "${game.playerACharacters[1] ?? ""}", "${game.playerACharacters[2] ?? ""}"],`,
+    ...(game.playerAActions
+      ? [
+          "      playerAActions: defineActions({",
+          ...Object.entries(game.playerAActions).map(([card, count]) => `        "${card}": ${count},`),
+          "      }),",
+        ]
+      : []),
+    `      playerBCharacters: ["${game.playerBCharacters[0] ?? ""}", "${game.playerBCharacters[1] ?? ""}", "${game.playerBCharacters[2] ?? ""}"],`,
+    ...(game.playerBActions
+      ? [
+          "      playerBActions: defineActions({",
+          ...Object.entries(game.playerBActions).map(([card, count]) => `        "${card}": ${count},`),
+          "      }),",
+        ]
+      : []),
+    `      starter: "${game.starter ?? ""}",`,
+    `      winner: "${game.winner ?? ""}",`,
+    "    },",
+  ]),
+  "  ],",
   "},",
 ]));
 defineExpose({
   output,
+  matchCount: computed(() => matches.value.length),
+  gameCount: computed(() => matches.value.flatMap(m => m.games).length),
 });
 </script>
 

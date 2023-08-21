@@ -43,7 +43,7 @@
     </NFormItem>
 
     <NFormItem label="备注" :show-feedback="false" grid="col-1/25">
-      <NInput type="textarea" :rows="3" placeholder="任何需要补充的内容" />
+      <NInput v-model:value="note" type="textarea" :rows="3" placeholder="任何需要补充的内容" />
     </NFormItem>
   </div>
 
@@ -53,55 +53,66 @@
 
   <NHr />
 
-  <NButton @click="submit">预览</NButton>
+  <div class="text-center">
+    <NButton type="primary" @click="submit">提交</NButton>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import type { SelectGroupOption, SelectOption, SelectRenderTag } from "naive-ui";
 import { NButton, NDatePicker, NFormItem, NHr, NInput, NSelect, NTag } from "naive-ui";
 import Pinyin from "pinyin-match";
+import { saveAs } from "file-saver";
+import dayjs from "dayjs";
 import type { TournamentRawData } from "~/utils/types";
 import { EditorMatchesForm } from "#components";
 
 const tournamentId = ref<string>();
 const tournamentName = ref<string>("");
-const gameVersion = ref<string>("");
+const gameVersion = ref<string>();
 const tournamentType = ref<TournamentRawData["type"]>();
 const stageName = ref<string>("");
 const stageRules = ref<string[]>([]);
 const partName = ref<string>("");
 const partDate = ref<string>();
+
+const note = ref<string>();
+
 const matchesForm = ref<InstanceType<typeof EditorMatchesForm>>();
+
 const output = computed(() => {
   const lines = [
     "export default defineTournament({",
     `  name: "${tournamentName.value}",`,
     ...(tournamentType.value ? [`  type: "${tournamentType.value}",`] : []),
-    `  gameVersion: "${gameVersion.value}",`,
+    `  gameVersion: "${gameVersion.value ?? ""}",`,
     "  stages: [",
-    `    name: "${stageName.value}"`,
+    "    {",
+    `      name: "${stageName.value}",`,
     ...(stageRules.value.length > 0
       ? [
-          "    rules: [",
+          "      rules: [",
           ...stageRules.value.map(rule =>
             rule.includes(" - ")
-              ? (`      [${rule.split(" - ").map(s => `"${s}"`).join(", ")}],`)
-              : (`      "${rule}",`),
+              ? (`        [${rule.split(" - ").map(s => `"${s}"`).join(", ")}],`)
+              : (`        "${rule}",`),
           ),
-          "    ],",
+          "      ],",
         ]
       : []),
-    "    parts: [",
-    "      {",
-    `        name: "${partName.value}",`,
-    `        date: "${partDate.value ?? ""}",`,
-    "        matches: [",
-    ...(matchesForm.value?.output ?? []).map(line => `          ${line}`),
-    "        ],",
-    "      }",
-    "    ],",
+    "      parts: [",
+    "        {",
+    `          name: "${partName.value}",`,
+    `          date: "${partDate.value ?? ""}",`,
+    "          matches: [",
+    ...(matchesForm.value?.output ?? []).map(line => `            ${line}`),
+    "          ],",
+    "        },",
+    "      ],",
+    "    },",
     "  ],",
     "});",
+    "",
   ];
   return lines.join("\n");
 });
@@ -170,18 +181,28 @@ const ruleOptions = [
   "可重复角色 - 每名选手的4套阵容至少包含9张不同角色牌",
 ].map(label => ({ label, value: label }));
 
+const issueTitle = computed(() => `提交数据：${[tournamentName.value, stageName.value, partName.value].filter(s => s).join(" ")}`);
+const issueBody = computed(() =>
+`<!-- __GENERATE_BY_DATA_TOOL__ -->
+- 赛事：${tournamentName.value}
+- 阶段：${stageName.value}
+- 比赛日：${partName.value} ${partDate.value}
+- 包含${matchesForm.value?.matchCount}场比赛、${matchesForm.value?.gameCount}场对局
+
+${note.value ?? ""}
+
+<!-- 请将生成的文件拖拽至下方 -->
+`.replace("\n\n\n\n", "\n\n"));
 const ruleRenderTag: SelectRenderTag = ({ option, handleClose }) => {
   return h(NTag, { closable: true, onClose: handleClose }, () => option.label?.toString().split(" - ")[0]);
 };
 
 function submit() {
+  const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+  saveAs(blob, dayjs().format("赛事数据MMDD-HHmm.txt"));
   return navigateTo(
-    `https://github.com/gjfLeo/summoners-summit/issues/new?title=数据更新&body=${encodeURIComponent(output.value)}`,
-    {
-      open: {
-        target: "_blank",
-      },
-    },
+    `https://github.com/gjfLeo/summoners-summit/issues/new?title=${issueTitle.value}&body=${encodeURIComponent(issueBody.value)}`,
+    { open: { target: "_blank" } },
   );
 }
 </script>

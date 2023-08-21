@@ -23,6 +23,9 @@ devDependencies:
   '@types/crypto-js':
     specifier: ^4.1.1
     version: 4.1.1
+  '@types/file-saver':
+    specifier: ^2.0.5
+    version: 2.0.5
   '@types/node':
     specifier: ^18.17.5
     version: 18.17.5
@@ -53,6 +56,9 @@ devDependencies:
   eslint:
     specifier: ^8.47.0
     version: 8.47.0
+  file-saver:
+    specifier: ^2.0.5
+    version: 2.0.5
   mathjs:
     specifier: ^11.9.1
     version: 11.9.1
@@ -1909,6 +1915,10 @@ packages:
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
+
+  /@types/file-saver@2.0.5:
+    resolution: {integrity: sha512-zv9kNf3keYegP5oThGLaPk8E081DFDuwfqjtiTzm6PoxChdJ1raSuADf2YGCVIyrSynLrgc8JWv296s7Q7pQSQ==}
     dev: true
 
   /@types/http-proxy@1.17.11:
@@ -5023,6 +5033,10 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       flat-cache: 3.0.4
+    dev: true
+
+  /file-saver@2.0.5:
+    resolution: {integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==}
     dev: true
 
   /file-type@3.9.0:
