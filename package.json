@@ -36,6 +36,7 @@
     "naive-ui": "^2.34.4",
     "nuxt": "^3.6.5",
     "pinyin-match": "^1.2.4",
+    "postcss-nested": "^6.0.1",
     "qs": "^6.11.2",
     "vue-tsc": "^1.8.8"
   },

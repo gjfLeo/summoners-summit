@@ -18,6 +18,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
 
+  postcss: {
+    plugins: {
+      "postcss-nested": {},
+    },
+  },
+
   css: [
     "@unocss/reset/tailwind-compat.css",
   ],

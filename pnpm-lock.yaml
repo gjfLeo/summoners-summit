@@ -71,6 +71,9 @@ devDependencies:
   pinyin-match:
     specifier: ^1.2.4
     version: 1.2.4
+  postcss-nested:
+    specifier: ^6.0.1
+    version: 6.0.1(postcss@8.4.27)
   qs:
     specifier: ^6.11.2
     version: 6.11.2
@@ -7815,6 +7818,16 @@ packages:
     engines: {node: ^14 || ^16 || >=18.0}
     peerDependencies:
       postcss: ^8.2.15
+    dependencies:
+      postcss: 8.4.27
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-nested@6.0.1(postcss@8.4.27):
+    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
     dependencies:
       postcss: 8.4.27
       postcss-selector-parser: 6.0.13
