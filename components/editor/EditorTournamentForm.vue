@@ -183,7 +183,7 @@ const ruleOptions = [
 
 const issueTitle = computed(() => `提交数据：${[tournamentName.value, stageName.value, partName.value].filter(s => s).join(" ")}`);
 const issueBody = computed(() =>
-`<!-- __GENERATE_BY_DATA_TOOL__ -->
+`<!-- __GENERATED_BY_DATA_TOOL__ -->
 - 赛事：${tournamentName.value}
 - 阶段：${stageName.value}
 - 比赛日：${partName.value} ${partDate.value ?? ""}

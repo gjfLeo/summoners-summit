@@ -7,7 +7,7 @@ on:
 jobs:
   add-data-label:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.body, '__GENERATE_BY_DATA_TOOL__') == true
+    if: contains(github.event.issue.body, '__GENERATED_BY_DATA_TOOL__') == true
     steps:
       - name: Add labels
         uses: actions-cool/issues-helper@v3

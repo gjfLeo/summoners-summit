@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Missing Data File
-        if: contains(github.event.issue.body, '__GENERATE_BY_DATA_TOOL__') == true && contains(github.event.issue.body, 'gjfLeo/summoners-summit/files') == false
+        if: contains(github.event.issue.body, '__GENERATED_BY_DATA_TOOL__') == true && contains(github.event.issue.body, 'gjfLeo/summoners-summit/files') == false
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'create-comment'
