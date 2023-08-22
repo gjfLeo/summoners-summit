@@ -32,7 +32,7 @@
       <NInput v-model:value="stageName" placeholder="如16进8、半决赛等" />
     </NFormItem>
     <NFormItem label="规则" :show-feedback="false" grid="col-13/25">
-      <NSelect v-model:value="stageRules" :options="ruleOptions" multiple tag :render-tag="ruleRenderTag" />
+      <NSelect v-model:value="stageRules" :options="ruleOptions" tag multiple :render-tag="ruleRenderTag" />
     </NFormItem>
 
     <NFormItem label="比赛日名称" :show-feedback="false" grid="col-1/13">
