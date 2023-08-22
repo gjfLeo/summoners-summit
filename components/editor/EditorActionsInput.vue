@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import type { NSelect } from "naive-ui";
 import { NAutoComplete, NButton, NForm, NFormItem, NText, useMessage } from "naive-ui";
-import { type ActionCard } from "~/utils/types";
+import { type ActionCard, actionCardSorter } from "~/utils/types";
 import { EditorActionCardSelector } from "#components";
 
 const props = defineProps<{
@@ -48,7 +48,12 @@ function handleSelectCard(value: string) {
 function handleInputCount(value: string) {
   if (value === "1" || value === "2") {
     if (selectedCard.value) {
-      emit("update:actions", Object.assign({ [selectedCard.value]: Number(value) }, props.actions));
+      const actionsUnordered = Object.assign({ [selectedCard.value]: Number(value) }, props.actions);
+      const actions = Object.fromEntries(
+        (Object.entries(actionsUnordered) as [ActionCard, number][])
+          .sort((a, b) => actionCardSorter(a[0], b[0])),
+      );
+      emit("update:actions", actions);
     }
     cardSelectorRef.value?.clear();
     cardSelectorRef.value?.focus();
