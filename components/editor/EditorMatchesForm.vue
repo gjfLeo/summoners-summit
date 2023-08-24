@@ -11,9 +11,9 @@
               </div>
             </th>
             <th>
-              <div class="text-center">
+              <div class="items-center justify-center text-center">
                 <NButton text size="small" @click="matches = matches.filter(({ tempId }) => tempId !== match.tempId)">
-                  <NIcon><div class="i-carbon:trash-can" /></NIcon>
+                  <div class="i-carbon:trash-can" />
                 </NButton>
               </div>
             </th>
@@ -54,9 +54,9 @@
                 player="B"
               />
             </td>
-            <td class="text-center">
+            <td class="text-center vertical-middle">
               <NButton text size="small" @click="match.games = match.games.filter(({ tempId }) => tempId !== game.tempId)">
-                <NIcon><div class="i-carbon:trash-can" /></NIcon>
+                <div class="i-carbon:trash-can" />
               </NButton>
             </td>
           </tr>
@@ -87,7 +87,7 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NHr, NIcon, NInput, NTable, NText } from "naive-ui";
+import { NButton, NHr, NInput, NTable, NText } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 
 interface MatchData {
