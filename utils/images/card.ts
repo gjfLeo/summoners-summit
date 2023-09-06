@@ -71,7 +71,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "寒天宣命祝词": "Kanten Senmyou Blessing Equipment Card.png",
   "战欲涌现": "Wellspring of War-Lust Equipment Card.png",
   "忘玄": "Mystical Abandon Equipment Card.png",
-  "起死回骸": "Rite of Rescurrection Equipment Card.png",
+  "起死回骸": "Rite of Resurrection Equipment Card.png",
 
   "光辉的季节": "Glorious Season Equipment Card.png",
   "重帘留香": "The Scent Remained Equipment Card.png",
@@ -133,7 +133,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "祭礼残章": "Sacrificial Fragments Equipment Card.png",
   "天空之卷": "Skyward Atlas Equipment Card.png",
   "千夜浮梦": "A Thousand Floating Dreams Equipment Card.png",
-  "盈满之实": "Fruit of Fullfillment Equipment Card.png",
+  "盈满之实": "Fruit of Fulfillment Equipment Card.png",
 
   "鸦羽弓": "Raven Bow Equipment Card.png",
   "祭礼弓": "Sacrificial Bow Equipment Card.png",
@@ -276,7 +276,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "温妮莎传奇": "The Legend of Vennessa Event Card.png",
   "永远的友谊": "Friendship Eternal Event Card.png",
   "大梦的曲调": "Rhythm of the Great Dream Event Card.png",
-  "藏锋何处": "Where is the Unseen Razor Event Card.png",
+  "藏锋何处": "Where Is the Unseen Razor Event Card.png",
   "拳力斗技！": "Pankration Event Card.png",
 
   "绝云锅巴": "Jueyun Guoba Event Card.png",
