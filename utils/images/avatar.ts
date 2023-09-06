@@ -1,7 +1,7 @@
 // cSpell:disable
 
 import { getImageUrl } from "./shared";
-import { AbyssLectorFathomlessFlames, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, MaguuKenki, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yoimiya, Zhongli } from "~/utils/types";
+import { AbyssLectorFathomlessFlames, Albedo, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli } from "~/utils/types";
 
 const characterAvatarFilenames: Record<CharacterCard, string> = {
   [Ganyu]: "Ganyu TCG Avatar Icon.png",
@@ -11,6 +11,7 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [KamisatoAyaka]: "Kamisato Ayaka TCG Avatar Icon.png",
   [Eula]: "Eula TCG Avatar Icon.png",
   [Shenhe]: "Shenhe TCG Avatar Icon.png",
+  [Qiqi]: "Qiqi TCG Avatar Icon.png",
 
   [Barbara]: "Barbara TCG Avatar Icon.png",
   [Xingqiu]: "Xingqiu TCG Avatar Icon.png",
@@ -28,6 +29,7 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [Klee]: "Klee TCG Avatar Icon.png",
   [HuTao]: "Hu Tao TCG Avatar Icon.png",
   [Yanfei]: "Yanfei TCG Avatar Icon.png",
+  [Dehya]: "Dehya TCG Avatar Icon.png",
 
   [Fischl]: "Fischl TCG Avatar Icon.png",
   [Razor]: "Razor TCG Avatar Icon.png",
@@ -37,21 +39,25 @@ const characterAvatarFilenames: Record<CharacterCard, string> = {
   [KujouSara]: "Kujou Sara TCG Avatar Icon.png",
   [RaidenShogun]: "Raiden Shogun TCG Avatar Icon.png",
   [YaeMiko]: "Yae Miko TCG Avatar Icon.png",
+  [Lisa]: "Lisa TCG Avatar Icon.png",
 
   [Sucrose]: "Sucrose TCG Avatar Icon.png",
   [Jean]: "Jean TCG Avatar Icon.png",
   [Venti]: "Venti TCG Avatar Icon.png",
   [Xiao]: "Xiao TCG Avatar Icon.png",
   [KaedeharaKazuha]: "Kaedehara Kazuha TCG Avatar Icon.png",
+  [Wanderer]: "Wanderer TCG Avatar Icon.png",
 
   [Ningguang]: "Ningguang TCG Avatar Icon.png",
   [Noelle]: "Noelle TCG Avatar Icon.png",
   [Zhongli]: "Zhongli TCG Avatar Icon.png",
+  [Albedo]: "Albedo TCG Avatar Icon.png",
   [AratakiItto]: "Arataki Itto TCG Avatar Icon.png",
 
   [Collei]: "Collei TCG Avatar Icon.png",
   [Tighnari]: "Tighnari TCG Avatar Icon.png",
   [Nahida]: "Nahida TCG Avatar Icon.png",
+  [Yaoyao]: "Yaoyao TCG Avatar Icon.png",
 
   [FatuiCyroCicinMage]: "Fatui Cryo Cicin Mage TCG Avatar Icon.png",
   [RhodeiaOfLoch]: "Rhodeia of Loch TCG Avatar Icon.png",
