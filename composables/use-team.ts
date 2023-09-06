@@ -1,4 +1,4 @@
-import { AbyssLectorFathomlessFlames, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, MaguuKenki, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yoimiya, Zhongli, characterCardSorter } from "~/utils/types";
+import { AbyssLectorFathomlessFlames, Albedo, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli, characterCardSorter } from "~/utils/types";
 
 const characterIds: Record<CharacterCard, string> = {
   [Ganyu]: "Ganyu",
@@ -8,6 +8,8 @@ const characterIds: Record<CharacterCard, string> = {
   [KamisatoAyaka]: "KamisatoAyaka",
   [Eula]: "Eula",
   [Shenhe]: "Shenhe",
+  [Qiqi]: "Qiqi",
+
   [Barbara]: "Barbara",
   [Xingqiu]: "Xingqiu",
   [Mona]: "Mona",
@@ -15,6 +17,7 @@ const characterIds: Record<CharacterCard, string> = {
   [SangonomiyaKokomi]: "SangonomiyaKokomi",
   [KamisatoAyato]: "KamisatoAyato",
   [Candace]: "Candace",
+
   [Diluc]: "Diluc",
   [Xiangling]: "Xiangling",
   [Bennett]: "Bennett",
@@ -23,6 +26,8 @@ const characterIds: Record<CharacterCard, string> = {
   [Klee]: "Klee",
   [HuTao]: "HuTao",
   [Yanfei]: "Yanfei",
+  [Dehya]: "Dehya",
+
   [Fischl]: "Fischl",
   [Razor]: "Razor",
   [Keqing]: "Keqing",
@@ -31,18 +36,26 @@ const characterIds: Record<CharacterCard, string> = {
   [KujouSara]: "KujouSara",
   [RaidenShogun]: "RaidenShogun",
   [YaeMiko]: "YaeMiko",
+  [Lisa]: "Lisa",
+
   [Sucrose]: "Sucrose",
   [Jean]: "Jean",
   [Venti]: "Venti",
   [Xiao]: "Xiao",
   [KaedeharaKazuha]: "KaedeharaKazuha",
+  [Wanderer]: "Wanderer",
+
   [Ningguang]: "Ningguang",
   [Noelle]: "Noelle",
   [Zhongli]: "Zhongli",
+  [Albedo]: "Albedo",
   [AratakiItto]: "AratakiItto",
+
   [Collei]: "Collei",
   [Tighnari]: "Tighnari",
   [Nahida]: "Nahida",
+  [Yaoyao]: "Yaoyao",
+
   [FatuiCyroCicinMage]: "FatuiCyroCicinMage",
   [RhodeiaOfLoch]: "RhodeiaOfLoch",
   [FatuiMirrorMaiden]: "FatuiMirrorMaiden",
