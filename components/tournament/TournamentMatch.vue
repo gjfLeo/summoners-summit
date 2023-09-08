@@ -5,9 +5,9 @@
 
     <!-- 小屏幕换行 -->
     <div class="h-0 w-full md:hidden" />
-    <div class="text-base" :class="{ 'text-orange-500': match.winner === 'A' }"><PlayerName :player="match.playerA " /></div>
+    <div class="text-base" :class="{ 'text-orange-500': match.winner === 'A' }"><PlayerName :player="match.playerA || '未知选手'" /></div>
     <div class="text-sm">VS</div>
-    <div class="text-base" :class="{ 'text-orange-500': match.winner === 'B' }"><PlayerName :player="match.playerB " /></div>
+    <div class="text-base" :class="{ 'text-orange-500': match.winner === 'B' }"><PlayerName :player="match.playerB || '未知选手'" /></div>
 
     <!-- 右侧 -->
     <div class="ml-auto flex gap-2 text-sm text-gray">
@@ -21,9 +21,9 @@
     <template v-for="game in games" :key="game.id">
       <!-- <div>{{ game }}</div> -->
       <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
-        <div class="self-center justify-self-end text-sm"><PlayerName :player="match.playerA" /></div>
+        <div class="self-center justify-self-end text-sm"><PlayerName :player="match.playerA || '未知选手'" /></div>
         <div />
-        <div class="self-center justify-self-start text-sm"><PlayerName :player="match.playerB" /></div>
+        <div class="self-center justify-self-start text-sm"><PlayerName :player="match.playerB || '未知选手'" /></div>
 
         <div class="flex self-center justify-self-end"><TeamAvatars :team="game.playerACharacters" /></div>
         <div class="self-center justify-self-center text-sm">VS</div>
