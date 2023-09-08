@@ -57,7 +57,7 @@ export interface Game {
   playerBCharacters: Deck["characterCards"];
   playerBDeckId?: string;
 
-  starter: "A" | "B";
+  starter: "A" | "B" | "";
   winner: "A" | "B";
   turns?: number;
 }

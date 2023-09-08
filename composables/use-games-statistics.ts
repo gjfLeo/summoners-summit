@@ -10,7 +10,7 @@ export default function useGamesStatistics(games: Game[]) {
   const totalWithActions = games.filter(game => game.playerADeckId && game.playerBDeckId).length;
 
   const starterWin = games.filter(game => game.starter === game.winner).length;
-  const followerWin = games.filter(game => game.starter !== game.winner).length;
+  const followerWin = games.filter(game => game.starter && game.starter !== game.winner).length;
   const starterWinRate = toPercentageString(divide(starterWin, total));
   const followerWinRate = toPercentageString(divide(followerWin, total));
 

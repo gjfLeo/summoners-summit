@@ -20,10 +20,7 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
   const teamStatsMap = Object.fromEntries(
     Object.entries(teamBasicStatsMap)
       .map(([teamId, teamBasicStats]) => {
-        const { total, win, starterTotal, starterWin } = teamBasicStats;
-
-        const followerTotal = total - starterTotal;
-        const followerWin = win - starterWin;
+        const { total, win, starterTotal, starterWin, followerTotal, followerWin } = teamBasicStats;
 
         const stats: TeamStats = {
           teamId,

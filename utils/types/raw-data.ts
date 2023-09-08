@@ -32,7 +32,7 @@ export interface GameRawData {
   playerAActions?: Deck["actionCards"];
   playerBCharacters: Deck["characterCards"];
   playerBActions?: Deck["actionCards"];
-  starter: "A" | "B";
+  starter: "A" | "B" | "";
   winner: "A" | "B";
   turns?: number;
 }

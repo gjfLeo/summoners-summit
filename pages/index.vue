@@ -44,13 +44,13 @@ const columns: DataTableColumns<typeof data[number]> = [
   {
     key: "starterWinRate",
     title: "先手胜率",
-    render: row => toPercentageString(divide(row.starterWin, row.total)),
+    render: row => toPercentageString(divide(row.starterWin, row.totalWithStarter)),
     align: "center",
   },
   {
     key: "followerWinRate",
     title: "后手胜率",
-    render: row => toPercentageString(divide(row.total - row.starterWin, row.total)),
+    render: row => toPercentageString(divide(row.totalWithStarter - row.starterWin, row.totalWithStarter)),
     align: "center",
   },
 ];

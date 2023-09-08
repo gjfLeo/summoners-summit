@@ -11,7 +11,7 @@ function getGameMirror(game: Game): Game {
     playerBCharacters: playerACharacters,
     playerADeckId: playerBDeckId,
     playerBDeckId: playerADeckId,
-    starter: starter === "A" ? "B" : "A",
+    starter: starter ? (starter === "A" ? "B" : "A") : "",
     winner: winner === "A" ? "B" : "A",
   };
 }
