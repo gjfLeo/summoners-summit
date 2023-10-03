@@ -1,4 +1,4 @@
-import { AbyssLectorFathomlessFlames, Albedo, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli, characterCardSorter } from "~/utils/types";
+import { AbyssLectorFathomlessFlames, Albedo, Amber, AratakiItto, Baizhu, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, Dori, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Nilou, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli, characterCardSorter } from "~/utils/types";
 
 const characterIds: Record<CharacterCard, string> = {
   [Ganyu]: "Ganyu",
@@ -17,6 +17,7 @@ const characterIds: Record<CharacterCard, string> = {
   [SangonomiyaKokomi]: "SangonomiyaKokomi",
   [KamisatoAyato]: "KamisatoAyato",
   [Candace]: "Candace",
+  [Nilou]: "Nilou",
 
   [Diluc]: "Diluc",
   [Xiangling]: "Xiangling",
@@ -37,6 +38,7 @@ const characterIds: Record<CharacterCard, string> = {
   [RaidenShogun]: "RaidenShogun",
   [YaeMiko]: "YaeMiko",
   [Lisa]: "Lisa",
+  [Dori]: "Dori",
 
   [Sucrose]: "Sucrose",
   [Jean]: "Jean",
@@ -55,6 +57,7 @@ const characterIds: Record<CharacterCard, string> = {
   [Tighnari]: "Tighnari",
   [Nahida]: "Nahida",
   [Yaoyao]: "Yaoyao",
+  [Baizhu]: "Baizhu",
 
   [FatuiCyroCicinMage]: "FatuiCyroCicinMage",
   [RhodeiaOfLoch]: "RhodeiaOfLoch",
