@@ -22,6 +22,9 @@ const props = defineProps<{
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 
+const actionPicksString = useLocalStorage("actionPicks", "{}");
+const actionPicks = JSON.parse(actionPicksString.value);
+
 const options = computed(() => {
   return ALL_ACTION_CARDS
     .flatMap((card) => {
@@ -35,9 +38,9 @@ const options = computed(() => {
       };
     })
     .sort((option1, option2) => {
-      if (option1.match[0] === 0) return -1;
-      if (option2.match[0] === 0) return 1;
-      return 0;
+      if (option1.match[0] === 0 && option2.match[0] !== 0) return -1;
+      if (option2.match[0] === 0 && option1.match[0] !== 0) return 1;
+      return (actionPicks[option2.label] ?? 0) - (actionPicks[option1.label] ?? 0);
     });
 });
 
