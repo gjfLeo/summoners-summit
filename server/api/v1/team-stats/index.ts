@@ -35,7 +35,7 @@ export default defineEventHandler<R & TeamBasicStatsData>((event) => {
       if (game.starter === player) teamStat.starterTotal++;
       if (game.winner === player && game.starter === player) teamStat.starterWin++;
       if (game.starter && game.starter !== player) teamStat.followerTotal++;
-      if (game.winner === player && game.starter && game.starter !== player) teamStat.followerTotal++;
+      if (game.winner === player && game.starter && game.starter !== player) teamStat.followerWin++;
     }
   }
 
