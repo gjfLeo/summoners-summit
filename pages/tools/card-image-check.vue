@@ -25,5 +25,5 @@
 <script lang="ts" setup>
 import { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS } from "~/utils/types";
 
-useHead({ title: "卡牌图片检查页 - 召唤之巅" });
+useHead({ title: "卡牌图片检查 - 召唤之巅" });
 </script>

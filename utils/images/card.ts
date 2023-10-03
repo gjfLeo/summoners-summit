@@ -175,7 +175,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "辰砂往生录": "Vermillion Hereafter Equipment Card.png",
   "无常之面": "Capricious Visage Equipment Card.png",
   "追忆之注连": "Shimenawa's Reminiscence Equipment Card.png",
-  "海祇之冠": "Crown of Watasumi Equipment Card.png",
+  "海祇之冠": "Crown of Watatsumi Equipment Card.png",
   "踏破冰雪的回音": "Broken Rime's Echo Equipment Card.png",
   "冰风迷途的勇士": "Blizzard Strayer Equipment Card.png",
   "酒渍船帽": "Wine-Stained Tricorne Equipment Card.png",
@@ -277,7 +277,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "永远的友谊": "Friendship Eternal Event Card.png",
   "大梦的曲调": "Rhythm of the Great Dream Event Card.png",
   "藏锋何处": "Where Is the Unseen Razor Event Card.png",
-  "拳力斗技！": "Pankration Event Card.png",
+  "拳力斗技！": "Pankration! Event Card.png",
 
   "绝云锅巴": "Jueyun Guoba Event Card.png",
   "仙跳墙": "Adeptus' Temptation Event Card.png",
