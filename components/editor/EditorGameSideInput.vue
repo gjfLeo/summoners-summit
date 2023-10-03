@@ -32,13 +32,17 @@
       :depth="actionsCount > 0 ? 1 : 3"
       :class="{ 'font-bold': actionsCount > 0 }"
       class="cursor-pointer select-none"
-      @click="actionsDialogVisible = true"
+      @click="showActionsDialog"
     >
       牌组
     </NText>
   </div>
   <NModal v-model:show="actionsDialogVisible" preset="card" class="max-w-6xl">
-    <EditorActionsInput v-model:actions="dataActions" />
+    <EditorActionsInput
+      ref="actionsInput" v-model:actions="dataActions"
+      @copy="copy"
+      @paste="paste"
+    />
     <EditorActionsPreview v-model:actions="dataActions" class="mt" />
     <template #footer>
       <NButton @click="actionsDialogVisible = false">关闭</NButton>
@@ -47,9 +51,9 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NModal, NText } from "naive-ui";
+import { NButton, NModal, NText, useMessage } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/types";
-import { EditorCharacterCardSelector } from "#components";
+import { EditorActionsInput, EditorCharacterCardSelector } from "#components";
 
 const props = defineProps<{
   player: "A" | "B";
@@ -70,6 +74,14 @@ const actionsCount = computed(() => Object.values(dataActions.value ?? {}).reduc
 const inputCharacterRefs = ref<(InstanceType<typeof EditorCharacterCardSelector> | null)[]>([]);
 
 const actionsDialogVisible = ref(false);
+const actionsInput = ref<InstanceType<typeof EditorActionsInput>>();
+
+function showActionsDialog() {
+  actionsDialogVisible.value = true;
+  nextTick(() => {
+    actionsInput.value?.focus();
+  });
+}
 
 function bindInputCharacterRef(i: number) {
   return (el: any) => inputCharacterRefs.value[i] = el;
@@ -79,5 +91,23 @@ function handleCharacterSelected(i: number) {
   if (i < 2) {
     inputCharacterRefs.value[i + 1]?.focus();
   }
+}
+
+const message = useMessage();
+const copyString = useLocalStorage("copyString", "{}");
+
+function copy() {
+  copyString.value = JSON.stringify({
+    characters: dataCharacters.value,
+    actions: dataActions.value,
+  });
+  message.success("已复制");
+}
+
+function paste() {
+  const copyData = JSON.parse(copyString.value) as Pick<typeof props, "characters" | "actions">;
+  dataCharacters.value = copyData.characters;
+  dataActions.value = copyData.actions;
+  message.success("已粘贴");
 }
 </script>

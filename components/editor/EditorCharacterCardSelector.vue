@@ -3,7 +3,7 @@
     <template #trigger>
       <NAvatar
         :src=" modelValue ? characterAvatarImages[modelValue] : ''" round
-        class="cursor-pointer"
+        class="cursor-pointer select-none"
         @click="handleClick"
       />
     </template>
