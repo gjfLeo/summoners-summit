@@ -1,7 +1,7 @@
 // cSpell:disable
 
 import { getImageUrl } from "./shared";
-import { AbyssLectorFathomlessFlames, type ActionCard, Albedo, Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli } from "~/utils/types";
+import { AbyssLectorFathomlessFlames, type ActionCard, Albedo, Amber, AratakiItto, Baizhu, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, Dori, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Nilou, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli } from "~/utils/types";
 
 const characterCardFilenames: Record<CharacterCard, string> = {
   [Ganyu]: "Ganyu Character Card.png",
@@ -19,6 +19,7 @@ const characterCardFilenames: Record<CharacterCard, string> = {
   [SangonomiyaKokomi]: "Sangonomiya Kokomi Character Card.png",
   [KamisatoAyato]: "Kamisato Ayato Character Card.png",
   [Candace]: "Candace Character Card.png",
+  [Nilou]: "Nilou Character Card.png",
   [Diluc]: "Diluc Character Card.png",
   [Xiangling]: "Xiangling Character Card.png",
   [Bennett]: "Bennett Character Card.png",
@@ -37,6 +38,7 @@ const characterCardFilenames: Record<CharacterCard, string> = {
   [RaidenShogun]: "Raiden Shogun Character Card.png",
   [YaeMiko]: "Yae Miko Character Card.png",
   [Lisa]: "Lisa Character Card.png",
+  [Dori]: "Dori Character Card.png",
   [Sucrose]: "Sucrose Character Card.png",
   [Jean]: "Jean Character Card.png",
   [Venti]: "Venti Character Card.png",
@@ -52,6 +54,7 @@ const characterCardFilenames: Record<CharacterCard, string> = {
   [Tighnari]: "Tighnari Character Card.png",
   [Nahida]: "Nahida Character Card.png",
   [Yaoyao]: "Yaoyao Character Card.png",
+  [Baizhu]: "Baizhu Character Card.png",
   [FatuiCyroCicinMage]: "Fatui Cryo Cicin Mage Character Card.png",
   [RhodeiaOfLoch]: "Rhodeia of Loch Character Card.png",
   [FatuiMirrorMaiden]: "Mirror Maiden Character Card.png",
@@ -80,6 +83,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "匣中玉栉": "Tamakushi Casket Equipment Card.png",
   "镜华风姿": "Kyouka Fuushi Equipment Card.png",
   "衍溢的汐潮": "The Overflow Equipment Card.png",
+  "星天的花雨": "Tje Starry Skies Their Flowers Rain Equipment Card.png",
 
   "流火焦灼": "Flowing Flame Equipment Card.png",
   "交叉火力": "Crossfire Equipment Card.png",
@@ -100,6 +104,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "万千的愿望": "Wishes Unnumbered Equipment Card.png",
   "神篱之御荫": "The Shrine's Sacred Shade Equipment Card.png",
   "脉冲的魔女": "Pulsating Witch Equipment Card.png",
+  "酌盈剂虚": "Discretionary Supplement Equipment Card.png",
 
   "混元熵增论": "Chaotic Entropy Equipment Card.png",
   "蒲公英的国土": "Lands of Dandelion Equipment Card.png",
@@ -118,6 +123,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "眼识殊明": "Keen Sight Equipment Card.png",
   "心识蕴藏之种": "The Seed of Stored Knowledge Equipment Card.png",
   "慈惠仁心": "Beneficent Equipment Card.png",
+  "在地为化": "All Things Are of the Earth Equipment Card.png",
 
   "冰萤寒光": "Cicin's Cold Glare Equipment Card.png",
   "百川奔流": "Streaming Surge Equipment Card.png",
@@ -176,6 +182,8 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "无常之面": "Capricious Visage Equipment Card.png",
   "追忆之注连": "Shimenawa's Reminiscence Equipment Card.png",
   "海祇之冠": "Crown of Watatsumi Equipment Card.png",
+  "海染砗磲": "Ocean Hued Clam Equipment Card.png",
+  "沙王的投影": "Shadow of the Sand King Equipment Card.png",
   "踏破冰雪的回音": "Broken Rime's Echo Equipment Card.png",
   "冰风迷途的勇士": "Blizzard Strayer Equipment Card.png",
   "酒渍船帽": "Wine-Stained Tricorne Equipment Card.png",
@@ -205,6 +213,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "镇守之森": "Chinju Forest Support Card.png",
   "黄金屋": "Golden House Support Card.png",
   "化成郭": "Gandharva Ville Support Card.png",
+  "风龙废墟": "Stormterror's Lair Support Card.png",
 
   "派蒙": "Paimon Support Card.png",
   "凯瑟琳": "Katheryne Support Card.png",
@@ -236,6 +245,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "磐岩盟契": "Covenant of Rock Event Card.png",
   "愉舞欢游": "Joyous Celebration Event Card.png",
   "自由的新风": "Fresh Wind of Freedom Event Card.png",
+  "万家灶火": "In Every House a Stove Event Card.png",
 
   "元素共鸣：交织之冰": "Elemental Resonance Woven Ice Event Card.png",
   "元素共鸣：粉碎之冰": "Elemental Resonance Shattering Ice Event Card.png",
@@ -278,6 +288,7 @@ const actionCardFilenames: Record<ActionCard, string> = {
   "大梦的曲调": "Rhythm of the Great Dream Event Card.png",
   "藏锋何处": "Where Is the Unseen Razor Event Card.png",
   "拳力斗技！": "Pankration! Event Card.png",
+  "琴音之诗": "Lyresong Event Card.png",
 
   "绝云锅巴": "Jueyun Guoba Event Card.png",
   "仙跳墙": "Adeptus' Temptation Event Card.png",
