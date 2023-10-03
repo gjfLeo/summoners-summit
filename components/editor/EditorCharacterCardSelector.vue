@@ -14,6 +14,7 @@
         :options="options"
         :render-label="renderLabel"
         placeholder="角色"
+        placement="right-start"
         :get-show="() => true"
         @select="handleSelect"
       />
