@@ -43,6 +43,9 @@ const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 const popoverRef = ref<InstanceType<typeof NPopover>>();
 
+const characterPicksString = useLocalStorage("characterPicks", "{}");
+const characterPicks = JSON.parse(characterPicksString.value);
+
 const options = computed(() => {
   return ALL_CHARACTER_CARDS
     .flatMap((card) => {
@@ -55,9 +58,9 @@ const options = computed(() => {
       };
     })
     .sort((option1, option2) => {
-      if (option1.match[0] === 0) return -1;
-      if (option2.match[0] === 0) return 1;
-      return 0;
+      if (option1.match[0] === 0 && option2.match[0] !== 0) return -1;
+      if (option2.match[0] === 0 && option1.match[0] !== 0) return 1;
+      return (characterPicks[option2.label] ?? 0) - (characterPicks[option1.label] ?? 0);
     });
 });
 
