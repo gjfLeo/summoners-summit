@@ -5,14 +5,14 @@ export default defineTournament({
   gameVersion: "4.0",
   stages: [
     {
-      name: "焦点对局",
+      name: "突围赛",
       rules: [
         "BO3",
         "征服",
       ],
       parts: [
         {
-          name: "突围赛",
+          name: "焦点对局",
           date: "2023-09-17",
           matches: [
             {
