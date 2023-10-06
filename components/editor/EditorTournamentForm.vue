@@ -172,6 +172,7 @@ function handleTournamentSelect() {
 const ruleOptions = [
   "BO3",
   "BO5",
+  "BO7",
   "决斗",
   "征服",
   "禁用角色 - 对阵双方各禁用一张角色牌",
