@@ -27,15 +27,17 @@ hljs.registerLanguage("ts", hljsTs);
 
 const tournamentFormRef = ref<InstanceType<typeof EditorTournamentForm>>();
 
+const latestVersion = gameVersionList[1].value;
+
 await Promise.all([
   (async function () {
     const actionPicksString = useLocalStorage("actionPicks", "{}");
-    const { actionStatsMap } = await useApiActionStats();
+    const { actionStatsMap } = await useApiActionStats({ preferredGameVersion: latestVersion });
     actionPicksString.value = JSON.stringify(Object.fromEntries(Object.entries(actionStatsMap).map(([card, { pick }]) => [card, pick])));
   }()),
   (async function () {
     const characterPicksString = useLocalStorage("characterPicks", "{}");
-    const { characterStatsMap } = await useApiCharacterStats();
+    const { characterStatsMap } = await useApiCharacterStats({ preferredGameVersion: latestVersion });
     characterPicksString.value = JSON.stringify(Object.fromEntries(Object.entries(characterStatsMap).map(([card, { pick }]) => [card, pick])));
   }()),
 ]);

@@ -14,25 +14,29 @@ interface CharacterStatsData {
 const initCharacterStats = (): CharacterStats => ({ pick: 0, winPick: 0 });
 
 export default defineEventHandler<R & CharacterStatsData>((event) => {
-  const { gameVersion } = getQuery(event);
+  const { gameVersion, preferredGameVersion, sort } = getQuery(event);
 
   let gameList = Object.values(gameById);
   if (gameVersion) {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  const characterStatsMap: Record<string, CharacterStats> = {};
+  let characterStatsMap: Record<string, CharacterStats> = {};
   let total = 0;
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
       const characters = game[`player${player}Characters`];
-      total++;
+      const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
+      total += weight;
       for (const character of Object.values(characters)) {
         const characterStats = characterStatsMap[character] ?? (characterStatsMap[character] = initCharacterStats());
-        characterStats.pick++;
-        if (game.winner === player) characterStats.winPick++;
+        characterStats.pick += weight;
+        if (game.winner === player) characterStats.winPick += weight;
       }
     }
+  }
+  if (sort) {
+    characterStatsMap = Object.fromEntries(Object.entries(characterStatsMap).sort((a, b) => b[1].pick - a[1].pick));
   }
 
   return { statusCode: 200, characterStatsMap, total };
