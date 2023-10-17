@@ -3,6 +3,7 @@ import type { SelectOption } from "naive-ui";
 const normalGameVersion = (n: string) => ({ name: n, value: n, path: n.replaceAll(".", "-") });
 export const gameVersionList = [
   { name: "全版本", value: "", path: "all" },
+  normalGameVersion("4.1"),
   normalGameVersion("4.0"),
   normalGameVersion("3.8"),
   normalGameVersion("3.7"),

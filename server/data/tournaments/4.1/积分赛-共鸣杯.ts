@@ -1,0 +1,201 @@
+import { defineTournament } from "~/utils/types";
+
+export default defineTournament({
+  name: "共鸣杯",
+  type: "全民积分赛",
+  gameVersion: "4.1",
+  stages: [
+    {
+      name: "16进8",
+      rules: [
+        "BO3",
+        "征服",
+        ["禁用阵容", "对阵双方各准备3套阵容，禁用对手一套阵容"],
+      ],
+      parts: [
+        {
+          name: "DAY2",
+          date: "2023-10-15",
+          matches: [
+            {
+              playerA: "皮皮猪",
+              playerB: "皮皮鸭",
+              video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              games: [
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["班尼特", "愚人众·火之债务处理人", "赛诺"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "xhx",
+              playerB: "明暗螺旋",
+              video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              games: [
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "重云"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "重云"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "周正福",
+              playerB: "螳螂虾",
+              video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              games: [
+                {
+                  playerACharacters: ["重云", "雷电将军", "申鹤"],
+                  playerBCharacters: ["优菈", "流浪者", "莫娜"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["重云", "雷电将军", "申鹤"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "音尘",
+              playerB: "轩谙",
+              video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              games: [
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["诺艾尔", "迪希雅", "荒泷一斗"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["诺艾尔", "迪希雅", "荒泷一斗"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "DAY2",
+          date: "2023-10-16",
+          matches: [
+            {
+              playerA: "majikohanatan",
+              playerB: "陈某某老师",
+              video: "https://www.bilibili.com/video/BV12j411x75F",
+              games: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["愚人众·火之债务处理人", "胡桃", "行秋"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "今天不想吃苹果",
+              playerB: "人子歌于途",
+              video: "https://www.bilibili.com/video/BV12j411x75F",
+              games: [
+                {
+                  playerACharacters: ["神里绫华", "宵宫", "申鹤"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "柠柠七喵",
+              playerB: "Tonbo",
+              video: "https://www.bilibili.com/video/BV12j411x75F",
+              games: [
+                {
+                  playerACharacters: ["雷电将军", "申鹤", "迪奥娜"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["雷电将军", "申鹤", "迪奥娜"],
+                  playerBCharacters: ["莫娜", "凝光", "芭芭拉"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "胡桃桃大魔王",
+              playerB: "雨夜",
+              video: "https://www.bilibili.com/video/BV12j411x75F",
+              games: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["诺艾尔", "迪希雅", "荒泷一斗"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "愚人众·火之债务处理人", "菲谢尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["重云", "雷电将军", "申鹤"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "愚人众·火之债务处理人", "菲谢尔"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+});
