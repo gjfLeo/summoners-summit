@@ -14,13 +14,19 @@ export default defineTournament({
       ],
       parts: [
         {
-          name: "DAY2",
+          name: "DAY1",
           date: "2023-10-15",
           matches: [
             {
               playerA: "皮皮猪",
               playerB: "皮皮鸭",
               video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              banned: [
+                {
+                  playerACharacters: ["重云", "雷电将军", "申鹤"],
+                  playerBCharacters: ["重云", "北斗", "雷泽"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
@@ -40,6 +46,12 @@ export default defineTournament({
               playerA: "xhx",
               playerB: "明暗螺旋",
               video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              banned: [
+                {
+                  playerACharacters: ["诺艾尔", "迪希雅", "荒泷一斗"],
+                  playerBCharacters: ["荒泷一斗", "芭芭拉", "诺艾尔"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["申鹤", "雷电将军", "重云"],
@@ -59,6 +71,12 @@ export default defineTournament({
               playerA: "周正福",
               playerB: "螳螂虾",
               video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              banned: [
+                {
+                  playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["申鹤", "雷电将军", "重云"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
@@ -84,6 +102,12 @@ export default defineTournament({
               playerA: "音尘",
               playerB: "轩谙",
               video: "https://www.bilibili.com/video/BV1h34y1g7LH",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "可莉", "赛诺"],
+                  playerBCharacters: ["雷电将军", "申鹤", "重云"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
@@ -115,6 +139,12 @@ export default defineTournament({
               playerA: "majikohanatan",
               playerB: "陈某某老师",
               video: "https://www.bilibili.com/video/BV12j411x75F",
+              banned: [
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["优菈", "流浪者", "莫娜"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
@@ -134,6 +164,12 @@ export default defineTournament({
               playerA: "今天不想吃苹果",
               playerB: "人子歌于途",
               video: "https://www.bilibili.com/video/BV12j411x75F",
+              banned: [
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
+                  playerBCharacters: ["雷泽", "重云", "北斗"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["神里绫华", "宵宫", "申鹤"],
@@ -153,6 +189,12 @@ export default defineTournament({
               playerA: "柠柠七喵",
               playerB: "Tonbo",
               video: "https://www.bilibili.com/video/BV12j411x75F",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "宵宫", "无相之雷"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["雷电将军", "申鹤", "迪奥娜"],
@@ -172,6 +214,12 @@ export default defineTournament({
               playerA: "胡桃桃大魔王",
               playerB: "雨夜",
               video: "https://www.bilibili.com/video/BV12j411x75F",
+              banned: [
+                {
+                  playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["重云", "雷泽", "北斗"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],

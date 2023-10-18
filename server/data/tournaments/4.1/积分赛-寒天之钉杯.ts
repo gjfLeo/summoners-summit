@@ -159,6 +159,12 @@ export default defineTournament({
               playerA: "zhxx",
               playerB: "叶叁伍",
               video: "https://www.bilibili.com/video/BV1ej411x7rG",
+              banned: [
+                {
+                  playerACharacters: ["迪希雅", "诺艾尔", "荒泷一斗"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
@@ -304,6 +310,12 @@ export default defineTournament({
               playerA: "桔梗",
               playerB: "铃紫",
               video: "https://www.bilibili.com/video/BV1Ch4y1q7hV",
+              banned: [
+                {
+                  playerACharacters: ["迪希雅", "诺艾尔", "荒泷一斗"],
+                  playerBCharacters: ["诺艾尔", "荒泷一斗", "迪希雅"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
@@ -447,6 +459,12 @@ export default defineTournament({
               playerA: "一不小欣z",
               playerB: "Elaina",
               video: "https://www.bilibili.com/video/BV1Yp4y1T7i9",
+              banned: [
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
