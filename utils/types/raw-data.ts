@@ -24,7 +24,15 @@ export interface MatchRawData {
   playerB: string;
   winner?: "A" | "B";
   video?: string;
+  banned?: BannedRawData[];
   games: GameRawData[];
+}
+
+export interface BannedRawData {
+  playerACharacters: Deck["characterCards"];
+  playerAActions?: Deck["actionCards"];
+  playerBCharacters: Deck["characterCards"];
+  playerBActions?: Deck["actionCards"];
 }
 
 export interface GameRawData {

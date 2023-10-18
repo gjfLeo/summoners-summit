@@ -21,6 +21,12 @@ export default defineTournament({
               playerA: "越过寒冷",
               playerB: "胡桃桃大魔王",
               video: "https://www.bilibili.com/video/BV1TG41127C9",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                },
+              ],
               games: [
                 {
                   playerACharacters: ["申鹤", "雷电将军", "重云"],

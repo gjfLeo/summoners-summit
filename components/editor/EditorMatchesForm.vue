@@ -34,6 +34,42 @@
           </tr>
         </thead>
         <TransitionGroup name="games" tag="tbody">
+          <tr v-for="(banned) in match.banned" :key="banned.tempId">
+            <td class="text-center">禁用</td>
+            <td>
+              <EditorGameSideInput
+                v-model:characters="banned.playerACharacters"
+                v-model:actions="banned.playerAActions"
+                banned
+                player="A"
+              />
+            </td>
+            <td>
+              <EditorGameSideInput
+                v-model:characters="banned.playerBCharacters"
+                v-model:actions="banned.playerBActions"
+                banned
+                player="B"
+              />
+            </td>
+            <td class="text-center vertical-middle">
+              <NButton text size="small" @click="match.banned = match.banned.filter(({ tempId }) => tempId !== banned.tempId)">
+                <div class="i-carbon:trash-can" />
+              </NButton>
+            </td>
+          </tr>
+          <tr :key="-1">
+            <td />
+            <td :colspan="2">
+              <NButton class="w-full" dashed @click="match.banned.push(newBanned())">
+                <template #icon>
+                  <div class="i-carbon:add" />
+                </template>
+                添加禁用
+              </NButton>
+            </td>
+            <td />
+          </tr>
           <tr v-for="(game, gameIndex) in match.games" :key="game.tempId">
             <td class="text-center">第{{ gameIndex + 1 }}局</td>
             <td>
@@ -60,7 +96,7 @@
               </NButton>
             </td>
           </tr>
-          <tr :key="-1">
+          <tr :key="-2">
             <td />
             <td :colspan="2">
               <NButton class="w-full" dashed @click="match.games.push(newGame())">
@@ -95,7 +131,15 @@ interface MatchData {
   playerA: string;
   playerB: string;
   video: string;
+  banned: BannedData[];
   games: GameData[];
+}
+interface BannedData {
+  tempId: number;
+  playerACharacters: CharacterCard[];
+  playerAActions?: Partial<Record<ActionCard, number>>;
+  playerBCharacters: CharacterCard[];
+  playerBActions?: Partial<Record<ActionCard, number>>;
 }
 interface GameData {
   tempId: number;
@@ -109,7 +153,10 @@ interface GameData {
 
 let tempId = 1;
 function newMatch(): MatchData {
-  return { tempId: tempId++, playerA: "", playerB: "", video: "", games: [newGame()] };
+  return { tempId: tempId++, playerA: "", playerB: "", video: "", banned: [], games: [newGame()] };
+}
+function newBanned() {
+  return { tempId: tempId++, playerACharacters: [], playerBCharacters: [] };
 }
 function newGame(): GameData {
   return { tempId: tempId++, playerACharacters: [], playerBCharacters: [] };
@@ -122,6 +169,32 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
   `  playerA: "${match.playerA}",`,
   `  playerB: "${match.playerB}",`,
   `  video: "${match.video}",`,
+  ...(match.banned.length
+    ? [
+        "  banned: [",
+        ...match.banned.flatMap(banned => [
+          "    {",
+          `      playerACharacters: ["${banned.playerACharacters[0] ?? ""}", "${banned.playerACharacters[1] ?? ""}", "${banned.playerACharacters[2] ?? ""}"],`,
+          ...(banned.playerAActions
+            ? [
+                "      playerAActions: defineActions({",
+                ...Object.entries(banned.playerAActions).map(([card, count]) => `        "${card}": ${count},`),
+                "      }),",
+              ]
+            : []),
+          `      playerBCharacters: ["${banned.playerBCharacters[0] ?? ""}", "${banned.playerBCharacters[1] ?? ""}", "${banned.playerBCharacters[2] ?? ""}"],`,
+          ...(banned.playerBActions
+            ? [
+                "      playerBActions: defineActions({",
+                ...Object.entries(banned.playerBActions).map(([card, count]) => `        "${card}": ${count},`),
+                "      }),",
+              ]
+            : []),
+          "    },",
+        ]),
+        "  ]",
+      ]
+    : []),
   "  games: [",
   ...match.games.flatMap(game => [
     "    {",

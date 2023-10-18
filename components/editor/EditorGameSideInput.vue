@@ -1,6 +1,7 @@
 <template>
   <div flex="~ gap-2 items-center justify-center">
     <NText
+      v-if="!banned"
       :type="player === starter ? 'primary' : (starter === undefined ? 'error' : undefined)"
       :depth="player === starter ? 1 : 3"
       :class="{ 'font-bold': player === starter }"
@@ -10,6 +11,7 @@
       先
     </NText>
     <NText
+      v-if="!banned"
       :type="player === winner ? 'primary' : (winner === undefined ? 'error' : undefined)"
       :depth="player === winner ? 1 : 3"
       :class="{ 'font-bold': player === winner }"
@@ -61,6 +63,7 @@ const props = defineProps<{
   actions?: Partial<Record<ActionCard, number>>;
   starter?: "A" | "B";
   winner?: "A" | "B";
+  banned?: boolean;
 }>();
 
 const emit = defineEmits(["update:characters", "update:actions", "update:starter", "update:winner"]);
