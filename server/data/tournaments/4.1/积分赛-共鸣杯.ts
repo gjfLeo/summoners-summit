@@ -245,5 +245,95 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "8进4",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+      ],
+      parts: [
+        {
+          name: "DAY1",
+          date: "2023-10-17",
+          matches: [
+            {
+              playerA: "明暗螺旋",
+              playerB: "皮皮鸭",
+              video: "https://www.bilibili.com/video/BV1484y1d7hU",
+              banned: [
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["重云", "北斗", "雷泽"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["优菈", "菲谢尔", "申鹤"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "周正福",
+              playerB: "tonbo",
+              video: "https://www.bilibili.com/video/BV1484y1d7hU",
+              banned: [
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "可莉", "赛诺"],
+                  playerBCharacters: ["纳西妲", "菲谢尔", "莫娜"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["神里绫华", "宵宫", "申鹤"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "可莉", "赛诺"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
