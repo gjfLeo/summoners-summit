@@ -192,7 +192,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
             : []),
           "    },",
         ]),
-        "  ]",
+        "  ],",
       ]
     : []),
   "  games: [",
