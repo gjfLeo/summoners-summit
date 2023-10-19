@@ -12,6 +12,7 @@ interface TeamStats {
   starterWinRate: number;
   followerWinRate: number;
   winDiff: number;
+  banned: number;
 }
 
 export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {

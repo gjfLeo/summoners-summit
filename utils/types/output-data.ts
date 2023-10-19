@@ -31,6 +31,7 @@ export interface TournamentPart {
 export interface Match {
   id: string;
   tournamentId: string;
+  gameVersion: string;
   name: string;
   date: string;
   video?: string;
