@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import type { ActionCard, Deck, Game, Match, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "../../utils/types";
+import type { ActionCard, BannedData, Deck, Game, Match, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "../../utils/types";
 import { actionCardSorter, characterCardSorter } from "../../utils/types";
 import tournamentsRaw from "./tournaments";
 
@@ -66,6 +66,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             playerB,
             winner: winnerRaw,
             video,
+            banned: bannedRaw,
             games: gamesRaw,
           } = matchRaw;
           matchTotalIndex++;
@@ -75,6 +76,23 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const aGoals = gamesRaw.filter(g => g.winner === "A").length;
           const bGoals = gamesRaw.filter(g => g.winner === "B").length;
           const winner = winnerRaw ?? (aGoals > bGoals ? "A" : "B");
+
+          const banned = bannedRaw?.map((ban): BannedData => {
+            const {
+              playerACharacters,
+              playerAActions,
+              playerBCharacters,
+              playerBActions,
+            } = ban;
+            const playerADeckId = registerDeck(playerACharacters, playerAActions);
+            const playerBDeckId = registerDeck(playerBCharacters, playerBActions);
+            return {
+              playerACharacters,
+              playerADeckId,
+              playerBCharacters,
+              playerBDeckId,
+            };
+          });
 
           const gameIds = gamesRaw.map((gameRaw, gameIndex): string => {
             const {
@@ -124,6 +142,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             playerB,
             video,
             winner,
+            banned,
             gameIds,
           };
           return matchId;

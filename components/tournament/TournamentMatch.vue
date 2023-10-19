@@ -17,6 +17,27 @@
   </NH3>
 
   <div grid="~ lg:cols-3 md:cols-2 row-gap-4">
+    <template v-for="(ban, banIndex) in match.banned ?? []" :key="banIndex">
+      <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
+        <div class="self-center justify-self-end text-sm"><PlayerName :player="match.playerA || '未知选手'" /></div>
+        <div />
+        <div class="self-center justify-self-start text-sm"><PlayerName :player="match.playerB || '未知选手'" /></div>
+
+        <div class="flex self-center justify-self-end"><TeamAvatars style="filter: grayscale(0.5)" :team="ban.playerACharacters" /></div>
+        <div class="self-center justify-self-center text-sm">VS</div>
+        <div class="flex self-center justify-self-start"><TeamAvatars style="filter: grayscale(0.5)" :team="ban.playerBCharacters" /></div>
+
+        <div class="flex justify-end gap-1 text-sm">
+          <LinkDeck v-if="ban.playerADeckId" :deck-id="ban.playerADeckId" />
+          <div class="text-gray">被禁用</div>
+        </div>
+        <div />
+        <div class="flex justify-start gap-1 text-sm">
+          <div class="text-gray">被禁用</div>
+          <LinkDeck v-if="ban.playerBDeckId" :deck-id="ban.playerBDeckId" />
+        </div>
+      </div>
+    </template>
     <!-- class="row-gap-4 grid justify-center justify-items-center lg:grid-cols-3 md:grid-cols-2" -->
     <template v-for="game in games" :key="game.id">
       <!-- <div>{{ game }}</div> -->

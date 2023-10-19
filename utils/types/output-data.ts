@@ -37,7 +37,15 @@ export interface Match {
   playerA: string | number;
   playerB: string | number;
   winner: "A" | "B";
+  banned?: BannedData[];
   gameIds: string[];
+}
+
+export interface BannedData {
+  playerACharacters: Deck["characterCards"];
+  playerADeckId?: string;
+  playerBCharacters: Deck["characterCards"];
+  playerBDeckId?: string;
 }
 
 export interface Game {
