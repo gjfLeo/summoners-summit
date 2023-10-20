@@ -70,6 +70,21 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     defaultFilterOptionValue: 5,
     filter: (value, row) => row.total >= Number(value),
   },
+  ...data.value.some(item => item.banned > 0)
+    ? [{
+        title: "被禁用",
+        key: "banned",
+        width: "6rem",
+        align: "center" as const,
+        sorter: "default" as const,
+      }, {
+        title: "场数+禁用",
+        key: "bp",
+        width: "6rem",
+        align: "center" as const,
+        sorter: "default" as const,
+      }]
+    : [],
   {
     title: "胜率",
     key: "winRate",
@@ -93,15 +108,6 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     align: "center",
     sorter: "default",
   },
-  ...data.value.some(item => item.banned > 0)
-    ? [{
-        title: "被禁用",
-        key: "banned",
-        width: "6rem",
-        align: "center" as const,
-        sorter: "default" as const,
-      }]
-    : [],
   {
     title: "先手胜率",
     key: "starterWinRate",

@@ -13,6 +13,7 @@ interface TeamStats {
   followerWinRate: number;
   winDiff: number;
   banned: number;
+  bp: number;
 }
 
 export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
@@ -21,7 +22,7 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
   const teamStatsMap = Object.fromEntries(
     Object.entries(teamBasicStatsMap)
       .map(([teamId, teamBasicStats]) => {
-        const { total, win, starterTotal, starterWin, followerTotal, followerWin } = teamBasicStats;
+        const { total, win, starterTotal, starterWin, followerTotal, followerWin, banned } = teamBasicStats;
 
         const stats: TeamStats = {
           teamId,
@@ -32,6 +33,7 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
           starterWinRate: divide(starterWin, starterTotal),
           followerWinRate: divide(followerWin, followerTotal),
           winDiff: win - (total - win),
+          bp: total + banned,
         };
         return [teamId, stats];
       }),
