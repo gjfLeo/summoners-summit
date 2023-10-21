@@ -409,5 +409,101 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+      ],
+      parts: [
+        {
+          name: "DAY1",
+          date: "2023-10-19",
+          matches: [
+            {
+              playerA: "周正福",
+              playerB: "皮皮鸭",
+              video: "https://www.bilibili.com/video/BV1zj411v7L1",
+              banned: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["重云", "北斗", "雷泽"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["神里绫华", "宵宫", "申鹤"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["流浪者", "莫娜", "优菈"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "音尘",
+              playerB: "今天不想吃苹果",
+              video: "https://www.bilibili.com/video/BV1zj411v7L1",
+              banned: [
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["班尼特", "可莉", "赛诺"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });

@@ -21,7 +21,7 @@ export default defineTournament({
             {
               playerA: "亦然",
               playerB: "雪国Ink",
-              video: "https://live.i3839.com/n/hykb/zhibo/m/index.php?comm_id=14",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
                 {
                   playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
@@ -46,7 +46,7 @@ export default defineTournament({
             {
               playerA: "喵帕斯",
               playerB: "柚柚恩",
-              video: "https://live.i3839.com/n/hykb/zhibo/m/index.php?comm_id=14",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
                 {
                   playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
@@ -63,6 +63,74 @@ export default defineTournament({
                 {
                   playerACharacters: ["神里绫华", "八重神子", "申鹤"],
                   playerBCharacters: ["莫娜", "凝光", "芭芭拉"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "DAY2",
+          date: "2023-10-20",
+          matches: [
+            {
+              playerA: "Dr.666",
+              playerB: "坤扬",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["甘雨", "行秋", "神里绫华"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["雷电将军", "申鹤", "迪奥娜"],
+                  playerBCharacters: ["申鹤", "雷电将军", "重云"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["雷电将军", "申鹤", "迪奥娜"],
+                  playerBCharacters: ["申鹤", "雷电将军", "优菈"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "重云"],
+                  playerBCharacters: ["申鹤", "雷电将军", "优菈"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "帝降北渚",
+              playerB: "LL起翼夜鹰",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["雷电将军", "申鹤", "重云"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["流浪者", "莫娜", "优菈"],
+                  playerBCharacters: ["北斗", "雷泽", "重云"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["雷电将军", "香菱", "纳西妲"],
+                  playerBCharacters: ["宵宫", "申鹤", "神里绫华"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["流浪者", "莫娜", "优菈"],
+                  playerBCharacters: ["宵宫", "申鹤", "神里绫华"],
                   starter: "B",
                   winner: "A",
                 },
