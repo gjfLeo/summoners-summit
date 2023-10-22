@@ -1943,8 +1943,6 @@ export default defineTournament({
               banned: [
                 {
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
-                  playerAActions: defineActions({
-                  }),
                   playerBCharacters: ["班尼特", "赛诺", "愚人众·火之债务处理人"],
                 },
               ],
