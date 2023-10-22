@@ -8,6 +8,8 @@ const playerNicknameMapRaw: Record<string, string> = {
   "RR夜莺": "LL起翼夜鹰",
   "RR抒情夜莺": "LL起翼夜鹰",
   "夜鹰": "LL起翼夜鹰",
+  
+  "卡密sama42": "卡密sama",
 };
 
 export const playerNicknameMap = Object.fromEntries(
