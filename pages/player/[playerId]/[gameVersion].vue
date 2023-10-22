@@ -3,6 +3,7 @@
   <NText v-if="player.aliases?.length" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
 
   <div class="mt flex flex-wrap justify-center gap-8">
+    <NStatistic label="统计场数" :value="matchTotal" />
     <NStatistic label="场次胜率" :value="matchWinRate" />
     <NStatistic label="对局胜率" :value="gameWinRate" />
   </div>
