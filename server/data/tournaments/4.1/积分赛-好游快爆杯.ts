@@ -9,6 +9,7 @@ export default defineTournament({
       name: "8进4",
       rules: [
         "BO3",
+        "征服",
         ["禁用角色", "对阵双方各禁用一张角色牌"],
         ["禁用阵容", "对阵双方各准备3套阵容，禁用对手一套阵容"],
         ["可重复角色", "每名选手的3套阵容至少包含7张不同角色牌"],
@@ -133,6 +134,86 @@ export default defineTournament({
                   playerBCharacters: ["宵宫", "申鹤", "神里绫华"],
                   starter: "B",
                   winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "半决赛",
+      rules: [
+        "BO3",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备3套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的3套阵容至少包含7张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-10-21",
+          matches: [
+            {
+              playerA: "喵帕斯",
+              playerB: "坤扬",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["刻晴", "班尼特", "可莉"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
+                  playerBCharacters: ["班尼特", "可莉", "刻晴"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "八重神子"],
+                  playerBCharacters: ["班尼特", "可莉", "刻晴"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "八重神子"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "帝降北渚",
+              playerB: "雪国Ink",
+              video: "",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "芭芭拉", "凝光"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["雷电将军", "香菱", "纳西妲"],
+                  playerBCharacters: ["凝光", "迪希雅", "钟离"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["八重神子", "申鹤", "神里绫华"],
+                  playerBCharacters: ["珊瑚宫心海", "芭芭拉", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["雷电将军", "香菱", "纳西妲"],
+                  playerBCharacters: ["珊瑚宫心海", "芭芭拉", "诺艾尔"],
+                  starter: "B",
+                  winner: "B",
                 },
               ],
             },

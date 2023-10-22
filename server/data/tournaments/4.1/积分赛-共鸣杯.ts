@@ -505,5 +505,71 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: [
+        "BO7",
+        "征服",
+        ["禁用阵容", "对阵双方各准备5套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的5套阵容至少包含11张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-10-21",
+          matches: [
+            {
+              playerA: "音尘",
+              playerB: "皮皮鸭",
+              video: "https://www.bilibili.com/video/BV1TH4y197KD",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "可莉", "赛诺"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["重云", "北斗", "雷泽"],
+                  playerBCharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "莫娜", "纳西妲"],
+                  playerBCharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "愚人众·火之债务处理人", "八重神子"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "愚人众·火之债务处理人", "八重神子"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["流浪者", "莫娜", "优菈"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
