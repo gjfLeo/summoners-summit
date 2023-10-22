@@ -3,6 +3,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
   },
+  "editor.indentSize": 2,
   "files.associations": {
     "*.css": "postcss",
   },
