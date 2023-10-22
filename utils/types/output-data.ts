@@ -31,12 +31,17 @@ export interface TournamentPart {
 export interface Match {
   id: string;
   tournamentId: string;
+  tournamentName: string;
+  partName: string;
   gameVersion: string;
   name: string;
   date: string;
   video?: string;
-  playerA: string | number;
-  playerB: string | number;
+
+  playerAId: string;
+  playerANickname: string;
+  playerBId: string;
+  playerBNickname: string;
   winner: "A" | "B";
   banned?: BannedData[];
   gameIds: string[];
@@ -59,8 +64,10 @@ export interface Game {
   gameName: string;
   video?: string;
 
-  playerA: string | number;
-  playerB: string | number;
+  playerAId: string;
+  playerANickname: string;
+  playerBId: string;
+  playerBNickname: string;
   playerACharacters: Deck["characterCards"];
   playerADeckId?: string;
   playerBCharacters: Deck["characterCards"];
@@ -69,6 +76,12 @@ export interface Game {
   starter: "A" | "B" | "";
   winner: "A" | "B";
   turns?: number;
+}
+
+export interface Player {
+  id: string;
+  uniqueName: string;
+  aliases?: string[];
 }
 
 export interface R {

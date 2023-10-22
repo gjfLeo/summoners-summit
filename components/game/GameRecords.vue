@@ -19,9 +19,9 @@
             {{ game.gameName }}
           </div>
 
-          <div class="self-center justify-self-end"><PlayerName :player="game.playerA || '未知选手'" /></div>
+          <div class="self-center justify-self-end"><PlayerName :id="game.playerAId" :nickname="game.playerANickname" /></div>
           <div />
-          <div class="self-center justify-self-start"><PlayerName :player="game.playerB || '未知选手'" /></div>
+          <div class="self-center justify-self-start"><PlayerName :id="game.playerBId" :nickname="game.playerBNickname" /></div>
 
           <div class="self-center justify-self-end"><TeamAvatars :team="game.playerACharacters" /></div>
           <div class="self-center justify-self-center text-sm">VS</div>

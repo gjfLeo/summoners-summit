@@ -1,9 +1,15 @@
 <template>
-  {{ player }}
+  <template v-if="nickname">
+    <NuxtLink :to="`/player/${id}`">{{ nickname }}</NuxtLink>
+  </template>
+  <template v-else>
+    未知选手
+  </template>
 </template>
 
 <script lang="ts" setup>
 defineProps<{
-  player: string | number;
+  id: string;
+  nickname: string;
 }>();
 </script>

@@ -1,16 +1,32 @@
 import { createHash } from "node:crypto";
-import type { ActionCard, BannedData, Deck, Game, Match, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "../../utils/types";
+import type { ActionCard, BannedData, Deck, Game, Match, Player, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "../../utils/types";
 import { actionCardSorter, characterCardSorter } from "../../utils/types";
 import tournamentsRaw from "./tournaments";
+import { playerNicknameMap } from "./players";
 
 const tournamentById: Record<string, Tournament> = {};
 const matchById: Record<string, Match> = {};
 const gameById: Record<string, Game> = {};
 const deckById: Record<string, Deck> = {};
+const playerById: Record<string, Player> = {};
 
 function getHashValue(raw: string): string {
   const md5 = createHash("md5").update(raw);
   return md5.digest("hex").toString().slice(8, 24);
+}
+
+function registerPlayer(uniqueName: string) {
+  // 如果在map中，说明该昵称非uniqueName
+  if (playerNicknameMap[uniqueName]) {
+    return registerPlayer(playerNicknameMap[uniqueName]);
+  }
+  const id = getHashValue(uniqueName);
+  // 如果已存在，忽略
+  if (!playerById[id]) {
+    const aliases = Object.entries(playerNicknameMap).filter(([alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
+    playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
+  }
+  return id;
 }
 
 function registerDeck(characters: Deck["characterCards"], actions?: Deck["actionCards"]) {
@@ -69,6 +85,12 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             banned: bannedRaw,
             games: gamesRaw,
           } = matchRaw;
+
+          const playerAId = registerPlayer(playerA);
+          const playerANickname = playerA;
+          const playerBId = registerPlayer(playerB);
+          const playerBNickname = playerB;
+
           matchTotalIndex++;
           const matchId = tournamentId + matchTotalIndex.toString().padStart(2, "0");
           const matchName = matchesRaw.length > 1 ? `第${matchIndex + 1}场` : "";
@@ -119,8 +141,10 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               gameName: stageName + partName + matchName + (gamesRaw.length > 1 ? `第${gameIndex + 1}局` : ""),
               video,
 
-              playerA,
-              playerB,
+              playerAId,
+              playerANickname,
+              playerBId,
+              playerBNickname,
               playerACharacters,
               playerADeckId,
               playerBCharacters,
@@ -136,11 +160,15 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           matchById[matchId] = {
             id: matchId,
             tournamentId,
+            tournamentName,
+            partName: `${stageName}${partName}`,
             gameVersion,
             name: matchName,
             date,
-            playerA,
-            playerB,
+            playerAId,
+            playerANickname,
+            playerBId,
+            playerBNickname,
             video,
             winner,
             banned,
@@ -172,4 +200,5 @@ export {
   matchById,
   gameById,
   deckById,
+  playerById,
 };

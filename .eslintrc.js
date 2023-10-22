@@ -233,13 +233,9 @@ module.exports = {
       },
     },
     {
-      files: "data/players.ts",
+      files: "server/data/players/index.ts",
       rules: {
-        "object-curly-newline": [
-          "warn", {
-            minProperties: 3,
-          },
-        ],
+        "quote-props": ["warn", "always"],
       },
     },
   ],

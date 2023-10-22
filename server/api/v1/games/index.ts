@@ -1,12 +1,14 @@
-import type { Game } from "~/utils/types";
 import { gameById } from "~/server/data";
+import type { Game } from "~/utils/types";
 
 function getGameMirror(game: Game): Game {
-  const { playerA, playerB, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
+  const { playerAId, playerANickname, playerBId, playerBNickname, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
   return {
     ...game,
-    playerA: playerB,
-    playerB: playerA,
+    playerAId: playerBId,
+    playerBId: playerAId,
+    playerANickname: playerBNickname,
+    playerBNickname: playerANickname,
     playerACharacters: playerBCharacters,
     playerBCharacters: playerACharacters,
     playerADeckId: playerBDeckId,
@@ -25,7 +27,7 @@ export default defineEventHandler((event) => {
   const {
     gameVersion,
     matchId,
-    player,
+    playerId,
     deckId,
     opponentCharacters,
     characters,
@@ -41,12 +43,12 @@ export default defineEventHandler((event) => {
   if (matchId) {
     list = list.filter(game => game.matchId === matchId);
   }
-  const mirror = mirrorOverrideMap[mirrorOverride as string] ?? (player || deckId || characters);
+  const mirror = mirrorOverrideMap[mirrorOverride as string] ?? (playerId || deckId || characters);
   if (mirror) {
     list = list.flatMap(game => [game, getGameMirror(game)]);
   }
-  if (player) {
-    list = list.filter(game => game.playerA === player);
+  if (playerId) {
+    list = list.filter(game => game.playerAId === playerId);
   }
   if (deckId) {
     list = list.filter(game => game.playerADeckId === deckId);

@@ -2,6 +2,7 @@ import type { CharacterCard } from "~/utils/types";
 
 interface ApiGameListOptions {
   gameVersion?: string;
+  playerId?: string;
   matchId?: string;
   deckId?: string;
   characters?: CharacterCard[];
@@ -17,6 +18,7 @@ function getMirrorParam(mirror?: boolean) {
 export default async function useApiGameList(options?: ApiGameListOptions) {
   const query = {
     gameVersion: options?.gameVersion === "all" ? undefined : options?.gameVersion,
+    playerId: options?.playerId,
     deckId: options?.deckId,
     matchId: options?.matchId,
     characters: options?.characters?.join(","),
