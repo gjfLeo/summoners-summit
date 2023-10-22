@@ -23,7 +23,7 @@ function registerPlayer(uniqueName: string) {
   const id = getHashValue(uniqueName);
   // 如果已存在，忽略
   if (!playerById[id]) {
-    const aliases = Object.entries(playerNicknameMap).filter(([alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
+    const aliases = Object.entries(playerNicknameMap).filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
     playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
   }
   return id;
