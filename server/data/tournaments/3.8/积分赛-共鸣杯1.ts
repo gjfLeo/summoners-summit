@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, Chongyun, Cyno, Diluc,ElectroHypostasis, Eula, FatuiPyroAgent, Fischl, Ganyu, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Tartaglia, Venti, Xingqiu, YaeMiko, Yanfei, Yoimiya, defineTournament } from "~/utils/types";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, Chongyun, Cyno, Diluc, ElectroHypostasis, Eula, FatuiPyroAgent, Fischl, Ganyu, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Venti, Xingqiu, YaeMiko, Yanfei, Yoimiya, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「日耀」共鸣杯",
