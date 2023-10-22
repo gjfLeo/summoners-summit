@@ -29,11 +29,11 @@ import { NH1, NH2, NStatistic, NText } from "naive-ui";
 const route = useRoute();
 const playerId = route.params.playerId as string;
 
-useHead({ title: `${playerId} - 玩家数据 | 召唤之巅` });
-
 const { gameVersion } = useGameVersion({ detect: true });
 
 const { player } = await useApiPlayer(playerId);
+useHead({ title: `${player.uniqueName} - 玩家数据 | 召唤之巅` });
+
 const { matchList } = await useApiMatchList({ gameVersion: gameVersion.value, playerId });
 const { gameList } = await useApiGameList({ gameVersion: gameVersion.value, playerId });
 const matches = Object.fromEntries(matchList.map(match => [match.id, match]));
