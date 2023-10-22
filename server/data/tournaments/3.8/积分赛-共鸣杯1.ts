@@ -1,4 +1,4 @@
-import { Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, Chongyun, Cyno, ElectroHypostasis, Eula, FatuiPyroAgent, Fischl, Ganyu, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Tartaglia, Venti, Xingqiu, YaeMiko, Yanfei, Yoimiya, defineTournament } from "~/utils/types";
+import { Amber, AratakiItto, Barbara, Beidou, Bennett, Candace, Chongyun, Cyno, Diluc,ElectroHypostasis, Eula, FatuiPyroAgent, Fischl, Ganyu, KamisatoAyaka, Keqing, Klee, KujouSara, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, Tartaglia, Venti, Xingqiu, YaeMiko, Yanfei, Yoimiya, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「日耀」共鸣杯",
@@ -201,19 +201,19 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: [Klee, Keqing, Bennett],
-                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  playerBCharacters: [Bennett, Chongyun, Diluc],
                   starter: "A",
                   winner: "A",
                 },
                 {
                   playerACharacters: [Candace, Razor, RaidenShogun],
-                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  playerBCharacters: [Bennett, Chongyun, Diluc],
                   starter: "A",
                   winner: "A",
                 },
                 {
                   playerACharacters: [Amber, AratakiItto, Noelle],
-                  playerBCharacters: [Bennett, Chongyun, Tartaglia],
+                  playerBCharacters: [Bennett, Chongyun, Diluc],
                   starter: "A",
                   winner: "A",
                 },
