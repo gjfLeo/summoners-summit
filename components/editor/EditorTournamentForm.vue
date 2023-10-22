@@ -178,8 +178,10 @@ const ruleOptions = [
   "禁用角色 - 对阵双方各禁用一张角色牌",
   "禁用阵容 - 对阵双方各准备3套阵容，禁用对手一套阵容",
   "禁用阵容 - 对阵双方各准备4套阵容，禁用对手一套阵容",
+  "禁用阵容 - 对阵双方各准备5套阵容，禁用对手一套阵容",
   "可重复角色 - 每名选手的3套阵容至少包含7张不同角色牌",
   "可重复角色 - 每名选手的4套阵容至少包含9张不同角色牌",
+  "可重复角色 - 每名选手的5套阵容至少包含11张不同角色牌",
 ].map(label => ({ label, value: label }));
 
 const issueTitle = computed(() => `提交数据：${[tournamentName.value, stageName.value, partName.value].filter(s => s).join(" ")}`);
