@@ -221,5 +221,66 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-10-22",
+          matches: [
+            {
+              playerA: "喵帕斯",
+              playerB: "雪国Ink",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "八重神子"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "凝光"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "凝光"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "珊瑚宫心海", "诺艾尔"],
+                  playerBCharacters: ["雷泽", "宵宫", "赛诺"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "珊瑚宫心海", "诺艾尔"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
