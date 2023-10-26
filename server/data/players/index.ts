@@ -45,7 +45,11 @@ const playerNicknameMapRaw: Record<string, string> = {
   "「亦然」": "亦然",
   "zjyang": "宇宙蓝色闪光",
   "今天不想吃苹果_": "今天不想吃苹果",
-  
+
+  "甜甜花酿鸡队": "",
+  "莲花酥队": "",
+  "黄油蟹蟹队": "",
+  "提瓦特煎蛋队": "",
 };
 
 export const playerNicknameMap = Object.fromEntries(
