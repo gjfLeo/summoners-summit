@@ -46,6 +46,7 @@ const { gameVersion, gameVersionOptions, gameVersionPath } = useGameVersion();
 const menuList = [
   { route: "/tournaments", name: "赛事" },
   { route: "/teams", name: "阵容" },
+  { route: "/players", name: "选手" },
 ];
 
 const activeKey = computed(() => {
