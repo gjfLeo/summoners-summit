@@ -38,9 +38,9 @@ export interface Match {
   date: string;
   video?: string;
 
-  playerAId: string;
+  playerAId?: string;
   playerANickname: string;
-  playerBId: string;
+  playerBId?: string;
   playerBNickname: string;
   winner: "A" | "B";
   banned?: BannedData[];
@@ -64,9 +64,9 @@ export interface Game {
   gameName: string;
   video?: string;
 
-  playerAId: string;
+  playerAId?: string;
   playerANickname: string;
-  playerBId: string;
+  playerBId?: string;
   playerBNickname: string;
   playerACharacters: Deck["characterCards"];
   playerADeckId?: string;

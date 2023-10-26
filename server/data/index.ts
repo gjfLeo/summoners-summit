@@ -16,8 +16,11 @@ function getHashValue(raw: string): string {
 }
 
 function registerPlayer(uniqueName: string) {
+  if (uniqueName === "") {
+    return undefined;
+  }
   // 如果在map中，说明该昵称非uniqueName
-  if (playerNicknameMap[uniqueName]) {
+  if (playerNicknameMap[uniqueName] !== undefined) {
     return registerPlayer(playerNicknameMap[uniqueName]);
   }
   const id = getHashValue(uniqueName);
