@@ -1,4 +1,3 @@
-import t0 from "./其他-主播邀请赛";
 import t11 from "./积分赛-米游社";
 import t12 from "./积分赛-TT语音";
 import t13 from "./积分赛-NGA";
@@ -10,7 +9,7 @@ import t32 from "./积分赛试办赛-火星杯";
 import t33 from "./积分赛试办赛-月话杯";
 
 export default [
-  t0,
+  // t0,
 
   t11,
   t12,
