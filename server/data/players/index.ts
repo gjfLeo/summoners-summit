@@ -37,6 +37,15 @@ const playerNicknameMapRaw: Record<string, string> = {
   "小宇cyy": "小宇",
   "魔法绵羊Tobby": "Tobby",
   "xhope": "Xhope",
+  "pupa": "PUPA",
+  "tonbo": "Tonbo",
+  "蛋黄汐夕": "水果鲨啦",
+  "Shana": "明暗螺旋",
+  "只玩水草皇呜呜": "只玩水皇草呜呜",
+  "「亦然」": "亦然",
+  "zjyang": "宇宙蓝色闪光",
+  "今天不想吃苹果_": "今天不想吃苹果",
+  
 };
 
 export const playerNicknameMap = Object.fromEntries(
