@@ -22,8 +22,10 @@ export default defineEventHandler<R & TeamBasicStatsData>((event) => {
   const { gameVersion } = getQuery(event);
 
   let gameList = Object.values(gameById);
+  let matchList = Object.values(matchById);
   if (gameVersion) {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
+    matchList = matchList.filter(match => match.gameVersion === gameVersion);
   }
 
   const teamStatsMap: Record<string, TeamBasicStats> = {};
@@ -38,11 +40,6 @@ export default defineEventHandler<R & TeamBasicStatsData>((event) => {
       if (game.starter && game.starter !== player) teamStat.followerTotal++;
       if (game.winner === player && game.starter && game.starter !== player) teamStat.followerWin++;
     }
-  }
-
-  let matchList = Object.values(matchById);
-  if (gameVersion) {
-    matchList = matchList.filter(match => match.gameVersion === gameVersion);
   }
 
   for (const match of matchList) {
