@@ -40,6 +40,7 @@ export default defineEventHandler<R & PlayerBasicStatsData>((event) => {
   for (const match of matchList) {
     for (const player of (["A", "B"] as const)) {
       const playerId = match[`player${player}Id`];
+      if (!playerId) continue;
       const playerStats = playerStatsMap[playerId] ?? (playerStatsMap[playerId] = initPlayerStats(playerId));
       playerStats.matchTotal++;
       if (match.winner === player) playerStats.matchWin++;
@@ -48,6 +49,7 @@ export default defineEventHandler<R & PlayerBasicStatsData>((event) => {
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
       const playerId = game[`player${player}Id`];
+      if (!playerId) continue;
       const playerStats = playerStatsMap[playerId] ?? (playerStatsMap[playerId] = initPlayerStats(playerId));
       playerStats.gameTotal++;
       if (game.winner === player) playerStats.gameWin++;

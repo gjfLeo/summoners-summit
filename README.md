@@ -48,6 +48,13 @@ pnpm run preview
 
 </details>
 
+## 关于数据
+
+由于是纯前端项目，目前数据全部存放于源代码中。不过因为采用了 SSG 生成页面，所以至少目前为止问题倒也不大。
+
+- 比赛对局等信息维护在[这里](./server/data/tournaments)。
+- 选手马甲对应关系维护在[这里](./server/data/players/index.ts)。
+
 ## API
 
 项目包含内置 API，主要用于静态生成网页时获取数据。
