@@ -3,6 +3,7 @@ import tournamentsRaw from "./tournaments";
 import { playerNicknameMap } from "./players";
 import type { ActionCard, BannedData, Deck, Game, Match, Player, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
+import type { PlayerAchievement } from "~/utils/achievements";
 
 const tournamentById: Record<string, Tournament> = {};
 const matchById: Record<string, Match> = {};
@@ -30,6 +31,11 @@ function registerPlayer(uniqueName: string) {
     playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
   }
   return id;
+}
+function registerPlayerAchievement(playerId: string | undefined, achievement: PlayerAchievement) {
+  if (playerId && !playerById[playerId].achievements?.includes(achievement)) {
+    playerById[playerId].achievements = (playerById[playerId].achievements ?? []).concat([achievement]);
+  }
 }
 
 function registerDeck(characters: Deck["characterCards"], actions?: Deck["actionCards"]) {
@@ -66,6 +72,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     // stage
     const {
       name: stageName,
+      achievements,
       rules,
       parts: partsRaw,
     } = stageRaw;
@@ -93,6 +100,12 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const playerANickname = playerA;
           const playerBId = registerPlayer(playerB);
           const playerBNickname = playerB;
+          if (achievements?.length) {
+            achievements.forEach((achievement) => {
+              registerPlayerAchievement(playerAId, achievement);
+              registerPlayerAchievement(playerBId, achievement);
+            });
+          }
 
           matchTotalIndex++;
           const matchId = tournamentId + matchTotalIndex.toString().padStart(2, "0");

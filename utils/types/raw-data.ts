@@ -1,3 +1,4 @@
+import type { PlayerAchievement } from "../achievements";
 import type { Deck, TournamentRules } from "./output-data";
 
 export interface TournamentRawData {
@@ -11,6 +12,7 @@ export interface StageRawData {
   name: string;
   rules?: TournamentRules;
   parts: PartRawData[];
+  achievements?: PlayerAchievement[];
 }
 
 export interface PartRawData {

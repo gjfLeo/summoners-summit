@@ -1,3 +1,4 @@
+import type { PlayerAchievement } from "../achievements";
 import type { ActionCard, CharacterCard } from "./card";
 
 export interface Deck {
@@ -82,6 +83,7 @@ export interface Player {
   id: string;
   uniqueName: string;
   aliases?: string[];
+  achievements?: PlayerAchievement[];
 }
 
 export interface R {

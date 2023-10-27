@@ -836,6 +836,7 @@ export default defineTournament({
     },
     {
       name: "16进8",
+      achievements: ["season-1-crown"],
       rules: [
         "BO3",
         "征服",

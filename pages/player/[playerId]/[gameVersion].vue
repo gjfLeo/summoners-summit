@@ -2,6 +2,19 @@
   <NH1>{{ player.uniqueName }}</NH1>
   <NText v-if="player.aliases?.length" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
 
+  <div v-if="player.achievements?.length">
+    <div v-for="achievement in player.achievements" :key="achievement" class="mt flex items-center gap-4">
+      <img
+        :src="ALL_ACHIEVEMENTS[achievement].cardBackImage" :alt="ALL_ACHIEVEMENTS[achievement].cardBackName"
+        class="inline-block aspect-ratio-200/343 h-30 object-cover"
+      />
+      <div class="flex flex-col">
+        <NH5>龙脊雪山·冠冕</NH5>
+        <NText>在全民赛事第一赛季的影幻杯中取得十六强。</NText>
+      </div>
+    </div>
+  </div>
+
   <div class="mt flex flex-wrap justify-center gap-8">
     <NStatistic label="统计场数" :value="matchTotal" />
     <NStatistic label="场次胜率" :value="matchWinRate" />
@@ -24,7 +37,8 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { NH1, NH2, NStatistic, NText } from "naive-ui";
+import { NH1, NH2, NH5, NStatistic, NText } from "naive-ui";
+import { ALL_ACHIEVEMENTS } from "~/utils/achievements";
 
 const route = useRoute();
 const playerId = route.params.playerId as string;
