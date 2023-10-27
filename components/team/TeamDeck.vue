@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type ActionCard, actionCardSorter } from "~/utils/types";
+import { type ActionCard, actionCardSorter } from "~/utils/cards";
 
 const props = defineProps<{
   typicalActions: ReturnType<typeof useCardUsage>["typicalActions"];

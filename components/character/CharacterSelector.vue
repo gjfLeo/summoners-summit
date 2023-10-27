@@ -22,7 +22,7 @@ import { NSelect, NTag, NText, NTooltip } from "naive-ui";
 import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderTag } from "naive-ui";
 
 import { CardAvatar } from "#components";
-import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/types";
+import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/cards";
 
 const props = defineProps<{
   modelValue: CharacterCard[];

@@ -12,8 +12,7 @@
 import { NAutoComplete, NText } from "naive-ui";
 import PinyinMatch from "pinyin-match";
 import { CardImage } from "#components";
-import type { ActionCard } from "~/utils/types";
-import { ALL_ACTION_CARDS } from "~/utils/types";
+import { ALL_ACTION_CARDS, type ActionCard } from "~/utils/cards";
 
 const props = defineProps<{
   actions?: Partial<Record<ActionCard, number>>;

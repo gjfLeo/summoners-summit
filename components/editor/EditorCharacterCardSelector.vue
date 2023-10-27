@@ -27,7 +27,7 @@ import { NAutoComplete, NAvatar, NPopover, NText } from "naive-ui";
 import PinyinMatch from "pinyin-match";
 import { CardImage } from "#components";
 import type { CharacterCard } from "~/utils/types";
-import { ALL_CHARACTER_CARDS } from "~/utils/types";
+import { ALL_CHARACTER_CARDS } from "~/utils/cards";
 import { characterAvatarImages } from "~/utils/images";
 
 defineProps<{

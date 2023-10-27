@@ -1,4 +1,4 @@
-import { ALL_ACTION_CARDS } from "~/utils/types";
+import { ALL_ACTION_CARDS } from "~/utils/cards";
 import type { ActionCard, R } from "~/utils/types";
 
 export default defineEventHandler<R & { actionCards: ActionCard[] }>(() => {

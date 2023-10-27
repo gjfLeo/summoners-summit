@@ -1,76 +1,19 @@
-import { AbyssLectorFathomlessFlames, Albedo, Amber, AratakiItto, Baizhu, Barbara, Beidou, Bennett, Candace, type CharacterCard, Chongyun, Collei, Cyno, Dehya, Diluc, Diona, Dori, ElectroHypostasis, Eula, FatuiCyroCicinMage, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Ganyu, HuTao, JadeplumeTerrorshroom, Jean, KaedeharaKazuha, Kaeya, KamisatoAyaka, KamisatoAyato, Keqing, Klee, KujouSara, Lisa, MaguuKenki, Mona, Nahida, Nilou, Ningguang, Noelle, Qiqi, RaidenShogun, Razor, RhodeiaOfLoch, SangonomiyaKokomi, Shenhe, StonehideLawachurl, Sucrose, Tartaglia, Tighnari, Venti, Wanderer, Xiangling, Xiao, Xingqiu, YaeMiko, Yanfei, Yaoyao, Yoimiya, Zhongli, characterCardSorter } from "~/utils/types";
+import { ALL_CHARACTER_CARDS_INFO, characterCardSorter } from "~/utils/cards";
+import { type CharacterCard } from "~/utils/types";
 
-const characterIds: Record<CharacterCard, string> = {
-  [Ganyu]: "Ganyu",
-  [Diona]: "Diona",
-  [Kaeya]: "Kaeya",
-  [Chongyun]: "Chongyun",
-  [KamisatoAyaka]: "KamisatoAyaka",
-  [Eula]: "Eula",
-  [Shenhe]: "Shenhe",
-  [Qiqi]: "Qiqi",
+const characterIds = Object.fromEntries(
+  Object.entries(ALL_CHARACTER_CARDS_INFO)
+    .map(([card, { nameEn }]) => {
+      const characterId = nameEn.split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join("");
+      return [card, characterId];
+    }),
+) as Record<CharacterCard, string>;
 
-  [Barbara]: "Barbara",
-  [Xingqiu]: "Xingqiu",
-  [Mona]: "Mona",
-  [Tartaglia]: "Tartaglia",
-  [SangonomiyaKokomi]: "SangonomiyaKokomi",
-  [KamisatoAyato]: "KamisatoAyato",
-  [Candace]: "Candace",
-  [Nilou]: "Nilou",
-
-  [Diluc]: "Diluc",
-  [Xiangling]: "Xiangling",
-  [Bennett]: "Bennett",
-  [Amber]: "Amber",
-  [Yoimiya]: "Yoimiya",
-  [Klee]: "Klee",
-  [HuTao]: "HuTao",
-  [Yanfei]: "Yanfei",
-  [Dehya]: "Dehya",
-
-  [Fischl]: "Fischl",
-  [Razor]: "Razor",
-  [Keqing]: "Keqing",
-  [Cyno]: "Cyno",
-  [Beidou]: "Beidou",
-  [KujouSara]: "KujouSara",
-  [RaidenShogun]: "RaidenShogun",
-  [YaeMiko]: "YaeMiko",
-  [Lisa]: "Lisa",
-  [Dori]: "Dori",
-
-  [Sucrose]: "Sucrose",
-  [Jean]: "Jean",
-  [Venti]: "Venti",
-  [Xiao]: "Xiao",
-  [KaedeharaKazuha]: "KaedeharaKazuha",
-  [Wanderer]: "Wanderer",
-
-  [Ningguang]: "Ningguang",
-  [Noelle]: "Noelle",
-  [Zhongli]: "Zhongli",
-  [Albedo]: "Albedo",
-  [AratakiItto]: "AratakiItto",
-
-  [Collei]: "Collei",
-  [Tighnari]: "Tighnari",
-  [Nahida]: "Nahida",
-  [Yaoyao]: "Yaoyao",
-  [Baizhu]: "Baizhu",
-
-  [FatuiCyroCicinMage]: "FatuiCyroCicinMage",
-  [RhodeiaOfLoch]: "RhodeiaOfLoch",
-  [FatuiMirrorMaiden]: "FatuiMirrorMaiden",
-  [FatuiPyroAgent]: "FatuiPyroAgent",
-  [AbyssLectorFathomlessFlames]: "AbyssLectorFathomlessFlames",
-  [ElectroHypostasis]: "ElectroHypostasis",
-  [MaguuKenki]: "MaguuKenki",
-  [StonehideLawachurl]: "StonehideLawachurl",
-  [JadeplumeTerrorshroom]: "JadeplumeTerrorshroom",
-};
-
-const characterById = Object.fromEntries(Object.entries(characterIds).map(([character, id]) => ([id, character as CharacterCard])));
+const characterById = Object.fromEntries(
+  Object.entries(characterIds)
+    .map(([character, id]) => ([id, character as CharacterCard])),
+);
 
 export type UseTeamSource = string | CharacterCard[] | { team: string | CharacterCard[] };
 

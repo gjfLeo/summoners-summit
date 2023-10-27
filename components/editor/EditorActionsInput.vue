@@ -24,8 +24,8 @@
 <script lang="ts" setup>
 import type { NSelect } from "naive-ui";
 import { NAutoComplete, NButton, NForm, NFormItem, NText } from "naive-ui";
-import { type ActionCard, actionCardSorter } from "~/utils/types";
 import { EditorActionCardSelector } from "#components";
+import { type ActionCard, actionCardSorter } from "~/utils/cards";
 
 const props = defineProps<{
   actions?: Partial<Record<ActionCard, number>>;
