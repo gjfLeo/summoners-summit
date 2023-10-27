@@ -9,8 +9,8 @@
         class="inline-block aspect-ratio-200/343 h-30 object-cover"
       />
       <div class="flex flex-col">
-        <NH5>龙脊雪山·冠冕</NH5>
-        <NText>在全民赛事第一赛季的影幻杯中取得十六强。</NText>
+        <NH5>{{ ALL_ACHIEVEMENTS[achievement].cardBackName }}</NH5>
+        <NText>{{ ALL_ACHIEVEMENTS[achievement].description }}</NText>
       </div>
     </div>
   </div>
