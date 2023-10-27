@@ -1671,7 +1671,7 @@ export default defineTournament({
             {
               playerA: "Glyou_HZ",
               playerB: "蛋黄汐夕",
-              video: "https://www.bilibili.com/video/BV1p94y1L793",
+              video: "https://www.bilibili.com/video/BV1Vw411F7o6",
               banned: [
                 {
                   playerACharacters: ["重云", "雷泽", "北斗"],

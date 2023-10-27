@@ -1,4 +1,4 @@
-import { Barbara, Beidou, Bennett, Candace, Chongyun, Eula, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, Shenhe, YaeMiko, defineTournament } from "../../../../utils/types";
+import { Barbara, Beidou, Bennett, Candace, Chongyun, Eula, FatuiMirrorMaiden, FatuiPyroAgent, Fischl, Keqing, Klee, Mona, Nahida, Ningguang, Noelle, RaidenShogun, Razor, RhodeiaOfLoch, Shenhe, YaeMiko, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "好游快爆杯",
