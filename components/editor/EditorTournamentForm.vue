@@ -182,6 +182,7 @@ const ruleOptions = [
   "可重复角色 - 每名选手的3套阵容至少包含7张不同角色牌",
   "可重复角色 - 每名选手的4套阵容至少包含9张不同角色牌",
   "可重复角色 - 每名选手的5套阵容至少包含11张不同角色牌",
+  "备选牌组 - 每套阵容可准备3套牌组，上场时从中选择",
 ].map(label => ({ label, value: label }));
 
 const issueTitle = computed(() => `提交数据：${[tournamentName.value, stageName.value, partName.value].filter(s => s).join(" ")}`);
