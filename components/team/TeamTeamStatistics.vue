@@ -75,7 +75,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     sorter: "default",
     filterMultiple: false,
     filterOptions: [2, 3, 5].map(v => ({ label: `至少${v}场`, value: v })),
-    defaultFilterOptionValue: 2,
+    defaultFilterOptionValue: null,
     filter: (value, row) => row.total >= Number(value),
   },
   {
