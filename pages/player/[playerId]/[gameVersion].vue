@@ -3,16 +3,19 @@
   <NText v-if="player.aliases?.length" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
 
   <div v-if="player.achievements?.length">
-    <div v-for="achievement in player.achievements" :key="achievement" class="mt flex items-center gap-4">
-      <img
-        :src="ALL_ACHIEVEMENTS[achievement].cardBackImage" :alt="ALL_ACHIEVEMENTS[achievement].cardBackName"
-        class="inline-block aspect-ratio-200/343 h-30 object-cover"
-      />
-      <div class="flex flex-col">
-        <NH5>{{ ALL_ACHIEVEMENTS[achievement].cardBackName }}</NH5>
-        <NText>{{ ALL_ACHIEVEMENTS[achievement].description }}</NText>
+    <NCard v-for="achievement in player.achievements" :key="achievement" class="mt">
+      <div class="flex items-center gap-4">
+        <img
+          :src="ALL_ACHIEVEMENTS[achievement].cardBackImage" :alt="ALL_ACHIEVEMENTS[achievement].cardBackName"
+          class="inline-block aspect-ratio-200/343 h-30 object-cover"
+        />
+        <div class="flex flex-col gap-2">
+          <NH6>{{ ALL_ACHIEVEMENTS[achievement].cardBackName }}</NH6>
+          <NText>{{ ALL_ACHIEVEMENTS[achievement].description }}</NText>
+          <NText v-if="ALL_ACHIEVEMENTS[achievement].flavorText" :depth="3">{{ ALL_ACHIEVEMENTS[achievement].flavorText }}</NText>
+        </div>
       </div>
-    </div>
+    </NCard>
   </div>
 
   <div class="mt flex flex-wrap justify-center gap-8">
@@ -37,7 +40,7 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { NH1, NH2, NH5, NStatistic, NText } from "naive-ui";
+import { NCard, NH1, NH2, NStatistic, NText } from "naive-ui";
 import { ALL_ACHIEVEMENTS } from "~/utils/achievements";
 
 const route = useRoute();
