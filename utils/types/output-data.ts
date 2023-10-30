@@ -84,6 +84,7 @@ export interface Player {
   uniqueName: string;
   aliases?: string[];
   achievements?: PlayerAchievement[];
+  awards?: string[];
 }
 
 export interface R {

@@ -1,6 +1,7 @@
 <template>
   <NH1>{{ player.uniqueName }}</NH1>
-  <NText v-if="player.aliases?.length" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
+  <NText v-if="player.aliases?.length" class="mt block" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
+  <NText v-if="player.awards?.length" class="mt block" :depth="2">{{ player.awards.join("、") }}</NText>
 
   <div v-if="player.achievements?.length">
     <NCard v-for="achievement in player.achievements" :key="achievement" class="mt">
@@ -10,8 +11,8 @@
           class="inline-block aspect-ratio-200/343 h-30 object-cover"
         />
         <div class="flex flex-col gap-2">
-          <NH6>{{ ALL_ACHIEVEMENTS[achievement].cardBackName }}</NH6>
-          <NText>{{ ALL_ACHIEVEMENTS[achievement].description }}</NText>
+          <NText :depth="1" class="text-120%">{{ ALL_ACHIEVEMENTS[achievement].cardBackName }}</NText>
+          <NText :depth="2">{{ ALL_ACHIEVEMENTS[achievement].description }}</NText>
           <NText v-if="ALL_ACHIEVEMENTS[achievement].flavorText" :depth="3">{{ ALL_ACHIEVEMENTS[achievement].flavorText }}</NText>
         </div>
       </div>

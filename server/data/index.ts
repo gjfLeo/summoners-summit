@@ -37,6 +37,11 @@ function registerPlayerAchievement(playerId: string | undefined, achievement: Pl
     playerById[playerId].achievements = (playerById[playerId].achievements ?? []).concat([achievement]);
   }
 }
+function registerPlayerAward(playerId: string | undefined, award: string) {
+  if (playerId && !playerById[playerId].awards?.includes(award)) {
+    playerById[playerId].awards = (playerById[playerId].awards ?? []).concat([award]);
+  }
+}
 
 function registerDeck(characters: Deck["characterCards"], actions?: Deck["actionCards"]) {
   if (!actions) {
@@ -114,6 +119,11 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const aGoals = gamesRaw.filter(g => g.winner === "A").length;
           const bGoals = gamesRaw.filter(g => g.winner === "B").length;
           const winner = winnerRaw ?? (aGoals > bGoals ? "A" : "B");
+
+          if (stageName === "决赛" || partName === "决赛" || matchName === "决赛") {
+            if (winner === "A") registerPlayerAward(playerAId, `${gameVersion}\u2006${tournamentName}冠军`);
+            if (winner === "B") registerPlayerAward(playerBId, `${gameVersion}\u2006${tournamentName}冠军`);
+          }
 
           const banned = bannedRaw?.map((ban): BannedData => {
             const {
