@@ -53,7 +53,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     sorter: "default",
     filterMultiple: false,
     filterOptions: [2, 3, 5, 10].map(v => ({ label: `至少${v}场`, value: v })),
-    defaultFilterOptionValue: 3,
+    defaultFilterOptionValue: null,
     filter: (value, row) => row.matchTotal >= Number(value),
   },
   {
