@@ -43,6 +43,11 @@ export default defineNuxtConfig({
         // { "http-equiv": "Pragma", "content": "no-cache" },
         // { "http-equiv": "Expires", "content": "0" },
       ],
+      script: [
+        "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";",
+        { async: true, src: "https://www.statcounter.com/counter/counter.js" },
+        { async: true, src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" },
+      ],
     },
   },
 
