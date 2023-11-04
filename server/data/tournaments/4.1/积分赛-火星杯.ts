@@ -1926,7 +1926,7 @@ export default defineTournament({
                     "甜甜花酿鸡": 2,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
                 {
