@@ -21,7 +21,7 @@
             <NScrollbar class="h-full">
               <NLayout>
                 <NLayoutContent class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
-                  <NuxtPage />
+                  <NuxtPage v-cloak />
                 </NLayoutContent>
                 <NLayoutFooter bordered class="w-full" :style="{ height: footerHeight }">
                   <PageFooter />

@@ -1,5 +1,12 @@
 <template>
-  <div class="mb flex justify-center">
+  <div class="mb flex flex-row flex-wrap-reverse items-center justify-between gap-4">
+    <div>
+      <NInput v-model:value="playerFilter" size="small" clearable placeholder="选手昵称">
+        <template #suffix>
+          <NIcon><div class="i-carbon:search" /></NIcon>
+        </template>
+      </NInput>
+    </div>
     <NText :depth="3">统计可能不全，数据仅供参考</NText>
   </div>
   <NDataTable
@@ -12,8 +19,9 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { NDataTable, NText } from "naive-ui";
+import { NDataTable, NIcon, NInput, NText } from "naive-ui";
 import { divide } from "mathjs/number";
+import PinyinMatch from "pinyin-match";
 import { PlayerName } from "#components";
 
 useHead({ title: "选手 | 召唤之巅" });
@@ -21,8 +29,13 @@ useHead({ title: "选手 | 召唤之巅" });
 const { gameVersion } = useGameVersion({ detect: true });
 const { playerStatsMap } = await useApiPlayerStatsMap(gameVersion.value);
 
+const playerFilter = ref<string>("");
 const data = computed(() =>
   Object.values(playerStatsMap)
+    .filter((stats) => {
+      return !playerFilter.value || PinyinMatch.match(stats.uniqueName, playerFilter.value)
+      || stats.aliases?.some(name => PinyinMatch.match(name, playerFilter.value));
+    })
     .map(stats => ({
       key: stats.playerId,
       ...stats,

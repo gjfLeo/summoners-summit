@@ -4,6 +4,7 @@ import { gameById, matchById, playerById } from "~/server/data";
 interface PlayerBasicStats {
   playerId: string;
   uniqueName: string;
+  aliases?: string[];
   matchTotal: number;
   matchWin: number;
   gameTotal: number;
@@ -18,6 +19,7 @@ function initPlayerStats(playerId: string): PlayerBasicStats {
   return {
     playerId,
     uniqueName: playerById[playerId].uniqueName,
+    aliases: playerById[playerId].aliases,
     matchTotal: 0,
     matchWin: 0,
     gameTotal: 0,
