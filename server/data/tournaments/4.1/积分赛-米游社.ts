@@ -37,8 +37,8 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "Tobby",
-              playerB: "莉莉芭",
+              playerA: "莉莉芭",
+              playerB: "Tobby",
               video: "",
               games: [
                 {
