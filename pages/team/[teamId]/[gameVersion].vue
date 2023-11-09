@@ -19,7 +19,10 @@
       <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
     </div>
 
-    <NH3>典型构筑</NH3>
+    <NH3 class="flex items-center justify-between">
+      <div>典型构筑</div>
+      <NButton v-if="typicalDeck" size="small" @click="copyTypicalDeckShareCode">复制分享码</NButton>
+    </NH3>
     <template v-if="typicalDeck">
       <TeamDeck :typical-actions="typicalDeck.actionCards" />
       <div class="mt text-sm">
@@ -44,7 +47,8 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { NH3, NStatistic, NText } from "naive-ui";
+import { NAlert, NButton, NH3, NStatistic, NText, useMessage } from "naive-ui";
+import { encodeDeckCode } from "~/utils/decks";
 
 const route = useRoute();
 const { teamId, team, teamDisplayName } = useTeam(route.params.teamId as string);
@@ -64,4 +68,28 @@ const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) 
 const { total, win, totalWithDeck, winWithDeck } = stats;
 const winRate = toPercentageString(divide(win, total));
 const winDiff = win - (total - win);
+
+const { copy } = useClipboard();
+const message = useMessage();
+async function copyTypicalDeckShareCode() {
+  if (typicalDeck) {
+    await copy(encodeDeckCode(typicalDeck));
+    message.success("【实验性功能】若生成的分享码无效，请尝试重新复制", {
+      render: (props) => {
+        return h(
+          NAlert,
+          {
+            closable: props.closable,
+            onClose: props.onClose,
+            type: "success",
+            title: "已复制",
+          },
+          {
+            default: () => props.content,
+          },
+        );
+      },
+    });
+  }
+}
 </script>
