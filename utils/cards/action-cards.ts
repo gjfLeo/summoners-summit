@@ -152,7 +152,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "海祇之冠": defineActionCardInfo({ id: 312015, name: "海祇之冠", nameEn: "Crown of Watatsumi", type: "Equipment", type2: "Artifact" }),
   "海染砗磲": defineActionCardInfo({ id: 312016, name: "海染砗磲", nameEn: "Ocean Hued Clam", type: "Equipment", type2: "Artifact" }),
   "沙王的投影": defineActionCardInfo({ id: 312017, name: "沙王的投影", nameEn: "Shadow of the Sand King", type: "Equipment", type2: "Artifact" }),
-  "饰金之梦": defineActionCardInfo({ id: 312018, name: "饰金之梦", nameEn: "Gilded Drems", type: "Equipment", type2: "Artifact" }),
+  // "饰金之梦": defineActionCardInfo({ id: 312018, name: "饰金之梦", nameEn: "Gilded Drems", type: "Equipment", type2: "Artifact" }),
   // "浮溯之珏": defineActionCardInfo({ id: 312019, name: "浮溯之珏", nameEn: "Flowing Rings", type: "Equipment", type2: "Artifact" }),
   // "来歆余响": defineActionCardInfo({ id: 312020, name: "来歆余响", nameEn: "Echoes of an Offering", type: "Equipment", type2: "Artifact" }),
   // "灵光明烁之心": defineActionCardInfo({ id: 312021, name: "灵光明烁之心", nameEn: "Heart of Khvarena's Brilliance", type: "Equipment", type2: "Artifact" }),
@@ -219,8 +219,8 @@ export const ALL_ACTION_CARDS_INFO = {
   "便携营养袋": defineActionCardInfo({ id: 323002, name: "便携营养袋", nameEn: "NRE", type: "Support", type2: "Item" }),
   "红羽团扇": defineActionCardInfo({ id: 323003, name: "红羽团扇", nameEn: "Red Feather Fan", type: "Support", type2: "Item" }),
   "寻宝仙灵": defineActionCardInfo({ id: 323004, name: "寻宝仙灵", nameEn: "Treasure-Seeking Seelie", type: "Support", type2: "Item" }),
-  "化种匣": defineActionCardInfo({ id: 323005, name: "化种匣", nameEn: "Seed Dispensary", type: "Support", type2: "Item" }),
-  "留念镜": defineActionCardInfo({ id: 323006, name: "留念镜", nameEn: "Memento Lens", type: "Support", type2: "Item" }),
+  // "化种匣": defineActionCardInfo({ id: 323005, name: "化种匣", nameEn: "Seed Dispensary", type: "Support", type2: "Item" }),
+  // "留念镜": defineActionCardInfo({ id: 323006, name: "留念镜", nameEn: "Memento Lens", type: "Support", type2: "Item" }),
 
   // 秘传
   "旧时庭园": defineActionCardInfo({ id: 330001, name: "旧时庭园", nameEn: "Ancient Courtyard", type: "Event", type2: "Legend" }),
@@ -301,5 +301,5 @@ export type ActionCard = keyof typeof ALL_ACTION_CARDS_INFO;
 
 export const ALL_ACTION_CARDS = Object.keys(ALL_ACTION_CARDS_INFO) as ActionCard[];
 
-const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
+export const actionCardOrder = Object.fromEntries(ALL_ACTION_CARDS.map((card, i) => [card, i])) as Record<ActionCard, number>;
 export const actionCardSorter = (a: ActionCard, b: ActionCard) => actionCardOrder[a] - actionCardOrder[b];
