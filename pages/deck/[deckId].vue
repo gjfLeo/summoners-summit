@@ -6,7 +6,7 @@
       <CardImage :card="card" class="w-100%" />
     </template>
     <div class="flex flex-col self-end justify-self-start gap-2">
-      <NButton @click="copyDeckCode">复制分享码</NButton>
+      <NButton @click="copyDeckShareCode">复制分享码</NButton>
       <NuxtLink :to="`/team/${teamId}`" prefetch>
         <NButton>查看阵容数据</NButton>
       </NuxtLink>
@@ -24,8 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { NAlert, NButton, NH3, useMessage } from "naive-ui";
-import { encodeDeckCode } from "~/utils/decks";
+import { NButton, NH3 } from "naive-ui";
 import type { ActionCard } from "~/utils/types";
 
 useHead({ title: "牌组详情 | 召唤之巅" });
@@ -41,25 +40,5 @@ const teamId = getTeamId(characterCards);
 
 const { gameList } = await useApiGameList({ deckId });
 
-const { copy } = useClipboard();
-const message = useMessage();
-async function copyDeckCode() {
-  await copy(encodeDeckCode(deck));
-  message.success("【实验性功能】若生成的分享码无效，请尝试重新复制", {
-    render: (props) => {
-      return h(
-        NAlert,
-        {
-          closable: props.closable,
-          onClose: props.onClose,
-          type: "success",
-          title: "已复制",
-        },
-        {
-          default: () => props.content,
-        },
-      );
-    },
-  });
-}
+const { copy: copyDeckShareCode } = useCopyDeckShareCode(deck);
 </script>
