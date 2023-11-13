@@ -1,1 +1,1 @@
-export { encodeDeckCode } from "./share-code";
+export { encodeDeckCode, decodeDeckCode } from "./share-code";

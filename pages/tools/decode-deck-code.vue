@@ -1,42 +1,40 @@
 <template>
-  <NInput v-model:value="shareCode" class="font-mono" />
-
-  <NText>减混淆码前</NText>
-  <div class="flex gap-1 font-mono">
-    <NText v-for="(byte, i) in hexArray" :key="i">{{ byte }}</NText>
-  </div>
-  <NText>减混淆码后</NText>
-  <div class="flex gap-1 font-mono font-mono">
-    <NText v-for="(byte, i) in originHexArray" :key="i">{{ byte }}</NText>
-  </div>
-
-  <NText>减混淆码前</NText>
-  <div class="grid grid-cols-10 gap-1 font-mono">
-    <NText v-for="(byte, i) in hexArray.map(hex => Number.parseInt(hex, 16).toString(2).padStart(8, '0'))" :key="i">{{ byte }}</NText>
-  </div>
-  <NText>减混淆码后</NText>
-  <div class="grid grid-cols-10 gap-1 font-mono">
-    <NText v-for="(byte, i) in originHexArray.map(hex => Number.parseInt(hex, 16).toString(2).padStart(8, '0'))" :key="i">{{ byte }}</NText>
-  </div>
+  <NInputGroup>
+    <NInput v-model:value="shareCode" class="font-mono" />
+    <NButton @click="resultDeck = decode()">搜索</NButton>
+  </NInputGroup>
+  <template v-if="resultDeck">
+    <!-- 角色牌 -->
+    <div class="grid mt gap-2" grid-cols="6 md:10">
+      <template v-for="(card, i) in characterCards" :key="i">
+        <CardImage :card="card" class="w-100%" />
+      </template>
+    </div>
+    <!-- 行动牌 -->
+    <div class="grid mt gap-2" grid-cols="6 md:15">
+      <template v-for="(card, i) in actionCards" :key="i">
+        <CardImage :card="card" class="w-100%" />
+      </template>
+    </div>
+  </template>
+  <pre>{{ resultDeck }}</pre>
 </template>
 
 <script lang="ts" setup>
-import { NInput, NText } from "naive-ui";
-import Crypto from "crypto-js";
+import { NButton, NInput, NInputGroup } from "naive-ui";
+import { decodeDeckCode } from "~/utils/decks";
+import type { ActionCard, Deck } from "~/utils/types";
+
+useHead({ title: "牌组分享码解码" });
 
 const shareCode = ref("AxBQ9BAPA0Aw9UwPBGDA9rwPC5DA+cEPDMCQ/MkPDdDg/eEQDqEQC+IQDrEgDvEQD+AA");
+const resultDeck = ref<Pick<Deck, "characterCards" | "actionCards">>();
 
-const hexArray = computed(() => splitString(Crypto.enc.Base64.parse(shareCode.value).toString(), 2));
+const characterCards = computed(() => resultDeck.value?.characterCards);
+const actionCards = computed(() => Object.entries(resultDeck.value?.actionCards ?? {})
+  .flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard)));
 
-const diffValue = computed(() => Number.parseInt(hexArray.value[hexArray.value.length - 1], 16));
-
-const originHexArray = computed(() => hexArray.value.slice(0, hexArray.value.length - 1).map((hex) => {
-  const u8a = new Uint8Array(1);
-  u8a[0] = Number.parseInt(hex, 16) - diffValue.value;
-  return u8a[0].toString(16).padStart(2, "0");
-}));
-
-function splitString(s: string, l: number): string[] {
-  return s.match(new RegExp(`.{1,${l}}`, "g")) || [];
+function decode() {
+  return decodeDeckCode(shareCode.value);
 }
 </script>
