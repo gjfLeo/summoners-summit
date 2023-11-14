@@ -109,6 +109,27 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     sorter: "default",
   },
   {
+    title: "非内战场数",
+    key: "totalExcludeSame",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+  },
+  {
+    title: "非内战胜场",
+    key: "winExcludeSame",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+  },
+  {
+    title: "非内战胜率",
+    key: "winRateExcludeSame",
+    width: "6rem",
+    align: "center",
+    render: row => winRateRender(row.winExcludeSame, row.totalExcludeSame, row.winRateExcludeSame),
+  },
+  {
     title: "先手胜率",
     key: "starterWinRate",
     width: "6rem",

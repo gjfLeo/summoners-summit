@@ -9,6 +9,9 @@ interface TeamStats {
   followerTotal: number;
   followerWin: number;
   winRate: number;
+  totalExcludeSame: number;
+  winExcludeSame: number;
+  winRateExcludeSame: number;
   starterWinRate: number;
   followerWinRate: number;
   winDiff: number;
@@ -22,7 +25,7 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
   const teamStatsMap = Object.fromEntries(
     Object.entries(teamBasicStatsMap)
       .map(([teamId, teamBasicStats]) => {
-        const { total, win, starterTotal, starterWin, followerTotal, followerWin, banned } = teamBasicStats;
+        const { total, win, starterTotal, starterWin, followerTotal, followerWin, banned, vsSame } = teamBasicStats;
 
         const stats: TeamStats = {
           teamId,
@@ -30,6 +33,9 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
           followerTotal,
           followerWin,
           winRate: divide(win, total),
+          totalExcludeSame: total - 2 * vsSame,
+          winExcludeSame: win - vsSame,
+          winRateExcludeSame: divide(win - vsSame, total - 2 * vsSame),
           starterWinRate: divide(starterWin, starterTotal),
           followerWinRate: divide(followerWin, followerTotal),
           winDiff: win - (total - win),

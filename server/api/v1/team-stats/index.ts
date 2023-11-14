@@ -10,13 +10,14 @@ interface TeamBasicStats {
   followerTotal: number;
   followerWin: number;
   banned: number;
+  vsSame: number;
 }
 
 interface TeamBasicStatsData {
   teamStatsMap: Record<string, TeamBasicStats>;
 }
 
-const initTeamStat = (): TeamBasicStats => ({ win: 0, total: 0, starterWin: 0, starterTotal: 0, followerWin: 0, followerTotal: 0, banned: 0 });
+const initTeamStat = (): TeamBasicStats => ({ win: 0, total: 0, starterWin: 0, starterTotal: 0, followerWin: 0, followerTotal: 0, banned: 0, vsSame: 0 });
 
 export default defineEventHandler<R & TeamBasicStatsData>((event) => {
   const { gameVersion } = getQuery(event);
@@ -39,6 +40,11 @@ export default defineEventHandler<R & TeamBasicStatsData>((event) => {
       if (game.winner === player && game.starter === player) teamStat.starterWin++;
       if (game.starter && game.starter !== player) teamStat.followerTotal++;
       if (game.winner === player && game.starter && game.starter !== player) teamStat.followerWin++;
+
+      // 统计内战场数
+      if (player === "A" && teamId === getTeamId(game.playerBCharacters)) {
+        teamStat.vsSame++;
+      }
     }
   }
 
