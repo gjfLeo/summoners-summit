@@ -1,13 +1,7 @@
-import type { R, Tournament } from "~/utils/types";
+import type { ApiTournamentListData, R } from "~/utils/types";
 import { tournamentById } from "~/server/data";
 
-type TournamentListItem = Pick<Tournament, "id" | "gameVersion" | "name" | "type">;
-
-interface TournamentsData {
-  tournamentList: TournamentListItem[];
-}
-
-export default defineEventHandler<R & TournamentsData>((event) => {
+export default defineEventHandler<R & ApiTournamentListData>((event) => {
   const { gameVersion } = getQuery(event);
 
   let list = Object.values(tournamentById);

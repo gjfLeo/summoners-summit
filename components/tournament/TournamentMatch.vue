@@ -70,13 +70,13 @@
 
 <script lang="ts" setup>
 import { NH3 } from "naive-ui";
-import type { ApiTournamentDetails } from "~/composables/use-api-tournament-detail";
+import type { ApiTournamentDetailsData, ApiTournamentDetailsMatchesValue } from "~/utils/types";
 
 defineProps<{
   gameVersion?: string;
   tournamentName?: string;
   partName?: string;
-  match: ApiTournamentDetails["matches"][string];
-  games: ApiTournamentDetails["games"];
+  match: ApiTournamentDetailsMatchesValue;
+  games: ApiTournamentDetailsData["games"];
 }>();
 </script>

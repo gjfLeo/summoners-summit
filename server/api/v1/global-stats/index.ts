@@ -1,21 +1,10 @@
-import type { R } from "~/utils/types";
+import type { ApiGlobalStatsMapData, ApiGlobalStatsValue, R } from "~/utils/types";
 import { gameById } from "~/server/data";
 
-interface GlobalStats {
-  total: number;
-  totalWithDeck: number;
-  totalWithStarter: number;
-  starterWin: number;
-}
+const initStats = (): ApiGlobalStatsValue => ({ total: 0, totalWithDeck: 0, totalWithStarter: 0, starterWin: 0 });
 
-interface GlobalStatsData {
-  stats: Record<string, GlobalStats>;
-}
-
-const initStats = (): GlobalStats => ({ total: 0, totalWithDeck: 0, totalWithStarter: 0, starterWin: 0 });
-
-export default defineEventHandler<R & GlobalStatsData>(() => {
-  const stats: Record<string, GlobalStats> = {};
+export default defineEventHandler<R & ApiGlobalStatsMapData>(() => {
+  const stats: Record<string, ApiGlobalStatsValue> = {};
   Object.values(gameById).forEach((game) => {
     const versionStats = stats[game.gameVersion] ?? (stats[game.gameVersion] = initStats());
     versionStats.total++;

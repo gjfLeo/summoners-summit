@@ -1,4 +1,4 @@
-import type { CharacterCard } from "~/utils/types";
+import type { ApiGameListData, CharacterCard } from "~/utils/types";
 
 interface ApiGameListOptions {
   gameVersion?: string;
@@ -29,7 +29,5 @@ export default async function useApiGameList(options?: ApiGameListOptions) {
 
   const { data } = await useFetch("/api/v1/games", { query });
   if (!data.value) throw createError("获取数据失败");
-  const { gameList } = data.value;
-
-  return { gameList };
+  return data.value as ApiGameListData;
 }

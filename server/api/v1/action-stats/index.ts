@@ -1,21 +1,9 @@
-import type { R } from "~/utils/types";
+import type { ApiActionStatsMapData, ApiActionStatsValue, R } from "~/utils/types";
 import { deckById, gameById } from "~/server/data";
 
-interface ActionStats {
-  game: number;
-  pick: number;
-  winGame: number;
-  winPick: number;
-}
+const initActionStats = (): ApiActionStatsValue => ({ game: 0, pick: 0, winGame: 0, winPick: 0 });
 
-interface ActionStatsData {
-  actionStatsMap: Record<string, ActionStats>;
-  totalGame: number;
-}
-
-const initActionStats = (): ActionStats => ({ game: 0, pick: 0, winGame: 0, winPick: 0 });
-
-export default defineEventHandler<R & ActionStatsData>((event) => {
+export default defineEventHandler<R & ApiActionStatsMapData>((event) => {
   const { gameVersion, preferredGameVersion, sort } = getQuery(event);
 
   let gameList = Object.values(gameById);
@@ -23,7 +11,7 @@ export default defineEventHandler<R & ActionStatsData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  let actionStatsMap: Record<string, ActionStats> = {};
+  let actionStatsMap: Record<string, ApiActionStatsValue> = {};
   let totalGame = 0;
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {

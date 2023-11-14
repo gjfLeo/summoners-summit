@@ -1,38 +1,12 @@
 import { add, divide, multiply } from "mathjs/number";
-import type { ActionCard, R } from "~/utils/types";
+import type { ActionCard, ApiTeamStatsBasicStats, ApiTeamStatsCardUsageValue, ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, R } from "~/utils/types";
 import { deckById, gameById } from "~/server/data";
 import { getTeamId } from "~/composables/use-team";
 
-interface TeamStats {
-  total: number;
-  win: number;
-  totalWithDeck: number;
-  winWithDeck: number;
-}
+const initCardUsageInfo = (): ApiTeamStatsCardUsageValue => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0 });
+const initVsTeamStats = (): ApiTeamStatsVsTeamStatsValue => ({ total: 0, win: 0 });
 
-interface CardUsageInfo {
-  totalCount: number;
-  winCount: number;
-  totalAverage: number;
-  winAverage: number;
-}
-
-interface VsTeamStats {
-  total: number;
-  win: number;
-}
-
-interface TeamStatsData {
-  stats: TeamStats;
-  cardUsages: Partial<Record<ActionCard, CardUsageInfo>>;
-  typicalDeckId?: string;
-  vs: Record<string, VsTeamStats>;
-}
-
-const initCardUsageInfo = (): CardUsageInfo => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0 });
-const initVsTeamStats = (): VsTeamStats => ({ total: 0, win: 0 });
-
-export default defineEventHandler<R & TeamStatsData>((event) => {
+export default defineEventHandler<R & ApiTeamStatsData>((event) => {
   const teamId = event.context.params!.teamId as string;
   const { gameVersion } = getQuery(event);
 
@@ -41,27 +15,27 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  const stats: TeamStats = {
+  const basicStats: ApiTeamStatsBasicStats = {
     total: 0,
     win: 0,
     totalWithDeck: 0,
     winWithDeck: 0,
   };
-  const cardUsages: Partial<Record<ActionCard, CardUsageInfo>> = {};
-  const vs: Record<string, VsTeamStats> = {};
+  const cardUsageMap: Partial<Record<ActionCard, ApiTeamStatsCardUsageValue>> = {};
+  const vsTeamStatsMap: Record<string, ApiTeamStatsVsTeamStatsValue> = {};
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
       if (getTeamId(game[`player${player}Characters`]) !== teamId) continue;
-      stats.total++;
-      if (game.winner === player) stats.win++;
+      basicStats.total++;
+      if (game.winner === player) basicStats.win++;
 
       const deckId = game[`player${player}DeckId`];
       if (deckId) {
-        stats.totalWithDeck++;
-        if (game.winner === player) stats.winWithDeck++;
+        basicStats.totalWithDeck++;
+        if (game.winner === player) basicStats.winWithDeck++;
         const deck = deckById[deckId];
         for (const [card, count] of Object.entries(deck.actionCards) as [ActionCard, number][]) {
-          const cardUsage = cardUsages[card] ?? (cardUsages[card] = initCardUsageInfo());
+          const cardUsage = cardUsageMap[card] ?? (cardUsageMap[card] = initCardUsageInfo());
           cardUsage.totalCount += count;
           if (game.winner === player) cardUsage.winCount += count;
         }
@@ -69,20 +43,20 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
 
       const opponent = player === "A" ? "B" : "A";
       const opponentTeamId = getTeamId(game[`player${opponent}Characters`]);
-      const vsTeamStats = vs[opponentTeamId] ?? (vs[opponentTeamId] = initVsTeamStats());
+      const vsTeamStats = vsTeamStatsMap[opponentTeamId] ?? (vsTeamStatsMap[opponentTeamId] = initVsTeamStats());
       vsTeamStats.total++;
       if (game.winner === player) vsTeamStats.win++;
     }
 
-    for (const cardUsage of Object.values(cardUsages)) {
-      cardUsage.totalAverage = divide(cardUsage.totalCount, stats.totalWithDeck);
-      cardUsage.winAverage = divide(cardUsage.winCount, stats.winWithDeck);
+    for (const cardUsage of Object.values(cardUsageMap)) {
+      cardUsage.totalAverage = divide(cardUsage.totalCount, basicStats.totalWithDeck);
+      cardUsage.winAverage = divide(cardUsage.winCount, basicStats.winWithDeck);
     }
   }
 
   let typicalDeckId: string | undefined;
   let minDiff = Number.POSITIVE_INFINITY;
-  if (Object.keys(cardUsages).length > 0) {
+  if (Object.keys(cardUsageMap).length > 0) {
     for (const game of gameList) {
       for (const player of (["A", "B"] as const)) {
         if (getTeamId(game[`player${player}Characters`]) !== teamId) continue;
@@ -90,7 +64,7 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
         const deckId = game[`player${player}DeckId`];
         if (!deckId) continue;
         const deck = deckById[deckId];
-        const diff = (Object.entries(cardUsages) as [ActionCard, CardUsageInfo][])
+        const diff = (Object.entries(cardUsageMap) as [ActionCard, ApiTeamStatsCardUsageValue][])
           .reduce(
             (totalDiff, [card, usage]) => {
               const diff = (deck.actionCards[card] ?? 0) - usage.winAverage;
@@ -106,5 +80,5 @@ export default defineEventHandler<R & TeamStatsData>((event) => {
     }
   }
 
-  return { statusCode: 200, stats, cardUsages, typicalDeckId, vs };
+  return { statusCode: 200, basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap };
 });

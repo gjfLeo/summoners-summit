@@ -1,21 +1,7 @@
-import type { R } from "~/utils/types";
+import type { ApiPlayerStatsMapData, ApiPlayerStatsValue, R } from "~/utils/types";
 import { gameById, matchById, playerById } from "~/server/data";
 
-interface PlayerBasicStats {
-  playerId: string;
-  uniqueName: string;
-  aliases?: string[];
-  matchTotal: number;
-  matchWin: number;
-  gameTotal: number;
-  gameWin: number;
-}
-
-interface PlayerBasicStatsData {
-  playerStatsMap: Record<string, PlayerBasicStats>;
-}
-
-function initPlayerStats(playerId: string): PlayerBasicStats {
+function initPlayerStats(playerId: string): ApiPlayerStatsValue {
   return {
     playerId,
     uniqueName: playerById[playerId].uniqueName,
@@ -27,7 +13,7 @@ function initPlayerStats(playerId: string): PlayerBasicStats {
   };
 }
 
-export default defineEventHandler<R & PlayerBasicStatsData>((event) => {
+export default defineEventHandler<R & ApiPlayerStatsMapData>((event) => {
   const { gameVersion } = getQuery(event);
 
   let matchList = Object.values(matchById);
@@ -38,7 +24,7 @@ export default defineEventHandler<R & PlayerBasicStatsData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  const playerStatsMap: Record<string, PlayerBasicStats> = {};
+  const playerStatsMap: Record<string, ApiPlayerStatsValue> = {};
   for (const match of matchList) {
     for (const player of (["A", "B"] as const)) {
       const playerId = match[`player${player}Id`];

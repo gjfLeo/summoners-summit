@@ -1,5 +1,5 @@
 import { gameById } from "~/server/data";
-import type { Game } from "~/utils/types";
+import type { ApiGameListData, Game, R } from "~/utils/types";
 
 function getGameMirror(game: Game): Game {
   const { playerAId, playerANickname, playerBId, playerBNickname, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
@@ -23,7 +23,7 @@ const mirrorOverrideMap: Record<string, boolean> = {
   0: false,
 };
 
-export default defineEventHandler((event) => {
+export default defineEventHandler<R & ApiGameListData>((event) => {
   const {
     gameVersion,
     matchId,
@@ -69,5 +69,5 @@ export default defineEventHandler((event) => {
   if (limit) {
     list = list.slice(offset, offset + limit);
   }
-  return { code: 200, gameList: list };
+  return { statusCode: 200, gameList: list };
 });

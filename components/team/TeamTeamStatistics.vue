@@ -12,15 +12,16 @@ import { divide } from "mathjs/number";
 import { type DataTableColumn, NText, NTooltip } from "naive-ui";
 import { NDataTable } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
+import type { ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue } from "~/utils/types";
 
 const props = defineProps<{
   teamId: string;
-  vs: Awaited<ReturnType<typeof useApiTeamStats>>["vs"];
+  vs: ApiTeamStatsData["vsTeamStatsMap"];
 }>();
 
 const { gameVersionPath } = useGameVersion();
 
-type TeamStatsRaw = typeof props["vs"][string];
+type TeamStatsRaw = ApiTeamStatsVsTeamStatsValue;
 interface TeamStatsResult extends TeamStatsRaw {
   key: string;
   teamId: string;

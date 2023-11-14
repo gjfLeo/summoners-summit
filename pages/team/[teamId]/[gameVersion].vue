@@ -14,7 +14,7 @@
 
   <template v-if="totalWithDeck > 0">
     <NH3>行动牌选择</NH3>
-    <TeamCardUsages :card-usages="cardUsages" />
+    <TeamCardUsages :card-usages="cardUsageMap" />
     <div class="mt text-sm">
       <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
     </div>
@@ -42,7 +42,7 @@
   </template>
 
   <NH3>对阵数据</NH3>
-  <TeamTeamStatistics :team-id="teamId" :vs="vs" />
+  <TeamTeamStatistics :team-id="teamId" :vs="vsTeamStatsMap" />
 </template>
 
 <script lang="ts" setup>
@@ -60,11 +60,11 @@ if (route.params.teamId !== teamId.value) {
 }
 
 const { gameVersion } = useGameVersion({ detect: true });
-const { stats, cardUsages, typicalDeckId, vs } = await useApiTeamStats(teamId.value, gameVersion.value);
+const { basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap } = await useApiTeamStats(teamId.value, gameVersion.value);
 
 const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) : { deck: undefined };
 
-const { total, win, totalWithDeck, winWithDeck } = stats;
+const { total, win, totalWithDeck, winWithDeck } = basicStats;
 const winRate = toPercentageString(divide(win, total));
 const winDiff = win - (total - win);
 

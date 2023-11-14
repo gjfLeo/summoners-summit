@@ -1,16 +1,7 @@
-import type { Game, Match, R, Tournament } from "~/utils/types";
+import type { ApiTournamentDetailsData, ApiTournamentDetailsGamesValue, ApiTournamentDetailsMatchesValue, R } from "~/utils/types";
 import { gameById, matchById, tournamentById } from "~/server/data";
 
-type MatchInfo = Omit<Match, "id" | "tournamentId">;
-type GameInfo = Pick<Game, `player${"A" | "B"}${"Characters" | "DeckId"}` | "starter" | "winner">;
-
-interface TournamentDetailsData {
-  tournament: Tournament;
-  matches: Record<string, MatchInfo>;
-  games: Record<string, GameInfo>;
-}
-
-export default defineEventHandler<R & TournamentDetailsData>((event) => {
+export default defineEventHandler<R & ApiTournamentDetailsData>((event) => {
   const tournamentId = event.context.params!.tournamentId;
 
   const tournament = tournamentById[tournamentId];
@@ -21,7 +12,7 @@ export default defineEventHandler<R & TournamentDetailsData>((event) => {
   const matches = Object.fromEntries(
     Object.values(matchById)
       .filter(m => m.tournamentId === tournamentId)
-      .map<[string, MatchInfo]>((match) => {
+      .map<[string, ApiTournamentDetailsMatchesValue]>((match) => {
         const {
           id,
           tournamentId: _tournamentId,
@@ -33,7 +24,7 @@ export default defineEventHandler<R & TournamentDetailsData>((event) => {
   const games = Object.fromEntries(
     Object.values(gameById)
       .filter(g => g.tournamentId === tournamentId)
-      .map<[string, GameInfo]>((game) => {
+      .map<[string, ApiTournamentDetailsGamesValue]>((game) => {
         const { id, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
         return [id, { playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner }];
       }),

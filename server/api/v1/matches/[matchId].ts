@@ -1,11 +1,7 @@
-import type { Match, R } from "~/utils/types";
+import type { ApiMatchData, R } from "~/utils/types";
 import { matchById } from "~/server/data";
 
-interface MatchData {
-  match: Match;
-}
-
-export default defineEventHandler<R & MatchData>((event) => {
+export default defineEventHandler<R & ApiMatchData>((event) => {
   const matchId = event.context.params!.matchId;
 
   const match = matchById[matchId];

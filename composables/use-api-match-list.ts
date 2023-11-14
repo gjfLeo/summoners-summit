@@ -1,3 +1,5 @@
+import type { ApiMatchListData } from "~/utils/types";
+
 interface ApiMatchListOptions {
   gameVersion?: string;
   playerId?: string;
@@ -12,7 +14,5 @@ export default async function useApiMatchList(options?: ApiMatchListOptions) {
 
   const { data } = await useFetch("/api/v1/matches", { query });
   if (!data.value) throw createError("获取数据失败");
-  const { matchList } = data.value;
-
-  return { matchList };
+  return data.value as ApiMatchListData;
 }

@@ -86,8 +86,3 @@ export interface Player {
   achievements?: PlayerAchievement[];
   awards?: string[];
 }
-
-export interface R {
-  statusCode: number;
-  message?: string;
-}
