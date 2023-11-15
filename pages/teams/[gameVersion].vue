@@ -127,6 +127,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     key: "winRateExcludeSame",
     width: "6rem",
     align: "center",
+    sorter: "default",
     render: row => winRateRender(row.winExcludeSame, row.totalExcludeSame, row.winRateExcludeSame),
   },
   {
