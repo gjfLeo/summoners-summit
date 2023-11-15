@@ -2,7 +2,6 @@
   <NDataTable
     :columns="columns"
     :data="data"
-    size="small"
     max-height="50vh"
   />
 </template>
@@ -11,8 +10,8 @@
 import type { DataTableColumn } from "naive-ui";
 import { format } from "mathjs/number";
 import { NDataTable } from "naive-ui";
-import { CardImage } from "#components";
 import type { ActionCard } from "~/utils/types";
+import { CardCell } from "#components";
 
 const props = defineProps<{
   cardUsages: ReturnType<typeof useCardUsage>["cardUsages"];
@@ -27,16 +26,7 @@ const data = Object.entries(props.cardUsages).map(([card, usage]) => ({
 const columns: DataTableColumn<typeof data[number]>[] = [
   {
     key: "card",
-    render: row => h(
-      "div",
-      {
-        class: "flex gap-1 items-center",
-      },
-      [
-        h(CardImage, { card: row.card, class: "h-8" }),
-        h("div", row.card),
-      ],
-    ),
+    render: row => h(CardCell, { card: row.card }),
   },
   {
     title: "平均携带",

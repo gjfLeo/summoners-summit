@@ -23,6 +23,7 @@
 import { type DataTableColumn, NDataTable, NTabPane, NTabs, NText } from "naive-ui";
 import { divide, format } from "mathjs/number";
 import type { ActionCard, CharacterCard } from "~/utils/types";
+import { CardCell } from "#components";
 
 useHead({ title: "卡牌 | 召唤之巅" });
 
@@ -46,7 +47,7 @@ const characterStatsColumns: DataTableColumn<typeof characterStatsData["value"][
   {
     key: "card",
     fixed: "left",
-    render: row => renderCardColumn(row.card),
+    render: row => h(CardCell, { card: row.card as CharacterCard }),
   },
   {
     title: "出场次数",
@@ -90,7 +91,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
     key: "card",
     fixed: "left",
     width: "6rem",
-    render: row => renderCardColumn(row.card),
+    render: row => h(CardCell, { card: row.card as ActionCard }),
   },
   {
     title: "总携带张数",
