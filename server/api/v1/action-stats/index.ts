@@ -12,13 +12,13 @@ export default defineEventHandler<R & ApiActionStatsMapData>((event) => {
   }
 
   let actionStatsMap: Record<string, ApiActionStatsValue> = {};
-  let totalGame = 0;
+  let totalDeck = 0;
   for (const game of gameList) {
+    const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
     for (const player of (["A", "B"] as const)) {
       const deckId = game[`player${player}DeckId`];
-      const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
       if (deckId) {
-        totalGame += weight;
+        totalDeck += weight;
         for (const [card, count] of Object.entries(deckById[deckId].actionCards)) {
           const actionStats = actionStatsMap[card] ?? (actionStatsMap[card] = initActionStats());
           actionStats.game += 1 * weight;
@@ -35,5 +35,5 @@ export default defineEventHandler<R & ApiActionStatsMapData>((event) => {
     actionStatsMap = Object.fromEntries(Object.entries(actionStatsMap).sort((a, b) => b[1].pick - a[1].pick));
   }
 
-  return { statusCode: 200, actionStatsMap, totalGame };
+  return { statusCode: 200, actionStatsMap, totalDeck };
 });

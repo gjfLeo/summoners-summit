@@ -7,7 +7,7 @@ export interface ApiActionStatsValue {
 
 export interface ApiActionStatsMapData {
   actionStatsMap: Record<string, ApiActionStatsValue>;
-  totalGame: number;
+  totalDeck: number;
 }
 
 export interface ApiCharacterStatsValue {

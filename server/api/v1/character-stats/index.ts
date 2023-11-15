@@ -14,10 +14,10 @@ export default defineEventHandler<R & ApiCharacterStatsMapData>((event) => {
   let characterStatsMap: Record<string, ApiCharacterStatsValue> = {};
   let totalGame = 0;
   for (const game of gameList) {
+    const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
+    totalGame += weight;
     for (const player of (["A", "B"] as const)) {
       const characters = game[`player${player}Characters`];
-      const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
-      totalGame += weight;
       for (const character of Object.values(characters)) {
         const characterStats = characterStatsMap[character] ?? (characterStatsMap[character] = initCharacterStats());
         characterStats.pick += weight;
