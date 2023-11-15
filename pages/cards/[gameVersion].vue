@@ -22,6 +22,9 @@
 <script lang="ts" setup>
 import { type DataTableColumn, NDataTable, NTabPane, NTabs, NText } from "naive-ui";
 import { divide, format } from "mathjs/number";
+import type { ActionCard, CharacterCard } from "~/utils/types";
+
+useHead({ title: "卡牌 | 召唤之巅" });
 
 const { gameVersion } = useGameVersion({ detect: true });
 const { characterStatsMap, totalGame } = await useApiCharacterStats({ gameVersion: gameVersion.value });
@@ -31,7 +34,7 @@ const characterStatsData = computed(() => {
   return Object.entries(characterStatsMap)
     .map(([card, stats]) => {
       return {
-        card,
+        card: card as CharacterCard,
         ...stats,
         pickRate: divide(stats.pick, totalGame),
         winRate: divide(stats.winPick, stats.pick),
@@ -72,7 +75,7 @@ const actionStatsData = computed(() => {
   return Object.entries(actionStatsMap)
     .map(([card, stats]) => {
       return {
-        card,
+        card: card as ActionCard,
         ...stats,
         pickRate: divide(stats.game, totalDeck),
         winRate: divide(stats.winGame, stats.game),
