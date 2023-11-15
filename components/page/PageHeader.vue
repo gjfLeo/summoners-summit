@@ -1,13 +1,27 @@
 <template>
   <div class="h-full flex items-center justify-center">
     <div class="h-full w-full p-inline" grid="~ items-center" style="grid-template-columns: 1fr minmax(auto, 72rem) 1fr;">
-      <div class="h-full flex items-center justify-start" />
-
-      <div class="h-full flex items-center justify-center">
-        <NMenu :value="activeKey" mode="horizontal" :options="menuOptions" />
+      <div class="h-full flex items-center justify-start">
+        <ClientOnly>
+          <NButton
+            v-if="isMobile"
+            circle quaternary :focusable="false"
+            @click="sideMenuVisible = !sideMenuVisible"
+          >
+            <template #icon>
+              <div class="i-carbon:menu" />
+            </template>
+          </NButton>
+        </ClientOnly>
       </div>
 
-      <div class="h-full flex items-center justify-end">
+      <div class="h-full flex items-center justify-center">
+        <ClientOnly>
+          <NMenu v-if="!isMobile" :value="activeKey" mode="horizontal" :options="menuOptions" />
+        </ClientOnly>
+      </div>
+
+      <div class="h-full flex items-center justify-end gap-2">
         <ClientOnly>
           <template #default>
             <NSelect
@@ -23,7 +37,10 @@
             <NSpin :size="20" />
           </template>
         </ClientOnly>
-        <NButton circle quaternary @click="isDark = !isDark">
+        <NButton
+          circle quaternary :focusable="false"
+          @click="isDark = !isDark"
+        >
           <template #icon>
             <div class="i-carbon:moon dark:i-carbon:sun" />
           </template>
@@ -31,15 +48,28 @@
       </div>
     </div>
   </div>
+  <NDrawer
+    v-model:show="sideMenuVisible"
+    placement="left"
+    to="#page-content"
+    :width="200"
+    :trap-focus="false"
+  >
+    <NMenu :value="activeKey" mode="vertical" :options="menuOptions" />
+  </NDrawer>
 </template>
 
 <script lang="ts" setup>
 import type { MenuOption } from "naive-ui";
-import { NButton, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
+import { NButton, NDrawer, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
+import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
 
 const route = useRoute();
 const isDark = useDark();
+
+const isMobile = useBreakpoints(breakpointsTailwind).smaller("md");
+const sideMenuVisible = ref(false);
 
 const { gameVersion, gameVersionOptions, gameVersionPath } = useGameVersion();
 
@@ -47,6 +77,7 @@ const menuList = [
   { route: "/tournaments", name: "赛事" },
   { route: "/teams", name: "阵容" },
   { route: "/players", name: "选手" },
+  { route: "/cards", name: "卡牌" },
 ];
 
 const activeKey = computed(() => {
@@ -62,6 +93,7 @@ const menuOptions = computed<MenuOption[]>(() =>
         {
           class: "flex, items-center",
           to: `${menu.route}/${gameVersionPath.value}`,
+          onClick: () => sideMenuVisible.value = false,
         },
         () => menu.name,
       ),

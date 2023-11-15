@@ -16,13 +16,14 @@
               <PageHeader />
             </NLayoutHeader>
             <NLayoutContent
+              id="page-content"
               position="absolute"
               :style="{ top: headerHeight, height: `calc(100vh - ${headerHeight})` }"
             >
               <NScrollbar class="h-full">
                 <NLayout>
                   <NLayoutContent class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
-                    <NuxtPage v-cloak />
+                    <NuxtPage />
                   </NLayoutContent>
                   <NLayoutFooter bordered class="w-full" :style="{ height: footerHeight }">
                     <PageFooter />

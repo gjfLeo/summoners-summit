@@ -3,7 +3,7 @@
     <NText depth="3">召唤之巅——七圣召唤赛事资料 by gjfLeo</NText>
     <NText depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</NText>
   </div>
-  <NDrawer v-model:show="showAboutDrawer" :width="502" placement="bottom" :auto-focus="false">
+  <NDrawer v-model:show="showAboutDrawer" placement="bottom" :auto-focus="false">
     <NDrawerContent title="召唤之巅">
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">

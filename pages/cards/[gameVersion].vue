@@ -22,8 +22,6 @@
 <script lang="ts" setup>
 import { type DataTableColumn, NDataTable, NTabPane, NTabs, NText } from "naive-ui";
 import { divide, format } from "mathjs/number";
-import { CardImage } from "#components";
-import type { ActionCard, CharacterCard } from "~/utils/types";
 
 const { gameVersion } = useGameVersion({ detect: true });
 const { characterStatsMap, totalGame } = await useApiCharacterStats({ gameVersion: gameVersion.value });
@@ -44,16 +42,8 @@ const characterStatsData = computed(() => {
 const characterStatsColumns: DataTableColumn<typeof characterStatsData["value"][number]>[] = [
   {
     key: "card",
-    render: row => h(
-      "div",
-      {
-        class: "flex gap-1 items-center",
-      },
-      [
-        h(CardImage, { card: row.card as CharacterCard, class: "h-8" }),
-        h("div", row.card),
-      ],
-    ),
+    fixed: "left",
+    render: row => renderCardColumn(row.card),
   },
   {
     title: "出场次数",
@@ -95,20 +85,14 @@ const actionStatsData = computed(() => {
 const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number]>[] = [
   {
     key: "card",
-    render: row => h(
-      "div",
-      {
-        class: "flex gap-1 items-center",
-      },
-      [
-        h(CardImage, { card: row.card as ActionCard, class: "h-8" }),
-        h("div", row.card),
-      ],
-    ),
+    fixed: "left",
+    width: "6rem",
+    render: row => renderCardColumn(row.card),
   },
   {
     title: "总携带张数",
     key: "pick",
+    width: "6rem",
     align: "center",
     sorter: "default",
     defaultSortOrder: "descend",
@@ -116,6 +100,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
   {
     title: renderTableTitle("携带率", "携带至少一张此牌的牌组占比"),
     key: "pickRate",
+    width: "6rem",
     align: "center",
     sorter: "default",
     render: row => toPercentageString(row.pickRate),
@@ -123,6 +108,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
   {
     title: renderTableTitle("携带胜率", "携带至少一张此牌的牌组胜率"),
     key: "winRate",
+    width: "6rem",
     align: "center",
     sorter: "default",
     render: row => toPercentageString(row.winRate),
@@ -130,6 +116,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
   {
     title: renderTableTitle("携带者平均", "总携带张数 ÷ 携带此牌的牌组数"),
     key: "averagePick",
+    width: "6rem",
     align: "center",
     sorter: "default",
     render: row => format(row.averagePick, { precision: 3 }),
@@ -137,6 +124,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
   {
     title: renderTableTitle("总平均", "总携带张数 ÷ 总牌组数"),
     key: "averagePickTotal",
+    width: "6rem",
     align: "center",
     sorter: "default",
     render: row => format(row.averagePickTotal, { precision: 3 }),
