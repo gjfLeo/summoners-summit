@@ -8,9 +8,10 @@
 
 <script lang="ts" setup>
 import { type ActionCard, actionCardSorter } from "~/utils/cards";
+import type { Deck } from "~/utils/types";
 
 const props = defineProps<{
-  typicalActions: ReturnType<typeof useCardUsage>["typicalActions"];
+  typicalActions: Deck["actionCards"];
 }>();
 
 const actionCards = Object.entries(props.typicalActions)

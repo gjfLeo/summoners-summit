@@ -23,7 +23,7 @@
 import { type DataTableColumn, NDataTable, NTabPane, NTabs, NText } from "naive-ui";
 import { divide, format } from "mathjs/number";
 import type { ActionCard, CharacterCard } from "~/utils/types";
-import { CardCell } from "#components";
+import { CardCell, TableTitle } from "#components";
 
 useHead({ title: "卡牌 | 召唤之巅" });
 
@@ -57,7 +57,7 @@ const characterStatsColumns: DataTableColumn<typeof characterStatsData["value"][
     defaultSortOrder: "descend",
   },
   {
-    title: renderTableTitle("出场率", "按对局数统计，非征服赛制选取率"),
+    title: () => h(TableTitle, { title: "出场率", description: "按对局数统计，非征服赛制选取率" }),
     key: "pickRate",
     align: "center",
     sorter: "default",
@@ -102,7 +102,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
     defaultSortOrder: "descend",
   },
   {
-    title: renderTableTitle("携带率", "携带至少一张此牌的牌组占比"),
+    title: () => h(TableTitle, { title: "携带率", description: "携带至少一张此牌的牌组占比" }),
     key: "pickRate",
     width: "6rem",
     align: "center",
@@ -110,7 +110,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
     render: row => toPercentageString(row.pickRate),
   },
   {
-    title: renderTableTitle("携带胜率", "携带至少一张此牌的牌组胜率"),
+    title: () => h(TableTitle, { title: "携带胜率", description: "携带至少一张此牌的牌组胜率" }),
     key: "winRate",
     width: "6rem",
     align: "center",
@@ -118,7 +118,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
     render: row => toPercentageString(row.winRate),
   },
   {
-    title: renderTableTitle("携带者平均", "总携带张数 ÷ 携带此牌的牌组数"),
+    title: () => h(TableTitle, { title: "携带者平均", description: "总携带张数 ÷ 携带此牌的牌组数" }),
     key: "averagePick",
     width: "6rem",
     align: "center",
@@ -126,7 +126,7 @@ const actionStatsColumns: DataTableColumn<typeof actionStatsData["value"][number
     render: row => format(row.averagePick, { precision: 3 }),
   },
   {
-    title: renderTableTitle("总平均", "总携带张数 ÷ 总牌组数"),
+    title: () => h(TableTitle, { title: "总平均", description: "总携带张数 ÷ 所有牌组数" }),
     key: "averagePickTotal",
     width: "6rem",
     align: "center",

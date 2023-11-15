@@ -3,7 +3,7 @@ import type { ActionCard, ApiTeamStatsBasicStats, ApiTeamStatsCardUsageValue, Ap
 import { deckById, gameById } from "~/server/data";
 import { getTeamId } from "~/composables/use-team";
 
-const initCardUsageInfo = (): ApiTeamStatsCardUsageValue => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0 });
+const initCardUsageInfo = (): ApiTeamStatsCardUsageValue => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0, deckPick: 0 });
 const initVsTeamStats = (): ApiTeamStatsVsTeamStatsValue => ({ total: 0, win: 0 });
 
 export default defineEventHandler<R & ApiTeamStatsData>((event) => {
@@ -36,6 +36,7 @@ export default defineEventHandler<R & ApiTeamStatsData>((event) => {
         const deck = deckById[deckId];
         for (const [card, count] of Object.entries(deck.actionCards) as [ActionCard, number][]) {
           const cardUsage = cardUsageMap[card] ?? (cardUsageMap[card] = initCardUsageInfo());
+          cardUsage.deckPick++;
           cardUsage.totalCount += count;
           if (game.winner === player) cardUsage.winCount += count;
         }

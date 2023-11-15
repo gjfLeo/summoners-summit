@@ -27,6 +27,7 @@ export interface ApiTeamStatsCardUsageValue {
   winCount: number;
   totalAverage: number;
   winAverage: number;
+  deckPick: number;
 }
 
 export interface ApiTeamStatsVsTeamStatsValue {

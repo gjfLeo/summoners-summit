@@ -14,7 +14,7 @@
 
   <template v-if="totalWithDeck > 0">
     <NH3>行动牌选择</NH3>
-    <TeamCardUsages :card-usages="cardUsageMap" />
+    <TeamCardUsages :card-usages="cardUsageMap" :total-deck="totalWithDeck" />
     <div class="mt text-sm">
       <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
     </div>

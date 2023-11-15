@@ -8,25 +8,34 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { format } from "mathjs/number";
+import { divide, format } from "mathjs/number";
 import { NDataTable } from "naive-ui";
-import type { ActionCard } from "~/utils/types";
-import { CardCell } from "#components";
+import type { ActionCard, ApiTeamStatsData } from "~/utils/types";
+import { CardCell, TableTitle } from "#components";
 
 const props = defineProps<{
-  cardUsages: ReturnType<typeof useCardUsage>["cardUsages"];
+  cardUsages: ApiTeamStatsData["cardUsageMap"];
+  totalDeck: number;
 }>();
 
 const data = Object.entries(props.cardUsages).map(([card, usage]) => ({
   key: card,
   card: card as ActionCard,
   ...usage,
+  pickRate: divide(usage.deckPick, props.totalDeck),
 }));
 
 const columns: DataTableColumn<typeof data[number]>[] = [
   {
     key: "card",
     render: row => h(CardCell, { card: row.card }),
+  },
+  {
+    title: () => h(TableTitle, { title: "携带率", description: "携带至少一张此牌的牌组占比" }),
+    key: "pickRate",
+    align: "center",
+    sorter: "default",
+    render: row => toPercentageString(row.pickRate),
   },
   {
     title: "平均携带",
