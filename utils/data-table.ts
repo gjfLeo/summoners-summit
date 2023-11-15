@@ -3,7 +3,7 @@ import { NIcon, NTooltip } from "naive-ui";
 export function renderTableTitle(title: string, description: string) {
   return () => h("div",
     {
-      class: "flex gap-1 justify-center items-center",
+      class: "flex flex-wrap gap-1 justify-center items-center",
     },
     [
       h("span", title),
