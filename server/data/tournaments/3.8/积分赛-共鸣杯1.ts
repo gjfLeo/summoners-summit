@@ -288,7 +288,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "PUPA",
+              playerA: "pupa",
               playerB: "牛马牛牛马",
               video: "https://www.bilibili.com/video/BV1o94y1Y7xs",
               games: [
@@ -380,7 +380,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "PUPA",
+              playerA: "pupa",
               playerB: "薄学",
               video: "https://www.bilibili.com/video/BV1dh4y1k7Zu",
               games: [
@@ -435,7 +435,7 @@ export default defineTournament({
           date: "2023-07-30",
           matches: [
             {
-              playerA: "PUPA",
+              playerA: "pupa",
               playerB: "音尘",
               video: "https://www.bilibili.com/video/BV13V4y1B7uE",
               games: [
