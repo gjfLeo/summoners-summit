@@ -290,7 +290,7 @@ export default defineTournament({
             },
             {
               playerA: "周正福",
-              playerB: "tonbo",
+              playerB: "Tonbo",
               video: "https://www.bilibili.com/video/BV1484y1d7hU",
               banned: [
                 {
