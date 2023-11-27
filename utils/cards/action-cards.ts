@@ -34,7 +34,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "匣中玉栉": defineActionCardInfo({ id: 212051, name: "匣中玉栉", nameEn: "Tamakushi Casket", type: "Equipment", type2: "Talent" }),
   "镜华风姿": defineActionCardInfo({ id: 212061, name: "镜华风姿", nameEn: "Kyouka Fuushi", type: "Equipment", type2: "Talent" }),
   "衍溢的汐潮": defineActionCardInfo({ id: 212071, name: "衍溢的汐潮", nameEn: "The Overflow", type: "Equipment", type2: "Talent" }),
-  "星天的花雨": defineActionCardInfo({ id: 212081, name: "星天的花雨", nameEn: "Tje Starry Skies Their Flowers Rain", type: "Equipment", type2: "Talent" }),
+  "星天的花雨": defineActionCardInfo({ id: 212081, name: "星天的花雨", nameEn: "The Starry Skies Their Flowers Rain", type: "Equipment", type2: "Talent" }),
   // "猜先有方": defineActionCardInfo({ id: 212091, name: "猜先有方", nameEn: "Turn Control", type: "Equipment", type2: "Talent" }),
 
   "流火焦灼": defineActionCardInfo({ id: 213011, name: "流火焦灼", nameEn: "Flowing Flame", type: "Equipment", type2: "Talent" }),
@@ -150,7 +150,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "无常之面": defineActionCardInfo({ id: 312013, name: "无常之面", nameEn: "Capricious Visage", type: "Equipment", type2: "Artifact" }),
   "追忆之注连": defineActionCardInfo({ id: 312014, name: "追忆之注连", nameEn: "Shimenawa's Reminiscence", type: "Equipment", type2: "Artifact" }),
   "海祇之冠": defineActionCardInfo({ id: 312015, name: "海祇之冠", nameEn: "Crown of Watatsumi", type: "Equipment", type2: "Artifact" }),
-  "海染砗磲": defineActionCardInfo({ id: 312016, name: "海染砗磲", nameEn: "Ocean Hued Clam", type: "Equipment", type2: "Artifact" }),
+  "海染砗磲": defineActionCardInfo({ id: 312016, name: "海染砗磲", nameEn: "Ocean-Hued Clam", type: "Equipment", type2: "Artifact" }),
   "沙王的投影": defineActionCardInfo({ id: 312017, name: "沙王的投影", nameEn: "Shadow of the Sand King", type: "Equipment", type2: "Artifact" }),
   // "饰金之梦": defineActionCardInfo({ id: 312018, name: "饰金之梦", nameEn: "Gilded Drems", type: "Equipment", type2: "Artifact" }),
   // "浮溯之珏": defineActionCardInfo({ id: 312019, name: "浮溯之珏", nameEn: "Flowing Rings", type: "Equipment", type2: "Artifact" }),
