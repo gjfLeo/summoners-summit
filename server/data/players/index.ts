@@ -46,6 +46,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "干瘪的小果核": "小果核",
   "取悦诗风吟": "取悦",
   "召唤王": "吾虽年迈",
+  "卡牌狂魔张老伯": "老伯",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
