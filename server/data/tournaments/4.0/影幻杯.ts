@@ -363,7 +363,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "xhope",
+              playerA: "XHope",
               playerB: "本吃包",
               video: "https://www.bilibili.com/video/BV178411v7eH?p=9",
               games: [
