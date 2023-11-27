@@ -3160,7 +3160,7 @@ export default defineTournament({
           matches: [
             {
               playerA: "小王",
-              playerB: "雪国lnk",
+              playerB: "雪国Ink",
               video: "https://v.douyu.com/show/brN0MmxgoOO7pyxA",
               games: [
                 {
@@ -3311,7 +3311,7 @@ export default defineTournament({
           matches: [
             {
               playerA: "胜利哥哥的迷妹",
-              playerB: "雪国lnk",
+              playerB: "雪国Ink",
               video: "https://v.douyu.com/show/XqeO74D8mpN7xywG",
               games: [
                 {
