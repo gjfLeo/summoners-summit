@@ -32,7 +32,6 @@ const playerNicknameMapRaw: Record<string, string> = {
   "沉湎丶": "桔梗",
   "小宇cyy": "小宇",
   "魔法绵羊Tobby": "Tobby",
-  "xhope": "XHope",
   "蛋黄汐夕": "水果鲨啦",
   "Shana": "明暗螺旋",
   "只玩水草皇呜呜": "只玩水皇草呜呜",
