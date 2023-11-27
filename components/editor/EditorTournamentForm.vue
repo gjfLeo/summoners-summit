@@ -23,6 +23,7 @@
       <NSelect
         v-model:value="gameVersion"
         :options="gameVersionOptions"
+        tag
         filterable
         placeholder="游戏版本"
       />
