@@ -20,7 +20,7 @@ export default defineTournament({
             {
               playerA: "全都是失误",
               playerB: "充钱了吗",
-              video: "https://www.bilibili.com/video/BV1KC4y1N7VU/?spm_id_from=333.999.0.0&vd_source=6eeecaca53f85be0ceaf331fd443b891",
+              video: "https://www.bilibili.com/video/BV1KC4y1N7VU",
               banned: [
                 {
                   playerACharacters: ["北斗", "重云", "雷泽"],
@@ -51,7 +51,7 @@ export default defineTournament({
             {
               playerA: "明暗螺旋",
               playerB: "雪国Ink",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1KC4y1N7VU",
               banned: [
                 {
                   playerACharacters: ["班尼特", "重云", "无相之雷"],
@@ -76,7 +76,7 @@ export default defineTournament({
             {
               playerA: "玖哀",
               playerB: "冰红茶|荧",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1KC4y1N7VU",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],

@@ -14,7 +14,6 @@ export default defineTournament({
         ["可重复角色", "每名选手的3套阵容至少包含8张不同角色牌"],
       ],
       parts: [
-
         {
           name: "DAY1下午场",
           date: "2023-11-26",
@@ -553,13 +552,13 @@ export default defineTournament({
           ],
         },
         {
-          name: "day2",
+          name: "DAY2",
           date: "2023-11-27",
           matches: [
             {
               playerA: "空门天",
               playerB: "止",
-              video: "https://www.bilibili.com/video/BV1494y1n7Xx/?spm_id_from=333.999.0.0&vd_source=6eeecaca53f85be0ceaf331fd443b891",
+              video: "https://www.bilibili.com/video/BV1494y1n7Xx",
               banned: [
                 {
                   playerACharacters: ["赛诺", "多莉", "白术"],
@@ -668,7 +667,7 @@ export default defineTournament({
             {
               playerA: "饭团Finc",
               playerB: "葬送の鏡蓮華で",
-              video: "https://www.bilibili.com/video/BV1464y177g9/?spm_id_from=333.999.0.0&vd_source=6eeecaca53f85be0ceaf331fd443b891",
+              video: "https://www.bilibili.com/video/BV1464y177g9",
               banned: [
                 {
                   playerACharacters: ["莫娜", "流浪者", "优菈"],
