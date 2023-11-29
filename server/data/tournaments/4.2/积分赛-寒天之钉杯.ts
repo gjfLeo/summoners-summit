@@ -890,7 +890,7 @@ export default defineTournament({
               playerA: "九千羽",
               playerB: "Elaina",
               video: "https://www.bilibili.com/video/BV1M94y1E7WR",
-              winner: "A"
+              winner: "A",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
