@@ -3,8 +3,8 @@ const blockWords: string[] = [
   "89",
   "c4",
   "cag",
-  "fuck",
   "gay",
+  "ntr",
   "pcp",
   "rbq",
 ];
