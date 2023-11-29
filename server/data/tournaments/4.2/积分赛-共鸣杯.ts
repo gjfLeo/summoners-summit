@@ -14,7 +14,7 @@ export default defineTournament({
       ],
       parts: [
         {
-          name: "day1",
+          name: "DAY1",
           date: "2023-11-27",
           matches: [
             {
