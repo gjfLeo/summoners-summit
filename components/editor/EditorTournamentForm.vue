@@ -103,7 +103,7 @@ const output = computed(() => {
       : []),
     "      parts: [",
     "        {",
-    `          name: "${partName.value}",`,
+    `          name: "${partName.value.replace(/day/i, "DAY")}",`,
     `          date: "${partDate.value ?? ""}",`,
     "          matches: [",
     ...(matchesForm.value?.output ?? []).map(line => `            ${line}`),

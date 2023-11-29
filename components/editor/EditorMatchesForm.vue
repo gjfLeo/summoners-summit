@@ -20,16 +20,23 @@
           </tr>
           <tr>
             <th class="w-15%" />
-            <th class="w-35%"><NInput v-model:value="match.playerA" placeholder="玩家1昵称" /></th>
-            <th class="w-35%"><NInput v-model:value="match.playerB" placeholder="玩家2昵称" /></th>
+            <th class="w-35%">
+              <NInput v-model:value="match.playerA" placeholder="玩家1昵称" />
+            </th>
+            <th class="w-35%">
+              <NInput v-model:value="match.playerB" placeholder="玩家2昵称" />
+            </th>
             <th class="w-15%">
-              <NInput v-model:value="match.video" placeholder="视频链接" size="small">
-                <template #prefix>
-                  <NText class="mr-1" :depth="3">
-                    <div class="i-carbon:video" />
-                  </NText>
-                </template>
-              </NInput>
+              <div class="flex flex-col items-end justify-start gap-2">
+                <NInput v-model:value="match.video" placeholder="视频链接" size="small">
+                  <template #prefix>
+                    <NText class="mr-1" :depth="3">
+                      <div class="i-carbon:video" />
+                    </NText>
+                  </template>
+                </NInput>
+                <NCheckbox v-if="match.video?.match(/[\?&]p=\d/)" v-model:checked="match.videoWithPart" size="small" label="精确到分P" />
+              </div>
             </th>
           </tr>
         </thead>
@@ -123,7 +130,7 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NHr, NInput, NTable, NText } from "naive-ui";
+import { NButton, NCheckbox, NHr, NInput, NTable, NText } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 
 interface MatchData {
@@ -131,6 +138,7 @@ interface MatchData {
   playerA: string;
   playerB: string;
   video: string;
+  videoWithPart: boolean;
   banned: BannedData[];
   games: GameData[];
 }
@@ -153,7 +161,7 @@ interface GameData {
 
 let tempId = 1;
 function newMatch(): MatchData {
-  return { tempId: tempId++, playerA: "", playerB: "", video: "", banned: [], games: [newGame()] };
+  return { tempId: tempId++, playerA: "", playerB: "", video: "", videoWithPart: false, banned: [], games: [newGame()] };
 }
 function newBanned() {
   return { tempId: tempId++, playerACharacters: [], playerBCharacters: [] };
@@ -164,11 +172,20 @@ function newGame(): GameData {
 
 const matches = ref<MatchData[]>([newMatch()]);
 
+function formatVideoLink(video: string, videoWithPart: boolean) {
+  const url = new URL("https://www.bilibili.com/video/BV1X84y1R7f5/?spm_id_from=333.1007.tianma.9-2-32.click&vd_source=5afe92fd24d9e11401f94efb4ab93a46");
+  if (url.host !== "www.bilibili.com") {
+    return video;
+  }
+  const part = (videoWithPart && url.searchParams.get("p")) ? url.searchParams.get("p") : "";
+  return url.origin + url.pathname.replace(/\/$/, "") + part;
+}
+
 const output = computed<string[]>(() => matches.value.flatMap(match => [
   "{",
   `  playerA: "${match.playerA}",`,
   `  playerB: "${match.playerB}",`,
-  `  video: "${match.video}",`,
+  `  video: "${formatVideoLink(match.video, match.videoWithPart)}",`,
   ...(match.banned.length
     ? [
         "  banned: [",
