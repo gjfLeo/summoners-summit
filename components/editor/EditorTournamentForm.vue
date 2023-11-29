@@ -33,7 +33,7 @@
       <NInput v-model:value="stageName" placeholder="如16进8、半决赛等" />
     </NFormItem>
     <NFormItem label="规则" :show-feedback="false" grid="col-13/25">
-      <NSelect v-model:value="stageRules" :options="ruleOptions" tag multiple :render-tag="ruleRenderTag" />
+      <NSelect v-model:value="stageRules" :options="ruleOptions" tag filterable multiple :render-tag="ruleRenderTag" />
     </NFormItem>
 
     <NFormItem label="比赛日名称" :show-feedback="false" grid="col-1/13">
@@ -181,8 +181,11 @@ const ruleOptions = [
   "禁用阵容 - 对阵双方各准备4套阵容，禁用对手一套阵容",
   "禁用阵容 - 对阵双方各准备5套阵容，禁用对手一套阵容",
   "可重复角色 - 每名选手的3套阵容至少包含7张不同角色牌",
+  "可重复角色 - 每名选手的3套阵容至少包含8张不同角色牌",
   "可重复角色 - 每名选手的4套阵容至少包含9张不同角色牌",
+  "可重复角色 - 每名选手的4套阵容至少包含10张不同角色牌",
   "可重复角色 - 每名选手的5套阵容至少包含11张不同角色牌",
+  "可重复角色 - 每名选手的5套阵容至少包含13张不同角色牌",
   "备选牌组 - 3套阵容合计可准备9套牌组，上场时从中选择",
   "备选牌组 - 每套阵容可准备3套牌组，上场时从中选择",
 ].map(label => ({ label, value: label }));
