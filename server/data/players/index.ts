@@ -32,7 +32,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "沉湎丶": "桔梗",
   "小宇cyy": "小宇",
   "魔法绵羊Tobby": "Tobby",
-  "蛋黄汐夕": "水果鲨啦",
+  "水果鲨啦": "蛋黄汐夕",
   "Shana": "明暗螺旋",
   "只玩水草皇呜呜": "只玩水皇草呜呜",
   "「亦然」": "亦然",
@@ -46,6 +46,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "卡牌狂魔张老伯": "老伯",
   "全都是失误": "全都是错误",
   "葬送の鏡蓮華で": "雪乃",
+  "镜莲华的葬送": "雪乃",
 
 
   "甜甜花酿鸡队": "",
