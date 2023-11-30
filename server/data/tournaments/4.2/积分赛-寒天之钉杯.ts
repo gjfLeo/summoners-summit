@@ -1014,7 +1014,7 @@ export default defineTournament({
             {
               playerA: "空门天",
               playerB: "螳螂虾",
-              video: "https://www.bilibili.com/video/BV1X84y1R7f5",
+              video: "https://www.bilibili.com/video/BV1Jj411j7TC",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
@@ -1171,7 +1171,7 @@ export default defineTournament({
             {
               playerA: "pupa",
               playerB: "星凌尘",
-              video: "https://www.bilibili.com/video/BV1X84y1R7f5",
+              video: "https://www.bilibili.com/video/BV1WQ4y1x7C2",
               banned: [
                 {
                   playerACharacters: ["愚人众·火之债务处理人", "班尼特", "无相之雷"],
