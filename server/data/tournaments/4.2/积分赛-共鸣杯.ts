@@ -229,7 +229,7 @@ export default defineTournament({
             {
               playerA: "明暗螺旋",
               playerB: "莉莉芭",
-              video: "https://www.bilibili.com/video/BV1X84y1R7f5",
+              video: "https://www.bilibili.com/video/BV1hQ4y1x73c",
               banned: [
                 {
                   playerACharacters: ["莫娜", "妮露", "纳西妲"],
@@ -272,7 +272,7 @@ export default defineTournament({
             {
               playerA: "玖哀",
               playerB: "古明地觉",
-              video: "https://www.bilibili.com/video/BV1X84y1R7f5",
+              video: "https://www.bilibili.com/video/BV1wC4y117e5",
               banned: [
                 {
                   playerACharacters: ["班尼特", "宵宫", "无相之雷"],
