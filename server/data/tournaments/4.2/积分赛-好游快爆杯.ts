@@ -77,6 +77,68 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2023-12-30",
+          matches: [
+            {
+              playerA: "半仙豆腐",
+              playerB: "梦影疏横",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "菲谢尔", "纳西妲"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "八重神子", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["妮露", "白术", "莫娜"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "遗尘音序",
+              playerB: "芙桃桃大魔王",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "纳西妲", "妮露"],
+                  playerBCharacters: ["重云", "北斗", "雷泽"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["芭芭拉", "诺艾尔", "岩盔丘丘王"],
+                  playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "诺艾尔", "芭芭拉"],
+                  playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["行秋", "诺艾尔", "芭芭拉"],
+                  playerBCharacters: ["重云", "雷电将军", "申鹤"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
