@@ -107,7 +107,7 @@ export default defineTournament({
             {
               playerA: "c",
               playerB: "镜莲华的葬送",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1pC4y1A7sm",
               banned: [
                 {
                   playerACharacters: ["重云", "雷泽", "北斗"],
@@ -132,7 +132,7 @@ export default defineTournament({
             {
               playerA: "某七圣召唤选手",
               playerB: "莉莉芭",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1G94y1E7nr",
               banned: [
                 {
                   playerACharacters: ["北斗", "神里绫华", "重云"],
@@ -157,7 +157,7 @@ export default defineTournament({
             {
               playerA: "zhxx",
               playerB: "Haku",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1Hj411j7Fv",
               banned: [
                 {
                   playerACharacters: ["班尼特", "宵宫", "无相之雷"],
