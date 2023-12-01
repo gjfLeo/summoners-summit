@@ -6,6 +6,7 @@
     size="small"
     :columns="columns"
     :data="data"
+    :scroll-x="1400"
     max-height="calc(100vh - 16.5rem)"
   />
 </template>
