@@ -173,7 +173,7 @@ function newGame(): GameData {
 const matches = ref<MatchData[]>([newMatch()]);
 
 function formatVideoLink(video: string, videoWithPart: boolean) {
-  const url = new URL("https://www.bilibili.com/video/BV1X84y1R7f5/?spm_id_from=333.1007.tianma.9-2-32.click&vd_source=5afe92fd24d9e11401f94efb4ab93a46");
+  const url = new URL(video);
   if (url.host !== "www.bilibili.com") {
     return video;
   }
