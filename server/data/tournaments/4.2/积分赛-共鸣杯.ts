@@ -396,5 +396,101 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-12-02",
+          matches: [
+            {
+              playerA: "莉莉芭",
+              playerB: "千折以奉",
+              video: "https://www.bilibili.com/video/BV1y64y1L79Z",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "可莉", "刻晴"],
+                  playerBCharacters: ["妮露", "莫娜", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["重云", "雷电将军", "申鹤"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
+                  playerBCharacters: ["菲谢尔", "纯水精灵·洛蒂娅", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "诺艾尔", "荒泷一斗"],
+                  playerBCharacters: ["菲谢尔", "纯水精灵·洛蒂娅", "愚人众·火之债务处理人"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "诺艾尔", "荒泷一斗"],
+                  playerBCharacters: ["凝光", "芭芭拉", "诺艾尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "镜莲华的葬送",
+              playerB: "玖哀",
+              video: "https://www.bilibili.com/video/BV19G411e7MU",
+              banned: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["妮露", "莫娜", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["雷电将军", "香菱", "刻晴"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["班尼特", "宵宫", "无相之雷"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  playerBCharacters: ["班尼特", "宵宫", "无相之雷"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["达达利亚", "宵宫", "神里绫人"],
+                  playerBCharacters: ["班尼特", "宵宫", "无相之雷"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
