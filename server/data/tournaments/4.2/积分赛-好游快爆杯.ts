@@ -215,5 +215,54 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: [
+        "BO5",
+        "征服",
+        ["禁用角色", "对阵双方各禁用一张角色牌"],
+        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
+        ["可重复角色", "每名选手的4套阵容至少包含9张不同角色牌"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-12-03",
+          matches: [
+            {
+              playerA: "半仙豆腐",
+              playerB: "氺水",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              games: [
+                {
+                  playerACharacters: ["神里绫华", "甘雨", "行秋"],
+                  playerBCharacters: ["班尼特", "愚人众·火之债务处理人", "无相之雷"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["神里绫华", "甘雨", "行秋"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["班尼特", "刻晴", "可莉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["北斗", "重云", "雷泽"],
+                  playerBCharacters: ["班尼特", "刻晴", "可莉"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
