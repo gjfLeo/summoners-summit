@@ -172,14 +172,19 @@ function newGame(): GameData {
 
 const matches = ref<MatchData[]>([newMatch()]);
 
-function formatVideoLink(video: string, videoWithPart: boolean) {
-  if (!video) return;
-  const url = new URL(video);
-  if (url.host !== "www.bilibili.com") {
-    return video;
+function formatVideoLink(video: string, videoWithPart: boolean): string {
+  if (!video) return "";
+  try {
+    const url = new URL(video);
+    if (url.host !== "www.bilibili.com") {
+      return video;
+    }
+    const part = (videoWithPart && url.searchParams.get("p")) ? url.searchParams.get("p") : "";
+    return url.origin + url.pathname.replace(/\/$/, "") + part;
   }
-  const part = (videoWithPart && url.searchParams.get("p")) ? url.searchParams.get("p") : "";
-  return url.origin + url.pathname.replace(/\/$/, "") + part;
+  catch {
+    return "";
+  }
 }
 
 const output = computed<string[]>(() => matches.value.flatMap(match => [
