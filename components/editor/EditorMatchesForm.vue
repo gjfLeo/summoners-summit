@@ -173,6 +173,7 @@ function newGame(): GameData {
 const matches = ref<MatchData[]>([newMatch()]);
 
 function formatVideoLink(video: string, videoWithPart: boolean) {
+  if (!video) return;
   const url = new URL(video);
   if (url.host !== "www.bilibili.com") {
     return video;
