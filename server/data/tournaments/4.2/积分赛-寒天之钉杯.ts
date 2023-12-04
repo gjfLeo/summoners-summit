@@ -665,7 +665,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "饭团Finc",
+              playerA: "饭团Fine",
               playerB: "葬送の鏡蓮華で",
               video: "https://www.bilibili.com/video/BV1464y177g9",
               banned: [
