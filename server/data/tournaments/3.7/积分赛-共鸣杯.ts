@@ -422,7 +422,7 @@ export default defineTournament({
               playerA: "八重妞妞",
               playerB: "本吃包",
               winner: "B",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1dV411u7mJ",
               games: [
                 {
                   playerACharacters: [RhodeiaOfLoch, YaeMiko, Nahida],
