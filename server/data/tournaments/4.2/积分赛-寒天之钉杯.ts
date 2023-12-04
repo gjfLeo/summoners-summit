@@ -1175,7 +1175,7 @@ export default defineTournament({
               banned: [
                 {
                   playerACharacters: ["愚人众·火之债务处理人", "班尼特", "无相之雷"],
-                  playerBCharacters: ["优菈", "流浪者", "优菈"],
+                  playerBCharacters: ["莫娜", "流浪者", "优菈"],
                 },
               ],
               games: [
