@@ -19,7 +19,7 @@ export default defineTournament({
             {
               playerA: "游迪亚斯",
               playerB: "子祺粨特",
-              video: "undefined",
+              video: "",
               games: [
                 {
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
@@ -38,7 +38,7 @@ export default defineTournament({
             {
               playerA: "小瓜皮王",
               playerB: "小红帽的大兔子",
-              video: "undefined",
+              video: "",
               games: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
@@ -63,7 +63,7 @@ export default defineTournament({
             {
               playerA: "明暗螺旋",
               playerB: "菓茶",
-              video: "undefined",
+              video: "",
               games: [
                 {
                   playerACharacters: ["北斗", "重云", "雷泽"],
@@ -88,7 +88,7 @@ export default defineTournament({
             {
               playerA: "臭臭鸭",
               playerB: "曲误周郎",
-              video: "undefined",
+              video: "",
               games: [
                 {
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
@@ -107,7 +107,7 @@ export default defineTournament({
             {
               playerA: "自古二楼",
               playerB: "雨中邮差",
-              video: "undefined",
+              video: "",
               games: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
