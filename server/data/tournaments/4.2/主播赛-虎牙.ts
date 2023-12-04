@@ -130,7 +130,7 @@ export default defineTournament({
           date: "2023-12-02",
           matches: [
             {
-              playerA: "LL起翼夜莺",
+              playerA: "LL起翼夜鹰",
               playerB: "梦下",
               video: "",
               games: [
