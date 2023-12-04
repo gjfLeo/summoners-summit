@@ -492,5 +492,64 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: [
+        "BO7",
+        "征服",
+        ["禁用阵容", "对阵双方各准备5套阵容，禁用对手一套阵容"],
+      ],
+      parts: [
+        {
+          name: "",
+          date: "2023-12-03",
+          matches: [
+            {
+              playerA: "镜莲华的葬送",
+              playerB: "莉莉芭",
+              video: "https://www.bilibili.com/video/BV1N64y1j7Ug",
+              banned: [
+                {
+                  playerACharacters: ["重云", "北斗", "雷泽"],
+                  playerBCharacters: ["班尼特", "可莉", "刻晴"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["妮露", "莫娜", "纳西妲"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["达达利亚", "宵宫", "神里绫人"],
+                  playerBCharacters: ["北斗", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
+                  playerBCharacters: ["芭芭拉", "诺艾尔", "荒泷一斗"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["雷电将军", "香菱", "刻晴"],
+                  playerBCharacters: ["芭芭拉", "诺艾尔", "荒泷一斗"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["妮露", "莫娜", "纳西妲"],
+                  playerBCharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
