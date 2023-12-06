@@ -19,23 +19,28 @@
     </NCard>
   </div>
 
-  <div class="mt flex flex-wrap justify-center gap-8">
-    <NStatistic label="统计场数" :value="matchTotal" />
-    <NStatistic label="场次胜率" :value="matchWinRate" />
-    <NStatistic label="对局胜率" :value="gameWinRate" />
-  </div>
-  <div class="mt flex justify-center text-sm">
-    <NText class="items-end text-xs" :depth="3">统计可能不全，数据仅供参考</NText>
-  </div>
+  <template v-if="matchTotal > 0">
+    <div class="mt flex flex-wrap justify-center gap-8">
+      <NStatistic label="统计场数" :value="matchTotal" />
+      <NStatistic label="场次胜率" :value="matchWinRate" />
+      <NStatistic label="对局胜率" :value="gameWinRate" />
+    </div>
+    <div class="mt flex justify-center text-sm">
+      <NText class="items-end text-xs" :depth="3">统计可能不全，数据仅供参考</NText>
+    </div>
 
-  <NH2>对局记录</NH2>
-  <template v-for="match in matchList" :key="match.id">
-    <TournamentMatch
-      :game-version="gameVersion === '' ? match.gameVersion : ''"
-      :tournament-name="match.tournamentName"
-      :part-name="`${match.partName}`"
-      :match="match" :games="filterGames(match.id)"
-    />
+    <NH2>对局记录</NH2>
+    <template v-for="match in matchList" :key="match.id">
+      <TournamentMatch
+        :game-version="gameVersion === '' ? match.gameVersion : ''"
+        :tournament-name="match.tournamentName"
+        :part-name="`${match.partName}`"
+        :match="match" :games="filterGames(match.id)"
+      />
+    </template>
+  </template>
+  <template v-else>
+    <NText :depth="3">该选手在当前选择的游戏版本没有对局记录。</NText>
   </template>
 </template>
 
@@ -43,6 +48,7 @@
 import { divide } from "mathjs/number";
 import { NCard, NH1, NH2, NStatistic, NText } from "naive-ui";
 import { ALL_ACHIEVEMENTS } from "~/utils/achievements";
+import type { ApiTournamentDetailsGamesValue } from "~/utils/types";
 
 const route = useRoute();
 const playerId = route.params.playerId as string;
@@ -57,11 +63,16 @@ const { gameList } = await useApiGameList({ gameVersion: gameVersion.value, play
 const matches = Object.fromEntries(matchList.map(match => [match.id, match]));
 const games = Object.fromEntries(gameList.map(game => [game.id, game]));
 
-function filterGames(matchId: string) {
-  return Object.fromEntries(
+function filterGames(matchId: string): Record<string, ApiTournamentDetailsGamesValue> {
+  const map = Object.fromEntries(
     matches[matchId].gameIds
       .map(gameId => [gameId, games[gameId]]),
   );
+  if (Object.values(map).filter(g => !g).length) {
+    console.warn("选手页对局信息缺失，待修复");
+    Object.entries(map).filter(([, g]) => !g).forEach(([id]) => delete map[id]);
+  }
+  return map;
 }
 
 const matchTotal = matchList.length;
