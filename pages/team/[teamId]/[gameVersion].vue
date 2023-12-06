@@ -19,8 +19,9 @@
       <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
     </div>
 
-    <NH3 class="flex items-center justify-between">
+    <NH3 class="flex items-center gap-2">
       <div>典型构筑</div>
+      <NButton v-if="typicalDeck" class="ml-auto" size="small" @click="toTypicalDeckDetail">详情</NButton>
       <NButton v-if="typicalDeck" size="small" @click="copyTypicalDeckShareCode">复制分享码</NButton>
     </NH3>
     <template v-if="typicalDeck">
@@ -69,4 +70,8 @@ const winRate = toPercentageString(divide(win, total));
 const winDiff = win - (total - win);
 
 const { copy: copyTypicalDeckShareCode } = useCopyDeckShareCode(typicalDeck);
+
+async function toTypicalDeckDetail() {
+  await navigateTo(`/deck/${typicalDeck?.id}`);
+}
 </script>
