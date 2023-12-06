@@ -43,7 +43,7 @@ function registerPlayerAward(playerId: string | undefined, award: string) {
   }
 }
 
-function registerDeck(characters: Deck["characterCards"], actions?: Deck["actionCards"]) {
+function registerDeck(characters: Deck["characterCards"], actions: Deck["actionCards"] | undefined, gameVersion: string) {
   if (!actions) {
     return undefined;
   }
@@ -54,11 +54,11 @@ function registerDeck(characters: Deck["characterCards"], actions?: Deck["action
   ) as Deck["actionCards"];
   const id = getHashValue(JSON.stringify({ characterCards, actionCards }));
   if (!deckById[id]) {
-    deckById[id] = { id, characterCards, actionCards };
     const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
     if (actionCardCount !== 30) {
       console.error(`行动牌数量≠30：http://localhost:3000/deck/${id}`);
     }
+    deckById[id] = { id, characterCards, actionCards, gameVersion };
   }
   return id;
 }
@@ -128,17 +128,11 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const banned = bannedRaw?.map((ban): BannedData => {
             const {
               playerACharacters,
-              playerAActions,
               playerBCharacters,
-              playerBActions,
             } = ban;
-            const playerADeckId = registerDeck(playerACharacters, playerAActions);
-            const playerBDeckId = registerDeck(playerBCharacters, playerBActions);
             return {
               playerACharacters,
-              playerADeckId,
               playerBCharacters,
-              playerBDeckId,
             };
           });
 
@@ -154,8 +148,8 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             } = gameRaw;
             const gameId = matchId + (gameIndex + 1).toString().padStart(2, "0");
 
-            const playerADeckId = registerDeck(playerACharacters, playerAActions);
-            const playerBDeckId = registerDeck(playerBCharacters, playerBActions);
+            const playerADeckId = registerDeck(playerACharacters, playerAActions, gameVersion);
+            const playerBDeckId = registerDeck(playerBCharacters, playerBActions, gameVersion);
 
             gameById[gameId] = {
               id: gameId,

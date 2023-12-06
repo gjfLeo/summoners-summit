@@ -1,22 +1,6 @@
 import { gameById } from "~/server/data";
-import type { ApiGameListData, Game, R } from "~/utils/types";
-
-function getGameMirror(game: Game): Game {
-  const { playerAId, playerANickname, playerBId, playerBNickname, playerACharacters, playerBCharacters, playerADeckId, playerBDeckId, starter, winner } = game;
-  return {
-    ...game,
-    playerAId: playerBId,
-    playerBId: playerAId,
-    playerANickname: playerBNickname,
-    playerBNickname: playerANickname,
-    playerACharacters: playerBCharacters,
-    playerBCharacters: playerACharacters,
-    playerADeckId: playerBDeckId,
-    playerBDeckId: playerADeckId,
-    starter: starter ? (starter === "A" ? "B" : "A") : "",
-    winner: winner === "A" ? "B" : "A",
-  };
-}
+import type { ApiGameListData, R } from "~/utils/types";
+import { getGameMirror } from "~/utils/games";
 
 const mirrorOverrideMap: Record<string, boolean> = {
   1: true,

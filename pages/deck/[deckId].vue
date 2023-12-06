@@ -19,12 +19,18 @@
     </template>
   </div>
 
-  <NH3>对局记录</NH3>
-  <GameRecords :games="gameList" />
+  <NTabs animated size="large">
+    <NTabPane name="gameRecords" tab="对局记录">
+      <GameRecords :games="gameList" />
+    </NTabPane>
+    <NTabPane name="similar" tab="相似牌组">
+      <DeckSimilar :similar-map="similarMap" />
+    </NTabPane>
+  </NTabs>
 </template>
 
 <script lang="ts" setup>
-import { NButton, NH3 } from "naive-ui";
+import { NButton, NTabPane, NTabs } from "naive-ui";
 import type { ActionCard } from "~/utils/types";
 
 useHead({ title: "牌组详情 | 召唤之巅" });
@@ -32,6 +38,7 @@ useHead({ title: "牌组详情 | 召唤之巅" });
 const route = useRoute();
 const deckId = route.params.deckId as string;
 const { deck } = await useApiDeck(deckId);
+const { similarMap } = await useApiDeckSimilar(deckId);
 
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard));

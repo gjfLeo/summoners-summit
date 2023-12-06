@@ -5,6 +5,7 @@ export interface Deck {
   id: string;
   characterCards: [CharacterCard, CharacterCard, CharacterCard];
   actionCards: Partial<Record<ActionCard, number>>;
+  gameVersion: string;
 }
 
 export interface Tournament {
