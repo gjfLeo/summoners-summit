@@ -27,7 +27,7 @@ export default defineEventHandler<R & ApiGameListData>((event) => {
   if (matchId) {
     list = list.filter(game => game.matchId === matchId);
   }
-  const mirror = mirrorOverrideMap[mirrorOverride as string] ?? (playerId || deckId || characters);
+  const mirror = mirrorOverrideMap[mirrorOverride as string] ?? Boolean(playerId || deckId || characters);
   if (mirror) {
     list = list.flatMap(game => [game, getGameMirror(game)]);
   }

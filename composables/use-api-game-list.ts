@@ -13,6 +13,7 @@ interface ApiGameListOptions {
 function getMirrorParam(mirror?: boolean) {
   if (mirror === true) return "1";
   if (mirror === false) return "0";
+  return undefined;
 }
 
 export default async function useApiGameList(options?: ApiGameListOptions) {
