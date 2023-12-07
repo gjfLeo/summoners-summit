@@ -44,5 +44,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "vue-chartjs": "^5.2.0"
   }
 }

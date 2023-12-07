@@ -17,3 +17,13 @@ export interface ApiPlayerStatsValue {
 export interface ApiPlayerStatsMapData {
   playerStatsMap: Record<string, ApiPlayerStatsValue>;
 }
+
+export interface ApiPlayerStatsByVersionData {
+  statsByVersion: Record<string, ApiPlayerStatsByVersionValue>;
+}
+export interface ApiPlayerStatsByVersionValue {
+  matchTotal: number;
+  matchWin: number;
+  gameTotal: number;
+  gameWin: number;
+}

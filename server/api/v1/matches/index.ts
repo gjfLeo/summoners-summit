@@ -1,17 +1,6 @@
 import { matchById } from "~/server/data";
-import type { ApiMatchListData, Match, R } from "~/utils/types";
-
-function getMatchMirror(match: Match): Match {
-  const { playerAId, playerANickname, playerBId, playerBNickname, winner } = match;
-  return {
-    ...match,
-    playerAId: playerBId,
-    playerBId: playerAId,
-    playerANickname: playerBNickname,
-    playerBNickname: playerANickname,
-    winner: winner === "A" ? "B" : "A",
-  };
-}
+import { getMatchMirror } from "~/utils/games";
+import type { ApiMatchListData, R } from "~/utils/types";
 
 const mirrorOverrideMap: Record<string, boolean> = {
   1: true,
