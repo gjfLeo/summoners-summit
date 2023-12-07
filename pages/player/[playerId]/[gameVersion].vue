@@ -68,10 +68,6 @@ function filterGames(matchId: string): Record<string, ApiTournamentDetailsGamesV
     matches[matchId].gameIds
       .map(gameId => [gameId, games[gameId]]),
   );
-  if (Object.values(map).filter(g => !g).length) {
-    console.warn("选手页对局信息缺失，待修复");
-    Object.entries(map).filter(([, g]) => !g).forEach(([id]) => delete map[id]);
-  }
   return map;
 }
 
