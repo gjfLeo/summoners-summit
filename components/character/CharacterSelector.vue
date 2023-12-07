@@ -5,7 +5,7 @@
       filterable
       clearable
       multiple
-      placeholder="角色"
+      :placeholder="placeholder"
       max-tag-count="responsive"
       :options="options"
       :virtual-scroll="false"
@@ -24,9 +24,12 @@ import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderT
 import { CardAvatar } from "#components";
 import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/cards";
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   modelValue: CharacterCard[];
-}>();
+  placeholder?: string;
+}>(), {
+  placeholder: "角色",
+});
 const emit = defineEmits(["update:modelValue"]);
 
 const characters = useVModel(props, "modelValue", emit);

@@ -1,4 +1,5 @@
 import type { ActionCard } from "../card";
+import type { Game } from "../output-data";
 
 export interface ApiTeamStatsMapValue {
   total: number;
@@ -40,4 +41,9 @@ export interface ApiTeamStatsData {
   cardUsageMap: Partial<Record<ActionCard, ApiTeamStatsCardUsageValue>>;
   typicalDeckId?: string;
   vsTeamStatsMap: Record<string, ApiTeamStatsVsTeamStatsValue>;
+}
+
+export interface ApiTeamGamesData {
+  gameList: Game[];
+  total: number;
 }

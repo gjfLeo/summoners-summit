@@ -99,3 +99,21 @@ export const ALL_CHARACTER_CARDS = Object.keys(ALL_CHARACTER_CARDS_INFO) as Char
 
 export const characterCardOrder = Object.fromEntries(ALL_CHARACTER_CARDS.map((card, i) => [card, i])) as Record<CharacterCard, number>;
 export const characterCardSorter = (a: CharacterCard, b: CharacterCard) => characterCardOrder[a] - characterCardOrder[b];
+
+const characterIds: Record<CharacterCard, string> = Object.fromEntries(
+  Object.entries(ALL_CHARACTER_CARDS_INFO)
+    .map(([card, { nameEn }]) => {
+      const characterId = nameEn.split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join("");
+      return [card, characterId];
+    }),
+) as Record<CharacterCard, string>;
+
+const characterById: Record<string, CharacterCard> = Object.fromEntries(
+  Object.entries(characterIds)
+    .map(([character, id]) => ([id, character as CharacterCard])),
+);
+
+export function getCharactersByTeamId(teamId: string): CharacterCard[] {
+  return teamId.split("-").map(id => characterById[id]) as CharacterCard[];
+}

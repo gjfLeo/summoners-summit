@@ -19,6 +19,10 @@ const props = defineProps<{
   vs: ApiTeamStatsData["vsTeamStatsMap"];
 }>();
 
+const emit = defineEmits<{
+  (e: "viewGameList", teamId: string): void;
+}>();
+
 const { gameVersionPath } = useGameVersion();
 
 type TeamStatsRaw = ApiTeamStatsVsTeamStatsValue;
@@ -129,9 +133,8 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
         trigger: () => h(
           NuxtLink,
           {
-            to: `/team/${props.teamId}/vs/${row.teamId}`,
-            prefetch: false,
             class: "flex justify-center",
+            onClick: () => emit("viewGameList", row.teamId),
           },
           () => h(
             NText,
