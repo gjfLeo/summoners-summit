@@ -64,7 +64,14 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     key: "players",
     title: "使用者",
     render: (row) => {
-      return row.players.map(player => h(PlayerName, { id: player.playerId, nickname: player.uniqueName }));
+      return h(
+        "div",
+        { class: "flex gap-2" },
+        row.players.map(player => h(
+          PlayerName,
+          { id: player.playerId, nickname: player.uniqueName },
+        )),
+      );
     },
   },
   {
