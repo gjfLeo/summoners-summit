@@ -48,10 +48,11 @@ export default defineEventHandler<R & ApiGameListData>((event) => {
     }
   }
 
+  const total = list.length;
   const limit = limitOverride ? Number(limitOverride) : 50;
   const offset = offsetOverride ? Number(offsetOverride) : 0;
   if (limit) {
     list = list.slice(offset, offset + limit);
   }
-  return { statusCode: 200, gameList: list };
+  return { statusCode: 200, gameList: list, total };
 });

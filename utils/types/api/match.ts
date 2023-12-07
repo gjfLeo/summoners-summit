@@ -10,4 +10,5 @@ export interface ApiMatchListData {
 
 export interface ApiGameListData {
   gameList: Game[];
+  total: number;
 }
