@@ -1,19 +1,19 @@
 <template>
-  <NTabs default-value="characters" justify-content="space-evenly" type="line">
+  <NTabs justify-content="space-evenly" type="line" size="large">
     <NTabPane name="characters" tab="角色牌">
-      <NText :depth="3" class="mb-2 block">共统计&#x2006;{{ totalGame }}&#x2006;场对局</NText>
+      <NText :depth="3" class="mb block text-sm">共统计&#x2006;{{ totalGame }}&#x2006;场对局</NText>
       <NDataTable
         :columns="characterStatsColumns"
         :data="characterStatsData"
-        max-height="calc(100vh - 20rem)"
+        max-height="calc(100vh - 18rem)"
       />
     </NTabPane>
     <NTabPane name="actions" tab="行动牌">
-      <NText :depth="3" class="mb-2 block">共统计&#x2006;{{ totalDeck }}&#x2006;个对局牌组</NText>
+      <NText :depth="3" class="mb block text-sm">共统计&#x2006;{{ totalDeck }}&#x2006;个对局牌组</NText>
       <NDataTable
         :columns="actionStatsColumns"
         :data="actionStatsData"
-        max-height="calc(100vh - 20rem)"
+        max-height="calc(100vh - 18rem)"
       />
     </NTabPane>
   </NTabs>
@@ -57,7 +57,7 @@ const characterStatsColumns: DataTableColumn<typeof characterStatsData["value"][
     defaultSortOrder: "descend",
   },
   {
-    title: () => h(TableTitle, { title: "出场率", description: "按对局数统计，非征服赛制选取率" }),
+    title: () => h(TableTitle, { title: "出场率", description: "按对局数统计，而非征服赛制选取率" }),
     key: "pickRate",
     align: "center",
     sorter: "default",

@@ -1,20 +1,19 @@
 <template>
-  <div class="inline-block w-18rem">
-    <NSelect
-      v-model:value="characters"
-      filterable
-      clearable
-      multiple
-      :placeholder="placeholder"
-      max-tag-count="responsive"
-      :options="options"
-      :virtual-scroll="false"
-      :render-option="renderOption"
-      :render-label="renderLabel"
-      :render-tag="renderTag"
-      :show-checkmark="false"
-    />
-  </div>
+  <NSelect
+    v-model:value="characters"
+    filterable
+    clearable
+    multiple
+    :placeholder="placeholder"
+    max-tag-count="responsive"
+    :options="options"
+    :virtual-scroll="false"
+    :render-option="renderOption"
+    :render-label="renderLabel"
+    :render-tag="renderTag"
+    :show-checkmark="false"
+    class="w-68"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -89,6 +88,7 @@ const renderTag: SelectRenderTag = ({ option, handleClose }) => {
     {
       round: true,
       closable: true,
+      style: "padding-inline: 0.25rem",
       onMousedown: (e: FocusEvent) => {
         e.preventDefault();
       },
@@ -98,7 +98,7 @@ const renderTag: SelectRenderTag = ({ option, handleClose }) => {
       },
     },
     {
-      icon: () => h(
+      default: () => h(
         "div",
         { class: "w-6 h-6" },
         h(

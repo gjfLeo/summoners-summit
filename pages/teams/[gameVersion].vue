@@ -7,7 +7,7 @@
     :columns="columns"
     :data="data"
     :scroll-x="1400"
-    max-height="calc(100vh - 16.5rem)"
+    max-height="calc(100vh - 18rem)"
   />
 </template>
 

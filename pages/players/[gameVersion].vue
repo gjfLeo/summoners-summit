@@ -1,19 +1,19 @@
 <template>
   <div class="mb flex flex-row flex-wrap-reverse items-center justify-between gap-4">
     <div>
-      <NInput v-model:value="playerFilter" size="small" clearable placeholder="选手昵称">
+      <NInput v-model:value="playerFilter" clearable placeholder="选手昵称">
         <template #suffix>
           <NIcon><div class="i-carbon:search" /></NIcon>
         </template>
       </NInput>
     </div>
-    <NText :depth="3">统计可能不全，数据仅供参考</NText>
+    <NText :depth="3" class="text-sm">统计可能不全，数据仅供参考</NText>
   </div>
   <NDataTable
     size="small"
     :columns="columns"
     :data="data"
-    max-height="calc(100vh - 16.5rem)"
+    max-height="calc(100vh - 18rem)"
   />
 </template>
 
