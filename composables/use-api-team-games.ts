@@ -1,6 +1,6 @@
 import type { ApiTeamGamesData } from "~/utils/types";
 
-export async function useApiTeamGames(teamId: string, gameVersion: string) {
+export default async function useApiTeamGames(teamId: string, gameVersion: string) {
   const query = { gameVersion };
   const { data, error } = await useFetch(`/api/v1/teams/${teamId}/games`, { query });
   if (error.value) throw createError({ ...error.value });
