@@ -20,7 +20,7 @@ export default defineEventHandler<R & ApiDeckSimilarData>((event) => {
 
   const similarMap: Record<string, ApiDeckSimilarItem> = Object.fromEntries(
     Object.values(deckById)
-      .filter(d => d.gameVersion = gameVersion)
+      .filter(d => d.gameVersion === gameVersion)
       .filter(d => getTeamId(d.characterCards) === teamId)
       .map<[string, ApiDeckSimilarItem]>((d) => {
         const item: ApiDeckSimilarItem = {
@@ -49,7 +49,7 @@ export default defineEventHandler<R & ApiDeckSimilarData>((event) => {
   );
 
   Object.values(gameById)
-    .filter(g => g.gameVersion = deck.gameVersion)
+    .filter(g => g.gameVersion === deck.gameVersion)
     .flatMap(g => [g, getGameMirror(g)])
     .filter(g => g.playerADeckId && similarMap[g.playerADeckId])
     .forEach((g) => {
