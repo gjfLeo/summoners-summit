@@ -6,6 +6,9 @@ import { actionCardSorter } from "~/utils/cards";
 import { sortObject } from "~/utils";
 
 export default defineEventHandler<R & ApiDeckSimilarData>((event) => {
+  const { maxDiffCount: maxDiffCountRaw } = getQuery(event);
+  const maxDiffCount = maxDiffCountRaw ? Number(maxDiffCountRaw) : 8;
+
   const deckId = event.context.params!.deckId;
   const deck = deckById[deckId];
   if (!deck) {
@@ -19,23 +22,30 @@ export default defineEventHandler<R & ApiDeckSimilarData>((event) => {
     Object.values(deckById)
       .filter(d => d.gameVersion = gameVersion)
       .filter(d => getTeamId(d.characterCards) === teamId)
-      .map((d) => {
+      .map<[string, ApiDeckSimilarItem]>((d) => {
         const item: ApiDeckSimilarItem = {
           deckId: d.id,
           diffs: Object.assign({}, d.actionCards),
+          diffCount: 0,
           pick: 0,
           win: 0,
           players: [],
         };
         (<[ActionCard, number][]>Object.entries(actionCards)).forEach(([card, count]) => {
-          item.diffs[card] = (item.diffs[card] ?? 0) - count;
-          if (item.diffs[card] === 0) {
+          const diff = (item.diffs[card] ?? 0) - count;
+          if (diff === 0) {
             delete item.diffs[card];
+          }
+          else {
+            item.diffs[card] = diff;
           }
         });
         sortObject(item.diffs, actionCardSorter);
+        item.diffCount = Object.values(item.diffs).filter(d => d > 0).reduce((a, b) => a + b, 0);
         return [d.id, item];
-      }),
+      })
+      .filter(([, item]) => maxDiffCount > 0 && item.diffCount <= maxDiffCount)
+      .sort((a, b) => a[1].diffCount - b[1].diffCount),
   );
 
   Object.values(gameById)

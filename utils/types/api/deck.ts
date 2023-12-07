@@ -11,6 +11,7 @@ export interface ApiDeckSimilarData {
 export interface ApiDeckSimilarItem {
   deckId: string;
   diffs: Deck["actionCards"];
+  diffCount: number;
   pick: number;
   win: number;
   players: { playerId: string; uniqueName: string }[];
