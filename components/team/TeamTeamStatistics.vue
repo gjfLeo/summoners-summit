@@ -133,7 +133,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
         trigger: () => h(
           NuxtLink,
           {
-            class: "flex justify-center",
+            class: "flex justify-center cursor-pointer",
             onClick: () => emit("viewGameList", row.teamId),
           },
           () => h(

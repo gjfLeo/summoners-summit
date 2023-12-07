@@ -50,7 +50,7 @@
     <NTabPane name="games" tab="对局历史">
       <template v-if="gameVersion">
         <CharacterSelector v-model="opponentCharacters" class="mb" placeholder="对手角色" />
-        <GameListByPage :game-list="filteredGameList" />
+        <GameList :game-list="filteredGameList" />
       </template>
       <template v-else>
         <NText :depth="3">全版本对局历史暂不支持，请指定游戏版本后查看。</NText>
