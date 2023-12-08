@@ -85,7 +85,7 @@ const { sm, md } = useBreakpoints(breakpointsTailwind);
 
 const chartOptions = computed<ChartOptions>(() => ({
   responsive: true,
-  aspectRatio: md.value ? 3 : (sm.value ? 2 : 1),
+  aspectRatio: md.value ? 4 : (sm.value ? 3 : 2),
   plugins: {
     tooltip: {
       callbacks: {
@@ -115,7 +115,7 @@ const chartOptions = computed<ChartOptions>(() => ({
     //   },
     },
     legend: {
-      position: "bottom",
+      position: sm.value ? "right" : "bottom",
     },
   },
   interaction: {
