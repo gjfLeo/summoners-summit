@@ -2,9 +2,13 @@
   <div grid="~ lg:cols-3 md:cols-2 row-gap-4">
     <template v-for="(ban, banIndex) in banned ?? []" :key="banIndex">
       <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
-        <div class="self-center justify-self-end text-sm"><PlayerName :id="playerAId" :nickname="playerANickname" /></div>
+        <div class="self-center justify-self-end text-sm">
+          <PlayerName :id="playerAId" :nickname="playerANickname" />
+        </div>
         <div />
-        <div class="self-center justify-self-start text-sm"><PlayerName :id="playerBId" :nickname="playerBNickname" /></div>
+        <div class="self-center justify-self-start text-sm">
+          <PlayerName :id="playerBId" :nickname="playerBNickname" />
+        </div>
 
         <div class="flex self-center justify-self-end"><TeamAvatars style="filter: grayscale(0.5)" :team="ban.playerACharacters" /></div>
         <div class="self-center justify-self-center text-sm">VS</div>
@@ -25,9 +29,13 @@
     <template v-for="game in games" :key="game.id">
       <!-- <div>{{ game }}</div> -->
       <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
-        <div class="self-center justify-self-end text-sm"><PlayerName :id="playerAId" :nickname="playerANickname" /></div>
+        <div class="self-center justify-self-end text-sm">
+          <PlayerName :id="game.playerAId ?? playerAId" :nickname="game.playerANickname ?? playerANickname" />
+        </div>
         <div />
-        <div class="self-center justify-self-start text-sm"><PlayerName :id="playerBId" :nickname="playerBNickname" /></div>
+        <div class="self-center justify-self-start text-sm">
+          <PlayerName :id="game.playerBId ?? playerBId" :nickname="game.playerBNickname ?? playerBNickname" />
+        </div>
 
         <div class="flex self-center justify-self-end"><TeamAvatars :team="game.playerACharacters" /></div>
         <div class="self-center justify-self-center text-sm">VS</div>
@@ -50,14 +58,14 @@
 </template>
 
 <script lang="ts" setup>
-import type { ApiTournamentDetailsData, ApiTournamentDetailsMatchesValue } from "~/utils/types";
+import type { Game, Match } from "~/utils/types";
 
 defineProps<{
   playerAId?: string;
   playerANickname: string;
   playerBId?: string;
   playerBNickname: string;
-  banned?: ApiTournamentDetailsMatchesValue["banned"];
-  games: ApiTournamentDetailsData["games"];
+  banned?: Match["banned"];
+  games: (Omit<Game, "playerAId" | "playerANickname" | "playerBId" | "playerBNickname"> & Partial<Game>)[];
 }>();
 </script>

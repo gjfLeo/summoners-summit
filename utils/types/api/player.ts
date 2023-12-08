@@ -1,4 +1,4 @@
-import type { Player } from "../output-data";
+import type { Game, Match, Player } from "../output-data";
 
 export interface ApiPlayerData {
   player: Player;
@@ -26,4 +26,9 @@ export interface ApiPlayerStatsByVersionValue {
   matchWin: number;
   gameTotal: number;
   gameWin: number;
+}
+
+export interface ApiPlayerMatchesData {
+  matches: Record<string, Match>;
+  games: Record<string, Game>;
 }
