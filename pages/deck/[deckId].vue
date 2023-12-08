@@ -19,7 +19,7 @@
     </template>
   </div>
 
-  <NTabs animated size="large">
+  <NTabs size="large">
     <NTabPane name="gameRecords" tab="对局记录">
       <GameRecords :games="gameList" />
     </NTabPane>
