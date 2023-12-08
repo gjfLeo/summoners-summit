@@ -19,14 +19,7 @@
     </NCard>
   </div>
 
-  <div class="mt h-60 flex justify-center">
-    <Chart
-      id="stats-by-version"
-      :options="chartOptions"
-      :data="chartData"
-      type="bar"
-    />
-  </div>
+  <PlayerStatsChart :stats-by-version="statsByVersion" />
 
   <template v-if="matchTotal > 0">
     <div class="mt flex flex-wrap justify-center gap-8">
@@ -56,13 +49,6 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import { NCard, NH1, NH2, NStatistic, NText } from "naive-ui";
-import { Chart } from "vue-chartjs";
-import {
-  BarController, BarElement, CategoryScale,
-  Chart as ChartJS, Colors, Legend, LineController, LineElement, LinearScale, PointElement,
-  Title, Tooltip,
-} from "chart.js";
-import type { ChartData, ChartOptions } from "chart.js";
 import { ALL_ACHIEVEMENTS } from "~/utils/achievements";
 import type { ApiTournamentDetailsGamesValue } from "~/utils/types";
 
@@ -96,100 +82,4 @@ const gameWin = gameList.filter(game => game.winner === "A").length;
 const gameWinRate = toPercentageString(divide(gameWin, gameTotal));
 
 const { statsByVersion } = await useApiPlayerStatsByVersion(playerId);
-const statsByVersionList = Object.entries(statsByVersion)
-  .map(([gameVersion, stats]) => ({ gameVersion, ...stats }))
-  .sort((a, b) => a.gameVersion.localeCompare(b.gameVersion));
-
-ChartJS.register(
-  Title, Tooltip, Legend, Colors,
-  CategoryScale, LinearScale, PointElement, LineElement, LineController, BarElement,
-  BarController,
-);
-
-const chartData: ChartData = {
-  labels: statsByVersionList.map(item => item.gameVersion),
-  datasets: [
-    {
-      label: "场次胜率",
-      data: statsByVersionList.map(item => divide(item.matchWin, item.matchTotal)),
-      yAxisID: "yPercent",
-      borderColor: "#368cf1c0",
-      backgroundColor: "#368cf1",
-      type: "line",
-    },
-    {
-      label: "对局胜率",
-      data: statsByVersionList.map(item => divide(item.gameWin, item.gameTotal)),
-      yAxisID: "yPercent",
-      borderColor: "#f1a936c0",
-      backgroundColor: "#f1a936",
-      type: "line",
-    },
-    {
-      label: "胜场数",
-      data: statsByVersionList.map(item => item.matchWin),
-      backgroundColor: "#368cf180",
-      yAxisID: "yCount",
-      categoryPercentage: 0.5,
-      stack: "matchStack",
-      type: "bar",
-    },
-    {
-      label: "负场数",
-      data: statsByVersionList.map(item => item.matchTotal - item.matchWin),
-      backgroundColor: "#808080",
-      yAxisID: "yCount",
-      categoryPercentage: 0.5,
-      stack: "matchStack",
-      type: "bar",
-    },
-  ],
-};
-const chartOptions: ChartOptions = {
-  responsive: true,
-  plugins: {
-    // tooltip: {
-    //   callbacks: {
-    //     footer: (tooltipItems) => {
-    //       let sum = 0;
-    //       tooltipItems.forEach((tooltipItem) => {
-    //         sum += tooltipItem.parsed.y;
-    //       });
-    //       return `Sum: ${sum}`;
-    //     },
-    //   },
-    // },
-    legend: {
-      position: "bottom",
-    },
-  },
-  scales: {
-    x: {
-      title: {
-        display: true,
-        text: "版本",
-      },
-    },
-    yCount: {
-      stacked: true,
-      title: {
-        display: true,
-        text: "场数",
-      },
-    },
-    yPercent: {
-      min: 0,
-      max: 1,
-      ticks: {
-        callback: s => toPercentageString(Number(s)),
-        stepSize: 0.25,
-      },
-      position: "right",
-      title: {
-        display: true,
-        text: "胜率",
-      },
-    },
-  },
-};
 </script>
