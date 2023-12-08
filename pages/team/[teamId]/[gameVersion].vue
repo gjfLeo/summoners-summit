@@ -56,6 +56,14 @@
         <NText :depth="3">全版本对局历史暂不支持，请指定游戏版本后查看。</NText>
       </template>
     </NTabPane>
+    <NTabPane name="statsByVersion" tab="版本数据">
+      <TeamStatsByVersionChart :stats-by-version="statsByVersion" />
+      <div class="flex justify-end">
+        <NText class="flex gap-2 text-sm" :depth="3">
+          <span>早期版本禁用数据未收录</span>
+        </NText>
+      </div>
+    </NTabPane>
   </NTabs>
 </template>
 
@@ -100,4 +108,6 @@ const { copy: copyTypicalDeckShareCode } = useCopyDeckShareCode(typicalDeck);
 async function toTypicalDeckDetail() {
   await navigateTo(`/deck/${typicalDeck?.id}`);
 }
+
+const { statsByVersion } = await useApiTeamStatsByVersion(teamId.value);
 </script>

@@ -47,3 +47,12 @@ export interface ApiTeamGamesData {
   gameList: Game[];
   total: number;
 }
+
+export interface ApiTeamStatsByVersionData {
+  statsByVersion: Record<string, ApiTeamStatsByVersionValue>;
+}
+export interface ApiTeamStatsByVersionValue {
+  ban: number;
+  pick: number;
+  win: number;
+}

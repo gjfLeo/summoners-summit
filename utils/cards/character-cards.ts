@@ -117,3 +117,6 @@ const characterById: Record<string, CharacterCard> = Object.fromEntries(
 export function getCharactersByTeamId(teamId: string): CharacterCard[] {
   return teamId.split("-").map(id => characterById[id]) as CharacterCard[];
 }
+export function getTeamIdByCharacters(characters: CharacterCard[]): string {
+  return [...characters].sort(characterCardSorter).map(character => characterIds[character]).join("-");
+}
