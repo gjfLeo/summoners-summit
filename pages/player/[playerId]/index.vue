@@ -20,6 +20,7 @@
   </div>
 
   <PlayerStatsChart :stats-by-version="statsByVersion" />
+  <PlayerStatsStatistics :stats-by-version="statsByVersion" />
   <div class="flex justify-end">
     <NText class="flex gap-2 text-sm" :depth="3">
       <span>统计可能不全，数据仅供参考</span>
