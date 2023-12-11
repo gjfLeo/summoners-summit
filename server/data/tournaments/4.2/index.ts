@@ -9,5 +9,5 @@ export default [
   t12,
   t13,
   t14,
-  t15，
+  t15,
 ];
