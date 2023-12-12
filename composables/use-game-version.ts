@@ -1,51 +1,26 @@
-import type { SelectOption } from "naive-ui";
-
-const normalGameVersion = (n: string) => ({ name: n, value: n, path: n.replaceAll(".", "-") });
-export const gameVersionList = [
-  { name: "全版本", value: "", path: "all" },
-  normalGameVersion("4.2"),
-  normalGameVersion("4.1"),
-  normalGameVersion("4.0"),
-  normalGameVersion("3.8"),
-  normalGameVersion("3.7"),
-];
-
-const gameVersionOptions: SelectOption[] = gameVersionList.map(version => ({ label: version.name, value: version.value }));
+import { ALL_GAME_VERSIONS, type GameVersion, getGameVersionPath } from "~/utils/game-versions";
 
 interface UseGameVersionOptions {
   detect?: boolean;
 }
 
-export function changeGameVersion(value: string) {
-  const route = useRoute();
-  if (typeof route.params.gameVersion === "string") {
-    return navigateTo({
-      name: route.name!,
-      params: {
-        ...route.params,
-        gameVersion: gameVersionList.find(version => version.value === value)?.path,
-      },
-    });
-  }
-}
-
 export default function useGameVersion(options?: UseGameVersionOptions) {
-  const gameVersion = useLocalStorage<string>("game-version", "");
+  const gameVersion = useLocalStorage<GameVersion | "">("game-version", "");
 
-  if (gameVersionList.find(version => version.value === gameVersion.value) === undefined) {
+  if (gameVersion.value !== "" && !ALL_GAME_VERSIONS.includes(gameVersion.value)) {
     gameVersion.value = "";
   }
 
   const gameVersionPath = computed(() => {
-    return gameVersionList.find(version => version.value === gameVersion.value)?.path ?? "all";
+    return getGameVersionPath(gameVersion.value);
   });
 
   if (options?.detect) {
     const route = useRoute();
     if (typeof route.params?.gameVersion === "string") {
-      gameVersion.value = gameVersionList.find(version => version.path === route.params.gameVersion)?.value ?? "";
+      gameVersion.value = ALL_GAME_VERSIONS.find(version => getGameVersionPath(version) === route.params.gameVersion) ?? "";
     }
   }
 
-  return { gameVersion, gameVersionOptions, gameVersionPath };
+  return { gameVersion, gameVersionPath };
 }
