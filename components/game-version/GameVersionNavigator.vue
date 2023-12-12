@@ -11,5 +11,5 @@ import { ALL_GAME_VERSIONS, getGameVersionPath } from "~/utils/game-versions";
 
 const route = useRoute();
 
-const links = ALL_GAME_VERSIONS.map(v => `${route.fullPath}/${getGameVersionPath(v)}`);
+const links = ["" as const, ...ALL_GAME_VERSIONS].map(v => `${route.fullPath}/${getGameVersionPath(v)}`);
 </script>
