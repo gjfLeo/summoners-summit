@@ -7,7 +7,9 @@
 </template>
 
 <script lang="ts" setup>
+import { ALL_GAME_VERSIONS, getGameVersionPath } from "~/utils/game-versions";
+
 const route = useRoute();
 
-const links = gameVersionList.map(item => `${route.fullPath}/${item.path}`);
+const links = ALL_GAME_VERSIONS.map(v => `${route.fullPath}/${getGameVersionPath(v)}`);
 </script>
