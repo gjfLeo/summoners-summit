@@ -2649,7 +2649,7 @@ export default defineTournament({
       ],
       parts: [
         {
-          name: "表演赛",
+          name: "",
           date: "2023-12-09",
           matches: [
             {
