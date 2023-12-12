@@ -60,10 +60,12 @@
 </template>
 
 <script lang="ts" setup>
-import type { MenuOption } from "naive-ui";
+import type { MenuOption, SelectOption } from "naive-ui";
 import { NButton, NDrawer, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
+import { ALL_GAME_VERSIONS, gameVersionSorterReversed, getGameVersionPath } from "~/utils/game-versions";
+import type { GameVersion } from "~/utils/types";
 
 const route = useRoute();
 const isDark = useDark();
@@ -71,7 +73,12 @@ const isDark = useDark();
 const isMobile = useBreakpoints(breakpointsTailwind).smaller("md");
 const sideMenuVisible = ref(false);
 
-const { gameVersion, gameVersionOptions, gameVersionPath } = useGameVersion();
+const { gameVersion, gameVersionPath } = useGameVersion();
+
+const gameVersionOptions: SelectOption[] = [
+  { label: "全版本", value: "" },
+  ...ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map(v => ({ label: v, value: v })),
+];
 
 const menuList = [
   { route: "/tournaments", name: "赛事" },
@@ -100,6 +107,18 @@ const menuOptions = computed<MenuOption[]>(() =>
     };
   }),
 );
+
+function changeGameVersion(gameVersion: GameVersion | "") {
+  if (typeof route.params.gameVersion === "string") {
+    return navigateTo({
+      name: route.name!,
+      params: {
+        ...route.params,
+        gameVersion: getGameVersionPath(gameVersion),
+      },
+    });
+  }
+}
 
 const loadingBar = useLoadingBar();
 const { beforeEach, afterEach } = useRouter();
