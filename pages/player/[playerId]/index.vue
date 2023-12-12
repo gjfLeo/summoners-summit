@@ -29,7 +29,7 @@
           <NIcon class="text-lg"><div class="i-carbon:information" /></NIcon>
         </template>
         <template #default>
-          <span>一些赛事（尤其是早期的）缺少完整录像，因此未纳入统计</span>
+          <span>一些早期赛事缺少完整录像，因此未纳入统计；部分赛事仅直播焦点对局，其他对局未统计。</span>
         </template>
       </NTooltip>
     </NText>
