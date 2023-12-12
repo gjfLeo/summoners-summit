@@ -840,7 +840,7 @@ export default defineTournament({
                     "蒙德土豆饼": 1,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
                 {
@@ -890,7 +890,7 @@ export default defineTournament({
                     "烤蘑菇披萨": 2,
                     "提瓦特煎蛋": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
               ],
@@ -993,7 +993,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "北地烟熏鸡": 1,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
                 {
@@ -1038,7 +1038,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "北地烟熏鸡": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "A",
                 },
               ],
@@ -1140,7 +1140,7 @@ export default defineTournament({
                     "蒙德土豆饼": 2,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
                 {
@@ -1183,7 +1183,7 @@ export default defineTournament({
                     "蒙德土豆饼": 2,
                     "提瓦特煎蛋": 1,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
               ],
@@ -1191,7 +1191,7 @@ export default defineTournament({
             {
               playerA: "子祺粨特",
               playerB: "臭臭鸭",
-              video: "",
+              video: "https://www.huya.com/video/play/943709608.html",
               games: [
                 {
                   playerACharacters: ["优菈", "莫娜", "流浪者"],
@@ -1238,7 +1238,7 @@ export default defineTournament({
                     "蒙德土豆饼": 1,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
                 {
@@ -1286,7 +1286,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "A",
                 },
                 {
@@ -1332,7 +1332,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
               ],
@@ -1346,7 +1346,7 @@ export default defineTournament({
             {
               playerA: "自古二楼",
               playerB: "梦下",
-              video: "",
+              video: "https://www.huya.com/video/play/943714298.html",
               games: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
@@ -1393,7 +1393,7 @@ export default defineTournament({
                     "蒙德土豆饼": 2,
                     "烤蘑菇披萨": 1,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "B",
                 },
                 {
@@ -1546,7 +1546,7 @@ export default defineTournament({
                     "甜甜花酿鸡": 1,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "A",
+                  starter: "",
                   winner: "A",
                 },
                 {
@@ -1582,7 +1582,7 @@ export default defineTournament({
                     "迪娜泽黛": 2,
                     "万家灶火": 1,
                     "元素共鸣：交织之雷": 2,
-                    "元素共鸣：强能之雷": 1,
+                    "元素共鸣：强能之雷": 1,                  
                     "换班时间": 1,
                     "运筹帷幄": 2,
                     "本大爷还没有输！": 1,
@@ -1840,7 +1840,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                     "唐杜尔烤鸡": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
               ],
@@ -1848,7 +1848,7 @@ export default defineTournament({
             {
               playerA: "雨中邮差",
               playerB: "LL起翼夜鹰",
-              video: "",
+              video: "https://www.huya.com/video/play/943714292.html",
               games: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
@@ -1893,7 +1893,7 @@ export default defineTournament({
                     "蒙德土豆饼": 2,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
                 {
@@ -1941,7 +1941,7 @@ export default defineTournament({
                     "甜甜花酿鸡": 1,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
               ],
@@ -1955,7 +1955,7 @@ export default defineTournament({
             {
               playerA: "一不小欣z",
               playerB: "柠柠七喵",
-              video: "",
+              video: "https://www.huya.com/video/play/943715562.html",
               games: [
                 {
                   playerACharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
@@ -2001,7 +2001,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "北地烟熏鸡": 1,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "B",
                 },
                 {
@@ -2102,7 +2102,7 @@ export default defineTournament({
             {
               playerA: "小红帽的大兔子",
               playerB: "小瓜皮王",
-              video: "https://www.huya.com/video/play/943709482.html",
+              video: "https://www.huya.com/video/play/943715576.html",
               games: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
@@ -2149,7 +2149,7 @@ export default defineTournament({
                     "蒙德土豆饼": 2,
                     "烤蘑菇披萨": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
                 {
@@ -2294,7 +2294,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "B",
                 },
                 {
@@ -2340,7 +2340,7 @@ export default defineTournament({
                     "甜甜花酿鸡": 1,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "B",
                 },
               ],
@@ -2348,7 +2348,7 @@ export default defineTournament({
             {
               playerA: "雨中邮差",
               playerB: "自古二楼",
-              video: "",
+              video: "https://www.huya.com/video/play/943715580.html",
               games: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
@@ -2394,7 +2394,7 @@ export default defineTournament({
                     "蒙德土豆饼": 1,
                     "烤蘑菇披萨": 2,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
                 {
@@ -2441,7 +2441,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                     "唐杜尔烤鸡": 1,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
                 {
@@ -2489,7 +2489,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                     "唐杜尔烤鸡": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
               ],
@@ -2497,7 +2497,7 @@ export default defineTournament({
             {
               playerA: "道诡异仙李火旺",
               playerB: "柠柠七喵",
-              video: "",
+              video: "https://www.huya.com/video/play/943715518.html",
               games: [
                 {
                   playerACharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
@@ -2540,7 +2540,7 @@ export default defineTournament({
                     "莲花酥": 2,
                     "北地烟熏鸡": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "B",
                 },
                 {
@@ -2589,7 +2589,7 @@ export default defineTournament({
                     "烤蘑菇披萨": 2,
                     "提瓦特煎蛋": 1,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "A",
                 },
                 {
