@@ -6,6 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "generate:test": "SET NUXT_APP_CRAWL_LINKS=false&& nuxt generate",
     "preview": "nuxt preview",
     "preview:ssg": "npx serve .output/public",
     "postinstall": "nuxt prepare",

@@ -69,4 +69,10 @@ export default defineNuxtConfig({
           : [],
     },
   },
+
+  nitro: {
+    prerender: {
+      crawlLinks: process.env.NUXT_APP_CRAWL_LINKS !== "false",
+    },
+  },
 });
