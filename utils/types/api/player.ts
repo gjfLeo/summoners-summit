@@ -1,11 +1,12 @@
-import type { Game, Match, Player } from "../output-data";
+import type { Game, GameId, Match, MatchId, Player, PlayerId } from "../output-data";
+import type { GameVersion } from "../game-version";
 
 export interface ApiPlayerData {
   player: Player;
 }
 
 export interface ApiPlayerStatsValue {
-  playerId: string;
+  playerId: PlayerId;
   uniqueName: string;
   aliases?: string[];
   matchTotal: number;
@@ -15,11 +16,11 @@ export interface ApiPlayerStatsValue {
 }
 
 export interface ApiPlayerStatsMapData {
-  playerStatsMap: Record<string, ApiPlayerStatsValue>;
+  playerStatsMap: Record<PlayerId, ApiPlayerStatsValue>;
 }
 
 export interface ApiPlayerStatsByVersionData {
-  statsByVersion: Record<string, ApiPlayerStatsByVersionValue>;
+  statsByVersion: Record<GameVersion, ApiPlayerStatsByVersionValue>;
 }
 export interface ApiPlayerStatsByVersionValue {
   matchTotal: number;
@@ -29,6 +30,6 @@ export interface ApiPlayerStatsByVersionValue {
 }
 
 export interface ApiPlayerMatchesData {
-  matches: Record<string, Match>;
-  games: Record<string, Game>;
+  matches: Record<MatchId, Match>;
+  games: Record<GameId, Game>;
 }

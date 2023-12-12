@@ -1,4 +1,5 @@
-import type { ActionCard } from "../card";
+import type { ActionCard, TeamId } from "../card";
+import type { GameVersion } from "../game-version";
 import type { Game } from "../output-data";
 
 export interface ApiTeamStatsMapValue {
@@ -13,7 +14,7 @@ export interface ApiTeamStatsMapValue {
 }
 
 export interface ApiTeamStatsMapData {
-  teamStatsMap: Record<string, ApiTeamStatsMapValue>;
+  teamStatsMap: Record<TeamId, ApiTeamStatsMapValue>;
 }
 
 export interface ApiTeamStatsBasicStats {
@@ -40,7 +41,7 @@ export interface ApiTeamStatsData {
   basicStats: ApiTeamStatsBasicStats;
   cardUsageMap: Partial<Record<ActionCard, ApiTeamStatsCardUsageValue>>;
   typicalDeckId?: string;
-  vsTeamStatsMap: Record<string, ApiTeamStatsVsTeamStatsValue>;
+  vsTeamStatsMap: Record<TeamId, ApiTeamStatsVsTeamStatsValue>;
 }
 
 export interface ApiTeamGamesData {
@@ -49,7 +50,7 @@ export interface ApiTeamGamesData {
 }
 
 export interface ApiTeamStatsByVersionData {
-  statsByVersion: Record<string, ApiTeamStatsByVersionValue>;
+  statsByVersion: Record<GameVersion, ApiTeamStatsByVersionValue>;
 }
 export interface ApiTeamStatsByVersionValue {
   ban: number;

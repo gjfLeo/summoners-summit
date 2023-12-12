@@ -1,18 +1,26 @@
 import type { PlayerAchievement } from "../achievements";
+import type { GameVersion } from "../game-versions";
+import type { Brand } from "./utility-types";
 import type { ActionCard, CharacterCard } from "./card";
 
+export type DeckId = Brand<string, "DeckId">;
+export type TournamentId = Brand<string, "TournamentId">;
+export type MatchId = Brand<string, "MatchId">;
+export type GameId = Brand<string, "GameId">;
+export type PlayerId = Brand<string, "PlayerId">;
+
 export interface Deck {
-  id: string;
+  id: DeckId;
   characterCards: [CharacterCard, CharacterCard, CharacterCard];
   actionCards: Partial<Record<ActionCard, number>>;
-  gameVersion: string;
+  gameVersion: GameVersion;
 }
 
 export interface Tournament {
-  id: string;
+  id: TournamentId;
   name: string;
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛";
-  gameVersion: string;
+  gameVersion: GameVersion;
   stages: TournamentStage[];
 }
 
@@ -27,53 +35,53 @@ export type TournamentRules = ("BO3" | "BO5" | "BO7" | "征服" | "决斗" | [st
 export interface TournamentPart {
   name?: string;
   date: string;
-  matchIds: string[];
+  matchIds: MatchId[];
 }
 
 export interface Match {
-  id: string;
-  tournamentId: string;
+  id: MatchId;
+  tournamentId: TournamentId;
   tournamentName: string;
   partName: string;
-  gameVersion: string;
+  gameVersion: GameVersion;
   name: string;
   date: string;
   video?: string;
 
-  playerAId?: string;
+  playerAId?: PlayerId;
   playerANickname: string;
-  playerBId?: string;
+  playerBId?: PlayerId;
   playerBNickname: string;
   winner: "A" | "B";
   banned?: BannedData[];
-  gameIds: string[];
+  gameIds: GameId[];
 }
 
 export interface BannedData {
   playerACharacters: Deck["characterCards"];
-  playerADeckId?: string;
+  playerADeckId?: DeckId;
   playerBCharacters: Deck["characterCards"];
-  playerBDeckId?: string;
+  playerBDeckId?: DeckId;
 }
 
 export interface Game {
-  id: string;
-  tournamentId: string;
-  matchId: string;
-  gameVersion: string;
+  id: GameId;
+  tournamentId: TournamentId;
+  matchId: MatchId;
+  gameVersion: GameVersion;
   date: string;
   tournamentName: string;
   gameName: string;
   video?: string;
 
-  playerAId?: string;
+  playerAId?: PlayerId;
   playerANickname: string;
-  playerBId?: string;
+  playerBId?: PlayerId;
   playerBNickname: string;
   playerACharacters: Deck["characterCards"];
-  playerADeckId?: string;
+  playerADeckId?: DeckId;
   playerBCharacters: Deck["characterCards"];
-  playerBDeckId?: string;
+  playerBDeckId?: DeckId;
 
   starter: "A" | "B" | "";
   winner: "A" | "B";
@@ -81,7 +89,7 @@ export interface Game {
 }
 
 export interface Player {
-  id: string;
+  id: PlayerId;
   uniqueName: string;
   aliases?: string[];
   achievements?: PlayerAchievement[];

@@ -1,5 +1,5 @@
-import { getTeamId } from "~/composables/use-team";
 import { gameById } from "~/server/data";
+import { getTeamIdByCharacters } from "~/utils/cards";
 import { getGameMirror } from "~/utils/games";
 import type { ApiTeamGamesData, R } from "~/utils/types";
 
@@ -10,8 +10,8 @@ export default defineEventHandler<R & ApiTeamGamesData>((event) => {
   const gameList = Object.values(gameById)
     .filter(g => gameVersion === g.gameVersion)
     .flatMap((g) => {
-      const teamIdA = getTeamId(g.playerACharacters);
-      const teamIdB = getTeamId(g.playerBCharacters);
+      const teamIdA = getTeamIdByCharacters(g.playerACharacters);
+      const teamIdB = getTeamIdByCharacters(g.playerBCharacters);
       if (teamId === teamIdA) {
         return [g];
       }

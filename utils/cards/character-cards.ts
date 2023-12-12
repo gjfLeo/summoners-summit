@@ -1,3 +1,5 @@
+import type { Brand } from "../types/utility-types";
+
 interface CharacterCardInfo {
   readonly id: number;
   readonly name: string;
@@ -114,9 +116,14 @@ const characterById: Record<string, CharacterCard> = Object.fromEntries(
     .map(([character, id]) => ([id, character as CharacterCard])),
 );
 
-export function getCharactersByTeamId(teamId: string): CharacterCard[] {
+export type TeamId = Brand<string, "TeamId">;
+
+export function getCharactersByTeamId(teamId: TeamId): CharacterCard[] {
   return teamId.split("-").map(id => characterById[id]) as CharacterCard[];
 }
-export function getTeamIdByCharacters(characters: CharacterCard[]): string {
-  return [...characters].sort(characterCardSorter).map(character => characterIds[character]).join("-");
+export function getTeamIdByCharacters(characters: CharacterCard[]): TeamId {
+  return [...characters].sort(characterCardSorter).map(character => characterIds[character]).join("-") as TeamId;
+}
+export function normalizeTeamId(teamId: TeamId): TeamId {
+  return getTeamIdByCharacters(getCharactersByTeamId(teamId));
 }

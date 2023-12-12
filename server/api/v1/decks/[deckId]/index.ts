@@ -1,8 +1,8 @@
-import type { ApiDeckData, R } from "~/utils/types";
+import type { ApiDeckData, DeckId, R } from "~/utils/types";
 import { deckById } from "~/server/data";
 
 export default defineEventHandler<R & ApiDeckData>((event) => {
-  const deckId = event.context.params!.deckId;
+  const deckId = event.context.params!.deckId as DeckId;
 
   const deck = deckById[deckId];
   if (!deck) {

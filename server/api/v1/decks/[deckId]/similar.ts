@@ -1,28 +1,27 @@
-import type { ActionCard, ApiDeckSimilarData, ApiDeckSimilarItem, R } from "~/utils/types";
+import type { ActionCard, ApiDeckSimilarData, ApiDeckSimilarItem, DeckId, R } from "~/utils/types";
 import { deckById, gameById, playerById } from "~/server/data";
-import { getTeamId } from "~/composables/use-team";
 import { getGameMirror } from "~/utils/games";
-import { actionCardSorter } from "~/utils/cards";
+import { actionCardSorter, getTeamIdByCharacters } from "~/utils/cards";
 import { sortObject } from "~/utils";
 
 export default defineEventHandler<R & ApiDeckSimilarData>((event) => {
   const { maxDiffCount: maxDiffCountRaw } = getQuery(event);
   const maxDiffCount = maxDiffCountRaw ? Number(maxDiffCountRaw) : 8;
 
-  const deckId = event.context.params!.deckId;
+  const deckId = event.context.params!.deckId as DeckId;
   const deck = deckById[deckId];
   if (!deck) {
     throw createError({ statusCode: 404, message: "数据不存在" });
   }
 
   const { actionCards, gameVersion } = deck;
-  const teamId = getTeamId(deck.characterCards);
+  const teamId = getTeamIdByCharacters(deck.characterCards);
 
-  const similarMap: Record<string, ApiDeckSimilarItem> = Object.fromEntries(
+  const similarMap: ApiDeckSimilarData["similarMap"] = Object.fromEntries(
     Object.values(deckById)
       .filter(d => d.gameVersion === gameVersion)
-      .filter(d => getTeamId(d.characterCards) === teamId)
-      .map<[string, ApiDeckSimilarItem]>((d) => {
+      .filter(d => getTeamIdByCharacters(d.characterCards) === teamId)
+      .map<[DeckId, ApiDeckSimilarItem]>((d) => {
         const item: ApiDeckSimilarItem = {
           deckId: d.id,
           diffs: Object.assign({}, d.actionCards),

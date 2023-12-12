@@ -11,7 +11,7 @@ export default defineEventHandler<R & ApiCharacterStatsMapData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  let characterStatsMap: Record<string, ApiCharacterStatsValue> = {};
+  let characterStatsMap: ApiCharacterStatsMapData["characterStatsMap"] = {};
   let totalGame = 0;
   for (const game of gameList) {
     const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;

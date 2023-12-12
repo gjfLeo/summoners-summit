@@ -12,7 +12,7 @@ import { divide } from "mathjs/number";
 import { type DataTableColumn, NText, NTooltip } from "naive-ui";
 import { NDataTable } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
-import type { ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue } from "~/utils/types";
+import type { ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, TeamId } from "~/utils/types";
 
 const props = defineProps<{
   teamId: string;
@@ -20,20 +20,19 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: "viewGameList", teamId: string): void;
+  (e: "viewGameList", teamId: TeamId): void;
 }>();
 
 const { gameVersionPath } = useGameVersion();
 
-type TeamStatsRaw = ApiTeamStatsVsTeamStatsValue;
-interface TeamStatsResult extends TeamStatsRaw {
+interface TeamStatsResult extends ApiTeamStatsVsTeamStatsValue {
   key: string;
-  teamId: string;
+  teamId: TeamId;
   winRate: number;
   winDiff: number;
 }
 
-const data = Object.entries(props.vs)
+const data = (Object.entries(props.vs) as [TeamId, ApiTeamStatsVsTeamStatsValue][])
   .map<TeamStatsResult>(([teamId, stats]) => {
     return {
       key: teamId,

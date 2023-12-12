@@ -1,10 +1,10 @@
-import type { ApiPlayerStatsByVersionData, ApiPlayerStatsByVersionValue, R } from "~/utils/types";
+import type { ApiPlayerStatsByVersionData, ApiPlayerStatsByVersionValue, PlayerId, R } from "~/utils/types";
 import { gameById, matchById, playerById } from "~/server/data";
 import { getGameMirror, getMatchMirror } from "~/utils/games";
 import { gameVersionList } from "~/composables/use-game-version";
 
 export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
-  const playerId = event.context.params!.playerId;
+  const playerId = event.context.params!.playerId as PlayerId;
 
   const player = playerById[playerId];
   if (!player) {

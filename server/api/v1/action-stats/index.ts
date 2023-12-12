@@ -1,4 +1,4 @@
-import type { ApiActionStatsMapData, ApiActionStatsValue, R } from "~/utils/types";
+import type { ActionCard, ApiActionStatsMapData, ApiActionStatsValue, R } from "~/utils/types";
 import { deckById, gameById } from "~/server/data";
 
 const initActionStats = (): ApiActionStatsValue => ({ game: 0, pick: 0, winGame: 0, winPick: 0 });
@@ -11,7 +11,7 @@ export default defineEventHandler<R & ApiActionStatsMapData>((event) => {
     gameList = gameList.filter(game => game.gameVersion === gameVersion);
   }
 
-  let actionStatsMap: Record<string, ApiActionStatsValue> = {};
+  let actionStatsMap: ApiActionStatsMapData["actionStatsMap"] = {};
   let totalDeck = 0;
   for (const game of gameList) {
     const weight = (preferredGameVersion && preferredGameVersion !== game.gameVersion) ? 0.1 : 1;
@@ -20,7 +20,7 @@ export default defineEventHandler<R & ApiActionStatsMapData>((event) => {
       if (deckId) {
         totalDeck += weight;
         for (const [card, count] of Object.entries(deckById[deckId].actionCards)) {
-          const actionStats = actionStatsMap[card] ?? (actionStatsMap[card] = initActionStats());
+          const actionStats = actionStatsMap[card as ActionCard] ?? (actionStatsMap[card as ActionCard] = initActionStats());
           actionStats.game += 1 * weight;
           actionStats.pick += count * weight;
           if (game.winner === player) {

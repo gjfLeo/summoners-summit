@@ -1,18 +1,18 @@
-import type { Deck } from "../output-data";
+import type { Deck, DeckId, PlayerId } from "../output-data";
 
 export interface ApiDeckData {
   deck: Deck;
 }
 
 export interface ApiDeckSimilarData {
-  similarMap: Record<string, ApiDeckSimilarItem>;
+  similarMap: Record<DeckId, ApiDeckSimilarItem>;
 }
 
 export interface ApiDeckSimilarItem {
-  deckId: string;
+  deckId: DeckId;
   diffs: Deck["actionCards"];
   diffCount: number;
   pick: number;
   win: number;
-  players: { playerId: string; uniqueName: string }[];
+  players: { playerId: PlayerId; uniqueName: string }[];
 }

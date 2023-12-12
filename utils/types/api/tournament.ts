@@ -1,4 +1,4 @@
-import type { Game, Match, Tournament } from "../output-data";
+import type { Game, GameId, Match, MatchId, Tournament } from "../output-data";
 
 export interface ApiTournamentListData {
   tournamentList: Pick<Tournament, "id" | "gameVersion" | "name" | "type">[];
@@ -13,6 +13,6 @@ export type ApiTournamentDetailsGamesValue = Pick<Game, `player${"A" | "B"}${"Ch
 
 export interface ApiTournamentDetailsData {
   tournament: Tournament;
-  matches: Record<string, ApiTournamentDetailsMatchesValue>;
-  games: Record<string, ApiTournamentDetailsGamesValue>;
+  matches: Record<MatchId, ApiTournamentDetailsMatchesValue>;
+  games: Record<GameId, ApiTournamentDetailsGamesValue>;
 }

@@ -1,7 +1,7 @@
-import type { ApiPlayerStatsMapData, ApiPlayerStatsValue, R } from "~/utils/types";
+import type { ApiPlayerStatsMapData, ApiPlayerStatsValue, PlayerId, R } from "~/utils/types";
 import { gameById, matchById, playerById } from "~/server/data";
 
-function initPlayerStats(playerId: string): ApiPlayerStatsValue {
+function initPlayerStats(playerId: PlayerId): ApiPlayerStatsValue {
   return {
     playerId,
     uniqueName: playerById[playerId].uniqueName,

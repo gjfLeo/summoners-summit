@@ -31,6 +31,7 @@
 
 <script lang="ts" setup>
 import { NButton, NTabPane, NTabs } from "naive-ui";
+import { getTeamIdByCharacters } from "~/utils/cards";
 import type { ActionCard } from "~/utils/types";
 
 useHead({ title: "牌组详情 | 召唤之巅" });
@@ -43,7 +44,7 @@ const { similarMap } = await useApiDeckSimilar(deckId);
 const characterCards = deck.characterCards;
 const actionCards = Object.entries(deck.actionCards).flatMap(([card, count]) => Array.from({ length: count as number }, () => card as ActionCard));
 
-const teamId = getTeamId(characterCards);
+const teamId = getTeamIdByCharacters(characterCards);
 
 const { gameList } = await useApiGameList({ deckId });
 

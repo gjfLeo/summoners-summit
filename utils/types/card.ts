@@ -70,4 +70,4 @@ export const JadeplumeTerrorshroom = "翠翎恐禽";
 
 // #endregion
 
-export type { CharacterCard, ActionCard } from "../cards";
+export type { CharacterCard, ActionCard, TeamId } from "../cards";

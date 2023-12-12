@@ -1,6 +1,6 @@
 <template>
   <div class="grid justify-center gap-2" style="grid-template-columns: repeat(3, minmax(0, 8rem));">
-    <template v-for="(card, i) in team" :key="i">
+    <template v-for="(card, i) in characterCards" :key="i">
       <CardImage :card="card" class="w-100%" />
     </template>
   </div>
@@ -70,21 +70,23 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import { NButton, NH4, NStatistic, NTabPane, NTabs, NText } from "naive-ui";
-import { getCharactersByTeamId } from "~/utils/cards";
-import type { CharacterCard } from "~/utils/types";
+import { getCharactersByTeamId, normalizeTeamId } from "~/utils/cards";
+import type { CharacterCard, TeamId } from "~/utils/types";
 
 const route = useRoute();
-const { teamId, team, teamDisplayName } = useTeam(route.params.teamId as string);
-
-useHead({ title: `${teamDisplayName.value} - 阵容数据 | 召唤之巅` });
+const teamId = normalizeTeamId(route.params.teamId as TeamId);
 
 // 非标准则跳转
-if (route.params.teamId !== teamId.value) {
-  await navigateTo(`/team/${teamId.value}`, { replace: true });
+if (route.params.teamId !== teamId) {
+  await navigateTo(`/team/${teamId}`, { replace: true });
 }
 
+const characterCards = getCharactersByTeamId(teamId);
+
+useHead({ title: `${characterCards.join(" & ")} - 阵容数据 | 召唤之巅` });
+
 const { gameVersion } = useGameVersion({ detect: true });
-const { basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap } = await useApiTeamStats(teamId.value, gameVersion.value);
+const { basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap } = await useApiTeamStats(teamId, gameVersion.value);
 
 const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) : { deck: undefined };
 
@@ -94,11 +96,11 @@ const { total, win, totalWithDeck, winWithDeck } = basicStats;
 const winRate = toPercentageString(divide(win, total));
 const winDiff = win - (total - win);
 
-const { gameList } = await useApiTeamGames(teamId.value, gameVersion.value);
+const { gameList } = await useApiTeamGames(teamId, gameVersion.value);
 const opponentCharacters = ref<CharacterCard[]>([]);
 const filteredGameList = computed(() => gameList.filter(g => opponentCharacters.value.every(c => g.playerBCharacters.includes(c))));
 
-function viewGameList(opponentTeamId: string) {
+function viewGameList(opponentTeamId: TeamId) {
   opponentCharacters.value = getCharactersByTeamId(opponentTeamId);
   currentTab.value = "games";
 }
@@ -109,5 +111,5 @@ async function toTypicalDeckDetail() {
   await navigateTo(`/deck/${typicalDeck?.id}`);
 }
 
-const { statsByVersion } = await useApiTeamStatsByVersion(teamId.value);
+const { statsByVersion } = await useApiTeamStatsByVersion(teamId);
 </script>

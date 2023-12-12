@@ -14,13 +14,14 @@
 
 <script lang="ts" setup>
 import { NH1, NH2 } from "naive-ui";
+import type { MatchId } from "~/utils/types";
 
 const route = useRoute();
 const tournamentId = route.params.tournamentId as string;
 
 const { tournament, matches, games } = await useApiTournamentDetail(tournamentId);
 
-function filterGames(matchId: string) {
+function filterGames(matchId: MatchId) {
   return Object.fromEntries(
     matches[matchId].gameIds
       .map(gameId => [gameId, games[gameId]]),

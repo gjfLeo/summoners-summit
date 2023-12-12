@@ -1,12 +1,21 @@
-import type { ApiGlobalStatsMapData, ApiGlobalStatsValue, R } from "~/utils/types";
+import type { ApiGlobalStatsListByVersionData, ApiGlobalStatsValue, GameVersion, R } from "~/utils/types";
 import { gameById } from "~/server/data";
+import { initGameVersionMap } from "~/utils/game-versions";
 
-const initStats = (): ApiGlobalStatsValue => ({ total: 0, totalWithDeck: 0, totalWithStarter: 0, starterWin: 0 });
+function initStats(gameVersion: GameVersion): ApiGlobalStatsValue {
+  return {
+    gameVersion,
+    total: 0,
+    totalWithDeck: 0,
+    totalWithStarter: 0,
+    starterWin: 0,
+  };
+}
 
-export default defineEventHandler<R & ApiGlobalStatsMapData>(() => {
-  const stats: Record<string, ApiGlobalStatsValue> = {};
+export default defineEventHandler<R & ApiGlobalStatsListByVersionData>(() => {
+  const statsMap = initGameVersionMap(initStats);
   Object.values(gameById).forEach((game) => {
-    const versionStats = stats[game.gameVersion] ?? (stats[game.gameVersion] = initStats());
+    const versionStats = statsMap[game.gameVersion];
     versionStats.total++;
     if (game.playerADeckId && game.playerBCharacters) {
       versionStats.totalWithDeck++;
@@ -18,15 +27,7 @@ export default defineEventHandler<R & ApiGlobalStatsMapData>(() => {
       versionStats.starterWin++;
     }
   });
-  stats[""] = Object.values(stats).reduce(
-    (allStats, versionStats) => {
-      allStats.total += versionStats.total;
-      allStats.totalWithDeck += versionStats.totalWithDeck;
-      allStats.totalWithStarter += versionStats.totalWithStarter;
-      allStats.starterWin += versionStats.starterWin;
-      return allStats;
-    },
-    initStats(),
-  );
-  return { statusCode: 200, stats };
+
+  const statsList = Object.values(statsMap);
+  return { statusCode: 200, statsList };
 });

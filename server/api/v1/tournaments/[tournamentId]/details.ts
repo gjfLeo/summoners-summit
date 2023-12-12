@@ -1,8 +1,8 @@
-import type { ApiTournamentDetailsData, ApiTournamentDetailsGamesValue, ApiTournamentDetailsMatchesValue, R } from "~/utils/types";
+import type { ApiTournamentDetailsData, ApiTournamentDetailsGamesValue, ApiTournamentDetailsMatchesValue, R, TournamentId } from "~/utils/types";
 import { gameById, matchById, tournamentById } from "~/server/data";
 
 export default defineEventHandler<R & ApiTournamentDetailsData>((event) => {
-  const tournamentId = event.context.params!.tournamentId;
+  const tournamentId = event.context.params!.tournamentId as TournamentId;
 
   const tournament = tournamentById[tournamentId];
   if (!tournament) {

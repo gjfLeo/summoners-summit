@@ -1,6 +1,6 @@
 import type { ApiTeamStatsMapData, ApiTeamStatsMapValue, R } from "~/utils/types";
 import { gameById, matchById } from "~/server/data";
-import { getTeamId } from "~/composables/use-team";
+import { getTeamIdByCharacters } from "~/utils/cards";
 
 function initTeamStatsValue(): ApiTeamStatsMapValue {
   return {
@@ -25,10 +25,10 @@ export default defineEventHandler<R & ApiTeamStatsMapData>((event) => {
     matchList = matchList.filter(match => match.gameVersion === gameVersion);
   }
 
-  const teamStatsMap: Record<string, ApiTeamStatsMapValue> = {};
+  const teamStatsMap: ApiTeamStatsMapData["teamStatsMap"] = {};
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
-      const teamId = getTeamId(game[`player${player}Characters`]);
+      const teamId = getTeamIdByCharacters(game[`player${player}Characters`]);
       const teamStatsValue = teamStatsMap[teamId] ?? (teamStatsMap[teamId] = initTeamStatsValue());
       teamStatsValue.total++;
       if (game.winner === player) teamStatsValue.win++;
@@ -38,7 +38,7 @@ export default defineEventHandler<R & ApiTeamStatsMapData>((event) => {
       if (game.winner === player && game.starter && game.starter !== player) teamStatsValue.followerWin++;
 
       // 统计内战场数
-      if (player === "A" && teamId === getTeamId(game.playerBCharacters)) {
+      if (player === "A" && teamId === getTeamIdByCharacters(game.playerBCharacters)) {
         teamStatsValue.vsSame++;
       }
     }
@@ -47,7 +47,7 @@ export default defineEventHandler<R & ApiTeamStatsMapData>((event) => {
   for (const match of matchList) {
     for (const ban of match.banned ?? []) {
       for (const player of (["A", "B"] as const)) {
-        const teamId = getTeamId(ban[`player${player}Characters`]);
+        const teamId = getTeamIdByCharacters(ban[`player${player}Characters`]);
         const teamStatsValue = teamStatsMap[teamId] ?? (teamStatsMap[teamId] = initTeamStatsValue());
         teamStatsValue.banned++;
       }

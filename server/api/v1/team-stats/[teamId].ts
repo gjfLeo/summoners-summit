@@ -1,13 +1,13 @@
 import { add, divide, multiply } from "mathjs/number";
-import type { ActionCard, ApiTeamStatsBasicStats, ApiTeamStatsCardUsageValue, ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, R } from "~/utils/types";
+import type { ActionCard, ApiTeamStatsBasicStats, ApiTeamStatsCardUsageValue, ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, R, TeamId } from "~/utils/types";
 import { deckById, gameById } from "~/server/data";
-import { getTeamId } from "~/composables/use-team";
+import { getTeamIdByCharacters } from "~/utils/cards";
 
 const initCardUsageInfo = (): ApiTeamStatsCardUsageValue => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0, deckPick: 0 });
 const initVsTeamStats = (): ApiTeamStatsVsTeamStatsValue => ({ total: 0, win: 0 });
 
 export default defineEventHandler<R & ApiTeamStatsData>((event) => {
-  const teamId = event.context.params!.teamId as string;
+  const teamId = event.context.params!.teamId as TeamId;
   const { gameVersion } = getQuery(event);
 
   let gameList = Object.values(gameById);
@@ -21,11 +21,11 @@ export default defineEventHandler<R & ApiTeamStatsData>((event) => {
     totalWithDeck: 0,
     winWithDeck: 0,
   };
-  const cardUsageMap: Partial<Record<ActionCard, ApiTeamStatsCardUsageValue>> = {};
-  const vsTeamStatsMap: Record<string, ApiTeamStatsVsTeamStatsValue> = {};
+  const cardUsageMap: ApiTeamStatsData["cardUsageMap"] = {};
+  const vsTeamStatsMap: ApiTeamStatsData["vsTeamStatsMap"] = {};
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
-      if (getTeamId(game[`player${player}Characters`]) !== teamId) continue;
+      if (getTeamIdByCharacters(game[`player${player}Characters`]) !== teamId) continue;
       basicStats.total++;
       if (game.winner === player) basicStats.win++;
 
@@ -43,7 +43,7 @@ export default defineEventHandler<R & ApiTeamStatsData>((event) => {
       }
 
       const opponent = player === "A" ? "B" : "A";
-      const opponentTeamId = getTeamId(game[`player${opponent}Characters`]);
+      const opponentTeamId = getTeamIdByCharacters(game[`player${opponent}Characters`]);
       const vsTeamStats = vsTeamStatsMap[opponentTeamId] ?? (vsTeamStatsMap[opponentTeamId] = initVsTeamStats());
       vsTeamStats.total++;
       if (game.winner === player) vsTeamStats.win++;
@@ -60,7 +60,7 @@ export default defineEventHandler<R & ApiTeamStatsData>((event) => {
   if (Object.keys(cardUsageMap).length > 0) {
     for (const game of gameList) {
       for (const player of (["A", "B"] as const)) {
-        if (getTeamId(game[`player${player}Characters`]) !== teamId) continue;
+        if (getTeamIdByCharacters(game[`player${player}Characters`]) !== teamId) continue;
 
         const deckId = game[`player${player}DeckId`];
         if (!deckId) continue;

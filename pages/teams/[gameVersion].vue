@@ -16,6 +16,7 @@ import type { DataTableColumn } from "naive-ui";
 import { NDataTable, NTooltip } from "naive-ui";
 import { NuxtLink, TeamAvatars } from "#components";
 import type { CharacterCard } from "~/utils/types";
+import { getCharactersByTeamId } from "~/utils/cards";
 
 useHead({ title: "阵容 | 召唤之巅" });
 
@@ -26,8 +27,8 @@ const includedCharacters = ref<CharacterCard[]>([]);
 const data = computed(() =>
   Object.values(teamStatsMap)
     .filter((stats) => {
-      const { team } = useTeam(stats.teamId);
-      return includedCharacters.value.every(character => team.value.includes(character));
+      const characters = getCharactersByTeamId(stats.teamId);
+      return includedCharacters.value.every(character => characters.includes(character));
     })
     .map(statistics => ({ key: statistics.teamId, ...statistics })),
 );

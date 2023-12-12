@@ -1,22 +1,22 @@
 import { createHash } from "node:crypto";
 import tournamentsRaw from "./tournaments";
 import { playerNicknameMap } from "./players";
-import type { ActionCard, BannedData, Deck, Game, Match, Player, Tournament, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
+import type { ActionCard, BannedData, Deck, DeckId, Game, GameId, GameVersion, Match, MatchId, Player, PlayerId, Tournament, TournamentId, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
 import type { PlayerAchievement } from "~/utils/achievements";
 
-const tournamentById: Record<string, Tournament> = {};
-const matchById: Record<string, Match> = {};
-const gameById: Record<string, Game> = {};
-const deckById: Record<string, Deck> = {};
-const playerById: Record<string, Player> = {};
+const tournamentById: Record<TournamentId, Tournament> = {};
+const matchById: Record<MatchId, Match> = {};
+const gameById: Record<GameId, Game> = {};
+const deckById: Record<DeckId, Deck> = {};
+const playerById: Record<PlayerId, Player> = {};
 
 function getHashValue(raw: string): string {
   const md5 = createHash("md5").update(raw);
   return md5.digest("hex").toString().slice(8, 24);
 }
 
-function registerPlayer(uniqueName: string) {
+function registerPlayer(uniqueName: string): PlayerId | undefined {
   if (uniqueName === "") {
     return undefined;
   }
@@ -24,7 +24,7 @@ function registerPlayer(uniqueName: string) {
   if (playerNicknameMap[uniqueName] !== undefined) {
     return registerPlayer(playerNicknameMap[uniqueName]);
   }
-  const id = getHashValue(uniqueName);
+  const id = getHashValue(uniqueName) as PlayerId;
   // 如果已存在，忽略
   if (!playerById[id]) {
     const aliases = Object.entries(playerNicknameMap).filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
@@ -32,18 +32,18 @@ function registerPlayer(uniqueName: string) {
   }
   return id;
 }
-function registerPlayerAchievement(playerId: string | undefined, achievement: PlayerAchievement) {
+function registerPlayerAchievement(playerId: PlayerId | undefined, achievement: PlayerAchievement) {
   if (playerId && !playerById[playerId].achievements?.includes(achievement)) {
     playerById[playerId].achievements = (playerById[playerId].achievements ?? []).concat([achievement]);
   }
 }
-function registerPlayerAward(playerId: string | undefined, award: string) {
+function registerPlayerAward(playerId: PlayerId | undefined, award: string) {
   if (playerId && !playerById[playerId].awards?.includes(award)) {
     playerById[playerId].awards = (playerById[playerId].awards ?? []).concat([award]);
   }
 }
 
-function registerDeck(characters: Deck["characterCards"], actions: Deck["actionCards"] | undefined, gameVersion: string) {
+function registerDeck(characters: Deck["characterCards"], actions: Deck["actionCards"] | undefined, gameVersion: GameVersion) {
   if (!actions) {
     return undefined;
   }
@@ -52,7 +52,7 @@ function registerDeck(characters: Deck["characterCards"], actions: Deck["actionC
     ([...Object.entries(actions)] as [ActionCard, number][])
       .sort((a, b) => actionCardSorter(a[0], b[0])),
   ) as Deck["actionCards"];
-  const id = getHashValue(JSON.stringify({ characterCards, actionCards }));
+  const id = getHashValue(JSON.stringify({ characterCards, actionCards })) as DeckId;
   if (!deckById[id]) {
     const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
     if (actionCardCount !== 30) {
@@ -70,7 +70,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     gameVersion,
     stages: stagesRaw,
   } = tournamentRaw;
-  const tournamentId = getHashValue(gameVersion + tournamentName);
+  const tournamentId = getHashValue(gameVersion + tournamentName) as TournamentId;
   let matchTotalIndex = 0;
 
   const stages = stagesRaw.map((stageRaw): TournamentStage => {
@@ -91,7 +91,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           date,
           matches: matchesRaw,
         } = partRaw;
-        const matchIds = matchesRaw.map((matchRaw, matchIndex): string => {
+        const matchIds = matchesRaw.map((matchRaw, matchIndex): MatchId => {
           const {
             playerA,
             playerB,
@@ -113,7 +113,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           }
 
           matchTotalIndex++;
-          const matchId = tournamentId + matchTotalIndex.toString().padStart(2, "0");
+          const matchId = tournamentId + matchTotalIndex.toString().padStart(2, "0") as MatchId;
           const matchName = matchesRaw.length > 1 ? `第${matchIndex + 1}场` : "";
 
           const aGoals = gamesRaw.filter(g => g.winner === "A").length;
@@ -136,7 +136,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             };
           });
 
-          const gameIds = gamesRaw.map((gameRaw, gameIndex): string => {
+          const gameIds = gamesRaw.map((gameRaw, gameIndex): GameId => {
             const {
               playerACharacters,
               playerAActions,
@@ -146,7 +146,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               winner,
               turns,
             } = gameRaw;
-            const gameId = matchId + (gameIndex + 1).toString().padStart(2, "0");
+            const gameId = matchId + (gameIndex + 1).toString().padStart(2, "0") as GameId;
 
             const playerADeckId = registerDeck(playerACharacters, playerAActions, gameVersion);
             const playerBDeckId = registerDeck(playerBCharacters, playerBActions, gameVersion);

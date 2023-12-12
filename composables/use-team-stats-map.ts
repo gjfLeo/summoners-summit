@@ -1,7 +1,8 @@
 import { divide } from "mathjs/number";
+import type { ApiTeamStatsMapValue, TeamId } from "~/utils/types";
 
 interface TeamStats {
-  teamId: string;
+  teamId: TeamId;
   total: number;
   win: number;
   starterTotal: number;
@@ -23,7 +24,7 @@ export default async function useTeamStatsMap(gameVersion: MaybeRef<string>) {
   const { teamStatsMap: teamBasicStatsMap } = await useApiTeamStatsMap(unref(gameVersion));
 
   const teamStatsMap = Object.fromEntries(
-    Object.entries(teamBasicStatsMap)
+    (Object.entries(teamBasicStatsMap) as [TeamId, ApiTeamStatsMapValue][])
       .map(([teamId, teamBasicStats]) => {
         const { total, win, starterTotal, starterWin, followerTotal, followerWin, banned, vsSame } = teamBasicStats;
 

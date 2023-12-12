@@ -1,7 +1,7 @@
 <template>
   <div class="mr-1 inline-flex justify-center">
     <CardAvatar
-      v-for="card in team" :key="card"
+      v-for="card in characterCards" :key="card"
       :card="card"
       class="mr--1 h-8 border border-light-9 rd-50%"
     />
@@ -9,11 +9,19 @@
 </template>
 
 <script lang="ts" setup>
-import type { CharacterCard } from "~/utils/types";
+import { getCharactersByTeamId } from "~/utils/cards";
+import type { CharacterCard, TeamId } from "~/utils/types";
 
 const props = defineProps<{
-  team: CharacterCard[] | string;
+  team: CharacterCard[] | TeamId;
 }>();
 
-const { team } = useTeam(props);
+const characterCards = computed(() => {
+  if (typeof props.team === "string") {
+    return getCharactersByTeamId(props.team);
+  }
+  else {
+    return props.team;
+  }
+});
 </script>

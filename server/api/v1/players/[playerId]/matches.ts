@@ -1,9 +1,9 @@
 import { gameById, matchById, playerById } from "~/server/data";
 import { getGameMirror, getMatchMirror } from "~/utils/games";
-import type { ApiPlayerMatchesData, R } from "~/utils/types";
+import type { ApiPlayerMatchesData, PlayerId, R } from "~/utils/types";
 
 export default defineEventHandler<R & ApiPlayerMatchesData>((event) => {
-  const playerId = event.context.params!.playerId;
+  const playerId = event.context.params!.playerId as PlayerId;
 
   const player = playerById[playerId];
   if (!player) {

@@ -1,3 +1,5 @@
+import type { ActionCard, CharacterCard } from "../card";
+
 export interface ApiActionStatsValue {
   game: number;
   pick: number;
@@ -6,7 +8,7 @@ export interface ApiActionStatsValue {
 }
 
 export interface ApiActionStatsMapData {
-  actionStatsMap: Record<string, ApiActionStatsValue>;
+  actionStatsMap: Partial<Record<ActionCard, ApiActionStatsValue>>;
   totalDeck: number;
 }
 
@@ -16,6 +18,6 @@ export interface ApiCharacterStatsValue {
 }
 
 export interface ApiCharacterStatsMapData {
-  characterStatsMap: Record<string, ApiCharacterStatsValue>;
+  characterStatsMap: Partial<Record<CharacterCard, ApiCharacterStatsValue>>;
   totalGame: number;
 }

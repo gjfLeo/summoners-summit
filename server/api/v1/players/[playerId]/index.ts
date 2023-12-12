@@ -1,8 +1,8 @@
-import type { ApiPlayerData, R } from "~/utils/types";
+import type { ApiPlayerData, PlayerId, R } from "~/utils/types";
 import { playerById } from "~/server/data";
 
 export default defineEventHandler<R & ApiPlayerData>((event) => {
-  const playerId = event.context.params!.playerId;
+  const playerId = event.context.params!.playerId as PlayerId;
 
   const player = playerById[playerId];
   if (!player) {

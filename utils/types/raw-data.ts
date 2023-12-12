@@ -1,10 +1,11 @@
 import type { PlayerAchievement } from "../achievements";
+import type { GameVersion } from "../game-versions";
 import type { Deck, TournamentRules } from "./output-data";
 
 export interface TournamentRawData {
   name: string;
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛";
-  gameVersion: string;
+  gameVersion: GameVersion;
   stages: StageRawData[];
 }
 
