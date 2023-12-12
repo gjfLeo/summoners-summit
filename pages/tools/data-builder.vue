@@ -22,12 +22,13 @@ import { NButton, NCard, NCode, NCollapse, NCollapseItem, NHr, useMessage } from
 import hljs from "highlight.js/lib/core";
 import hljsTs from "highlight.js/lib/languages/typescript";
 import { EditorTournamentForm } from "#components";
+import { ALL_GAME_VERSIONS } from "~/utils/game-versions";
 
 hljs.registerLanguage("ts", hljsTs);
 
 const tournamentFormRef = ref<InstanceType<typeof EditorTournamentForm>>();
 
-const latestVersion = gameVersionList[1].value;
+const latestVersion = ALL_GAME_VERSIONS[ALL_GAME_VERSIONS.length - 1];
 
 await Promise.all([
   (async function () {

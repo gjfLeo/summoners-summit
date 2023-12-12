@@ -50,9 +50,10 @@ export interface ApiTeamGamesData {
 }
 
 export interface ApiTeamStatsByVersionData {
-  statsByVersion: Record<GameVersion, ApiTeamStatsByVersionValue>;
+  statsByVersion: ApiTeamStatsByVersionItem[];
 }
-export interface ApiTeamStatsByVersionValue {
+export interface ApiTeamStatsByVersionItem {
+  gameVersion: GameVersion;
   ban: number;
   pick: number;
   win: number;

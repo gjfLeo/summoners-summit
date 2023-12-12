@@ -20,16 +20,12 @@ const props = defineProps<{
   statsByVersion: ApiPlayerStatsByVersionData["statsByVersion"];
 }>();
 
-const statsByVersionList = computed(() => Object.entries(props.statsByVersion)
-  .map(([gameVersion, stats]) => ({ gameVersion, ...stats }))
-  .sort((a, b) => a.gameVersion.localeCompare(b.gameVersion)));
+const labels = computed(() => props.statsByVersion.map(item => item.gameVersion));
 
-const labels = computed(() => statsByVersionList.value.map(item => item.gameVersion));
-
-const dataMatchWinRate = computed(() => statsByVersionList.value.map(item => divide(item.matchWin * 100, item.matchTotal)));
-const dataGameWinRate = computed(() => statsByVersionList.value.map(item => divide(item.gameWin * 100, item.gameTotal)));
-const dataMatchWin = computed(() => statsByVersionList.value.map(item => item.matchWin));
-const dataMatchLose = computed(() => statsByVersionList.value.map(item => item.matchTotal - item.matchWin));
+const dataMatchWinRate = computed(() => props.statsByVersion.map(item => divide(item.matchWin * 100, item.matchTotal)));
+const dataGameWinRate = computed(() => props.statsByVersion.map(item => divide(item.gameWin * 100, item.gameTotal)));
+const dataMatchWin = computed(() => props.statsByVersion.map(item => item.matchWin));
+const dataMatchLose = computed(() => props.statsByVersion.map(item => item.matchTotal - item.matchWin));
 
 const chartData = computed<ChartData>(() => ({
   labels: labels.value,
@@ -104,15 +100,6 @@ const chartOptions = computed<ChartOptions>(() => ({
           return label;
         },
       },
-    //   callbacks: {
-    //     footer: (tooltipItems) => {
-    //       let sum = 0;
-    //       tooltipItems.forEach((tooltipItem) => {
-    //         sum += tooltipItem.parsed.y;
-    //       });
-    //       return `Sum: ${sum}`;
-    //     },
-    //   },
     },
     legend: {
       position: sm.value ? "right" : "bottom",

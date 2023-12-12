@@ -20,9 +20,10 @@ export interface ApiPlayerStatsMapData {
 }
 
 export interface ApiPlayerStatsByVersionData {
-  statsByVersion: Record<GameVersion, ApiPlayerStatsByVersionValue>;
+  statsByVersion: ApiPlayerStatsByVersionValue[];
 }
 export interface ApiPlayerStatsByVersionValue {
+  gameVersion: GameVersion;
   matchTotal: number;
   matchWin: number;
   gameTotal: number;

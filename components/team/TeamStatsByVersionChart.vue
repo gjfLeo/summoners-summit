@@ -19,16 +19,12 @@ const props = defineProps<{
   statsByVersion: ApiTeamStatsByVersionData["statsByVersion"];
 }>();
 
-const statsByVersionList = computed(() => Object.entries(props.statsByVersion)
-  .map(([gameVersion, stats]) => ({ gameVersion, ...stats }))
-  .sort((a, b) => a.gameVersion.localeCompare(b.gameVersion)));
+const labels = computed(() => props.statsByVersion.map(item => item.gameVersion));
 
-const labels = computed(() => statsByVersionList.value.map(item => item.gameVersion));
-
-const dataBan = computed(() => statsByVersionList.value.map(item => item.ban));
-const dataPick = computed(() => statsByVersionList.value.map(item => item.pick));
-const dataWin = computed(() => statsByVersionList.value.map(item => item.win));
-const dataWinRate = computed(() => statsByVersionList.value.map(item => divide(item.win, item.pick)));
+const dataBan = computed(() => props.statsByVersion.map(item => item.ban));
+const dataPick = computed(() => props.statsByVersion.map(item => item.pick));
+const dataWin = computed(() => props.statsByVersion.map(item => item.win));
+const dataWinRate = computed(() => props.statsByVersion.map(item => divide(item.win, item.pick)));
 
 const data = computed<ChartData>(() => ({
   labels: labels.value,

@@ -19,7 +19,7 @@
     </NCard>
   </div>
 
-  <PlayerStatsChart :stats-by-version="statsByVersion" />
+  <PlayerStatsByVersionChart :stats-by-version="statsByVersion" />
   <PlayerStatsStatistics :stats-by-version="statsByVersion" />
   <div class="flex justify-end">
     <NText class="flex gap-2 text-sm" :depth="3">

@@ -1,7 +1,7 @@
-import type { ApiPlayerStatsByVersionData, ApiPlayerStatsByVersionValue, PlayerId, R } from "~/utils/types";
+import type { ApiPlayerStatsByVersionData, GameVersion, PlayerId, R } from "~/utils/types";
 import { gameById, matchById, playerById } from "~/server/data";
 import { getGameMirror, getMatchMirror } from "~/utils/games";
-import { gameVersionList } from "~/composables/use-game-version";
+import { gameVersionSorter, initGameVersionMap } from "~/utils/game-versions";
 
 export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
   const playerId = event.context.params!.playerId as PlayerId;
@@ -11,17 +11,13 @@ export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
     throw createError({ statusCode: 404, message: "数据不存在" });
   }
 
-  const statsByVersion: Record<string, ApiPlayerStatsByVersionValue> = Object.fromEntries(
-    gameVersionList.filter(version => version.value)
-      .map((version) => {
-        return [version.value, {
-          matchTotal: 0,
-          matchWin: 0,
-          gameTotal: 0,
-          gameWin: 0,
-        }];
-      }),
-  );
+  const statsByVersionMap: Record<GameVersion, ApiPlayerStatsByVersionData["statsByVersion"][number]> = initGameVersionMap(gameVersion => ({
+    gameVersion,
+    matchTotal: 0,
+    matchWin: 0,
+    gameTotal: 0,
+    gameWin: 0,
+  }));
 
   Object.values(matchById)
     .flatMap((m) => {
@@ -36,8 +32,8 @@ export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
       }
     })
     .forEach((m) => {
-      statsByVersion[m.gameVersion].matchTotal++;
-      statsByVersion[m.gameVersion].matchWin += m.winner === "A" ? 1 : 0;
+      statsByVersionMap[m.gameVersion].matchTotal++;
+      statsByVersionMap[m.gameVersion].matchWin += m.winner === "A" ? 1 : 0;
     });
 
   Object.values(gameById)
@@ -53,9 +49,10 @@ export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
       }
     })
     .forEach((m) => {
-      statsByVersion[m.gameVersion].gameTotal++;
-      statsByVersion[m.gameVersion].gameWin += m.winner === "A" ? 1 : 0;
+      statsByVersionMap[m.gameVersion].gameTotal++;
+      statsByVersionMap[m.gameVersion].gameWin += m.winner === "A" ? 1 : 0;
     });
 
+  const statsByVersion = Object.values(statsByVersionMap).sort(gameVersionSorter(s => s.gameVersion));
   return { statusCode: 200, statsByVersion };
 });
