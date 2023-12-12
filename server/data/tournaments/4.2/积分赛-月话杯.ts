@@ -843,7 +843,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                   }),
                   starter: "B",
-                  winner: "A",
+                  winner: "B",
                 },
                 {
                   playerACharacters: ["北斗", "重云", "雷泽"],
