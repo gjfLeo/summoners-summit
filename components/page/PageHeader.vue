@@ -60,7 +60,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { MenuOption, SelectOption } from "naive-ui";
+import type { MenuOption, SelectGroupOption, SelectOption } from "naive-ui";
 import { NButton, NDrawer, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
@@ -75,9 +75,19 @@ const sideMenuVisible = ref(false);
 
 const { gameVersion, gameVersionPath } = useGameVersion();
 
-const gameVersionOptions: SelectOption[] = [
+const gameVersionOptions: (SelectOption | SelectGroupOption)[] = [
   { label: "全版本", value: "" },
-  ...ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map(v => ({ label: v, value: v })),
+  ...ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map<SelectOption>(v => ({ label: v, value: v })),
+  // ...Object.entries(groupBy(
+  //   ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map(v => ({ label: v, value: v })),
+  //   item => ALL_GAME_VERSIONS_INFO[item.value].season,
+  // )).map<SelectGroupOption>(([season, children]) => ({
+  //   type: "group",
+  //   label: `第\u2006${season}\u2006赛季`,
+  //   key: `season-${season}`,
+  //   render: ({ option }) => h(NText, { class: "text-xs pl-2", depth: 3 }, option.label as string),
+  //   children,
+  // })),
 ];
 
 const menuList = [
