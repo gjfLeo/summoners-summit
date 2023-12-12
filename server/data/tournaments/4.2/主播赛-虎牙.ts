@@ -3005,12 +3005,6 @@ export default defineTournament({
                   winner: "B",
                 },
                 {
-                  playerACharacters: ["", "", ""],
-                  playerBCharacters: ["", "", ""],
-                  starter: "",
-                  winner: "A",
-                },
-                {
                   playerACharacters: ["北斗", "重云", "雷泽"],
                   playerAActions: defineActions({
                     "吐纳真定": 2,
