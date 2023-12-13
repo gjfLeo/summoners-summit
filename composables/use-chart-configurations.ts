@@ -24,9 +24,11 @@ export default function useChartConfigurations() {
   }
 
   ChartJS.defaults.responsive = true;
+  ChartJS.defaults.aspectRatio = 4;
   ChartJS.defaults.interaction.mode = "index";
   ChartJS.defaults.datasets.line.spanGaps = true;
   ChartJS.defaults.datasets.line.borderWidth = 2;
+  ChartJS.defaults.plugins.legend.position = "right";
   ChartJS.defaults.plugins.datalabels.textStrokeWidth = 4;
 
   watch(isDark, (isDark) => {

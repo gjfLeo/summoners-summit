@@ -1,19 +1,21 @@
 <template>
-  <div class="mt h-60 flex justify-center">
-    <Chart
-      id="stats-by-version"
-      type="bar"
-      :data="data"
-      :options="options"
-    />
-  </div>
+  <NScrollbar x-scrollable>
+    <div class="min-w-800px flex justify-center">
+      <Chart
+        id="stats-by-version"
+        type="bar"
+        :data="data"
+        :options="options"
+      />
+    </div>
+  </NScrollbar>
 </template>
 
 <script lang="ts" setup>
 import { Chart } from "vue-chartjs";
 import type { ChartData, ChartOptions } from "chart.js";
 import { divide } from "mathjs/number";
-import { darkTheme, lightTheme } from "naive-ui";
+import { NScrollbar, darkTheme, lightTheme } from "naive-ui";
 import type { ApiPlayerStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{
@@ -98,10 +100,7 @@ const data = computed<ChartData>(() => ({
   ],
 } as ChartData));
 
-const { aspectRatio, legendPosition } = useChartOptions();
-
 const options = computed<ChartOptions>(() => ({
-  aspectRatio: unref(aspectRatio),
   plugins: {
     tooltip: {
       callbacks: {
@@ -120,9 +119,6 @@ const options = computed<ChartOptions>(() => ({
           return label;
         },
       },
-    },
-    legend: {
-      position: unref(legendPosition),
     },
   },
   scales: {
@@ -152,9 +148,6 @@ const options = computed<ChartOptions>(() => ({
       ticks: {
         callback: s => Number(s) * 100,
         stepSize: 0.25,
-      },
-      grid: {
-        display: false,
       },
       position: "right",
       title: {
