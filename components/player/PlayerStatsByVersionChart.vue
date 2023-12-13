@@ -2,9 +2,9 @@
   <div class="mt h-60 flex justify-center">
     <Chart
       id="stats-by-version"
-      :options="chartOptions"
-      :data="chartData"
       type="bar"
+      :data="data"
+      :options="options"
     />
   </div>
 </template>
@@ -13,7 +13,7 @@
 import { Chart } from "vue-chartjs";
 import type { ChartData, ChartOptions } from "chart.js";
 import { divide } from "mathjs/number";
-import { breakpointsTailwind } from "@vueuse/core";
+import { darkTheme, lightTheme } from "naive-ui";
 import type { ApiPlayerStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{
@@ -22,12 +22,15 @@ const props = defineProps<{
 
 const labels = computed(() => props.statsByVersion.map(item => item.gameVersion));
 
-const dataMatchWinRate = computed(() => props.statsByVersion.map(item => divide(item.matchWin * 100, item.matchTotal)));
-const dataGameWinRate = computed(() => props.statsByVersion.map(item => divide(item.gameWin * 100, item.gameTotal)));
+const dataMatchWinRate = computed(() => props.statsByVersion.map(item => divide(item.matchWin, item.matchTotal)));
+const dataGameWinRate = computed(() => props.statsByVersion.map(item => divide(item.gameWin, item.gameTotal)));
 const dataMatchWin = computed(() => props.statsByVersion.map(item => item.matchWin));
 const dataMatchLose = computed(() => props.statsByVersion.map(item => item.matchTotal - item.matchWin));
 
-const chartData = computed<ChartData>(() => ({
+const isDark = useDark();
+const theme = computed(() => isDark.value ? darkTheme : lightTheme);
+
+const data = computed<ChartData>(() => ({
   labels: labels.value,
   datasets: [
     {
@@ -35,12 +38,16 @@ const chartData = computed<ChartData>(() => ({
       label: "场次胜率",
       data: dataMatchWinRate.value,
       yAxisID: "yPercent",
-      borderColor: "#368cf1c0",
-      backgroundColor: "#368cf1",
-      spanGaps: true,
+      borderColor: theme.value.common.infoColor,
+      backgroundColor: theme.value.common.infoColorHover,
       segment: {
         borderDash: ctx => ctx.p0.skip || ctx.p1.skip ? [4, 4] : undefined,
         borderWidth: ctx => ctx.p0.skip || ctx.p1.skip ? 2 : undefined,
+      },
+      datalabels: {
+        formatter: v => Math.round(v * 100),
+        backgroundColor: context => context.dataset.backgroundColor,
+        borderRadius: 3,
       },
     },
     {
@@ -48,22 +55,31 @@ const chartData = computed<ChartData>(() => ({
       label: "对局胜率",
       data: dataGameWinRate.value,
       yAxisID: "yPercent",
-      borderColor: "#f1a936c0",
-      backgroundColor: "#f1a936",
-      spanGaps: true,
+      borderColor: theme.value.common.warningColorHover,
+      backgroundColor: theme.value.common.warningColor,
       segment: {
         borderDash: ctx => ctx.p0.skip || ctx.p1.skip ? [4, 4] : undefined,
         borderWidth: ctx => ctx.p0.skip || ctx.p1.skip ? 2 : undefined,
+      },
+      datalabels: {
+        formatter: v => Math.round(v * 100),
+        backgroundColor: context => context.dataset.backgroundColor,
+        borderRadius: 3,
       },
     },
     {
       type: "bar",
       label: "胜场数",
       data: dataMatchWin.value,
-      backgroundColor: "#368cf180",
       yAxisID: "yCount",
+      backgroundColor: "#368cf180",
       stack: "matchStack",
       categoryPercentage: 0.5,
+      datalabels: {
+        align: "center",
+        anchor: "center",
+        formatter: v => v > 0 ? v : "",
+      },
     },
     {
       type: "bar",
@@ -73,15 +89,19 @@ const chartData = computed<ChartData>(() => ({
       yAxisID: "yCount",
       stack: "matchStack",
       categoryPercentage: 0.5,
+      datalabels: {
+        align: "center",
+        anchor: "center",
+        formatter: v => v > 0 ? v : "",
+      },
     },
   ],
-}));
+} as ChartData));
 
-const { sm, md } = useBreakpoints(breakpointsTailwind);
+const { aspectRatio, legendPosition } = useChartOptions();
 
-const chartOptions = computed<ChartOptions>(() => ({
-  responsive: true,
-  aspectRatio: md.value ? 4 : (sm.value ? 3 : 2),
+const options = computed<ChartOptions>(() => ({
+  aspectRatio: unref(aspectRatio),
   plugins: {
     tooltip: {
       callbacks: {
@@ -91,7 +111,7 @@ const chartOptions = computed<ChartOptions>(() => ({
             label += "：";
           }
           if (ctx.dataset.yAxisID === "yPercent") {
-            label += Number(ctx.parsed.y).toFixed(2);
+            label += Number(ctx.parsed.y * 100).toFixed(2);
             label += "%";
           }
           else {
@@ -102,11 +122,8 @@ const chartOptions = computed<ChartOptions>(() => ({
       },
     },
     legend: {
-      position: sm.value ? "right" : "bottom",
+      position: unref(legendPosition),
     },
-  },
-  interaction: {
-    mode: "index",
   },
   scales: {
     x: {
@@ -121,18 +138,28 @@ const chartOptions = computed<ChartOptions>(() => ({
         display: true,
         text: "场数",
       },
+      min: 0,
+      ticks: {
+        stepSize: 1,
+      },
+      grid: {
+        display: false,
+      },
     },
     yPercent: {
       min: 0,
-      max: 100,
+      max: 1,
       ticks: {
-        callback: s => `${s}%`,
-        stepSize: 25,
+        callback: s => Number(s) * 100,
+        stepSize: 0.25,
+      },
+      grid: {
+        display: false,
       },
       position: "right",
       title: {
         display: true,
-        text: "胜率",
+        text: "胜率(%)",
       },
     },
   },

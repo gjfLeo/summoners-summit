@@ -42,22 +42,11 @@
 import type { GlobalThemeOverrides } from "naive-ui";
 import { NConfigProvider, NLayout, NLayoutContent, NLayoutFooter, NLayoutHeader, NLoadingBarProvider, NMessageProvider, NNotificationProvider, NScrollbar, darkTheme, dateZhCN, zhCN } from "naive-ui";
 
-import {
-  BarController, BarElement, CategoryScale,
-  Chart as ChartJS, Colors, Legend, LineController, LineElement, LinearScale, PointElement,
-  Title, Tooltip,
-} from "chart.js";
-
-ChartJS.register(
-  Title, Tooltip, Colors, Legend,
-  CategoryScale, LinearScale,
-  BarElement, PointElement, LineElement,
-  BarController, LineController,
-);
-
 useHead({ title: "召唤之巅" });
 
 const isDark = useDark();
+
+useChartConfigurations();
 
 zhCN.DataTable.clear = "清除";
 
