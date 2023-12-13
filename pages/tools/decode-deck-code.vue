@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NInput, NInputGroup } from "naive-ui";
 import { decodeDeckCode } from "~/utils/decks";
 import type { ActionCard, Deck } from "~/utils/types";
 

@@ -61,12 +61,11 @@
 
 <script lang="ts" setup>
 import type { SelectGroupOption, SelectOption, SelectRenderTag } from "naive-ui";
-import { NButton, NDatePicker, NFormItem, NHr, NInput, NSelect, NTag } from "naive-ui";
 import Pinyin from "pinyin-match";
 import FileSaver from "file-saver";
 import dayjs from "dayjs";
 import type { TournamentRawData } from "~/utils/types";
-import { EditorMatchesForm } from "#components";
+import { EditorMatchesForm, NTag } from "#components";
 
 const tournamentId = ref<string>();
 const tournamentName = ref<string>("");

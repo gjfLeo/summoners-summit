@@ -8,7 +8,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NAvatar } from "naive-ui";
 import { characterAvatarImages } from "~/utils/images";
 import type { CharacterCard } from "~/utils/types";
 

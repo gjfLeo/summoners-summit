@@ -12,7 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NIcon, NText } from "naive-ui";
 import { type ActionCard, actionCardSorter } from "~/utils/cards";
 
 const props = defineProps<{

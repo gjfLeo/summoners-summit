@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type DataTableColumn, NDataTable, NTabPane, NTabs, NText } from "naive-ui";
+import type { DataTableColumn } from "naive-ui";
 import { divide, format } from "mathjs/number";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 import { CardCell, TableTitle } from "#components";

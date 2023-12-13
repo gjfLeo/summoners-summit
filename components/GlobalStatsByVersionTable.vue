@@ -5,7 +5,6 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import type { DataTableColumns } from "naive-ui";
-import { NDataTable } from "naive-ui";
 import type { ApiGlobalStatsListByVersionData } from "~/utils/types";
 
 const props = defineProps<{

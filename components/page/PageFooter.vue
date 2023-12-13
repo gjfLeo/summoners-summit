@@ -42,8 +42,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NA, NDrawer, NDrawerContent, NIcon, NText, NTooltip, useMessage } from "naive-ui";
-
 const githubRepositry = "https://github.com/gjfLeo/summoners-summit";
 const contactQQ = "1272823636";
 const contactNGAThread = "https://nga.178.com/read.php?tid=36782766";

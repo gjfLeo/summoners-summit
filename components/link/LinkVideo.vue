@@ -12,8 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NIcon, NTooltip } from "naive-ui";
-
 defineProps<{
   video: string;
 }>();

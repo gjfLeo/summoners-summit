@@ -130,7 +130,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NCheckbox, NHr, NInput, NTable, NText } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 
 interface MatchData {

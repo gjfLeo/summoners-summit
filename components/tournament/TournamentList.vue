@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NCard, NTag } from "naive-ui";
 import type { Tournament } from "~/utils/types";
 
 defineProps<{

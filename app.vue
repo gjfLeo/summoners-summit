@@ -1,8 +1,7 @@
 <template>
-  <NConfigProvider
+  <NaiveConfig
+    :theme-config="themeConfig"
     :locale="zhCN" :date-locale="dateZhCN"
-    :theme="isDark ? darkTheme : undefined"
-    :theme-overrides="themeOverrides"
     inline-theme-disabled
   >
     <NLoadingBarProvider>
@@ -35,16 +34,14 @@
         </NMessageProvider>
       </NNotificationProvider>
     </NLoadingBarProvider>
-  </NConfigProvider>
+  </NaiveConfig>
 </template>
 
 <script lang="ts" setup>
-import type { GlobalThemeOverrides } from "naive-ui";
-import { NConfigProvider, NLayout, NLayoutContent, NLayoutFooter, NLayoutHeader, NLoadingBarProvider, NMessageProvider, NNotificationProvider, NScrollbar, darkTheme, dateZhCN, zhCN } from "naive-ui";
+import { dateZhCN, zhCN } from "naive-ui";
+import type { ThemeConfig } from "@bg-dev/nuxt-naiveui";
 
 useHead({ title: "召唤之巅" });
-
-const isDark = useDark();
 
 useChartConfigurations();
 
@@ -53,12 +50,14 @@ zhCN.DataTable.clear = "清除";
 const headerHeight = "4rem";
 const footerHeight = "4rem";
 
-const themeOverrides: GlobalThemeOverrides = {
-  common: {
-    fontFamily: "\"LXGW Neo XiHei\", \"Microsoft YaHei\", sans-serif",
-    fontFamilyMono: "\"Liger Iosevka\", \"LXGW Neo XiHei\", monospace",
+const themeConfig = computed<ThemeConfig>(() => ({
+  shared: {
+    common: {
+      fontFamily: "\"LXGW Neo XiHei\", \"Microsoft YaHei\", sans-serif",
+      fontFamilyMono: "\"Liger Iosevka\", \"Ubuntu Mono\", \"LXGW Neo XiHei\", \"Microsoft YaHei\", monospace",
+    },
   },
-};
+}));
 </script>
 
 <style>

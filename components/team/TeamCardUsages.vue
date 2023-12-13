@@ -9,7 +9,6 @@
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
 import { divide, format } from "mathjs/number";
-import { NDataTable } from "naive-ui";
 import type { ActionCard, ApiTeamStatsData } from "~/utils/types";
 import { CardCell, TableTitle } from "#components";
 

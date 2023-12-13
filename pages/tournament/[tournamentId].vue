@@ -38,8 +38,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NCard, NH1, NH2, NH3, NH4 } from "naive-ui";
-
 const route = useRoute();
 const tournamentId = route.params.tournamentId as string;
 

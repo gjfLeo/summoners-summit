@@ -15,6 +15,7 @@
     "cleanup": "nuxt cleanup"
   },
   "devDependencies": {
+    "@bg-dev/nuxt-naiveui": "^1.7.0",
     "@css-render/vue3-ssr": "^0.15.12",
     "@gjfleo/eslint-config": "^0.1.27",
     "@iconify-json/carbon": "^1.1.24",

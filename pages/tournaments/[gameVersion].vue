@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NH2 } from "naive-ui";
 import type { Tournament } from "~/utils/types";
 
 useHead({ title: "赛事 | 召唤之巅" });

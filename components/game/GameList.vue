@@ -45,7 +45,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NCard, NText } from "naive-ui";
 import type { Game } from "~/utils/types";
 
 defineProps<{

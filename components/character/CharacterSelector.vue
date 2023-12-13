@@ -17,10 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-import { NSelect, NTag, NText, NTooltip } from "naive-ui";
 import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderTag } from "naive-ui";
 
-import { CardAvatar } from "#components";
+import { CardAvatar, NTag, NText, NTooltip } from "#components";
 import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/cards";
 
 const props = withDefaults(defineProps<{

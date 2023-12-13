@@ -3,10 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { NDataTable, NText, NTooltip } from "naive-ui";
 import type { DataTableColumn } from "naive-ui";
 import { divide } from "mathjs/number";
-import { CardImage, NuxtLink, PlayerName } from "#components";
+import { CardImage, NText, NTooltip, NuxtLink, PlayerName } from "#components";
 import type { ActionCard, ApiDeckSimilarData } from "~/utils/types";
 
 const props = defineProps<{

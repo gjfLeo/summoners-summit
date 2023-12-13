@@ -19,7 +19,6 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { NDataTable, NIcon, NInput, NText } from "naive-ui";
 import { divide } from "mathjs/number";
 import PinyinMatch from "pinyin-match";
 import { PlayerName } from "#components";

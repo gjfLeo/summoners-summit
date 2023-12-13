@@ -1,4 +1,4 @@
-import { NButton, useMessage, useNotification } from "naive-ui";
+import { NButton } from "#components";
 import { encodeDeckCode } from "~/utils/decks";
 import type { Deck } from "~/utils/types";
 

@@ -15,7 +15,7 @@
 import { Chart } from "vue-chartjs";
 import type { ChartData, ChartOptions } from "chart.js";
 import { divide } from "mathjs/number";
-import { NScrollbar, darkTheme, lightTheme } from "naive-ui";
+import { darkTheme, lightTheme } from "naive-ui";
 import type { ApiTeamStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{

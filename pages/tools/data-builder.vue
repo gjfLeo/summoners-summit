@@ -18,7 +18,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NCard, NCode, NCollapse, NCollapseItem, NHr, useMessage } from "naive-ui";
 import hljs from "highlight.js/lib/core";
 import hljsTs from "highlight.js/lib/languages/typescript";
 import { EditorTournamentForm } from "#components";

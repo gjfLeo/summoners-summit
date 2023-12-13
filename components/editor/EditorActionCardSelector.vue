@@ -9,9 +9,8 @@
 </template>
 
 <script lang="ts" setup>
-import { NAutoComplete, NText } from "naive-ui";
 import PinyinMatch from "pinyin-match";
-import { CardImage } from "#components";
+import { CardImage, NAutoComplete, NText } from "#components";
 import { ALL_ACTION_CARDS, type ActionCard } from "~/utils/cards";
 
 const props = defineProps<{

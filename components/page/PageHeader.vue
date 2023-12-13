@@ -61,14 +61,19 @@
 
 <script lang="ts" setup>
 import type { MenuOption, SelectGroupOption, SelectOption } from "naive-ui";
-import { NButton, NDrawer, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
 import { getAllGameVersionsReversed, getGameVersionPath } from "~/utils/game-version";
 import type { GameVersionOptional } from "~/utils/types";
 
 const route = useRoute();
+
 const isDark = useDark();
+const { colorMode } = useNaiveColorMode();
+watch(isDark, (isDark) => {
+  colorMode.value = isDark ? "dark" : "light";
+});
+
 const { isAdminMode } = useAdminMode();
 
 const isMobile = useBreakpoints(breakpointsTailwind).smaller("md");

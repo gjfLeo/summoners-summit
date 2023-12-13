@@ -22,8 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { NSelect } from "naive-ui";
-import { NAutoComplete, NButton, NForm, NFormItem, NText } from "naive-ui";
+import type { NSelect } from "#components";
 import { EditorActionCardSelector } from "#components";
 import { type ActionCard, actionCardSorter } from "~/utils/cards";
 

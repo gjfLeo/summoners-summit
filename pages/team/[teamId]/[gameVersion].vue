@@ -69,7 +69,6 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { NButton, NH4, NStatistic, NTabPane, NTabs, NText } from "naive-ui";
 import { getCharactersByTeamId, normalizeTeamId } from "~/utils/cards";
 import type { CharacterCard, TeamId } from "~/utils/types";
 

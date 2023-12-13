@@ -12,7 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NTag, NTooltip } from "naive-ui";
 import type { TournamentRules } from "~/utils/types";
 
 const props = defineProps<{

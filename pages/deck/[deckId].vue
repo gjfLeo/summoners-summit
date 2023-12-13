@@ -30,7 +30,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NTabPane, NTabs } from "naive-ui";
 import { getTeamIdByCharacters } from "~/utils/cards";
 import type { ActionCard } from "~/utils/types";
 

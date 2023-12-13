@@ -10,7 +10,6 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { NDivider, NStatistic } from "naive-ui";
 import type { ApiPlayerStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{

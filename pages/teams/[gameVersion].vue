@@ -13,8 +13,7 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { NDataTable, NTooltip } from "naive-ui";
-import { NuxtLink, TeamAvatars } from "#components";
+import { NTooltip, NuxtLink, TeamAvatars } from "#components";
 import type { CharacterCard } from "~/utils/types";
 import { getCharactersByTeamId } from "~/utils/cards";
 

@@ -9,9 +9,8 @@
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { type DataTableColumn, NText, NTooltip } from "naive-ui";
-import { NDataTable } from "naive-ui";
-import { NuxtLink, TeamAvatars } from "#components";
+import type { DataTableColumn } from "naive-ui";
+import { NText, NTooltip, NuxtLink, TeamAvatars } from "#components";
 import type { ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, TeamId } from "~/utils/types";
 
 const props = defineProps<{

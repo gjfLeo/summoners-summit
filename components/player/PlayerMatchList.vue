@@ -38,7 +38,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NCard, NH3, NH4 } from "naive-ui";
 import type { Game, Match } from "~/utils/types";
 
 const props = defineProps<{

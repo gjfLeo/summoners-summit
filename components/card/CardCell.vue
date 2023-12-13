@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NTooltip } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/cards";
 
 defineProps<{

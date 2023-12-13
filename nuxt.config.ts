@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    "@bg-dev/nuxt-naiveui",
     "@unocss/nuxt",
     "@vueuse/nuxt",
   ],
@@ -47,26 +48,6 @@ export default defineNuxtConfig({
         "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";",
         { async: true, src: "https://www.statcounter.com/counter/counter.js" },
       ],
-    },
-  },
-
-  build: {
-    transpile:
-      process.env.NODE_ENV === "production"
-        ? [
-            "naive-ui",
-            "vueuc",
-            "@css-render/vue3-ssr",
-            "@juggle/resize-observer",
-          ]
-        : ["@juggle/resize-observer"],
-  },
-  vite: {
-    optimizeDeps: {
-      include:
-        process.env.NODE_ENV === "development"
-          ? ["naive-ui", "vueuc", "date-fns-tz/formatInTimeZone"]
-          : [],
     },
   },
 

@@ -40,7 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NCard, NH1, NH2, NIcon, NText, NTooltip } from "naive-ui";
 import { ALL_ACHIEVEMENTS } from "~/utils/achievements";
 
 const route = useRoute();

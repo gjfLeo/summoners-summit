@@ -53,7 +53,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NModal, NText, useMessage } from "naive-ui";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 import { EditorActionsInput, EditorCharacterCardSelector } from "#components";
 
