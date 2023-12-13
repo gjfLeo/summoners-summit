@@ -9,7 +9,7 @@ export default function useAdminMode() {
   const resetActiveCounter = useDebounceFn(() => activeCounter.value = 0, 500);
   function activeAdminMode() {
     activeCounter.value++;
-    if (activeCounter.value >= 10) {
+    if (activeCounter.value === 10) {
       isAdminMode.value = !isAdminMode.value;
       location.reload();
     }
