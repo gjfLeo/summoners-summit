@@ -48,8 +48,8 @@ const data = computed<ChartData>(() => ({
       },
       datalabels: {
         formatter: v => Math.round(v * 100),
-        backgroundColor: context => context.dataset.backgroundColor,
-        borderRadius: 3,
+        anchor: "center",
+        align: "end",
       },
     },
     {
@@ -59,8 +59,8 @@ const data = computed<ChartData>(() => ({
       yAxisID: "yCount",
       backgroundColor: theme.value.common.infoColor,
       datalabels: {
-        align: "center",
         anchor: "start",
+        align: "end",
         formatter: v => v > 0 ? v : "",
       },
     },
@@ -71,8 +71,8 @@ const data = computed<ChartData>(() => ({
       yAxisID: "yCount",
       backgroundColor: theme.value.common.successColor,
       datalabels: {
-        align: "center",
         anchor: "start",
+        align: "end",
         formatter: v => v > 0 ? v : "",
       },
     },
@@ -81,11 +81,10 @@ const data = computed<ChartData>(() => ({
       label: "禁用数",
       data: dataBan.value,
       yAxisID: "yCount",
-      // borderColor: "#d54562c0",
       backgroundColor: theme.value.common.errorColor,
       datalabels: {
-        align: "center",
         anchor: "start",
+        align: "end",
         formatter: v => v > 0 ? v : "",
       },
     },

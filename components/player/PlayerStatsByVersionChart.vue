@@ -29,6 +29,11 @@ const dataGameWinRate = computed(() => props.statsByVersion.map(item => divide(i
 const dataMatchWin = computed(() => props.statsByVersion.map(item => item.matchWin));
 const dataMatchLose = computed(() => props.statsByVersion.map(item => item.matchTotal - item.matchWin));
 
+const countMax = computed(() => {
+  const maxMatchTotal = props.statsByVersion.map(item => item.matchTotal).reduce((a, b) => Math.max(a, b), 0);
+  return Math.ceil(maxMatchTotal / 4) * 4;
+});
+
 const isDark = useDark();
 const theme = computed(() => isDark.value ? darkTheme : lightTheme);
 
@@ -48,8 +53,10 @@ const data = computed<ChartData>(() => ({
       },
       datalabels: {
         formatter: v => Math.round(v * 100),
-        backgroundColor: context => context.dataset.backgroundColor,
-        borderRadius: 3,
+        anchor: "center",
+        align: "end",
+        color: context => context.dataset.backgroundColor,
+        textStrokeColor: isDark.value ? "#000000" : "#ffffff",
       },
     },
     {
@@ -65,8 +72,10 @@ const data = computed<ChartData>(() => ({
       },
       datalabels: {
         formatter: v => Math.round(v * 100),
-        backgroundColor: context => context.dataset.backgroundColor,
-        borderRadius: 3,
+        anchor: "center",
+        align: "end",
+        color: context => context.dataset.backgroundColor,
+        textStrokeColor: isDark.value ? "#000000" : "#ffffff",
       },
     },
     {
@@ -76,11 +85,13 @@ const data = computed<ChartData>(() => ({
       yAxisID: "yCount",
       backgroundColor: "#368cf180",
       stack: "matchStack",
-      categoryPercentage: 0.5,
       datalabels: {
-        align: "center",
-        anchor: "center",
-        formatter: v => v > 0 ? v : "",
+        anchor: "start",
+        align: "end",
+        formatter: (v, context) => {
+          const lose = dataMatchLose.value[context.dataIndex];
+          return (v + lose > 0) ? `${v}胜\u2006${lose}负` : "";
+        },
       },
     },
     {
@@ -90,11 +101,8 @@ const data = computed<ChartData>(() => ({
       backgroundColor: "#808080",
       yAxisID: "yCount",
       stack: "matchStack",
-      categoryPercentage: 0.5,
       datalabels: {
-        align: "center",
-        anchor: "center",
-        formatter: v => v > 0 ? v : "",
+        display: false,
       },
     },
   ],
@@ -135,6 +143,7 @@ const options = computed<ChartOptions>(() => ({
         text: "场数",
       },
       min: 0,
+      max: countMax.value,
       ticks: {
         stepSize: 1,
       },
