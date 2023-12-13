@@ -1,6 +1,6 @@
 import { gameById, matchById } from "~/server/data";
 import { getTeamIdByCharacters } from "~/utils/cards";
-import { gameVersionSorter, initGameVersionMap } from "~/utils/game-versions";
+import { getAllGameVersions, initGameVersionMap } from "~/utils/game-version";
 import { getGameMirror } from "~/utils/games";
 import type { ApiTeamStatsByVersionData, GameVersion, R, TeamId } from "~/utils/types";
 
@@ -31,7 +31,7 @@ export default defineEventHandler<R & ApiTeamStatsByVersionData>((event) => {
       });
     });
 
-  const statsByVersion = Object.values(statsByVersionMap).sort(gameVersionSorter(item => item.gameVersion));
+  const statsByVersion = getAllGameVersions().map(v => statsByVersionMap[v]);
 
   return { statusCode: 200, statsByVersion };
 });

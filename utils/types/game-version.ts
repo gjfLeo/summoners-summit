@@ -1,1 +1,1 @@
-export type { GameVersion } from "../game-versions";
+export type { GameVersion, GameVersionOptional } from "../game-version";

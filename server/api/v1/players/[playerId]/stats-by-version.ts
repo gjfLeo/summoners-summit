@@ -1,7 +1,7 @@
 import type { ApiPlayerStatsByVersionData, GameVersion, PlayerId, R } from "~/utils/types";
 import { gameById, matchById, playerById } from "~/server/data";
 import { getGameMirror, getMatchMirror } from "~/utils/games";
-import { gameVersionSorter, initGameVersionMap } from "~/utils/game-versions";
+import { getAllGameVersions, initGameVersionMap } from "~/utils/game-version";
 
 export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
   const playerId = event.context.params!.playerId as PlayerId;
@@ -53,6 +53,6 @@ export default defineEventHandler<R & ApiPlayerStatsByVersionData>((event) => {
       statsByVersionMap[m.gameVersion].gameWin += m.winner === "A" ? 1 : 0;
     });
 
-  const statsByVersion = Object.values(statsByVersionMap).sort(gameVersionSorter(s => s.gameVersion));
+  const statsByVersion = getAllGameVersions().map(v => statsByVersionMap[v]);
   return { statusCode: 200, statsByVersion };
 });

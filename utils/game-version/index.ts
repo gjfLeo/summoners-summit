@@ -5,7 +5,7 @@ interface GameVersionInfo {
   season: GameSeason;
 }
 
-function defineGameVersionInfo(info: GameVersionInfo): GameVersionInfo {
+function defineGameVersionInfo(info: GameVersionInfo): Readonly<GameVersionInfo> {
   return info;
 }
 
@@ -32,20 +32,21 @@ export const ALL_GAME_VERSIONS_INFO = {
   }),
 };
 export type GameVersion = keyof typeof ALL_GAME_VERSIONS_INFO;
+export type GameVersionOptional = GameVersion | "";
 
-export const ALL_GAME_VERSIONS = Object.keys(ALL_GAME_VERSIONS_INFO) as GameVersion[];
+export const ALL_GAME_VERSIONS = Object.keys(ALL_GAME_VERSIONS_INFO) as Readonly<GameVersion[]>;
+export function getAllGameVersions(): GameVersion[] {
+  return [...ALL_GAME_VERSIONS];
+}
+export function getAllGameVersionsReversed() {
+  return getAllGameVersions().reverse();
+}
 
 export function initGameVersionMap<T>(valueMapper: (v: GameVersion) => T): Record<GameVersion, T> {
   return Object.fromEntries(ALL_GAME_VERSIONS.map(v => [v, valueMapper(v)])) as Record<GameVersion, T>;
 }
-export function gameVersionSorter<T>(gameVersionExtractor: (item: T) => GameVersion) {
-  return (a: T, b: T) => gameVersionExtractor(a).localeCompare(gameVersionExtractor(b));
-}
-export function gameVersionSorterReversed<T>(gameVersionExtractor: (item: T) => GameVersion) {
-  return (a: T, b: T) => gameVersionExtractor(b).localeCompare(gameVersionExtractor(a));
-}
 
-export function getGameVersionPath(gameVersion: GameVersion | "") {
+export function getGameVersionPath(gameVersion: GameVersionOptional): string {
   if (gameVersion === "") return "all";
   return gameVersion.replace(".", "-");
 }

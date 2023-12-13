@@ -1,11 +1,12 @@
-import { ALL_GAME_VERSIONS, type GameVersion, getGameVersionPath } from "~/utils/game-versions";
+import { ALL_GAME_VERSIONS, getGameVersionPath } from "~/utils/game-version";
+import type { GameVersionOptional } from "~/utils/types";
 
 interface UseGameVersionOptions {
   detect?: boolean;
 }
 
 export default function useGameVersion(options?: UseGameVersionOptions) {
-  const gameVersion = useLocalStorage<GameVersion | "">("game-version", "");
+  const gameVersion = useLocalStorage<GameVersionOptional>("game-version", "");
 
   if (gameVersion.value !== "" && !ALL_GAME_VERSIONS.includes(gameVersion.value)) {
     gameVersion.value = "";

@@ -1,5 +1,5 @@
 import type { PlayerAchievement } from "../achievements";
-import type { GameVersion } from "../game-versions";
+import type { GameVersion } from "../game-version";
 import type { Deck, TournamentRules } from "./output-data";
 
 export interface TournamentRawData {

@@ -1,5 +1,5 @@
 import type { PlayerAchievement } from "../achievements";
-import type { GameVersion } from "../game-versions";
+import type { GameVersion } from "../game-version";
 import type { Brand } from "./utility-types";
 import type { ActionCard, CharacterCard } from "./card";
 

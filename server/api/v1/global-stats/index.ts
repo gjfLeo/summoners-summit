@@ -1,6 +1,6 @@
 import type { ApiGlobalStatsListByVersionData, ApiGlobalStatsValue, GameVersion, R } from "~/utils/types";
 import { gameById } from "~/server/data";
-import { initGameVersionMap } from "~/utils/game-versions";
+import { initGameVersionMap } from "~/utils/game-version";
 
 function initStats(gameVersion: GameVersion): ApiGlobalStatsValue {
   return {

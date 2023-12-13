@@ -64,8 +64,8 @@ import type { MenuOption, SelectGroupOption, SelectOption } from "naive-ui";
 import { NButton, NDrawer, NMenu, NSelect, NSpin, useLoadingBar } from "naive-ui";
 import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
-import { ALL_GAME_VERSIONS, gameVersionSorterReversed, getGameVersionPath } from "~/utils/game-versions";
-import type { GameVersion } from "~/utils/types";
+import { getAllGameVersionsReversed, getGameVersionPath } from "~/utils/game-version";
+import type { GameVersionOptional } from "~/utils/types";
 
 const route = useRoute();
 const isDark = useDark();
@@ -77,9 +77,9 @@ const { gameVersion, gameVersionPath } = useGameVersion();
 
 const gameVersionOptions: (SelectOption | SelectGroupOption)[] = [
   { label: "全版本", value: "" },
-  ...ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map<SelectOption>(v => ({ label: v, value: v })),
+  ...getAllGameVersionsReversed().map<SelectOption>(v => ({ label: v, value: v })),
   // ...Object.entries(groupBy(
-  //   ALL_GAME_VERSIONS.sort(gameVersionSorterReversed(v => v)).map(v => ({ label: v, value: v })),
+  //   getAllGameVersionsReversed().map(v => ({ label: v, value: v })),
   //   item => ALL_GAME_VERSIONS_INFO[item.value].season,
   // )).map<SelectGroupOption>(([season, children]) => ({
   //   type: "group",
@@ -118,7 +118,7 @@ const menuOptions = computed<MenuOption[]>(() =>
   }),
 );
 
-function changeGameVersion(gameVersion: GameVersion | "") {
+function changeGameVersion(gameVersion: GameVersionOptional) {
   if (typeof route.params.gameVersion === "string") {
     return navigateTo({
       name: route.name!,
