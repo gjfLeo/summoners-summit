@@ -69,6 +69,7 @@ import type { GameVersionOptional } from "~/utils/types";
 
 const route = useRoute();
 const isDark = useDark();
+const { isAdminMode } = useAdminMode();
 
 const isMobile = useBreakpoints(breakpointsTailwind).smaller("md");
 const sideMenuVisible = ref(false);
@@ -101,8 +102,8 @@ const activeKey = computed(() => {
   return menuList.find(item => route.path.startsWith(item.route))?.route;
 });
 
-const menuOptions = computed<MenuOption[]>(() =>
-  menuList.map((menu) => {
+const menuOptions = computed<MenuOption[]>(() => {
+  const options: MenuOption[] = menuList.map((menu) => {
     return {
       key: menu.route,
       label: () => h(
@@ -115,8 +116,41 @@ const menuOptions = computed<MenuOption[]>(() =>
         () => menu.name,
       ),
     };
-  }),
-);
+  });
+  if (isAdminMode.value) {
+    options.push({
+      key: "tools",
+      label: "工具",
+      children: [
+        {
+          key: "tools-data-builder",
+          label: () => h(
+            NuxtLink,
+            {
+              class: "flex, items-center",
+              to: "/tools/data-builder",
+              onClick: () => sideMenuVisible.value = false,
+            },
+            () => "录入工具",
+          ),
+        },
+        {
+          key: "tools-card-image-check",
+          label: () => h(
+            NuxtLink,
+            {
+              class: "flex, items-center",
+              to: "/tools/card-image-check",
+              onClick: () => sideMenuVisible.value = false,
+            },
+            () => "图片检查",
+          ),
+        },
+      ],
+    });
+  }
+  return options;
+});
 
 function changeGameVersion(gameVersion: GameVersionOptional) {
   if (typeof route.params.gameVersion === "string") {

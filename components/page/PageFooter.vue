@@ -32,7 +32,7 @@
           </div>
         </div>
         <NText>
-          感谢帮助：
+          <span @click="activeAdminMode">感谢帮助：</span>
           <NuxtLink class="underline" to="https://nga.178.com/nuke.php?func=ucp&uid=41364075" target="_blank"><NA>念冰</NA></NuxtLink>
         </NText>
         <NText :depth="3">更新时间：{{ updateTime }}</NText>
@@ -60,6 +60,8 @@ async function handleQQClick() {
   await copy(contactQQ);
   message.success("已复制");
 }
+
+const { activeAdminMode } = useAdminMode();
 </script>
 
 <style scoped>
