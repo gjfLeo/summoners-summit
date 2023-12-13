@@ -5,28 +5,45 @@
     <NH2>{{ stage.name }}</NH2>
     <TournamentRules v-if="stage.rules" :rules="stage.rules" />
     <template v-for="(part, partIndex) in stage.parts" :key="partIndex">
-      <template v-for="matchId in part.matchIds" :key="matchId">
-        <TournamentMatch :part-name="part.name" :match="matches[matchId]" :games="filterGames(matchId)" />
-      </template>
+      <NCard class="mt">
+        <NH3 v-if="part.name">{{ part.name }}</NH3>
+        <template v-for="matchId in part.matchIds" :key="matchId">
+          <NH4 class="flex flex-wrap items-baseline gap-2">
+            <div>{{ matches[matchId].name }}</div>
+
+            <!-- 小屏幕换行 -->
+            <div class="h-0 w-full md:hidden" />
+            <div class="text-base" :class="{ 'text-orange-500': matches[matchId].winner === 'A' }"><PlayerName :id="matches[matchId].playerAId" :nickname="matches[matchId].playerANickname" /></div>
+            <div class="text-sm">VS</div>
+            <div class="text-base" :class="{ 'text-orange-500': matches[matchId].winner === 'B' }"><PlayerName :id="matches[matchId].playerBId" :nickname="matches[matchId].playerBNickname" /></div>
+
+            <!-- 右侧 -->
+            <div class="ml-auto flex gap-2 text-sm text-gray">
+              <LinkVideo v-if="matches[matchId].video" :video="matches[matchId].video!" />
+              <div>{{ matches[matchId].date }}</div>
+            </div>
+          </NH4>
+          <TournamentMatchGameList
+            :player-a-id="matches[matchId].playerAId"
+            :player-a-nickname="matches[matchId].playerANickname"
+            :player-b-id="matches[matchId].playerBId"
+            :player-b-nickname="matches[matchId].playerBNickname"
+            :banned="matches[matchId].banned"
+            :games="matches[matchId].gameIds.map(gId => games[gId])"
+          />
+        </template>
+      </NCard>
     </template>
   </template>
 </template>
 
 <script lang="ts" setup>
-import { NH1, NH2 } from "naive-ui";
-import type { MatchId } from "~/utils/types";
+import { NCard, NH1, NH2, NH3, NH4 } from "naive-ui";
 
 const route = useRoute();
 const tournamentId = route.params.tournamentId as string;
 
 const { tournament, matches, games } = await useApiTournamentDetail(tournamentId);
-
-function filterGames(matchId: MatchId) {
-  return Object.fromEntries(
-    matches[matchId].gameIds
-      .map(gameId => [gameId, games[gameId]]),
-  );
-}
 
 useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
 </script>

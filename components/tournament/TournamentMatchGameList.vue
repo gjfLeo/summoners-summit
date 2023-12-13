@@ -66,6 +66,6 @@ defineProps<{
   playerBId?: string;
   playerBNickname: string;
   banned?: Match["banned"];
-  games: (Omit<Game, "playerAId" | "playerANickname" | "playerBId" | "playerBNickname"> & Partial<Game>)[];
+  games: (Pick<Game, `player${"A" | "B"}${"Characters" | "DeckId"}` | "starter" | "winner"> & Partial<Game>)[];
 }>();
 </script>
