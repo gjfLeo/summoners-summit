@@ -15,7 +15,6 @@
 import { Chart } from "vue-chartjs";
 import type { ChartData, ChartOptions } from "chart.js";
 import { divide } from "mathjs/number";
-import { darkTheme, lightTheme } from "naive-ui";
 import type { ApiTeamStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{
@@ -29,8 +28,7 @@ const dataPick = computed(() => props.statsByVersion.map(item => item.pick));
 const dataWin = computed(() => props.statsByVersion.map(item => item.win));
 const dataWinRate = computed(() => props.statsByVersion.map(item => divide(item.win, item.pick)));
 
-const isDark = useDark();
-const theme = computed(() => isDark.value ? darkTheme : lightTheme);
+const theme = useThemeVars();
 
 const data = computed<ChartData>(() => ({
   labels: labels.value,
@@ -40,8 +38,8 @@ const data = computed<ChartData>(() => ({
       label: "胜率",
       data: dataWinRate.value,
       yAxisID: "yPercent",
-      borderColor: theme.value.common.warningColorHover,
-      backgroundColor: theme.value.common.warningColor,
+      borderColor: theme.value.warningColorHover,
+      backgroundColor: theme.value.warningColor,
       segment: {
         borderDash: ctx => ctx.p0.skip || ctx.p1.skip ? [4, 4] : undefined,
         borderWidth: ctx => ctx.p0.skip || ctx.p1.skip ? 2 : undefined,
@@ -57,7 +55,7 @@ const data = computed<ChartData>(() => ({
       label: "出场数",
       data: dataPick.value,
       yAxisID: "yCount",
-      backgroundColor: theme.value.common.infoColor,
+      backgroundColor: theme.value.infoColor,
       datalabels: {
         anchor: "start",
         align: "end",
@@ -69,7 +67,7 @@ const data = computed<ChartData>(() => ({
       label: "胜场数",
       data: dataWin.value,
       yAxisID: "yCount",
-      backgroundColor: theme.value.common.successColor,
+      backgroundColor: theme.value.successColor,
       datalabels: {
         anchor: "start",
         align: "end",
@@ -81,7 +79,7 @@ const data = computed<ChartData>(() => ({
       label: "禁用数",
       data: dataBan.value,
       yAxisID: "yCount",
-      backgroundColor: theme.value.common.errorColor,
+      backgroundColor: theme.value.errorColor,
       datalabels: {
         anchor: "start",
         align: "end",

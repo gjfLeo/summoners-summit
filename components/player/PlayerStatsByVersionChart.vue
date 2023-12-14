@@ -15,7 +15,6 @@
 import { Chart } from "vue-chartjs";
 import type { ChartData, ChartOptions } from "chart.js";
 import { divide } from "mathjs/number";
-import { darkTheme, lightTheme } from "naive-ui";
 import type { ApiPlayerStatsByVersionData } from "~/utils/types";
 
 const props = defineProps<{
@@ -34,8 +33,7 @@ const countMax = computed(() => {
   return Math.ceil(maxMatchTotal / 4) * 4;
 });
 
-const isDark = useDark();
-const theme = computed(() => isDark.value ? darkTheme : lightTheme);
+const theme = useThemeVars();
 
 const data = computed<ChartData>(() => ({
   labels: labels.value,
@@ -45,8 +43,8 @@ const data = computed<ChartData>(() => ({
       label: "场次胜率",
       data: dataMatchWinRate.value,
       yAxisID: "yPercent",
-      borderColor: theme.value.common.infoColor,
-      backgroundColor: theme.value.common.infoColorHover,
+      borderColor: theme.value.infoColor,
+      backgroundColor: theme.value.infoColorHover,
       segment: {
         borderDash: ctx => ctx.p0.skip || ctx.p1.skip ? [4, 4] : undefined,
         borderWidth: ctx => ctx.p0.skip || ctx.p1.skip ? 2 : undefined,
@@ -56,7 +54,7 @@ const data = computed<ChartData>(() => ({
         anchor: "center",
         align: "end",
         color: context => context.dataset.backgroundColor,
-        textStrokeColor: isDark.value ? "#000000" : "#ffffff",
+        textStrokeColor: theme.value.baseColor,
       },
     },
     {
@@ -64,8 +62,8 @@ const data = computed<ChartData>(() => ({
       label: "对局胜率",
       data: dataGameWinRate.value,
       yAxisID: "yPercent",
-      borderColor: theme.value.common.warningColorHover,
-      backgroundColor: theme.value.common.warningColor,
+      borderColor: theme.value.warningColorHover,
+      backgroundColor: theme.value.warningColor,
       segment: {
         borderDash: ctx => ctx.p0.skip || ctx.p1.skip ? [4, 4] : undefined,
         borderWidth: ctx => ctx.p0.skip || ctx.p1.skip ? 2 : undefined,
@@ -75,7 +73,7 @@ const data = computed<ChartData>(() => ({
         anchor: "center",
         align: "end",
         color: context => context.dataset.backgroundColor,
-        textStrokeColor: isDark.value ? "#000000" : "#ffffff",
+        textStrokeColor: theme.value.baseColor,
       },
     },
     {

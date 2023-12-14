@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    // https://nuxt-naiveui.bg.tn/
     "@bg-dev/nuxt-naiveui",
     "@unocss/nuxt",
     "@vueuse/nuxt",

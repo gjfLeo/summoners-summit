@@ -43,12 +43,13 @@ import type { ThemeConfig } from "@bg-dev/nuxt-naiveui";
 
 useHead({ title: "召唤之巅" });
 
-useChartConfigurations();
-
 zhCN.DataTable.clear = "清除";
 
 const headerHeight = "4rem";
 const footerHeight = "4rem";
+
+// const { colorModePreference } = useNaiveColorMode();
+// colorModePreference.sync();
 
 const themeConfig = computed<ThemeConfig>(() => ({
   shared: {

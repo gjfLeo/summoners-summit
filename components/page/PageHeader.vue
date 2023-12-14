@@ -39,7 +39,7 @@
         </ClientOnly>
         <NButton
           circle quaternary :focusable="false"
-          @click="isDark = !isDark"
+          @click="changeColorMode"
         >
           <template #icon>
             <div class="i-carbon:moon dark:i-carbon:sun" />
@@ -69,10 +69,14 @@ import type { GameVersionOptional } from "~/utils/types";
 const route = useRoute();
 
 const isDark = useDark();
-const { colorMode } = useNaiveColorMode();
-watch(isDark, (isDark) => {
-  colorMode.value = isDark ? "dark" : "light";
-});
+const { colorModePreference } = useNaiveColorMode();
+
+function changeColorMode() {
+  isDark.value = !isDark.value;
+  colorModePreference.set(isDark.value ? "dark" : "light");
+}
+
+useChartConfigurations();
 
 const { isAdminMode } = useAdminMode();
 

@@ -5,11 +5,10 @@ import {
   Chart as ChartJS, Colors, Legend, LineController, LineElement, LinearScale, PointElement,
   Title, Tooltip,
 } from "chart.js";
-
-import { darkTheme, lightTheme } from "naive-ui";
+import Color from "color";
 
 export default function useChartConfigurations() {
-  const isDark = useDark();
+  const theme = useThemeVars();
 
   ChartJS.register(
     Title, Tooltip, Colors, Legend,
@@ -28,6 +27,8 @@ export default function useChartConfigurations() {
   ChartJS.defaults.layout.padding = { top: 24 };
   ChartJS.defaults.interaction.mode = "index";
 
+  ChartJS.defaults.font.family = theme.value.fontFamily;
+
   ChartJS.defaults.datasets.bar.maxBarThickness = 60;
   ChartJS.defaults.datasets.line.spanGaps = true;
   ChartJS.defaults.datasets.line.borderWidth = 2;
@@ -36,9 +37,9 @@ export default function useChartConfigurations() {
   ChartJS.defaults.plugins.datalabels.textStrokeWidth = 3;
   ChartJS.defaults.plugins.datalabels.offset = 0;
 
-  watch(isDark, (isDark) => {
-    const theme = isDark ? darkTheme : lightTheme;
-    ChartJS.defaults.color = theme.common.textColor3;
-    ChartJS.defaults.plugins.datalabels!.textStrokeColor = isDark ? "#00000080" : "#ffffff80";
+  watch(theme, (theme) => {
+    ChartJS.defaults.color = theme.textColor3;
+    ChartJS.defaults.plugins.datalabels!.color = theme.textColor2;
+    ChartJS.defaults.plugins.datalabels!.textStrokeColor = Color(theme.baseColor).alpha(0.75).hexa().toString();
   }, { immediate: true });
 }
