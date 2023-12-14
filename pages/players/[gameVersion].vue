@@ -10,7 +10,6 @@
     <NText :depth="3" class="text-sm">统计可能不全，数据仅供参考</NText>
   </div>
   <NDataTable
-    size="small"
     :columns="columns"
     :data="data"
     max-height="calc(100vh - 18rem)"
