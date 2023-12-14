@@ -1,23 +1,30 @@
 <template>
   <div class="h-full flex items-center justify-center">
     <div class="h-full w-full p-inline" grid="~ items-center" style="grid-template-columns: 1fr minmax(auto, 72rem) 1fr;">
-      <div class="h-full flex items-center justify-start">
-        <ClientOnly>
-          <NButton
-            v-if="isMobile"
-            circle quaternary :focusable="false"
-            @click="sideMenuVisible = !sideMenuVisible"
-          >
-            <template #icon>
-              <div class="i-carbon:menu" />
-            </template>
-          </NButton>
-        </ClientOnly>
+      <div class="h-full flex items-center justify-start gap-2">
+        <NButton
+          class="md:hidden"
+          circle quaternary :focusable="false"
+          @click="sideMenuVisible = !sideMenuVisible"
+        >
+          <template #icon>
+            <div class="i-carbon:menu" />
+          </template>
+        </NButton>
+        <NButton
+          v-if="$route.path !== '/'"
+          circle quaternary :focusable="false"
+          @click="$router.push('/')"
+        >
+          <template #icon>
+            <div class="i-carbon:home" />
+          </template>
+        </NButton>
       </div>
 
       <div class="h-full flex items-center justify-center">
         <ClientOnly>
-          <NMenu v-if="!isMobile" :value="activeKey" mode="horizontal" :options="menuOptions" />
+          <NMenu class="hidden! md:inline-flex!" :value="activeKey" mode="horizontal" :options="menuOptions" />
         </ClientOnly>
       </div>
 
@@ -61,7 +68,6 @@
 
 <script lang="ts" setup>
 import type { MenuOption, SelectGroupOption, SelectOption } from "naive-ui";
-import { breakpointsTailwind } from "@vueuse/core";
 import { NuxtLink } from "#components";
 import { getAllGameVersionsReversed, getGameVersionPath } from "~/utils/game-version";
 import type { GameVersionOptional } from "~/utils/types";
@@ -80,7 +86,6 @@ useChartConfigurations();
 
 const { isAdminMode } = useAdminMode();
 
-const isMobile = useBreakpoints(breakpointsTailwind).smaller("md");
 const sideMenuVisible = ref(false);
 
 const { gameVersion, gameVersionPath } = useGameVersion();
@@ -112,52 +117,70 @@ const activeKey = computed(() => {
 });
 
 const menuOptions = computed<MenuOption[]>(() => {
-  const options: MenuOption[] = menuList.map((menu) => {
-    return {
-      key: menu.route,
-      label: () => h(
-        NuxtLink,
-        {
-          class: "flex, items-center",
-          to: `${menu.route}/${gameVersionPath.value}`,
-          onClick: () => sideMenuVisible.value = false,
-        },
-        () => menu.name,
-      ),
-    };
-  });
-  if (isAdminMode.value) {
-    options.push({
-      key: "tools",
-      label: "工具",
-      children: [
-        {
-          key: "tools-data-builder",
-          label: () => h(
-            NuxtLink,
+  const options: MenuOption[] = [
+    // ...isMobile.value
+    //   ? [{
+    //       key: "/",
+    //       label: () => h(
+    //         NuxtLink,
+    //         {
+    //           class: "flex, items-center",
+    //           to: "/",
+    //           onClick: () => sideMenuVisible.value = false,
+    //         },
+    //         () => "首页",
+    //       ),
+    //     }]
+    //   : [],
+
+    ...menuList.map((menu) => {
+      return {
+        key: menu.route,
+        label: () => h(
+          NuxtLink,
+          {
+            class: "flex, items-center",
+            to: `${menu.route}/${gameVersionPath.value}`,
+            onClick: () => sideMenuVisible.value = false,
+          },
+          () => menu.name,
+        ),
+      };
+    }),
+
+    ...isAdminMode.value
+      ? [{
+          key: "tools",
+          label: "工具",
+          children: [
             {
-              class: "flex, items-center",
-              to: "/tools/data-builder",
-              onClick: () => sideMenuVisible.value = false,
+              key: "tools-data-builder",
+              label: () => h(
+                NuxtLink,
+                {
+                  class: "flex, items-center",
+                  to: "/tools/data-builder",
+                  onClick: () => sideMenuVisible.value = false,
+                },
+                () => "录入工具",
+              ),
             },
-            () => "录入工具",
-          ),
-        },
-        {
-          key: "tools-card-image-check",
-          label: () => h(
-            NuxtLink,
             {
-              class: "flex, items-center",
-              to: "/tools/card-image-check",
-              onClick: () => sideMenuVisible.value = false,
+              key: "tools-card-image-check",
+              label: () => h(
+                NuxtLink,
+                {
+                  class: "flex, items-center",
+                  to: "/tools/card-image-check",
+                  onClick: () => sideMenuVisible.value = false,
+                },
+                () => "图片检查",
+              ),
             },
-            () => "图片检查",
-          ),
-        },
-      ],
-    });
-  }
+          ],
+        }]
+      : [],
+  ];
   return options;
 });
 

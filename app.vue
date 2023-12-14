@@ -58,6 +58,12 @@ const themeConfig = computed<ThemeConfig>(() => ({
       fontFamilyMono: "\"Liger Iosevka\", \"Ubuntu Mono\", \"LXGW Neo XiHei\", \"Microsoft YaHei\", monospace",
     },
   },
+  mobile: {
+    defaults: false,
+  },
+  mobileOrTablet: {
+    defaults: false,
+  },
 }));
 </script>
 
