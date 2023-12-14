@@ -90,19 +90,10 @@ const sideMenuVisible = ref(false);
 
 const { gameVersion, gameVersionPath } = useGameVersion();
 
+// 版本选项
 const gameVersionOptions: (SelectOption | SelectGroupOption)[] = [
   { label: "全版本", value: "" },
   ...getAllGameVersionsReversed().map<SelectOption>(v => ({ label: v, value: v })),
-  // ...Object.entries(groupBy(
-  //   getAllGameVersionsReversed().map(v => ({ label: v, value: v })),
-  //   item => ALL_GAME_VERSIONS_INFO[item.value].season,
-  // )).map<SelectGroupOption>(([season, children]) => ({
-  //   type: "group",
-  //   label: `第\u2006${season}\u2006赛季`,
-  //   key: `season-${season}`,
-  //   render: ({ option }) => h(NText, { class: "text-xs pl-2", depth: 3 }, option.label as string),
-  //   children,
-  // })),
 ];
 
 const menuList = [
@@ -118,21 +109,6 @@ const activeKey = computed(() => {
 
 const menuOptions = computed<MenuOption[]>(() => {
   const options: MenuOption[] = [
-    // ...isMobile.value
-    //   ? [{
-    //       key: "/",
-    //       label: () => h(
-    //         NuxtLink,
-    //         {
-    //           class: "flex, items-center",
-    //           to: "/",
-    //           onClick: () => sideMenuVisible.value = false,
-    //         },
-    //         () => "首页",
-    //       ),
-    //     }]
-    //   : [],
-
     ...menuList.map((menu) => {
       return {
         key: menu.route,
