@@ -1,6 +1,6 @@
 import type { ApiGlobalStatsListByVersionData, ApiGlobalStatsValue, GameVersion, R } from "~/utils/types";
 import { gameById } from "~/server/data";
-import { initGameVersionMap } from "~/utils/game-version";
+import { getAllGameVersionsReversed, initGameVersionMap } from "~/utils/game-version";
 
 function initStats(gameVersion: GameVersion): ApiGlobalStatsValue {
   return {
@@ -28,6 +28,6 @@ export default defineEventHandler<R & ApiGlobalStatsListByVersionData>(() => {
     }
   });
 
-  const statsList = Object.values(statsMap);
+  const statsList = getAllGameVersionsReversed().map(v => statsMap[v]);
   return { statusCode: 200, statsList };
 });
