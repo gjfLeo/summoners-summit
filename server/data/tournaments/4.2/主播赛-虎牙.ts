@@ -1983,8 +1983,7 @@ export default defineTournament({
                   playerBCharacters: ["班尼特", "可莉", "无相之雷"],
                   playerBActions: defineActions({
                     "冒险憧憬": 2,
-                    "抵天雷罚": 2,
-                    "海染砗磲": 2,
+                    "赌徒的耳环": 2,
                     "璃月港口": 1,
                     "须弥城": 2,
                     "桓纳兰那": 1,
@@ -1993,6 +1992,7 @@ export default defineTournament({
                     "立本": 2,
                     "万家灶火": 1,
                     "元素共鸣：交织之火": 2,
+                    "元素共鸣：热诚之火": 2,
                     "最好的伙伴！": 1,
                     "换班时间": 2,
                     "运筹帷幄": 2,
