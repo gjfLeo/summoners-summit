@@ -128,7 +128,7 @@ export default defineTournament({
             {
               playerA: "零之启",
               playerB: "浅冽（重生版）",
-              video: "",
+              video: "https://www.bilibili.com/video/BV1ij411p7b9",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
