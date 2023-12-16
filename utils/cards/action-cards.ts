@@ -234,7 +234,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "元素共鸣：交织之冰": defineActionCardInfo({ id: 331101, name: "元素共鸣：交织之冰", nameEn: "Elemental Resonance Woven Ice", type: "Event", type2: "Element" }),
   "元素共鸣：粉碎之冰": defineActionCardInfo({ id: 331102, name: "元素共鸣：粉碎之冰", nameEn: "Elemental Resonance Shattering Ice", type: "Event", type2: "Element" }),
   "元素共鸣：交织之水": defineActionCardInfo({ id: 331201, name: "元素共鸣：交织之水", nameEn: "Elemental Resonance Woven Waters", type: "Event", type2: "Element" }),
-  "元素共鸣：疗愈之水": defineActionCardInfo({ id: 331202, name: "元素共鸣：疗愈之水", nameEn: "Elemental Resonance Soothing Water", type: "Event", type2: "Element" }),
+  "元素共鸣：愈疗之水": defineActionCardInfo({ id: 331202, name: "元素共鸣：愈疗之水", nameEn: "Elemental Resonance Soothing Water", type: "Event", type2: "Element" }),
   "元素共鸣：交织之火": defineActionCardInfo({ id: 331301, name: "元素共鸣：交织之火", nameEn: "Elemental Resonance Woven Flames", type: "Event", type2: "Element" }),
   "元素共鸣：热诚之火": defineActionCardInfo({ id: 331302, name: "元素共鸣：热诚之火", nameEn: "Elemental Resonance Fervent Flames", type: "Event", type2: "Element" }),
   "元素共鸣：交织之雷": defineActionCardInfo({ id: 331401, name: "元素共鸣：交织之雷", nameEn: "Elemental Resonance Woven Thunder", type: "Event", type2: "Element" }),
