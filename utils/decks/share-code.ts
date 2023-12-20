@@ -1,16 +1,16 @@
 import CryptoJS from "crypto-js";
-import { ALL_ACTION_CARDS, ALL_CHARACTER_CARDS, actionCardOrder, characterCardOrder } from "../cards";
-import type { ActionCard, Deck } from "../types";
+import type { ActionCard, CharacterCard, Deck } from "../types";
+import { CARD_BY_ENCODE_ID, ENCODE_ID_BY_CARD } from "../cards/encode";
 import blockWords from "./block-words";
 
 export function encodeDeckCode(deck: Deck): string {
   // 计算牌组中的卡片编码ID
   const cardEncodingIds: number[] = [
-    ...deck.characterCards.map<number>(card => characterCardOrder[card] + 1),
+    ...deck.characterCards.map<number>(card => ENCODE_ID_BY_CARD[card]),
     ...Object.entries(deck.actionCards)
       .flatMap<number>(([card, count]) => Array.from(
         { length: count },
-        () => actionCardOrder[card as ActionCard] + ALL_CHARACTER_CARDS.length + 1,
+        () => ENCODE_ID_BY_CARD[card as ActionCard],
       )),
   ];
 
@@ -57,14 +57,16 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
 
   const cardEncodingIds = reorderedByteArray.join("").match(/.{12}/g)!.map(v => Number.parseInt(v, 2));
   const characterCards: Deck["characterCards"] = [
-    ALL_CHARACTER_CARDS[cardEncodingIds[0]],
-    ALL_CHARACTER_CARDS[cardEncodingIds[1]],
-    ALL_CHARACTER_CARDS[cardEncodingIds[2]],
+    CARD_BY_ENCODE_ID[cardEncodingIds[0]] as CharacterCard,
+    CARD_BY_ENCODE_ID[cardEncodingIds[1]] as CharacterCard,
+    CARD_BY_ENCODE_ID[cardEncodingIds[2]] as CharacterCard,
   ];
   const actionCards: Deck["actionCards"] = {};
   for (let i = 3; i < cardEncodingIds.length; i++) {
-    const card = ALL_ACTION_CARDS[cardEncodingIds[i] - ALL_CHARACTER_CARDS.length];
-    actionCards[card] = (actionCards[card] ?? 0) + 1;
+    const card = CARD_BY_ENCODE_ID[cardEncodingIds[i]] as ActionCard;
+    if (card) {
+      actionCards[card] = (actionCards[card] ?? 0) + 1;
+    }
   }
   return {
     characterCards,
