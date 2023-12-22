@@ -96,7 +96,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             playerA,
             playerB,
             winner: winnerRaw,
-            video,
+            video: matchVideo,
             banned: bannedRaw,
             games: gamesRaw,
           } = matchRaw;
@@ -145,6 +145,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               starter,
               winner,
               turns,
+              video: gameVideo,
             } = gameRaw;
             const gameId = matchId + (gameIndex + 1).toString().padStart(2, "0") as GameId;
 
@@ -159,7 +160,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               matchId,
               tournamentName,
               gameName: stageName + partName + matchName + (gamesRaw.length > 1 ? `第${gameIndex + 1}局` : ""),
-              video,
+              video: gameVideo ?? matchVideo,
 
               playerAId,
               playerANickname,
@@ -189,7 +190,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
             playerANickname,
             playerBId,
             playerBNickname,
-            video,
+            video: matchVideo,
             winner,
             banned,
             gameIds,

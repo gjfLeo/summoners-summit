@@ -46,6 +46,7 @@ export interface GameRawData {
   starter: "A" | "B" | "";
   winner: "A" | "B";
   turns?: number;
+  video?: string;
 }
 
 export function defineTournament(tournament: TournamentRawData) {
