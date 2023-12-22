@@ -12,7 +12,11 @@
             </th>
             <th>
               <div class="items-center justify-center text-center">
-                <NButton text size="small" @click="matches = matches.filter(({ tempId }) => tempId !== match.tempId)">
+                <NButton
+                  text size="small"
+                  type="error" style="--n-text-color: unset"
+                  @click="matches = matches.filter(({ tempId }) => tempId !== match.tempId)"
+                >
                   <div class="i-carbon:trash-can" />
                 </NButton>
               </div>
@@ -27,15 +31,14 @@
               <NInput v-model:value="match.playerB" placeholder="玩家2昵称" />
             </th>
             <th class="w-15%">
-              <div class="flex flex-col items-end justify-start gap-2">
-                <NInput v-model:value="match.video" placeholder="视频链接" size="small">
-                  <template #prefix>
-                    <NText class="mr-1" :depth="3">
-                      <div class="i-carbon:video" />
-                    </NText>
-                  </template>
-                </NInput>
-                <NCheckbox v-if="match.video?.match(/[\?&]p=\d/)" v-model:checked="match.videoWithPart" size="small" label="精确到分P" />
+              <div class="flex flex-col items-center justify-center gap-2">
+                <NButton
+                  text size="small"
+                  :type="match.video ? 'primary' : undefined"
+                  @click="async () => match.video = await videoInputDialogRef?.inputVideo(match.video)"
+                >
+                  <div class="i-carbon:video" />
+                </NButton>
               </div>
             </th>
           </tr>
@@ -60,7 +63,11 @@
               />
             </td>
             <td class="text-center vertical-middle">
-              <NButton text size="small" @click="match.banned = match.banned.filter(({ tempId }) => tempId !== banned.tempId)">
+              <NButton
+                text size="small"
+                type="error" style="--n-text-color: unset"
+                @click="match.banned = match.banned.filter(({ tempId }) => tempId !== banned.tempId)"
+              >
                 <div class="i-carbon:trash-can" />
               </NButton>
             </td>
@@ -98,9 +105,22 @@
               />
             </td>
             <td class="text-center vertical-middle">
-              <NButton text size="small" @click="match.games = match.games.filter(({ tempId }) => tempId !== game.tempId)">
-                <div class="i-carbon:trash-can" />
-              </NButton>
+              <div class="flex items-center justify-center gap-2">
+                <NButton
+                  text size="small"
+                  :type="game.video ? 'primary' : undefined"
+                  @click="async () => game.video = await videoInputDialogRef?.inputVideo(game.video)"
+                >
+                  <div class="i-carbon:video" />
+                </NButton>
+                <NButton
+                  text size="small"
+                  type="error" style="--n-text-color: unset"
+                  @click="match.games = match.games.filter(({ tempId }) => tempId !== game.tempId)"
+                >
+                  <div class="i-carbon:trash-can" />
+                </NButton>
+              </div>
             </td>
           </tr>
           <tr :key="-2">
@@ -127,17 +147,18 @@
       添加场次
     </NButton>
   </TransitionGroup>
+  <EditorVideoInputDialog ref="videoInputDialogRef" />
 </template>
 
 <script lang="ts" setup>
 import type { ActionCard, CharacterCard } from "~/utils/types";
+import { EditorVideoInputDialog } from "#components";
 
 interface MatchData {
   tempId: number;
   playerA: string;
   playerB: string;
-  video: string;
-  videoWithPart: boolean;
+  video?: string;
   banned: BannedData[];
   games: GameData[];
 }
@@ -156,11 +177,14 @@ interface GameData {
   playerBActions?: Partial<Record<ActionCard, number>>;
   winner?: "A" | "B";
   starter?: "A" | "B";
+  video?: string;
 }
+
+const videoInputDialogRef = ref<InstanceType<typeof EditorVideoInputDialog>>();
 
 let tempId = 1;
 function newMatch(): MatchData {
-  return { tempId: tempId++, playerA: "", playerB: "", video: "", videoWithPart: false, banned: [], games: [newGame()] };
+  return { tempId: tempId++, playerA: "", playerB: "", video: undefined, banned: [], games: [newGame()] };
 }
 function newBanned() {
   return { tempId: tempId++, playerACharacters: [], playerBCharacters: [] };
@@ -171,26 +195,11 @@ function newGame(): GameData {
 
 const matches = ref<MatchData[]>([newMatch()]);
 
-function formatVideoLink(video: string, videoWithPart: boolean): string {
-  if (!video) return "";
-  try {
-    const url = new URL(video);
-    if (url.host !== "www.bilibili.com") {
-      return video;
-    }
-    const part = (videoWithPart && url.searchParams.get("p")) ? url.searchParams.get("p") : "";
-    return url.origin + url.pathname.replace(/\/$/, "") + part;
-  }
-  catch {
-    return "";
-  }
-}
-
 const output = computed<string[]>(() => matches.value.flatMap(match => [
   "{",
   `  playerA: "${match.playerA}",`,
   `  playerB: "${match.playerB}",`,
-  `  video: "${formatVideoLink(match.video, match.videoWithPart)}",`,
+  ...match.video ? [`  video: "${match.video}",`] : [],
   ...(match.banned.length
     ? [
         "  banned: [",
@@ -238,6 +247,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
       : []),
     `      starter: "${game.starter ?? ""}",`,
     `      winner: "${game.winner ?? ""}",`,
+    ...game.video ? [`      video: "${game.video}",`] : [],
     "    },",
   ]),
   "  ],",
