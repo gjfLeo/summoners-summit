@@ -17,7 +17,7 @@ const ALL_GAME_VERSIONS_INFO = {
   "4.0": defineGameVersionInfo({ gameVersion: "4.0", season: 1 }),
   "4.1": defineGameVersionInfo({ gameVersion: "4.1", season: 2 }),
   "4.2": defineGameVersionInfo({ gameVersion: "4.2", season: 2 }),
-  // "4.3": defineGameVersionInfo({ gameVersion: "4.3", season: 2 }),
+  "4.3": defineGameVersionInfo({ gameVersion: "4.3", season: 2 }),
 };
 export type GameVersion = keyof typeof ALL_GAME_VERSIONS_INFO;
 export type GameVersionOptional = GameVersion | "";
