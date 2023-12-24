@@ -463,7 +463,7 @@ export default defineTournament({
     {
       name: "表演赛",
       rules: [
-        "BO3",
+        "BO1",
       ],
       parts: [
         {
