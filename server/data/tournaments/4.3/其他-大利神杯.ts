@@ -2,7 +2,7 @@ import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "「大利神杯」中日七圣对抗赛",
-  gameVersion: "4.2",
+  gameVersion: "4.3",
   stages: [
     {
       name: "娱乐赛",
