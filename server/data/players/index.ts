@@ -54,7 +54,6 @@ const playerNicknameMapRaw: Record<string, string> = {
   "道诡异仙李火旺": "小果核",
   "素未谋面": "陳十一",
   "浅冽（重生版）": "浅冽",
-  
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
