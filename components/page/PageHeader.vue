@@ -23,9 +23,7 @@
       </div>
 
       <div class="h-full flex items-center justify-center">
-        <ClientOnly>
-          <NMenu class="hidden! md:inline-flex!" :value="activeKey" mode="horizontal" :options="menuOptions" />
-        </ClientOnly>
+        <NMenu class="justify-center hidden! md:inline-flex!" :value="activeKey" mode="horizontal" :options="menuOptions" />
       </div>
 
       <div class="h-full flex items-center justify-end gap-2">

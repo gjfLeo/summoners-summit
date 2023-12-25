@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center md:display-none">
+  <div class="flex items-center justify-center md:hidden">
     <NTooltip trigger="hover" placement="top">
       <template #default>
         <span>{{ card }}</span>
@@ -9,7 +9,7 @@
       </template>
     </NTooltip>
   </div>
-  <div class="display-none items-center gap-2 md:flex">
+  <div class="hidden items-center gap-2 md:flex">
     <CardImage :card="card" class="m-block--2 h-12" />
     <span>{{ card }}</span>
   </div>
