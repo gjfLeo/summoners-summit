@@ -19,7 +19,7 @@ export default defineConfig({
   theme: {
     fontFamily: {
       sans: '"LXGW Neo XiHei", "Microsoft YaHei", sans-serif',
-      mono: '"Liger Iosevka", "LXGW Neo XiHei", monospace',
+      mono: '"Liger Iosevka", "Ubuntu Mono", Consolas, monospace',
     },
   },
   rules: [
