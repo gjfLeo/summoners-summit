@@ -7,30 +7,10 @@
     <NLoadingBarProvider>
       <NNotificationProvider>
         <NMessageProvider>
-          <NLayout class="h-screen">
-            <NLayoutHeader
-              bordered position="absolute"
-              class="top-0" :style="{ height: headerHeight }"
-            >
-              <PageHeader />
-            </NLayoutHeader>
-            <NLayoutContent
-              id="page-content"
-              position="absolute"
-              :style="{ top: headerHeight, height: `calc(100vh - ${headerHeight})` }"
-            >
-              <NScrollbar class="h-full">
-                <NLayout>
-                  <NLayoutContent class="m-inline-auto max-w-6xl p-4" :style="{ minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})` }">
-                    <NuxtPage />
-                  </NLayoutContent>
-                  <NLayoutFooter bordered class="w-full" :style="{ height: footerHeight }">
-                    <PageFooter />
-                  </NLayoutFooter>
-                </NLayout>
-              </NScrollbar>
-            </NLayoutContent>
-          </NLayout>
+          <LayoutHeader>
+            <LayoutContent />
+            <LayoutFooter />
+          </LayoutHeader>
         </NMessageProvider>
       </NNotificationProvider>
     </NLoadingBarProvider>
@@ -44,9 +24,6 @@ import type { ThemeConfig } from "@bg-dev/nuxt-naiveui";
 useHead({ title: "召唤之巅" });
 
 zhCN.DataTable.clear = "清除";
-
-const headerHeight = "4rem";
-const footerHeight = "4rem";
 
 const themeConfig = computed<ThemeConfig>(() => ({
   shared: {
