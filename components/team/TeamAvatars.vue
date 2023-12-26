@@ -1,10 +1,19 @@
 <template>
   <div class="mr-1 inline-flex justify-center">
-    <CardAvatar
+    <NTooltip
       v-for="card in characterCards" :key="card"
-      :card="card"
-      class="mr--1 h-8 border border-light-9 rd-50%"
-    />
+      :delay="500"
+    >
+      <template #default>
+        <span>{{ card }}</span>
+      </template>
+      <template #trigger>
+        <CardAvatar
+          :card="card"
+          class="mr--1 h-8 border border-light-9 rd-50%"
+        />
+      </template>
+    </NTooltip>
   </div>
 </template>
 
