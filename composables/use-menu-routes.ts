@@ -31,7 +31,7 @@ const menuConfig: MenuItem[] = [
   {
     name: "工具",
     children: [
-      { path: "/tools/decode-deck-code", name: "牌组分享码解码" },
+      { path: "/tools/decode-deck-code", name: "牌组分享码解析" },
       { path: "/tools/data-builder", name: "数据录入工具", adminOnly: true },
       { path: "/tools/card-image-check", name: "卡牌图片检查", adminOnly: true },
     ],
@@ -40,13 +40,14 @@ const menuConfig: MenuItem[] = [
 
 export default function useMenuRoutes() {
   const { isAdminMode } = useAdminMode();
+  const { gameVersionPath } = useGameVersion();
   function menuItemToLinkRoute(menuItem: MenuItem): MenuLinkRoute[] {
     if (menuItem.adminOnly && !isAdminMode.value) {
       return [];
     }
     return [{
       label: menuItem.name,
-      path: menuItem.path,
+      path: menuItem.withGameVersion ? `${menuItem.path}/${gameVersionPath.value}` : menuItem.path,
       children: menuItem.children?.flatMap(menuItemToLinkRoute),
     }];
   }
