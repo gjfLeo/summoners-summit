@@ -4,7 +4,7 @@
     filterable
     clearable
     multiple
-    :placeholder="placeholder"
+    :placeholder="displayedPlaceholder"
     max-tag-count="responsive"
     :options="options"
     :virtual-scroll="false"
@@ -13,13 +13,14 @@
     :render-tag="renderTag"
     :show-checkmark="false"
     class="w-68"
+    @update:show="displayedPlaceholder = $event ? '支持拼音和首字母' : placeholder"
   />
 </template>
 
 <script lang="ts" setup>
 import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderTag } from "naive-ui";
 
-import { CardAvatar, NTag, NText, NTooltip } from "#components";
+import { CardAvatar, NSelect, NTag, NText, NTooltip } from "#components";
 import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/cards";
 
 const props = withDefaults(defineProps<{
@@ -29,6 +30,8 @@ const props = withDefaults(defineProps<{
   placeholder: "角色",
 });
 const emit = defineEmits(["update:modelValue"]);
+
+const displayedPlaceholder = ref(props.placeholder);
 
 const characters = useVModel(props, "modelValue", emit);
 
