@@ -1,5 +1,5 @@
 <template>
-  <div grid="~ lg:cols-3 md:cols-2 row-gap-4">
+  <div u-grid="~ lg:cols-3 md:cols-2 row-gap-4">
     <template v-for="(ban, banIndex) in banned ?? []" :key="banIndex">
       <div class="grid items-center" style="grid-template-columns: 1fr 2rem 1fr;">
         <div class="self-center justify-self-end text-sm">

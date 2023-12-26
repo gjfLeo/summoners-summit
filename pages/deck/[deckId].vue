@@ -1,6 +1,6 @@
 <template>
   <!-- 角色卡 -->
-  <div grid gap-2 style="grid-template-columns: 1fr repeat(3, minmax(0, 8rem)) 1fr;">
+  <div u-grid="~ gap-2" style="grid-template-columns: 1fr repeat(3, minmax(0, 8rem)) 1fr;">
     <div />
     <template v-for="(card, i) in characterCards" :key="i">
       <CardImage :card="card" class="w-100%" />
@@ -13,7 +13,7 @@
     </div>
   </div>
   <!-- 行动卡 -->
-  <div class="grid mt gap-2" grid-cols="6 md:10">
+  <div u-grid="~ gap-2 cols-6 md:cols-10" class="mt">
     <template v-for="(card, i) in actionCards" :key="i">
       <CardImage :card="card" class="w-100%" />
     </template>

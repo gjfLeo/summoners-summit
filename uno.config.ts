@@ -8,7 +8,10 @@ import {
 export default defineConfig({
   presets: [
     presetUno(),
-    presetAttributify(),
+    presetAttributify({
+      prefix: "u-",
+      prefixedOnly: true,
+    }),
     presetIcons(),
   ],
   transformers: [

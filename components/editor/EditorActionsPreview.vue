@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-2" grid-cols="6 md:10 lg:15">
+  <div u-grid="~ cols-6 md:cols-10 lg:cols-15 gap-2">
     <template v-for="(card, i) in deckActionCards" :key="i">
       <div class="card-container" @click="remove(card)">
         <CardImage :card="card" class="w-100%" />

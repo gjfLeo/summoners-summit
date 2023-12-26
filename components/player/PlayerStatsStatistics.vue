@@ -1,5 +1,8 @@
 <template>
-  <div class="mt flex flex-wrap items-center justify-center gap-4 text-center">
+  <div
+    class="mt text-center"
+    u-flex="~ wrap items-center justify-center gap-4"
+  >
     <NStatistic label="总统计场数" :value="matchTotal" />
     <NDivider class="h-12!" vertical />
     <NStatistic label="总场次胜率" :value="matchWinRate" />

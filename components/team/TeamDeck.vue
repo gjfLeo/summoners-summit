@@ -1,5 +1,8 @@
 <template>
-  <div class="grid mt gap-2" grid-cols="6 md:10 lg:15">
+  <div
+    class="mt"
+    u-grid="~ gap-2 cols-6 md:cols-10 lg:cols-15"
+  >
     <template v-for="(card, i) in actionCards" :key="i">
       <CardImage :card="card" class="w-100%" />
     </template>

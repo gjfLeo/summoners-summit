@@ -1,22 +1,24 @@
 <template>
-  <NInputGroup>
-    <NInput v-model:value="shareCode" placeholder="请输入牌组分享码" />
-    <NButton @click="resultDeck = decode()">解析</NButton>
-  </NInputGroup>
-  <template v-if="resultDeck">
-    <!-- 角色牌 -->
-    <div class="grid mt gap-2" grid-cols="6 md:10">
-      <template v-for="(card, i) in characterCards" :key="i">
-        <CardImage :card="card" class="w-100%" />
-      </template>
-    </div>
-    <!-- 行动牌 -->
-    <div class="grid mt gap-2" grid-cols="6 md:15">
-      <template v-for="(card, i) in actionCards" :key="i">
-        <CardImage :card="card" class="w-100%" />
-      </template>
-    </div>
-  </template>
+  <div u-flex="~ col gap-4">
+    <NInputGroup>
+      <NInput v-model:value="shareCode" placeholder="请输入牌组分享码" />
+      <NButton @click="resultDeck = decode()">解析</NButton>
+    </NInputGroup>
+    <template v-if="resultDeck">
+      <!-- 角色牌 -->
+      <div u-grid="~ gap-2 cols-6 md:cols-10">
+        <template v-for="(card, i) in characterCards" :key="i">
+          <CardImage :card="card" class="w-100%" />
+        </template>
+      </div>
+      <!-- 行动牌 -->
+      <div u-grid="~ gap-2 cols-6 md:cols-15">
+        <template v-for="(card, i) in actionCards" :key="i">
+          <CardImage :card="card" class="w-100%" />
+        </template>
+      </div>
+    </template>
+  </div>
 </template>
 
 <script lang="ts" setup>

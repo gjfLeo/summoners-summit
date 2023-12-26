@@ -1,5 +1,5 @@
 <template>
-  <TransitionGroup name="games" tag="div" flex="~ col gap-4">
+  <TransitionGroup name="games" tag="div" u-flex="~ col gap-4">
     <template v-for="(match, matchIndex) in matches" :key="match.tempId">
       <NTable>
         <thead>

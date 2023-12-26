@@ -3,7 +3,7 @@
     trigger="hover"
   >
     <template #trigger>
-      <NuxtLink :to="video" target="_blank" no-prefetch flex="~ items-center">
+      <NuxtLink :to="video" target="_blank" no-prefetch u-flex="~ items-center">
         <NIcon class="text-size-120%"><div class="i-carbon:video" /></NIcon>
       </NuxtLink>
     </template>

@@ -1,5 +1,9 @@
 <template>
-  <div grid="~ justify-center" class="gap-4" style="grid-template-columns: repeat(auto-fill, 22rem);">
+  <div
+    class="gap-4"
+    u-grid="~ justify-center"
+    style="grid-template-columns: repeat(auto-fill, 22rem);"
+  >
     <template v-for="game in games" :key="`${game.id}-${game.winner}`">
       <NCard>
         <div class="grid max-w-md" style="grid-template-columns: 1fr 2rem 1fr;">

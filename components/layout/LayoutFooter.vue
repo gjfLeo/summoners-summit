@@ -1,6 +1,9 @@
 <template>
   <NLayoutFooter bordered :style="{ height: LAYOUT_FOOTER_HEIGHT }">
-    <div class="h-full w-full p-4 text-sm" flex="~ items-center justify-center gap-4">
+    <div
+      class="h-full w-full p-4 text-sm"
+      u-flex="~ items-center justify-center gap-4"
+    >
       <NText depth="3">召唤之巅——七圣召唤赛事资料 by gjfLeo</NText>
       <NText depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</NText>
     </div>

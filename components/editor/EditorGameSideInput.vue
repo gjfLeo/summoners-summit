@@ -1,5 +1,5 @@
 <template>
-  <div flex="~ gap-2 items-center justify-center">
+  <div u-flex="~ gap-2 items-center justify-center">
     <NText
       v-if="!banned"
       :type="player === starter ? 'primary' : (starter === undefined ? 'error' : undefined)"
@@ -20,7 +20,7 @@
     >
       胜
     </NText>
-    <div flex="~ gap-1 justify-center">
+    <div u-flex="~ gap-1 justify-center">
       <template v-for="i in 3" :key="i">
         <EditorCharacterCardSelector
           :ref="bindInputCharacterRef(i - 1)"

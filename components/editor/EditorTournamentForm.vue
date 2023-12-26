@@ -1,6 +1,6 @@
 <template>
-  <div grid="~ cols-24 gap-4">
-    <NFormItem label="赛事信息" :show-feedback="false" grid="col-1/17">
+  <div u-grid="~ cols-24 gap-4">
+    <NFormItem label="赛事信息" :show-feedback="false" u-grid="col-1/17">
       <NSelect
         v-model:value="tournamentId"
         :options="tournamentOptions"
@@ -11,7 +11,7 @@
         @update:value="handleTournamentSelect"
       />
     </NFormItem>
-    <NFormItem label="" :show-feedback="false" grid="col-17/21">
+    <NFormItem label="" :show-feedback="false" u-grid="col-17/21">
       <NSelect
         v-model:value="tournamentType"
         :options="typeOptions"
@@ -19,7 +19,7 @@
         placeholder="类别"
       />
     </NFormItem>
-    <NFormItem label="" :show-feedback="false" grid="col-21/25">
+    <NFormItem label="" :show-feedback="false" u-grid="col-21/25">
       <NSelect
         v-model:value="gameVersion"
         :options="gameVersionOptions"
@@ -29,21 +29,21 @@
       />
     </NFormItem>
 
-    <NFormItem label="阶段" :show-feedback="false" grid="col-1/13">
+    <NFormItem label="阶段" :show-feedback="false" u-grid="col-1/13">
       <NInput v-model:value="stageName" placeholder="如16进8、半决赛等" />
     </NFormItem>
-    <NFormItem label="规则" :show-feedback="false" grid="col-13/25">
+    <NFormItem label="规则" :show-feedback="false" u-grid="col-13/25">
       <NSelect v-model:value="stageRules" :options="ruleOptions" tag filterable multiple :render-tag="ruleRenderTag" />
     </NFormItem>
 
-    <NFormItem label="比赛日名称" :show-feedback="false" grid="col-1/13">
+    <NFormItem label="比赛日名称" :show-feedback="false" u-grid="col-1/13">
       <NInput v-model:value="partName" placeholder="如DAY3、A组第一轮等" />
     </NFormItem>
-    <NFormItem label="日期" :show-feedback="false" grid="col-13/25">
+    <NFormItem label="日期" :show-feedback="false" u-grid="col-13/25">
       <NDatePicker v-model:formatted-value="partDate" type="date" value-format="yyyy-MM-dd" placeholder="日期" class="w-full" />
     </NFormItem>
 
-    <NFormItem label="备注" :show-feedback="false" grid="col-1/25">
+    <NFormItem label="备注" :show-feedback="false" u-grid="col-1/25">
       <NInput v-model:value="note" type="textarea" :rows="3" placeholder="任何需要补充的内容" />
     </NFormItem>
   </div>

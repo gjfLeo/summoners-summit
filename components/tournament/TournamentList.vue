@@ -1,5 +1,5 @@
 <template>
-  <div grid="~ lg:cols-3 md:cols-2 gap-4">
+  <div u-grid="~ lg:cols-3 md:cols-2 gap-4">
     <template v-for="tournament in list" :key="tournament.id">
       <NuxtLink :to="`/tournament/${tournament.id}`" no-prefetch>
         <NCard :title="tournament.name" hoverable :style="{ '--n-color': tournament.type && cardColors[tournament.type] }">
