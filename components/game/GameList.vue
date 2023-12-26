@@ -10,7 +10,8 @@
                 {{ game.gameVersion }} {{ game.tournamentName }}
               </NuxtLink>
               <NText :depth="3" class="flex gap-2 text-xs">
-                <LinkVideo v-if="game.video" :video="game.video" />
+                <LinkVideo v-if="game.gameVideo" :video="game.gameVideo" />
+                <LinkVideo v-else-if="game.matchVideo" :video="game.matchVideo" />
                 <div>{{ game.date }}</div>
               </NText>
             </div>

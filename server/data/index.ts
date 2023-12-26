@@ -160,7 +160,8 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
               matchId,
               tournamentName,
               gameName: stageName + partName + matchName + (gamesRaw.length > 1 ? `第${gameIndex + 1}局` : ""),
-              video: gameVideo ?? matchVideo,
+              matchVideo,
+              gameVideo,
 
               playerAId,
               playerANickname,

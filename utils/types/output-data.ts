@@ -72,7 +72,8 @@ export interface Game {
   date: string;
   tournamentName: string;
   gameName: string;
-  video?: string;
+  matchVideo?: string;
+  gameVideo?: string;
 
   playerAId?: PlayerId;
   playerANickname: string;
