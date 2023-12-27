@@ -19,26 +19,11 @@
 
 <script lang="ts" setup>
 import { dateZhCN, zhCN } from "naive-ui";
-import type { ThemeConfig } from "@bg-dev/nuxt-naiveui";
+import themeConfig from "@/configs/theme";
 
 useHead({ title: "召唤之巅" });
 
 zhCN.DataTable.clear = "清除";
-
-const themeConfig = computed<ThemeConfig>(() => ({
-  shared: {
-    common: {
-      fontFamily: "\"LXGW Neo XiHei\", \"Microsoft YaHei\", sans-serif",
-      fontFamilyMono: "\"Liger Iosevka\", \"Ubuntu Mono\", \"LXGW Neo XiHei\", \"Microsoft YaHei\", monospace",
-    },
-  },
-  mobile: {
-    defaults: false,
-  },
-  mobileOrTablet: {
-    defaults: false,
-  },
-}));
 </script>
 
 <style>
