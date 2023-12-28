@@ -29,11 +29,48 @@
       />
     </NFormItem>
 
-    <NFormItem label="阶段" :show-feedback="false" u-grid="col-1/13">
+    <NFormItem label="阶段" :show-feedback="false" u-grid="col-1/5 items-start">
       <NInput v-model:value="stageName" placeholder="如16进8、半决赛等" />
     </NFormItem>
-    <NFormItem label="规则" :show-feedback="false" u-grid="col-13/25">
-      <NSelect v-model:value="stageRules" :options="ruleOptions" tag filterable multiple :render-tag="ruleRenderTag" />
+    <NFormItem :show-feedback="false" u-grid="col-5/25">
+      <template #label>
+        <span>规则</span>
+        <!-- <NText class="ml-2 text-sm" :depth="3">有啥填啥</NText> -->
+      </template>
+      <div u-grid="~ gap-2 cols-4">
+        <NInputGroup>
+          <NInputNumber v-model:value="stageRulesNumDecks" :show-button="false" class="text-center" placeholder="" />
+          <NInputGroupLabel>套阵容</NInputGroupLabel>
+        </NInputGroup>
+        <NInputGroup>
+          <NInputGroupLabel>禁用</NInputGroupLabel>
+          <NInputNumber v-model:value="stageRulesNumDecksBanned" :show-button="false" class="text-center" placeholder="" />
+          <NInputGroupLabel>套</NInputGroupLabel>
+        </NInputGroup>
+        <NInputGroup>
+          <NInputGroupLabel>禁用</NInputGroupLabel>
+          <NInputNumber v-model:value="stageRulesNumCharacterBanned" :show-button="false" class="text-center" placeholder="" />
+          <NInputGroupLabel>角色</NInputGroupLabel>
+        </NInputGroup>
+        <NInputGroup>
+          <NInputGroupLabel>至少</NInputGroupLabel>
+          <NInputNumber v-model:value="stageRulesNumCharacterRequired" :show-button="false" class="text-center" placeholder="" />
+          <NInputGroupLabel>角色</NInputGroupLabel>
+        </NInputGroup>
+        <NInputGroup>
+          <NInputGroupLabel>BO</NInputGroupLabel>
+          <NInputNumber v-model:value="stageRulesNumGames" :show-button="false" class="text-center" placeholder="" />
+        </NInputGroup>
+        <NSelect v-model:value="stageRulesMode" :options="ruleModeOptions" />
+        <NSelect
+          v-model:value="stageExtraRules" v-model:show="stageExtraRulesShow"
+          u-grid="col-3/5"
+          :options="rulesExtraOptions"
+          tag filterable multiple
+          :render-tag="ruleRenderTag"
+          :placeholder="stageExtraRulesShow ? '可手动输入“标签文字：描述文字”' : '额外规则'"
+        />
+      </div>
     </NFormItem>
 
     <NFormItem label="比赛日名称" :show-feedback="false" u-grid="col-1/13">
@@ -72,7 +109,15 @@ const tournamentName = ref<string>("");
 const gameVersion = ref<string>();
 const tournamentType = ref<TournamentRawData["type"]>();
 const stageName = ref<string>("");
-const stageRules = ref<string[]>([]);
+const stageRulesNumDecks = ref<number>();
+const stageRulesNumDecksBanned = ref<number>();
+const stageRulesNumCharacterBanned = ref<number>();
+const stageRulesNumCharacterRequired = ref<number>();
+const stageRulesNumGames = ref<number>();
+const stageRulesMode = ref<string>("Conquest");
+const stageExtraRules = ref<string[]>([]);
+const stageExtraRulesShow = ref<boolean>(false);
+
 const partName = ref<string>("");
 const partDate = ref<string>();
 
@@ -89,17 +134,21 @@ const output = computed(() => {
     "  stages: [",
     "    {",
     `      name: "${stageName.value}",`,
-    ...(stageRules.value.length > 0
+    "      rules: {",
+    ...(stageRulesNumDecks.value ? [`        numDecks: ${stageRulesNumDecks.value},`] : []),
+    ...(stageRulesNumDecksBanned.value ? [`        numDecksBanned: ${stageRulesNumDecksBanned.value},`] : []),
+    ...(stageRulesNumCharacterBanned.value ? [`        numCharacterBanned: ${stageRulesNumCharacterBanned.value},`] : []),
+    ...(stageRulesNumCharacterRequired.value ? [`        numCharacterRequired: ${stageRulesNumCharacterRequired.value},`] : []),
+    ...(stageRulesNumGames.value ? [`        numGames: ${stageRulesNumGames.value},`] : []),
+    `        mode: "${stageRulesMode.value}",`,
+    ...(stageExtraRules.value.length > 0
       ? [
-          "      rules: [",
-          ...stageRules.value.map(rule =>
-            rule.includes(" - ")
-              ? (`        [${rule.split(" - ").map(s => `"${s}"`).join(", ")}],`)
-              : (`        "${rule}",`),
-          ),
-          "      ],",
+          "        extra: [",
+          ...stageExtraRules.value.map(rule => `          [${rule.split("：").map(s => `"${s}"`).join(", ")}],`),
+          "        ],",
         ]
       : []),
+    "      },",
     "      parts: [",
     "        {",
     `          name: "${partName.value.replace(/day/i, "DAY")}",`,
@@ -169,24 +218,13 @@ function handleTournamentSelect() {
   gameVersion.value = selectedTournament?.gameVersion ?? gameVersionOptions[0].value;
 }
 
-const ruleOptions = [
-  "BO3",
-  "BO5",
-  "BO7",
-  "决斗",
-  "征服",
-  "禁用角色 - 对阵双方各禁用一张角色牌",
-  "禁用阵容 - 对阵双方各准备3套阵容，禁用对手一套阵容",
-  "禁用阵容 - 对阵双方各准备4套阵容，禁用对手一套阵容",
-  "禁用阵容 - 对阵双方各准备5套阵容，禁用对手一套阵容",
-  "可重复角色 - 每名选手的3套阵容至少包含7张不同角色牌",
-  "可重复角色 - 每名选手的3套阵容至少包含8张不同角色牌",
-  "可重复角色 - 每名选手的4套阵容至少包含9张不同角色牌",
-  "可重复角色 - 每名选手的4套阵容至少包含10张不同角色牌",
-  "可重复角色 - 每名选手的5套阵容至少包含11张不同角色牌",
-  "可重复角色 - 每名选手的5套阵容至少包含13张不同角色牌",
-  "备选牌组 - 3套阵容合计可准备9套牌组，上场时从中选择",
-  "备选牌组 - 每套阵容可准备3套牌组，上场时从中选择",
+const ruleModeOptions = [
+  { label: "征服", value: "Conquest" },
+  { label: "决斗", value: "Duel" },
+];
+const rulesExtraOptions = [
+  "备选牌组：3套阵容合计可准备9套牌组，上场时从中选择",
+  "备选牌组：每套阵容可准备3套牌组，上场时从中选择",
 ].map(label => ({ label, value: label }));
 
 const issueTitle = computed(() => `提交数据：${[tournamentName.value, stageName.value, partName.value].filter(s => s).join(" ")}`);
@@ -202,7 +240,7 @@ ${note.value ?? ""}
 <!-- 请将生成的文件拖拽至下方 -->
 `.replace("\n\n\n\n", "\n\n"));
 const ruleRenderTag: SelectRenderTag = ({ option, handleClose }) => {
-  return h(NTag, { closable: true, onClose: handleClose }, () => option.label?.toString().split(" - ")[0]);
+  return h(NTag, { closable: true, onClose: handleClose }, () => option.label?.toString().split("：")[0]);
 };
 
 function submit() {

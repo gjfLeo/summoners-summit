@@ -6,11 +6,12 @@ export default defineTournament({
   stages: [
     {
       name: "娱乐赛",
-      rules: [
-        "BO3",
-        ["可重复角色", "每名选手的3套阵容至少包含7张不同角色牌"],
-        "征服",
-      ],
+      rules: {
+        numDecks: 3,
+        numGames: 3,
+        numCharactersRequired: 7,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "DAY1",
@@ -462,9 +463,11 @@ export default defineTournament({
     },
     {
       name: "表演赛",
-      rules: [
-        ["BO1", "一局决胜"],
-      ],
+      rules: {
+        numDecks: 1,
+        numGames: 1,
+        mode: "Duel",
+      },
       parts: [
         {
           name: "DAY2",
@@ -529,11 +532,12 @@ export default defineTournament({
     },
     {
       name: "竞技赛",
-      rules: [
-        "BO3",
-        "征服",
-        ["可重复角色", "每名选手的3套阵容至少包含7张不同角色牌"],
-      ],
+      rules: {
+        numDecks: 3,
+        numCharactersRequired: 7,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "DAY2",

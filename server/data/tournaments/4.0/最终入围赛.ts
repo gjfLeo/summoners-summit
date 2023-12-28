@@ -6,9 +6,11 @@ export default defineTournament({
   stages: [
     {
       name: "32进16",
-      rules: [
-        "BO3",
-      ],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "DAY1",

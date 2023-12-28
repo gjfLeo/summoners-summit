@@ -6,10 +6,11 @@ export default defineTournament({
   stages: [
     {
       name: "突围赛",
-      rules: [
-        "BO3",
-        "征服",
-      ],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "焦点对局",
@@ -837,10 +838,11 @@ export default defineTournament({
     {
       name: "16进8",
       achievements: ["season-1-crown"],
-      rules: [
-        "BO3",
-        "征服",
-      ],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",
@@ -1778,11 +1780,12 @@ export default defineTournament({
     },
     {
       name: "8进4",
-      rules: [
-        "BO5",
-        "征服",
-        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-      ],
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",
@@ -2575,11 +2578,12 @@ export default defineTournament({
     },
     {
       name: "半决赛",
-      rules: [
-        "BO5",
-        "征服",
-        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-      ],
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",
@@ -3013,11 +3017,12 @@ export default defineTournament({
     },
     {
       name: "决赛",
-      rules: [
-        "BO7",
-        "征服",
-        ["禁用阵容", "对阵双方各准备5套阵容，禁用对手一套阵容"],
-      ],
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",

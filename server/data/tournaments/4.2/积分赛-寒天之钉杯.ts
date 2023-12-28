@@ -7,12 +7,13 @@ export default defineTournament({
   stages: [
     {
       name: "16进8",
-      rules: [
-        "BO3",
-        "征服",
-        ["禁用阵容", "对阵双方各准备3套阵容，禁用对手一套阵容"],
-        ["可重复角色", "每名选手的3套阵容至少包含8张不同角色牌"],
-      ],
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numCharactersRequired: 8,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "DAY1下午场",
@@ -1000,12 +1001,13 @@ export default defineTournament({
     },
     {
       name: "8进4",
-      rules: [
-        "BO5",
-        "征服",
-        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-        ["可重复角色", "每名选手的3套阵容至少包含8张不同角色牌"],
-      ],
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersRequired: 10,
+        numGames: 5,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "DAY1",
@@ -1697,12 +1699,13 @@ export default defineTournament({
     },
     {
       name: "半决赛",
-      rules: [
-        "BO5",
-        "征服",
-        ["禁用阵容", "对阵双方各准备4套阵容，禁用对手一套阵容"],
-        ["可重复角色", "每名选手的4套阵容至少包含10张不同角色牌"],
-      ],
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersRequired: 10,
+        numGames: 5,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",
@@ -2111,12 +2114,13 @@ export default defineTournament({
     },
     {
       name: "决赛",
-      rules: [
-        "BO7",
-        "征服",
-        ["禁用阵容", "对阵双方各准备5套阵容，禁用对手一套阵容"],
-        ["可重复角色", "每名选手的5套阵容至少包含13张不同角色牌"],
-      ],
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numCharactersRequired: 13,
+        numGames: 7,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",

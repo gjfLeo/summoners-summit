@@ -6,10 +6,11 @@ export default defineTournament({
   stages: [
     {
       name: "晋级赛",
-      rules: [
-        "BO3",
-        "征服",
-      ],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "A组",
@@ -318,7 +319,7 @@ export default defineTournament({
                 },
               ],
             },
-            {       
+            {
               playerA: "阿源今晚吃派蒙",
               playerB: "瓜皮儿err",
               video: "https://www.bilibili.com/video/BV1Kj411n7dK?p=3",

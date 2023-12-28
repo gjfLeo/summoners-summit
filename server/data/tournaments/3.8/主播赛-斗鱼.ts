@@ -7,7 +7,11 @@ export default defineTournament({
   stages: [
     {
       name: "晋级赛",
-      rules: ["BO3"],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "A组第1轮",
@@ -3149,10 +3153,11 @@ export default defineTournament({
     },
     {
       name: "淘汰赛",
-      rules: [
-        "BO3",
-        "征服",
-      ],
+      rules: {
+        numDecks: 2,
+        numGames: 3,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "半决赛",
@@ -3415,10 +3420,11 @@ export default defineTournament({
     },
     {
       name: "决赛",
-      rules: [
-        "征服",
-        "BO5",
-      ],
+      rules: {
+        numDecks: 3,
+        numGames: 5,
+        mode: "Conquest",
+      },
       parts: [
         {
           name: "",

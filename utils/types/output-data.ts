@@ -30,7 +30,16 @@ export interface TournamentStage {
   parts: TournamentPart[];
 }
 
-export type TournamentRules = ("BO3" | "BO5" | "BO7" | "征服" | "决斗" | [string, string])[];
+// export type TournamentRules = ("BO3" | "BO5" | "BO7" | "征服" | "决斗" | [string, string])[];
+export interface TournamentRules {
+  numDecks: number;
+  numDecksBanned?: number;
+  numCharactersBanned?: number;
+  numCharactersRequired?: number;
+  mode: "Duel" | "Conquest";
+  numGames: number;
+  extra?: [string, string][];
+}
 
 export interface TournamentPart {
   name?: string;
