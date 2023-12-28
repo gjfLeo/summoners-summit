@@ -20,5 +20,5 @@ const runtimeConfig = useRuntimeConfig();
 const updateTime = runtimeConfig.public.updateTime;
 const timestamp = dayjs(updateTime).unix();
 
-const imageUrl = computed(() => characterAvatarImages[props.card] + "?t=" + timestamp);
+const imageUrl = computed(() => `${characterAvatarImages[props.card]}?t=${timestamp}`);
 </script>
