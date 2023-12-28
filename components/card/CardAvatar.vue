@@ -8,6 +8,7 @@
 </template>
 
 <script lang="ts" setup>
+import dayjs from "dayjs";
 import { characterAvatarImages } from "~/utils/images";
 import type { CharacterCard } from "~/utils/types";
 
@@ -15,5 +16,9 @@ const props = defineProps<{
   card: CharacterCard;
 }>();
 
-const imageUrl = computed(() => characterAvatarImages[props.card]);
+const runtimeConfig = useRuntimeConfig();
+const updateTime = runtimeConfig.public.updateTime;
+const timestamp = dayjs(updateTime).unix();
+
+const imageUrl = computed(() => characterAvatarImages[props.card] + "?t=" + timestamp);
 </script>

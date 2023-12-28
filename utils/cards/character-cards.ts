@@ -80,7 +80,7 @@ export const ALL_CHARACTER_CARDS_INFO = {
   "艾尔海森": defineCharacterCardInfo({ id: 1706, name: "艾尔海森", nameEn: "Alhaitham", element: "Dendro", weapon: "Catalyst", faction: ["Sumeru"] }),
 
   "愚人众·冰萤术士": defineCharacterCardInfo({ id: 2101, name: "愚人众·冰萤术士", nameEn: "Fatui Cryo Cicin Mage", element: "Cryo", weapon: "None", faction: ["Fatui"] }),
-  "「女士」": defineCharacterCardInfo({ id: 2102, name: "「女士」", nameEn: "Signora", element: "Cryo", weapon: "None", faction: ["Fatui"] }),
+  "「女士」": defineCharacterCardInfo({ id: 2102, name: "「女士」", nameEn: "La Signora", element: "Cryo", weapon: "None", faction: ["Fatui"] }),
   "纯水精灵·洛蒂娅": defineCharacterCardInfo({ id: 2201, name: "纯水精灵·洛蒂娅", nameEn: "Rhodeia of Loch", element: "Hydro", weapon: "None", faction: ["Monster"] }),
   "愚人众·藏镜仕女": defineCharacterCardInfo({ id: 2202, name: "愚人众·藏镜仕女", nameEn: "Mirror Maiden", element: "Hydro", weapon: "None", faction: ["Fatui"] }),
   "愚人众·火之债务处理人": defineCharacterCardInfo({ id: 2301, name: "愚人众·火之债务处理人", nameEn: "Fatui Pyro Agent", element: "Pyro", weapon: "None", faction: ["Fatui"] }),
