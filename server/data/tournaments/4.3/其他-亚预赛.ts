@@ -18,7 +18,7 @@ export default defineTournament({
           date: "2023-12-29",
           matches: [
             {
-              playerA: "妞妞嘛",
+              playerA: "洛甄黎",
               playerB: "LL起翼夜鹰",
               video: "https://www.bilibili.com/video/BV1Aa4y1z7mj",
               games: [
