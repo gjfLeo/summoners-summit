@@ -58,6 +58,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "永远滴_神": "Dr.666",
   "终末本是我家": "终末我家",
   "和大名32145": "和大名",
+  "Tonbo_桐柏": "Tonbo",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
