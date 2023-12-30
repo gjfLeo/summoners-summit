@@ -94,8 +94,6 @@ export default defineTournament({
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
                   playerBCharacters: ["迪希雅", "诺艾尔", "荒泷一斗"],
-                  playerBActions: defineActions({
-                  }),
                   starter: "A",
                   winner: "B",
                 },
