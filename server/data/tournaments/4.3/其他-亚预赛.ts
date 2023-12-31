@@ -5,7 +5,7 @@ export default defineTournament({
   gameVersion: "4.3",
   stages: [
     {
-      name: "",
+      name: "焦点桌",
       rules: {
         numDecks: 3,
         numDecksBanned: 1,
@@ -80,8 +80,15 @@ export default defineTournament({
                 },
               ],
             },
-          ],
-        },
+            {
+      name: "焦点桌",
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numGames: 3,
+        mode: "Conquest",
+      },
+      parts: [
         {
           name: "DAY2",
           date: "2023-12-30",
@@ -151,6 +158,85 @@ export default defineTournament({
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
                   playerBCharacters: ["流浪者", "莫娜", "优菈"],
                   starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "焦点桌",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "DAY3",
+          date: "2023-12-31",
+          matches: [
+            {
+              playerA: "音尘",
+              playerB: "皮皮猪",
+              video: "https://www.bilibili.com/video/BV1sN4y1B7gt",
+              games: [
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["琳妮特", "迪希雅", "琴"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "迪奥娜"],
+                  playerBCharacters: ["莫娜", "雷音权现", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "LL起翼夜鹰",
+              playerB: "古明地觉",
+              video: "https://www.bilibili.com/video/BV1sp4y1R7ye",
+              games: [
+                {
+                  playerACharacters: ["迪希雅", "琳妮特", "琴"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["迪希雅", "琳妮特", "琴"],
+                  playerBCharacters: ["莫娜", "流浪者", "优菈"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["莫娜", "流浪者", "优菈"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莫娜", "流浪者", "优菈"],
+                  playerBCharacters: ["莫娜", "流浪者", "优菈"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "流浪者", "优菈"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                  starter: "A",
                   winner: "A",
                 },
               ],
