@@ -80,15 +80,8 @@ export default defineTournament({
                 },
               ],
             },
-            {
-      name: "焦点桌",
-      rules: {
-        numDecks: 3,
-        numDecksBanned: 1,
-        numGames: 3,
-        mode: "Conquest",
-      },
-      parts: [
+          ],
+        },
         {
           name: "DAY2",
           date: "2023-12-30",
