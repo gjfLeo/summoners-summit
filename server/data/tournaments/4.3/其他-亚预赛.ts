@@ -5,7 +5,7 @@ export default defineTournament({
   gameVersion: "4.3",
   stages: [
     {
-      name: "焦点桌",
+      name: "DAY1",
       rules: {
         numDecks: 3,
         numDecksBanned: 1,
@@ -14,7 +14,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "DAY1",
+          name: "焦点桌",
           date: "2023-12-29",
           matches: [
             {
@@ -82,8 +82,19 @@ export default defineTournament({
             },
           ],
         },
+      ],
+    },
+    {
+      name: "DAY2",
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numGames: 3,
+        mode: "Conquest",
+      },
+      parts: [
         {
-          name: "DAY2",
+          name: "焦点桌",
           date: "2023-12-30",
           matches: [
             {
@@ -160,7 +171,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "焦点桌",
+      name: "DAY3",
       rules: {
         numDecks: 4,
         numDecksBanned: 1,
@@ -169,7 +180,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "DAY3",
+          name: "焦点桌",
           date: "2023-12-31",
           matches: [
             {

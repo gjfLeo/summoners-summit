@@ -14,7 +14,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "DAY1",
+          name: "",
           date: "2023-12-22",
           matches: [
             {
@@ -470,7 +470,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "DAY2",
+          name: "",
           date: "2023-12-23",
           matches: [
             {
@@ -540,7 +540,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "DAY2",
+          name: "",
           date: "2023-12-23",
           matches: [
             {
