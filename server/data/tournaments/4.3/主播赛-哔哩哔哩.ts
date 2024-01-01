@@ -1336,7 +1336,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "DAY3",
+          name: "C组",
           date: "2023-12-29",
           matches: [
             {
