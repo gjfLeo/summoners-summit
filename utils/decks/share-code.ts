@@ -64,7 +64,7 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
   const characterIds = cardEncodingIds.splice(0, 3);
   const characterCards = characterIds.map((v) => CARD_BY_ENCODE_ID[v] as CharacterCard);
   const actionCards: Deck["actionCards"] = {};
-  for (let i = 3; i < cardEncodingIds.length; i++) {
+  for (let i = 0; i < cardEncodingIds.length; i++) {
     const card = CARD_BY_ENCODE_ID[cardEncodingIds[i]] as ActionCard;
     if (card) {
       actionCards[card] = (actionCards[card] ?? 0) + 1;
