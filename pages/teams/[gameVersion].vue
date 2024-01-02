@@ -9,6 +9,9 @@
     :scroll-x="1400"
     max-height="calc(100vh - 18rem)"
   />
+  <!-- <ClientOnly>
+    <TeamRelationsGraph />
+  </ClientOnly> -->
 </template>
 
 <script lang="ts" setup>

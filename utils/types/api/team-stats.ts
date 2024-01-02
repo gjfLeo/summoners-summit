@@ -58,3 +58,13 @@ export interface ApiTeamStatsByVersionItem {
   pick: number;
   win: number;
 }
+
+export interface ApiTeamRelationsData {
+  relations: ApiTeamRelationItem[];
+}
+export interface ApiTeamRelationItem {
+  teamA: TeamId;
+  teamB: TeamId;
+  teamAWin: number;
+  teamBWin: number;
+}

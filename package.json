@@ -44,6 +44,7 @@
     "pinyin-match": "^1.2.5",
     "postcss-nested": "^6.0.1",
     "qs": "^6.11.2",
+    "relation-graph": "^2.1.24",
     "vue-chartjs": "^5.3.0",
     "vue-tsc": "^1.8.26"
   },
