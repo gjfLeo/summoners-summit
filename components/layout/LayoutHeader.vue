@@ -60,6 +60,11 @@
 <script lang="ts" setup>
 import { LAYOUT_HEADER_HEIGHT } from "@/configs/layout";
 
+// 将 Netlify 部署的页面重定向至 Github Pages
+if (import.meta.client && location.host.includes(".netlify.app")) {
+  location.href = `https://gjfleo.github.io/summoners-summit${location.pathname}`;
+}
+
 useChartConfigurations();
 
 const sideMenuVisible = ref(false);
