@@ -31,7 +31,7 @@ export function encodeDeckCode(deck: Deck): string {
       .fill(0)
       .flatMap((_, i) => [byteArray[i] + lastByte, byteArray[i + 25] + lastByte]);
     // 编码为Base64
-    const shareCode = btoa(String.fromCodePoint(...original, last));;
+    const shareCode = btoa(String.fromCodePoint(...original, lastByte));
     // 验证是否包含敏感词
     if (!blockWords.some(blockWord => shareCode.match(new RegExp(blockWord.split("").join("\\+*"), "i")))) {
       return shareCode;
@@ -46,11 +46,11 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
   if (byteArray.length !== 51) {
     throw new Error("无效的分享码");
   }
-  const last = byteArray.pop()!;
+  const lastByte = byteArray.pop()!;
   // 减去掩码、奇偶重排
   const reordered = [
-    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i] - last), 
-    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i + 1] - last),
+    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i] - lastByte), 
+    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i + 1] - lastByte),
     0
   ];
   // 重组为 34 项 12-bit 数
