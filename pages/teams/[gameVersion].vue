@@ -1,25 +1,19 @@
 <template>
-  <NTabs justify-content="space-evenly" type="line" size="large">
-    <NTabPane name="statitics" tab="数据">
-      <div u-flex="~ col gap-4">
-        <div class="flex flex-wrap gap-2">
-          <CharacterSelector v-model="includedCharacters" />
-        </div>
-        <NDataTable
-          size="small"
-          :columns="columns"
-          :data="data"
-          :scroll-x="1400"
-          max-height="calc(100vh - 18rem)"
-        />
-      </div>
-    </NTabPane>
-    <NTabPane name="relations" tab="克制">
-      <ClientOnly>
-        <TeamRelationsGraph :relations="relations" />
-      </ClientOnly>
-    </NTabPane>
-  </NTabs>
+  <div u-flex="~ col gap-4">
+    <div class="flex flex-wrap gap-2">
+      <CharacterSelector v-model="includedCharacters" />
+    </div>
+    <NDataTable
+      size="small"
+      :columns="columns"
+      :data="data"
+      :scroll-x="1400"
+      max-height="calc(100vh - 18rem)"
+    />
+    <ClientOnly>
+      <TeamRelationsGraph :relations="relations" />
+    </ClientOnly>
+  </div>
 </template>
 
 <script lang="ts" setup>

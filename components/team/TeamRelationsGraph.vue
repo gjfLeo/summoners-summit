@@ -9,7 +9,15 @@
   >
     <RelationGraph ref="graphRef$" :options="options">
       <template #node="{ node }">
-        <div class="h-full cursor-move" u-flex="~ items-center justify-center">
+        <div
+          class="h-full cursor-move"
+          u-flex="~ items-center justify-center"
+          style="
+            background-color: var(--tag-color);
+            border-color: var(--border-color);
+            border-radius: var(--border-radius);
+          "
+        >
           <NuxtLink :to="`/team/${(node as any).id}`" no-prefetch class="line-height-0">
             <TeamAvatars :team="(node as any).id" />
           </NuxtLink>
@@ -34,6 +42,8 @@ const props = defineProps<{
 
 const graphRef$ = ref<RelationGraph>();
 const options: RGOptions = {
+  backgroundColor: "transparent",
+
   allowShowMiniToolBar: false,
   defaultNodeShape: 1,
   defaultJunctionPoint: "border",
@@ -56,6 +66,8 @@ const options: RGOptions = {
 };
 
 onMounted(() => {
+  if (import.meta.server) return;
+
   const teams = new Array<TeamId>();
   props.relations.forEach((relation) => {
     if (!teams.includes(relation.teamA)) teams.push(relation.teamA);
