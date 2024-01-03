@@ -2,7 +2,7 @@
   <img
     v-if="imageUrl"
     :src="imageUrl" :alt="card"
-    class="inline-block aspect-ratio-20/20"
+    class="pointer-events-none inline-block aspect-ratio-20/20"
   />
   <NAvatar v-else round />
 </template>

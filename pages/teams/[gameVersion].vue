@@ -1,17 +1,25 @@
 <template>
-  <div class="mb flex flex-wrap gap-2">
-    <CharacterSelector v-model="includedCharacters" />
-  </div>
-  <NDataTable
-    size="small"
-    :columns="columns"
-    :data="data"
-    :scroll-x="1400"
-    max-height="calc(100vh - 18rem)"
-  />
-  <!-- <ClientOnly>
-    <TeamRelationsGraph />
-  </ClientOnly> -->
+  <NTabs justify-content="space-evenly" type="line" size="large">
+    <NTabPane name="statitics" tab="数据">
+      <div u-flex="~ col gap-4">
+        <div class="flex flex-wrap gap-2">
+          <CharacterSelector v-model="includedCharacters" />
+        </div>
+        <NDataTable
+          size="small"
+          :columns="columns"
+          :data="data"
+          :scroll-x="1400"
+          max-height="calc(100vh - 18rem)"
+        />
+      </div>
+    </NTabPane>
+    <NTabPane name="relations" tab="克制">
+      <ClientOnly>
+        <TeamRelationsGraph :relations="relations" />
+      </ClientOnly>
+    </NTabPane>
+  </NTabs>
 </template>
 
 <script lang="ts" setup>
@@ -24,6 +32,8 @@ useHead({ title: "阵容 | 召唤之巅" });
 
 const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
 const { teamStatsMap } = await useTeamStatsMap(gameVersion);
+
+const { relations } = await useApiTeamRelations(gameVersion.value);
 
 const includedCharacters = ref<CharacterCard[]>([]);
 const data = computed(() =>
