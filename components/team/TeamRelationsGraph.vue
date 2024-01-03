@@ -1,5 +1,6 @@
 <template>
   <NElement
+    id="team-relations-graph-container"
     ref="containerRef$"
     class="relative border-1"
     style="
@@ -8,7 +9,11 @@
     "
     :style="{ height: LAYOUT_CONTENT_HEIGHT }"
   >
-    <RelationGraph ref="graphRef$" :options="options">
+    <RelationGraph
+      ref="graphRef$"
+      :options="options"
+      :on-line-click="handleLineClick"
+    >
       <template #node="{ node }">
         <div
           class="h-full cursor-move"
@@ -27,11 +32,16 @@
     </RelationGraph>
     <NText class="absolute bottom-2 right-2 text-sm" :depth="3">根据已收录数据生成，仅供参考</NText>
   </NElement>
+
+  <NDrawer
+    v-model:show="drawerVisible"
+    to="#team-relations-graph-container"
+  />
 </template>
 
 <script lang="ts" setup>
 import RelationGraph from "relation-graph/vue3";
-import type { RGJsonData, RGOptions } from "relation-graph";
+import type { RGJsonData, RGLine, RGLink, RGOptions, RGUserEvent } from "relation-graph";
 import { divide } from "mathjs/number";
 import dagre from "@dagrejs/dagre";
 import type { ApiTeamRelationsData, TeamId } from "~/utils/types";
@@ -112,6 +122,7 @@ onMounted(() => {
     lines: props.relations.map((relation) => {
       const winRate = divide(relation.teamAWin, relation.teamAWin + relation.teamBWin);
       return {
+        styleClass: "cursor-pointer",
         showStartArrow: relation.teamAWin < relation.teamBWin,
         showEndArrow: relation.teamAWin > relation.teamBWin,
         from: relation.teamA,
@@ -125,4 +136,10 @@ onMounted(() => {
 
   graphRef$.value?.setJsonData(data);
 });
+
+const drawerVisible = ref(false);
+
+function handleLineClick(line: RGLine, link: RGLink, e: RGUserEvent) {
+  // drawerVisible.value = true;
+}
 </script>
