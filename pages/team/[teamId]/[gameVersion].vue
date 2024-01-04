@@ -111,4 +111,13 @@ async function toTypicalDeckDetail() {
 }
 
 const { statsByVersion } = await useApiTeamStatsByVersion(teamId);
+
+onMounted(() => {
+  if (history.state.tab) {
+    currentTab.value = history.state.tab;
+  }
+  if (history.state.opponentTeamId) {
+    opponentCharacters.value = getCharactersByTeamId(history.state.opponentTeamId);
+  }
+});
 </script>

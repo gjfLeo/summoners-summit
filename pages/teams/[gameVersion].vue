@@ -11,7 +11,7 @@
       max-height="calc(100vh - 18rem)"
     />
     <ClientOnly>
-      <TeamRelationsGraph :relations="relations" />
+      <TeamRelationsGraph :relations="relations" :team-stats-map="teamStatsMap" />
     </ClientOnly>
   </div>
 </template>
