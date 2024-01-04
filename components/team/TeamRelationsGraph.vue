@@ -19,10 +19,12 @@
           class="h-full cursor-move"
           u-flex="~ items-center justify-center"
           style="
-            background-color: var(--tag-color);
             border-color: var(--border-color);
             border-radius: var(--border-radius);
           "
+          :style="{
+            background: getBackgroundGradient((node as any).id),
+          }"
         >
           <NuxtLink :to="`/team/${(node as any).id}`" no-prefetch class="line-height-0">
             <TeamAvatars :team="(node as any).id" />
@@ -45,7 +47,7 @@ import type { RGJsonData, RGLine, RGLink, RGOptions, RGUserEvent } from "relatio
 import { divide } from "mathjs/number";
 import dagre from "@dagrejs/dagre";
 import type { ApiTeamRelationsData, TeamId } from "~/utils/types";
-import { getCharactersByTeamId } from "~/utils/cards";
+import { ALL_CHARACTER_CARDS_INFO, ALL_ELEMENTS_INFO, getCharactersByTeamId } from "~/utils/cards";
 import { LAYOUT_CONTENT_HEIGHT } from "~/configs/layout";
 
 const props = defineProps<{
@@ -141,5 +143,18 @@ const drawerVisible = ref(false);
 
 function handleLineClick(line: RGLine, link: RGLink, e: RGUserEvent) {
   // drawerVisible.value = true;
+}
+
+function getBackgroundGradient(teamId: TeamId) {
+  const characters = getCharactersByTeamId(teamId);
+  const colors = characters.map(c => ALL_CHARACTER_CARDS_INFO[c].element)
+    .map(e => ALL_ELEMENTS_INFO[e].color);
+  if (colors[1] === colors[2]) {
+    colors.push(...colors.splice(0, 1));
+  }
+  else if (colors[0] === colors[2]) {
+    colors.push(...colors.splice(1, 1));
+  }
+  return `linear-gradient(120deg, ${colors[0]}80 25%, ${colors[1]}80 50%, ${colors[2]}80 75%)`;
 }
 </script>
