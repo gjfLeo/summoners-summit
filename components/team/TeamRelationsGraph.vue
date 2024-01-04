@@ -124,7 +124,6 @@ onMounted(() => {
     lines: props.relations.map((relation) => {
       const winRate = divide(relation.teamAWin, relation.teamAWin + relation.teamBWin);
       return {
-        styleClass: "cursor-pointer",
         showStartArrow: relation.teamAWin < relation.teamBWin,
         showEndArrow: relation.teamAWin > relation.teamBWin,
         from: relation.teamA,
@@ -145,6 +144,11 @@ function handleLineClick(line: RGLine, link: RGLink, e: RGUserEvent) {
   // drawerVisible.value = true;
 }
 
+whenever(() => drawerVisible.value === false, () => {
+  const graphInstance = graphRef$.value?.getInstance();
+  graphInstance?.clearChecked();
+});
+
 function getBackgroundGradient(teamId: TeamId) {
   const characters = getCharactersByTeamId(teamId);
   const colors = characters.map(c => ALL_CHARACTER_CARDS_INFO[c].element)
@@ -158,3 +162,20 @@ function getBackgroundGradient(teamId: TeamId) {
   return `linear-gradient(120deg, ${colors[0]}80 25%, ${colors[1]}80 50%, ${colors[2]}80 75%)`;
 }
 </script>
+
+<style scoped>
+:deep(.relation-graph) {
+
+  .c-rg-line-checked-bg {
+    stroke: #18a05818;
+  }
+
+  .rel-node-checked {
+    box-shadow: 0 0 0 4px #18a05818;
+  }
+
+  .c-rg-line, .c-rg-line-text {
+    /* cursor: pointer; */
+  }
+}
+</style>
