@@ -81,7 +81,7 @@
           </NuxtLink>
         </div>
       </template>
-      <template v-else-if="checkedRelation">
+      <template v-else-if="checkedRelation !== undefined">
         <div u-flex="~ col gap-4">
           <div u-grid="~ content-center justify-items-center items-center gap-2" style="grid-template-columns: auto 1fr 1fr;">
             <div />
