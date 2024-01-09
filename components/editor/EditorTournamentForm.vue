@@ -54,7 +54,7 @@
         </NInputGroup>
         <NInputGroup>
           <NInputGroupLabel>至少</NInputGroupLabel>
-          <NInputNumber v-model:value="stageRulesNumCharacterRequired" :show-button="false" class="text-center" placeholder="" />
+          <NInputNumber v-model:value="stageRulesnumCharactersRequired" :show-button="false" class="text-center" placeholder="" />
           <NInputGroupLabel>角色</NInputGroupLabel>
         </NInputGroup>
         <NInputGroup>
@@ -112,7 +112,7 @@ const stageName = ref<string>("");
 const stageRulesNumDecks = ref<number>();
 const stageRulesNumDecksBanned = ref<number>();
 const stageRulesNumCharacterBanned = ref<number>();
-const stageRulesNumCharacterRequired = ref<number>();
+const stageRulesnumCharactersRequired = ref<number>();
 const stageRulesNumGames = ref<number>();
 const stageRulesMode = ref<string>("Conquest");
 const stageExtraRules = ref<string[]>([]);
@@ -138,7 +138,7 @@ const output = computed(() => {
     ...(stageRulesNumDecks.value ? [`        numDecks: ${stageRulesNumDecks.value},`] : []),
     ...(stageRulesNumDecksBanned.value ? [`        numDecksBanned: ${stageRulesNumDecksBanned.value},`] : []),
     ...(stageRulesNumCharacterBanned.value ? [`        numCharacterBanned: ${stageRulesNumCharacterBanned.value},`] : []),
-    ...(stageRulesNumCharacterRequired.value ? [`        numCharacterRequired: ${stageRulesNumCharacterRequired.value},`] : []),
+    ...(stageRulesnumCharactersRequired.value ? [`        numCharactersRequired: ${stageRulesnumCharactersRequired.value},`] : []),
     ...(stageRulesNumGames.value ? [`        numGames: ${stageRulesNumGames.value},`] : []),
     `        mode: "${stageRulesMode.value}",`,
     ...(stageExtraRules.value.length > 0
