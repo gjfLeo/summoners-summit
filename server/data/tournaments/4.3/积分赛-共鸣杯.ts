@@ -21,6 +21,7 @@ export default defineTournament({
             {
               playerA: "fc",
               playerB: "昨夜风",
+              video: "https://www.bilibili.com/video/BV1Ge411e7xG?p=1",
               banned: [
                 {
                   playerACharacters: ["莫娜", "优菈", "流浪者"],
@@ -47,6 +48,7 @@ export default defineTournament({
             {
               playerA: "大呆瓜",
               playerB: "Sept",
+              video: "https://www.bilibili.com/video/BV13W4y1N7e4?p=1",
               banned: [
                 {
                   playerACharacters: ["「女士」", "雷音权现", "若陀龙王"],
@@ -73,6 +75,7 @@ export default defineTournament({
             {
               playerA: "小七",
               playerB: "长安大魔王",
+              video: "https://www.bilibili.com/video/BV1UK4y167TF?p=1",
               banned: [
                 {
                   playerACharacters: ["夜兰", "「女士」", "雷音权现"],
@@ -99,6 +102,7 @@ export default defineTournament({
             {
               playerA: "木秀",
               playerB: "今天不想吃苹果",
+              video: "https://www.bilibili.com/video/BV1Ka4y1m7Fs?p=1",
               banned: [
                 {
                   playerACharacters: ["夜兰", "「女士」", "雷音权现"],
