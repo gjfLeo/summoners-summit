@@ -128,6 +128,124 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-01-08",
+          matches: [
+            {
+              playerA: "xxxxxhope",
+              playerB: "从不打低端局",
+              video: "https://www.bilibili.com/video/BV1xT4y1n7fG",
+              banned: [
+                {
+                  playerACharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "唐傀",
+              playerB: "周正福",
+              video: "https://www.bilibili.com/video/BV15g4y1S7Qa",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["琳妮特", "琴", "迪希雅"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "税慕",
+              playerB: "柠柠七喵",
+              video: "https://www.bilibili.com/video/BV1Le41127UC",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["班尼特", "可莉", "雷音权现"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "Amadeus",
+              playerB: "真实王枝明",
+              video: "https://www.bilibili.com/video/BV1Gt4y1o7RY",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "「女士」", "雷音权现"],
+                  playerBCharacters: ["夜兰", "「女士」", "雷音权现"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["琳妮特", "迪希雅", "琴"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["琳妮特", "迪希雅", "琴"],
+                  playerBCharacters: ["流浪者", "莫娜", "优菈"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
