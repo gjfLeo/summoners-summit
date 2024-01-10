@@ -22,7 +22,7 @@ export default defineTournament({
             {
               playerA: "枫间璃",
               playerB: "恰雪来故丷",
-              video: "https://www.bilibili.com/video/BV1ij411p7b9",
+              video: "https://www.bilibili.com/video/BV1Vp4y1o7sK",
               banned: [
                 {
                   playerACharacters: ["北斗", "重云", "雷泽"],
@@ -129,7 +129,7 @@ export default defineTournament({
             {
               playerA: "零之启",
               playerB: "浅冽（重生版）",
-              video: "https://www.bilibili.com/video/BV1ij411p7b9",
+              video: "https://www.bilibili.com/video/BV1Vp4y1o7sK",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
@@ -246,7 +246,7 @@ export default defineTournament({
             {
               playerA: "叶叁伍",
               playerB: "曲误周郎",
-              video: "https://www.bilibili.com/video/BV1Jp4y1f7hj",
+              video: "https://www.bilibili.com/video/BV1tQ4y177y6",
               banned: [
                 {
                   playerACharacters: ["妮露", "莫娜", "纳西妲"],
@@ -354,7 +354,7 @@ export default defineTournament({
             {
               playerA: "北冥有鲲",
               playerB: "雀鲨",
-              video: "https://www.bilibili.com/video/BV1iG411a7He",
+              video: "https://www.bilibili.com/video/BV1tQ4y177y6",
               banned: [
                 {
                   playerACharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "愚人众·火之债务处理人"],
@@ -475,7 +475,7 @@ export default defineTournament({
             {
               playerA: "枫间璃",
               playerB: "雀鲨",
-              video: "https://www.bilibili.com/video/BV1Dj411p7BU",
+              video: "https://www.bilibili.com/video/BV1ut4y1o78C",
               banned: [
                 {
                   playerACharacters: ["行秋", "神里绫华", "重云"],
@@ -632,7 +632,7 @@ export default defineTournament({
             {
               playerA: "浅冽（重生版）",
               playerB: "曲误周郎",
-              video: "https://www.bilibili.com/video/BV1ic41127sj",
+              video: "https://www.bilibili.com/video/BV1ut4y1o78C",
               banned: [
                 {
                   playerACharacters: ["重云", "行秋", "优菈"],
@@ -808,7 +808,7 @@ export default defineTournament({
             {
               playerA: "浅冽（重生版）",
               playerB: "雀鲨",
-              video: "https://www.bilibili.com/video/BV1864y1p77L",
+              video: "https://www.bilibili.com/video/BV1GQ4y157Ed",
               banned: [
                 {
                   playerACharacters: ["愚人众·火之债务处理人", "纯水精灵·洛蒂娅", "菲谢尔"],
