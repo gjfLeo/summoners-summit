@@ -248,5 +248,96 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "8进4",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "DAY1",
+          date: "2024-01-09",
+          matches: [
+            {
+              playerA: "Sept",
+              playerB: "昨夜风",
+              video: "https://www.bilibili.com/video/BV1YQ4y1j7Ce",
+              banned: [
+                {
+                  playerACharacters: ["迪希雅", "琴", "琳妮特"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["刻晴", "若陀龙王", "班尼特"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["「女士」", "夜兰", "雷音权现"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "长安大魔王",
+              playerB: "从不打低端局",
+              video: "https://www.bilibili.com/video/BV1wT4y1n7nS",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉", "荒泷一斗", "诺艾尔"],
+                  playerBCharacters: ["夜兰", "「女士」", "雷音权现"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["神里绫华", "宵宫", "神里绫人"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
