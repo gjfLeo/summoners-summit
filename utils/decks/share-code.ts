@@ -15,7 +15,7 @@ export function encodeDeckCode(deck: Deck): string {
   cardEncodingIds.push(0); // 补齐为 34 项 12-bit 数
 
   // 重组为 51 项 8-bit 数
-  const byteArray = new Array(17)
+  const byteArray = Array.from({ length: 17 })
     .fill(0)
     .flatMap((_, i) => [
       cardEncodingIds[i * 2] >> 4,
@@ -27,7 +27,7 @@ export function encodeDeckCode(deck: Deck): string {
   for (let lastByte = 0; lastByte < 256; lastByte++) {
     // 调整字节顺序，原本的前25个字节放在偶数位，后25个字节放在奇数位
     // 每个字节加上最后一个字节，得到一个新的字节数组
-    const original = new Array(25)
+    const original = Array.from({ length: 25 })
       .fill(0)
       .flatMap((_, i) => [byteArray[i] + lastByte, byteArray[i + 25] + lastByte]);
     // 编码为Base64
@@ -49,12 +49,12 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
   const lastByte = byteArray.pop()!;
   // 减去掩码、奇偶重排
   const reordered = [
-    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i] - lastByte),
-    ...new Array(25).fill(0).map((_, i) => byteArray[2 * i + 1] - lastByte),
+    ...Array.from({ length: 25 }).fill(0).map((_, i) => byteArray[2 * i] - lastByte),
+    ...Array.from({ length: 25 }).fill(0).map((_, i) => byteArray[2 * i + 1] - lastByte),
     0,
   ];
   // 重组为 34 项 12-bit 数
-  const cardEncodingIds = new Array(17)
+  const cardEncodingIds = Array.from({ length: 17 })
     .fill(0)
     .flatMap((_, i) => [
       (reordered[i * 3] << 4) + (reordered[i * 3 + 1] >> 4),

@@ -1,6 +1,6 @@
 import md5 from "crypto-js/md5";
 import { ALL_ACTION_CARDS_INFO, ALL_CHARACTER_CARDS_INFO } from "../cards";
-import { type ActionCard, type CharacterCard } from "~/utils/types";
+import type { ActionCard, CharacterCard } from "~/utils/types";
 
 function getImageUrl(filename: string) {
   filename = filename.replaceAll(" ", "_");

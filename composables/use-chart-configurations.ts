@@ -1,22 +1,11 @@
+import { BarController, BarElement, CategoryScale, Chart as ChartJS, Colors, Legend, LineController, LineElement, LinearScale, PointElement, Title, Tooltip } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-
-import {
-  BarController, BarElement, CategoryScale,
-  Chart as ChartJS, Colors, Legend, LineController, LineElement, LinearScale, PointElement,
-  Title, Tooltip,
-} from "chart.js";
 import Color from "color";
 
 export default function useChartConfigurations() {
   const theme = useThemeVars();
 
-  ChartJS.register(
-    Title, Tooltip, Colors, Legend,
-    CategoryScale, LinearScale,
-    BarElement, PointElement, LineElement,
-    BarController, LineController,
-    ChartDataLabels,
-  );
+  ChartJS.register(Title, Tooltip, Colors, Legend, CategoryScale, LinearScale, BarElement, PointElement, LineElement, BarController, LineController, ChartDataLabels);
 
   if (!ChartJS.defaults.plugins.datalabels) {
     ChartJS.defaults.plugins.datalabels = {};

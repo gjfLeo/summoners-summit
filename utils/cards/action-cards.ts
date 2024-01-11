@@ -4,10 +4,10 @@ interface ActionCardInfo {
   readonly nameEn: string;
   readonly type: "Equipment" | "Support" | "Event";
   readonly type2:
-  | "Talent" | "Weapon" | "Artifact"
-  | "Area" | "Friend" | "Item"
-  | "Legend" | "Element" | "Faction"
-  | "Other" | "Food";
+    | "Talent" | "Weapon" | "Artifact"
+    | "Area" | "Friend" | "Item"
+    | "Legend" | "Element" | "Faction"
+    | "Other" | "Food";
 }
 
 function defineActionCardInfo(info: ActionCardInfo) {

@@ -32,7 +32,7 @@ const data = computed(() =>
   Object.values(playerStatsMap)
     .filter((stats) => {
       return !playerFilter.value || PinyinMatch.match(stats.uniqueName, playerFilter.value)
-      || stats.aliases?.some(name => PinyinMatch.match(name, playerFilter.value));
+        || stats.aliases?.some(name => PinyinMatch.match(name, playerFilter.value));
     })
     .map(stats => ({
       key: stats.playerId,

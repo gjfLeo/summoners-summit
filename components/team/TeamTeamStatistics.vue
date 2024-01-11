@@ -52,7 +52,8 @@ function winRateRender(win: number, total: number, winRate: number) {
     {
       trigger: () => h("span", toPercentageString(winRate)),
       default: () => h("span", `${win} / ${total}`),
-    });
+    },
+  );
 }
 
 const columns: DataTableColumn<TeamStatsResult>[] = [
