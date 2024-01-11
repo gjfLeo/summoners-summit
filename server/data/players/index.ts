@@ -61,6 +61,9 @@ const playerNicknameMapRaw: Record<string, string> = {
   "Tonbo_桐柏": "Tonbo",
   "七圣古明地觉": "古明地觉",
   "莫莉安wink": "莫莉安",
+  "LLRiseFalcon": "LL起翼夜鹰",
+  "Voicend": "音尘",
+  "PPpig": "皮皮猪",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
