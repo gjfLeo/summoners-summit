@@ -1,14 +1,9 @@
 {
-  "prettier.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-  },
-  "editor.indentSize": 2,
   "files.associations": {
     "*.css": "postcss",
   },
   "css.validate": false,
-  "editor.formatOnSave": false,
+
   "workbench.colorCustomizations": {
     "activityBar.background": "#8000ff20",
     "titleBar.activeBackground": "#8000ff40",
@@ -16,4 +11,46 @@
   },
   "vite.buildCommand": "pnpm run generate",
   "vite.devCommand": "pnpm run dev",
+
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "info" },
+    { "rule": "format/*", "severity": "info" },
+    { "rule": "*-indent", "severity": "info" },
+    { "rule": "*-spacing", "severity": "info" },
+    { "rule": "*-spaces", "severity": "info" },
+    { "rule": "*-order", "severity": "info" },
+    { "rule": "*-dangle", "severity": "info" },
+    { "rule": "*-newline", "severity": "info" },
+    { "rule": "*quotes", "severity": "info" },
+    { "rule": "*semi", "severity": "info" },
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+  ],
 }
