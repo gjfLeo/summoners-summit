@@ -47,6 +47,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "最终解释权": defineActionCardInfo({ id: 213081, name: "最终解释权", nameEn: "Right of Final Interpretation", type: "Equipment", type2: "Talent" }),
   "崇诚之真": defineActionCardInfo({ id: 213091, name: "崇诚之真", nameEn: "Stalwart and True", type: "Equipment", type2: "Talent" }),
   "完场喝彩": defineActionCardInfo({ id: 213101, name: "完场喝彩", nameEn: "Conclusive Ovation", type: "Equipment", type2: "Talent" }),
+  // "僚佐的才巧": defineActionCardInfo({ id: 213111, name: "僚佐的才巧", nameEn: "A Subordinate's Skills", type: "Equipment", type2: "Talent" }),
 
   "噬星魔鸦": defineActionCardInfo({ id: 214011, name: "噬星魔鸦", nameEn: "Stellar Predator", type: "Equipment", type2: "Talent" }),
   "觉醒": defineActionCardInfo({ id: 214021, name: "觉醒", nameEn: "Awakening", type: "Equipment", type2: "Talent" }),
@@ -65,6 +66,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "降魔·护法夜叉": defineActionCardInfo({ id: 215041, name: "降魔·护法夜叉", nameEn: "Conqueror of Evil Guardian Yaksha", type: "Equipment", type2: "Talent" }),
   "风物之诗咏": defineActionCardInfo({ id: 215051, name: "风物之诗咏", nameEn: "Poetics of Fuubutsu", type: "Equipment", type2: "Talent" }),
   "梦迹一风": defineActionCardInfo({ id: 215061, name: "梦迹一风", nameEn: "Gales of Reverie", type: "Equipment", type2: "Talent" }),
+  // "偷懒的新方法": defineActionCardInfo({ id: 215071, name: "偷懒的新方法", nameEn: "Skiving: New and Improved", type: "Equipment", type2: "Talent" }),
   "如影流露的冷刃": defineActionCardInfo({ id: 215081, name: "如影流露的冷刃", nameEn: "A Cold Blade Like a Shadow", type: "Equipment", type2: "Talent" }),
 
   "储之千日，用之一刻": defineActionCardInfo({ id: 216011, name: "储之千日，用之一刻", nameEn: "Strategic Reserve", type: "Equipment", type2: "Talent" }),
@@ -83,6 +85,7 @@ export const ALL_ACTION_CARDS_INFO = {
 
   "冰萤寒光": defineActionCardInfo({ id: 221011, name: "冰萤寒光", nameEn: "Cicin's Cold Glare", type: "Equipment", type2: "Talent" }),
   "苦痛奉还": defineActionCardInfo({ id: 221021, name: "苦痛奉还", nameEn: "Pain for Pain", type: "Equipment", type2: "Talent" }),
+  // "严霜棱晶": defineActionCardInfo({ id: 221031, name: "严霜棱晶", nameEn: "Sternfrost Prism", type: "Event", type2: "Talent" }),
   "百川奔流": defineActionCardInfo({ id: 222011, name: "百川奔流", nameEn: "Streaming Surge", type: "Equipment", type2: "Talent" }),
   "镜锢之笼": defineActionCardInfo({ id: 222021, name: "镜锢之笼", nameEn: "Mirror Cage", type: "Equipment", type2: "Talent" }),
   "悉数讨回": defineActionCardInfo({ id: 223011, name: "悉数讨回", nameEn: "Paid in Full", type: "Equipment", type2: "Talent" }),
@@ -90,6 +93,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "魔蝎烈祸": defineActionCardInfo({ id: 223031, name: "魔蝎烈祸", nameEn: "Scorpocalypse", type: "Equipment", type2: "Talent" }),
   "汲能棱晶": defineActionCardInfo({ id: 204011, name: "汲能棱晶", nameEn: "Absorbing Prism", type: "Event", type2: "Talent" }),
   "悲号回唱": defineActionCardInfo({ id: 204021, name: "悲号回唱", nameEn: "Grieving Echo", type: "Equipment", type2: "Talent" }),
+  // "明珠固化": defineActionCardInfo({id: 204031, name: "明珠固化", nameEn: "Pearl Solidification", type: "Event", type2: "Talent" }),
   "机巧神通": defineActionCardInfo({ id: 225011, name: "机巧神通", nameEn: "Transcendent Automaton", type: "Equipment", type2: "Talent" }),
   "毁裂风涡": defineActionCardInfo({ id: 225021, name: "毁裂风涡", nameEn: "Rending Vortex", type: "Equipment", type2: "Talent" }),
   "重铸：岩盔": defineActionCardInfo({ id: 226011, name: "重铸：岩盔", nameEn: "Stonehide Reforged", type: "Equipment", type2: "Talent" }),
@@ -133,6 +137,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "天空之刃": defineActionCardInfo({ id: 311504, name: "天空之刃", nameEn: "Skyward Blade", type: "Equipment", type2: "Weapon" }),
   "西风剑": defineActionCardInfo({ id: 311505, name: "西风剑", nameEn: "Favonius Sword", type: "Equipment", type2: "Weapon" }),
   "裁叶萃光": defineActionCardInfo({ id: 311506, name: "裁叶萃光", nameEn: "Light of Foliar Incision", type: "Equipment", type2: "Weapon" }),
+  // "原木刀": defineActionCardInfo({ id: 311507, name: "原木刀", nameEn: "Sapwood Blade", type: "Equipment", type2: "Weapon" }),
 
   // 圣遗物
   "冒险家头带": defineActionCardInfo({ id: 312001, name: "冒险家头带", nameEn: "Adventurer's Bandana", type: "Equipment", type2: "Artifact" }),
@@ -157,6 +162,8 @@ export const ALL_ACTION_CARDS_INFO = {
   "来歆余响": defineActionCardInfo({ id: 312020, name: "来歆余响", nameEn: "Echoes of an Offering", type: "Equipment", type2: "Artifact" }),
   "灵光明烁之心": defineActionCardInfo({ id: 312021, name: "灵光明烁之心", nameEn: "Heart of Khvarena's Brilliance", type: "Equipment", type2: "Artifact" }),
   "花海甘露之光": defineActionCardInfo({ id: 312022, name: "花海甘露之光", nameEn: "Vourukasha's Glow", type: "Equipment", type2: "Artifact" }),
+  // "老兵的容颜": defineActionCardInfo({ id: 312023, name: "老兵的容颜", nameEn: "Veteran's Visage", type: "Equipment", type2: "Artifact" }),
+
   "踏破冰雪的回音": defineActionCardInfo({ id: 312101, name: "踏破冰雪的回音", nameEn: "Broken Rime's Echo", type: "Equipment", type2: "Artifact" }),
   "冰风迷途的勇士": defineActionCardInfo({ id: 312102, name: "冰风迷途的勇士", nameEn: "Blizzard Strayer", type: "Equipment", type2: "Artifact" }),
   "酒渍船帽": defineActionCardInfo({ id: 312201, name: "酒渍船帽", nameEn: "Wine-Stained Tricorne", type: "Equipment", type2: "Artifact" }),
@@ -213,6 +220,8 @@ export const ALL_ACTION_CARDS_INFO = {
   "塞塔蕾": defineActionCardInfo({ id: 322019, name: "塞塔蕾", nameEn: "Setaria", type: "Support", type2: "Friend" }),
   "弥生七月": defineActionCardInfo({ id: 322020, name: "弥生七月", nameEn: "Yayoi Nanatsuki", type: "Support", type2: "Friend" }),
   "玛梅赫": defineActionCardInfo({ id: 322021, name: "玛梅赫", nameEn: "Mamere", type: "Support", type2: "Friend" }),
+  // "婕德": defineActionCardInfo({ id: 322022, name: "婕德", nameEn: "Jeht", type: "Support", type2: "Friend" }),
+  // "西尔弗和迈勒斯": defineActionCardInfo ({ id: 322022, name: "西尔弗和迈勒斯", nameEn: "Silver and Melus", type: "Support", type2: "Friend" }),
 
   // 道具
   "参量质变仪": defineActionCardInfo({ id: 323001, name: "参量质变仪", nameEn: "Parametric Transformer", type: "Support", type2: "Item" }),
@@ -280,6 +289,8 @@ export const ALL_ACTION_CARDS_INFO = {
   "野猪公主": defineActionCardInfo({ id: 332025, name: "野猪公主", nameEn: "The Boar Princess", type: "Event", type2: "Other" }),
   "坍陷与契机": defineActionCardInfo({ id: 332026, name: "坍陷与契机", nameEn: "Falls and Fortune", type: "Event", type2: "Other" }),
   "浮烁的四叶印": defineActionCardInfo({ id: 332027, name: "浮烁的四叶印", nameEn: "Flickering Four-Leaf Sigil", type: "Event", type2: "Other" }),
+  // "机关铸成之链": defineActionCardInfo({ id: 332028, name: "机关铸成之链", nameEn: "Machine Assembly Line", type: "Event", type2: "Other" }),
+  // "净觉花": defineActionCardInfo({ id: 332029, name: "净觉花", nameEn: "Sunyata Flower", type: "Event", type2: "Other" }),
 
   // 料理
   "绝云锅巴": defineActionCardInfo({ id: 333001, name: "绝云锅巴", nameEn: "Jueyun Guoba", type: "Event", type2: "Food" }),
@@ -295,6 +306,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "唐杜尔烤鸡": defineActionCardInfo({ id: 333011, name: "唐杜尔烤鸡", nameEn: "Tandoori Roast Chicken", type: "Event", type2: "Food" }),
   "黄油蟹蟹": defineActionCardInfo({ id: 333012, name: "黄油蟹蟹", nameEn: "Butter Crab", type: "Event", type2: "Food" }),
   "炸鱼薯条": defineActionCardInfo({ id: 333013, name: "炸鱼薯条", nameEn: "Fish and Chips", type: "Event", type2: "Food" }),
+  // "松茸酿肉卷": defineActionCardInfo({ id: 333014, name: "松茸酿肉卷", nameEn: "Matsutake Meat Rolls", type: "Event", type2: "Food" }),
 };
 
 export type ActionCard = keyof typeof ALL_ACTION_CARDS_INFO;

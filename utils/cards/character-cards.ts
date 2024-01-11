@@ -45,6 +45,7 @@ export const ALL_CHARACTER_CARDS_INFO = {
   "烟绯": defineCharacterCardInfo({ id: 1308, name: "烟绯", nameEn: "Yanfei", element: "Pyro", weapon: "Catalyst", faction: ["Liyue"] }),
   "迪希雅": defineCharacterCardInfo({ id: 1309, name: "迪希雅", nameEn: "Dehya", element: "Pyro", weapon: "Claymore", faction: ["Sumeru", "Eremite"] }),
   "林尼": defineCharacterCardInfo({ id: 1310, name: "林尼", nameEn: "Lyney", element: "Pyro", weapon: "Bow", faction: ["Fontaine"] }),
+  // "托马": defineCharacterCardInfo({ id: 1311, name: "托马", nameEn: "Thoma", element: "Pyro", weapon: "Polearm", faction: ["Inazuma"] }),
 
   "菲谢尔": defineCharacterCardInfo({ id: 1401, name: "菲谢尔", nameEn: "Fischl", element: "Electro", weapon: "Bow", faction: ["Mondstadt"] }),
   "雷泽": defineCharacterCardInfo({ id: 1402, name: "雷泽", nameEn: "Razor", element: "Electro", weapon: "Claymore", faction: ["Mondstadt"] }),
@@ -63,6 +64,7 @@ export const ALL_CHARACTER_CARDS_INFO = {
   "魈": defineCharacterCardInfo({ id: 1504, name: "魈", nameEn: "Xiao", element: "Anemo", weapon: "Polearm", faction: ["Liyue"] }),
   "枫原万叶": defineCharacterCardInfo({ id: 1505, name: "枫原万叶", nameEn: "Kaedehara Kazuha", element: "Anemo", weapon: "Sword", faction: ["Inazuma"] }),
   "流浪者": defineCharacterCardInfo({ id: 1506, name: "流浪者", nameEn: "Wanderer", element: "Anemo", weapon: "Catalyst", faction: [] }),
+  // "早柚": defineCharacterCardInfo({ id: 1507, name: "早柚", nameEn: "Sayu", element: "Anemo", weapon: "Claymore", faction: ["Inazuma"] }),
   "琳妮特": defineCharacterCardInfo({ id: 1508, name: "琳妮特", nameEn: "Lynette", element: "Anemo", weapon: "Sword", faction: ["Fontaine"] }),
 
   "凝光": defineCharacterCardInfo({ id: 1601, name: "凝光", nameEn: "Ningguang", element: "Geo", weapon: "Catalyst", faction: ["Liyue"] }),
@@ -81,6 +83,7 @@ export const ALL_CHARACTER_CARDS_INFO = {
 
   "愚人众·冰萤术士": defineCharacterCardInfo({ id: 2101, name: "愚人众·冰萤术士", nameEn: "Fatui Cryo Cicin Mage", element: "Cryo", weapon: "None", faction: ["Fatui"] }),
   "「女士」": defineCharacterCardInfo({ id: 2102, name: "「女士」", nameEn: "La Signora", element: "Cryo", weapon: "None", faction: ["Fatui"] }),
+  // "无相之冰": defineCharacterCardInfo({ id: 2103, name: "无相之冰", nameEn: "Cryo Hypostasis", element: "Cryo", weapon: "None", faction: ["Monster"] }),
   "纯水精灵·洛蒂娅": defineCharacterCardInfo({ id: 2201, name: "纯水精灵·洛蒂娅", nameEn: "Rhodeia of Loch", element: "Hydro", weapon: "None", faction: ["Monster"] }),
   "愚人众·藏镜仕女": defineCharacterCardInfo({ id: 2202, name: "愚人众·藏镜仕女", nameEn: "Mirror Maiden", element: "Hydro", weapon: "None", faction: ["Fatui"] }),
   "愚人众·火之债务处理人": defineCharacterCardInfo({ id: 2301, name: "愚人众·火之债务处理人", nameEn: "Fatui Pyro Agent", element: "Pyro", weapon: "None", faction: ["Fatui"] }),
@@ -88,6 +91,7 @@ export const ALL_CHARACTER_CARDS_INFO = {
   "镀金旅团·炽沙叙事人": defineCharacterCardInfo({ id: 2303, name: "镀金旅团·炽沙叙事人", nameEn: "Eremite Scorching Loremaster", element: "Pyro", weapon: "None", faction: ["Eremite"] }),
   "无相之雷": defineCharacterCardInfo({ id: 2401, name: "无相之雷", nameEn: "Electro Hypostasis", element: "Electro", weapon: "None", faction: ["Monster"] }),
   "雷音权现": defineCharacterCardInfo({ id: 2402, name: "雷音权现", nameEn: "Thunder Manifestation", element: "Electro", weapon: "None", faction: ["Monster"] }),
+  // "千年珍珠骏麟": defineCharacterCardInfo({ id: 2403, name: "千年珍珠骏麟", nameEn: "Millennial Pearl Seahorse", element: "Electro", weapon: "None", faction: ["Monster"] }),
   "魔偶剑鬼": defineCharacterCardInfo({ id: 2501, name: "魔偶剑鬼", nameEn: "Maguu Kenki", element: "Anemo", weapon: "None", faction: ["Monster"] }),
   "特瓦林": defineCharacterCardInfo({ id: 2502, name: "特瓦林", nameEn: "Dvalin", element: "Anemo", weapon: "None", faction: ["Monster"] }),
   "岩盔丘丘王": defineCharacterCardInfo({ id: 2601, name: "岩盔丘丘王", nameEn: "Stonehide Lawachurl", element: "Geo", weapon: "None", faction: ["Monster"] }),
