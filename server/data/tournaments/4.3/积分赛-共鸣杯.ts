@@ -337,6 +337,92 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-01-10",
+          matches: [
+            {
+              playerA: "木秀",
+              playerB: "税慕",
+              video: "https://www.bilibili.com/video/BV1cV411R7ei",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "若陀龙王"],
+                  playerBCharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "丽莎", "「女士」"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["夜兰", "丽莎", "「女士」"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "可莉", "刻晴"],
+                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "可莉", "刻晴"],
+                  playerBCharacters: ["夜兰", "丽莎", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "唐傀",
+              playerB: "Amadeus",
+              video: "https://www.bilibili.com/video/BV1Tt4y1R7MZ",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["流浪者", "莫娜", "优菈"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["琳妮特", "迪希雅", "琴"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["琳妮特", "迪希雅", "琴"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["荒泷一斗", "迪希雅", "诺艾尔"],
+                  playerBCharacters: ["琳妮特", "迪希雅", "琴"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
