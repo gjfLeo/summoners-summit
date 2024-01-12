@@ -4,6 +4,7 @@ import t13 from "./其他-亚预赛";
 import t14 from "./积分赛-共鸣杯";
 import t15 from "./积分赛-寒天之钉杯";
 import t16 from "./积分赛-好游快爆杯";
+import t17 from "./其他-亚洲邀请赛";
 
 export default [
   t11,
@@ -12,4 +13,5 @@ export default [
   t14,
   t15,
   t16,
+  t17,
 ];
