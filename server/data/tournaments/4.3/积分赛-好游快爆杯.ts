@@ -84,6 +84,62 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-01-12",
+          matches: [
+            {
+              playerA: "叶叁伍",
+              playerB: "零之启",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["芭芭拉", "若陀龙王", "莱依拉"],
+                  playerBCharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "诺艾尔", "行秋"],
+                  playerBCharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "胡芙芙大魔王",
+              playerB: "雪国Ink",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["九条裟罗", "莫娜", "林尼"],
+                  playerBCharacters: ["林尼", "雷音权现", "可莉"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["九条裟罗", "莫娜", "林尼"],
+                  playerBCharacters: ["莫娜", "流浪者", "优菈"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
