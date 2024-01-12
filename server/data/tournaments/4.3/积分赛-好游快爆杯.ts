@@ -10,7 +10,7 @@ export default defineTournament({
       rules: {
         numDecks: 3,
         numDecksBanned: 1,
-        numCharacterBanned: 1,
+        numCharactersBanned: 1,
         numCharactersRequired: 7,
         numGames: 3,
         mode: "Conquest",
