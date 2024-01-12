@@ -65,6 +65,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "Voicend": "音尘",
   "PPpig": "皮皮猪",
   "小铭同学qaQ233": "小铭同学",
+  "牛马牛牛马": "Star",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
