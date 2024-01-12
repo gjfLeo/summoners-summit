@@ -64,6 +64,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "LLRiseFalcon": "LL起翼夜鹰",
   "Voicend": "音尘",
   "PPpig": "皮皮猪",
+  "小铭同学qaQ233": "小铭同学",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
