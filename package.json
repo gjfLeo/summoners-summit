@@ -20,7 +20,7 @@
     "@bg-dev/nuxt-naiveui": "^1.8.1",
     "@css-render/vue3-ssr": "^0.15.12",
     "@dagrejs/dagre": "^1.0.4",
-    "@gjfleo/eslint-config": "1.0.1",
+    "@gjfleo/eslint-config": "^1.0.1",
     "@iconify-json/carbon": "^1.1.27",
     "@iconify-json/mdi": "^1.1.64",
     "@nuxt/devtools": "latest",
