@@ -425,5 +425,102 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-01-11",
+          matches: [
+            {
+              playerA: "Sept",
+              playerB: "Amadeus",
+              video: "https://www.bilibili.com/video/BV1pK4y1z7ZM",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["夜兰", "丽莎", "愚人众·冰萤术士"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "丽莎", "愚人众·冰萤术士"],
+                  playerBCharacters: ["流浪者", "莫娜", "优菈"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "丽莎", "愚人众·冰萤术士"],
+                  playerBCharacters: ["琳妮特", "迪希雅", "琴"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "从不打低端局",
+              playerB: "税慕",
+              video: "https://www.bilibili.com/video/BV1ge411m71a",
+              banned: [
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["芭芭拉", "甘雨", "行秋"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["夜兰", "丽莎", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["迪希雅", "琴", "琳妮特"],
+                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
