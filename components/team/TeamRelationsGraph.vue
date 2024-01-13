@@ -14,11 +14,10 @@
       :options="options"
       :on-node-click="handleNodeClick"
       :on-line-click="handleLineClick"
-      :on-canvas-click="() => drawerVisible = false"
     >
       <template #node="{ node }">
         <div
-          class="h-full"
+          class="h-full cursor-pointer active:cursor-move"
           u-flex="~ items-center justify-center"
           style="
             border-color: var(--border-color);
@@ -28,13 +27,25 @@
             background: getBackgroundGradient((node as any).id),
           }"
         >
-          <!-- <NuxtLink :to="`/team/${(node as any).id}`" no-prefetch class="line-height-0"> -->
           <TeamAvatars :team="(node as any).id" />
-          <!-- </NuxtLink> -->
         </div>
       </template>
     </RelationGraph>
-    <NText class="absolute bottom-2 right-2 text-sm" :depth="3">根据已收录数据生成，仅供参考</NText>
+    <div class="absolute right-2 top-2">
+      <NTooltip>
+        <template #trigger>
+          <NText class="text-lg" :depth="3">
+            <NIcon><div class="i-carbon:help" /></NIcon>
+          </NText>
+        </template>
+        <template #default>
+          <span>支持点击、拖拽和滚轮交互。</span>
+        </template>
+      </NTooltip>
+    </div>
+    <div u-flex="~ col items-end" class="absolute bottom-2 right-2">
+      <NText class="text-sm" :depth="3">根据已收录数据生成，仅供参考</NText>
+    </div>
   </NElement>
 
   <NDrawer
@@ -46,15 +57,18 @@
     :show-mask="!md"
     :mask-closable="!md"
     style="--n-body-padding: 1rem"
-    @after-leave="checkedChanging = false"
+    @after-leave="drawerLeaved = true"
   >
-    <NDrawerContent closable :native-scrollbar="false">
-      <template v-if="checkedTeam">
+    <NDrawerContent
+      :closable="!md"
+      :native-scrollbar="false"
+    >
+      <template v-if="inspectTeam">
         <div u-flex="~ col gap-4">
           <!-- 图片 -->
           <div u-grid="~ cols-3 gap-2">
             <div
-              v-for="character in getCharactersByTeamId(checkedTeam)"
+              v-for="character in getCharactersByTeamId(inspectTeam)"
               :key="character"
             >
               <CardImage
@@ -65,58 +79,65 @@
           </div>
           <!-- 数据 -->
           <div u-flex="~ col gap-2">
-            <NText>总场数：{{ teamStatsMap[checkedTeam].total }}</NText>
-            <NText>胜场数：{{ teamStatsMap[checkedTeam].win }}</NText>
-            <NText>净胜场：{{ teamStatsMap[checkedTeam].winDiff }}</NText>
-            <NText v-if="teamStatsMap[checkedTeam].banned">被禁用：{{ teamStatsMap[checkedTeam].banned }}</NText>
+            <NText>总场数：{{ teamStatsMap[inspectTeam].total }}</NText>
+            <NText>胜场数：{{ teamStatsMap[inspectTeam].win }}</NText>
+            <NText>净胜场：{{ teamStatsMap[inspectTeam].winDiff }}</NText>
+            <NText v-if="teamStatsMap[inspectTeam].banned">被禁用：{{ teamStatsMap[inspectTeam].banned }}</NText>
             <div />
-            <NText>胜率：{{ toPercentageString(teamStatsMap[checkedTeam].winRate) }}</NText>
-            <NText>排除镜像对局胜率：{{ toPercentageString(teamStatsMap[checkedTeam].winRateExcludeSame) }}</NText>
-            <NText>先手胜率：{{ toPercentageString(teamStatsMap[checkedTeam].starterWinRate) }}</NText>
-            <NText>后手胜率：{{ toPercentageString(teamStatsMap[checkedTeam].followerWinRate) }}</NText>
+            <NText>胜率：{{ toPercentageString(teamStatsMap[inspectTeam].winRate) }}</NText>
+            <NText>排除镜像对局胜率：{{ toPercentageString(teamStatsMap[inspectTeam].winRateExcludeSame) }}</NText>
+            <NText>先手胜率：{{ toPercentageString(teamStatsMap[inspectTeam].starterWinRate) }}</NText>
+            <NText>后手胜率：{{ toPercentageString(teamStatsMap[inspectTeam].followerWinRate) }}</NText>
           </div>
           <!-- 跳转 -->
-          <NuxtLink :to="`/team/${checkedTeam}`" no-prefetch>
-            <NButton size="small">查看阵容详情</NButton>
-          </NuxtLink>
+          <div u-flex="~ wrap gap-2">
+            <!-- 跳转 -->
+            <NuxtLink :to="`/team/${inspectTeam}`" no-prefetch>
+              <NButton size="small">查看阵容详情</NButton>
+            </NuxtLink>
+            <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
+          </div>
         </div>
       </template>
-      <template v-else-if="checkedRelation !== undefined">
+      <template v-else-if="inspectRelation !== undefined">
         <div u-flex="~ col gap-4">
           <div u-grid="~ content-center justify-items-center items-center gap-2" style="grid-template-columns: auto 1fr 1fr;">
             <div />
             <div>
-              <TeamAvatars :team="relations[checkedRelation].teamA" />
+              <TeamAvatars :team="relations[inspectRelation].teamA" />
             </div>
             <div>
-              <TeamAvatars :team="relations[checkedRelation].teamB" />
+              <TeamAvatars :team="relations[inspectRelation].teamB" />
             </div>
 
             <NText>此对阵胜场</NText>
-            <div>{{ relations[checkedRelation].teamAWin }}</div>
-            <div>{{ relations[checkedRelation].teamBWin }}</div>
+            <div>{{ relations[inspectRelation].teamAWin }}</div>
+            <div>{{ relations[inspectRelation].teamBWin }}</div>
 
             <NText>此对阵胜率</NText>
-            <div>{{ toPercentageString(divide(relations[checkedRelation].teamAWin, relations[checkedRelation].teamAWin + relations[checkedRelation].teamBWin)) }}</div>
-            <div>{{ toPercentageString(divide(relations[checkedRelation].teamBWin, relations[checkedRelation].teamAWin + relations[checkedRelation].teamBWin)) }}</div>
+            <div>{{ toPercentageString(divide(relations[inspectRelation].teamAWin, relations[inspectRelation].teamAWin + relations[inspectRelation].teamBWin)) }}</div>
+            <div>{{ toPercentageString(divide(relations[inspectRelation].teamBWin, relations[inspectRelation].teamAWin + relations[inspectRelation].teamBWin)) }}</div>
 
             <div u-grid="col-1/4" />
 
             <NText>全部场数</NText>
-            <div>{{ teamStatsMap[relations[checkedRelation].teamA].total }}</div>
-            <div>{{ teamStatsMap[relations[checkedRelation].teamB].total }}</div>
+            <div>{{ teamStatsMap[relations[inspectRelation].teamA].total }}</div>
+            <div>{{ teamStatsMap[relations[inspectRelation].teamB].total }}</div>
             <NText>总胜场数</NText>
-            <div>{{ teamStatsMap[relations[checkedRelation].teamA].win }}</div>
-            <div>{{ teamStatsMap[relations[checkedRelation].teamB].win }}</div>
+            <div>{{ teamStatsMap[relations[inspectRelation].teamA].win }}</div>
+            <div>{{ teamStatsMap[relations[inspectRelation].teamB].win }}</div>
             <NText>总胜率</NText>
-            <div>{{ toPercentageString(teamStatsMap[relations[checkedRelation].teamA].winRate) }}</div>
-            <div>{{ toPercentageString(teamStatsMap[relations[checkedRelation].teamB].winRate) }}</div>
+            <div>{{ toPercentageString(teamStatsMap[relations[inspectRelation].teamA].winRate) }}</div>
+            <div>{{ toPercentageString(teamStatsMap[relations[inspectRelation].teamB].winRate) }}</div>
           </div>
 
-          <!-- 跳转 -->
-          <NuxtLink no-prefetch @click="toGameRecord(checkedRelation)">
-            <NButton size="small">查看对局记录</NButton>
-          </NuxtLink>
+          <div u-flex="~ wrap gap-2">
+            <!-- 跳转 -->
+            <NuxtLink no-prefetch @click="toGameRecord(inspectRelation)">
+              <NButton size="small">查看对局记录</NButton>
+            </NuxtLink>
+            <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
+          </div>
         </div>
       </template>
     </NDrawerContent>
@@ -225,49 +246,56 @@ onMounted(() => {
   graphRef$.value?.setJsonData(data);
 });
 
-const checkedTeam = ref<TeamId>();
-const checkedRelation = ref<number>();
-const checkedChanging = ref(false);
+const inspectTeam = ref<TeamId>();
+const inspectRelation = ref<number>();
+const drawerVisible = ref(false);
+const drawerLeaved = ref(true);
 
-const drawerVisible = computed({
-  get: () => !checkedChanging.value && (checkedTeam.value !== undefined || checkedRelation.value !== undefined),
-  set: (value) => {
-    if (value) {
-      throw new Error("Unaccessible");
-    }
-    else {
-      checkedTeam.value = undefined;
-      checkedRelation.value = undefined;
-      const graphInstance = graphRef$.value?.getInstance();
-      graphInstance?.clearChecked();
-    }
-  },
-});
-function handleNodeClick(node: RGNode, _e: RGUserEvent) {
-  if (checkedTeam.value === node.id) {
-    drawerVisible.value = false;
-    return;
-  }
-  checkedChanging.value = drawerVisible.value;
-  checkedTeam.value = node.id as TeamId;
-  checkedRelation.value = undefined;
+async function hideDrawer() {
+  drawerLeaved.value = false;
+  drawerVisible.value = false;
+  await until(drawerLeaved).toBeTruthy();
+  inspectTeam.value = undefined;
+  inspectRelation.value = undefined;
 }
-function handleLineClick(line: RGLine, _link: RGLink, _e: RGUserEvent) {
-  if (checkedRelation.value === line.data?.index) {
-    drawerVisible.value = false;
-    return;
-  }
-  checkedChanging.value = drawerVisible.value;
-  checkedRelation.value = line.data?.index;
-  checkedTeam.value = undefined;
-}
-
-whenever(() => drawerVisible.value === false, () => {
-  if (!checkedChanging.value) {
+async function showTeamDrawer(teamId: TeamId) {
+  if (inspectTeam.value === teamId) {
     const graphInstance = graphRef$.value?.getInstance();
     graphInstance?.clearChecked();
+    return await hideDrawer();
   }
-});
+  if (drawerVisible.value) {
+    await hideDrawer();
+  }
+  inspectTeam.value = teamId;
+  drawerVisible.value = true;
+}
+async function showRelationDrawer(relationIndex: number) {
+  if (inspectRelation.value === relationIndex) {
+    const graphInstance = graphRef$.value?.getInstance();
+    graphInstance?.clearChecked();
+    return await hideDrawer();
+  }
+  if (drawerVisible.value) {
+    await hideDrawer();
+  }
+  inspectRelation.value = relationIndex;
+  drawerVisible.value = true;
+}
+
+function handleNodeClick(node: RGNode, _e: RGUserEvent) {
+  showTeamDrawer(node.id as TeamId);
+}
+function handleLineClick(line: RGLine, _link: RGLink, _e: RGUserEvent) {
+  showRelationDrawer(line.data?.index);
+}
+
+// whenever(() => drawerVisible.value === false, () => {
+// if (drawerLeaved.value) {
+//   const graphInstance = graphRef$.value?.getInstance();
+//   graphInstance?.clearChecked();
+// }
+// });
 
 function getBackgroundGradient(teamId: TeamId) {
   const characters = getCharactersByTeamId(teamId);
@@ -299,6 +327,10 @@ const { md } = useBreakpoints(breakpointsTailwind);
 
 <style scoped>
 :deep(.relation-graph) {
+
+  .rel-link-peel {
+    cursor: pointer;
+  }
 
   .c-rg-line-checked-bg {
     stroke: #18a05818;
