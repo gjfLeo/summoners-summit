@@ -13,8 +13,8 @@
         <template #trigger>
           <NTag round size="small">
             <span>{{ rules.numDecks }}</span>
+            <span v-if="rules.numDecksBanned">&#x2006;-&#x2006;{{ rules.numDecksBanned }}</span>
             <span>&#x2006;套阵容</span>
-            <span v-if="rules.numDecksBanned">&#x2002;禁&#x2006;{{ rules.numDecksBanned }}&#x2006;套</span>
           </NTag>
         </template>
       </NTooltip>
@@ -26,7 +26,7 @@
             <span>对战双方各禁用&#x2006;{{ rules.numCharactersRequired }}&#x2006;张角色牌</span>
           </template>
           <template #trigger>
-            <NTag round size="small">禁用&#x2006;{{ rules.numCharactersRequired }}&#x2006;角色</NTag>
+            <NTag round size="small">禁用&#x2006;{{ rules.numCharactersBanned }}&#x2006;角色</NTag>
           </template>
         </NTooltip>
       </template>
