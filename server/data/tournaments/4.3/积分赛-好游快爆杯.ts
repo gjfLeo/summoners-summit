@@ -158,5 +158,88 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 7,
+        numGames: 3,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-01-13",
+          matches: [
+            {
+              playerA: "小铭同学",
+              playerB: "太一",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["班尼特"],
+                  playerBCharacters: ["雷音权现"],
+                },
+                {
+                  playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  playerBCharacters: ["「女士」", "夜兰", "丽莎"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "可莉"],
+                  playerBCharacters: ["纳西妲", "莫娜", "妮露"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["夜兰", "丽莎", "「女士」"],
+                  playerBCharacters: ["纳西妲", "莫娜", "妮露"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "丽莎", "「女士」"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "叶叁伍",
+              playerB: "雪国Ink",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["班尼特"],
+                  playerBCharacters: ["夜兰"],
+                },
+                {
+                  playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  playerBCharacters: ["行秋", "凝光", "芭芭拉"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["迪希雅", "琴", "琳妮特"],
+                  playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["迪希雅", "琴", "琳妮特"],
+                  playerBCharacters: ["雷电将军", "琴", "琳妮特"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
