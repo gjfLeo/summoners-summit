@@ -25,10 +25,10 @@ export default defineTournament({
               playerB: "RedY",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
-                // {
-                //   playerACharacters: ["安柏"],
-                //   playerBCharacters: ["安柏"],
-                // },
+                {
+                  playerACharacters: ["芭芭拉"],
+                  playerBCharacters: ["雷音权现"],
+                },
                 {
                   playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
                   playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
@@ -60,6 +60,10 @@ export default defineTournament({
               playerB: "太一",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
+                {
+                  playerACharacters: ["纳西妲"],
+                  playerBCharacters: ["夜兰"],
+                },
                 {
                   playerACharacters: ["「女士」", "雷音权现", "达达利亚"],
                   playerBCharacters: ["「女士」", "雷音权现", "莫娜"],
@@ -98,6 +102,10 @@ export default defineTournament({
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
                 {
+                  playerACharacters: ["夜兰"],
+                  playerBCharacters: ["雷音权现"],
+                },
+                {
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
                   playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
                 },
@@ -122,6 +130,10 @@ export default defineTournament({
               playerB: "雪国Ink",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
+                {
+                  playerACharacters: ["班尼特"],
+                  playerBCharacters: ["菲谢尔"],
+                },
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
                   playerBCharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
