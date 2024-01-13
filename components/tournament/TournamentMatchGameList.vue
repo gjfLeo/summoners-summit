@@ -11,7 +11,7 @@
         </div>
 
         <div class="flex self-center justify-self-end"><TeamAvatars style="filter: grayscale(0.5)" :team="ban.playerACharacters" /></div>
-        <div class="self-center justify-self-center text-sm">VS</div>
+        <div class="self-center justify-self-center text-sm" />
         <div class="flex self-center justify-self-start"><TeamAvatars style="filter: grayscale(0.5)" :team="ban.playerBCharacters" /></div>
 
         <div class="flex justify-end gap-1 text-sm">

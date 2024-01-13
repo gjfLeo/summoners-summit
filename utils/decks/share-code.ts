@@ -62,7 +62,7 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
     ]);
   cardEncodingIds.pop(); // 最后一项是多余的，共 3 张角色牌和 30 张行动牌
   const characterIds = cardEncodingIds.splice(0, 3);
-  const characterCards = characterIds.map(v => CARD_BY_ENCODE_ID[v]) as [CharacterCard, CharacterCard, CharacterCard];
+  const characterCards = characterIds.map(v => CARD_BY_ENCODE_ID[v] as CharacterCard);
   const actionCards: Deck["actionCards"] = {};
   for (let i = 0; i < cardEncodingIds.length; i++) {
     const card = CARD_BY_ENCODE_ID[cardEncodingIds[i]] as ActionCard;

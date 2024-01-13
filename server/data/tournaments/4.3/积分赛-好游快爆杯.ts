@@ -25,6 +25,10 @@ export default defineTournament({
               playerB: "RedY",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
+                // {
+                //   playerACharacters: ["安柏"],
+                //   playerBCharacters: ["安柏"],
+                // },
                 {
                   playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
                   playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],

@@ -11,7 +11,7 @@ export type PlayerId = Brand<string, "PlayerId">;
 
 export interface Deck {
   id: DeckId;
-  characterCards: [CharacterCard, CharacterCard, CharacterCard];
+  characterCards: CharacterCard[];
   actionCards: Partial<Record<ActionCard, number>>;
   gameVersion: GameVersion;
 }
@@ -30,7 +30,6 @@ export interface TournamentStage {
   parts: TournamentPart[];
 }
 
-// export type TournamentRules = ("BO3" | "BO5" | "BO7" | "征服" | "决斗" | [string, string])[];
 export interface TournamentRules {
   numDecks: number;
   numDecksBanned?: number;

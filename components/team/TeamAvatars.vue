@@ -1,5 +1,5 @@
 <template>
-  <div class="mr-1 inline-flex justify-center">
+  <div u-flex="inline justify-center">
     <NTooltip
       v-for="card in characterCards" :key="card"
       :delay="500"
@@ -10,7 +10,7 @@
       <template #trigger>
         <CardAvatar
           :card="card"
-          class="mr--1 h-8 border border-light-9 rd-50%"
+          class="mr--1 h-8 border border-light-9 rd-50% last-mr-0"
         />
       </template>
     </NTooltip>

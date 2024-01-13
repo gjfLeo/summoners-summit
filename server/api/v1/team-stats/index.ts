@@ -28,6 +28,7 @@ export default defineEventHandler<R & ApiTeamStatsMapData>((event) => {
   const teamStatsMap: ApiTeamStatsMapData["teamStatsMap"] = {};
   for (const game of gameList) {
     for (const player of (["A", "B"] as const)) {
+      if (game[`player${player}Characters`].length !== 3) continue;
       const teamId = getTeamIdByCharacters(game[`player${player}Characters`]);
       const teamStatsValue = teamStatsMap[teamId] ?? (teamStatsMap[teamId] = initTeamStatsValue());
       teamStatsValue.total++;
@@ -47,6 +48,7 @@ export default defineEventHandler<R & ApiTeamStatsMapData>((event) => {
   for (const match of matchList) {
     for (const ban of match.banned ?? []) {
       for (const player of (["A", "B"] as const)) {
+        if (ban[`player${player}Characters`].length !== 3) continue;
         const teamId = getTeamIdByCharacters(ban[`player${player}Characters`]);
         const teamStatsValue = teamStatsMap[teamId] ?? (teamStatsMap[teamId] = initTeamStatsValue());
         teamStatsValue.banned++;

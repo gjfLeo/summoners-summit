@@ -205,7 +205,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
         "  banned: [",
         ...match.banned.flatMap(banned => [
           "    {",
-          `      playerACharacters: ["${banned.playerACharacters[0] ?? ""}", "${banned.playerACharacters[1] ?? ""}", "${banned.playerACharacters[2] ?? ""}"],`,
+          `      playerACharacters: [${banned.playerACharacters.filter(Boolean).map(card => `"${card}"`).join(", ")}],`,
           ...(banned.playerAActions
             ? [
                 "      playerAActions: defineActions({",
@@ -213,7 +213,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
                 "      }),",
               ]
             : []),
-          `      playerBCharacters: ["${banned.playerBCharacters[0] ?? ""}", "${banned.playerBCharacters[1] ?? ""}", "${banned.playerBCharacters[2] ?? ""}"],`,
+          `      playerBCharacters: [${banned.playerBCharacters.filter(Boolean).map(card => `"${card}"`).join(", ")}],`,
           ...(banned.playerBActions
             ? [
                 "      playerBActions: defineActions({",
