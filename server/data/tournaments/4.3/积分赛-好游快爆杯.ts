@@ -241,5 +241,65 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 9,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-01-14",
+          matches: [
+            {
+              playerA: "小铭同学",
+              playerB: "雪国Ink",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉"],
+                  playerBCharacters: ["夜兰"],
+                },
+                {
+                  playerACharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "「女士」", "雷音权现"],
+                  playerBCharacters: ["「女士」", "雷音权现", "莫娜"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["班尼特", "雷音权现", "可莉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莫娜", "「女士」", "雷音权现"],
+                  playerBCharacters: ["班尼特", "雷音权现", "可莉"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
