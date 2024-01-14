@@ -522,5 +522,65 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-01-14",
+          matches: [
+            {
+              playerA: "Amadeus",
+              playerB: "税慕",
+              video: "https://www.bilibili.com/video/BV1Rt4y1R7Yd",
+              banned: [
+                {
+                  playerACharacters: ["菲谢尔", "林尼", "纳西妲"],
+                  playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "「女士」", "雷音权现"],
+                  playerBCharacters: ["夜兰", "丽莎", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "「女士」", "雷音权现"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["流浪者", "莫娜", "优菈"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["琳妮特", "迪希雅", "琴"],
+                  playerBCharacters: ["迪希雅", "荒泷一斗", "诺艾尔"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
+                  playerBCharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
