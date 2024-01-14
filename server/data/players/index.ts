@@ -66,6 +66,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "PPpig": "皮皮猪",
   "小铭同学qaQ233": "小铭同学",
   "牛马牛牛马": "Star",
+  "xxxxxhope": "XHope",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
