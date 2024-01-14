@@ -849,7 +849,7 @@ export default defineTournament({
           date: "2023-09-22",
           matches: [
             {
-              playerA: "star",
+              playerA: "Star",
               playerB: "音尘",
               video: "https://www.bilibili.com/video/BV1vp4y1w7JS",
               games: [
