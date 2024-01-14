@@ -266,8 +266,8 @@ export default defineTournament({
                   playerBCharacters: ["夜兰"],
                 },
                 {
-                  playerACharacters: ["班尼特", "雷音权现", "若陀龙王"],
-                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  playerBCharacters: ["班尼特", "雷音权现", "若陀龙王"],
                 },
               ],
               games: [
