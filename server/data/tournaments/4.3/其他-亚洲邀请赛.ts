@@ -2170,6 +2170,27 @@ export default defineTournament({
               games: [
                 {
                   playerACharacters: ["莫娜", "「女士」", "雷音权现"],
+                  playerAActions: defineActions({
+                    "悲号回唱": 2,
+                    "赌徒的耳环": 2,
+                    "饰金之梦": 2,
+                    "花海甘露之光": 2,
+                    "卯师傅": 2,
+                    "立本": 2,
+                    "迪娜泽黛": 1,
+                    "弥生七月": 2,
+                    "化种匣": 1,
+                    "万家灶火": 1,
+                    "本大爷还没有输！": 2,
+                    "交给我吧！": 1,
+                    "琴音之诗": 2,
+                    "野猪公主": 1,
+                    "仙跳墙": 1,
+                    "莲花酥": 2,
+                    "蒙德土豆饼": 2,
+                    "烤蘑菇披萨": 1,
+                    "提瓦特煎蛋": 1,
+                  }),
                   playerBCharacters: ["菲谢尔", "林尼", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
