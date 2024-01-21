@@ -29,7 +29,7 @@ useHead({ title: "牌组分享码解析" });
 
 const message = useMessage();
 
-const shareCode = ref("AxBQ9BAPA0Aw9UwPBGDA9rwPC5DA+cEPDMCQ/MkPDdDg/eEQDqEQC+IQDrEgDvEQD+AA");
+const shareCode = ref("");
 const resultDeck = ref<Pick<Deck, "characterCards" | "actionCards">>();
 
 const characterCards = computed(() => resultDeck.value?.characterCards);
@@ -40,8 +40,8 @@ function decode() {
   try {
     return decodeDeckCode(shareCode.value);
   }
-  catch {
-    message.error("解析失败");
+  catch (e: any) {
+    message.error(e.message);
     return undefined;
   }
 }

@@ -49,8 +49,8 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
   const lastByte = byteArray.pop()!;
   // 减去掩码、奇偶重排
   const reordered = [
-    ...Array.from({ length: 25 }).fill(0).map((_, i) => byteArray[2 * i] - lastByte),
-    ...Array.from({ length: 25 }).fill(0).map((_, i) => byteArray[2 * i + 1] - lastByte),
+    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i] - lastByte) & 255),
+    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i + 1] - lastByte) & 255),
     0,
   ];
   // 重组为 34 项 12-bit 数
