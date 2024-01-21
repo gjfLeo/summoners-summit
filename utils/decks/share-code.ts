@@ -16,7 +16,6 @@ export function encodeDeckCode(deck: Deck): string {
 
   // 重组为 51 项 8-bit 数
   const byteArray = Array.from({ length: 17 })
-    .fill(0)
     .flatMap((_, i) => [
       cardEncodingIds[i * 2] >> 4,
       ((cardEncodingIds[i * 2] & 0xF) << 4) + (cardEncodingIds[i * 2 + 1] >> 8),
@@ -29,7 +28,10 @@ export function encodeDeckCode(deck: Deck): string {
     // 每个字节加上最后一个字节，得到一个新的字节数组
     const original = Array.from({ length: 25 })
       .fill(0)
-      .flatMap((_, i) => [byteArray[i] + lastByte, byteArray[i + 25] + lastByte]);
+      .flatMap((_, i) => [
+        (byteArray[i] + lastByte) & 0xFF,
+        (byteArray[i + 25] + lastByte) & 0xFF,
+      ]);
     // 编码为Base64
     const shareCode = btoa(String.fromCodePoint(...original, lastByte));
     // 验证是否包含敏感词
@@ -49,8 +51,8 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
   const lastByte = byteArray.pop()!;
   // 减去掩码、奇偶重排
   const reordered = [
-    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i] - lastByte) & 255),
-    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i + 1] - lastByte) & 255),
+    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i] - lastByte) & 0xFF),
+    ...Array.from({ length: 25 }).map((_, i) => (byteArray[2 * i + 1] - lastByte) & 0xFF),
     0,
   ];
   // 重组为 34 项 12-bit 数
