@@ -9,7 +9,6 @@ export default defineTournament({
       name: "亚服季军赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
@@ -174,7 +173,6 @@ export default defineTournament({
       name: "亚服决赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
@@ -294,7 +292,6 @@ export default defineTournament({
       name: "美服季军赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
@@ -458,7 +455,6 @@ export default defineTournament({
       name: "美服决赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
@@ -579,7 +575,6 @@ export default defineTournament({
       name: "欧服季军赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
@@ -742,7 +737,6 @@ export default defineTournament({
       name: "欧服决赛",
       rules: {
         numDecks: 3,
-        numCharactersRequired: 9,
         numGames: 3,
         mode: "Duel",
       },
