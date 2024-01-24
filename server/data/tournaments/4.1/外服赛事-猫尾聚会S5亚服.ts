@@ -1,4 +1,4 @@
-import { defineTournament } from "~/utils/types";
+import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "Cat's Tail Gathering S5",
@@ -15,7 +15,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "决赛日",
+          name: "",
           date: "2023-11-05",
           matches: [
             {
@@ -178,7 +178,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "决赛日",
+          name: "",
           date: "2023-11-05",
           matches: [
             {
