@@ -29,6 +29,8 @@ interface TeamStatsResult extends ApiTeamStatsVsTeamStatsValue {
   teamId: TeamId;
   winRate: number;
   winDiff: number;
+  starterWinRate: number;
+  followerWinRate: number;
 }
 
 const data = (Object.entries(props.vs) as [TeamId, ApiTeamStatsVsTeamStatsValue][])
@@ -39,6 +41,8 @@ const data = (Object.entries(props.vs) as [TeamId, ApiTeamStatsVsTeamStatsValue]
       ...stats,
       winRate: divide(stats.win, stats.total),
       winDiff: stats.win - (stats.total - stats.win),
+      starterWinRate: divide(stats.starterWin, stats.starterTotal),
+      followerWinRate: divide(stats.followerWin, stats.followerTotal),
     };
   });
 
@@ -105,22 +109,22 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     align: "center",
     sorter: "default",
   },
-  // {
-  //   title: "先手胜率",
-  //   key: "starterWinRate",
-  //   width: "6rem",
-  //   align: "center",
-  //   sorter: "default",
-  //   render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
-  // },
-  // {
-  //   title: "后手胜率",
-  //   key: "followerWinRate",
-  //   width: "6rem",
-  //   align: "center",
-  //   sorter: "default",
-  //   render: row => winRateRender(row.followerWin, row.followerTotal, row.followerWinRate),
-  // },
+  {
+    title: "先手胜率",
+    key: "starterWinRate",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+    render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
+  },
+  {
+    title: "后手胜率",
+    key: "followerWinRate",
+    width: "6rem",
+    align: "center",
+    sorter: "default",
+    render: row => winRateRender(row.followerWin, row.followerTotal, row.followerWinRate),
+  },
   {
     key: "links",
     width: "3rem",

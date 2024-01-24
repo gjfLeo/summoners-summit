@@ -35,6 +35,10 @@ export interface ApiTeamStatsCardUsageValue {
 export interface ApiTeamStatsVsTeamStatsValue {
   total: number;
   win: number;
+  starterTotal: number;
+  starterWin: number;
+  followerTotal: number;
+  followerWin: number;
 }
 
 export interface ApiTeamStatsData {

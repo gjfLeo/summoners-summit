@@ -4,7 +4,7 @@ import { deckById, gameById } from "~/server/data";
 import { getTeamIdByCharacters } from "~/utils/cards";
 
 const initCardUsageInfo = (): ApiTeamStatsCardUsageValue => ({ totalCount: 0, winCount: 0, totalAverage: 0, winAverage: 0, deckPick: 0 });
-const initVsTeamStats = (): ApiTeamStatsVsTeamStatsValue => ({ total: 0, win: 0 });
+const initVsTeamStats = (): ApiTeamStatsVsTeamStatsValue => ({ total: 0, win: 0, starterWin: 0, starterTotal: 0, followerWin: 0, followerTotal: 0 });
 
 export default defineEventHandler<R & ApiTeamStatsData>((event) => {
   const teamId = event.context.params!.teamId as TeamId;
@@ -47,6 +47,14 @@ export default defineEventHandler<R & ApiTeamStatsData>((event) => {
       const vsTeamStats = vsTeamStatsMap[opponentTeamId] ?? (vsTeamStatsMap[opponentTeamId] = initVsTeamStats());
       vsTeamStats.total++;
       if (game.winner === player) vsTeamStats.win++;
+      if (game.starter === player) {
+        vsTeamStats.starterTotal++;
+        if (game.winner === player) vsTeamStats.starterWin++;
+      }
+      if (game.starter === opponent) {
+        vsTeamStats.followerTotal++;
+        if (game.winner === player) vsTeamStats.followerWin++;
+      }
     }
 
     for (const cardUsage of Object.values(cardUsageMap)) {
