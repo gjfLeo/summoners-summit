@@ -4238,7 +4238,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
+          name: "DAY3",
           date: "2024-01-21",
           matches: [
             {
@@ -4509,7 +4509,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
+          name: "DAY3",
           date: "2024-01-21",
           matches: [
             {
