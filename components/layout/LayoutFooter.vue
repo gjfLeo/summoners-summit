@@ -37,7 +37,10 @@
           </div>
           <NText>
             <span @click="activeAdminMode">感谢帮助：</span>
-            <NuxtLink class="underline" to="https://nga.178.com/nuke.php?func=ucp&uid=41364075" target="_blank"><NA>念冰</NA></NuxtLink>
+            <span u-flex="inline gap-2">
+              <NuxtLink class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLink>
+              <NuxtLink class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLink>
+            </span>
           </NText>
           <NText :depth="3">更新时间：{{ updateTime }}</NText>
         </div>
