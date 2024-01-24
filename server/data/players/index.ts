@@ -67,6 +67,12 @@ const playerNicknameMapRaw: Record<string, string> = {
   "小铭同学qaQ233": "小铭同学",
   "牛马牛牛马": "Star",
   "xxxxxhope": "XHope",
+  "icedtea": "今天不想吃苹果",
+  "皮皮喵": "喵帕斯",
+
+
+  "kirisa":"きりさ",
+  "chikuwa":"ちくわ",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
