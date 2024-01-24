@@ -6,7 +6,7 @@ export default defineTournament({
   gameVersion: "4.1",
   stages: [
     {
-      name: "亚服季军赛",
+      name: "亚服",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -14,7 +14,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
+          name: "季军赛",
           date: "2023-11-05",
           matches: [
             {
@@ -167,18 +167,8 @@ export default defineTournament({
             },
           ],
         },
-      ],
-    },
-    {
-      name: "亚服决赛",
-      rules: {
-        numDecks: 3,
-        numGames: 3,
-        mode: "Duel",
-      },
-      parts: [
         {
-          name: "",
+          name: "决赛",
           date: "2023-11-05",
           matches: [
             {
@@ -289,7 +279,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "美服季军赛",
+      name: "美服",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -297,7 +287,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
+          name: "季军赛",
           date: "2023-11-06",
           matches: [
             {
@@ -449,18 +439,8 @@ export default defineTournament({
             },
           ],
         },
-      ],
-    },
-    {
-      name: "美服决赛",
-      rules: {
-        numDecks: 3,
-        numGames: 3,
-        mode: "Duel",
-      },
-      parts: [
         {
-          name: "",
+          name: "决赛",
           date: "2023-11-06",
           matches: [
             {
@@ -572,7 +552,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "欧服季军赛",
+      name: "欧服",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -580,8 +560,8 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
-          date: "",
+          name: "季军赛",
+          date: "2023-11-06",
           matches: [
             {
               playerA: "maya",
@@ -731,19 +711,9 @@ export default defineTournament({
             },
           ],
         },
-      ],
-    },
-    {
-      name: "欧服决赛",
-      rules: {
-        numDecks: 3,
-        numGames: 3,
-        mode: "Duel",
-      },
-      parts: [
         {
-          name: "",
-          date: "",
+          name: "决赛",
+          date: "2023-11-06",
           matches: [
             {
               playerA: "KevinZ",
