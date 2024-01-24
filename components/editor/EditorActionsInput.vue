@@ -49,7 +49,11 @@ function handleSelectCard(value: string) {
 function handleInputCount(value: string) {
   if (value === "1" || value === "2") {
     if (selectedCard.value) {
-      const actionsUnordered = Object.assign({ [selectedCard.value]: Number(value) }, props.actions);
+      const actionsUnordered = Object.assign(
+        {},
+        props.actions,
+        { [selectedCard.value]: Math.min(2, Number(value) + (props.actions?.[selectedCard.value] ?? 0)) },
+      );
       const actions = Object.fromEntries(
         (Object.entries(actionsUnordered) as [ActionCard, number][])
           .sort((a, b) => actionCardSorter(a[0], b[0])),

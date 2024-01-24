@@ -26,7 +26,7 @@ const actionPicks = JSON.parse(actionPicksString.value);
 const options = computed(() => {
   return ALL_ACTION_CARDS
     .flatMap((card) => {
-      if (props.actions?.[card]) return [];
+      if (props.actions?.[card] === 2) return [];
       const match = PinyinMatch.match(card, inputValue.value);
       if (typeof match === "boolean") return [];
       return {
