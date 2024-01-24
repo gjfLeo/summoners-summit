@@ -19,7 +19,7 @@ export interface Deck {
 export interface Tournament {
   id: TournamentId;
   name: string;
-  type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛";
+  type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛" | "外服赛事";
   gameVersion: GameVersion;
   stages: TournamentStage[];
 }
