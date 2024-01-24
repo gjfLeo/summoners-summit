@@ -69,7 +69,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "xxxxxhope": "XHope",
   "icedtea": "今天不想吃苹果",
   "皮皮喵": "喵帕斯",
-  
+
   "kirisa": "きりさ",
   "chikuwa": "ちくわ",
 
