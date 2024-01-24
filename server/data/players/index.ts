@@ -53,6 +53,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "小瓜皮王": "瓜皮儿",
   "瓜皮儿err": "瓜皮儿",
   "道诡异仙李火旺": "小果核",
+  "小果核": "星空下的神话",
   "素未谋面": "陳十一",
   "浅冽（重生版）": "浅冽",
   "永远滴_神": "Dr.666",
@@ -69,8 +70,11 @@ const playerNicknameMapRaw: Record<string, string> = {
   "xxxxxhope": "XHope",
   "icedtea": "今天不想吃苹果",
   "皮皮喵": "喵帕斯",
+  "RedY": "赤佬RedY",
+  "WilliemKmetsch": "贝尔格里",
+  "暖冰扔进冷火里": "长门有希",
 
-  "kirisa": "きりさ",
+  "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
 
   "甜甜花酿鸡队": "",
