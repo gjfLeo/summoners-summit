@@ -78,6 +78,8 @@ const playerNicknameMapRaw: Record<string, string> = {
   "chikuwa": "ちくわ",
   "kamisama": "卡密sama",
   "Proxy": "KevinZ",
+  "quijano": "ΚΥΡΑΝΟΣ",
+  "maya": "zCrimlet",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
