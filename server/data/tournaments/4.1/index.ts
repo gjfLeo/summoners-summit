@@ -4,6 +4,7 @@ import t13 from "./积分赛-好游快爆杯";
 import t14 from "./积分赛-月话杯";
 import t15 from "./积分赛-火星杯";
 import t16 from "./积分赛-米游社";
+import t17 from "./外服赛事-猫尾聚会S5亚服";
 
 export default [
   t11,
@@ -12,4 +13,5 @@ export default [
   t14,
   t15,
   t16,
+  t17,
 ];
