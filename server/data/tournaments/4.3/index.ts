@@ -18,5 +18,4 @@ export default [
   t17,
   t18,
   t19,
-  
 ];
