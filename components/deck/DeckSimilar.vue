@@ -35,13 +35,13 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
             .filter(([, count]) => count < 0)
             .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
               h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-red-6 bg-#ffffffd0 border-rd-tl-1" }, count),
-              h(CardImage, { class: "w-8", card: card as ActionCard }),
+              h(CardImage, { class: "w-8 border-rd-2px", card: card as ActionCard }),
             ])),
           ...Object.entries(row.diffs)
             .filter(([, count]) => count > 0)
             .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
               h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-blue-6 bg-#ffffffd0 border-rd-tl-1" }, `+${count}`),
-              h(CardImage, { class: "w-8", card: card as ActionCard }),
+              h(CardImage, { class: "w-8 border-rd-2px", card: card as ActionCard }),
             ])),
         ]);
     },
