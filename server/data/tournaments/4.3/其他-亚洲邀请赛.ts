@@ -4524,7 +4524,7 @@ export default defineTournament({
               ],
               games: [
                 {
-                  playerACharacters: ["班尼特", "雷音权现", "若陀龙王"],
+                  playerACharacters: ["班尼特", "刻晴", "若陀龙王"],
                   playerAActions: defineActions({
                     "冒险憧憬": 2,
                     "晦朔千引": 2,
