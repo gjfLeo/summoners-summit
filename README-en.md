@@ -57,9 +57,7 @@ As this is a purely front-end project, all data is currently stored in the sourc
 
 The project includes a built-in API that is mainly used to fetch data for static website generation.
 
-Since stability is not guaranteed and is subject to change, it is recommended that external projects use it only in development environments and not in production. (Please inform me if you're using the API for your own project.)
-
-You can make an API call here: `https://summoners-summit.netlify.app/api/v1`
+Due to exceeding of building usage, the API is no longer updated on Netlify. Still available by starting a local server.
 
 <details><summary>Example API usage</summary>
 

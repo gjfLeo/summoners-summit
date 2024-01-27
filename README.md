@@ -59,9 +59,7 @@ pnpm run preview
 
 项目包含内置 API，主要用于静态生成网页时获取数据。
 
-由于不能保证稳定性且可能发生变更，外部项目如需使用，建议仅用于开发环境而非用户端。（最好告知我）
-
-可以使用 Netlify 部署的站点调用：`https://summoners-summit.netlify.app/api/v1`
+由于构建用量问题，不再在 Netlify 上保持更新。仍可通过启动本地服务来调用。
 
 <details><summary>API示例</summary>
 
