@@ -22,7 +22,8 @@ import { NTooltip, NuxtLinkLocale, TeamAvatars } from "#components";
 import type { CharacterCard } from "~/utils/types";
 import { getCharactersByTeamId } from "~/utils/cards";
 
-useHead({ title: "阵容 | 召唤之巅" });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormat", [t("menu.teams"), t("site.name")]) });
 
 const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
 const { teamStatsMap } = await useTeamStatsMap(gameVersion);
@@ -69,25 +70,25 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     ),
   },
   {
-    title: "场数",
+    title: t("stats.gamesPlayed"),
     key: "total",
     width: "6rem",
     align: "center",
     sorter: "default",
     filterMultiple: false,
-    filterOptions: [2, 3, 5, 10].map(v => ({ label: `至少${v}场`, value: v })),
+    filterOptions: [2, 3, 5, 10].map(v => ({ label: t("stats.atLeast", [v]), value: v })),
     defaultFilterOptionValue: null,
     filter: (value, row) => row.total >= Number(value),
   },
   ...data.value.some(item => item.banned > 0)
     ? [{
-        title: "被禁用",
+        title: t("stats.gamesBanned"),
         key: "banned",
         width: "6rem",
         align: "center" as const,
         sorter: "default" as const,
       }, {
-        title: "场数+禁用",
+        title: t("stats.gamesBP"),
         key: "bp",
         width: "6rem",
         align: "center" as const,
@@ -95,7 +96,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
       }]
     : [],
   {
-    title: "胜率",
+    title: t("stats.winRate"),
     key: "winRate",
     width: "6rem",
     align: "center",
@@ -103,7 +104,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     render: row => winRateRender(row.win, row.total, row.winRate),
   },
   {
-    title: "胜场数",
+    title: t("stats.gamesWin"),
     key: "win",
     width: "6rem",
     align: "center",
@@ -111,28 +112,28 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     sorter: "default",
   },
   {
-    title: "净胜",
+    title: t("stats.gamesNetWins"),
     key: "winDiff",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "非内战场数",
+    title: t("stats.gamesPlayedExcludeSame"),
     key: "totalExcludeSame",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "非内战胜场",
+    title: t("stats.gamesWinExcludeSame"),
     key: "winExcludeSame",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "非内战胜率",
+    title: t("stats.winRateExcludeSame"),
     key: "winRateExcludeSame",
     width: "6rem",
     align: "center",
@@ -140,7 +141,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     render: row => winRateRender(row.winExcludeSame, row.totalExcludeSame, row.winRateExcludeSame),
   },
   {
-    title: "先手胜率",
+    title: t("stats.starterWinRate"),
     key: "starterWinRate",
     width: "6rem",
     align: "center",
@@ -148,7 +149,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
   },
   {
-    title: "后手胜率",
+    title: t("stats.followerWinRate"),
     key: "followerWinRate",
     width: "6rem",
     align: "center",

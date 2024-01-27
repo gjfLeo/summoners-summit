@@ -53,4 +53,21 @@
     "yaml",
     "toml",
   ],
+
+  "i18n-ally.sourceLanguage": "chs",
+  "i18n-ally.displayLanguage": "chs",
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.localesPaths": [
+    "locales",
+  ],
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.extract.ignored": [
+    "念冰",
+    "自古二楼",
+    " & ",
+  ],
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.localeCountryMap": {
+    "chs": "cn",
+  },
 }

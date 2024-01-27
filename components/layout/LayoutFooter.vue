@@ -4,20 +4,20 @@
       class="h-full w-full p-4 text-sm"
       u-flex="~ items-center justify-center gap-4"
     >
-      <NText depth="3">{{ $t("footer.text") }}</NText>
-      <NText depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</NText>
+      <NText depth="3">{{ $t("footer.text") }} {{ $t('footer.author') }}</NText>
+      <NText depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">{{ $t('footer.about') }}</NText>
     </div>
     <NDrawer v-model:show="showAboutDrawer" placement="bottom" :auto-focus="false">
-      <NDrawerContent title="召唤之巅">
+      <NDrawerContent :title="$t('site.name')">
         <div class="flex flex-col gap-2">
           <div class="flex items-center gap-2">
-            <NText>by gjfLeo</NText>
+            <NText>{{ $t('footer.author') }}</NText>
             <NuxtLinkLocale :to="githubRepositry" target="_blank">
               <NIcon class="text-2xl"><div class="i-carbon:logo-github" /></NIcon>
             </NuxtLinkLocale>
           </div>
           <div class="flex items-center gap-2">
-            <NText>欢迎建议和纠错</NText>
+            <NText>{{ $t('footer.suggestion') }}</NText>
             <NuxtLinkLocale :to="contactNGAThread" target="_blank">
               <NTooltip trigger="hover">
                 <template #trigger>
@@ -31,18 +31,18 @@
                 <template #trigger>
                   <NIcon class="text-lg"><div class="i-mdi:qqchat" /></NIcon>
                 </template>
-                <span>QQ: {{ contactQQ }}</span>
+                <span>{{ $t('footer.qq', [contactQQ]) }}</span>
               </NTooltip>
             </div>
           </div>
           <NText>
-            <span @click="activeAdminMode">感谢帮助：</span>
+            <span @click="activeAdminMode">{{ $t('footer.thanks') }}</span>
             <span u-flex="inline gap-2">
               <NuxtLinkLocale class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLinkLocale>
               <NuxtLinkLocale class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLinkLocale>
             </span>
           </NText>
-          <NText :depth="3">更新时间：{{ updateTime }}</NText>
+          <NText :depth="3">{{ $t('footer.lastUpdate', [updateTime]) }}</NText>
         </div>
       </NDrawerContent>
     </NDrawer>
@@ -51,6 +51,8 @@
 
 <script lang="ts" setup>
 import { LAYOUT_FOOTER_HEIGHT } from "@/configs/layout";
+
+const { t } = useI18n();
 
 const githubRepositry = "https://github.com/gjfLeo/summoners-summit";
 const contactQQ = "1272823636";
@@ -66,7 +68,7 @@ const message = useMessage();
 
 async function handleQQClick() {
   await copy(contactQQ);
-  message.success("已复制");
+  message.success(t("actions.copied"));
 }
 
 const { activeAdminMode } = useAdminMode();

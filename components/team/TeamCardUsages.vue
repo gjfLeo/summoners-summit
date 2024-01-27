@@ -17,6 +17,8 @@ const props = defineProps<{
   totalDeck: number;
 }>();
 
+const { t } = useI18n();
+
 const data = Object.entries(props.cardUsages).map(([card, usage]) => ({
   key: card,
   card: card as ActionCard,
@@ -30,21 +32,21 @@ const columns: DataTableColumn<typeof data[number]>[] = [
     render: row => h(CardCell, { card: row.card }),
   },
   {
-    title: () => h(TableTitle, { title: "携带率", description: "携带至少一张此牌的牌组占比" }),
+    title: () => h(TableTitle, { title: t("stats.cardPickRate"), description: t("stats.cardPickRateDescription") }),
     key: "pickRate",
     align: "center",
     sorter: "default",
     render: row => toPercentageString(row.pickRate),
   },
   {
-    title: "平均携带",
+    title: t("stats.cardAveragePicks"),
     key: "totalAverage",
     align: "center",
     sorter: "default",
     render: row => format(row.totalAverage, { precision: 3 }),
   },
   {
-    title: "胜场平均携带",
+    title: t("stats.cardAveragePicksInWins"),
     key: "winAverage",
     align: "center",
     sorter: "default",

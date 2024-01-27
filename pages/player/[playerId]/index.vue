@@ -46,7 +46,9 @@ const route = useRoute();
 const playerId = route.params.playerId as string;
 
 const { player } = await useApiPlayer(playerId);
-useHead({ title: `${player.uniqueName} - 玩家数据 | 召唤之巅` });
+
+const { t } = useI18n();
+useHead({ title: t("site.titleFormatWithName", [player.uniqueName, t("menu.playerStats"), t("site.name")]) });
 
 const { matches, games } = await useApiPlayerMatches(playerId);
 

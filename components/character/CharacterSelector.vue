@@ -13,25 +13,30 @@
     :render-tag="renderTag"
     :show-checkmark="false"
     class="w-68"
-    @update:show="displayedPlaceholder = $event ? '支持拼音和首字母' : placeholder"
+    :filter="filter"
+    @update:show="displayedPlaceholder = $event ? focusPlaceholder : unfocusPlaceholder"
   />
 </template>
 
 <script lang="ts" setup>
 import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderTag } from "naive-ui";
 
+import PinyinMatch from "pinyin-match";
 import { CardAvatar, NSelect, NTag, NText, NTooltip } from "#components";
-import { ALL_CHARACTER_CARDS, type CharacterCard } from "~/utils/cards";
+import { ALL_CHARACTER_CARDS, ALL_CHARACTER_CARDS_INFO, type CharacterCard } from "~/utils/cards";
 
-const props = withDefaults(defineProps<{
+const props = defineProps<{
   modelValue: CharacterCard[];
   placeholder?: string;
-}>(), {
-  placeholder: "角色",
-});
+}>();
+
 const emit = defineEmits(["update:modelValue"]);
 
-const displayedPlaceholder = ref(props.placeholder);
+const { t } = useI18n();
+
+const focusPlaceholder = ref(t("actions.characterSelector.focusPlaceholder"));
+const unfocusPlaceholder = ref(props.placeholder ?? t("actions.characterSelector.defaultPlaceholder"));
+const displayedPlaceholder = ref(unfocusPlaceholder.value);
 
 const characters = useVModel(props, "modelValue", emit);
 
@@ -111,4 +116,9 @@ const renderTag: SelectRenderTag = ({ option, handleClose }) => {
     },
   );
 };
+function filter(pattern: string, option: SelectOption) {
+  const card = option.value as CharacterCard;
+  return Boolean(PinyinMatch.match(card, pattern)
+    || PinyinMatch.match(ALL_CHARACTER_CARDS_INFO[card].nameEn, pattern));
+}
 </script>

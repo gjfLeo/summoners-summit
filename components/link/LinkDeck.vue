@@ -3,7 +3,7 @@
     <template #trigger>
       <NuxtLinkLocale :to="`/deck/${deckId}`" no-prefetch><div class="icon opacity-75" /></NuxtLinkLocale>
     </template>
-    <span>查看套牌</span>
+    <span>{{ $t('actions.viewDeck') }}</span>
   </NTooltip>
 </template>
 

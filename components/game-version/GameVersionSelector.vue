@@ -5,7 +5,7 @@
         v-model:value="gameVersion"
         class="w-6.25rem"
         filterable
-        placeholder="版本"
+        :placeholder="$t('common.gameVersionShort')"
         :options="gameVersionOptions"
         @update:value="changeGameVersion"
       />
@@ -23,10 +23,11 @@ import { type GameVersionOptional, getAllGameVersionsReversed, getGameVersionPat
 const route = useRoute();
 
 const { gameVersion } = useGameVersion();
+const { t } = useI18n();
 
 // 版本选项
 const gameVersionOptions: (SelectOption | SelectGroupOption)[] = [
-  { label: "全版本", value: "" },
+  { label: t("common.gameVersionAll"), value: "" },
   ...getAllGameVersionsReversed().map<SelectOption>(v => ({ label: v, value: v })),
 ];
 

@@ -30,13 +30,13 @@
 
           <div class="flex justify-end gap-1 text-sm">
             <LinkDeck v-if="game.playerADeckId" :deck-id="game.playerADeckId" />
-            <div v-if="game.starter">{{ game.starter === 'A' ? '先手' : '后手' }}</div>
-            <div :class="{ 'text-orange-500': game.winner === 'A' }">{{ game.winner === 'A' ? '胜' : '负' }}</div>
+            <div v-if="game.starter">{{ game.starter === 'A' ? $t('gameInfo.firstMove') : $t('gameInfo.secondMove') }}</div>
+            <div :class="{ 'text-orange-500': game.winner === 'A' }">{{ game.winner === 'A' ? $t('gameInfo.win') : $t('gameInfo.lose') }}</div>
           </div>
           <div />
           <div class="flex justify-start gap-1 text-sm">
-            <div :class="{ 'text-orange-500': game.winner === 'B' }">{{ game.winner === 'B' ? '胜' : '负' }}</div>
-            <div v-if="game.starter">{{ game.starter === 'B' ? '先手' : '后手' }}</div>
+            <div :class="{ 'text-orange-500': game.winner === 'B' }">{{ game.winner === 'B' ? $t('gameInfo.win') : $t('gameInfo.lose') }}</div>
+            <div v-if="game.starter">{{ game.starter === 'B' ? $t('gameInfo.firstMove') : $t('gameInfo.secondMove') }}</div>
             <LinkDeck v-if="game.playerBDeckId" :deck-id="game.playerBDeckId" />
           </div>
         </div>

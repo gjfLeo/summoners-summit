@@ -29,11 +29,6 @@
       </div>
       <div class="h-full flex items-center justify-end gap-2">
         <GameVersionSelector />
-        <NButton circle quaternary :focusable="false" @click="changeColorMode">
-          <template #icon>
-            <div class="i-carbon:moon dark:i-carbon:sun" />
-          </template>
-        </NButton>
         <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
           <NButton circle quaternary :focusable="false">
             <template #icon>
@@ -41,6 +36,11 @@
             </template>
           </NButton>
         </NPopselect>
+        <NButton circle quaternary :focusable="false" @click="changeColorMode">
+          <template #icon>
+            <div class="i-carbon:moon dark:i-carbon:sun" />
+          </template>
+        </NButton>
       </div>
     </NLayoutHeader>
     <NLayout

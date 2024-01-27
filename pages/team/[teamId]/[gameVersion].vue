@@ -6,70 +6,65 @@
   </div>
 
   <div class="mt flex flex-wrap justify-center gap-8">
-    <NStatistic label="选取数" :value="total" />
-    <NStatistic label="获胜数" :value="win" />
-    <NStatistic label="胜率" :value="winRate" />
-    <NStatistic label="净胜场" :value="winDiff" />
+    <NStatistic :label="$t('stats.gamesPlayed')" :value="total" />
+    <NStatistic :label="$t('stats.gamesWin')" :value="win" />
+    <NStatistic :label="$t('stats.winRate')" :value="winRate" />
+    <NStatistic :label="$t('stats.gamesNetWins')" :value="winDiff" />
   </div>
 
   <NTabs v-model:value="currentTab" size="large">
-    <NTabPane name="usages" tab="构筑分析">
+    <NTabPane name="usages" :tab="$t('team.deckAnalysis')">
       <template v-if="totalWithDeck > 0">
-        <NH4>行动牌选择</NH4>
+        <NH4>{{ $t('team.actionCardUsages') }}</NH4>
         <TeamCardUsages :card-usages="cardUsageMap" :total-deck="totalWithDeck" />
         <div class="mt text-sm">
-          <NText :depth="3">此数据仅统计公布卡组的{{ totalWithDeck }}场对局。</NText>
+          <NText :depth="3">{{ $t('team.numDecks', totalWithDeck) }}</NText>
         </div>
 
         <NH4 class="flex items-center gap-2">
-          <div>典型构筑</div>
-          <NButton v-if="typicalDeck" class="ml-auto" size="small" @click="toTypicalDeckDetail">详情</NButton>
-          <NButton v-if="typicalDeck" size="small" @click="copyTypicalDeckShareCode">复制分享码</NButton>
+          <div>{{ t('deck.typicalDeck') }}</div>
+          <NButton v-if="typicalDeck" class="ml-auto" size="small" @click="toTypicalDeckDetail">{{ t('actions.detail') }}</NButton>
+          <NButton v-if="typicalDeck" size="small" @click="copyTypicalDeckShareCode">{{ t('actions.copyDeckShareCode') }}</NButton>
         </NH4>
         <template v-if="typicalDeck">
           <TeamDeck :typical-actions="typicalDeck.actionCards" />
           <div class="mt text-sm">
-            <NText :depth="3">此数据仅统计公布卡组的{{ winWithDeck }}场获胜对局。</NText>
+            <NText :depth="3">{{ $t('team.numDecksWin', winWithDeck) }}</NText>
           </div>
         </template>
         <template v-else>
           <div class="mt text-sm">
-            <NText :depth="3">此阵容没有公布卡组的获胜对局。</NText>
+            <NText :depth="3">{{ $t('team.noWinGameWithDeck') }}</NText>
           </div>
         </template>
       </template>
       <template v-else>
         <div class="mt text-sm">
-          <NText :depth="3">此阵容没有公布卡组的对局。</NText>
+          <NText :depth="3">{{ $t('team.noGameWithDeck') }}</NText>
         </div>
       </template>
     </NTabPane>
-    <NTabPane name="statistics" tab="对阵数据">
+    <NTabPane name="statistics" :tab="$t('team.matchups')">
       <TeamTeamStatistics :team-id="teamId" :vs="vsTeamStatsMap" @view-game-list="viewGameList" />
     </NTabPane>
-    <NTabPane name="games" tab="对局历史">
+    <NTabPane name="games" :tab="$t('deck.gameList')">
       <template v-if="gameVersion">
-        <CharacterSelector v-model="opponentCharacters" class="mb" placeholder="对手角色" />
+        <CharacterSelector v-model="opponentCharacters" class="mb" :placeholder="$t('actions.characterSelector.opponentCharacter')" />
         <GameList :game-list="filteredGameList" />
       </template>
       <template v-else>
-        <NText :depth="3">全版本对局历史暂不支持，请指定游戏版本后查看。</NText>
+        <NText :depth="3">{{ $t('team.allVersionGameListUnsupported') }}</NText>
       </template>
     </NTabPane>
-    <NTabPane name="statsByVersion" tab="版本数据">
+    <NTabPane name="statsByVersion" :tab="$t('team.statsByVersion')">
       <TeamStatsByVersionChart :stats-by-version="statsByVersion" />
-      <div class="flex justify-end">
-        <NText class="flex gap-2 text-sm" :depth="3">
-          <span>早期版本禁用数据未收录</span>
-        </NText>
-      </div>
     </NTabPane>
   </NTabs>
 </template>
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import { getCharactersByTeamId, normalizeTeamId } from "~/utils/cards";
+import { ALL_CHARACTER_CARDS_INFO, getCharactersByTeamId, normalizeTeamId } from "~/utils/cards";
 import type { CharacterCard, TeamId } from "~/utils/types";
 
 const route = useRoute();
@@ -80,9 +75,10 @@ if (route.params.teamId !== teamId) {
   await navigateTo(`/team/${teamId}`, { replace: true });
 }
 
+const { t, locale } = useI18n();
 const characterCards = getCharactersByTeamId(teamId);
-
-useHead({ title: `${characterCards.join(" & ")} - 阵容数据 | 召唤之巅` });
+const teamName = characterCards.map(c => locale.value === "en" ? ALL_CHARACTER_CARDS_INFO[c].nameEn : c).join (" & ");
+useHead({ title: t("site.titleFormatWithName", [teamName, t("menu.teamStats"), t("site.name")]) });
 
 const { gameVersion } = useGameVersion({ detect: true });
 const { basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap } = await useApiTeamStats(teamId, gameVersion.value);

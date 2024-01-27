@@ -12,6 +12,8 @@ const props = defineProps<{
   similarMap: ApiDeckSimilarData["similarMap"];
 }>();
 
+const { t } = useI18n();
+
 const data = computed(() => {
   return Object.values(props.similarMap)
     .map((item) => {
@@ -26,10 +28,10 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
   {
     key: "diffCount",
     sorter: "default",
-    title: "牌组",
+    title: t("common.deck"),
     render: (row) => {
       return Object.keys(row.diffs).length === 0
-        ? "当前牌组"
+        ? t("deck.currentDeck")
         : h("div", { class: "flex gap-1" }, [
           ...Object.entries(row.diffs)
             .filter(([, count]) => count < 0)
@@ -47,13 +49,13 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     },
   },
   {
-    title: "场数",
+    title: t("stats.gamesPlayed"),
     key: "pick",
     align: "center",
     sorter: "default",
   },
   {
-    title: "胜率",
+    title: t("stats.winRate"),
     key: "winRate",
     align: "center",
     sorter: "default",
@@ -61,7 +63,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
   },
   {
     key: "players",
-    title: "使用者",
+    title: t("stats.usedBy"),
     render: (row) => {
       return h(
         "div",
@@ -93,7 +95,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
             () => h("div", { class: "i-carbon:view" }),
           ),
         ),
-        default: () => h("span", "查看此牌组"),
+        default: () => h("span", t("actions.viewDeck")),
       },
     ),
   },

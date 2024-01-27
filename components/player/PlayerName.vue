@@ -3,7 +3,7 @@
     <NuxtLinkLocale :to="`/player/${id}`">{{ nickname }}</NuxtLinkLocale>
   </template>
   <template v-else>
-    {{ nickname || "未知选手" }}
+    {{ nickname || $t('gameInfo.unknownPlayer') }}
   </template>
 </template>
 

@@ -39,12 +39,12 @@
           </NText>
         </template>
         <template #default>
-          <span>支持点击、拖拽和滚轮交互。</span>
+          <span>{{ $t('teams.relationGraph.help') }}</span>
         </template>
       </NTooltip>
     </div>
     <div u-flex="~ col items-end" class="absolute bottom-2 right-2">
-      <NText class="text-sm" :depth="3">根据已收录数据生成，仅供参考</NText>
+      <NText class="text-sm" :depth="3">{{ $t('teams.relationGraph.description') }}</NText>
     </div>
   </NElement>
 
@@ -79,64 +79,70 @@
           </div>
           <!-- 数据 -->
           <div u-flex="~ col gap-2">
-            <NText>总场数：{{ teamStatsMap[inspectTeam].total }}</NText>
-            <NText>胜场数：{{ teamStatsMap[inspectTeam].win }}</NText>
-            <NText>净胜场：{{ teamStatsMap[inspectTeam].winDiff }}</NText>
-            <NText v-if="teamStatsMap[inspectTeam].banned">被禁用：{{ teamStatsMap[inspectTeam].banned }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.gamesPlayed'), teamStatsMap[inspectTeam].total]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.gamesWin'), teamStatsMap[inspectTeam].win]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.gamesNetWins'), teamStatsMap[inspectTeam].winDiff]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.gamesBanned'), teamStatsMap[inspectTeam].banned]) }}</NText>
             <div />
-            <NText>胜率：{{ toPercentageString(teamStatsMap[inspectTeam].winRate) }}</NText>
-            <NText>排除镜像对局胜率：{{ toPercentageString(teamStatsMap[inspectTeam].winRateExcludeSame) }}</NText>
-            <NText>先手胜率：{{ toPercentageString(teamStatsMap[inspectTeam].starterWinRate) }}</NText>
-            <NText>后手胜率：{{ toPercentageString(teamStatsMap[inspectTeam].followerWinRate) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.winRate'), toPercentageString(teamStatsMap[inspectTeam].winRate)]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.winRateExcludeSame'), teamStatsMap[inspectTeam].winRateExcludeSame]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.starterWinRate'), toPercentageString(teamStatsMap[inspectTeam].starterWinRate)]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.followerWinRate'), toPercentageString(teamStatsMap[inspectTeam].followerWinRate)]) }}</NText>
           </div>
           <!-- 跳转 -->
           <div u-flex="~ wrap gap-2">
             <!-- 跳转 -->
             <NuxtLinkLocale :to="`/team/${inspectTeam}`" no-prefetch>
-              <NButton size="small">查看阵容详情</NButton>
+              <NButton size="small">{{ $t('actions.teamDetail') }}</NButton>
             </NuxtLinkLocale>
-            <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
+            <NButton size="small" @click="hideDrawer(), graphRef$?.getInstance().clearChecked()">{{ $t('actions.close') }}</NButton>
           </div>
         </div>
       </template>
       <template v-else-if="inspectRelation !== undefined">
         <div u-flex="~ col gap-4">
-          <div u-grid="~ content-center justify-items-center items-center gap-2" style="grid-template-columns: auto 1fr 1fr;">
+          <div u-grid="~ content-center justify-items-center items-center gap-2" style="grid-template-columns: auto 1fr auto 1fr;">
             <div />
             <div>
               <TeamAvatars :team="relations[inspectRelation].teamA" />
             </div>
+            <div class="m--4">→</div>
             <div>
               <TeamAvatars :team="relations[inspectRelation].teamB" />
             </div>
 
-            <NText>此对阵胜场</NText>
+            <NText>{{ $t('stats.gamesWin') }}</NText>
             <div>{{ relations[inspectRelation].teamAWin }}</div>
+            <div />
             <div>{{ relations[inspectRelation].teamBWin }}</div>
 
-            <NText>此对阵胜率</NText>
+            <NText>{{ $t('stats.winRate') }}</NText>
             <div>{{ toPercentageString(divide(relations[inspectRelation].teamAWin, relations[inspectRelation].teamAWin + relations[inspectRelation].teamBWin)) }}</div>
+            <div />
             <div>{{ toPercentageString(divide(relations[inspectRelation].teamBWin, relations[inspectRelation].teamAWin + relations[inspectRelation].teamBWin)) }}</div>
 
-            <div u-grid="col-1/4" />
+            <div u-grid="col-1/5" class="mt-2">{{ $t('stats.statsComparisons') }}</div>
 
-            <NText>全部场数</NText>
+            <NText>{{ $t('stats.gamesPlayed') }}</NText>
             <div>{{ teamStatsMap[relations[inspectRelation].teamA].total }}</div>
+            <div />
             <div>{{ teamStatsMap[relations[inspectRelation].teamB].total }}</div>
-            <NText>总胜场数</NText>
+            <NText>{{ $t('stats.gamesWin') }}</NText>
             <div>{{ teamStatsMap[relations[inspectRelation].teamA].win }}</div>
+            <div />
             <div>{{ teamStatsMap[relations[inspectRelation].teamB].win }}</div>
-            <NText>总胜率</NText>
+            <NText>{{ $t('stats.winRate') }}</NText>
             <div>{{ toPercentageString(teamStatsMap[relations[inspectRelation].teamA].winRate) }}</div>
+            <div />
             <div>{{ toPercentageString(teamStatsMap[relations[inspectRelation].teamB].winRate) }}</div>
           </div>
 
           <div u-flex="~ wrap gap-2">
             <!-- 跳转 -->
             <NuxtLinkLocale no-prefetch @click="toGameRecord(inspectRelation)">
-              <NButton size="small">查看对局记录</NButton>
+              <NButton size="small">{{ $t('actions.gameList') }}</NButton>
             </NuxtLinkLocale>
-            <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
+            <NButton size="small" @click="hideDrawer(), graphRef$?.getInstance().clearChecked()">{{ $t('actions.close') }}</NButton>
           </div>
         </div>
       </template>

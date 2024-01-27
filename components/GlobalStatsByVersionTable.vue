@@ -11,9 +11,11 @@ const props = defineProps<{
   statsList: ApiGlobalStatsListByVersionData["statsList"];
 }>();
 
+const { t } = useI18n();
+
 const data = computed(() => {
   const totalStats = {
-    gameVersion: "全版本" as const,
+    gameVersion: t("common.gameVersionAll"),
     total: 0,
     totalWithDeck: 0,
     totalWithStarter: 0,
@@ -36,28 +38,28 @@ const data = computed(() => {
 const columns: DataTableColumns<typeof data["value"][number]> = [
   {
     key: "gameVersion",
-    title: "版本",
+    title: t("common.gameVersion"),
     align: "center",
   },
   {
     key: "total",
-    title: "已统计对局",
+    title: t("home.numGamesCounted"),
     align: "center",
   },
   {
     key: "totalWithDeck",
-    title: "含牌组对局",
+    title: t("home.numGamesWithDeck"),
     align: "center",
   },
   {
     key: "starterWinRate",
-    title: "先手胜率",
+    title: t("stats.starterWinRate"),
     render: row => toPercentageString(row.starterWinRate),
     align: "center",
   },
   {
     key: "followerWinRate",
-    title: "后手胜率",
+    title: t("stats.followerWinRate"),
     render: row => toPercentageString(row.followerWinRate),
     align: "center",
   },

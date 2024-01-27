@@ -6,9 +6,9 @@
       <CardImage :card="card" class="w-100%" />
     </template>
     <div class="flex flex-col self-end justify-self-start gap-2">
-      <NButton @click="copyDeckShareCode">复制分享码</NButton>
+      <NButton @click="copyDeckShareCode">{{ $t('actions.copyDeckShareCode') }}</NButton>
       <NuxtLinkLocale :to="`/team/${teamId}`" prefetch>
-        <NButton>查看阵容数据</NButton>
+        <NButton>{{ $t('actions.teamDetail') }}</NButton>
       </NuxtLinkLocale>
     </div>
   </div>
@@ -20,10 +20,10 @@
   </div>
 
   <NTabs size="large">
-    <NTabPane name="gameRecords" tab="对局记录">
+    <NTabPane name="gameRecords" :tab="$t('deck.gameList')">
       <GameRecords :games="gameList" />
     </NTabPane>
-    <NTabPane name="similar" tab="相似牌组">
+    <NTabPane name="similar" :tab="$t('deck.similarDeck')">
       <DeckSimilar :similar-map="similarMap" />
     </NTabPane>
   </NTabs>
@@ -33,7 +33,8 @@
 import { getTeamIdByCharacters } from "~/utils/cards";
 import type { ActionCard } from "~/utils/types";
 
-useHead({ title: "牌组详情 | 召唤之巅" });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormat", [t("menu.deckDetail"), t("site.name")]) });
 
 const route = useRoute();
 const deckId = route.params.deckId as string;

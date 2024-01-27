@@ -43,5 +43,6 @@ const tournamentId = route.params.tournamentId as string;
 
 const { tournament, matches, games } = await useApiTournamentDetail(tournamentId);
 
-useHead({ title: `${tournament.name} - 赛事记录 | 召唤之巅` });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormatWithName", [tournament.name, t("menu.tournamentDetail"), t("site.name")]) });
 </script>

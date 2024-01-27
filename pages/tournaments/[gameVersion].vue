@@ -8,7 +8,8 @@
 <script lang="ts" setup>
 import type { Tournament } from "~/utils/types";
 
-useHead({ title: "赛事 | 召唤之巅" });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormat", [t("menu.tournaments"), t("site.name")]) });
 
 const { gameVersion } = useGameVersion({ detect: true });
 

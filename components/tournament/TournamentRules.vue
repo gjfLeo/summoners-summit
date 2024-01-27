@@ -1,20 +1,19 @@
 <template>
   <div class="flex gap-2">
     <template v-if="rules.numGames === 1">
-      <NTag round size="small">一局决胜</NTag>
+      <NTag round size="small">{{ $t('rules.bo1') }}</NTag>
     </template>
     <template v-else>
       <!-- 准备和禁用 -->
       <NTooltip>
         <template #default>
-          <span>对战双方各准备&#x2006;{{ rules.numDecks }}&#x2006;套阵容</span>
-          <span v-if="rules.numDecksBanned">，并禁用对手其中&#x2006;{{ rules.numDecksBanned }}&#x2006;套</span>
+          <span v-if="rules.numDecksBanned">{{ $t('rules.numDecksWithBanDescription', [rules.numDecks, rules.numDecksBanned]) }}</span>
+          <span v-else>{{ $t('rules.numDecksDescription', [rules.numDecks]) }}</span>
         </template>
         <template #trigger>
           <NTag round size="small">
-            <span>{{ rules.numDecks }}</span>
-            <span v-if="rules.numDecksBanned">&#x2006;-&#x2006;{{ rules.numDecksBanned }}</span>
-            <span>&#x2006;套阵容</span>
+            <span v-if="rules.numDecksBanned">{{ $t('rules.numDecksWithBan', [rules.numDecks, rules.numDecksBanned]) }}</span>
+            <span v-else>{{ $t('rules.numDecks', [rules.numDecks]) }}</span>
           </NTag>
         </template>
       </NTooltip>
@@ -23,10 +22,10 @@
       <template v-if="rules.numCharactersBanned">
         <NTooltip>
           <template #default>
-            <span>对战双方各禁用&#x2006;{{ rules.numCharactersRequired }}&#x2006;张角色牌</span>
+            <span>{{ $t('rules.numCharacterBannedDescription', rules.numCharactersBanned) }}</span>
           </template>
           <template #trigger>
-            <NTag round size="small">禁用&#x2006;{{ rules.numCharactersBanned }}&#x2006;角色</NTag>
+            <NTag round size="small">{{ $t('rules.numCharacterBanned', rules.numCharactersBanned) }}</NTag>
           </template>
         </NTooltip>
       </template>
@@ -35,16 +34,16 @@
       <template v-if="rules.numCharactersRequired">
         <NTooltip>
           <template #default>
-            <span>不同阵容可以重复使用角色牌，但总计至少包含&#x2006;{{ rules.numCharactersRequired }}&#x2006;张</span>
+            <span>{{ $t('rules.numCharactersRequiredDescription', [rules.numCharactersRequired]) }}</span>
           </template>
           <template #trigger>
-            <NTag round size="small">至少&#x2006;{{ rules.numCharactersRequired }}&#x2006;角色</NTag>
+            <NTag round size="small">{{ $t('rules.numCharactersRequired', [rules.numCharactersRequired]) }}</NTag>
           </template>
         </NTooltip>
       </template>
 
       <!-- 场数 -->
-      <NTag round size="small">{{ rules.numGames }}&#x2006;局&#x2006;{{ (rules.numGames + 1) / 2 }}&#x2006;胜</NTag>
+      <NTag round size="small">{{ $t('rules.boX', [rules.numGames, (rules.numGames + 1) / 2]) }}</NTag>
       <!-- 模式 -->
       <NTooltip>
         <template #default>
@@ -75,8 +74,10 @@ defineProps<{
   rules: TournamentRules;
 }>();
 
+const { t } = useI18n();
+
 const modes: Record<TournamentRules["mode"], { name: string; description: string }> = {
-  Conquest: { name: "征服", description: "获胜的阵容不能再使用" },
-  Duel: { name: "决斗", description: "每个阵容只能使用一次" },
+  Conquest: { name: t("rules.conquest"), description: t("rules.conquestDescription") },
+  Duel: { name: t("rules.duel"), description: t("rules.duelDescription") },
 };
 </script>

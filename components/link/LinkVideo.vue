@@ -7,7 +7,7 @@
         <NIcon class="text-size-120%"><div class="i-carbon:video" /></NIcon>
       </NuxtLinkLocale>
     </template>
-    <span>观看录像</span>
+    <span>{{ $t('actions.watchVideo') }}</span>
   </NTooltip>
 </template>
 

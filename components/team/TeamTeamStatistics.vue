@@ -23,6 +23,7 @@ const emit = defineEmits<{
 }>();
 
 const { gameVersionPath } = useGameVersion();
+const { t } = useI18n();
 
 interface TeamStatsResult extends ApiTeamStatsVsTeamStatsValue {
   key: string;
@@ -76,18 +77,18 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     ),
   },
   {
-    title: "场数",
+    title: t("stats.gamesPlayed"),
     key: "total",
     width: "6rem",
     align: "center",
     sorter: "default",
     filterMultiple: false,
-    filterOptions: [2, 3, 5].map(v => ({ label: `至少${v}场`, value: v })),
+    filterOptions: [2, 3, 5].map(v => ({ label: t("stats.atLeast", [v]), value: v })),
     defaultFilterOptionValue: null,
     filter: (value, row) => row.total >= Number(value),
   },
   {
-    title: "胜率",
+    title: t("stats.winRate"),
     key: "winRate",
     width: "6rem",
     align: "center",
@@ -95,7 +96,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     render: row => winRateRender(row.win, row.total, row.winRate),
   },
   {
-    title: "胜场数",
+    title: t("stats.gamesWin"),
     key: "win",
     width: "6rem",
     align: "center",
@@ -103,14 +104,14 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     sorter: "default",
   },
   {
-    title: "净胜",
+    title: t("stats.gamesNetWins"),
     key: "winDiff",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "先手胜率",
+    title: t("stats.starterWinRate"),
     key: "starterWinRate",
     width: "6rem",
     align: "center",
@@ -118,7 +119,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     render: row => winRateRender(row.starterWin, row.starterTotal, row.starterWinRate),
   },
   {
-    title: "后手胜率",
+    title: t("stats.followerWinRate"),
     key: "followerWinRate",
     width: "6rem",
     align: "center",
@@ -145,7 +146,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
             () => h("div", { class: "i-carbon:view" }),
           ),
         ),
-        default: () => h("span", "查看对局记录"),
+        default: () => h("span", t("actions.gameList")),
       },
     ),
   },

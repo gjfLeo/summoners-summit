@@ -22,7 +22,8 @@ import { divide } from "mathjs/number";
 import PinyinMatch from "pinyin-match";
 import { PlayerName } from "#components";
 
-useHead({ title: "选手 | 召唤之巅" });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormat", [t("menu.players"), t("site.name")]) });
 
 const { gameVersion } = useGameVersion({ detect: true });
 const { playerStatsMap } = await useApiPlayerStatsMap(gameVersion.value);
