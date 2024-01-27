@@ -1,7 +1,7 @@
 <template>
   <div class="hidden">
     <template v-for="link in links" :key="link">
-      <div><NuxtLink :to="link" no-prefetch>{{ link }}</NuxtLink></div>
+      <div><NuxtLinkLocale :to="link" no-prefetch>{{ link }}</NuxtLinkLocale></div>
     </template>
   </div>
 </template>

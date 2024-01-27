@@ -9,45 +9,49 @@ interface MenuItem {
 }
 const menuConfig: MenuItem[] = [
   {
-    name: "赛事",
+    name: "menu.tournaments",
     path: "/tournaments",
     withGameVersion: true,
   },
   {
-    name: "阵容",
+    name: "menu.teams",
     path: "/teams",
     withGameVersion: true,
   },
   {
-    name: "选手",
+    name: "menu.players",
     path: "/players",
     withGameVersion: true,
   },
   {
-    name: "卡牌",
+    name: "menu.cards",
     path: "/cards",
     withGameVersion: true,
   },
   {
-    name: "工具",
+    name: "menu.tools",
     children: [
-      { path: "/tools/decode-deck-code", name: "牌组分享码解析" },
-      { path: "/tools/data-builder", name: "数据录入工具", adminOnly: true },
-      { path: "/tools/card-image-check", name: "卡牌图片检查", adminOnly: true },
+      { path: "/tools/decode-deck-code", name: "menu.tools.decodeDeckCode" },
+      { path: "/tools/data-builder", name: "menu.tools.dataBuilder", adminOnly: true },
+      { path: "/tools/card-image-check", name: "menu.tools.cardImageCheck", adminOnly: true },
     ],
   },
 ];
 
 export default function useMenuRoutes() {
   const { isAdminMode } = useAdminMode();
-  const { gameVersionPath } = useGameVersion();
+  // const { gameVersionPath } = useGameVersion();
+  const { t } = useI18n();
+  const localePath = useLocalePath();
   function menuItemToLinkRoute(menuItem: MenuItem): MenuLinkRoute[] {
     if (menuItem.adminOnly && !isAdminMode.value) {
       return [];
     }
+    // const path = menuItem.withGameVersion ? `${menuItem.path}/${gameVersionPath.value}` : menuItem.path!;
+    const path = menuItem.path!;
     return [{
-      label: menuItem.name,
-      path: menuItem.withGameVersion ? `${menuItem.path}/${gameVersionPath.value}` : menuItem.path,
+      label: t(menuItem.name),
+      path: localePath(path),
       children: menuItem.children?.flatMap(menuItemToLinkRoute),
     }];
   }

@@ -1,7 +1,7 @@
 <template>
   <NaiveConfig
     :theme-config="themeConfig"
-    :locale="zhCN" :date-locale="dateZhCN"
+    :locale="naiveLocale" :date-locale="dateZhCN"
     inline-theme-disabled
   >
     <NLoadingBarProvider>
@@ -18,12 +18,21 @@
 </template>
 
 <script lang="ts" setup>
-import { dateZhCN, zhCN } from "naive-ui";
+import { dateZhCN, enUS, zhCN } from "naive-ui";
 import themeConfig from "@/configs/theme";
 
-useHead({ title: "召唤之巅" });
+const { locale } = useI18n();
 
 zhCN.DataTable.clear = "清除";
+
+const naiveLocale = computed(() => {
+  switch (locale.value) {
+    case "en":
+      return enUS;
+    default:
+      return zhCN;
+  }
+});
 </script>
 
 <style>

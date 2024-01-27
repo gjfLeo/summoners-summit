@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "@bg-dev/nuxt-naiveui",
     "@unocss/nuxt",
     "@vueuse/nuxt",
+    "@nuxtjs/i18n",
   ],
 
   postcss: {
@@ -56,5 +57,14 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: process.env.NUXT_APP_CRAWL_LINKS !== "false",
     },
+  },
+
+  i18n: {
+    strategy: "prefix_except_default",
+    defaultLocale: "chs",
+    locales: [
+      { code: "chs", name: "简体中文" },
+      { code: "en", name: "English" },
+    ],
   },
 });

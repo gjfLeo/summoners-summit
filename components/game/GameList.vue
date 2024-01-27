@@ -6,9 +6,9 @@
           <!-- 赛事和对局名称 -->
           <div class="grid-col-1/4">
             <div class="flex items-center justify-between">
-              <NuxtLink class="text-sm" :to="`/tournament/${game.tournamentId}`" no-prefetch>
+              <NuxtLinkLocale class="text-sm" :to="`/tournament/${game.tournamentId}`" no-prefetch>
                 {{ game.gameVersion }} {{ game.tournamentName }}
-              </NuxtLink>
+              </NuxtLinkLocale>
               <NText :depth="3" class="flex gap-2 text-xs">
                 <LinkVideo v-if="game.gameVideo" :video="game.gameVideo" />
                 <LinkVideo v-else-if="game.matchVideo" :video="game.matchVideo" />

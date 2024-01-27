@@ -7,9 +7,9 @@
     </template>
     <div class="flex flex-col self-end justify-self-start gap-2">
       <NButton @click="copyDeckShareCode">复制分享码</NButton>
-      <NuxtLink :to="`/team/${teamId}`" prefetch>
+      <NuxtLinkLocale :to="`/team/${teamId}`" prefetch>
         <NButton>查看阵容数据</NButton>
-      </NuxtLink>
+      </NuxtLinkLocale>
     </div>
   </div>
   <!-- 行动卡 -->

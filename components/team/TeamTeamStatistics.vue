@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import type { DataTableColumn } from "naive-ui";
-import { NText, NTooltip, NuxtLink, TeamAvatars } from "#components";
+import { NText, NTooltip, NuxtLinkLocale, TeamAvatars } from "#components";
 import type { ApiTeamStatsData, ApiTeamStatsVsTeamStatsValue, TeamId } from "~/utils/types";
 
 const props = defineProps<{
@@ -67,7 +67,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
     fixed: "left",
     align: "center",
     render: (row, rowIndex) => h(
-      NuxtLink,
+      NuxtLinkLocale,
       {
         to: `/team/${row.teamId}/${gameVersionPath.value}`,
         prefetch: rowIndex < 3,
@@ -134,7 +134,7 @@ const columns: DataTableColumn<TeamStatsResult>[] = [
       { trigger: "hover", placement: "right" },
       {
         trigger: () => h(
-          NuxtLink,
+          NuxtLinkLocale,
           {
             class: "flex justify-center cursor-pointer",
             onClick: () => emit("viewGameList", row.teamId),

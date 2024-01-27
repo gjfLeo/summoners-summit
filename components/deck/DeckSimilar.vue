@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
 import { divide } from "mathjs/number";
-import { CardImage, NText, NTooltip, NuxtLink, PlayerName } from "#components";
+import { CardImage, NText, NTooltip, NuxtLinkLocale, PlayerName } from "#components";
 import type { ActionCard, ApiDeckSimilarData } from "~/utils/types";
 
 const props = defineProps<{
@@ -81,7 +81,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
       { trigger: "hover", placement: "right" },
       {
         trigger: () => h(
-          NuxtLink,
+          NuxtLinkLocale,
           {
             to: `/deck/${row.deckId}`,
             prefetch: false,

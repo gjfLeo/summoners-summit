@@ -92,9 +92,9 @@
           <!-- 跳转 -->
           <div u-flex="~ wrap gap-2">
             <!-- 跳转 -->
-            <NuxtLink :to="`/team/${inspectTeam}`" no-prefetch>
+            <NuxtLinkLocale :to="`/team/${inspectTeam}`" no-prefetch>
               <NButton size="small">查看阵容详情</NButton>
-            </NuxtLink>
+            </NuxtLinkLocale>
             <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
           </div>
         </div>
@@ -133,9 +133,9 @@
 
           <div u-flex="~ wrap gap-2">
             <!-- 跳转 -->
-            <NuxtLink no-prefetch @click="toGameRecord(inspectRelation)">
+            <NuxtLinkLocale no-prefetch @click="toGameRecord(inspectRelation)">
               <NButton size="small">查看对局记录</NButton>
-            </NuxtLink>
+            </NuxtLinkLocale>
             <NButton size="small" @click="hideDrawer, graphRef$?.getInstance().clearChecked()">关闭</NButton>
           </div>
         </div>

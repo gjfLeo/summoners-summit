@@ -1,6 +1,6 @@
 <template>
   <template v-if="id">
-    <NuxtLink :to="`/player/${id}`">{{ nickname }}</NuxtLink>
+    <NuxtLinkLocale :to="`/player/${id}`">{{ nickname }}</NuxtLinkLocale>
   </template>
   <template v-else>
     {{ nickname || "未知选手" }}

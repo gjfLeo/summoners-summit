@@ -4,7 +4,7 @@
       class="h-full w-full p-4 text-sm"
       u-flex="~ items-center justify-center gap-4"
     >
-      <NText depth="3">召唤之巅——七圣召唤赛事资料 by gjfLeo</NText>
+      <NText depth="3">{{ $t("footer.text") }}</NText>
       <NText depth="3" class="cursor-pointer underline" @click="showAboutDrawer = true">关于本站</NText>
     </div>
     <NDrawer v-model:show="showAboutDrawer" placement="bottom" :auto-focus="false">
@@ -12,20 +12,20 @@
         <div class="flex flex-col gap-2">
           <div class="flex items-center gap-2">
             <NText>by gjfLeo</NText>
-            <NuxtLink :to="githubRepositry" target="_blank">
+            <NuxtLinkLocale :to="githubRepositry" target="_blank">
               <NIcon class="text-2xl"><div class="i-carbon:logo-github" /></NIcon>
-            </NuxtLink>
+            </NuxtLinkLocale>
           </div>
           <div class="flex items-center gap-2">
             <NText>欢迎建议和纠错</NText>
-            <NuxtLink :to="contactNGAThread" target="_blank">
+            <NuxtLinkLocale :to="contactNGAThread" target="_blank">
               <NTooltip trigger="hover">
                 <template #trigger>
                   <NIcon class="text-lg"><div class="i-nga" /></NIcon>
                 </template>
                 <span>NGA</span>
               </NTooltip>
-            </NuxtLink>
+            </NuxtLinkLocale>
             <div class="cursor-pointer" @click="handleQQClick">
               <NTooltip trigger="hover">
                 <template #trigger>
@@ -38,8 +38,8 @@
           <NText>
             <span @click="activeAdminMode">感谢帮助：</span>
             <span u-flex="inline gap-2">
-              <NuxtLink class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLink>
-              <NuxtLink class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLink>
+              <NuxtLinkLocale class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLinkLocale>
+              <NuxtLinkLocale class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLinkLocale>
             </span>
           </NText>
           <NText :depth="3">更新时间：{{ updateTime }}</NText>

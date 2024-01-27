@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import type { DataTableColumn } from "naive-ui";
-import { NTooltip, NuxtLink, TeamAvatars } from "#components";
+import { NTooltip, NuxtLinkLocale, TeamAvatars } from "#components";
 import type { CharacterCard } from "~/utils/types";
 import { getCharactersByTeamId } from "~/utils/cards";
 
@@ -60,7 +60,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     fixed: "left",
     align: "center",
     render: (row, rowIndex) => h(
-      NuxtLink,
+      NuxtLinkLocale,
       {
         to: `/team/${row.teamId}/${gameVersionPath.value}`,
         prefetch: rowIndex < 5,

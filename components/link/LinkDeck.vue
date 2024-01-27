@@ -1,7 +1,7 @@
 <template>
   <NTooltip v-if="deckId">
     <template #trigger>
-      <NuxtLink :to="`/deck/${deckId}`" no-prefetch><div class="icon opacity-75" /></NuxtLink>
+      <NuxtLinkLocale :to="`/deck/${deckId}`" no-prefetch><div class="icon opacity-75" /></NuxtLinkLocale>
     </template>
     <span>查看套牌</span>
   </NTooltip>

@@ -2,9 +2,9 @@
   <template v-for="matchList in matchesByTournament" :key="matchList[0].tournamentId">
     <NCard class="mt">
       <NH3>
-        <NuxtLink :to="`/tournament/${matchList[0].tournamentId}`" no-prefetch>
+        <NuxtLinkLocale :to="`/tournament/${matchList[0].tournamentId}`" no-prefetch>
           {{ matchList[0].gameVersion }}&#x2006;{{ matchList[0].tournamentName }}
-        </NuxtLink>
+        </NuxtLinkLocale>
       </NH3>
 
       <template v-for="match in matchList" :key="match.id">
