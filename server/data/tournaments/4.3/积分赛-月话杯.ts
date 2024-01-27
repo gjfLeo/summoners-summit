@@ -265,7 +265,6 @@ export default defineTournament({
               games: [
                 {
                   playerACharacters: ["莫娜", "优菈", "流浪者"],
-                  playerACharacters: ["莫娜", "优菈", "流浪者"],
                   playerAActions: defineActions({
                     "千夜浮梦": 1,
                     "图莱杜拉的回忆": 1,
@@ -314,7 +313,7 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: ["班尼特", "林尼", "雷音权现"],
-                   playerAActions: defineActions({
+                  playerAActions: defineActions({
                     "冒险憧憬": 2,
                     "完场喝彩": 1,
                     "悲号回唱": 1,
