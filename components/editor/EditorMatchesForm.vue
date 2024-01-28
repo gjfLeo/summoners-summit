@@ -206,7 +206,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
         ...match.banned.flatMap(banned => [
           "    {",
           `      playerACharacters: [${banned.playerACharacters.filter(Boolean).map(card => `"${card}"`).join(", ")}],`,
-          ...(banned.playerAActions
+          ...(banned.playerAActions && Object.keys(banned.playerAActions).length > 0
             ? [
                 "      playerAActions: defineActions({",
                 ...Object.entries(banned.playerAActions).map(([card, count]) => `        "${card}": ${count},`),
@@ -214,7 +214,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
               ]
             : []),
           `      playerBCharacters: [${banned.playerBCharacters.filter(Boolean).map(card => `"${card}"`).join(", ")}],`,
-          ...(banned.playerBActions
+          ...(banned.playerBActions && Object.keys(banned.playerBActions).length > 0
             ? [
                 "      playerBActions: defineActions({",
                 ...Object.entries(banned.playerBActions).map(([card, count]) => `        "${card}": ${count},`),
@@ -230,7 +230,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
   ...match.games.flatMap(game => [
     "    {",
     `      playerACharacters: ["${game.playerACharacters[0] ?? ""}", "${game.playerACharacters[1] ?? ""}", "${game.playerACharacters[2] ?? ""}"],`,
-    ...(game.playerAActions
+    ...(game.playerAActions && Object.keys(game.playerAActions).length > 0
       ? [
           "      playerAActions: defineActions({",
           ...Object.entries(game.playerAActions).map(([card, count]) => `        "${card}": ${count},`),
@@ -238,7 +238,7 @@ const output = computed<string[]>(() => matches.value.flatMap(match => [
         ]
       : []),
     `      playerBCharacters: ["${game.playerBCharacters[0] ?? ""}", "${game.playerBCharacters[1] ?? ""}", "${game.playerBCharacters[2] ?? ""}"],`,
-    ...(game.playerBActions
+    ...(game.playerBActions && Object.keys(game.playerBActions).length > 0
       ? [
           "      playerBActions: defineActions({",
           ...Object.entries(game.playerBActions).map(([card, count]) => `        "${card}": ${count},`),

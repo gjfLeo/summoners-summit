@@ -2,7 +2,7 @@ import type { ActionCard, CharacterCard, Deck } from "../types";
 import { CARD_BY_ENCODE_ID, ENCODE_ID_BY_CARD } from "../cards/encode";
 import blockWords from "./block-words";
 
-export function encodeDeckCode(deck: Deck): string {
+export function encodeDeckCode(deck: Pick<Deck, "characterCards" | "actionCards">): string {
   // 计算牌组中的卡片编码ID
   const cardEncodingIds: number[] = [
     ...deck.characterCards.map<number>(card => ENCODE_ID_BY_CARD[card]),

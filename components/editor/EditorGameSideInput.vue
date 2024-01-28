@@ -42,8 +42,8 @@
   <NModal v-model:show="actionsDialogVisible" preset="card" class="max-w-6xl">
     <EditorActionsInput
       ref="actionsInput" v-model:actions="dataActions"
-      @copy="copy"
-      @paste="paste"
+      @copy="copyDeckCode"
+      @paste="pasteDeckCode"
     />
     <EditorActionsPreview v-model:actions="dataActions" class="mt" />
     <template #footer>
@@ -55,6 +55,7 @@
 <script lang="ts" setup>
 import type { ActionCard, CharacterCard } from "~/utils/types";
 import { EditorActionsInput, EditorCharacterCardSelector } from "#components";
+import { decodeDeckCode, encodeDeckCode } from "~/utils/decks";
 
 const props = defineProps<{
   player: "A" | "B";
@@ -95,21 +96,35 @@ function handleCharacterSelected(i: number) {
   }
 }
 
-const message = useMessage();
-const copyString = useLocalStorage("copyString", "{}");
+const permissionRead = usePermission("clipboard-read");
 
-function copy() {
-  copyString.value = JSON.stringify({
-    characters: dataCharacters.value,
-    actions: dataActions.value,
-  });
+const message = useMessage();
+const { copy } = useClipboard();
+async function copyDeckCode() {
+  await copy(encodeDeckCode({
+    characterCards: dataCharacters.value,
+    actionCards: dataActions.value ?? {},
+  }));
   message.success("已复制");
 }
 
-function paste() {
-  const copyData = JSON.parse(copyString.value) as Pick<typeof props, "characters" | "actions">;
-  dataCharacters.value = copyData.characters;
-  dataActions.value = copyData.actions;
-  message.success("已粘贴");
+async function pasteDeckCode() {
+  try {
+    if (permissionRead.value === "denied") {
+      throw new Error("无读取剪贴板权限");
+    }
+    const text = await navigator.clipboard.readText();
+    const deck = decodeDeckCode(text);
+    dataCharacters.value = deck.characterCards;
+    dataActions.value = deck.actionCards;
+    message.success("已粘贴");
+  }
+  catch (e: any) {
+    message.error(e.message);
+  }
 }
+
+// legacy
+const copyString = useLocalStorage("copyString", undefined);
+copyString.value = undefined;
 </script>
