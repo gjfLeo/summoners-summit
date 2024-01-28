@@ -1785,6 +1785,9 @@ export default defineTournament({
         numDecks: 3,
         numGames: 5,
         mode: "Conquest",
+        extra: [
+          ["备选牌组", "3套阵容合计可准备9套牌组，上场时从中选择"],
+        ],
       },
       parts: [
         {
