@@ -1,6 +1,6 @@
 <template>
   <NTabs justify-content="space-evenly" type="line" size="large">
-    <NTabPane name="characters" :tab="$t('common.characterCard')">
+    <NTabPane name="characters" :tab="$t('cards.characterCard')">
       <NText :depth="3" class="mb block text-sm">{{ $t('cards.numGames', totalGame) }}</NText>
       <NDataTable
         :columns="characterStatsColumns"
@@ -8,7 +8,7 @@
         max-height="calc(100vh - 18rem)"
       />
     </NTabPane>
-    <NTabPane name="actions" :tab="$t('common.actionCard')">
+    <NTabPane name="actions" :tab="$t('cards.actionCard')">
       <NText :depth="3" class="mb block text-sm">{{ $t('cards.numDecks', totalDeck) }}</NText>
       <NDataTable
         :columns="actionStatsColumns"
