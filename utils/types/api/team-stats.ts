@@ -72,3 +72,19 @@ export interface ApiTeamRelationItem {
   teamAWin: number;
   teamBWin: number;
 }
+
+export interface ApiTeamMatchupsData {
+  teams: TeamId[];
+  matchups: ApiTeamMatchupItem[];
+}
+export interface ApiTeamMatchupItem {
+  teamId: TeamId;
+  [teamId: TeamId]: {
+    win: number;
+    total: number;
+  };
+  overall: {
+    win: number;
+    total: number;
+  };
+}

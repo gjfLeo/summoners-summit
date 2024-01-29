@@ -165,6 +165,8 @@ const props = defineProps<{
   teamStatsMap: Awaited<ReturnType<typeof useTeamStatsMap>>["teamStatsMap"];
 }>();
 
+const relations = props.relations;
+
 const nodeWidth = 90;
 const nodeHeight = 40;
 const nodePadding = 8;
@@ -200,7 +202,7 @@ interface LineData {
 
 onMounted(() => {
   const teams = new Array<TeamId>();
-  props.relations.forEach((relation) => {
+  relations.forEach((relation) => {
     if (!teams.includes(relation.teamA)) teams.push(relation.teamA);
     if (!teams.includes(relation.teamB)) teams.push(relation.teamB);
   });
@@ -219,7 +221,7 @@ onMounted(() => {
   teams.forEach((team) => {
     g.setNode(team, { label: "", width: nodeWidth + nodePadding * 2, height: nodeHeight + nodePadding * 2 });
   });
-  props.relations.forEach((relation) => {
+  relations.forEach((relation) => {
     g.setEdge(relation.teamA, relation.teamB);
   });
   dagre.layout(g);
@@ -234,7 +236,7 @@ onMounted(() => {
         y: gNode.y - containerHeight.value / 2,
       };
     }),
-    lines: props.relations.map((relation, index) => {
+    lines: relations.map((relation, index) => {
       const winRate = divide(relation.teamAWin, relation.teamAWin + relation.teamBWin);
       return {
         showStartArrow: relation.teamAWin < relation.teamBWin,
@@ -318,7 +320,7 @@ function getBackgroundGradient(teamId: TeamId) {
 
 const router = useRouter();
 function toGameRecord(index: number) {
-  const relation = props.relations[index];
+  const relation = relations[index];
   return router.push({
     path: `/team/${relation.teamA}`,
     state: {

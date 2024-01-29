@@ -110,5 +110,6 @@
   "teams.relationGraph.description": "Based on the available data, for reference only.",
   "teams.relationGraph.help": "Click / drag / mousewheel",
   "home.numGamesCounted": "Games counted",
-  "home.numGamesWithDeck": "Games with deck"
+  "home.numGamesWithDeck": "Games with deck",
+  "stats.minGamesNum": "Games"
 }

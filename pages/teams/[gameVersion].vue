@@ -1,5 +1,5 @@
 <template>
-  <div u-flex="~ col gap-4">
+  <div u-flex="~ col gap-8">
     <div class="flex flex-wrap gap-2">
       <CharacterSelector v-model="includedCharacters" />
     </div>
@@ -10,6 +10,7 @@
       :scroll-x="1400"
       max-height="calc(100vh - 18rem)"
     />
+    <TeamMatchupTable v-bind="teamMatchups" />
     <ClientOnly>
       <TeamRelationsGraph :relations="relations" :team-stats-map="teamStatsMap" />
     </ClientOnly>
@@ -29,6 +30,7 @@ const { gameVersion, gameVersionPath } = useGameVersion({ detect: true });
 const { teamStatsMap } = await useTeamStatsMap(gameVersion);
 
 const { relations } = await useApiTeamRelations(gameVersion.value);
+const teamMatchups = await useApiTeamMatchups(gameVersion.value);
 
 const includedCharacters = ref<CharacterCard[]>([]);
 const data = computed(() =>

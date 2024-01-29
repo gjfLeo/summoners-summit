@@ -110,5 +110,6 @@
   "teams.relationGraph.description": "根据已收录数据生成，仅供参考",
   "teams.relationGraph.help": "支持点击、拖拽和滚轮交互。",
   "home.numGamesWithDeck": "含牌组对局",
-  "home.numGamesCounted": "已统计对局"
+  "home.numGamesCounted": "已统计对局",
+  "stats.minGamesNum": "最小场数"
 }
