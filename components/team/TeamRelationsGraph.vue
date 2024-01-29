@@ -85,7 +85,7 @@
             <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.gamesBanned'), teamStatsMap[inspectTeam].banned]) }}</NText>
             <div />
             <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.winRate'), toPercentageString(teamStatsMap[inspectTeam].winRate)]) }}</NText>
-            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.winRateExcludeSame'), teamStatsMap[inspectTeam].winRateExcludeSame]) }}</NText>
+            <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.winRateExcludeSame'), toPercentageString(teamStatsMap[inspectTeam].winRateExcludeSame)]) }}</NText>
             <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.starterWinRate'), toPercentageString(teamStatsMap[inspectTeam].starterWinRate)]) }}</NText>
             <NText>{{ $t('common.inlineStatisticFormat', [$t('stats.followerWinRate'), toPercentageString(teamStatsMap[inspectTeam].followerWinRate)]) }}</NText>
           </div>
