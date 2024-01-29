@@ -11,7 +11,7 @@
 import { type DataTableColumn, type DataTableColumns, NButton, NFormItem, NPopover, NSlider } from "naive-ui";
 import { divide } from "mathjs/number";
 import { NuxtLinkLocale, TeamAvatars } from "#components";
-import type { ApiTeamMatchupsData, TeamId } from "~/utils/types";
+import type { ApiTeamMatchupsData } from "~/utils/types";
 
 const props = defineProps<{
   teams: ApiTeamMatchupsData["teams"];
