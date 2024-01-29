@@ -12,7 +12,7 @@
   "actions.gameList": "View game list",
   "actions.teamDetail": "View team detail",
   "actions.viewDeck": "View the deck",
-  "actions.watchVideo": "Watch the video",
+  "actions.watchVideo": "Watch replay",
   "cards.numDecks": "Calculated from {n} deck. | Calculated from {n} decks.",
   "cards.numGames": "Calculated from {n} game. | Calculated from {n} games.",
   "common.actionCard": "Action Cards",
