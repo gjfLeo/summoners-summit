@@ -95,7 +95,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
             () => h("div", { class: "i-carbon:view" }),
           ),
         ),
-        default: () => h("span", t("actions.viewDeck")),
+        default: () => h("span", t("deck.gotoSimilarDeck")),
       },
     ),
   },

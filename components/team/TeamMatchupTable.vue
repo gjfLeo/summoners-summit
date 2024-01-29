@@ -96,7 +96,7 @@ const columns = computed<DataTableColumns<RowType>>(() => [
         default: () => h(
           NFormItem,
           {
-            label: t("stats.minGamesNum"),
+            label: t("teams.matchupTable.minGamesNum"),
             labelPlacement: "left",
             showFeedback: false,
           },

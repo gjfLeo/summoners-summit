@@ -43,12 +43,12 @@ const columns: DataTableColumns<typeof data["value"][number]> = [
   },
   {
     key: "total",
-    title: t("home.numGamesCounted"),
+    title: t("stats.numGames"),
     align: "center",
   },
   {
     key: "totalWithDeck",
-    title: t("home.numGamesWithDeck"),
+    title: t("stats.numGamesWithDeck"),
     align: "center",
   },
   {

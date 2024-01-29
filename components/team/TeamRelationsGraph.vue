@@ -121,7 +121,7 @@
             <div />
             <div>{{ toPercentageString(divide(relations[inspectRelation].teamBWin, relations[inspectRelation].teamAWin + relations[inspectRelation].teamBWin)) }}</div>
 
-            <div u-grid="col-1/5" class="mt-2">{{ $t('stats.statsComparisons') }}</div>
+            <div u-grid="col-1/5" class="mt-2">{{ $t('teams.relationGraph.statsComparisons') }}</div>
 
             <NText>{{ $t('stats.gamesPlayed') }}</NText>
             <div>{{ teamStatsMap[relations[inspectRelation].teamA].total }}</div>

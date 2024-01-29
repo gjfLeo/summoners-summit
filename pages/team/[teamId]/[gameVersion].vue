@@ -47,7 +47,7 @@
     <NTabPane name="statistics" :tab="$t('team.matchups')">
       <TeamTeamStatistics :team-id="teamId" :vs="vsTeamStatsMap" @view-game-list="viewGameList" />
     </NTabPane>
-    <NTabPane name="games" :tab="$t('deck.gameList')">
+    <NTabPane name="games" :tab="$t('team.gameList')">
       <template v-if="gameVersion">
         <CharacterSelector v-model="opponentCharacters" class="mb" :placeholder="$t('actions.characterSelector.opponentCharacter')" />
         <GameList :game-list="filteredGameList" />

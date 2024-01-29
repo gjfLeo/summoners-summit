@@ -38,9 +38,9 @@ export default function useMenuRoutes() {
     {
       name: t("menu.tools"),
       children: [
-        { path: "/tools/decode-deck-code", name: t("menu.tools.decodeDeckCode") },
-        { path: "/tools/data-builder", name: t("menu.tools.dataBuilder"), adminOnly: true },
-        { path: "/tools/card-image-check", name: t("menu.tools.cardImageCheck"), adminOnly: true },
+        { path: "/tools/decode-deck-code", name: t("menu.decodeDeckCode") },
+        { path: "/tools/data-builder", name: t("menu.dataBuilder"), adminOnly: true },
+        { path: "/tools/card-image-check", name: t("menu.cardImageCheck"), adminOnly: true },
       ],
     },
   ]);
