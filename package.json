@@ -11,8 +11,7 @@
     "preview": "nuxt preview",
     "preview:ssg": "npx serve .output/public",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit",
     "cleanup": "nuxt cleanup"
   },
