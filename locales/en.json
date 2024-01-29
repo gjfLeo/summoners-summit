@@ -15,8 +15,6 @@
   "actions.watchVideo": "Watch replay",
   "cards.numDecks": "Calculated from {n} deck. | Calculated from {n} decks.",
   "cards.numGames": "Calculated from {n} game. | Calculated from {n} games.",
-  "common.actionCard": "Action Cards",
-  "common.characterCard": "Character Cards",
   "common.deck": "Deck",
   "common.gameVersion": "Game Version",
   "common.gameVersionAll": "All",
@@ -112,5 +110,7 @@
   "stats.numGames": "Games counted",
   "stats.numGamesWithDeck": "Games with deck",
   "teams.matchupTable.minGamesNum": "Games",
-  "teams.relationGraph.statsComparisons": "Total stats comparisons"
+  "teams.relationGraph.statsComparisons": "Total stats comparisons",
+  "cards.actionCard": "Action Cards",
+  "cards.characterCard": "Character Cards"
 }
