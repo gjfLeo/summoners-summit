@@ -15,6 +15,8 @@
   "actions.watchVideo": "观看录像",
   "cards.numDecks": "共统计{n}个对局牌组",
   "cards.numGames": "共统计{n}场对局",
+  "common.actionCard": "行动牌",
+  "common.characterCard": "角色牌",
   "common.deck": "牌组",
   "common.gameVersion": "游戏版本",
   "common.gameVersionAll": "全版本",
@@ -23,6 +25,7 @@
   "deck.currentDeck": "当前牌组",
   "deck.gameList": "对局记录",
   "deck.similarDeck": "相似牌组",
+  "deck.typicalDeck": "典型构筑",
   "footer.about": "关于本站",
   "footer.author": "by gjfLeo",
   "footer.lastUpdate": "更新时间：{0}",
@@ -109,8 +112,5 @@
   "stats.numGames": "已统计对局",
   "stats.numGamesWithDeck": "含牌组对局",
   "teams.matchupTable.minGamesNum": "最小场数",
-  "teams.relationGraph.statsComparisons": "统计数据对比",
-  "team.typicalDeck": "典型构筑",
-  "cards.actionCard": "行动牌",
-  "cards.characterCard": "角色牌"
+  "teams.relationGraph.statsComparisons": "统计数据对比"
 }
