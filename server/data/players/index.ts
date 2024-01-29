@@ -82,6 +82,8 @@ const playerNicknameMapRaw: Record<string, string> = {
   "maya": "zCrimlet",
   "SI2": "StupidIdiot",
   "StupidIdiot": "RobotWizard",
+  "Komorebi": "王小雨",
+  "meaningless": "吴意",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",

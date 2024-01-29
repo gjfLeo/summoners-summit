@@ -1587,7 +1587,7 @@ export default defineTournament({
               games: [
                 {
                   playerACharacters: ["莫娜", "「女士」", "雷音权现"],
-                   playerAActions: defineActions({
+                  playerAActions: defineActions({
                     "悲号回唱": 2,
                     "赌徒的耳环": 2,
                     "饰金之梦": 2,
@@ -1635,7 +1635,7 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: ["莫娜", "「女士」", "雷音权现"],
-                   playerAActions: defineActions({
+                  playerAActions: defineActions({
                     "悲号回唱": 2,
                     "赌徒的耳环": 2,
                     "饰金之梦": 2,
