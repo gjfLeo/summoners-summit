@@ -1,8 +1,6 @@
 # Summoners' Summit
 
-<p>
-<b>简体中文</b> | <a href="https://github.com/gjfleo/summoners-summit/blob/main/README.en.md">English</a>
-</p>
+<p> </p>
 
 [![Crowdin](https://badges.crowdin.net/summoners-summit/localized.svg)](https://crowdin.com/project/summoners-summit)
 
@@ -81,7 +79,7 @@ Due to exceeding of building usage, the API no longer keeps updated on Netlify.S
 - [`/tournaments`](https://summoners-summit.netlify.app/api/v1/tournaments) - Get a list of all events.
   - [`?gameVersion=3.8`](https://summoners-summit.netlify.app/api/v1/tournaments?gameVersion=3.8) - Only get events from specified version. Default is all versions.
 - [`/tournaments/:tournamentId`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80) - Get general information of a tournament.
-- [`/tournaments/:tournamentId/details`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80/details) - 赛事信息，连同该赛事场次和对局
+- [`/tournaments/:tournamentId/details`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80/details) - Get detailed information of a tournament (including all matches' details).
 - [`/matches/:matchId`](https://summoners-summit.netlify.app/api/v1/matches/b7f4346442601d8001) - Get details of a specific match.
 - [`/games`](https://summoners-summit.netlify.app/api/v1/games) - Get a list of games.
   - [`?limit=10&offset=10`](https://summoners-summit.netlify.app/api/v1/games?limit=10\&offset=10) - Game count and offset for pagination. Default is `limit=50`.
