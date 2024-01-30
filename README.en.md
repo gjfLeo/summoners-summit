@@ -1,5 +1,11 @@
 # Summoners' Summit
 
+<p>
+<b>简体中文</b> | <a href="https://github.com/gjfleo/summoners-summit/blob/main/README.en.md">English</a>
+</p>
+
+[![Crowdin](https://badges.crowdin.net/summoners-summit/localized.svg)](https://crowdin.com/project/summoners-summit)
+
 Information hub for Genius Invokation TCG events.
 
 Website: https\://gjfleo.github.io/summoners-summit/
@@ -29,6 +35,8 @@ pnpm run dev
 
 ### Generating static pages
 
+For generating static pages of the website to be uploaded to GitHub Pages or another hosting service of choice.
+
 ```bash
 pnpm run generate
 ```
@@ -39,9 +47,9 @@ To preview:
 pnpm run preview:ssg
 ```
 
-For generating static pages of the website to be uploaded to GitHub Pages or another hosting service of choice.
-
 ### Building
+
+使用此命令构建 Node.js Server，可用于 API 调用。
 
 ```bash
 pnpm run build
@@ -52,8 +60,6 @@ To preview:
 ```bash
 pnpm run preview
 ```
-
-使用此命令构建 Node.js Server，可用于 API 调用。
 
 </details>
 
