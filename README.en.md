@@ -1,6 +1,6 @@
 # Summoners' Summit
 
-Information hub for Genius Invokation TCG.
+Information hub for Genius Invokation TCG events.
 
 Website: https\://gjfleo.github.io/summoners-summit/
 
