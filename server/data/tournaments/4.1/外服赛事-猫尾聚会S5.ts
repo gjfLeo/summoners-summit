@@ -14,7 +14,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "季军赛 The Third Place Round",
+          name: "季军赛",
           date: "2023-11-05",
           matches: [
             {
@@ -168,7 +168,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "决赛 The Final Round",
+          name: "决赛",
           date: "2023-11-05",
           matches: [
             {
@@ -287,7 +287,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "季军赛 The Third Place Round",
+          name: "季军赛",
           date: "2023-11-06",
           matches: [
             {
@@ -439,7 +439,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "决赛 The Final Round",
+          name: "决赛",
           date: "2023-11-06",
           matches: [
             {
@@ -604,7 +604,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "季军赛 The Third Place Round",
+          name: "季军赛",
           date: "2023-11-06",
           matches: [
             {
@@ -757,7 +757,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "决赛 The Final Round",
+          name: "决赛",
           date: "2023-11-06",
           matches: [
             {
