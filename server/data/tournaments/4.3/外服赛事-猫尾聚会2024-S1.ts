@@ -5,7 +5,7 @@ export default defineTournament({
   gameVersion: "4.3",
   stages: [
     {
-      name: "亚服",
+      name: "亚服 Asia",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -334,7 +334,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "欧服",
+      name: "欧服 Europe",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -615,7 +615,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "美服",
+      name: "美服 America",
       rules: {
         numDecks: 3,
         numGames: 3,
