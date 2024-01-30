@@ -1,5 +1,11 @@
 # 召唤之巅
 
+<p>
+<b>简体中文</b> | <a href="https://github.com/gjfleo/summoners-summit/blob/main/README.en.md">English</a>
+</p>
+
+[![Crowdin](https://badges.crowdin.net/summoners-summit/localized.svg)](https://crowdin.com/project/summoners-summit)
+
 七圣召唤赛事资料。
 
 网站地址：https://gjfleo.github.io/summoners-summit/
