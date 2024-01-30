@@ -10,10 +10,12 @@
       :scroll-x="1400"
       max-height="calc(100vh - 18rem)"
     />
-    <TeamMatchupTable v-bind="teamMatchups" />
-    <ClientOnly>
-      <TeamRelationsGraph :relations="relations" :team-stats-map="teamStatsMap" />
-    </ClientOnly>
+    <template v-if="gameVersion">
+      <TeamMatchupTable v-bind="teamMatchups" />
+      <ClientOnly>
+        <TeamRelationsGraph :relations="relations" :team-stats-map="teamStatsMap" />
+      </ClientOnly>
+    </template>
   </div>
 </template>
 
