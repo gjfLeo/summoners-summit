@@ -63,7 +63,7 @@ pnpm run preview
 
 ## Regarding data
 
-As this is a purely front-end project, all data is currently stored in the source code.However, since the pages are generated using SSG, it's not a big problem for now.
+As this is a purely front-end project, all data is currently stored in the source code. However, since the pages are generated using SSG, it's not a big problem for now.
 
 - Tournament data is stored [here](./server/data/tournaments).
 - Players' display name mappings are stored [here](./server/data/players/index.ts).
@@ -72,7 +72,7 @@ As this is a purely front-end project, all data is currently stored in the sourc
 
 The project includes a built-in API that is mainly used to fetch data for static website generation.
 
-Due to exceeding of building usage, the API no longer keeps updated on Netlify.Still available by starting a local server.
+Due to exceeding of building usage, the API no longer keeps updated on Netlify. Still available by starting a local server.
 
 <details><summary>Example API usage</summary>
 
