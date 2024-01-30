@@ -1,8 +1,12 @@
 # Summoners' Summit
 
+<p> </p>
+
+[![Crowdin](https://badges.crowdin.net/summoners-summit/localized.svg)](https://crowdin.com/project/summoners-summit)
+
 Information hub for Genius Invokation TCG events.
 
-Website: https://gjfleo.github.io/summoners-summit/
+Website: https\://gjfleo.github.io/summoners-summit/
 
 The project is mainly based on [Nuxt](https://nuxt.com/), and the website is deployed on GitHub Pages using static site generation (SSG).
 
@@ -11,35 +15,46 @@ The project is mainly based on [Nuxt](https://nuxt.com/), and the website is dep
 <details><summary>Deploy instructions</summary>
 
 ### Environment
+
 - Node: 18.x
 - pnpm
 
 ### Installing dependencies
+
 ```bash
 pnpm i
 ```
 
 ### Deploying locally
+
 ```bash
 pnpm run dev
 ```
 
 ### Generating static pages
+
 For generating static pages of the website to be uploaded to GitHub Pages or another hosting service of choice.
+
 ```bash
 pnpm run generate
 ```
+
 To preview:
+
 ```bash
 pnpm run preview:ssg
 ```
 
 ### Building
-For building a Node.js server that serves API calls.
+
+使用此命令构建 Node.js Server，可用于 API 调用。
+
 ```bash
 pnpm run build
 ```
+
 To preview:
+
 ```bash
 pnpm run preview
 ```
@@ -57,7 +72,7 @@ As this is a purely front-end project, all data is currently stored in the sourc
 
 The project includes a built-in API that is mainly used to fetch data for static website generation.
 
-Due to exceeding of building usage, the API is no longer updated on Netlify. Still available by starting a local server.
+Due to exceeding of building usage, the API no longer keeps updated on Netlify. Still available by starting a local server.
 
 <details><summary>Example API usage</summary>
 
@@ -67,7 +82,7 @@ Due to exceeding of building usage, the API is no longer updated on Netlify. Sti
 - [`/tournaments/:tournamentId/details`](https://summoners-summit.netlify.app/api/v1/tournaments/b7f4346442601d80/details) - Get detailed information of a tournament (including all matches' details).
 - [`/matches/:matchId`](https://summoners-summit.netlify.app/api/v1/matches/b7f4346442601d8001) - Get details of a specific match.
 - [`/games`](https://summoners-summit.netlify.app/api/v1/games) - Get a list of games.
-  - [`?limit=10&offset=10`](https://summoners-summit.netlify.app/api/v1/games?limit=10&offset=10) - Game count and offset for pagination. Default is `limit=50`.
+  - [`?limit=10&offset=10`](https://summoners-summit.netlify.app/api/v1/games?limit=10\&offset=10) - Game count and offset for pagination. Default is `limit=50`.
   - Other parameters TBA.
 - [`/decks/:deckId`](https://summoners-summit.netlify.app/api/v1/decks/dd6dae64467a5555) - Get information of a specific deck.
 - [`/team-stats`](https://summoners-summit.netlify.app/api/v1/team-stats) - Get statistics of all main deck combinations.
