@@ -11,40 +11,47 @@
 <details><summary>项目部署</summary>
 
 ### 项目环境
+
 - Node: 18.x
 - pnpm
 
 ### 安装依赖
+
 ```bash
 pnpm i
 ```
 
 ### 本地服务器
+
 ```bash
 pnpm run dev
 ```
 
 ### 生成静态页面
+
+使用此命令生成静态页面，用于将网站部分部署至 GitHub Pages 等。
+
 ```bash
 pnpm run generate
 ```
+
 预览：
 ```bash
 pnpm run preview:ssg
 ```
 
-使用此命令生成静态页面，用于将网站部分部署至 GitHub Pages 等。
-
 ### 构建
+
+使用此命令构建 Node.js Server，可用于 API 调用。
+
 ```bash
 pnpm run build
 ```
+
 预览：
 ```bash
 pnpm run preview
 ```
-
-使用此命令构建 Node.js Server，可用于 API 调用。
 
 </details>
 
