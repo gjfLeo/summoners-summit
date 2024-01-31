@@ -101,7 +101,7 @@
   "team.numDecksWin": "Calculated from {n} win game with deck in available data. | Calculated from {n} win games with deck in available data.",
   "team.statsByVersion": "Stats by Version",
   "teams.relationGraph.description": "Based on the available data, for reference only.",
-  "teams.relationGraph.help": "Click / drag / mousewheel",
+  "teams.relationGraph.help": "Click / drag / mouse wheel",
   "deck.gotoSimilarDeck": "View deck",
   "team.gameList": "Game List",
   "menu.decodeDeckCode": "Decode Deck Share Code",
