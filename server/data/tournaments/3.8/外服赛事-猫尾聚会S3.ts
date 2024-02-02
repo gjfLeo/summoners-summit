@@ -3,7 +3,7 @@ import { defineActions, defineTournament } from "~/utils/types";
 export default defineTournament({
   name: "Cat's Tail Gathering S3",
   type: "外服赛事",
-  gameVersion: "4.0",
+  gameVersion: "3.8",
   stages: [
     {
       name: "亚服 Asia",
@@ -19,7 +19,7 @@ export default defineTournament({
           matches: [
             {
               playerA: "Enzo",
-              playerB: "ZCrimlet",
+              playerB: "zCrimlet",
               video: "https://www.youtube.com/watch?v=0oR53h_RGDY&t=3049s",
               games: [
                 {
