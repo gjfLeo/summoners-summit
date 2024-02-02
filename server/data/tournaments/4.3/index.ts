@@ -8,7 +8,7 @@ import t17 from "./其他-亚洲邀请赛";
 import t18 from "./积分赛-月话杯";
 import t19 from "./积分赛-火星杯";
 import t20 from "./积分赛-米游社";
-import t21 from "./外服赛事-猫尾聚会2024-S1";
+import t41 from "./外服赛事-猫尾聚会2024-S1";
 
 export default [
   t11,
@@ -21,5 +21,5 @@ export default [
   t18,
   t19,
   t20,
-  t21,
+  t41,
 ];

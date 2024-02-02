@@ -8,6 +8,7 @@ import t17 from "./积分赛-好游快爆杯";
 import t21 from "./主播赛-虎牙";
 import t22 from "./主播赛-斗鱼";
 import t31 from "./积分赛试办赛-绯雪杯";
+import t41 from "./外服赛事-猫尾聚会S3";
 
 export default [
   t11,
@@ -20,4 +21,5 @@ export default [
   t21,
   t22,
   t31,
+  t41,
 ];
