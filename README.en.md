@@ -47,7 +47,7 @@ pnpm run preview:ssg
 
 ### Building
 
-使用此命令构建 Node.js Server，可用于 API 调用。
+Use this command to build Node.js Server, which can be used for API calls.
 
 ```bash
 pnpm run build
