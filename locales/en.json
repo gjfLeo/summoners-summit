@@ -82,7 +82,7 @@
   "stats.followerWinRate": "\"Start Second\" win rate",
   "stats.gamesBanned": "Banned",
   "stats.gamesBP": "Games played + banned",
-  "stats.gamesNetWins": "Net win count",
+  "stats.gamesNetWins": "Net wins",
   "stats.gamesPlayed": "Played",
   "stats.gamesPlayedExcludeSame": "Game count w/o mirror match",
   "stats.gamesWin": "Wins",
