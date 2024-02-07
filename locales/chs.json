@@ -123,7 +123,7 @@
   "player.gameWinRate": "对局胜率",
   "player.gameList": "对局记录",
   "player.otherNicknames": "其他昵称：{0}",
-  "player.chart.matchCountLabel": "{0}胜\\u2006{1}负",
+  "player.chart.matchCountLabel": "{0}胜 {1}负",
   "player.chart.axisMatches": "场数",
   "player.chart.axisWinRate": "胜率(%)",
   "player.chart.numMatchesWin": "胜场数",

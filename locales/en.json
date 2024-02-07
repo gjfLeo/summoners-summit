@@ -112,5 +112,20 @@
   "teams.matchupTable.minGamesNum": "Games",
   "teams.relationGraph.statsComparisons": "Total stats comparisons",
   "cards.actionCard": "Action Cards",
-  "cards.characterCard": "Character Cards"
+  "cards.characterCard": "Character Cards",
+  "player.nickname": "Nickname",
+  "player.referenceOnly": "For reference only.",
+  "player.numMatches": "Matches",
+  "player.numMatchesWin": "Matches win",
+  "player.matchWinRate": "Matches win rate",
+  "player.numGames": "Games",
+  "player.numGamesWin": "Games win",
+  "player.gameWinRate": "Games win rate",
+  "player.gameList": "Game Record",
+  "player.otherNicknames": "Other nicknames: {0}",
+  "player.chart.matchCountLabel": "{0}W {1}L",
+  "player.chart.axisMatches": "Matches",
+  "player.chart.axisWinRate": "Win rate (%)",
+  "player.chart.numMatchesWin": "Matches win",
+  "player.chart.numMatchesLose": "Matches lose"
 }
