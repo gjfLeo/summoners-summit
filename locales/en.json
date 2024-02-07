@@ -123,9 +123,9 @@
   "player.gameWinRate": "Games win rate",
   "player.gameList": "Game Record",
   "player.otherNicknames": "Other nicknames: {0}",
-  "player.chart.matchCountLabel": "{0}胜\\u2006{1}负",
-  "player.chart.axisMatches": "场数",
-  "player.chart.axisWinRate": "胜率(%)",
-  "player.chart.numMatchesWin": "胜场数",
-  "player.chart.numMatchesLose": "负场数"
+  "player.chart.matchCountLabel": "{0}W {1}L",
+  "player.chart.axisMatches": "Matches",
+  "player.chart.axisWinRate": "Win rate (%)",
+  "player.chart.numMatchesWin": "Matches win",
+  "player.chart.numMatchesLose": "Matches lose"
 }
