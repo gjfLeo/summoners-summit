@@ -62,9 +62,10 @@ export default defineNuxtConfig({
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "chs",
+    baseUrl: "https://gjfleo.github.io/summoners-summit/",
     locales: [
-      { code: "chs", name: "简体中文" },
-      { code: "en", name: "English" },
+      { code: "chs", name: "简体中文", iso: "zh-CN", isCatchallLocale: true },
+      { code: "en", name: "English", iso: "en-US" },
     ],
   },
 });

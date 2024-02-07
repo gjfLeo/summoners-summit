@@ -76,6 +76,7 @@ const { routes } = useMenuRoutes();
 
 useRouteLoadingBar();
 
+const { t } = useI18n();
 const localePath = useLocalePath();
 
 const { locale, locales, setLocale } = useI18n();
@@ -87,4 +88,13 @@ const localeOptions = computed(() => {
         : { label: locale.name, value: locale.code }
     ));
 });
+watch(
+  locale,
+  () => {
+    useSeoMeta({
+      description: t("site.description"),
+    });
+  },
+  { immediate: true },
+);
 </script>

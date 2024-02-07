@@ -127,5 +127,6 @@
   "player.chart.axisMatches": "Matches",
   "player.chart.axisWinRate": "Win rate (%)",
   "player.chart.numMatchesWin": "Matches win",
-  "player.chart.numMatchesLose": "Matches lose"
+  "player.chart.numMatchesLose": "Matches lose",
+  "site.description": "Tournament Match Database for GITCG"
 }

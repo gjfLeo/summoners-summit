@@ -46,4 +46,8 @@ html, body , #__nuxt{
   padding: 0;
   /* @apply font-sans text-base; */
 }
+
+.n-data-table .n-data-table-th {
+  word-break: keep-all;
+}
 </style>

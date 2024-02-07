@@ -127,5 +127,6 @@
   "player.chart.axisMatches": "场数",
   "player.chart.axisWinRate": "胜率(%)",
   "player.chart.numMatchesWin": "胜场数",
-  "player.chart.numMatchesLose": "负场数"
+  "player.chart.numMatchesLose": "负场数",
+  "site.description": "七圣召唤赛事资料"
 }
