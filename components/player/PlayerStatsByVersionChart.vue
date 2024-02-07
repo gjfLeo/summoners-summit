@@ -21,6 +21,8 @@ const props = defineProps<{
   statsByVersion: ApiPlayerStatsByVersionData["statsByVersion"];
 }>();
 
+const { t } = useI18n();
+
 const labels = computed(() => props.statsByVersion.map(item => item.gameVersion));
 
 const dataMatchWinRate = computed(() => props.statsByVersion.map(item => divide(item.matchWin, item.matchTotal)));
@@ -40,7 +42,7 @@ const data = computed<ChartData>(() => ({
   datasets: [
     {
       type: "line",
-      label: "场次胜率",
+      label: t("player.matchWinRate"),
       data: dataMatchWinRate.value,
       yAxisID: "yPercent",
       borderColor: theme.value.infoColor,
@@ -59,7 +61,7 @@ const data = computed<ChartData>(() => ({
     },
     {
       type: "line",
-      label: "对局胜率",
+      label: t("player.gameWinRate"),
       data: dataGameWinRate.value,
       yAxisID: "yPercent",
       borderColor: theme.value.warningColorHover,
@@ -78,7 +80,7 @@ const data = computed<ChartData>(() => ({
     },
     {
       type: "bar",
-      label: "胜场数",
+      label: t("player.numMatchesWinShort"),
       data: dataMatchWin.value,
       yAxisID: "yCount",
       backgroundColor: "#368cf180",
@@ -88,13 +90,13 @@ const data = computed<ChartData>(() => ({
         align: "end",
         formatter: (v, context) => {
           const lose = dataMatchLose.value[context.dataIndex];
-          return (v + lose > 0) ? `${v}胜\u2006${lose}负` : "";
+          return (v + lose > 0) ? t("player.chart.matchCountLabel", [v, lose]) : "";
         },
       },
     },
     {
       type: "bar",
-      label: "负场数",
+      label: t("player.numMatchesLoseShort"),
       data: dataMatchLose.value,
       backgroundColor: "#808080",
       yAxisID: "yCount",
@@ -113,7 +115,7 @@ const options = computed<ChartOptions>(() => ({
         label(ctx) {
           let label = ctx.dataset.label ?? "";
           if (label) {
-            label += "：";
+            label += ": ";
           }
           if (ctx.dataset.yAxisID === "yPercent") {
             label += Number(ctx.parsed.y * 100).toFixed(2);
@@ -131,14 +133,14 @@ const options = computed<ChartOptions>(() => ({
     x: {
       title: {
         display: true,
-        text: "版本",
+        text: t("common.gameVersionShort"),
       },
     },
     yCount: {
       stacked: true,
       title: {
         display: true,
-        text: "场数",
+        text: t("player.chart.axisMatches"),
       },
       min: 0,
       max: countMax.value,
@@ -159,7 +161,7 @@ const options = computed<ChartOptions>(() => ({
       position: "right",
       title: {
         display: true,
-        text: "胜率(%)",
+        text: t("player.chart.axisWinRate"),
       },
     },
   },

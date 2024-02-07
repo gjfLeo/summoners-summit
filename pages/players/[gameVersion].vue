@@ -1,13 +1,13 @@
 <template>
   <div class="mb flex flex-row flex-wrap-reverse items-center justify-between gap-4">
     <div>
-      <NInput v-model:value="playerFilter" clearable placeholder="选手昵称">
+      <NInput v-model:value="playerFilter" clearable :placeholder="$t('player.nickname')">
         <template #suffix>
           <NIcon><div class="i-carbon:search" /></NIcon>
         </template>
       </NInput>
     </div>
-    <NText :depth="3" class="text-sm">统计可能不全，数据仅供参考</NText>
+    <NText :depth="3" class="text-sm">{{ $t('player.referenceOnly') }}</NText>
   </div>
   <NDataTable
     :columns="columns"
@@ -58,18 +58,18 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     ),
   },
   {
-    title: "记录场数",
+    title: t("player.numMatches"),
     key: "matchTotal",
     width: "6rem",
     align: "center",
     sorter: "default",
     filterMultiple: false,
-    filterOptions: [2, 3, 5, 10].map(v => ({ label: `至少${v}场`, value: v })),
+    filterOptions: [2, 3, 5, 10].map(v => ({ label: t("stats.atLeast", [v]), value: v })),
     defaultFilterOptionValue: null,
     filter: (value, row) => row.matchTotal >= Number(value),
   },
   {
-    title: "胜利场数",
+    title: t("player.numMatchesWin"),
     key: "matchWin",
     width: "6rem",
     align: "center",
@@ -77,7 +77,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     defaultSortOrder: "descend",
   },
   {
-    title: "场次胜率",
+    title: t("player.matchWinRate"),
     key: "matchWinRate",
     width: "6rem",
     align: "center",
@@ -85,21 +85,21 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     render: row => toPercentageString(row.matchWinRate),
   },
   {
-    title: "记录对局数",
+    title: t("player.numGames"),
     key: "gameTotal",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "胜利对局数",
+    title: t("player.numGamesWin"),
     key: "gameWin",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
-    title: "对局胜率",
+    title: t("player.gameWinRate"),
     key: "gameWinRate",
     width: "6rem",
     align: "center",

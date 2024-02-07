@@ -1,6 +1,6 @@
 <template>
   <NH1>{{ player.uniqueName }}</NH1>
-  <NText v-if="player.aliases?.length" class="mt block" :depth="3">其他昵称：{{ player.aliases.join("\u2006/\u2006") }}</NText>
+  <NText v-if="player.aliases?.length" class="mt block" :depth="3">{{ $t('player.otherNicknames', [player.aliases.join("\u2006/\u2006")]) }}</NText>
   <NText v-if="player.awards?.length" class="mt block" :depth="2">{{ player.awards.join("、") }}</NText>
 
   <div v-if="player.achievements?.length">
@@ -23,19 +23,11 @@
   <PlayerStatsStatistics :stats-by-version="statsByVersion" />
   <div class="flex justify-end">
     <NText class="flex gap-2 text-sm" :depth="3">
-      <span>统计可能不全，数据仅供参考</span>
-      <NTooltip>
-        <template #trigger>
-          <NIcon class="text-lg"><div class="i-carbon:information" /></NIcon>
-        </template>
-        <template #default>
-          <span>一些早期赛事缺少完整录像，因此未纳入统计；部分赛事仅直播焦点对局，其他对局未统计。</span>
-        </template>
-      </NTooltip>
+      <span>{{ $t('player.referenceOnly') }}</span>
     </NText>
   </div>
 
-  <NH2>对局记录</NH2>
+  <NH2>{{ $t('player.gameList') }}</NH2>
   <PlayerMatchList :matches="matches" :games="games" />
 </template>
 

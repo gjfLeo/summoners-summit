@@ -3,11 +3,11 @@
     class="mt text-center"
     u-flex="~ wrap items-center justify-center gap-4"
   >
-    <NStatistic label="总统计场数" :value="matchTotal" />
+    <NStatistic :label="$t('player.numMatches')" :value="matchTotal" />
     <NDivider class="h-12!" vertical />
-    <NStatistic label="总场次胜率" :value="matchWinRate" />
+    <NStatistic :label="$t('player.matchWinRate')" :value="matchWinRate" />
     <NDivider class="h-12!" vertical />
-    <NStatistic label="总对局胜率" :value="gameWinRate" />
+    <NStatistic :label="$t('player.gameWinRate')" :value="gameWinRate" />
   </div>
 </template>
 
