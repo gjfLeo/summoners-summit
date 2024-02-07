@@ -80,7 +80,7 @@ const data = computed<ChartData>(() => ({
     },
     {
       type: "bar",
-      label: t("player.numMatchesWinShort"),
+      label: t("player.chart.numMatchesWin"),
       data: dataMatchWin.value,
       yAxisID: "yCount",
       backgroundColor: "#368cf180",
@@ -96,7 +96,7 @@ const data = computed<ChartData>(() => ({
     },
     {
       type: "bar",
-      label: t("player.numMatchesLoseShort"),
+      label: t("player.chart.numMatchesLose"),
       data: dataMatchLose.value,
       backgroundColor: "#808080",
       yAxisID: "yCount",
