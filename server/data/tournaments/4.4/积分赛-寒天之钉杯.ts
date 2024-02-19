@@ -1,3 +1,5 @@
+import { defineActions, defineTournament } from "~/utils/types";
+
 export default defineTournament({
   name: "寒天之钉杯",
   type: "全民积分赛",
