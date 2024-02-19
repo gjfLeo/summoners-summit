@@ -73,6 +73,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "WilliemKmetsch": "贝尔格里",
   "暖冰扔进冷火里": "长门有希",
   "冷たい空": "雪乃",
+  "无光": "无光之眼",
 
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
