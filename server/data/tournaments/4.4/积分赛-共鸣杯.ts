@@ -3,7 +3,7 @@ import { defineTournament } from "~/utils/types";
 export default defineTournament({
   name: "共鸣杯",
   type: "全民积分赛",
-  gameVersion: "4.3",
+  gameVersion: "4.4",
   stages: [
     {
       name: "16进8",
