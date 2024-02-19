@@ -137,7 +137,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "天空之刃": defineActionCardInfo({ id: 311504, name: "天空之刃", nameEn: "Skyward Blade", type: "Equipment", type2: "Weapon" }),
   "西风剑": defineActionCardInfo({ id: 311505, name: "西风剑", nameEn: "Favonius Sword", type: "Equipment", type2: "Weapon" }),
   "裁叶萃光": defineActionCardInfo({ id: 311506, name: "裁叶萃光", nameEn: "Light of Foliar Incision", type: "Equipment", type2: "Weapon" }),
-  // "原木刀": defineActionCardInfo({ id: 311507, name: "原木刀", nameEn: "Sapwood Blade", type: "Equipment", type2: "Weapon" }),
+  "原木刀": defineActionCardInfo({ id: 311507, name: "原木刀", nameEn: "Sapwood Blade", type: "Equipment", type2: "Weapon" }),
 
   // 圣遗物
   "冒险家头带": defineActionCardInfo({ id: 312001, name: "冒险家头带", nameEn: "Adventurer's Bandana", type: "Equipment", type2: "Artifact" }),
