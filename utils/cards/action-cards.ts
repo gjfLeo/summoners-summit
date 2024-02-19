@@ -93,7 +93,7 @@ export const ALL_ACTION_CARDS_INFO = {
   "魔蝎烈祸": defineActionCardInfo({ id: 223031, name: "魔蝎烈祸", nameEn: "Scorpocalypse", type: "Equipment", type2: "Talent" }),
   "汲能棱晶": defineActionCardInfo({ id: 204011, name: "汲能棱晶", nameEn: "Absorbing Prism", type: "Event", type2: "Talent" }),
   "悲号回唱": defineActionCardInfo({ id: 204021, name: "悲号回唱", nameEn: "Grieving Echo", type: "Equipment", type2: "Talent" }),
-  "明珠固化": defineActionCardInfo({id: 204031, name: "明珠固化", nameEn: "Pearl Solidification", type: "Event", type2: "Talent" }),
+  "明珠固化": defineActionCardInfo({ id: 204031, name: "明珠固化", nameEn: "Pearl Solidification", type: "Event", type2: "Talent" }),
   "机巧神通": defineActionCardInfo({ id: 225011, name: "机巧神通", nameEn: "Transcendent Automaton", type: "Equipment", type2: "Talent" }),
   "毁裂风涡": defineActionCardInfo({ id: 225021, name: "毁裂风涡", nameEn: "Rending Vortex", type: "Equipment", type2: "Talent" }),
   "重铸：岩盔": defineActionCardInfo({ id: 226011, name: "重铸：岩盔", nameEn: "Stonehide Reforged", type: "Equipment", type2: "Talent" }),

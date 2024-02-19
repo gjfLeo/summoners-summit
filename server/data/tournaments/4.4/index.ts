@@ -4,3 +4,4 @@ import t12 from "./积分赛-共鸣杯";
 export default [
   t11,
   t12,
+];

@@ -88,7 +88,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "Sumi": "diarin",
   "AFKay": "唐傀",
   "CJRzzZ": "自古二楼",
-  "Lp|葉山": "葉山", 
+  "Lp|葉山": "葉山",
 
   "甜甜花酿鸡队": "",
   "莲花酥队": "",
