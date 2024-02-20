@@ -2,6 +2,7 @@ import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "Cat's Tail Gathering 2024 S1 ",
+  type: "外服赛事",
   gameVersion: "4.3",
   stages: [
     {
