@@ -74,7 +74,10 @@ const playerNicknameMapRaw: Record<string, string> = {
   "暖冰扔进冷火里": "长门有希",
   "冷たい空": "雪乃",
   "无光": "无光之眼",
-
+  "红颜~nano": "红颜",
+  "理塘牢桐": "梧桐",
+  "小红帽的大兔子": "小梦",
+  
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
   "kamisama": "卡密sama",
