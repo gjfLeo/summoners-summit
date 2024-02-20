@@ -143,7 +143,7 @@ export default defineTournament({
               ],
             },
           ],
-        }
+        },
         {
           name: "DAY2",
           date: "2024-02-19",
