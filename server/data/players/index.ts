@@ -77,6 +77,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "红颜~nano": "红颜",
   "理塘牢桐": "梧桐",
   "小红帽的大兔子": "小梦",
+  "聿九音": "轻篱",
   
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
