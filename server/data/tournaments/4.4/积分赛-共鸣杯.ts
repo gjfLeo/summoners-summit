@@ -267,9 +267,9 @@ export default defineTournament({
     {
       name: "8进4",
       rules: {
-        numDecks: 3,
+        numDecks: 4,
         numDecksBanned: 1,
-        numGames: 3,
+        numGames: 5,
         mode: "Conquest",
       },
       parts: [
