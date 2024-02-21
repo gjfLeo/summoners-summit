@@ -223,7 +223,7 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
-                  playerBCharacters: ["莫娜", "", "若陀龙王"],
+                  playerBCharacters: ["莫娜", "千年珍珠骏麟", "若陀龙王"],
                   starter: "B",
                   winner: "A",
                 },
