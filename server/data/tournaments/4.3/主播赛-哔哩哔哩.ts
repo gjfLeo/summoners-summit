@@ -2,6 +2,7 @@ import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "哔哩哔哩七圣召唤平台资格赛",
+  type: "主播资格赛",
   gameVersion: "4.3",
   stages: [
     {
