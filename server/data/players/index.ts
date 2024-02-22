@@ -78,6 +78,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "理塘牢桐": "梧桐",
   "小红帽的大兔子": "小梦",
   "聿九音": "轻篱",
+  "胡桃小姐单推人": "胡桃花开青雀鸣",
   
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
