@@ -365,6 +365,97 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-02-21",
+          matches: [
+            {
+              playerA: "挽挽",
+              playerB: "小铭同学",
+              video: "https://www.bilibili.com/video/BV1cH4y177Lv",
+              banned: [
+                {
+                  playerACharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  playerBCharacters: ["珊瑚宫心海", "芭芭拉", "凝光"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["雷电将军", "香菱", "刻晴"],
+                  playerBCharacters: ["林尼", "菲谢尔", "纳西妲"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["雷电将军", "香菱", "刻晴"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "莱依拉"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["雷电将军", "香菱", "刻晴"],
+                  playerBCharacters: ["迪希雅", "琴", "琳妮特"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "Takey",
+              playerB: "胡桃花开青雀鸣",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莱依拉", "凝光", "芭芭拉"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["雷电将军", "香菱", "刻晴"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["珊瑚宫心海", "凝光", "芭芭拉"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["可莉", "刻晴", "班尼特"],
+                  playerBCharacters: ["莫娜", "雷音权现", "「女士」"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["可莉", "刻晴", "班尼特"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
