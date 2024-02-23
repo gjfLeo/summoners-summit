@@ -320,6 +320,21 @@ const CARD_ORDER: readonly (ActionCard | CharacterCard)[] = [
   "坍陷与契机",
   "浮烁的四叶印",
   "炸鱼薯条",
+  "托马", // 319
+  "早柚",
+  "无相之冰",
+  "千年珍珠骏麟",
+  "僚佐的才巧",
+  "偷懒的新方法",
+  "严霜棱晶",
+  "明珠固化",
+  "原木刀",
+  "老兵的容颜",
+  "婕德",
+  "西尔弗和迈勒斯",
+  "机关铸成之链",
+  "净觉花",
+  "松茸酿肉卷",
 ];
 
 export const CARD_BY_ENCODE_ID: Record<number, CharacterCard | ActionCard> = Object.fromEntries(
