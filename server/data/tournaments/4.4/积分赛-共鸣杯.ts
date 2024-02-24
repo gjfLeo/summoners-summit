@@ -458,5 +458,96 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-02-23",
+          matches: [
+            {
+              playerA: "理塘牢桐",
+              playerB: "贝尔格里",
+              video: "https://www.bilibili.com/video/BV1mH4y1j7EM",
+              banned: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["芭芭拉", "凝光", "莱依拉"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["行秋", "若陀龙王", "无相之冰"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["夜兰", "雷音权现", "「女士」"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "小铭同学",
+              playerB: "胡桃花开青雀鸣",
+              video: "https://www.bilibili.com/video/BV1mH4y1j7EM",
+              banned: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["千年珍珠骏麟", "班尼特", "早柚"],
+                  playerBCharacters: ["夜兰", "丽莎", "赛诺"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  playerBCharacters: ["莱依拉", "凝光", "芭芭拉"],
+                  starter: "B",
+                  winner: "",
+                },
+                {
+                  playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
+                  playerBCharacters: ["莫娜", "雷音权现", "「女士」"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["千年珍珠骏麟", "班尼特", "早柚"],
+                  playerBCharacters: ["莱依拉", "凝光", "芭芭拉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莱依拉", "凝光", "芭芭拉"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
