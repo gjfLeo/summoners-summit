@@ -415,6 +415,7 @@ export default defineTournament({
             {
               playerA: "Takey",
               playerB: "胡桃花开青雀鸣",
+              video: "https://www.bilibili.com/video/BV1zu4m1A7XM",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
