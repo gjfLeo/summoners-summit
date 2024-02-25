@@ -93,7 +93,7 @@ export interface Game {
   playerBDeckId?: DeckId;
 
   starter: "A" | "B" | "";
-  winner: "A" | "B";
+  winner: "A" | "B" | "D";
   turns?: number;
 }
 

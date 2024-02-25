@@ -44,7 +44,7 @@ export interface GameRawData {
   playerBCharacters: Deck["characterCards"];
   playerBActions?: Deck["actionCards"];
   starter: "A" | "B" | "";
-  winner: "A" | "B";
+  winner: "A" | "B" | "D";
   turns?: number;
   video?: string;
 }

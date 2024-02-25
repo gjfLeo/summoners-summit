@@ -524,7 +524,7 @@ export default defineTournament({
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
                   playerBCharacters: ["莱依拉", "凝光", "芭芭拉"],
                   starter: "B",
-                  winner: "",
+                  winner: "D",
                 },
                 {
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
