@@ -22,7 +22,7 @@ export default defineTournament({
             {
               playerA: "清弦",
               playerB: "云野空悠",
-              video: "https://www.bilibili.com/video/BV1Ne411J76G",
+              video: "https://www.bilibili.com/video/BV19J4m1s7Hn",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -75,7 +75,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1Ne411J76G",
                 },
                 {
                   playerACharacters: ["迪希雅", "琴", "琳妮特"],
@@ -124,7 +123,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1RK4y1i7KW",
                 },
                 {
                   playerACharacters: ["班尼特", "雷音权现", "若陀龙王"],
@@ -171,14 +169,13 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1464y1w7gX",
                 },
               ],
             },
             {
               playerA: "萌萌带格蕾修",
               playerB: "希摩",
-              video: "https://www.bilibili.com/video/BV1hZ4y1n7ea",
+              video: "https://www.bilibili.com/video/BV19J4m1s7Hn",
               banned: [
                 {
                   playerACharacters: ["芭芭拉", "凝光", "珊瑚宫心海"],
@@ -233,7 +230,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1hZ4y1n7ea",
                 },
                 {
                   playerACharacters: ["莫娜", "优菈", "流浪者"],
@@ -284,7 +280,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1vp4y1m7Nn",
                 },
                 {
                   playerACharacters: ["莫娜", "优菈", "流浪者"],
@@ -336,7 +331,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1vp4y1m7Nn",
                 },
               ],
             },
@@ -349,7 +343,7 @@ export default defineTournament({
             {
               playerA: "Tonbo",
               playerB: "喵帕斯",
-              video: "https://www.bilibili.com/video/BV1Cb4y1A73x",
+              video: "https://www.bilibili.com/video/BV1Nt421p7Gg",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -403,7 +397,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1Cb4y1A73x",
                 },
                 {
                   playerACharacters: ["流浪者", "莫娜", "优菈"],
@@ -452,7 +445,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV17p4y1m7wM",
                 },
                 {
                   playerACharacters: ["班尼特", "雷音权现", "可莉"],
@@ -500,14 +492,13 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1v5411k78K",
                 },
               ],
             },
             {
               playerA: "贝尔格里",
               playerB: "王小雨",
-              video: "https://www.bilibili.com/video/BV1ye411E77b",
+              video: "https://www.bilibili.com/video/BV1Nt421p7Gg",
               banned: [
                 {
                   playerACharacters: ["班尼特", "雷音权现", "可莉"],
@@ -560,7 +551,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1ye411E77b",
                 },
                 {
                   playerACharacters: ["芭芭拉", "行秋", "莱依拉"],
@@ -607,7 +597,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1De411Y74V",
                 },
                 {
                   playerACharacters: ["芭芭拉", "行秋", "莱依拉"],
@@ -655,7 +644,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1aw411j7Lq",
                 },
               ],
             },
@@ -680,7 +668,7 @@ export default defineTournament({
             {
               playerA: "Tonbo",
               playerB: "清弦",
-              video: "https://www.bilibili.com/video/BV1TK411h7ts",
+              video: "https://www.bilibili.com/video/BV1W2421A77Y",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "凝光", "芭芭拉"],
@@ -734,7 +722,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1TK411h7ts",
                 },
                 {
                   playerACharacters: ["「女士」", "雷音权现", "莫娜"],
@@ -782,7 +769,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1hD4y1f7xk",
                 },
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -831,14 +817,13 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1Zb4y1A7im",
                 },
               ],
             },
             {
               playerA: "贝尔格里",
               playerB: "萌萌带格蕾修",
-              video: "https://www.bilibili.com/video/BV1Uw411j7Fj",
+              video: "https://www.bilibili.com/video/BV1W2421A77Y",
               banned: [
                 {
                   playerACharacters: ["班尼特", "雷音权现", "可莉"],
@@ -895,7 +880,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1Uw411j7Fj",
                 },
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -968,7 +952,7 @@ export default defineTournament({
             {
               playerA: "Tonbo",
               playerB: "贝尔格里",
-              video: "https://www.bilibili.com/video/BV1VN4y1n7TX",
+              video: "https://www.bilibili.com/video/BV1Dy42187Kd",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -1021,7 +1005,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV1VN4y1n7TX",
                 },
                 {
                   playerACharacters: ["迪希雅", "琴", "琳妮特"],
@@ -1069,7 +1052,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "A",
-                  video: "https://www.bilibili.com/video/BV12c411Y73m",
                 },
                 {
                   playerACharacters: ["「女士」", "雷音权现", "若陀龙王"],
@@ -1116,7 +1098,6 @@ export default defineTournament({
                   }),
                   starter: "A",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV1kC4y167ct",
                 },
                 {
                   playerACharacters: ["「女士」", "雷音权现", "若陀龙王"],
@@ -1164,7 +1145,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV13p4y1U7uu",
                 },
                 {
                   playerACharacters: ["「女士」", "雷音权现", "若陀龙王"],
@@ -1211,7 +1191,6 @@ export default defineTournament({
                   }),
                   starter: "B",
                   winner: "B",
-                  video: "https://www.bilibili.com/video/BV11c411Y7nn",
                 },
               ],
             },
