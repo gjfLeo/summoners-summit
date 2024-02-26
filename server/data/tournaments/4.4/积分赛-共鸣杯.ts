@@ -550,5 +550,76 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-02-25",
+          matches: [
+            {
+              playerA: "贝尔格里",
+              playerB: "小铭同学",
+              banned: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["夜兰", "无相之雷", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["班尼特", "可莉", "雷音权现"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["刻晴", "雷电将军", "香菱"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["班尼特", "若陀龙王", "刻晴"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "若陀龙王", "刻晴"],
+                  playerBCharacters: ["行秋", "若陀龙王", "无相之冰"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "若陀龙王", "刻晴"],
+                  playerBCharacters: ["班尼特", "可莉", "雷音权现"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "若陀龙王", "刻晴"],
+                  playerBCharacters: ["刻晴", "雷电将军", "香菱"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["刻晴", "雷电将军", "香菱"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
