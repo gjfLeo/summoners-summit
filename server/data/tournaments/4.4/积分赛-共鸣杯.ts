@@ -475,7 +475,7 @@ export default defineTournament({
             {
               playerA: "理塘牢桐",
               playerB: "贝尔格里",
-              video: "https://www.bilibili.com/video/BV1mH4y1j7EM",
+              video: "https://www.bilibili.com/video/BV1GJ4m1e7qd",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -506,7 +506,7 @@ export default defineTournament({
             {
               playerA: "小铭同学",
               playerB: "胡桃花开青雀鸣",
-              video: "https://www.bilibili.com/video/BV1mH4y1j7EM",
+              video: "https://www.bilibili.com/video/BV1a1421f7ZN",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -566,6 +566,7 @@ export default defineTournament({
             {
               playerA: "贝尔格里",
               playerB: "小铭同学",
+              video: "https://www.bilibili.com/video/BV1EC411s72C",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
