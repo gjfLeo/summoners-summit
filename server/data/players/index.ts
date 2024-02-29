@@ -80,6 +80,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "聿九音": "轻篱",
   "胡桃小姐单推人": "胡桃花开青雀鸣",
   "武响尾蛇": "丶响尾蛇丶",
+  "子祺●百特": "子祺粨特",
   
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
