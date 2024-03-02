@@ -128,5 +128,7 @@
   "player.chart.axisWinRate": "胜率(%)",
   "player.chart.numMatchesWin": "胜场数",
   "player.chart.numMatchesLose": "负场数",
-  "site.description": "七圣召唤赛事资料"
+  "site.description": "七圣召唤赛事资料",
+  "actions.inputDeckShareCode": "请输入牌组分享码",
+  "actions.decodeDeckShareCode": "解析"
 }

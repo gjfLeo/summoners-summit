@@ -1,8 +1,8 @@
 <template>
   <div u-flex="~ col gap-4">
     <NInputGroup>
-      <NInput v-model:value="shareCode" placeholder="请输入牌组分享码" />
-      <NButton @click="resultDeck = decode()">解析</NButton>
+      <NInput v-model:value="shareCode" :placeholder="$t('actions.inputDeckShareCode')" />
+      <NButton @click="resultDeck = decode()">{{ $t('actions.decodeDeckShareCode') }}</NButton>
     </NInputGroup>
     <template v-if="resultDeck">
       <!-- 角色牌 -->
@@ -25,7 +25,8 @@
 import { decodeDeckCode } from "~/utils/decks";
 import type { ActionCard, Deck } from "~/utils/types";
 
-useHead({ title: "牌组分享码解析" });
+const { t } = useI18n();
+useHead({ title: t("site.titleFormat", [t("menu.decodeDeckCode"), t("site.name")]) });
 
 const message = useMessage();
 
