@@ -128,5 +128,7 @@
   "player.chart.axisWinRate": "Win rate (%)",
   "player.chart.numMatchesWin": "Matches win",
   "player.chart.numMatchesLose": "Matches lose",
-  "site.description": "Tournament Match Database for GITCG"
+  "site.description": "Tournament Match Database for GITCG",
+  "actions.inputDeckShareCode": "请输入牌组分享码",
+  "actions.decodeDeckShareCode": "解析"
 }
