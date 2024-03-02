@@ -16,7 +16,7 @@
     <NTabPane name="usages" :tab="$t('team.deckAnalysis')">
       <template v-if="totalWithDeck > 0">
         <NH4>{{ $t('team.actionCardUsages') }}</NH4>
-        <TeamCardUsages :card-usages="cardUsageMap" :total-deck="totalWithDeck" />
+        <TeamCardUsages :card-usages="actionCardUsageMap" :total-deck="totalWithDeck" />
         <div class="mt text-sm">
           <NText :depth="3">{{ $t('team.numDecks', totalWithDeck) }}</NText>
         </div>
@@ -81,7 +81,14 @@ const teamName = characterCards.map(c => locale.value === "en" ? ALL_CHARACTER_C
 useHead({ title: t("site.titleFormatWithName", [teamName, t("menu.teamStats"), t("site.name")]) });
 
 const { gameVersion } = useGameVersion({ detect: true });
-const { basicStats, cardUsageMap, typicalDeckId, vsTeamStatsMap } = await useApiTeamStats(teamId, gameVersion.value);
+const {
+  basicStats,
+  actionCardUsageMap,
+  typicalDeckId,
+  vsTeamStatsMap,
+  gameList,
+  statsByVersion,
+} = await useApiTeamStats(teamId, gameVersion.value);
 
 const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) : { deck: undefined };
 
@@ -91,7 +98,6 @@ const { total, win, totalWithDeck, winWithDeck } = basicStats;
 const winRate = toPercentageString(divide(win, total));
 const winDiff = win - (total - win);
 
-const { gameList } = await useApiTeamGames(teamId, gameVersion.value);
 const opponentCharacters = ref<CharacterCard[]>([]);
 const filteredGameList = computed(() => gameList.filter(g => opponentCharacters.value.every(c => g.playerBCharacters.includes(c))));
 
@@ -105,8 +111,6 @@ const { copy: copyTypicalDeckShareCode } = useCopyDeckShareCode(typicalDeck);
 async function toTypicalDeckDetail() {
   await navigateTo(`/deck/${typicalDeck?.id}`);
 }
-
-const { statsByVersion } = await useApiTeamStatsByVersion(teamId);
 
 onMounted(() => {
   if (history.state.tab) {

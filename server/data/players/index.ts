@@ -84,7 +84,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "白雀": "蓬莱寺九霄",
   "空寻的小迷妹": "pupa",
   "hl": "Glyou_HZ",
-  
+
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
   "kamisama": "卡密sama",

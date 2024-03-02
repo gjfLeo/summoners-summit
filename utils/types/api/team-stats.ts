@@ -53,6 +53,17 @@ export interface ApiTeamGamesData {
   total: number;
 }
 
+export interface ApiTeamActionCardUsageData {
+  actionCardUsageMap: Partial<Record<ActionCard, ApiTeamActionCardUsageValue>>;
+  totalNumDecks: number;
+}
+export interface ApiTeamActionCardUsageValue {
+  numDecksWith1: number;
+  numDecksWith2: number;
+  numDecksWith1Win: number;
+  numDecksWith2Win: number;
+}
+
 export interface ApiTeamStatsByVersionData {
   statsByVersion: ApiTeamStatsByVersionItem[];
 }
