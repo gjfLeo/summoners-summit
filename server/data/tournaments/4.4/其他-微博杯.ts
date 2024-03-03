@@ -3381,12 +3381,6 @@ export default defineTournament({
         },
       ],
     },
-  ],
-});
-export default defineTournament({
-  name: "",
-  gameVersion: "",
-  stages: [
     {
       name: "决赛 ",
       rules: {
