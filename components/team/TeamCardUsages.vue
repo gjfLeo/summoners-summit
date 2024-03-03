@@ -46,14 +46,14 @@ const columns: DataTableColumn<typeof data[number]>[] = [
   },
   {
     title: t("stats.cardAveragePicks"),
-    key: "totalAverage",
+    key: "averagePick",
     align: "center",
     sorter: "default",
     render: row => format(row.averagePick, { precision: 3 }),
   },
   {
     title: t("stats.cardAveragePicksInWins"),
-    key: "winAverage",
+    key: "averagePickInWins",
     align: "center",
     sorter: "default",
     render: row => format(row.averagePickInWins, { precision: 3 }),
