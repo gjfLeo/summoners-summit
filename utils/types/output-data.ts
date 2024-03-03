@@ -22,6 +22,9 @@ export interface Tournament {
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛" | "外服赛事";
   gameVersion: GameVersion;
   stages: TournamentStage[];
+  dateRange: [string, string | undefined];
+  championId: PlayerId | undefined;
+  championNickname: string | undefined;
 }
 
 export interface TournamentStage {

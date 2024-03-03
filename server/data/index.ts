@@ -4,6 +4,7 @@ import { playerNicknameMap } from "./players";
 import type { ActionCard, BannedData, Deck, DeckId, Game, GameId, GameVersion, Match, MatchId, Player, PlayerId, Tournament, TournamentId, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
 import type { PlayerAchievement } from "~/utils/achievements";
+import { getAllGameVersionsReversed } from "~/utils/game-version";
 
 const tournamentById: Record<TournamentId, Tournament> = {};
 const matchById: Record<MatchId, Match> = {};
@@ -73,6 +74,11 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
   const tournamentId = getHashValue(gameVersion + tournamentName) as TournamentId;
   let matchTotalIndex = 0;
 
+  const startDate = stagesRaw[0].parts[0].date;
+  let endDate: string | undefined;
+  let championId: PlayerId | undefined;
+  let championNickname: string | undefined;
+
   const stages = stagesRaw.map((stageRaw): TournamentStage => {
     // stage
     const {
@@ -121,8 +127,17 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const winner = winnerRaw ?? (aGoals > bGoals ? "A" : "B");
 
           if (stageName === "决赛" || partName === "决赛" || matchName === "决赛") {
-            if (winner === "A") registerPlayerAward(playerAId, `${gameVersion}\u2006${tournamentName}冠军`);
-            if (winner === "B") registerPlayerAward(playerBId, `${gameVersion}\u2006${tournamentName}冠军`);
+            if (winner === "A") {
+              championId = playerAId;
+              championNickname = playerANickname;
+              registerPlayerAward(playerAId, `${gameVersion}\u2006${tournamentName}冠军`);
+            }
+            else if (winner === "B") {
+              championId = playerBId;
+              championNickname = playerBNickname;
+              registerPlayerAward(playerBId, `${gameVersion}\u2006${tournamentName}冠军`);
+            }
+            endDate = endDate ?? date;
           }
 
           const banned = bannedRaw?.map((ban): BannedData => {
@@ -206,12 +221,20 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
       }),
     });
   });
+
+  if (endDate === undefined && gameVersion !== getAllGameVersionsReversed()[0]) {
+    endDate = stagesRaw[stagesRaw.length - 1].parts[stagesRaw[stagesRaw.length - 1].parts.length - 1].date;
+  }
+
   tournamentById[tournamentId] = {
     id: tournamentId,
     name: tournamentName,
     type,
     gameVersion,
     stages,
+    dateRange: [startDate, endDate],
+    championId,
+    championNickname,
   };
 }
 

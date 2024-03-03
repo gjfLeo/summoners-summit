@@ -1,7 +1,7 @@
-import type { Game, GameId, Match, MatchId, Tournament } from "../output-data";
+import type { Game, GameId, Match, MatchId, PlayerId, Tournament } from "../output-data";
 
 export interface ApiTournamentListData {
-  tournamentList: Pick<Tournament, "id" | "gameVersion" | "name" | "type">[];
+  tournamentList: Omit<Tournament, "stages">[];
 }
 
 export interface ApiTournamentData {

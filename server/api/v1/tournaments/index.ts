@@ -9,8 +9,8 @@ export default defineEventHandler<R & ApiTournamentListData>((event) => {
     list = list.filter(t => t.gameVersion === gameVersion);
   }
   const tournamentList = list.map((tournament) => {
-    const { id, gameVersion, name, type } = tournament;
-    return { id, gameVersion, name, type };
+    const { id, gameVersion, name, type, dateRange, championId, championNickname } = tournament;
+    return { id, gameVersion, name, type, dateRange, championId, championNickname };
   });
   return { statusCode: 200, tournamentList };
 });
