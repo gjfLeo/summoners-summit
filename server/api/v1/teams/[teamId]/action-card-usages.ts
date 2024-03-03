@@ -17,6 +17,7 @@ export default defineEventHandler<R & ApiTeamActionCardUsageData>((event) => {
   ]);
 
   const totalNumDecks = gameList.length;
+  const totalNumDecksWin = gameList.filter(g => g.winner === "A").length;
   const actionCardUsageMap: ApiTeamActionCardUsageData["actionCardUsageMap"] = {};
   for (const game of gameList) {
     if (!game.playerADeckId) throw new Error("unexpected");
@@ -39,5 +40,5 @@ export default defineEventHandler<R & ApiTeamActionCardUsageData>((event) => {
     }
   }
 
-  return { statusCode: 200, actionCardUsageMap, totalNumDecks };
+  return { statusCode: 200, actionCardUsageMap, totalNumDecks, totalNumDecksWin };
 });

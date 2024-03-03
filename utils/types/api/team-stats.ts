@@ -56,6 +56,7 @@ export interface ApiTeamGamesData {
 export interface ApiTeamActionCardUsageData {
   actionCardUsageMap: Partial<Record<ActionCard, ApiTeamActionCardUsageValue>>;
   totalNumDecks: number;
+  totalNumDecksWin: number;
 }
 export interface ApiTeamActionCardUsageValue {
   numDecksWith1: number;

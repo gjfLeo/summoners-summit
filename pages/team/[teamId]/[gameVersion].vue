@@ -16,7 +16,7 @@
     <NTabPane name="usages" :tab="$t('team.deckAnalysis')">
       <template v-if="totalWithDeck > 0">
         <NH4>{{ $t('team.actionCardUsages') }}</NH4>
-        <TeamCardUsages :card-usages="actionCardUsageMap" :total-deck="totalWithDeck" />
+        <TeamCardUsages :card-usages="actionCardUsageMap" :total-num-decks="totalNumDecks" :total-num-decks-win="totalNumDecksWin" />
         <div class="mt text-sm">
           <NText :depth="3">{{ $t('team.numDecks', totalWithDeck) }}</NText>
         </div>
@@ -88,6 +88,8 @@ const {
   vsTeamStatsMap,
   gameList,
   statsByVersion,
+  totalNumDecks,
+  totalNumDecksWin,
 } = await useApiTeamStats(teamId, gameVersion.value);
 
 const { deck: typicalDeck } = typicalDeckId ? (await useApiDeck(typicalDeckId)) : { deck: undefined };

@@ -14,7 +14,8 @@ import { CardCell, TableTitle } from "#components";
 
 const props = defineProps<{
   cardUsages: ApiTeamActionCardUsageData["actionCardUsageMap"];
-  totalDeck: number;
+  totalNumDecks: number;
+  totalNumDecksWin: number;
 }>();
 
 const { t } = useI18n();
@@ -23,9 +24,9 @@ const data = Object.entries(props.cardUsages).map(([card, usage]) => {
   return {
     key: card,
     card: card as ActionCard,
-    averagePick: divide(usage.numDecksWith1 + usage.numDecksWith2 * 2, usage.numDecksWith1 + usage.numDecksWith2),
-    averagePickInWins: divide(usage.numDecksWith1Win + usage.numDecksWith2Win * 2, usage.numDecksWith1Win + usage.numDecksWith2Win),
-    pickRate: divide(usage.numDecksWith1 + usage.numDecksWith2, props.totalDeck),
+    pickRate: divide(usage.numDecksWith1 + usage.numDecksWith2, props.totalNumDecks),
+    averagePick: divide(usage.numDecksWith1 + usage.numDecksWith2 * 2, props.totalNumDecks),
+    averagePickInWins: divide(usage.numDecksWith1Win + usage.numDecksWith2Win * 2, props.totalNumDecksWin),
     winRate: divide(usage.numDecksWith1Win + usage.numDecksWith2Win, usage.numDecksWith1 + usage.numDecksWith2),
     winRateWith1: divide(usage.numDecksWith1Win, usage.numDecksWith1),
     winRateWith2: divide(usage.numDecksWith2Win, usage.numDecksWith2),
