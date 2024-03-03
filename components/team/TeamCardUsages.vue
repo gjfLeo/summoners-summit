@@ -63,7 +63,7 @@ const columns: DataTableColumn<typeof data[number]>[] = [
     key: "winRate",
     align: "center",
     sorter: "default",
-    render: row => h(NTooltip, {}, {
+    render: row => h(NTooltip, { placement: "right" }, {
       trigger: () => toPercentageString(row.winRate),
       default: () => h("div", { class: "grid", style: "grid-template-columns: auto auto; gap: 0 1rem" }, [
         h("div", 1),
