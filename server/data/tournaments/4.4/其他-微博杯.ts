@@ -3382,7 +3382,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "决赛 ",
+      name: "决赛",
       rules: {
         numDecks: 3,
         numGames: 5,
