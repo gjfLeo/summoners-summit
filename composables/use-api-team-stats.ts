@@ -32,10 +32,22 @@ async function useApiTeamActionCardUsages(teamId: string, gameVersion: string) {
 }
 
 export default async function useApiTeamStats(teamId: string, gameVersion: string) {
-  return {
-    ...await useApiTeamStatsOld(teamId, gameVersion),
-    ...await useApiTeamStatsByVersion(teamId),
-    ...await useApiTeamGames(teamId, gameVersion),
-    ...await useApiTeamActionCardUsages(teamId, gameVersion),
-  };
+  try {
+    const data = await Promise.all([
+      useApiTeamStatsOld(teamId, gameVersion),
+      useApiTeamStatsByVersion(teamId),
+      useApiTeamGames(teamId, gameVersion),
+      useApiTeamActionCardUsages(teamId, gameVersion),
+    ]);
+    return {
+      ...data[0],
+      ...data[1],
+      ...data[2],
+      ...data[3],
+    };
+  }
+  catch (e: any) {
+    console.error(e);
+    throw new Error("获取数据失败1");
+  }
 }
