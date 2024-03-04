@@ -70,6 +70,7 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     type,
     gameVersion,
     stages: stagesRaw,
+    hideChampion,
   } = tournamentRaw;
   const tournamentId = getHashValue(gameVersion + tournamentName) as TournamentId;
   let matchTotalIndex = 0;
@@ -224,6 +225,10 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
 
   if (endDate === undefined && gameVersion !== getAllGameVersionsReversed()[0]) {
     endDate = stagesRaw[stagesRaw.length - 1].parts[stagesRaw[stagesRaw.length - 1].parts.length - 1].date;
+  }
+  if (hideChampion) {
+    championId = undefined;
+    championNickname = undefined;
   }
 
   tournamentById[tournamentId] = {

@@ -4,6 +4,7 @@ export default defineTournament({
   name: "Cat's Tail Gathering 2024 S1 ",
   type: "外服赛事",
   gameVersion: "4.3",
+  hideChampion: true,
   stages: [
     {
       name: "亚服 Asia",

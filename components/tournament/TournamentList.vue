@@ -16,7 +16,12 @@
               <dd>{{ tournament.dateRange[0] }}&#x2006;~&#x2006;{{ tournament.dateRange[1] ?? "" }}</dd>
               <template v-if="tournament.championId && tournament.championNickname">
                 <dt>冠军</dt>
-                <dd><PlayerName :id="tournament.championId" :nickname="tournament.championNickname" /></dd>
+                <dd>
+                  <ClientOnly>
+                    <PlayerName :id="tournament.championId" :nickname="tournament.championNickname" />
+                    <template #fallback>{{ tournament.championNickname }}</template>
+                  </ClientOnly>
+                </dd>
               </template>
             </dl>
           </template>
