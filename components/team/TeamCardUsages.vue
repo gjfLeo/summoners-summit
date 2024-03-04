@@ -1,5 +1,6 @@
 <template>
   <NDataTable
+    :scroll-x="600"
     :columns="columns"
     :data="data"
     max-height="50vh"
@@ -36,6 +37,7 @@ const data = Object.entries(props.cardUsages).map(([card, usage]) => {
 const columns: DataTableColumn<typeof data[number]>[] = [
   {
     key: "card",
+    fixed: "left",
     render: row => h(CardCell, { card: row.card }),
   },
   {
