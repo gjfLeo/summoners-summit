@@ -3047,7 +3047,7 @@ export default defineTournament({
       parts: [
         {
           name: "",
-          date: "",
+          date: "2024-01-28",
           matches: [
             {
               playerA: "TianJam",
