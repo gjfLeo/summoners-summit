@@ -611,7 +611,7 @@ export default defineTournament({
                   winner: "A",
                 },
                 {
-                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerACharacters: ["坎蒂丝", "千年珍珠骏麟", "优菈"],
                   playerBCharacters: ["刻晴", "雷电将军", "香菱"],
                   starter: "B",
                   winner: "B",
