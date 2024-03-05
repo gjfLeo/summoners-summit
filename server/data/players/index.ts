@@ -87,6 +87,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "只玩水皇草呜呜": "雷伊",
   "胡猫": "雷伊",
   "魑魅魍魉": "小果核",
+  "Fuwoo": "岩van♂deep君",
 
   "Kirisa": "きりさ",
   "chikuwa": "ちくわ",
