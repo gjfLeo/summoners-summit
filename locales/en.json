@@ -129,6 +129,6 @@
   "player.chart.numMatchesWin": "Matches win",
   "player.chart.numMatchesLose": "Matches lose",
   "site.description": "Tournament Match Database for GITCG",
-  "actions.inputDeckShareCode": "请输入牌组分享码",
-  "actions.decodeDeckShareCode": "解析"
+  "actions.inputDeckShareCode": "Input deck share code",
+  "actions.decodeDeckShareCode": "Decode"
 }
