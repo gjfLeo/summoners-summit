@@ -663,6 +663,12 @@ export default defineTournament({
                 },
               ],
             },
+          ],
+        }
+        {
+          name: "DAY3",
+          date: "2024-03-05",
+          matches: [
             {
               playerA: "愚萌",
               playerB: "氺水",
