@@ -170,5 +170,82 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "半决赛",
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 7,
+        numGames: 3,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-03-09",
+          matches: [
+            {
+              playerA: "全都是失误",
+              playerB: "Winsoon",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["若陀龙王"],
+                  playerBCharacters: ["芭芭拉"],
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["行秋", "重云", "琳妮特"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "守明枫叶",
+              playerB: "你给我果赖",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉"],
+                  playerBCharacters: ["雷音权现"],
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["林尼", "若陀龙王", "千年珍珠骏麟"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["申鹤", "雷电将军", "「女士」"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["行秋", "重云", "托马"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
