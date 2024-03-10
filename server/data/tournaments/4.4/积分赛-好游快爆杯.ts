@@ -247,5 +247,71 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 9,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-03-10",
+          matches: [
+            {
+              playerA: "你给我果赖",
+              playerB: "全都是失误",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["雷音权现"],
+                  playerBCharacters: ["重云"],
+                },
+                {
+                  playerACharacters: ["无相之冰", "行秋", "若陀龙王"],
+                  playerBCharacters: ["行秋", "神里绫华", "若陀龙王"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莱依拉", "达达利亚", "芭芭拉"],
+                  playerBCharacters: ["夜兰", "无相之冰", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "无相之冰", "托马"],
+                  playerBCharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["行秋", "无相之冰", "托马"],
+                  playerBCharacters: ["夜兰", "无相之冰", "林尼"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["若陀龙王", "千年珍珠骏麟", "林尼"],
+                  playerBCharacters: ["夜兰", "赛诺", "「女士」"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "无相之冰", "托马"],
+                  playerBCharacters: ["夜兰", "赛诺", "「女士」"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
