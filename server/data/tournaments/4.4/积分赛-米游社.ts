@@ -22,7 +22,7 @@ export default defineTournament({
             {
               playerA: "今天不想吃苹果",
               playerB: "Sept",
-              video: "https://www.bilibili.com/video/BV15r421H7uC",
+              video: "https://www.bilibili.com/video/BV1d2421K7Bg",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -129,7 +129,7 @@ export default defineTournament({
             {
               playerA: "葱子儿",
               playerB: "小铭同学",
-              video: "https://www.bilibili.com/video/BV1Lj421U7nW",
+              video: "https://www.bilibili.com/video/BV1d2421K7Bg",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -287,7 +287,7 @@ export default defineTournament({
             {
               playerA: "莉莉芭",
               playerB: "喵帕斯",
-              video: "https://www.bilibili.com/video/BV19w4m1d7Ej",
+              video: "https://www.bilibili.com/video/BV1Tj421f7qk",
               banned: [
                 {
                   playerACharacters: ["千年珍珠骏麟", "莫娜", "无相之冰"],
@@ -440,7 +440,7 @@ export default defineTournament({
             {
               playerA: "二葉",
               playerB: "提瓦特恶霸",
-              video: "https://www.bilibili.com/video/BV1ox421y7a9",
+              video: "https://www.bilibili.com/video/BV1Tj421f7qk",
               banned: [
                 {
                   playerACharacters: ["雷电将军", "「女士」", "申鹤"],
@@ -611,7 +611,7 @@ export default defineTournament({
             {
               playerA: "Sept",
               playerB: "二葉",
-              video: "https://www.bilibili.com/video/BV1dH4y157b8",
+              video: "https://www.bilibili.com/video/BV1xy421v7FU",
               banned: [
                 {
                   playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
@@ -769,7 +769,7 @@ export default defineTournament({
             {
               playerA: "喵帕斯",
               playerB: "小铭同学",
-              video: "https://www.bilibili.com/video/BV1xx4y1Q789",
+              video: "https://www.bilibili.com/video/BV1xy421v7FU",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -934,7 +934,7 @@ export default defineTournament({
             {
               playerA: "喵帕斯",
               playerB: "二葉",
-              video: "https://www.bilibili.com/video/BV1RF4m1F7Nd",
+              video: "https://www.bilibili.com/video/BV1dJ4m1h7gt",
               banned: [
                 {
                   playerACharacters: ["芭芭拉"],
