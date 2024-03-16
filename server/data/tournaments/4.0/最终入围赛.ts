@@ -53,7 +53,7 @@ export default defineTournament({
                   winner: "A",
                 },
                 {
-                  playerACharacters: ["岩盔丘丘王", "荒泷一斗", "芭芭拉"],
+                  playerACharacters: ["丘丘岩盔王", "荒泷一斗", "芭芭拉"],
                   playerBCharacters: ["班尼特", "可莉", "刻晴"],
                   starter: "B",
                   winner: "B",

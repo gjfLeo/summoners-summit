@@ -119,7 +119,7 @@ export default defineTournament({
               ],
               games: [
                 {
-                  playerACharacters: ["芭芭拉", "诺艾尔", "岩盔丘丘王"],
+                  playerACharacters: ["芭芭拉", "诺艾尔", "丘丘岩盔王"],
                   playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
                   starter: "B",
                   winner: "A",

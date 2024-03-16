@@ -26,7 +26,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "刘苏": 1,
                     "寻宝仙灵": 1,
@@ -48,7 +48,7 @@ export default defineTournament({
                   playerBCharacters: ["菲谢尔", "纳西妲", "可莉"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "刘苏": 2,
                     "拉娜": 2,
                     "寻宝仙灵": 2,
@@ -98,7 +98,7 @@ export default defineTournament({
                   playerBCharacters: ["神里绫华", "雷电将军", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 1,
                     "鲸井小弟": 2,
                     "寻宝仙灵": 2,
@@ -126,7 +126,7 @@ export default defineTournament({
                     "千岩牢固": 2,
                     "璃月港口": 2,
                     "天守阁": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "旧时庭园": 1,
                     "元素共鸣：交织之岩": 2,
@@ -146,7 +146,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "吐纳真定": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "立本": 1,
                     "常九爷": 2,
                     "参量质变仪": 2,
@@ -205,7 +205,7 @@ export default defineTournament({
                   playerBCharacters: ["申鹤", "雷电将军", "重云"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -231,7 +231,7 @@ export default defineTournament({
                   playerACharacters: ["雷泽", "重云", "北斗"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "常九爷": 2,
                     "参量质变仪": 2,
                     "寻宝仙灵": 2,
@@ -298,7 +298,7 @@ export default defineTournament({
                   playerBCharacters: ["菲谢尔", "纯水精灵·洛蒂娅", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -366,7 +366,7 @@ export default defineTournament({
                   playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "常九爷": 2,
                     "参量质变仪": 2,
                     "寻宝仙灵": 2,
@@ -393,7 +393,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "申鹤", "雷电将军"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -480,7 +480,7 @@ export default defineTournament({
                     "璃月港口": 2,
                     "天守阁": 1,
                     "须弥城": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "立本": 2,
                     "磐岩盟契": 1,
                     "元素共鸣：交织之岩": 2,
@@ -502,7 +502,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "申鹤", "雷电将军"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 1,
                     "立本": 2,
                     "刘苏": 2,
@@ -521,7 +521,7 @@ export default defineTournament({
                   playerBCharacters: ["坎蒂丝", "雷泽", "雷电将军"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 2,
                     "参量质变仪": 2,
@@ -614,7 +614,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "申鹤", "雷电将军"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "刘苏": 2,
                     "寻宝仙灵": 2,
                     "磐岩盟契": 1,
@@ -665,7 +665,7 @@ export default defineTournament({
                     "千岩牢固": 2,
                     "天守阁": 2,
                     "须弥城": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "立本": 2,
                     "寻宝仙灵": 2,
                     "磐岩盟契": 1,
@@ -742,7 +742,7 @@ export default defineTournament({
                   playerBCharacters: ["雷电将军", "申鹤", "重云"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -769,7 +769,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 1,
                     "立本": 2,
                     "刘苏": 1,
@@ -820,7 +820,7 @@ export default defineTournament({
                     "西风大教堂": 2,
                     "天守阁": 1,
                     "须弥城": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "阿圆": 2,
                     "磐岩盟契": 1,
                     "元素共鸣：交织之岩": 2,

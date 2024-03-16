@@ -625,7 +625,7 @@ export default defineTournament({
                   winner: "A",
                 },
                 {
-                  playerACharacters: ["岩盔丘丘王", "纯水精灵·洛蒂娅", "荒泷一斗"],
+                  playerACharacters: ["丘丘岩盔王", "纯水精灵·洛蒂娅", "荒泷一斗"],
                   playerAActions: defineActions({
                     "钟剑": 2,
                     "赌徒的耳环": 1,
@@ -797,7 +797,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -937,7 +937,7 @@ export default defineTournament({
                   playerACharacters: ["菲谢尔", "纯水精灵·洛蒂娅", "纳西妲"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,
@@ -1021,7 +1021,7 @@ export default defineTournament({
                   playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "常九爷": 2,
                     "参量质变仪": 2,
                     "寻宝仙灵": 2,
@@ -1325,7 +1325,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -1438,7 +1438,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -1486,7 +1486,7 @@ export default defineTournament({
                     "狼的末路": 1,
                     "赌徒的耳环": 1,
                     "教官的帽子": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 1,
                     "立本": 2,
@@ -1534,7 +1534,7 @@ export default defineTournament({
                     "狼的末路": 1,
                     "赌徒的耳环": 1,
                     "教官的帽子": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 1,
                     "立本": 2,
@@ -1581,7 +1581,7 @@ export default defineTournament({
                     "狼的末路": 1,
                     "赌徒的耳环": 1,
                     "教官的帽子": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 1,
                     "立本": 2,
@@ -1602,7 +1602,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -1648,7 +1648,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -2066,7 +2066,7 @@ export default defineTournament({
                     "冒险憧憬": 2,
                     "赌徒的耳环": 2,
                     "璃月港口": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 2,
                     "立本": 2,
                     "参量质变仪": 1,
@@ -2125,7 +2125,7 @@ export default defineTournament({
                   playerBCharacters: ["神里绫华", "宵宫", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 1,
                     "常九爷": 2,
@@ -2174,7 +2174,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -2281,7 +2281,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
                     "酒渍船帽": 1,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "自由的新风": 1,
@@ -2326,7 +2326,7 @@ export default defineTournament({
                   playerACharacters: ["神里绫华", "宵宫", "申鹤"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 1,
                     "常九爷": 2,
@@ -2372,7 +2372,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -2489,7 +2489,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "刘苏": 2,
