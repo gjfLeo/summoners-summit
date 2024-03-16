@@ -1,24 +1,47 @@
 <template>
-  <div u-flex="~ col gap-4">
+  <div u-flex="~ col">
     <div u-grid="~ cols-20 gap-1">
       <template v-for="card in ALL_CHARACTER_CARDS" :key="card">
-        <div>
-          <CardAvatar :card="card" />
-        </div>
+        <NTooltip trigger="hover" placement="bottom">
+          <template #trigger>
+            <div>
+              <CardAvatar :card="card" />
+            </div>
+          </template>
+          <template #default>
+            <span>{{ card }}</span>
+          </template>
+        </NTooltip>
       </template>
     </div>
+    <NHr />
     <div u-grid="~ cols-20 gap-1">
       <template v-for="card in ALL_CHARACTER_CARDS" :key="card">
-        <div>
-          <CardImage :card="card" />
-        </div>
+        <NTooltip trigger="hover" placement="bottom">
+          <template #trigger>
+            <div>
+              <CardImage :card="card" />
+            </div>
+          </template>
+          <template #default>
+            <span>{{ card }}</span>
+          </template>
+        </NTooltip>
       </template>
     </div>
+    <NHr />
     <div u-grid="~ cols-20 gap-1">
       <template v-for="card in ALL_ACTION_CARDS" :key="card">
-        <div>
-          <CardImage :card="card" />
-        </div>
+        <NTooltip trigger="hover" placement="bottom">
+          <template #trigger>
+            <div>
+              <CardImage :card="card" />
+            </div>
+          </template>
+          <template #default>
+            <span>{{ card }}</span>
+          </template>
+        </NTooltip>
       </template>
     </div>
   </div>
