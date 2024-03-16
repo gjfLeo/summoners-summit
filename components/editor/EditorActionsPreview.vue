@@ -13,13 +13,14 @@
 
 <script lang="ts" setup>
 import { type ActionCard, actionCardSorter } from "~/utils/cards";
+import type { Deck } from "~/utils/types";
 
 const props = defineProps<{
-  actions?: Partial<Record<ActionCard, number>>;
+  actions?: Deck["actionCards"];
 }>();
 
 const emit = defineEmits<{
-  (e: "update:actions", v: Partial<Record<ActionCard, number>>): void;
+  (e: "update:actions", v: Deck["actionCards"]): void;
 }>();
 
 const deckActionCards = computed(() => Object.entries(props.actions ?? {})

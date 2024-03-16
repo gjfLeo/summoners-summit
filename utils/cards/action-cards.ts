@@ -1,5 +1,4 @@
 import gdb from "@genshin-db/tcg";
-import type { Brand } from "../types/utility-types";
 
 interface ActionCardInfo {
   readonly id: number;
@@ -26,7 +25,7 @@ function defineActionCardInfo(info: ActionCardInfo) {
   return info;
 }
 
-export type ActionCard = Brand<string, "ActionCard">;
+export type ActionCard = string;
 
 const actionCards = gdb.tcgactioncards("names", { matchCategories: true })
   .flatMap((nameEn) => {

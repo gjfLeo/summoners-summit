@@ -5,6 +5,7 @@ import type { ActionCard, BannedData, Deck, DeckId, Game, GameId, GameVersion, M
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
 import type { PlayerAchievement } from "~/utils/achievements";
 import { getAllGameVersionsReversed } from "~/utils/game-version";
+import { countActionCards } from "~/utils/decks";
 
 const tournamentById: Record<TournamentId, Tournament> = {};
 const matchById: Record<MatchId, Match> = {};
@@ -55,7 +56,7 @@ function registerDeck(characters: Deck["characterCards"], actions: Deck["actionC
   ) as Deck["actionCards"];
   const id = getHashValue(JSON.stringify({ characterCards, actionCards })) as DeckId;
   if (!deckById[id]) {
-    const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
+    const actionCardCount = countActionCards(actionCards);
     if (actionCardCount !== 30) {
       console.error(`行动牌数量≠30：http://localhost:3000/deck/${id}`);
     }

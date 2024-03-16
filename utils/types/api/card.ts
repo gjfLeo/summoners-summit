@@ -8,7 +8,7 @@ export interface ApiActionStatsValue {
 }
 
 export interface ApiActionStatsMapData {
-  actionStatsMap: Partial<Record<ActionCard, ApiActionStatsValue>>;
+  actionStatsMap: Record<ActionCard, ApiActionStatsValue>;
   totalDeck: number;
 }
 
@@ -18,6 +18,6 @@ export interface ApiCharacterStatsValue {
 }
 
 export interface ApiCharacterStatsMapData {
-  characterStatsMap: Partial<Record<CharacterCard, ApiCharacterStatsValue>>;
+  characterStatsMap: Record<CharacterCard, ApiCharacterStatsValue>;
   totalGame: number;
 }

@@ -53,14 +53,14 @@
 </template>
 
 <script lang="ts" setup>
-import type { ActionCard, CharacterCard } from "~/utils/types";
+import type { CharacterCard, Deck } from "~/utils/types";
 import { EditorActionsInput, EditorCharacterCardSelector } from "#components";
 import { decodeDeckCode, encodeDeckCode } from "~/utils/decks";
 
 const props = defineProps<{
   player: "A" | "B";
   characters: CharacterCard[];
-  actions?: Partial<Record<ActionCard, number>>;
+  actions?: Deck["actionCards"];
   starter?: "A" | "B";
   winner?: "A" | "B";
   banned?: boolean;

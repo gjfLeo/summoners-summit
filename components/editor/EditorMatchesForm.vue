@@ -151,7 +151,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ActionCard, CharacterCard } from "~/utils/types";
+import type { CharacterCard, Deck } from "~/utils/types";
 import { EditorVideoInputDialog } from "#components";
 
 interface MatchData {
@@ -165,16 +165,16 @@ interface MatchData {
 interface BannedData {
   tempId: number;
   playerACharacters: CharacterCard[];
-  playerAActions?: Partial<Record<ActionCard, number>>;
+  playerAActions?: Deck["actionCards"];
   playerBCharacters: CharacterCard[];
-  playerBActions?: Partial<Record<ActionCard, number>>;
+  playerBActions?: Deck["actionCards"];
 }
 interface GameData {
   tempId: number;
   playerACharacters: CharacterCard[];
-  playerAActions?: Partial<Record<ActionCard, number>>;
+  playerAActions?: Deck["actionCards"];
   playerBCharacters: CharacterCard[];
-  playerBActions?: Partial<Record<ActionCard, number>>;
+  playerBActions?: Deck["actionCards"];
   winner?: "A" | "B";
   starter?: "A" | "B";
   video?: string;

@@ -12,7 +12,7 @@ export type PlayerId = Brand<string, "PlayerId">;
 export interface Deck {
   id: DeckId;
   characterCards: CharacterCard[];
-  actionCards: Partial<Record<ActionCard, number>>;
+  actionCards: Record<ActionCard, number>;
   gameVersion: GameVersion;
 }
 

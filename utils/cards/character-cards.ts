@@ -1,4 +1,5 @@
 import gdb from "@genshin-db/tcg";
+import { useMemoize } from "@vueuse/core";
 import type { Brand } from "../types/utility-types";
 
 interface CharacterCardInfo {
@@ -13,7 +14,7 @@ function defineCharacterCardInfo(info: CharacterCardInfo) {
   return info;
 }
 
-export type CharacterCard = Brand<string, "CharacterCard">;
+export type CharacterCard = string;
 
 const characterCards = gdb.tcgcharactercards("names", { matchCategories: true })
   .flatMap((nameEn) => {
@@ -27,6 +28,11 @@ const characterCards = gdb.tcgcharactercards("names", { matchCategories: true })
   .sort((a, b) => a.id - b.id);
 export const ALL_CHARACTER_CARDS_INFO: Record<CharacterCard, CharacterCardInfo> = Object.fromEntries(characterCards.map(character => [character.name, character]));
 export const ALL_CHARACTER_CARDS = Object.keys(ALL_CHARACTER_CARDS_INFO) as CharacterCard[];
+export const getCharacterCardInfo = useMemoize((characterCard: CharacterCard) => {
+  const info = ALL_CHARACTER_CARDS_INFO[characterCard];
+  if (!info) throw new Error(`Character card ${characterCard} not found`);
+  return info;
+});
 
 export const characterCardOrder = Object.fromEntries(ALL_CHARACTER_CARDS.map((card, i) => [card, i])) as Record<CharacterCard, number>;
 export const characterCardSorter = (a: CharacterCard, b: CharacterCard) => characterCardOrder[a] - characterCardOrder[b];

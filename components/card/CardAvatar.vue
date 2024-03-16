@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import dayjs from "dayjs";
-import { ALL_CHARACTER_CARDS_INFO } from "~/utils/cards";
+import { getCharacterCardInfo } from "~/utils/cards";
 import { characterAvatarImages } from "~/utils/images";
 import type { CharacterCard } from "~/utils/types";
 
@@ -24,5 +24,8 @@ const timestamp = dayjs(updateTime).unix();
 const imageUrl = computed(() => `${characterAvatarImages[props.card]}?t=${timestamp}`);
 
 const { locale } = useI18n();
-const cardName = computed(() => locale.value === "en" ? ALL_CHARACTER_CARDS_INFO[props.card].nameEn : props.card);
+const cardName = computed(() => {
+  const cardInfo = getCharacterCardInfo(props.card);
+  return locale.value === "en" ? cardInfo.nameEn : props.card;
+});
 </script>
