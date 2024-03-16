@@ -4,6 +4,7 @@ import type { ActionCard, CharacterCard } from "~/utils/types";
 
 function getImageUrl(filename: string) {
   filename = filename.replace(":", "");
+  filename = filename.replace("?", "");
   filename = filename.replaceAll(" ", "_");
   const hash = md5(filename).toString();
   filename = filename.replace("'", "%27");
