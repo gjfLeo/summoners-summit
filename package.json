@@ -10,11 +10,12 @@
     "postinstall": "nuxi prepare",
     "start": "node .output/server/index.mjs",
     "start:generate": "npx serve .output/public",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
+    "@gjfleo/eslint-config": "^1.0.4",
     "@iconify-json/carbon": "^1.1.27",
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxtjs/color-mode": "^3.3.2",

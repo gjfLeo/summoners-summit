@@ -1,6 +1,6 @@
 {
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "postcss",
   },
 
   // Enable the ESlint flat config support
@@ -13,20 +13,20 @@
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
   },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
+    { "rule": "style/*", "severity": "warn" },
+    { "rule": "*-indent", "severity": "warn" },
+    { "rule": "*-spacing", "severity": "warn" },
+    { "rule": "*-spaces", "severity": "warn" },
+    { "rule": "*-order", "severity": "warn" },
+    { "rule": "*-dangle", "severity": "warn" },
+    { "rule": "*-newline", "severity": "warn" },
+    { "rule": "*quotes", "severity": "warn" },
+    { "rule": "*semi", "severity": "warn" },
   ],
 
   // Enable eslint for all supported languages
@@ -40,6 +40,6 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
-  ]
+    "yaml",
+  ],
 }
