@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vite-pwa/nuxt",
     "nuxt-module-eslint-config",
+    "@nuxtjs/i18n",
   ],
 
   experimental: {
@@ -72,4 +73,7 @@ export default defineNuxtConfig({
   eslintConfig: {
     setup: false,
   },
+
+  // i18n: {
+  // },
 });
