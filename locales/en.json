@@ -130,5 +130,6 @@
   "player.chart.numMatchesLose": "Matches lose",
   "site.description": "Tournament Match Database for GITCG",
   "actions.inputDeckShareCode": "Input deck share code",
-  "actions.decodeDeckShareCode": "Decode"
+  "actions.decodeDeckShareCode": "Decode",
+  "player.dynamicRankAndScore": "当前影幻杯积分排名"
 }
