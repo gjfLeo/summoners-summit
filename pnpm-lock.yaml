@@ -23,6 +23,9 @@ devDependencies:
   '@pinia/nuxt':
     specifier: ^0.5.1
     version: 0.5.1(rollup@4.13.0)(typescript@5.4.2)(vue@3.4.21)
+  '@types/fs-extra':
+    specifier: ^11.0.4
+    version: 11.0.4
   '@unocss/eslint-config':
     specifier: ^0.58.6
     version: 0.58.6(eslint-ts-patch@8.56.0-0)(typescript@5.4.2)
@@ -47,6 +50,12 @@ devDependencies:
   eslint-ts-patch:
     specifier: ^8.56.0-0
     version: 8.56.0-0
+  fast-glob:
+    specifier: ^3.3.2
+    version: 3.3.2
+  fs-extra:
+    specifier: ^11.2.0
+    version: 11.2.0
   nuxt:
     specifier: ^3.11.0
     version: 3.11.0(eslint-ts-patch@8.56.0-0)(rollup@4.13.0)(typescript@5.4.2)(vite@5.1.6)(vue-tsc@1.8.27)
@@ -62,6 +71,9 @@ devDependencies:
   vue-tsc:
     specifier: ^1.8.27
     version: 1.8.27(typescript@5.4.2)
+  zod:
+    specifier: ^3.22.4
+    version: 3.22.4
 
 packages:
 
@@ -3440,6 +3452,13 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
+  /@types/fs-extra@11.0.4:
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 20.4.6
+    dev: true
+
   /@types/http-proxy@1.17.14:
     resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
     dependencies:
@@ -3448,6 +3467,12 @@ packages:
 
   /@types/json-schema@7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
+    dev: true
+
+  /@types/jsonfile@6.1.4:
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
+    dependencies:
+      '@types/node': 20.4.6
     dev: true
 
   /@types/mdast@3.0.12:
@@ -11945,4 +11970,8 @@ packages:
       archiver-utils: 5.0.2
       compress-commons: 6.0.2
       readable-stream: 4.5.2
+    dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: true
