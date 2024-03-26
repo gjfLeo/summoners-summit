@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import tournamentsRaw from "./tournaments";
 import { playerNicknameMap } from "./players";
+import playerRanks from "./players/rank";
 import type { ActionCard, BannedData, Deck, DeckId, Game, GameId, GameVersion, Match, MatchId, Player, PlayerId, Tournament, TournamentId, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
 import type { PlayerAchievement } from "~/utils/achievements";
@@ -28,10 +29,13 @@ function registerPlayer(uniqueName: string): PlayerId | undefined {
   }
   const id = getHashValue(uniqueName) as PlayerId;
   // 如果已存在，忽略
-  if (!playerById[id]) {
-    const aliases = Object.entries(playerNicknameMap).filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
-    playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
+  if (playerById[id]) {
+    return id;
   }
+
+  const aliases = Object.entries(playerNicknameMap)
+    .filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
+  playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
   return id;
 }
 function registerPlayerAchievement(playerId: PlayerId | undefined, achievement: PlayerAchievement) {
@@ -245,6 +249,18 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
 }
 
 tournamentsRaw.forEach(loadTournamentRaw);
+
+function loadPlayerRank({ nickname, score }: { nickname: string; score: number }, index: number) {
+  if (playerNicknameMap[nickname] !== undefined) {
+    return loadPlayerRank({ nickname: playerNicknameMap[nickname], score }, index);
+  }
+  const playerId = registerPlayer(nickname);
+  if (playerId) {
+    playerById[playerId].score = score;
+    playerById[playerId].rank = index + 1;
+  }
+}
+playerRanks.forEach(loadPlayerRank);
 
 export {
   tournamentById,

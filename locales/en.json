@@ -130,5 +130,6 @@
   "player.chart.numMatchesLose": "Matches lose",
   "site.description": "Tournament Match Database for GITCG",
   "actions.decodeDeckShareCode": "Decode",
-  "actions.inputDeckShareCode": "Input deck share code"
+  "actions.inputDeckShareCode": "Input deck share code",
+  "player.dynamicRankAndScore": "Current rank and score"
 }

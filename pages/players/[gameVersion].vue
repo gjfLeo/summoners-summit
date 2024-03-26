@@ -106,5 +106,13 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     sorter: "default",
     render: row => toPercentageString(row.gameWinRate),
   },
+  {
+    title: t("player.dynamicRankAndScore"),
+    key: "score",
+    width: "6rem",
+    align: "center",
+    sorter: (a, b) => (b.rank ?? Number.POSITIVE_INFINITY) - (a.rank ?? Number.POSITIVE_INFINITY),
+    render: row => row.score ? `${row.rank} (${row.score})` : "",
+  },
 ];
 </script>

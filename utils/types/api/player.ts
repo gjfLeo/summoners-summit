@@ -13,6 +13,8 @@ export interface ApiPlayerStatsValue {
   matchWin: number;
   gameTotal: number;
   gameWin: number;
+  score?: number;
+  rank?: number;
 }
 
 export interface ApiPlayerStatsMapData {

@@ -106,4 +106,6 @@ export interface Player {
   aliases?: string[];
   achievements?: PlayerAchievement[];
   awards?: string[];
+  score?: number;
+  rank?: number;
 }
