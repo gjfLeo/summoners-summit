@@ -120,6 +120,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "吉更": "桔梗",
   "燕藩阿楼": "阿楼Riricho",
   "纤育鼎": "霓特",
+  "派大蒙": "MaRiA",
   
   
   
