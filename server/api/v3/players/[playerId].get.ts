@@ -13,5 +13,5 @@ export default defineEventHandler(async (event) => {
     setResponseStatus(event, 404);
     return { statusCode: 404 };
   }
-  return { statusCode: 200, player };
+  return { player };
 });
