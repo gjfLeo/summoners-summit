@@ -12,6 +12,7 @@
   <NDataTable
     :columns="columns"
     :data="data"
+    :scroll-x="1000"
     max-height="calc(100vh - 18rem)"
   />
 </template>
