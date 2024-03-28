@@ -1,1 +1,1 @@
-export * from "../../types/data/player";
+export * from "../../types/data";
