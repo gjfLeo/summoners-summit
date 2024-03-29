@@ -3,6 +3,7 @@ import { appDescription } from "./constants/index";
 
 export default defineNuxtConfig({
   modules: [
+    "@bg-dev/nuxt-naiveui",
     "@vueuse/nuxt",
     "@unocss/nuxt",
     "@pinia/nuxt",

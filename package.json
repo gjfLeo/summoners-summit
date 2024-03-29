@@ -14,6 +14,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
+    "@bg-dev/nuxt-naiveui": "^1.11.0",
     "@gjfleo/eslint-config": "^1.0.4",
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/twemoji": "^1.1.15",
