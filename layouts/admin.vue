@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { MenuLinkRoute } from "@bg-dev/nuxt-naiveui";
-import type { GlobalThemeOverrides } from "naive-ui";
+import { dateZhCN, zhCN } from "naive-ui";
+import { adminThemeConfig } from "@/config/theme";
 
 const menu: MenuLinkRoute[] = [
   {
@@ -9,53 +10,44 @@ const menu: MenuLinkRoute[] = [
   },
 ];
 
-const light: GlobalThemeOverrides = {
-  common: {
-    primaryColor: "#86BF42FF",
-    primaryColorHover: "#AADF69FF",
-    primaryColorPressed: "#76AF32FF",
-    primaryColorSuppl: "#98CF55FF",
-    infoColor: "#4FAAF3FF",
-    infoColorHover: "#79C0F9FF",
-    infoColorPressed: "#3694DFFF",
-    infoColorSuppl: "#64B5F6FF",
-    successColor: "#86BF42FF",
-    successColorHover: "#AADF69FF",
-    successColorPressed: "#76AF32FF",
-    successColorSuppl: "#98CF55FF",
-    warningColor: "#FFC108FF",
-    warningColorSuppl: "#FFC928FF",
-    warningColorHover: "#FFD14AFF",
-    warningColorPressed: "#D8A406FF",
-    errorColor: "#F55F55FF",
-    errorColorSuppl: "#F86F65FF",
-    errorColorHover: "#FA7F76FF",
-    errorColorPressed: "#D5473DFF",
-    textColorBase: "#222222FF",
-    textColor1: "#444444FF",
-    textColor2: "#666666FF",
-    textColor3: "#888888FF",
-    bodyColor: "#F0F2F0FF",
-    cardColor: "#FCFEFCFF",
-    tableColor: "#F5F7F5FF",
-    tableHeaderColor: "#FAFCFAFF",
-    dividerColor: "#E6E8E6FF",
+const { t, locale, locales, setLocale } = useI18n();
+const localeOptions = computed(() => {
+  return locales.value
+    .map(locale => (
+      typeof locale === "string"
+        ? { label: locale, value: locale }
+        : { label: locale.name, value: locale.code }
+    ));
+});
+watch(
+  locale,
+  () => {
+    useSeoMeta({
+      description: t("site.description"),
+    });
   },
-  Table: {
-    tdColor: "#F5F7F5FF",
-  },
-};
+  { immediate: true },
+);
 </script>
 
 <template>
-  <NaiveConfig :theme-config="{ light }">
-    <NaiveLayoutNavbar :routes="menu" toggle-icon="carbon:menu">
-      <template #end>
-        <NaiveColorModeSwitch />
-      </template>
-      <template #default>
-        <NuxtPage />
-      </template>
-    </NaiveLayoutNavbar>
+  <NaiveConfig :theme-config="adminThemeConfig" :locale="zhCN" :date-locale="dateZhCN">
+    <NMessageProvider>
+      <NaiveLayoutNavbar :routes="menu" toggle-icon="carbon:menu">
+        <template #end>
+          <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
+            <NButton circle quaternary :focusable="false">
+              <template #icon>
+                <div class="i-carbon:language" />
+              </template>
+            </NButton>
+          </NPopselect>
+          <NaiveColorModeSwitch />
+        </template>
+        <template #default>
+          <NuxtPage />
+        </template>
+      </NaiveLayoutNavbar>
+    </NMessageProvider>
   </NaiveConfig>
 </template>

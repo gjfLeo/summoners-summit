@@ -6,20 +6,21 @@ export function getPlayerList(): Player[] {
   return ZPlayer.array().parse(readDataList("players"));
 }
 
-export function savePlayer(playerInput: PlayerInput): void {
-  const player = {
-    ...playerInput,
-    hashId: `_${hash(playerInput.uniqueName)}`,
-  };
-  if (player.uid) {
-    deletePlayer(player.hashId);
-    writeData(`players/${player.uid}`, ZPlayer.parse(player));
+export function savePlayer(params: SavePlayerParams): void {
+  if (params.id) {
+    deletePlayer(params.id);
   }
-  else {
-    writeData(`players/${player.hashId}`, ZPlayer.parse(player));
-  }
+
+  const player = Object.assign({}, params, {
+    id: hash(params.uniqueName),
+  });
+  writeData(`players/${player.id}`, ZPlayer.parse(player));
 }
 
 export function deletePlayer(playerId: string): void {
   deleteData(`players/${playerId}`);
+}
+
+export function findPlayer(nickname: string): Player | undefined {
+  return getPlayerList().find(player => player.uniqueName === nickname || player.aliases?.includes(nickname));
 }

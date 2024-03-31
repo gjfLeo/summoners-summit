@@ -1,4 +1,4 @@
-import { addImportsDir, addImportsSources, createResolver, defineNuxtModule } from "@nuxt/kit";
+import { addImports, addImportsDir, createResolver, defineNuxtModule } from "@nuxt/kit";
 
 export default defineNuxtModule({
   meta: {
@@ -9,5 +9,6 @@ export default defineNuxtModule({
   setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url);
     addImportsDir(resolver.resolve("./types"));
+    addImports({ from: "naive-ui", name: "DataTableColumn", type: true });
   },
 });

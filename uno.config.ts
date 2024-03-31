@@ -23,9 +23,18 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: "DM Sans",
-        serif: "DM Serif Display",
-        mono: "DM Mono",
+        sans: [
+          {
+            name: "Microsoft YaHei",
+            provider: "none",
+          },
+        ],
+        mono: [
+          {
+            name: "Ubuntu Mono",
+            provider: "bunny",
+          },
+        ],
       },
     }),
   ],

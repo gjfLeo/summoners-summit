@@ -1,11 +1,12 @@
 import { z } from "zod";
 
 export const ZPlayer = z.object({
-  uid: z.coerce.string().regex(/^\d{9}$/).optional(),
+  id: z.coerce.string().regex(/^\w{16}$/),
   uniqueName: z.string(),
-  hashId: z.coerce.string().regex(/^_\w{16}$/),
+  aliases: z.coerce.string().array().optional(),
+  uid: z.coerce.string().regex(/^\d{9}$/).optional(),
 }).strip();
 export type Player = z.infer<typeof ZPlayer>;
 
-export const ZPlayerInput = ZPlayer.omit({ hashId: true }).strip();
-export type PlayerInput = z.infer<typeof ZPlayerInput>;
+export const ZSavePlayerParams = ZPlayer.partial({ id: true }).strip();
+export type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
