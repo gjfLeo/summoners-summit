@@ -35,6 +35,7 @@ watch(
     <NMessageProvider>
       <NaiveLayoutNavbar :routes="menu" toggle-icon="carbon:menu">
         <template #end>
+          <AdminDataCommit />
           <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
             <NButton circle quaternary :focusable="false">
               <template #icon>
