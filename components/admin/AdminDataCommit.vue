@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const modalVisible = ref(false);
 const commitMessage = ref("");
+const submitLoading = ref(false);
 
 const message = useMessage();
 
@@ -10,12 +11,15 @@ function commit() {
 }
 
 async function submit() {
+  submitLoading.value = true;
   await $fetch("/api/v3/data/commit", {
     method: "POST",
     body: {
       message: commitMessage.value,
     },
   });
+  submitLoading.value = false;
+  modalVisible.value = false;
   message.success("提交成功");
 }
 </script>
@@ -36,8 +40,8 @@ async function submit() {
       </NFormItem>
     </template>
     <template #action>
-      <NButton @click="submit">提交</NButton>
-      <NButton quaternary @click="modalVisible = false">取消</NButton>
+      <NButton :loading="submitLoading" @click="submit">提交</NButton>
+      <NButton @click="modalVisible = false">取消</NButton>
     </template>
   </NModal>
 </template>
