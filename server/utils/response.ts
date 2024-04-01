@@ -1,5 +1,5 @@
 // eslint-disable-next-line ts/ban-types
-type ApiResponse<T = {}> = T & {
+export type ApiResponse<T = {}> = T & {
   success: boolean;
   code: number;
   message?: string;

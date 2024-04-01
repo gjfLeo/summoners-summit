@@ -21,6 +21,8 @@ export function deletePlayer(playerId: string): void {
   deleteData(`players/${playerId}`);
 }
 
-export function findPlayer(nickname: string): Player | undefined {
-  return getPlayerList().find(player => player.uniqueName === nickname || player.aliases?.includes(nickname));
+export function findPlayer(nickname: string, excludeId?: string): Player | undefined {
+  return getPlayerList()
+    .filter(player => player.id !== excludeId)
+    .find(player => player.uniqueName === nickname || player.aliases?.includes(nickname));
 }

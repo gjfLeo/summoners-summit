@@ -11,7 +11,7 @@ async function confirm() {
   try {
     await $fetch("/api/v3/players/deletePlayer", {
       method: "POST",
-      query: { id: props.player.id },
+      body: { id: props.player.id },
     });
   }
   catch (error) {

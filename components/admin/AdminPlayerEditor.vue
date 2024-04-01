@@ -24,9 +24,11 @@ const rules: FormRules = {
 async function edit(player?: Player) {
   params.value = Object.assign(initPlayer(), player);
   modalShow.value = true;
-  await nextTick(() => {
-    uniqueNameRef.value?.focus();
-  });
+  if (!params.value.uniqueName) {
+    await nextTick(() => {
+      uniqueNameRef.value?.focus();
+    });
+  }
   return new Promise<void>((res, rej) => {
     resolve.value = res;
     reject.value = rej;
@@ -46,6 +48,7 @@ async function submit() {
   if (!params.value.uid) {
     params.value.uid = undefined;
   }
+  params.value.aliases = params.value.aliases?.filter(Boolean);
   if (!params.value.aliases?.length) {
     params.value.aliases = undefined;
   }
@@ -60,7 +63,13 @@ async function submit() {
     message.success(t("action.message.success"));
   }
   else {
-    message.error(data.message ?? t("action.message.error"));
+    if (data.code === 409) {
+      const { nickname } = data;
+      message.error(`昵称“${nickname}”冲突`);
+    }
+    else {
+      message.error(data.message ?? t("action.message.error"));
+    }
   }
   submitLoading.value = false;
 }
@@ -88,7 +97,7 @@ defineExpose({ edit });
           <NInput ref="uniqueNameRef" v-model:value="params.uniqueName" />
         </NFormItem>
         <NFormItem :label="$t('player.otherNicknames')" path="aliases">
-          <NDynamicTags v-model:value="params.aliases" />
+          <NDynamicInput v-model:value="params.aliases" show-sort-button />
         </NFormItem>
       </NForm>
     </template>
