@@ -5,8 +5,10 @@ import t41 from "./4.1";
 import t42 from "./4.2";
 import t43 from "./4.3";
 import t44 from "./4.4";
+import t45 from "./4.5";
 
 export default [
+  ...t45,
   ...t44,
   ...t43,
   ...t42,
