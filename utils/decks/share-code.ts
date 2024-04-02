@@ -3,11 +3,13 @@ import { ALL_ACTION_CARDS_INFO, ALL_CHARACTER_CARDS_INFO } from "../cards";
 import blockWords from "./block-words";
 
 const getCharacterCardByShareId = useMemoize((shareId: number): CharacterCard => {
+  if (shareId === 0) return "";
   const card = Object.entries(ALL_CHARACTER_CARDS_INFO).find(([_card, info]) => info.shareId === shareId);
   if (!card) throw new Error(`Invalid character card shareId during decode: ${shareId}`);
   return card[0] as CharacterCard;
 });
 const getActionCardByShareId = useMemoize((shareId: number): ActionCard => {
+  if (shareId === 0) return "";
   const card = Object.entries(ALL_ACTION_CARDS_INFO).find(([_card, info]) => info.shareId === shareId);
   if (!card) throw new Error(`Invalid action card shareId during decode: ${shareId}`);
   return card[0] as ActionCard;
