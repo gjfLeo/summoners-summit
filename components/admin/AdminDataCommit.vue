@@ -15,7 +15,7 @@ async function submit() {
   await $fetch("/api/v3/data/commit", {
     method: "POST",
     body: {
-      message: commitMessage.value,
+      message: commitMessage.value || "更新数据",
     },
   });
   submitLoading.value = false;
@@ -25,7 +25,7 @@ async function submit() {
 </script>
 
 <template>
-  <NButton circle quaternary :focusable="false" @click="commit">
+  <NButton text :focusable="false" @click="commit">
     <template #icon>
       <div class="i-carbon:save" />
     </template>

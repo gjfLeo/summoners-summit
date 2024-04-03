@@ -5,6 +5,10 @@ import { adminThemeConfig } from "@/config/theme";
 
 const menu: MenuLinkRoute[] = [
   {
+    label: "卡牌",
+    to: "/admin/cards",
+  },
+  {
     label: "选手",
     to: "/admin/players",
   },
@@ -37,13 +41,16 @@ watch(
         <template #end>
           <AdminDataCommit />
           <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
-            <NButton circle quaternary :focusable="false">
+            <NButton text :focusable="false">
               <template #icon>
                 <div class="i-carbon:language" />
               </template>
             </NButton>
           </NPopselect>
-          <NaiveColorModeSwitch />
+          <NaiveColorModeSwitch
+            icon-system="carbon:color-switch" icon-light="carbon:sun" icon-dark="carbon:moon"
+            :focusable="false"
+          />
         </template>
         <template #default>
           <NuxtPage />
