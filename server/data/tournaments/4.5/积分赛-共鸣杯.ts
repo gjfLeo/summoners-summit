@@ -16,7 +16,7 @@ export default defineTournament({
       parts: [
         {
           name: "DAY1",
-          date: "2024-04-01",
+          date: "2024-03-31",
           matches: [
             {
               playerA: "今天我不吃牛肉",
