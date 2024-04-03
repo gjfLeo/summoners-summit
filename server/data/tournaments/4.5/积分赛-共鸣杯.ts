@@ -252,5 +252,90 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "8进4",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "DAY1",
+          date: "2024-04-02",
+          matches: [
+            {
+              playerA: "今天不想吃苹果",
+              playerB: "胡桃桃大魔王",
+              video: "https://www.bilibili.com/video/BV1mq421w7NL",
+              banned: [
+                {
+                  playerACharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  playerBCharacters: ["莫娜", "枫原万叶", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "无相之冰"],
+                  playerBCharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "枫原万叶", "「女士」"],
+                  playerBCharacters: ["绮良良", "镀金旅团·炽沙叙事人", "雷音权现"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "Chaos",
+              playerB: "舒",
+              video: "https://www.bilibili.com/video/BV1kK421Y71k",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莫娜", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["无相之冰", "千年珍珠骏麟", "那维莱特"],
+                  playerBCharacters: ["雷电将军", "香菱", "刻晴"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["雷电将军", "香菱", "刻晴"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["菲谢尔", "纳西妲", "林尼"],
+                  playerBCharacters: ["雷电将军", "香菱", "刻晴"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
