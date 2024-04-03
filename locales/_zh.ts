@@ -1,5 +1,9 @@
+import action from "./action.zh.json";
+import site from "./site.zh.json";
+import player from "./player.zh.json";
+
 export default {
-  action: (await import("./action.zh.json")).default,
-  site: (await import("./site.zh.json")).default,
-  player: (await import("./player.zh.json")).default,
+  action,
+  site,
+  player,
 };
