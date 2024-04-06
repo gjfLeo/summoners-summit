@@ -81,5 +81,8 @@ export default defineNuxtConfig({
       { code: "en", iso: "en", name: "English" },
     ],
     defaultLocale: "zh",
+    customBlocks: {
+      defaultSFCLang: "yaml",
+    },
   },
 });

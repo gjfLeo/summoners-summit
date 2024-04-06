@@ -1,0 +1,871 @@
+{
+  "1101": {
+    "id": "1101",
+    "name": {
+      "zh": "甘雨",
+      "en": "Ganyu"
+    },
+    "shareId": 1,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "cryo"
+  },
+  "1102": {
+    "id": "1102",
+    "name": {
+      "zh": "迪奥娜",
+      "en": "Diona"
+    },
+    "shareId": 2,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "cryo"
+  },
+  "1103": {
+    "id": "1103",
+    "name": {
+      "zh": "凯亚",
+      "en": "Kaeya"
+    },
+    "shareId": 3,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "cryo"
+  },
+  "1104": {
+    "id": "1104",
+    "name": {
+      "zh": "重云",
+      "en": "Chongyun"
+    },
+    "shareId": 4,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "cryo"
+  },
+  "1105": {
+    "id": "1105",
+    "name": {
+      "zh": "神里绫华",
+      "en": "Kamisato Ayaka"
+    },
+    "shareId": 5,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "cryo"
+  },
+  "1106": {
+    "id": "1106",
+    "name": {
+      "zh": "优菈",
+      "en": "Eula"
+    },
+    "shareId": 6,
+    "type": "character",
+    "gameVersion": "3.5",
+    "element": "cryo"
+  },
+  "1107": {
+    "id": "1107",
+    "name": {
+      "zh": "申鹤",
+      "en": "Shenhe"
+    },
+    "shareId": 7,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "cryo"
+  },
+  "1108": {
+    "id": "1108",
+    "name": {
+      "zh": "七七",
+      "en": "Qiqi"
+    },
+    "shareId": 8,
+    "type": "character",
+    "gameVersion": "4.0",
+    "element": "cryo"
+  },
+  "1109": {
+    "id": "1109",
+    "name": {
+      "zh": "莱依拉",
+      "en": "Layla"
+    },
+    "shareId": 279,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "cryo"
+  },
+  "1110": {
+    "id": "1110",
+    "name": {
+      "zh": "夏洛蒂",
+      "en": "Charlotte"
+    },
+    "shareId": 334,
+    "type": "character",
+    "gameVersion": "4.5",
+    "element": "cryo"
+  },
+  "1201": {
+    "id": "1201",
+    "name": {
+      "zh": "芭芭拉",
+      "en": "Barbara"
+    },
+    "shareId": 9,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "hydro"
+  },
+  "1202": {
+    "id": "1202",
+    "name": {
+      "zh": "行秋",
+      "en": "Xingqiu"
+    },
+    "shareId": 10,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "hydro"
+  },
+  "1203": {
+    "id": "1203",
+    "name": {
+      "zh": "莫娜",
+      "en": "Mona"
+    },
+    "shareId": 11,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "hydro"
+  },
+  "1204": {
+    "id": "1204",
+    "name": {
+      "zh": "达达利亚",
+      "en": "Tartaglia"
+    },
+    "shareId": 12,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "hydro"
+  },
+  "1205": {
+    "id": "1205",
+    "name": {
+      "zh": "珊瑚宫心海",
+      "en": "Sangonomiya Kokomi"
+    },
+    "shareId": 13,
+    "type": "character",
+    "gameVersion": "3.5",
+    "element": "hydro"
+  },
+  "1206": {
+    "id": "1206",
+    "name": {
+      "zh": "神里绫人",
+      "en": "Kamisato Ayato"
+    },
+    "shareId": 14,
+    "type": "character",
+    "gameVersion": "3.6",
+    "element": "hydro"
+  },
+  "1207": {
+    "id": "1207",
+    "name": {
+      "zh": "坎蒂丝",
+      "en": "Candace"
+    },
+    "shareId": 15,
+    "type": "character",
+    "gameVersion": "3.8",
+    "element": "hydro"
+  },
+  "1208": {
+    "id": "1208",
+    "name": {
+      "zh": "妮露",
+      "en": "Nilou"
+    },
+    "shareId": 16,
+    "type": "character",
+    "gameVersion": "4.2",
+    "element": "hydro"
+  },
+  "1209": {
+    "id": "1209",
+    "name": {
+      "zh": "夜兰",
+      "en": "Yelan"
+    },
+    "shareId": 280,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "hydro"
+  },
+  "1210": {
+    "id": "1210",
+    "name": {
+      "zh": "那维莱特",
+      "en": "Neuvillette"
+    },
+    "shareId": 335,
+    "type": "character",
+    "gameVersion": "4.5",
+    "element": "hydro"
+  },
+  "1301": {
+    "id": "1301",
+    "name": {
+      "zh": "迪卢克",
+      "en": "Diluc"
+    },
+    "shareId": 17,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "pyro"
+  },
+  "1302": {
+    "id": "1302",
+    "name": {
+      "zh": "香菱",
+      "en": "Xiangling"
+    },
+    "shareId": 18,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "pyro"
+  },
+  "1303": {
+    "id": "1303",
+    "name": {
+      "zh": "班尼特",
+      "en": "Bennett"
+    },
+    "shareId": 19,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "pyro"
+  },
+  "1304": {
+    "id": "1304",
+    "name": {
+      "zh": "安柏",
+      "en": "Amber"
+    },
+    "shareId": 20,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "pyro"
+  },
+  "1305": {
+    "id": "1305",
+    "name": {
+      "zh": "宵宫",
+      "en": "Yoimiya"
+    },
+    "shareId": 21,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "pyro"
+  },
+  "1306": {
+    "id": "1306",
+    "name": {
+      "zh": "可莉",
+      "en": "Klee"
+    },
+    "shareId": 22,
+    "type": "character",
+    "gameVersion": "3.4",
+    "element": "pyro"
+  },
+  "1307": {
+    "id": "1307",
+    "name": {
+      "zh": "胡桃",
+      "en": "Hu Tao"
+    },
+    "shareId": 23,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "pyro"
+  },
+  "1308": {
+    "id": "1308",
+    "name": {
+      "zh": "烟绯",
+      "en": "Yanfei"
+    },
+    "shareId": 24,
+    "type": "character",
+    "gameVersion": "3.8",
+    "element": "pyro"
+  },
+  "1309": {
+    "id": "1309",
+    "name": {
+      "zh": "迪希雅",
+      "en": "Dehya"
+    },
+    "shareId": 25,
+    "type": "character",
+    "gameVersion": "4.1",
+    "element": "pyro"
+  },
+  "1310": {
+    "id": "1310",
+    "name": {
+      "zh": "林尼",
+      "en": "Lyney"
+    },
+    "shareId": 281,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "pyro"
+  },
+  "1311": {
+    "id": "1311",
+    "name": {
+      "zh": "托马",
+      "en": "Thoma"
+    },
+    "shareId": 319,
+    "type": "character",
+    "gameVersion": "4.4",
+    "element": "pyro"
+  },
+  "1401": {
+    "id": "1401",
+    "name": {
+      "zh": "菲谢尔",
+      "en": "Fischl"
+    },
+    "shareId": 26,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "electro"
+  },
+  "1402": {
+    "id": "1402",
+    "name": {
+      "zh": "雷泽",
+      "en": "Razor"
+    },
+    "shareId": 27,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "electro"
+  },
+  "1403": {
+    "id": "1403",
+    "name": {
+      "zh": "刻晴",
+      "en": "Keqing"
+    },
+    "shareId": 28,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "electro"
+  },
+  "1404": {
+    "id": "1404",
+    "name": {
+      "zh": "赛诺",
+      "en": "Cyno"
+    },
+    "shareId": 29,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "electro"
+  },
+  "1405": {
+    "id": "1405",
+    "name": {
+      "zh": "北斗",
+      "en": "Beidou"
+    },
+    "shareId": 30,
+    "type": "character",
+    "gameVersion": "3.4",
+    "element": "electro"
+  },
+  "1406": {
+    "id": "1406",
+    "name": {
+      "zh": "九条裟罗",
+      "en": "Kujou Sara"
+    },
+    "shareId": 31,
+    "type": "character",
+    "gameVersion": "3.5",
+    "element": "electro"
+  },
+  "1407": {
+    "id": "1407",
+    "name": {
+      "zh": "雷电将军",
+      "en": "Raiden Shogun"
+    },
+    "shareId": 32,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "electro"
+  },
+  "1408": {
+    "id": "1408",
+    "name": {
+      "zh": "八重神子",
+      "en": "Yae Miko"
+    },
+    "shareId": 33,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "electro"
+  },
+  "1409": {
+    "id": "1409",
+    "name": {
+      "zh": "丽莎",
+      "en": "Lisa"
+    },
+    "shareId": 34,
+    "type": "character",
+    "gameVersion": "4.0",
+    "element": "electro"
+  },
+  "1410": {
+    "id": "1410",
+    "name": {
+      "zh": "多莉",
+      "en": "Dori"
+    },
+    "shareId": 35,
+    "type": "character",
+    "gameVersion": "4.2",
+    "element": "electro"
+  },
+  "1501": {
+    "id": "1501",
+    "name": {
+      "zh": "砂糖",
+      "en": "Sucrose"
+    },
+    "shareId": 36,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "anemo"
+  },
+  "1502": {
+    "id": "1502",
+    "name": {
+      "zh": "琴",
+      "en": "Jean"
+    },
+    "shareId": 37,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "anemo"
+  },
+  "1503": {
+    "id": "1503",
+    "name": {
+      "zh": "温迪",
+      "en": "Venti"
+    },
+    "shareId": 38,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "anemo"
+  },
+  "1504": {
+    "id": "1504",
+    "name": {
+      "zh": "魈",
+      "en": "Xiao"
+    },
+    "shareId": 39,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "anemo"
+  },
+  "1505": {
+    "id": "1505",
+    "name": {
+      "zh": "枫原万叶",
+      "en": "Kaedehara Kazuha"
+    },
+    "shareId": 40,
+    "type": "character",
+    "gameVersion": "3.8",
+    "element": "anemo"
+  },
+  "1506": {
+    "id": "1506",
+    "name": {
+      "zh": "流浪者",
+      "en": "Wanderer"
+    },
+    "shareId": 41,
+    "type": "character",
+    "gameVersion": "4.1",
+    "element": "anemo"
+  },
+  "1507": {
+    "id": "1507",
+    "name": {
+      "zh": "早柚",
+      "en": "Sayu"
+    },
+    "shareId": 320,
+    "type": "character",
+    "gameVersion": "4.4",
+    "element": "anemo"
+  },
+  "1508": {
+    "id": "1508",
+    "name": {
+      "zh": "琳妮特",
+      "en": "Lynette"
+    },
+    "shareId": 282,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "anemo"
+  },
+  "1601": {
+    "id": "1601",
+    "name": {
+      "zh": "凝光",
+      "en": "Ningguang"
+    },
+    "shareId": 42,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "geo"
+  },
+  "1602": {
+    "id": "1602",
+    "name": {
+      "zh": "诺艾尔",
+      "en": "Noelle"
+    },
+    "shareId": 43,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "geo"
+  },
+  "1603": {
+    "id": "1603",
+    "name": {
+      "zh": "钟离",
+      "en": "Zhongli"
+    },
+    "shareId": 44,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "geo"
+  },
+  "1604": {
+    "id": "1604",
+    "name": {
+      "zh": "阿贝多",
+      "en": "Albedo"
+    },
+    "shareId": 45,
+    "type": "character",
+    "gameVersion": "4.0",
+    "element": "geo"
+  },
+  "1605": {
+    "id": "1605",
+    "name": {
+      "zh": "荒泷一斗",
+      "en": "Arataki Itto"
+    },
+    "shareId": 46,
+    "type": "character",
+    "gameVersion": "3.6",
+    "element": "geo"
+  },
+  "1606": {
+    "id": "1606",
+    "name": {
+      "zh": "五郎",
+      "en": "Gorou"
+    },
+    "shareId": 283,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "geo"
+  },
+  "1701": {
+    "id": "1701",
+    "name": {
+      "zh": "柯莱",
+      "en": "Collei"
+    },
+    "shareId": 47,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "dendro"
+  },
+  "1702": {
+    "id": "1702",
+    "name": {
+      "zh": "提纳里",
+      "en": "Tighnari"
+    },
+    "shareId": 48,
+    "type": "character",
+    "gameVersion": "3.6",
+    "element": "dendro"
+  },
+  "1703": {
+    "id": "1703",
+    "name": {
+      "zh": "纳西妲",
+      "en": "Nahida"
+    },
+    "shareId": 49,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "dendro"
+  },
+  "1704": {
+    "id": "1704",
+    "name": {
+      "zh": "瑶瑶",
+      "en": "Yaoyao"
+    },
+    "shareId": 50,
+    "type": "character",
+    "gameVersion": "4.1",
+    "element": "dendro"
+  },
+  "1705": {
+    "id": "1705",
+    "name": {
+      "zh": "白术",
+      "en": "Baizhu"
+    },
+    "shareId": 51,
+    "type": "character",
+    "gameVersion": "4.2",
+    "element": "dendro"
+  },
+  "1706": {
+    "id": "1706",
+    "name": {
+      "zh": "艾尔海森",
+      "en": "Alhaitham"
+    },
+    "shareId": 284,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "dendro"
+  },
+  "1707": {
+    "id": "1707",
+    "name": {
+      "zh": "绮良良",
+      "en": "Kirara"
+    },
+    "shareId": 336,
+    "type": "character",
+    "gameVersion": "4.5",
+    "element": "dendro"
+  },
+  "2101": {
+    "id": "2101",
+    "name": {
+      "zh": "愚人众·冰萤术士",
+      "en": "Fatui Cryo Cicin Mage"
+    },
+    "shareId": 52,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "cryo"
+  },
+  "2102": {
+    "id": "2102",
+    "name": {
+      "zh": "「女士」",
+      "en": "La Signora"
+    },
+    "shareId": 277,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "cryo"
+  },
+  "2103": {
+    "id": "2103",
+    "name": {
+      "zh": "无相之冰",
+      "en": "Cryo Hypostasis"
+    },
+    "shareId": 321,
+    "type": "character",
+    "gameVersion": "4.4",
+    "element": "cryo"
+  },
+  "2201": {
+    "id": "2201",
+    "name": {
+      "zh": "纯水精灵·洛蒂娅",
+      "en": "Rhodeia of Loch"
+    },
+    "shareId": 53,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "hydro"
+  },
+  "2202": {
+    "id": "2202",
+    "name": {
+      "zh": "愚人众·藏镜仕女",
+      "en": "Mirror Maiden"
+    },
+    "shareId": 54,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "hydro"
+  },
+  "2301": {
+    "id": "2301",
+    "name": {
+      "zh": "愚人众·火之债务处理人",
+      "en": "Fatui Pyro Agent"
+    },
+    "shareId": 55,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "pyro"
+  },
+  "2302": {
+    "id": "2302",
+    "name": {
+      "zh": "深渊咏者·渊火",
+      "en": "Abyss Lector: Fathomless Flames"
+    },
+    "shareId": 56,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "pyro"
+  },
+  "2303": {
+    "id": "2303",
+    "name": {
+      "zh": "镀金旅团·炽沙叙事人",
+      "en": "Eremite Scorching Loremaster"
+    },
+    "shareId": 285,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "pyro"
+  },
+  "2401": {
+    "id": "2401",
+    "name": {
+      "zh": "无相之雷",
+      "en": "Electro Hypostasis"
+    },
+    "shareId": 57,
+    "type": "character",
+    "gameVersion": "3.7",
+    "element": "electro"
+  },
+  "2402": {
+    "id": "2402",
+    "name": {
+      "zh": "雷音权现",
+      "en": "Thunder Manifestation"
+    },
+    "shareId": 286,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "electro"
+  },
+  "2403": {
+    "id": "2403",
+    "name": {
+      "zh": "千年珍珠骏麟",
+      "en": "Millennial Pearl Seahorse"
+    },
+    "shareId": 322,
+    "type": "character",
+    "gameVersion": "4.4",
+    "element": "electro"
+  },
+  "2404": {
+    "id": "2404",
+    "name": {
+      "zh": "愚人众·雷萤术士",
+      "en": "Fatui Electro Cicin Mage"
+    },
+    "shareId": 337,
+    "type": "character",
+    "gameVersion": "4.5",
+    "element": "electro"
+  },
+  "2501": {
+    "id": "2501",
+    "name": {
+      "zh": "魔偶剑鬼",
+      "en": "Maguu Kenki"
+    },
+    "shareId": 58,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "anemo"
+  },
+  "2502": {
+    "id": "2502",
+    "name": {
+      "zh": "特瓦林",
+      "en": "Dvalin"
+    },
+    "shareId": 287,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "anemo"
+  },
+  "2601": {
+    "id": "2601",
+    "name": {
+      "zh": "丘丘岩盔王",
+      "en": "Stonehide Lawachurl"
+    },
+    "shareId": 59,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "geo"
+  },
+  "2602": {
+    "id": "2602",
+    "name": {
+      "zh": "若陀龙王",
+      "en": "Azhdaha"
+    },
+    "shareId": 278,
+    "type": "character",
+    "gameVersion": "4.3",
+    "element": "geo"
+  },
+  "2701": {
+    "id": "2701",
+    "name": {
+      "zh": "翠翎恐蕈",
+      "en": "Jadeplume Terrorshroom"
+    },
+    "shareId": 60,
+    "type": "character",
+    "gameVersion": "3.3",
+    "element": "dendro"
+  }
+}

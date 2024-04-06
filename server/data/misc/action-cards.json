@@ -1,0 +1,2950 @@
+{
+  "211011": {
+    "id": "211011",
+    "name": {
+      "zh": "唯此一心",
+      "en": "Undivided Heart"
+    },
+    "shareId": 61,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "211021": {
+    "id": "211021",
+    "name": {
+      "zh": "猫爪冰摇",
+      "en": "Shaken, Not Purred"
+    },
+    "shareId": 62,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "211031": {
+    "id": "211031",
+    "name": {
+      "zh": "冷血之剑",
+      "en": "Cold-Blooded Strike"
+    },
+    "shareId": 63,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "211041": {
+    "id": "211041",
+    "name": {
+      "zh": "吐纳真定",
+      "en": "Steady Breathing"
+    },
+    "shareId": 64,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "211051": {
+    "id": "211051",
+    "name": {
+      "zh": "寒天宣命祝词",
+      "en": "Kanten Senmyou Blessing"
+    },
+    "shareId": 65,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "211061": {
+    "id": "211061",
+    "name": {
+      "zh": "战欲涌现",
+      "en": "Wellspring of War-Lust"
+    },
+    "shareId": 66,
+    "type": "action",
+    "gameVersion": "3.5",
+    "actionType": "equipment"
+  },
+  "211071": {
+    "id": "211071",
+    "name": {
+      "zh": "忘玄",
+      "en": "Mystical Abandon"
+    },
+    "shareId": 67,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "211081": {
+    "id": "211081",
+    "name": {
+      "zh": "起死回骸",
+      "en": "Rite of Resurrection"
+    },
+    "shareId": 68,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "equipment"
+  },
+  "211091": {
+    "id": "211091",
+    "name": {
+      "zh": "归芒携信",
+      "en": "Light's Remit"
+    },
+    "shareId": 288,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "211101": {
+    "id": "211101",
+    "name": {
+      "zh": "以有趣相关为要义",
+      "en": "A Summation of Interest"
+    },
+    "shareId": 338,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "212011": {
+    "id": "212011",
+    "name": {
+      "zh": "光辉的季节",
+      "en": "Glorious Season"
+    },
+    "shareId": 69,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "212021": {
+    "id": "212021",
+    "name": {
+      "zh": "重帘留香",
+      "en": "The Scent Remained"
+    },
+    "shareId": 70,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "212031": {
+    "id": "212031",
+    "name": {
+      "zh": "沉没的预言",
+      "en": "Prophecy of Submersion"
+    },
+    "shareId": 71,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "212041": {
+    "id": "212041",
+    "name": {
+      "zh": "深渊之灾·凝水盛放",
+      "en": "Abyssal Mayhem: Hydrospout"
+    },
+    "shareId": 72,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "212051": {
+    "id": "212051",
+    "name": {
+      "zh": "匣中玉栉",
+      "en": "Tamakushi Casket"
+    },
+    "shareId": 73,
+    "type": "action",
+    "gameVersion": "3.5",
+    "actionType": "equipment"
+  },
+  "212061": {
+    "id": "212061",
+    "name": {
+      "zh": "镜华风姿",
+      "en": "Kyouka Fuushi"
+    },
+    "shareId": 74,
+    "type": "action",
+    "gameVersion": "3.6",
+    "actionType": "equipment"
+  },
+  "212071": {
+    "id": "212071",
+    "name": {
+      "zh": "衍溢的汐潮",
+      "en": "The Overflow"
+    },
+    "shareId": 75,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "equipment"
+  },
+  "212081": {
+    "id": "212081",
+    "name": {
+      "zh": "星天的花雨",
+      "en": "The Starry Skies Their Flowers Rain"
+    },
+    "shareId": 76,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "equipment"
+  },
+  "212091": {
+    "id": "212091",
+    "name": {
+      "zh": "猜先有方",
+      "en": "Turn Control"
+    },
+    "shareId": 289,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "212101": {
+    "id": "212101",
+    "name": {
+      "zh": "古海孑遗的权柄",
+      "en": "Heir to the Ancient Sea's Authority"
+    },
+    "shareId": 339,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "213011": {
+    "id": "213011",
+    "name": {
+      "zh": "流火焦灼",
+      "en": "Flowing Flame"
+    },
+    "shareId": 77,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "213021": {
+    "id": "213021",
+    "name": {
+      "zh": "交叉火力",
+      "en": "Crossfire"
+    },
+    "shareId": 78,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "213031": {
+    "id": "213031",
+    "name": {
+      "zh": "冒险憧憬",
+      "en": "Grand Expectation"
+    },
+    "shareId": 79,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "213041": {
+    "id": "213041",
+    "name": {
+      "zh": "一触即发",
+      "en": "Bunny Triggered"
+    },
+    "shareId": 80,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "213051": {
+    "id": "213051",
+    "name": {
+      "zh": "长野原龙势流星群",
+      "en": "Naganohara Meteor Swarm"
+    },
+    "shareId": 81,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "213061": {
+    "id": "213061",
+    "name": {
+      "zh": "砰砰礼物",
+      "en": "Pounding Surprise"
+    },
+    "shareId": 82,
+    "type": "action",
+    "gameVersion": "3.4",
+    "actionType": "equipment"
+  },
+  "213071": {
+    "id": "213071",
+    "name": {
+      "zh": "血之灶火",
+      "en": "Sanguine Rouge"
+    },
+    "shareId": 83,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "213081": {
+    "id": "213081",
+    "name": {
+      "zh": "最终解释权",
+      "en": "Right of Final Interpretation"
+    },
+    "shareId": 84,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "equipment"
+  },
+  "213091": {
+    "id": "213091",
+    "name": {
+      "zh": "崇诚之真",
+      "en": "Stalwart and True"
+    },
+    "shareId": 85,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "equipment"
+  },
+  "213101": {
+    "id": "213101",
+    "name": {
+      "zh": "完场喝彩",
+      "en": "Conclusive Ovation"
+    },
+    "shareId": 290,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "213111": {
+    "id": "213111",
+    "name": {
+      "zh": "僚佐的才巧",
+      "en": "A Subordinate's Skills"
+    },
+    "shareId": 323,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "214011": {
+    "id": "214011",
+    "name": {
+      "zh": "噬星魔鸦",
+      "en": "Stellar Predator"
+    },
+    "shareId": 86,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "214021": {
+    "id": "214021",
+    "name": {
+      "zh": "觉醒",
+      "en": "Awakening"
+    },
+    "shareId": 87,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "214031": {
+    "id": "214031",
+    "name": {
+      "zh": "抵天雷罚",
+      "en": "Thundering Penance"
+    },
+    "shareId": 88,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "214041": {
+    "id": "214041",
+    "name": {
+      "zh": "落羽的裁择",
+      "en": "Featherfall Judgment"
+    },
+    "shareId": 89,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "214051": {
+    "id": "214051",
+    "name": {
+      "zh": "霹雳连霄",
+      "en": "Lightning Storm"
+    },
+    "shareId": 90,
+    "type": "action",
+    "gameVersion": "3.4",
+    "actionType": "equipment"
+  },
+  "214061": {
+    "id": "214061",
+    "name": {
+      "zh": "我界",
+      "en": "Sin of Pride"
+    },
+    "shareId": 91,
+    "type": "action",
+    "gameVersion": "3.5",
+    "actionType": "equipment"
+  },
+  "214071": {
+    "id": "214071",
+    "name": {
+      "zh": "万千的愿望",
+      "en": "Wishes Unnumbered"
+    },
+    "shareId": 92,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "214081": {
+    "id": "214081",
+    "name": {
+      "zh": "神篱之御荫",
+      "en": "The Shrine's Sacred Shade"
+    },
+    "shareId": 93,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "214091": {
+    "id": "214091",
+    "name": {
+      "zh": "脉冲的魔女",
+      "en": "Pulsating Witch"
+    },
+    "shareId": 94,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "equipment"
+  },
+  "214101": {
+    "id": "214101",
+    "name": {
+      "zh": "酌盈剂虚",
+      "en": "Discretionary Supplement"
+    },
+    "shareId": 95,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "equipment"
+  },
+  "215011": {
+    "id": "215011",
+    "name": {
+      "zh": "混元熵增论",
+      "en": "Chaotic Entropy"
+    },
+    "shareId": 96,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "215021": {
+    "id": "215021",
+    "name": {
+      "zh": "蒲公英的国土",
+      "en": "Lands of Dandelion"
+    },
+    "shareId": 97,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "215031": {
+    "id": "215031",
+    "name": {
+      "zh": "绪风之拥",
+      "en": "Embrace of Winds"
+    },
+    "shareId": 98,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "215041": {
+    "id": "215041",
+    "name": {
+      "zh": "降魔·护法夜叉",
+      "en": "Conqueror of Evil: Guardian Yaksha"
+    },
+    "shareId": 99,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "215051": {
+    "id": "215051",
+    "name": {
+      "zh": "风物之诗咏",
+      "en": "Poetics of Fuubutsu"
+    },
+    "shareId": 100,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "equipment"
+  },
+  "215061": {
+    "id": "215061",
+    "name": {
+      "zh": "梦迹一风",
+      "en": "Gales of Reverie"
+    },
+    "shareId": 101,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "equipment"
+  },
+  "215071": {
+    "id": "215071",
+    "name": {
+      "zh": "偷懒的新方法",
+      "en": "Skiving: New and Improved"
+    },
+    "shareId": 324,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "215081": {
+    "id": "215081",
+    "name": {
+      "zh": "如影流露的冷刃",
+      "en": "A Cold Blade Like a Shadow"
+    },
+    "shareId": 291,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "216011": {
+    "id": "216011",
+    "name": {
+      "zh": "储之千日，用之一刻",
+      "en": "Strategic Reserve"
+    },
+    "shareId": 102,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "216021": {
+    "id": "216021",
+    "name": {
+      "zh": "支援就交给我吧",
+      "en": "I Got Your Back"
+    },
+    "shareId": 103,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "216031": {
+    "id": "216031",
+    "name": {
+      "zh": "炊金馔玉",
+      "en": "Dominance of Earth"
+    },
+    "shareId": 104,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "216041": {
+    "id": "216041",
+    "name": {
+      "zh": "神性之陨",
+      "en": "Descent of Divinity"
+    },
+    "shareId": 105,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "equipment"
+  },
+  "216051": {
+    "id": "216051",
+    "name": {
+      "zh": "荒泷第一",
+      "en": "Arataki Ichiban"
+    },
+    "shareId": 106,
+    "type": "action",
+    "gameVersion": "3.6",
+    "actionType": "equipment"
+  },
+  "216061": {
+    "id": "216061",
+    "name": {
+      "zh": "犬奔·疾如风",
+      "en": "Rushing Hound: Swift as the Wind"
+    },
+    "shareId": 292,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "217011": {
+    "id": "217011",
+    "name": {
+      "zh": "飞叶迴斜",
+      "en": "Floral Sidewinder"
+    },
+    "shareId": 107,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "217021": {
+    "id": "217021",
+    "name": {
+      "zh": "眼识殊明",
+      "en": "Keen Sight"
+    },
+    "shareId": 108,
+    "type": "action",
+    "gameVersion": "3.6",
+    "actionType": "equipment"
+  },
+  "217031": {
+    "id": "217031",
+    "name": {
+      "zh": "心识蕴藏之种",
+      "en": "The Seed of Stored Knowledge"
+    },
+    "shareId": 109,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "217041": {
+    "id": "217041",
+    "name": {
+      "zh": "慈惠仁心",
+      "en": "Beneficent"
+    },
+    "shareId": 110,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "equipment"
+  },
+  "217051": {
+    "id": "217051",
+    "name": {
+      "zh": "在地为化",
+      "en": "All Things Are of the Earth"
+    },
+    "shareId": 111,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "equipment"
+  },
+  "217061": {
+    "id": "217061",
+    "name": {
+      "zh": "正理",
+      "en": "Structuration"
+    },
+    "shareId": 293,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "217071": {
+    "id": "217071",
+    "name": {
+      "zh": "沿途百景会心",
+      "en": "Countless Sights to See"
+    },
+    "shareId": 340,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "221011": {
+    "id": "221011",
+    "name": {
+      "zh": "冰萤寒光",
+      "en": "Cicin's Cold Glare"
+    },
+    "shareId": 112,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "221021": {
+    "id": "221021",
+    "name": {
+      "zh": "苦痛奉还",
+      "en": "Pain for Pain"
+    },
+    "shareId": 294,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "221031": {
+    "id": "221031",
+    "name": {
+      "zh": "严霜棱晶",
+      "en": "Sternfrost Prism"
+    },
+    "shareId": 325,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "222011": {
+    "id": "222011",
+    "name": {
+      "zh": "百川奔流",
+      "en": "Streaming Surge"
+    },
+    "shareId": 113,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "222021": {
+    "id": "222021",
+    "name": {
+      "zh": "镜锢之笼",
+      "en": "Mirror Cage"
+    },
+    "shareId": 114,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "223011": {
+    "id": "223011",
+    "name": {
+      "zh": "悉数讨回",
+      "en": "Paid in Full"
+    },
+    "shareId": 115,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "223021": {
+    "id": "223021",
+    "name": {
+      "zh": "烬火重燃",
+      "en": "Embers Rekindled"
+    },
+    "shareId": 116,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "223031": {
+    "id": "223031",
+    "name": {
+      "zh": "魔蝎烈祸",
+      "en": "Scorpocalypse"
+    },
+    "shareId": 295,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "224011": {
+    "id": "224011",
+    "name": {
+      "zh": "汲能棱晶",
+      "en": "Absorbing Prism"
+    },
+    "shareId": 117,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "224021": {
+    "id": "224021",
+    "name": {
+      "zh": "悲号回唱",
+      "en": "Grieving Echo"
+    },
+    "shareId": 296,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "224031": {
+    "id": "224031",
+    "name": {
+      "zh": "明珠固化",
+      "en": "Pearl Solidification"
+    },
+    "shareId": 326,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "224041": {
+    "id": "224041",
+    "name": {
+      "zh": "雷萤浮闪",
+      "en": "Electro Cicin's Gleam"
+    },
+    "shareId": 341,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "225011": {
+    "id": "225011",
+    "name": {
+      "zh": "机巧神通",
+      "en": "Transcendent Automaton"
+    },
+    "shareId": 118,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "225021": {
+    "id": "225021",
+    "name": {
+      "zh": "毁裂风涡",
+      "en": "Rending Vortex"
+    },
+    "shareId": 297,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "226011": {
+    "id": "226011",
+    "name": {
+      "zh": "重铸：岩盔",
+      "en": "Stonehide Reforged"
+    },
+    "shareId": 119,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "226022": {
+    "id": "226022",
+    "name": {
+      "zh": "晦朔千引",
+      "en": "Lunar Cycles Unending"
+    },
+    "shareId": 298,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "227011": {
+    "id": "227011",
+    "name": {
+      "zh": "孢子增殖",
+      "en": "Proliferating Spores"
+    },
+    "shareId": 120,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311101": {
+    "id": "311101",
+    "name": {
+      "zh": "魔导绪论",
+      "en": "Magic Guide"
+    },
+    "shareId": 121,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311102": {
+    "id": "311102",
+    "name": {
+      "zh": "祭礼残章",
+      "en": "Sacrificial Fragments"
+    },
+    "shareId": 122,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311103": {
+    "id": "311103",
+    "name": {
+      "zh": "天空之卷",
+      "en": "Skyward Atlas"
+    },
+    "shareId": 123,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311104": {
+    "id": "311104",
+    "name": {
+      "zh": "千夜浮梦",
+      "en": "A Thousand Floating Dreams"
+    },
+    "shareId": 124,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311105": {
+    "id": "311105",
+    "name": {
+      "zh": "盈满之实",
+      "en": "Fruit of Fulfillment"
+    },
+    "shareId": 125,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "equipment"
+  },
+  "311106": {
+    "id": "311106",
+    "name": {
+      "zh": "四风原典",
+      "en": "Lost Prayer to the Sacred Winds"
+    },
+    "shareId": 299,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311107": {
+    "id": "311107",
+    "name": {
+      "zh": "图莱杜拉的回忆",
+      "en": "Tulaytullah's Remembrance"
+    },
+    "shareId": 300,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311108": {
+    "id": "311108",
+    "name": {
+      "zh": "万世流涌大典",
+      "en": "Tome of the Eternal Flow"
+    },
+    "shareId": 342,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "311201": {
+    "id": "311201",
+    "name": {
+      "zh": "鸦羽弓",
+      "en": "Raven Bow"
+    },
+    "shareId": 126,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311202": {
+    "id": "311202",
+    "name": {
+      "zh": "祭礼弓",
+      "en": "Sacrificial Bow"
+    },
+    "shareId": 127,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311203": {
+    "id": "311203",
+    "name": {
+      "zh": "天空之翼",
+      "en": "Skyward Harp"
+    },
+    "shareId": 128,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311204": {
+    "id": "311204",
+    "name": {
+      "zh": "阿莫斯之弓",
+      "en": "Amos' Bow"
+    },
+    "shareId": 129,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311205": {
+    "id": "311205",
+    "name": {
+      "zh": "终末嗟叹之诗",
+      "en": "Elegy for the End"
+    },
+    "shareId": 130,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311206": {
+    "id": "311206",
+    "name": {
+      "zh": "王下近侍",
+      "en": "King's Squire"
+    },
+    "shareId": 131,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "equipment"
+  },
+  "311301": {
+    "id": "311301",
+    "name": {
+      "zh": "白铁大剑",
+      "en": "White Iron Greatsword"
+    },
+    "shareId": 132,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311302": {
+    "id": "311302",
+    "name": {
+      "zh": "祭礼大剑",
+      "en": "Sacrificial Greatsword"
+    },
+    "shareId": 133,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311303": {
+    "id": "311303",
+    "name": {
+      "zh": "狼的末路",
+      "en": "Wolf's Gravestone"
+    },
+    "shareId": 134,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311304": {
+    "id": "311304",
+    "name": {
+      "zh": "天空之傲",
+      "en": "Skyward Pride"
+    },
+    "shareId": 135,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311305": {
+    "id": "311305",
+    "name": {
+      "zh": "钟剑",
+      "en": "The Bell"
+    },
+    "shareId": 136,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311306": {
+    "id": "311306",
+    "name": {
+      "zh": "苇海信标",
+      "en": "Beacon of the Reed Sea"
+    },
+    "shareId": 301,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311401": {
+    "id": "311401",
+    "name": {
+      "zh": "白缨枪",
+      "en": "White Tassel"
+    },
+    "shareId": 137,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311402": {
+    "id": "311402",
+    "name": {
+      "zh": "千岩长枪",
+      "en": "Lithic Spear"
+    },
+    "shareId": 138,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311403": {
+    "id": "311403",
+    "name": {
+      "zh": "天空之脊",
+      "en": "Skyward Spine"
+    },
+    "shareId": 139,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311404": {
+    "id": "311404",
+    "name": {
+      "zh": "贯虹之槊",
+      "en": "Vortex Vanquisher"
+    },
+    "shareId": 140,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311405": {
+    "id": "311405",
+    "name": {
+      "zh": "薙草之稻光",
+      "en": "Engulfing Lightning"
+    },
+    "shareId": 141,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311406": {
+    "id": "311406",
+    "name": {
+      "zh": "贯月矢",
+      "en": "Moonpiercer"
+    },
+    "shareId": 142,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "equipment"
+  },
+  "311407": {
+    "id": "311407",
+    "name": {
+      "zh": "和璞鸢",
+      "en": "Primordial Jade Winged-Spear"
+    },
+    "shareId": 302,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311501": {
+    "id": "311501",
+    "name": {
+      "zh": "旅行剑",
+      "en": "Traveler's Handy Sword"
+    },
+    "shareId": 143,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311502": {
+    "id": "311502",
+    "name": {
+      "zh": "祭礼剑",
+      "en": "Sacrificial Sword"
+    },
+    "shareId": 144,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311503": {
+    "id": "311503",
+    "name": {
+      "zh": "风鹰剑",
+      "en": "Aquila Favonia"
+    },
+    "shareId": 145,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "311504": {
+    "id": "311504",
+    "name": {
+      "zh": "天空之刃",
+      "en": "Skyward Blade"
+    },
+    "shareId": 146,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "311505": {
+    "id": "311505",
+    "name": {
+      "zh": "西风剑",
+      "en": "Favonius Sword"
+    },
+    "shareId": 147,
+    "type": "action",
+    "gameVersion": "3.6",
+    "actionType": "equipment"
+  },
+  "311506": {
+    "id": "311506",
+    "name": {
+      "zh": "裁叶萃光",
+      "en": "Light of Foliar Incision"
+    },
+    "shareId": 303,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311507": {
+    "id": "311507",
+    "name": {
+      "zh": "原木刀",
+      "en": "Sapwood Blade"
+    },
+    "shareId": 327,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "312001": {
+    "id": "312001",
+    "name": {
+      "zh": "冒险家头带",
+      "en": "Adventurer's Bandana"
+    },
+    "shareId": 148,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312002": {
+    "id": "312002",
+    "name": {
+      "zh": "幸运儿银冠",
+      "en": "Lucky Dog's Silver Circlet"
+    },
+    "shareId": 149,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312003": {
+    "id": "312003",
+    "name": {
+      "zh": "游医的方巾",
+      "en": "Traveling Doctor's Handkerchief"
+    },
+    "shareId": 150,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312004": {
+    "id": "312004",
+    "name": {
+      "zh": "赌徒的耳环",
+      "en": "Gambler's Earrings"
+    },
+    "shareId": 151,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312005": {
+    "id": "312005",
+    "name": {
+      "zh": "教官的帽子",
+      "en": "Instructor's Cap"
+    },
+    "shareId": 152,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312006": {
+    "id": "312006",
+    "name": {
+      "zh": "流放者头冠",
+      "en": "Exile's Circlet"
+    },
+    "shareId": 153,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312007": {
+    "id": "312007",
+    "name": {
+      "zh": "华饰之兜",
+      "en": "Ornate Kabuto"
+    },
+    "shareId": 154,
+    "type": "action",
+    "gameVersion": "3.5",
+    "actionType": "equipment"
+  },
+  "312008": {
+    "id": "312008",
+    "name": {
+      "zh": "绝缘之旗印",
+      "en": "Emblem of Severed Fate"
+    },
+    "shareId": 155,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312009": {
+    "id": "312009",
+    "name": {
+      "zh": "将帅兜鍪",
+      "en": "General's Ancient Helm"
+    },
+    "shareId": 156,
+    "type": "action",
+    "gameVersion": "3.5",
+    "actionType": "equipment"
+  },
+  "312010": {
+    "id": "312010",
+    "name": {
+      "zh": "千岩牢固",
+      "en": "Tenacity of the Millelith"
+    },
+    "shareId": 157,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312011": {
+    "id": "312011",
+    "name": {
+      "zh": "虺雷之姿",
+      "en": "Thundering Poise"
+    },
+    "shareId": 158,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312012": {
+    "id": "312012",
+    "name": {
+      "zh": "辰砂往生录",
+      "en": "Vermillion Hereafter"
+    },
+    "shareId": 159,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312013": {
+    "id": "312013",
+    "name": {
+      "zh": "无常之面",
+      "en": "Capricious Visage"
+    },
+    "shareId": 160,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312014": {
+    "id": "312014",
+    "name": {
+      "zh": "追忆之注连",
+      "en": "Shimenawa's Reminiscence"
+    },
+    "shareId": 161,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "equipment"
+  },
+  "312015": {
+    "id": "312015",
+    "name": {
+      "zh": "海祇之冠",
+      "en": "Crown of Watatsumi"
+    },
+    "shareId": 162,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "equipment"
+  },
+  "312016": {
+    "id": "312016",
+    "name": {
+      "zh": "海染砗磲",
+      "en": "Ocean-Hued Clam"
+    },
+    "shareId": 163,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "equipment"
+  },
+  "312017": {
+    "id": "312017",
+    "name": {
+      "zh": "沙王的投影",
+      "en": "Shadow of the Sand King"
+    },
+    "shareId": 164,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "equipment"
+  },
+  "312018": {
+    "id": "312018",
+    "name": {
+      "zh": "饰金之梦",
+      "en": "Gilded Dreams"
+    },
+    "shareId": 304,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "312019": {
+    "id": "312019",
+    "name": {
+      "zh": "浮溯之珏",
+      "en": "Flowing Rings"
+    },
+    "shareId": 305,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "312020": {
+    "id": "312020",
+    "name": {
+      "zh": "来歆余响",
+      "en": "Echoes of an Offering"
+    },
+    "shareId": 306,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "312021": {
+    "id": "312021",
+    "name": {
+      "zh": "灵光明烁之心",
+      "en": "Heart of Khvarena's Brilliance"
+    },
+    "shareId": 307,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "312022": {
+    "id": "312022",
+    "name": {
+      "zh": "花海甘露之光",
+      "en": "Vourukasha's Glow"
+    },
+    "shareId": 308,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "312023": {
+    "id": "312023",
+    "name": {
+      "zh": "老兵的容颜",
+      "en": "Veteran's Visage"
+    },
+    "shareId": 328,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "312025": {
+    "id": "312025",
+    "name": {
+      "zh": "黄金剧团的奖赏",
+      "en": "Golden Troupe's Reward"
+    },
+    "shareId": 343,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "312101": {
+    "id": "312101",
+    "name": {
+      "zh": "破冰踏雪的回音",
+      "en": "Broken Rime's Echo"
+    },
+    "shareId": 165,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312102": {
+    "id": "312102",
+    "name": {
+      "zh": "冰风迷途的勇士",
+      "en": "Blizzard Strayer"
+    },
+    "shareId": 166,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312201": {
+    "id": "312201",
+    "name": {
+      "zh": "酒渍船帽",
+      "en": "Wine-Stained Tricorne"
+    },
+    "shareId": 167,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312202": {
+    "id": "312202",
+    "name": {
+      "zh": "沉沦之心",
+      "en": "Heart of Depth"
+    },
+    "shareId": 168,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312301": {
+    "id": "312301",
+    "name": {
+      "zh": "焦灼的魔女帽",
+      "en": "Witch's Scorching Hat"
+    },
+    "shareId": 169,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312302": {
+    "id": "312302",
+    "name": {
+      "zh": "炽烈的炎之魔女",
+      "en": "Crimson Witch of Flames"
+    },
+    "shareId": 170,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312401": {
+    "id": "312401",
+    "name": {
+      "zh": "唤雷的头冠",
+      "en": "Thunder Summoner's Crown"
+    },
+    "shareId": 171,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312402": {
+    "id": "312402",
+    "name": {
+      "zh": "如雷的盛怒",
+      "en": "Thundering Fury"
+    },
+    "shareId": 172,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312501": {
+    "id": "312501",
+    "name": {
+      "zh": "翠绿的猎人之冠",
+      "en": "Viridescent Venerer's Diadem"
+    },
+    "shareId": 173,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312502": {
+    "id": "312502",
+    "name": {
+      "zh": "翠绿之影",
+      "en": "Viridescent Venerer"
+    },
+    "shareId": 174,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312601": {
+    "id": "312601",
+    "name": {
+      "zh": "不动玄石之相",
+      "en": "Mask of Solitude Basalt"
+    },
+    "shareId": 175,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312602": {
+    "id": "312602",
+    "name": {
+      "zh": "悠古的磐岩",
+      "en": "Archaic Petra"
+    },
+    "shareId": 176,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312701": {
+    "id": "312701",
+    "name": {
+      "zh": "月桂的宝冠",
+      "en": "Laurel Coronet"
+    },
+    "shareId": 177,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "312702": {
+    "id": "312702",
+    "name": {
+      "zh": "深林的记忆",
+      "en": "Deepwood Memories"
+    },
+    "shareId": 178,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "321001": {
+    "id": "321001",
+    "name": {
+      "zh": "璃月港口",
+      "en": "Liyue Harbor Wharf"
+    },
+    "shareId": 179,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321002": {
+    "id": "321002",
+    "name": {
+      "zh": "骑士团图书馆",
+      "en": "Knights of Favonius Library"
+    },
+    "shareId": 180,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321003": {
+    "id": "321003",
+    "name": {
+      "zh": "群玉阁",
+      "en": "Jade Chamber"
+    },
+    "shareId": 181,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321004": {
+    "id": "321004",
+    "name": {
+      "zh": "晨曦酒庄",
+      "en": "Dawn Winery"
+    },
+    "shareId": 182,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321005": {
+    "id": "321005",
+    "name": {
+      "zh": "望舒客栈",
+      "en": "Wangshu Inn"
+    },
+    "shareId": 183,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321006": {
+    "id": "321006",
+    "name": {
+      "zh": "西风大教堂",
+      "en": "Favonius Cathedral"
+    },
+    "shareId": 184,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "321007": {
+    "id": "321007",
+    "name": {
+      "zh": "天守阁",
+      "en": "Tenshukaku"
+    },
+    "shareId": 185,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "321008": {
+    "id": "321008",
+    "name": {
+      "zh": "鸣神大社",
+      "en": "Grand Narukami Shrine"
+    },
+    "shareId": 186,
+    "type": "action",
+    "gameVersion": "3.6",
+    "actionType": "support"
+  },
+  "321009": {
+    "id": "321009",
+    "name": {
+      "zh": "珊瑚宫",
+      "en": "Sangonomiya Shrine"
+    },
+    "shareId": 187,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "321010": {
+    "id": "321010",
+    "name": {
+      "zh": "须弥城",
+      "en": "Sumeru City"
+    },
+    "shareId": 188,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "321011": {
+    "id": "321011",
+    "name": {
+      "zh": "桓那兰那",
+      "en": "Vanarana"
+    },
+    "shareId": 189,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "321012": {
+    "id": "321012",
+    "name": {
+      "zh": "镇守之森",
+      "en": "Chinju Forest"
+    },
+    "shareId": 190,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "321013": {
+    "id": "321013",
+    "name": {
+      "zh": "黄金屋",
+      "en": "Golden House"
+    },
+    "shareId": 191,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "support"
+  },
+  "321014": {
+    "id": "321014",
+    "name": {
+      "zh": "化城郭",
+      "en": "Gandharva Ville"
+    },
+    "shareId": 192,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "support"
+  },
+  "321015": {
+    "id": "321015",
+    "name": {
+      "zh": "风龙废墟",
+      "en": "Stormterror's Lair"
+    },
+    "shareId": 193,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "support"
+  },
+  "321016": {
+    "id": "321016",
+    "name": {
+      "zh": "湖中垂柳",
+      "en": "Weeping Willow of the Lake"
+    },
+    "shareId": 309,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "support"
+  },
+  "321017": {
+    "id": "321017",
+    "name": {
+      "zh": "欧庇克莱歌剧院",
+      "en": "Opera Epiclese"
+    },
+    "shareId": 310,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "support"
+  },
+  "321018": {
+    "id": "321018",
+    "name": {
+      "zh": "梅洛彼得堡",
+      "en": "Fortress of Meropide"
+    },
+    "shareId": 344,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "support"
+  },
+  "322001": {
+    "id": "322001",
+    "name": {
+      "zh": "派蒙",
+      "en": "Paimon"
+    },
+    "shareId": 194,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322002": {
+    "id": "322002",
+    "name": {
+      "zh": "凯瑟琳",
+      "en": "Katheryne"
+    },
+    "shareId": 195,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322003": {
+    "id": "322003",
+    "name": {
+      "zh": "蒂玛乌斯",
+      "en": "Timaeus"
+    },
+    "shareId": 196,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322004": {
+    "id": "322004",
+    "name": {
+      "zh": "瓦格纳",
+      "en": "Wagner"
+    },
+    "shareId": 197,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322005": {
+    "id": "322005",
+    "name": {
+      "zh": "卯师傅",
+      "en": "Chef Mao"
+    },
+    "shareId": 198,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322006": {
+    "id": "322006",
+    "name": {
+      "zh": "阿圆",
+      "en": "Tubby"
+    },
+    "shareId": 199,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322007": {
+    "id": "322007",
+    "name": {
+      "zh": "提米",
+      "en": "Timmie"
+    },
+    "shareId": 200,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322008": {
+    "id": "322008",
+    "name": {
+      "zh": "立本",
+      "en": "Liben"
+    },
+    "shareId": 201,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322009": {
+    "id": "322009",
+    "name": {
+      "zh": "常九爷",
+      "en": "Chang the Ninth"
+    },
+    "shareId": 202,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322010": {
+    "id": "322010",
+    "name": {
+      "zh": "艾琳",
+      "en": "Ellin"
+    },
+    "shareId": 203,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322011": {
+    "id": "322011",
+    "name": {
+      "zh": "田铁嘴",
+      "en": "Iron Tongue Tian"
+    },
+    "shareId": 204,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322012": {
+    "id": "322012",
+    "name": {
+      "zh": "刘苏",
+      "en": "Liu Su"
+    },
+    "shareId": 205,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "322013": {
+    "id": "322013",
+    "name": {
+      "zh": "花散里",
+      "en": "Hanachirusato"
+    },
+    "shareId": 206,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "322014": {
+    "id": "322014",
+    "name": {
+      "zh": "鲸井小弟",
+      "en": "Kid Kujirai"
+    },
+    "shareId": 207,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "322015": {
+    "id": "322015",
+    "name": {
+      "zh": "旭东",
+      "en": "Xudong"
+    },
+    "shareId": 208,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "322016": {
+    "id": "322016",
+    "name": {
+      "zh": "迪娜泽黛",
+      "en": "Dunyarzad"
+    },
+    "shareId": 209,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "322017": {
+    "id": "322017",
+    "name": {
+      "zh": "拉娜",
+      "en": "Rana"
+    },
+    "shareId": 210,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "322018": {
+    "id": "322018",
+    "name": {
+      "zh": "老章",
+      "en": "Master Zhang"
+    },
+    "shareId": 211,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "support"
+  },
+  "322019": {
+    "id": "322019",
+    "name": {
+      "zh": "塞塔蕾",
+      "en": "Setaria"
+    },
+    "shareId": 212,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "support"
+  },
+  "322020": {
+    "id": "322020",
+    "name": {
+      "zh": "弥生七月",
+      "en": "Yayoi Nanatsuki"
+    },
+    "shareId": 213,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "support"
+  },
+  "322021": {
+    "id": "322021",
+    "name": {
+      "zh": "玛梅赫",
+      "en": "Mamere"
+    },
+    "shareId": 311,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "support"
+  },
+  "322022": {
+    "id": "322022",
+    "name": {
+      "zh": "婕德",
+      "en": "Jeht"
+    },
+    "shareId": 329,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "support"
+  },
+  "322023": {
+    "id": "322023",
+    "name": {
+      "zh": "西尔弗和迈勒斯",
+      "en": "Silver and Melus"
+    },
+    "shareId": 330,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "support"
+  },
+  "323001": {
+    "id": "323001",
+    "name": {
+      "zh": "参量质变仪",
+      "en": "Parametric Transformer"
+    },
+    "shareId": 214,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "323002": {
+    "id": "323002",
+    "name": {
+      "zh": "便携营养袋",
+      "en": "NRE"
+    },
+    "shareId": 215,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "support"
+  },
+  "323003": {
+    "id": "323003",
+    "name": {
+      "zh": "红羽团扇",
+      "en": "Red Feather Fan"
+    },
+    "shareId": 216,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "323004": {
+    "id": "323004",
+    "name": {
+      "zh": "寻宝仙灵",
+      "en": "Treasure-Seeking Seelie"
+    },
+    "shareId": 217,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "support"
+  },
+  "323005": {
+    "id": "323005",
+    "name": {
+      "zh": "化种匣",
+      "en": "Seed Dispensary"
+    },
+    "shareId": 312,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "support"
+  },
+  "323006": {
+    "id": "323006",
+    "name": {
+      "zh": "留念镜",
+      "en": "Memento Lens"
+    },
+    "shareId": 313,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "support"
+  },
+  "323007": {
+    "id": "323007",
+    "name": {
+      "zh": "流明石触媒",
+      "en": "Lumenstone Adjuvant"
+    },
+    "shareId": 345,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "support"
+  },
+  "330001": {
+    "id": "330001",
+    "name": {
+      "zh": "旧时庭园",
+      "en": "Ancient Courtyard"
+    },
+    "shareId": 218,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "event"
+  },
+  "330002": {
+    "id": "330002",
+    "name": {
+      "zh": "磐岩盟契",
+      "en": "Covenant of Rock"
+    },
+    "shareId": 219,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "event"
+  },
+  "330003": {
+    "id": "330003",
+    "name": {
+      "zh": "愉舞欢游",
+      "en": "Joyous Celebration"
+    },
+    "shareId": 220,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "event"
+  },
+  "330004": {
+    "id": "330004",
+    "name": {
+      "zh": "自由的新风",
+      "en": "Fresh Wind of Freedom"
+    },
+    "shareId": 221,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "event"
+  },
+  "330005": {
+    "id": "330005",
+    "name": {
+      "zh": "万家灶火",
+      "en": "In Every House a Stove"
+    },
+    "shareId": 222,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "event"
+  },
+  "330006": {
+    "id": "330006",
+    "name": {
+      "zh": "裁定之时",
+      "en": "Passing of Judgment"
+    },
+    "shareId": 314,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "330007": {
+    "id": "330007",
+    "name": {
+      "zh": "抗争之日·碎梦之时",
+      "en": "Day of Resistance: Moment of Shattered Dreams"
+    },
+    "shareId": 346,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "event"
+  },
+  "331101": {
+    "id": "331101",
+    "name": {
+      "zh": "元素共鸣：交织之冰",
+      "en": "Elemental Resonance: Woven Ice"
+    },
+    "shareId": 223,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331102": {
+    "id": "331102",
+    "name": {
+      "zh": "元素共鸣：粉碎之冰",
+      "en": "Elemental Resonance: Shattering Ice"
+    },
+    "shareId": 224,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331201": {
+    "id": "331201",
+    "name": {
+      "zh": "元素共鸣：交织之水",
+      "en": "Elemental Resonance: Woven Waters"
+    },
+    "shareId": 225,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331202": {
+    "id": "331202",
+    "name": {
+      "zh": "元素共鸣：愈疗之水",
+      "en": "Elemental Resonance: Soothing Water"
+    },
+    "shareId": 226,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331301": {
+    "id": "331301",
+    "name": {
+      "zh": "元素共鸣：交织之火",
+      "en": "Elemental Resonance: Woven Flames"
+    },
+    "shareId": 227,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331302": {
+    "id": "331302",
+    "name": {
+      "zh": "元素共鸣：热诚之火",
+      "en": "Elemental Resonance: Fervent Flames"
+    },
+    "shareId": 228,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331401": {
+    "id": "331401",
+    "name": {
+      "zh": "元素共鸣：交织之雷",
+      "en": "Elemental Resonance: Woven Thunder"
+    },
+    "shareId": 229,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331402": {
+    "id": "331402",
+    "name": {
+      "zh": "元素共鸣：强能之雷",
+      "en": "Elemental Resonance: High Voltage"
+    },
+    "shareId": 230,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331501": {
+    "id": "331501",
+    "name": {
+      "zh": "元素共鸣：交织之风",
+      "en": "Elemental Resonance: Woven Winds"
+    },
+    "shareId": 231,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331502": {
+    "id": "331502",
+    "name": {
+      "zh": "元素共鸣：迅捷之风",
+      "en": "Elemental Resonance: Impetuous Winds"
+    },
+    "shareId": 232,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331601": {
+    "id": "331601",
+    "name": {
+      "zh": "元素共鸣：交织之岩",
+      "en": "Elemental Resonance: Woven Stone"
+    },
+    "shareId": 233,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331602": {
+    "id": "331602",
+    "name": {
+      "zh": "元素共鸣：坚定之岩",
+      "en": "Elemental Resonance: Enduring Rock"
+    },
+    "shareId": 234,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331701": {
+    "id": "331701",
+    "name": {
+      "zh": "元素共鸣：交织之草",
+      "en": "Elemental Resonance: Woven Weeds"
+    },
+    "shareId": 235,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331702": {
+    "id": "331702",
+    "name": {
+      "zh": "元素共鸣：蔓生之草",
+      "en": "Elemental Resonance: Sprawling Greenery"
+    },
+    "shareId": 236,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "331801": {
+    "id": "331801",
+    "name": {
+      "zh": "风与自由",
+      "en": "Wind and Freedom"
+    },
+    "shareId": 237,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "331802": {
+    "id": "331802",
+    "name": {
+      "zh": "岩与契约",
+      "en": "Stone and Contracts"
+    },
+    "shareId": 238,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "331803": {
+    "id": "331803",
+    "name": {
+      "zh": "雷与永恒",
+      "en": "Thunder and Eternity"
+    },
+    "shareId": 239,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "331804": {
+    "id": "331804",
+    "name": {
+      "zh": "草与智慧",
+      "en": "Nature and Wisdom"
+    },
+    "shareId": 240,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332001": {
+    "id": "332001",
+    "name": {
+      "zh": "最好的伙伴！",
+      "en": "The Bestest Travel Companion!"
+    },
+    "shareId": 241,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332002": {
+    "id": "332002",
+    "name": {
+      "zh": "换班时间",
+      "en": "Changing Shifts"
+    },
+    "shareId": 242,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332003": {
+    "id": "332003",
+    "name": {
+      "zh": "一掷乾坤",
+      "en": "Toss-Up"
+    },
+    "shareId": 243,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332004": {
+    "id": "332004",
+    "name": {
+      "zh": "运筹帷幄",
+      "en": "Strategize"
+    },
+    "shareId": 244,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332005": {
+    "id": "332005",
+    "name": {
+      "zh": "本大爷还没有输！",
+      "en": "I Haven't Lost Yet!"
+    },
+    "shareId": 245,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332006": {
+    "id": "332006",
+    "name": {
+      "zh": "交给我吧！",
+      "en": "Leave It to Me!"
+    },
+    "shareId": 246,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332007": {
+    "id": "332007",
+    "name": {
+      "zh": "鹤归之时",
+      "en": "When the Crane Returned"
+    },
+    "shareId": 247,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332008": {
+    "id": "332008",
+    "name": {
+      "zh": "星天之兆",
+      "en": "Starsigns"
+    },
+    "shareId": 248,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332009": {
+    "id": "332009",
+    "name": {
+      "zh": "白垩之术",
+      "en": "Calx's Arts"
+    },
+    "shareId": 249,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332010": {
+    "id": "332010",
+    "name": {
+      "zh": "诸武精通",
+      "en": "Master of Weaponry"
+    },
+    "shareId": 250,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332011": {
+    "id": "332011",
+    "name": {
+      "zh": "神宝迁宫祝词",
+      "en": "Blessing of the Divine Relic's Installation"
+    },
+    "shareId": 251,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332012": {
+    "id": "332012",
+    "name": {
+      "zh": "快快缝补术",
+      "en": "Quick Knit"
+    },
+    "shareId": 252,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332013": {
+    "id": "332013",
+    "name": {
+      "zh": "送你一程",
+      "en": "Send Off"
+    },
+    "shareId": 253,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332014": {
+    "id": "332014",
+    "name": {
+      "zh": "护法之誓",
+      "en": "Guardian's Oath"
+    },
+    "shareId": 254,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332015": {
+    "id": "332015",
+    "name": {
+      "zh": "深渊的呼唤",
+      "en": "Abyssal Summons"
+    },
+    "shareId": 255,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "332016": {
+    "id": "332016",
+    "name": {
+      "zh": "愚人众的阴谋",
+      "en": "Fatui Conspiracy"
+    },
+    "shareId": 256,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332017": {
+    "id": "332017",
+    "name": {
+      "zh": "下落斩",
+      "en": "Plunging Strike"
+    },
+    "shareId": 257,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332018": {
+    "id": "332018",
+    "name": {
+      "zh": "重攻击",
+      "en": "Heavy Strike"
+    },
+    "shareId": 258,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332019": {
+    "id": "332019",
+    "name": {
+      "zh": "温妮莎传奇",
+      "en": "The Legend of Vennessa"
+    },
+    "shareId": 259,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332020": {
+    "id": "332020",
+    "name": {
+      "zh": "永远的友谊",
+      "en": "Friendship Eternal"
+    },
+    "shareId": 260,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "332021": {
+    "id": "332021",
+    "name": {
+      "zh": "大梦的曲调",
+      "en": "Rhythm of the Great Dream"
+    },
+    "shareId": 261,
+    "type": "action",
+    "gameVersion": "3.8",
+    "actionType": "event"
+  },
+  "332022": {
+    "id": "332022",
+    "name": {
+      "zh": "藏锋何处",
+      "en": "Where Is the Unseen Razor?"
+    },
+    "shareId": 262,
+    "type": "action",
+    "gameVersion": "4.0",
+    "actionType": "event"
+  },
+  "332023": {
+    "id": "332023",
+    "name": {
+      "zh": "拳力斗技！",
+      "en": "Pankration!"
+    },
+    "shareId": 263,
+    "type": "action",
+    "gameVersion": "4.1",
+    "actionType": "event"
+  },
+  "332024": {
+    "id": "332024",
+    "name": {
+      "zh": "琴音之诗",
+      "en": "Lyresong"
+    },
+    "shareId": 264,
+    "type": "action",
+    "gameVersion": "4.2",
+    "actionType": "event"
+  },
+  "332025": {
+    "id": "332025",
+    "name": {
+      "zh": "野猪公主",
+      "en": "The Boar Princess"
+    },
+    "shareId": 315,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "332026": {
+    "id": "332026",
+    "name": {
+      "zh": "坍陷与契机",
+      "en": "Falls and Fortune"
+    },
+    "shareId": 316,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "332027": {
+    "id": "332027",
+    "name": {
+      "zh": "浮烁的四叶印",
+      "en": "Flickering Four-Leaf Sigil"
+    },
+    "shareId": 317,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "332028": {
+    "id": "332028",
+    "name": {
+      "zh": "机关铸成之链",
+      "en": "Machine Assembly Line"
+    },
+    "shareId": 331,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "event"
+  },
+  "332029": {
+    "id": "332029",
+    "name": {
+      "zh": "净觉花",
+      "en": "Sunyata Flower"
+    },
+    "shareId": 332,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "event"
+  },
+  "332030": {
+    "id": "332030",
+    "name": {
+      "zh": "可控性去危害化式定向爆破",
+      "en": "Controlled Directional Blast"
+    },
+    "shareId": 347,
+    "type": "action",
+    "gameVersion": "4.5",
+    "actionType": "event"
+  },
+  "333001": {
+    "id": "333001",
+    "name": {
+      "zh": "绝云锅巴",
+      "en": "Jueyun Guoba"
+    },
+    "shareId": 265,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333002": {
+    "id": "333002",
+    "name": {
+      "zh": "仙跳墙",
+      "en": "Adeptus' Temptation"
+    },
+    "shareId": 266,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333003": {
+    "id": "333003",
+    "name": {
+      "zh": "莲花酥",
+      "en": "Lotus Flower Crisp"
+    },
+    "shareId": 267,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333004": {
+    "id": "333004",
+    "name": {
+      "zh": "北地烟熏鸡",
+      "en": "Northern Smoked Chicken"
+    },
+    "shareId": 268,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333005": {
+    "id": "333005",
+    "name": {
+      "zh": "甜甜花酿鸡",
+      "en": "Sweet Madame"
+    },
+    "shareId": 269,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333006": {
+    "id": "333006",
+    "name": {
+      "zh": "蒙德土豆饼",
+      "en": "Mondstadt Hash Brown"
+    },
+    "shareId": 270,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333007": {
+    "id": "333007",
+    "name": {
+      "zh": "烤蘑菇披萨",
+      "en": "Mushroom Pizza"
+    },
+    "shareId": 271,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333008": {
+    "id": "333008",
+    "name": {
+      "zh": "兽肉薄荷卷",
+      "en": "Minty Meat Rolls"
+    },
+    "shareId": 272,
+    "type": "action",
+    "gameVersion": "3.3",
+    "actionType": "event"
+  },
+  "333009": {
+    "id": "333009",
+    "name": {
+      "zh": "提瓦特煎蛋",
+      "en": "Teyvat Fried Egg"
+    },
+    "shareId": 273,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "333010": {
+    "id": "333010",
+    "name": {
+      "zh": "刺身拼盘",
+      "en": "Sashimi Platter"
+    },
+    "shareId": 274,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "333011": {
+    "id": "333011",
+    "name": {
+      "zh": "唐杜尔烤鸡",
+      "en": "Tandoori Roast Chicken"
+    },
+    "shareId": 275,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "333012": {
+    "id": "333012",
+    "name": {
+      "zh": "黄油蟹蟹",
+      "en": "Butter Crab"
+    },
+    "shareId": 276,
+    "type": "action",
+    "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "333013": {
+    "id": "333013",
+    "name": {
+      "zh": "炸鱼薯条",
+      "en": "Fish and Chips"
+    },
+    "shareId": 318,
+    "type": "action",
+    "gameVersion": "4.3",
+    "actionType": "event"
+  },
+  "333014": {
+    "id": "333014",
+    "name": {
+      "zh": "松茸酿肉卷",
+      "en": "Matsutake Meat Rolls"
+    },
+    "shareId": 333,
+    "type": "action",
+    "gameVersion": "4.4",
+    "actionType": "event"
+  }
+}

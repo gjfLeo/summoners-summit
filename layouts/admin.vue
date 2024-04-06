@@ -5,12 +5,17 @@ import { adminThemeConfig } from "@/config/theme";
 
 const menu: MenuLinkRoute[] = [
   {
-    label: "卡牌",
-    to: "/admin/cards",
-  },
-  {
     label: "选手",
     to: "/admin/players",
+  },
+  {
+    label: "其他",
+    children: [
+      {
+        label: "卡牌",
+        to: "/admin/misc/cards",
+      },
+    ],
   },
 ];
 
