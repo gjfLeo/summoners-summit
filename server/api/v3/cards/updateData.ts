@@ -1,6 +1,7 @@
 import gdb from "@genshin-db/tcg";
+import { z } from "zod";
 
-function getActionCardType(cardType: string): ActionCardInfo["actionType"] {
+function parseActionCardType(cardType: string): ActionCardInfo["actionType"] {
   switch (cardType) {
     case "GCG_CARD_MODIFY":
       return "equipment";
@@ -13,7 +14,7 @@ function getActionCardType(cardType: string): ActionCardInfo["actionType"] {
   }
 }
 
-export default defineEventHandler(() => {
+function getCharacterCardData() {
   const characterCardInfos = gdb.tcgcharactercards("names", {
     matchCategories: true,
     verboseCategories: true,
@@ -39,8 +40,10 @@ export default defineEventHandler(() => {
       } as CharacterCardInfo),
     ];
   }).sort((a, b) => Number(a.id) - Number(b.id));
-  writeData("misc/character-cards", Object.fromEntries(characterCardData.map(card => [card.id, card])));
+  return characterCardData;
+}
 
+function getActionCardData() {
   const actionCardInfos = gdb.tcgactioncards("names", {
     matchCategories: true,
     verboseCategories: true,
@@ -62,11 +65,39 @@ export default defineEventHandler(() => {
         shareId: cardInfo.shareid,
         type: "action",
         gameVersion: cardInfo.version,
-        actionType: getActionCardType(cardInfo.cardtype),
+        actionType: parseActionCardType(cardInfo.cardtype),
       } as ActionCardInfo),
     ];
   }).sort((a, b) => Number(a.id) - Number(b.id));
+  return actionCardData;
+}
+
+function getVersionData(versionIds: GameVersionId[]) {
+  const seasonPhrases = z.record(ZSeasonPhraseId, ZSeasonPhrase).parse(readData("misc/season-phrases"));
+  return ZGameVersion.array().parse(
+    versionIds.map((vId) => {
+      const phrases = Object.values(seasonPhrases).find(p => p.gameVersions.includes(vId));
+      return {
+        id: vId,
+        seasonPhrase: phrases?.id ?? "",
+      };
+    }),
+  );
+}
+
+export default defineEventHandler(() => {
+  const characterCardData = getCharacterCardData();
+  writeData("misc/character-cards", Object.fromEntries(characterCardData.map(card => [card.id, card])));
+  const actionCardData = getActionCardData();
   writeData("misc/action-cards", Object.fromEntries(actionCardData.map(card => [card.id, card])));
 
-  return responseOk({});
+  const versionSet = new Set<string>();
+  [...characterCardData, ...actionCardData].forEach((card) => {
+    versionSet.add(card.gameVersion);
+  });
+  const versionIds = Array.from(versionSet).sort().reverse().filter(v => v.localeCompare("3.7") >= 0);
+  const versionData = getVersionData(versionIds);
+  writeData("misc/game-versions", Object.fromEntries(versionData.map(v => [v.id, v])));
+
+  return responseOk({ });
 });

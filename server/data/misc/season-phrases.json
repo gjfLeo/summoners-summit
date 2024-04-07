@@ -1,5 +1,5 @@
-[
-  {
+{
+  "1.1": {
     "id": "1.1",
     "gameVersions": [
       "3.7",
@@ -14,7 +14,7 @@
       "en": "Silent Dragonspine under the starry night is one of the highest goals and most dangerous places for an adventurer to conquer."
     }
   },
-  {
+  "1.2": {
     "id": "1.2",
     "gameVersions": [
       "4.0"
@@ -28,7 +28,7 @@
       "en": "The splendor of Dragonspine at daybreak, as the symbol of a duelist, symbolizes the \"summit\" of their skill..."
     }
   },
-  {
+  "2.1": {
     "id": "2.1",
     "gameVersions": [
       "4.1",
@@ -43,7 +43,7 @@
       "en": "An iron-colored mineral that forms the base of farm tools and weapons alike. With its abundant mineral reservers, who knows what untold riches The Chasm still holds..."
     }
   },
-  {
+  "2.2": {
     "id": "2.2",
     "gameVersions": [
       "4.3",
@@ -60,7 +60,7 @@
       "en": "An indigo-colored mineral that signals the way forward, telling you that more adventures lie ahead. With its abundant mineral reservers, who knows what untold riches The Chasm still holds..."
     }
   },
-  {
+  "2.3": {
     "id": "2.3",
     "gameVersions": [
       "4.7"
@@ -74,4 +74,4 @@
       "en": "Gold, the most glorious form that wealth can take. Whether you're an adventurer, miner, or card player, it represents the crowning achievement of your career..."
     }
   }
-]
+}

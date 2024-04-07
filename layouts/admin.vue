@@ -5,6 +5,19 @@ import { adminThemeConfig } from "@/config/theme";
 
 const menu: MenuLinkRoute[] = [
   {
+    label: "赛事",
+    children: [
+      {
+        label: "赛事列表",
+        to: "/admin/tournaments",
+      },
+      {
+        label: "赛事模板",
+        to: "/admin/tournaments/templates",
+      },
+    ],
+  },
+  {
     label: "选手",
     to: "/admin/players",
   },
