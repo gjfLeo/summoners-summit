@@ -417,8 +417,6 @@ export default defineTournament({
         },
       ],
     },
-  ],
-});
     {
       name: "半决赛",
       rules: {
