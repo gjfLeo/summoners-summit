@@ -508,5 +508,71 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-04-06",
+          matches: [
+            {
+              playerA: "胡桃桃大魔王",
+              playerB: "雪国Ink",
+              video: "https://www.bilibili.com/video/BV1hA4m1F7f7",
+              banned: [
+                {
+                  playerACharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  playerBCharacters: ["莫娜", "雷音权现", "「女士」"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["绮良良", "镀金旅团·炽沙叙事人", "雷音权现"],
+                  playerBCharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["优菈", "莫娜", "流浪者"],
+                  playerBCharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莱依拉", "凝光", "芭芭拉"],
+                  playerBCharacters: ["夜兰", "无相之冰", "赛诺"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["优菈", "莫娜", "流浪者"],
+                  playerBCharacters: ["夜兰", "无相之冰", "赛诺"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["优菈", "莫娜", "流浪者"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "芭芭拉"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
