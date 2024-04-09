@@ -21,7 +21,7 @@ export default defineTournament({
             {
               playerA: "LL起翼夜鹰",
               playerB: "物语",
-              video: "https://www.bilibili.com/video/BV1Mp42127pa",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=1",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -168,7 +168,7 @@ export default defineTournament({
             {
               playerA: "和大名",
               playerB: "东风夜放花千树",
-              video: "https://www.bilibili.com/video/BV1Mp42127pa",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=1",
               banned: [
                 {
                   playerACharacters: ["莫娜", "「女士」", "雷音权现"],
@@ -313,7 +313,7 @@ export default defineTournament({
             {
               playerA: "大叔ky",
               playerB: "Lava没睡醒",
-              video: "https://www.bilibili.com/video/BV1Ym411r7Qt",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=2",
               banned: [
                 {
                   playerACharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
@@ -468,7 +468,7 @@ export default defineTournament({
             {
               playerA: "光",
               playerB: "霁纪",
-              video: "https://www.bilibili.com/video/BV1Ym411r7Qt",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=2",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -632,6 +632,7 @@ export default defineTournament({
             {
               playerA: "大树ky",
               playerB: "和大名",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=3",
               banned: [
                 {
                   playerACharacters: ["雷泽", "行秋", "重云"],
@@ -734,6 +735,7 @@ export default defineTournament({
             {
               playerA: "光",
               playerB: "物语",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=3",
               banned: [
                 {
                   playerACharacters: ["千年珍珠骏麟", "若陀龙王", "班尼特"],
@@ -862,7 +864,7 @@ export default defineTournament({
             {
               playerA: "和大名",
               playerB: "光",
-              video: "https://www.bilibili.com/video/BV1TH4y1M7mN",
+              video: "https://www.bilibili.com/video/BV1M1421m7oN?p=4",
               banned: [
                 {
                   playerACharacters: ["夜兰"],
