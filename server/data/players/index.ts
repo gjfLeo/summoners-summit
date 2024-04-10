@@ -105,6 +105,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "XXXXXHope": "XHope",
   "007": "小果核",
   "黑钰袖": "｜蓝兰岚｜",
+  "懒烂岚": "｜蓝兰岚｜",
   "哀酱从小就可爱": "Sherry",
   "古月方源": "春秋蝉",
   "冰红茶心甘晴愿": "冰红茶|荧",
@@ -121,6 +122,9 @@ const playerNicknameMapRaw: Record<string, string> = {
   "燕藩阿楼": "阿楼Riricho",
   "纤育鼎": "霓特",
   "派大蒙": "MaRiA",
+  "饕笔": "雷伊",
+  "艾雪雪大魔王": "艾可雪",
+  "纳西妲入我怀": "净善宫的男主人",
   
   
   
