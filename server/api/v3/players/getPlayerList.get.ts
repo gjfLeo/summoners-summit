@@ -1,3 +1,4 @@
 export default defineEventHandler(() => {
-  return responseOk({ players: readDataList<Player>("players") });
+  const players = getPlayerList();
+  return responseOk({ players });
 });

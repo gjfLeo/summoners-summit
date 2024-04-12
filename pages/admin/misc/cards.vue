@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-definePageMeta({
-  layout: "admin",
-});
+definePageMeta({ layout: "admin" });
 
 const { t } = useI18n();
 const message = useMessage();

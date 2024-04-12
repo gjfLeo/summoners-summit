@@ -1,23 +1,17 @@
 export default defineEventHandler(async (event) => {
-  const { uniqueName, alias } = await readValidatedBody(event, ZPlayerAddAliasParams.parse);
-  const aliasPlayer = findPlayer(alias);
-  if (aliasPlayer?.aliases) {
-    return responseErrorCode(409, "Alias already exists", {});
+  const { id, alias } = await readValidatedBody(event, ZPlayerAddAliasParams.parse);
+
+  const player = getPlayer(id);
+  if (!player) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Player not found",
+    });
   }
 
-  const player = findPlayer(uniqueName);
-  if (player) {
-    if (player.aliases?.includes(alias)) {
-      return responseOk({});
-    }
-    else {
-      player.aliases = [...(player.aliases ?? []), alias];
-      savePlayer(player);
-      return responseOk({});
-    }
+  if (!player.aliases.includes(alias)) {
+    player.aliases = [...player.aliases, alias].sort();
   }
-  else {
-    savePlayer({ uniqueName, aliases: [alias] });
-    return responseOk({});
-  }
+
+  return responseOk({});
 });

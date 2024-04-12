@@ -2,9 +2,7 @@
 import Pinyin from "pinyin-match";
 import { AdminPlayerDelete, AdminPlayerEditor, NButton, NTag } from "#components";
 
-definePageMeta({
-  layout: "admin",
-});
+definePageMeta({ layout: "admin" });
 
 const { t } = useI18n();
 
@@ -100,7 +98,7 @@ async function importOldData() {
   });
   let done = 0;
   for (const player of players.value) {
-    await $fetch("/api/v3/players/deletePlayer", {
+    await $fetch("/api/v3/players/delete", {
       method: "POST",
       body: { id: player.id },
     });

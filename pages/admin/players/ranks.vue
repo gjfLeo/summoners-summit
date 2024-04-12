@@ -3,5 +3,5 @@ definePageMeta({ layout: "admin" });
 </script>
 
 <template>
-  Tournaments
+  Ranks
 </template>
