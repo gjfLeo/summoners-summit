@@ -300,7 +300,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "LL起翼夜鹰 ",
+              playerA: "LL起翼夜鹰",
               playerB: "遗尘音序",
               video: "https://v.douyu.com/show/ZB5Kv9Yanz9va93x",
               games: [
@@ -593,7 +593,7 @@ export default defineTournament({
             },
             {
               playerA: "本吃包",
-              playerB: "LL起翼夜鹰 ",
+              playerB: "LL起翼夜鹰",
               video: "https://v.douyu.com/show/0zZVvPopXR2WO4E2",
               games: [
                 {
