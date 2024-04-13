@@ -21,7 +21,7 @@ export default defineTournament({
           date: "2024-04-10",
           matches: [
             {
-              playerA: "胡桃桃大魔王 ",
+              playerA: "胡桃桃大魔王",
               playerB: "Elaina",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
