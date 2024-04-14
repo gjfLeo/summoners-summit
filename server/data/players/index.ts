@@ -125,6 +125,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "饕笔": "雷伊",
   "艾雪雪大魔王": "艾可雪",
   "纳西妲入我怀": "净善宫的男主人",
+  "光熙": "TianJam",
   
   
   
