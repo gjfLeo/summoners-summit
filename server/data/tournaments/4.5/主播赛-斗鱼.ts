@@ -3220,7 +3220,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                     "松茸酿肉卷": 2,
                   }),
-                  starter: "",
+                  starter: "A",
                   winner: "A",
                 },
                 {
@@ -3265,7 +3265,7 @@ export default defineTournament({
                     "提瓦特煎蛋": 1,
                     "松茸酿肉卷": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "A",
                 },
               ],
