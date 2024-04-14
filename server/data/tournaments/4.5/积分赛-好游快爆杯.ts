@@ -235,5 +235,59 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 9,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-04-14",
+          matches: [
+            {
+              playerA: "零之启",
+              playerB: "Elaina",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["纳西妲"],
+                  playerBCharacters: ["「女士」"],
+                },
+                {
+                  playerACharacters: ["夜兰", "雷音权现", "无相之冰"],
+                  playerBCharacters: ["绮良良", "林尼", "雷音权现"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["绮良良", "雷音权现", "林尼"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["千年珍珠骏麟", "若陀龙王", "林尼"],
+                  playerBCharacters: ["千年珍珠骏麟", "若陀龙王", "林尼"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
