@@ -250,7 +250,7 @@ export default defineTournament({
                     "净觉花": 2,
                   }),
                   starter: "B",
-                  winner: "B",
+                  winner: "A",
                 },
                 {
                   playerACharacters: ["林尼", "千年珍珠骏麟", "若陀龙王"],
