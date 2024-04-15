@@ -22,17 +22,14 @@ const menu: MenuLinkRoute[] = [
 </script>
 
 <template>
-  <NaiveConfig>
-    <NaiveLayoutNavbar
-      :routes="menu"
-      toggle-icon="carbon:menu"
-    >
-      <template #end>
-        <NaiveColorModeSwitch />
-      </template>
-      <template #default>
-        <NuxtPage />
-      </template>
-    </NaiveLayoutNavbar>
-  </NaiveConfig>
+  <NaiveLayoutNavbar :routes="menu" toggle-icon="carbon:menu">
+    <template #end>
+      <LayoutAdminSwitch />
+      <LayoutLanguageSwitch />
+      <LayoutColorSwitch />
+    </template>
+    <template #default>
+      <NuxtPage />
+    </template>
+  </NaiveLayoutNavbar>
 </template>

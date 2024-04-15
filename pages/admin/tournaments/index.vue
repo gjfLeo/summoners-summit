@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-definePageMeta({ layout: "admin" });
-</script>
-
 <template>
-  Tournaments
+  <div>Tournaments</div>
 </template>

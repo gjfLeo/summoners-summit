@@ -1,17 +1,33 @@
 <script setup lang="ts">
-import { appName } from "~/constants";
-
-useHead({
-  title: appName,
-});
+import { dateZhCN, zhCN } from "naive-ui";
+import { themeOverridesShared } from "@/config/theme";
 </script>
 
 <template>
   <VitePwaManifest />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NaiveConfig
+    :locale="zhCN" :date-locale="dateZhCN"
+    :theme-config="{
+      shared: themeOverridesShared,
+    }"
+  >
+    <NMessageProvider>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </NMessageProvider>
+  </NaiveConfig>
 </template>
 
 <style>
+.layout-transition-enter-active,
+.layout-transition-leave-active {
+  /* position: absolute;
+  width: 100%; */
+  transition: all 0.3s;
+}
+.layout-transition-enter-from,
+.layout-transition-leave-to {
+  opacity: 0;
+}
 </style>

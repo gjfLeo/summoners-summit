@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({ layout: "admin" });
-
 const { t } = useI18n();
 const message = useMessage();
 
@@ -21,7 +19,10 @@ async function updateData() {
 <template>
   <div flex="~ col gap-4">
     <div>
-      <NButton @click="updateData">{{ t("updateData") }}</NButton>
+      <NTooltip trigger="hover">
+        <template #default>{{ t("updateDataDescription") }}</template>
+        <template #trigger><NButton @click="updateData">{{ t("updateData") }}</NButton></template>
+      </NTooltip>
     </div>
     <div grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
       <template v-for="(card, cardId) in data?.characterCards" :key="cardId">
@@ -44,4 +45,8 @@ async function updateData() {
 <i18n lang="yaml">
 zh:
   updateData: 更新卡牌数据
+  updateDataDescription: 从第三方库（genshin-db）获取最新游戏版本的卡牌数据
+en:
+  updateData: Update card data
+  updateDataDescription: Get the latest card data from the third-party library (genshin-db)
 </i18n>

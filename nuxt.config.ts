@@ -1,5 +1,4 @@
 import { pwa } from "./config/pwa";
-import { appDescription } from "./constants/index";
 
 export default defineNuxtConfig({
   modules: [
@@ -52,12 +51,13 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: appDescription },
         { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
         { name: "theme-color", media: "(prefers-color-scheme: light)", content: "white" },
         { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#222222" },
       ],
     },
+    layoutTransition: { name: "layout-transition", mode: "out-in" },
+    pageTransition: { name: "layout-transition", mode: "out-in" },
   },
 
   pwa,

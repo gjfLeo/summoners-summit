@@ -29,9 +29,10 @@ export const ZPlayerCreateParams = ZPlayer.pick({
 export const ZRanks = z.object({
   id: z.coerce.string().trim(),
   ranks: z.object({
-    rank: z.number(),
+    rank: z.coerce.number(),
     nickname: ZPlayerNickname,
     uid: ZPlayerUid,
-    score: z.number(),
+    score: z.coerce.number(),
   }).array(),
 }).strip();
+export type Ranks = z.infer<typeof ZRanks>;

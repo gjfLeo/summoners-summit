@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
-  Season
+  <div>Season</div>
 </template>

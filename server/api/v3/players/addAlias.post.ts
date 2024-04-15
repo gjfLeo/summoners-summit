@@ -13,5 +13,7 @@ export default defineEventHandler(async (event) => {
     player.aliases = [...player.aliases, alias].sort();
   }
 
+  savePlayer(player);
+
   return responseOk({});
 });
