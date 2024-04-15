@@ -43,21 +43,13 @@ const menu: MenuLinkRoute[] = [
 </script>
 
 <template>
-  <NaiveLayoutNavbar :routes="menu" toggle-icon="carbon:menu">
-    <template #end>
-      <AdminDataCommit />
-      <LayoutAdminSwitch />
-      <LayoutLanguageSwitch />
-      <LayoutColorSwitch />
-    </template>
-    <template #default>
-      <NuxtPage />
-    </template>
-  </NaiveLayoutNavbar>
+  <LayoutContent :routes="menu">
+    <NuxtPage />
+  </LayoutContent>
 </template>
 
 <style scoped>
-:deep(.n-layout-header) {
+:deep(.n-layout-header, .n-layout-footer) {
   --n-color: #b6ffaf7a;
 }
 </style>

@@ -41,7 +41,7 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
   {
     key: "uniqueName",
     title: t("player.mainNickname"),
-    minWidth: "8rem",
+    width: "18rem",
   },
   {
     key: "aliases",
@@ -49,7 +49,7 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
     render: (row) => {
       return h(
         "div",
-        { class: "flex flex-wrap gap-2" },
+        { class: "flex flex-wrap gap-2 m--2" },
         (row.aliases ?? []).map(alias => h(
           NTag,
           () => alias,
@@ -61,12 +61,20 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
 </script>
 
 <template>
-  <div flex="~ col gap-4">
+  <div flex="~ col gap-4" class="h-content">
     <div flex="~ gap-2">
       <div>
         <NInput v-model:value="filterText" />
       </div>
     </div>
-    <NDataTable :data="filteredPlayers" :columns="columns" :loading="pending" :pagination="{ pageSize: 10 }" />
+    <div flex="grow-1">
+      <NDataTable
+        :data="filteredPlayers"
+        :columns="columns"
+        :loading="pending"
+        flex-height
+        class="h-full"
+      />
+    </div>
   </div>
 </template>

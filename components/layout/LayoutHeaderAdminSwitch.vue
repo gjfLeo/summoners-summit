@@ -9,7 +9,7 @@ const { t } = useI18n();
 <template>
   <template v-if="isDev">
     <template v-if="route.meta.layout === 'admin'">
-      <NuxtLinkLocale to="/">
+      <NuxtLinkLocale to="/" flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger>
             <NButton text :focusable="false">
