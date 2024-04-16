@@ -1,5 +1,7 @@
 import gdb from "@genshin-db/tcg";
 import { z } from "zod";
+import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types/data";
+import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZGameVersion, ZSeasonPhrase, ZSeasonPhraseId } from "~/types/data";
 
 function parseActionCardType(cardType: string): ActionCardInfo["actionType"] {
   switch (cardType) {
@@ -99,5 +101,5 @@ export default defineEventHandler(() => {
   const versionData = getVersionData(versionIds);
   writeData("misc/game-versions", Object.fromEntries(versionData.map(v => [v.id, v])));
 
-  return responseOk({ });
+  return responseOk();
 });

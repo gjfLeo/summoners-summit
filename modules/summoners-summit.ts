@@ -7,8 +7,9 @@ export default defineNuxtModule({
   defaults: {
   },
   setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url);
-    addImportsDir(resolver.resolve("./types"));
+    // const resolver = createResolver(import.meta.url);
+    // addImportsDir(resolver.resolve("./types"));
     addImports({ from: "naive-ui", name: "DataTableColumn", type: true });
+    addImports({ from: "naive-ui", name: "FormRules", type: true });
   },
 });

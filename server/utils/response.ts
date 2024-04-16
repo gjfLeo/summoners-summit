@@ -1,31 +1,26 @@
-// eslint-disable-next-line ts/ban-types
-export type ApiResponse<T = {}> = T & {
+type ApiResponse<T = void> = {
   success: boolean;
-  code: number;
-  message?: string;
-};
+  code: string;
+} & T;
 
-export function responseOk<T>(data: T): ApiResponse<T> {
+export function responseOk<T = void>() {
   return {
     success: true,
-    code: 0,
-    ...data,
-  };
+    code: "SUCCESS",
+  } as ApiResponse<T>;
 }
 
-export function responseError(message: string): ApiResponse {
+export function responseData<T>(data: T) {
   return {
-    success: false,
-    code: -1,
-    message,
-  };
+    success: true,
+    code: "SUCCESS",
+    ...data,
+  } as ApiResponse<T>;
 }
 
-export function responseErrorCode<T>(code: number, message: string, data: T): ApiResponse<T> {
+export function responseErrorCode<T = void>(code: string) {
   return {
     success: false,
     code,
-    message,
-    ...data,
-  };
+  } as ApiResponse<T>;
 }

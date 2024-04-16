@@ -1,4 +1,6 @@
 import { z } from "zod";
+import { ZLocales } from "./locales";
+import { ZGameVersionId } from "./game-version";
 
 export const ZCardId = z.coerce.string()/* .brand<"CardId">() */;
 export const ZCardType = z.enum(["character", "action"]);
@@ -17,13 +19,14 @@ export const ZCharacterCardInfo = ZCardInfoBase.extend({
   type: z.literal(ZCardType.enum.character),
   element: ZCharacterElement,
 }).strip();
-export type CharacterCardInfo = z.infer<typeof ZCharacterCardInfo>;
 
 export const ZActionCardInfo = ZCardInfoBase.extend({
   type: z.literal(ZCardType.enum.action),
   actionType: ZActionCardType,
 }).strip();
-export type ActionCardInfo = z.infer<typeof ZActionCardInfo>;
 
 export const ZCardInfo = z.union([ZCharacterCardInfo, ZActionCardInfo]);
+
+export type CharacterCardInfo = z.infer<typeof ZCharacterCardInfo>;
+export type ActionCardInfo = z.infer<typeof ZActionCardInfo>;
 export type CardInfo = z.infer<typeof ZCardInfo>;

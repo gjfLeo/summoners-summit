@@ -1,3 +1,5 @@
+import { ZSeasonPhrase } from "~/types/data";
+
 export default defineEventHandler(async () => {
   writeData(
     "misc/season-phrases",
@@ -65,5 +67,5 @@ export default defineEventHandler(async () => {
     ]),
   );
 
-  return responseOk({});
+  return responseOk();
 });

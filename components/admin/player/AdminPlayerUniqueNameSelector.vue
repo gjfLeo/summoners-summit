@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Player } from "~/types/data";
+
 const emit = defineEmits<{
   (e: "done"): void;
 }>();
@@ -30,7 +32,10 @@ async function submit() {
   submitLoading.value = true;
   const { success } = await $fetch("/api/v3/players/setUniqueName", {
     method: "POST",
-    body: { id: player.value.id, uniqueName: uniqueName.value },
+    body: {
+      id: player.value.id,
+      uniqueName: uniqueName.value,
+    },
   });
   submitLoading.value = false;
   if (success) {
@@ -74,6 +79,5 @@ defineExpose({
 zh:
   selectUniqueName: 选择主要昵称
   uniqueName: 主要昵称
-  confirm: 确定
   playerNotFound: 未获取到玩家信息
 </i18n>

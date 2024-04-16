@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
-  return responseOk({
+  return responseData({
     characterCards: getCharacterCards(),
     actionCards: getActionCards(),
   });
