@@ -43,13 +43,7 @@ const menu: MenuLinkRoute[] = [
 </script>
 
 <template>
-  <LayoutContent :routes="menu">
+  <LayoutContent :routes="menu" admin>
     <NuxtPage />
   </LayoutContent>
 </template>
-
-<style scoped>
-:deep(.n-layout-header, .n-layout-footer) {
-  --n-color: #b6ffaf7a;
-}
-</style>

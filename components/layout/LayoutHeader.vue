@@ -12,7 +12,7 @@ const { isMobileOrTablet } = useNaiveDevice();
   <NLayoutHeader
     bordered
     grid="~ cols-[1fr_auto_1fr]"
-    class="h-header p-inline-4"
+    class="p-inline-4 h-header"
   >
     <div />
     <NaiveMenuLink

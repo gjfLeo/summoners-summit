@@ -23,7 +23,7 @@ const { t } = useI18n();
       </NuxtLinkLocale>
     </template>
     <template v-else>
-      <NuxtLinkLocale to="/admin">
+      <NuxtLinkLocale to="/admin" flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger>
             <NButton text :focusable="false">

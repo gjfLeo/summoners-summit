@@ -1,0 +1,13 @@
+diff --git a/es/popover/src/PopoverBody.mjs b/es/popover/src/PopoverBody.mjs
+index 746f06b0592d7db2bf10572e447ce74b95d70fd2..6587fc6df3fb6e7b733a1fc7e4ad17b432478503 100644
+--- a/es/popover/src/PopoverBody.mjs
++++ b/es/popover/src/PopoverBody.mjs
+@@ -222,7 +222,7 @@ export default defineComponent({
+       }
+     }
+     function handleMouseMoveOutside(e) {
+-      if (props.trigger === 'hover' && !getTriggerElement().contains(getPreciseEventTarget(e))) {
++      if (props.trigger === 'hover' && !getTriggerElement()?.contains(getPreciseEventTarget(e))) {
+         NPopover.handleMouseMoveOutside(e);
+       }
+     }

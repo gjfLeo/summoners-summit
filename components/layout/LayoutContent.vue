@@ -3,13 +3,20 @@ import type { MenuLinkRoute } from "@bg-dev/nuxt-naiveui";
 import { LAYOUT_FOOTER_HEIGHT, LAYOUT_HEADER_HEIGHT } from "~/config/layout";
 
 defineProps<{
+  admin?: boolean;
   routes: MenuLinkRoute[];
 }>();
+
+const themeVars = useThemeVars();
+const adminColor = computed(() => `color-mix(in oklch, ${themeVars.value.primaryColor}, transparent 84%)`);
 </script>
 
 <template>
   <NLayout style="min-height: 100vh; min-width: 100dvh;">
-    <LayoutHeader :routes="routes" />
+    <LayoutHeader
+      :routes="routes"
+      :style="{ backgroundColor: admin ? adminColor : undefined }"
+    />
     <NLayout
       :style="{ height: `calc(100vh - ${LAYOUT_HEADER_HEIGHT})` }"
       :native-scrollbar="false"
