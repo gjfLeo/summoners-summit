@@ -23,3 +23,7 @@ export const ZRanks = z.object({
   }).array(),
 }).strip();
 export type Ranks = z.infer<typeof ZRanks>;
+
+export interface PlayerIndex {
+  uid: Record<Player["uids"][number], Player["id"]>;
+}

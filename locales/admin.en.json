@@ -1,0 +1,17 @@
+{
+  "action": {
+    "enterAdminPage": "Enter admin page",
+    "leaveAdminPage": "Leave admin page"
+  },
+  "card": {
+    "updateData": "Update card data",
+    "updateDataDescription": "Get the latest card data from the third-party library (genshin-db)"
+  },
+  "message": {
+    "PLAYER_NOT_FOUND": "Player not found",
+    "SUCCESS": "Success"
+  },
+  "player": {
+    "selectUniqueName": "Select unique name"
+  }
+}

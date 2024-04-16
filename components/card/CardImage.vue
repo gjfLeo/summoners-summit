@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { CardInfo, Locales } from "~/types/data";
+
 const props = defineProps<{
   card: CardInfo;
 }>();
@@ -12,7 +14,7 @@ const wikiaFilename = computed(() => {
     case "action":
       return `${props.card.name.en} ${props.card.actionType.charAt(0).toUpperCase()}${props.card.actionType.slice(1)} Card.png`;
     default:
-      throw createError(t("invalidCardType"));
+      throw createError(t("card.invalidCardType"));
   }
 });
 const src = computed(() => {
@@ -29,10 +31,3 @@ const src = computed(() => {
     preview-disabled
   />
 </template>
-
-<i18n lang="yaml">
-zh:
-  invalidCardType: 无效的卡牌类型
-en:
-  invalidCardType: Invalid card type
-</i18n>

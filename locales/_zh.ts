@@ -1,9 +1,11 @@
-import action from "./action.zh.json";
+import admin from "./admin.zh.json";
+import card from "./card.zh.json";
 import site from "./site.zh.json";
 import player from "./player.zh.json";
 
 export default {
-  action,
+  admin,
+  card,
   site,
   player,
 };

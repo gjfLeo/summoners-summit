@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useFetch("/api/v3/players/getPlayerList");
+const { data } = await useFetch("/api/v3/players/list");
 </script>
 
 <template>

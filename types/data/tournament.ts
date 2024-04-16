@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ZLocales } from "./locales";
 
 export const TournamentLevel = z.enum([
   "A", // 影幻杯

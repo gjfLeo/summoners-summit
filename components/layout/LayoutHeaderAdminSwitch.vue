@@ -18,7 +18,7 @@ const { t } = useI18n();
               </template>
             </NButton>
           </template>
-          <template #default>{{ t("exit") }}</template>
+          <template #default>{{ t("admin.action.leaveAdminPage") }}</template>
         </NTooltip>
       </NuxtLinkLocale>
     </template>
@@ -32,18 +32,9 @@ const { t } = useI18n();
               </template>
             </NButton>
           </template>
-          <template #default>{{ t("enter") }}</template>
+          <template #default>{{ t("admin.action.enterAdminPage") }}</template>
         </NTooltip>
       </NuxtLinkLocale>
     </template>
   </template>
 </template>
-
-<i18n lang="yaml">
-zh:
-  enter: 进入管理页面
-  exit: 退出管理页面
-en:
-  enter: Enter admin page
-  exit: Exit admin page
-</i18n>

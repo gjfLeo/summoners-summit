@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { CharacterCardInfo, Locales } from "~/types/data";
+
 const props = defineProps<{
   card: CharacterCardInfo;
 }>();

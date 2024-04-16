@@ -17,7 +17,7 @@ const filteredPlayers = computed(() => {
     return players.value;
   }
   return players.value.filter((player) => {
-    if (player.uid === filterText.value || player.id === filterText.value) {
+    if (player.uids.includes(filterText.value) || player.id === filterText.value) {
       return true;
     };
     if ([player.uniqueName, ...player.aliases ?? []].some(name => Pinyin.match(name, filterText.value))) {
@@ -42,12 +42,12 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
   },
   {
     key: "uniqueName",
-    title: t("uniqueName"),
+    title: t("player.mainNickname"),
     width: "18rem",
   },
   {
     key: "aliases",
-    title: t("aliases"),
+    title: t("player.otherNicknames"),
     render: (row) => {
       return h(
         "div",
@@ -97,9 +97,3 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
     </div>
   </div>
 </template>
-
-<i18n lang="yaml">
-zh:
-  uniqueName: 主要昵称
-  aliases: 其他昵称
-</i18n>

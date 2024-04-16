@@ -18,8 +18,9 @@ async function show(playerId: Player["id"]) {
     method: "GET",
     params: { id: playerId },
   });
-  if (!res.player) {
-    message.error(t("playerNotFound"));
+  if (!res.success || !res.player) {
+    // message.error(t("admin.message.PLAYER_NOT_FOUND"));
+    message.error(t(`admin.message.${res.code}`));
     return;
   }
   player.value = res.player;
@@ -53,7 +54,7 @@ defineExpose({
   <NModal
     v-model:show="visible"
     preset="dialog"
-    :title="t('selectUniqueName')"
+    :title="t('admin.player.selectUniqueName')"
     :show-icon="false"
   >
     <div class="mt" flex="~ wrap gap-2">
@@ -74,10 +75,3 @@ defineExpose({
     </template>
   </NModal>
 </template>
-
-<i18n lang="yaml">
-zh:
-  selectUniqueName: 选择主要昵称
-  uniqueName: 主要昵称
-  playerNotFound: 未获取到玩家信息
-</i18n>
