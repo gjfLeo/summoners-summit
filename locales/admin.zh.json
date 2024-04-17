@@ -1,5 +1,7 @@
 {
   "action": {
+    "cancel": "取消",
+    "confirm": "确定",
     "enterAdminPage": "进入管理页面",
     "leaveAdminPage": "离开管理页面"
   },
@@ -13,5 +15,11 @@
   },
   "player": {
     "selectUniqueName": "选择主要昵称"
+  },
+  "ranks": {
+    "importFromTable": "从表格导入",
+    "tableContentDescription": "将文档中的表格粘贴至此处",
+    "tableContentParseError": "表格内容解析不正确",
+    "tableContentRequired": "表格内容不能为空"
   }
 }

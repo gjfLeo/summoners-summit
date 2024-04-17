@@ -6,13 +6,16 @@ const { data, pending } = await useFetch("/api/v3/ranks/ids");
 const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);
 const rankId = ref(rankIds.value[0]);
 const ranks = ref<Ranks>();
+const ranksLoading = ref(false);
 
 watch(rankId, async (rankId) => {
   if (rankIds.value.includes(rankId)) {
+    ranksLoading.value = true;
     const res = await $fetch("/api/v3/ranks/get", {
       params: { id: rankId },
     });
     ranks.value = res.ranks;
+    ranksLoading.value = false;
   }
 }, { immediate: true });
 
@@ -49,7 +52,7 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
         name="add"
         :tab="() => h('div', { class: 'i-carbon:add' })"
       >
-        <AdminRanksImportTable />
+        <AdminRanksImport />
       </NTabPane>
       <NTabPane
         v-for="id in rankIds" :key="id"
@@ -59,6 +62,7 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
         <NDataTable
           :data="ranks?.ranks"
           :columns="columns"
+          :loading="ranksLoading"
           flex-height
           class="h-full"
         />
