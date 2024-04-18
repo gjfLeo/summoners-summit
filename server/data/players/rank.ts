@@ -7,14 +7,14 @@ const res = {
       {
         "nickname": "雪国Ink",
         "uid": 137285608,
-        "score": 900,
+        "score": 930,
         "code": "eyJDb2RlIjoiQ0FDTTZSVzY4TiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
         "nickname": "胡桃桃大魔王",
         "uid": 184149605,
-        "score": 795,
+        "score": 810,
         "code": "eyJDb2RlIjoiQ0E1UFdKUzJYTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
       },
@@ -24,6 +24,13 @@ const res = {
         "score": 755,
         "code": "eyJDb2RlIjoiQ0E5WEFPWlkyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c1f5a495d38b483cc85d0c5621c2e436.png"
+      },
+      {
+        "nickname": "Elaina",
+        "uid": 118306329,
+        "score": 750,
+        "code": "eyJDb2RlIjoiQ0EwQVc3TEoyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
       },
       {
         "nickname": "贝尔格里",
@@ -54,11 +61,25 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
+        "nickname": "Sept",
+        "uid": 100277416,
+        "score": 715,
+        "code": "eyJDb2RlIjoiQ0EwRjNVN1kyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
+      },
+      {
         "nickname": "Tonbo",
         "uid": 101791382,
         "score": 710,
         "code": "eyJDb2RlIjoiQ0FERFdXWkIyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
+      },
+      {
+        "nickname": "零之启",
+        "uid": 123236672,
+        "score": 705,
+        "code": "eyJDb2RlIjoiQ0E1TzVEOTI4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c9e9cd43d1226d3c4e152908a8d63ef2.png"
       },
       {
         "nickname": "喵帕斯",
@@ -68,25 +89,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
       },
       {
-        "nickname": "Elaina",
-        "uid": 118306329,
-        "score": 705,
-        "code": "eyJDb2RlIjoiQ0EwQVc3TEoyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
-      },
-      {
         "nickname": "蕊梨",
         "uid": 236268488,
         "score": 705,
         "code": "eyJDb2RlIjoiQ0ExQ0EyQk9YTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3676dbd3b57cc164fa703391d26c8aa7.png"
-      },
-      {
-        "nickname": "Sept",
-        "uid": 100277416,
-        "score": 705,
-        "code": "eyJDb2RlIjoiQ0EwRjNVN1kyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
       },
       {
         "nickname": "LL起翼夜鹰",
@@ -131,7 +138,7 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
       },
       {
-        "nickname": "清弦",
+        "nickname": "蓝雨の迷妹",
         "uid": 207287285,
         "score": 650,
         "code": "eyJDb2RlIjoiQ0EzMU9FRExYTiIsIlNlYXNvbiI6M30=",
@@ -143,13 +150,6 @@ const res = {
         "score": 635,
         "code": "eyJDb2RlIjoiQ0EyVlRNUkYyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c1f5a495d38b483cc85d0c5621c2e436.png"
-      },
-      {
-        "nickname": "零之启",
-        "uid": 123236672,
-        "score": 635,
-        "code": "eyJDb2RlIjoiQ0E1TzVEOTI4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c9e9cd43d1226d3c4e152908a8d63ef2.png"
       },
       {
         "nickname": "莉莉芭",
@@ -229,6 +229,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c1f5a495d38b483cc85d0c5621c2e436.png"
       },
       {
+        "nickname": "WinSoon",
+        "uid": 160238942,
+        "score": 585,
+        "code": "eyJDb2RlIjoiQ0FGVzE0RFk4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/191bb53f4b769798c5d747cb927b20f1.png"
+      },
+      {
         "nickname": "空寻的小迷妹",
         "uid": 101099068,
         "score": 575,
@@ -278,11 +285,25 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/4fd2c1e99a2f85ea4dade0247af53b41.png"
       },
       {
+        "nickname": "Aurora",
+        "uid": 280864189,
+        "score": 570,
+        "code": "eyJDb2RlIjoiQ0FFMlZPVllNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
+      },
+      {
         "nickname": "柠柠七喵",
         "uid": 266463734,
         "score": 570,
         "code": "eyJDb2RlIjoiQ0EyRFdOWURNTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8d532e6356eb8a390446b470365f8614.png"
+      },
+      {
+        "nickname": "呆…呆jio布？",
+        "uid": 251135575,
+        "score": 565,
+        "code": "eyJDb2RlIjoiQ0ExVkc3UjFNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/5ddde83bfd09aa46e017f818ff5a4e01.png"
       },
       {
         "nickname": "云野空悠",
@@ -306,6 +327,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
+        "nickname": "木秀",
+        "uid": 291481118,
+        "score": 565,
+        "code": "eyJDb2RlIjoiQ0E3VzZHM1BNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+      },
+      {
         "nickname": "小王",
         "uid": 260387105,
         "score": 560,
@@ -318,13 +346,6 @@ const res = {
         "score": 560,
         "code": "eyJDb2RlIjoiQ0E2WVpDNlk4TiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/117a24f341c4f648111ed08bf34cbf55.png"
-      },
-      {
-        "nickname": "Aurora",
-        "uid": 280864189,
-        "score": 560,
-        "code": "eyJDb2RlIjoiQ0FFMlZPVllNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
       },
       {
         "nickname": "阿源",
@@ -346,6 +367,20 @@ const res = {
         "score": 555,
         "code": "eyJDb2RlIjoiQ0FFMFZIV1kyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/5215432f0c1b43e07d97b7cadf5c5aa9.png"
+      },
+      {
+        "nickname": "阿晴一命",
+        "uid": 100742390,
+        "score": 550,
+        "code": "eyJDb2RlIjoiQ0E2V0g2S1kyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+      },
+      {
+        "nickname": "胡胡伯",
+        "uid": 102679135,
+        "score": 550,
+        "code": "eyJDb2RlIjoiQ0E3VlcwTTcyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6b83365c2e338650fb28fa629cb55483.png"
       },
       {
         "nickname": "白雀",
@@ -376,6 +411,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c3927c699b8a0bc4d84816bd811f4d87.png"
       },
       {
+        "nickname": "史珍香",
+        "uid": 166412477,
+        "score": 545,
+        "code": "eyJDb2RlIjoiQ0FDUEJGODA4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+      },
+      {
         "nickname": "湘江北去",
         "uid": 256372041,
         "score": 545,
@@ -390,11 +432,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3676dbd3b57cc164fa703391d26c8aa7.png"
       },
       {
-        "nickname": "木秀",
-        "uid": 291481118,
-        "score": 545,
-        "code": "eyJDb2RlIjoiQ0E3VzZHM1BNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+        "nickname": "理塘牢桐",
+        "uid": 187234841,
+        "score": 540,
+        "code": "eyJDb2RlIjoiQ0EwUEhYNFhYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
       },
       {
         "nickname": "吃雀萝",
@@ -432,6 +474,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/4fd2c1e99a2f85ea4dade0247af53b41.png"
       },
       {
+        "nickname": "开尔文",
+        "uid": 217573105,
+        "score": 540,
+        "code": "eyJDb2RlIjoiQ0ExOTRRM1pYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+      },
+      {
         "nickname": "爱吃喵的小鱼干",
         "uid": 163051609,
         "score": 540,
@@ -444,13 +493,6 @@ const res = {
         "score": 540,
         "code": "eyJDb2RlIjoiQ0E3MDZNS0IyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6181bbb6a8667e5e34ae2d6c6af4c2ab.png"
-      },
-      {
-        "nickname": "呆…呆jio布？",
-        "uid": 251135575,
-        "score": 535,
-        "code": "eyJDb2RlIjoiQ0ExVkc3UjFNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/5ddde83bfd09aa46e017f818ff5a4e01.png"
       },
       {
         "nickname": "纤育鼎",
@@ -467,13 +509,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
-        "nickname": "WinSoon",
-        "uid": 160238942,
-        "score": 530,
-        "code": "eyJDb2RlIjoiQ0FGVzE0RFk4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/191bb53f4b769798c5d747cb927b20f1.png"
-      },
-      {
         "nickname": "大呆瓜",
         "uid": 119799598,
         "score": 530,
@@ -481,11 +516,32 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/39f537437eaa65228be8eb7d7adc96f9.png"
       },
       {
+        "nickname": "阿浔",
+        "uid": 200027975,
+        "score": 530,
+        "code": "eyJDb2RlIjoiQ0FEWUNVWEhYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
+      },
+      {
+        "nickname": "夜袭莉莉芭",
+        "uid": 261789602,
+        "score": 530,
+        "code": "eyJDb2RlIjoiQ0E3RDE4RUhNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/4dc92b5dee6e9b0d0c0bbe63fd19424e.png"
+      },
+      {
         "nickname": "一不小欣z",
         "uid": 150995567,
         "score": 530,
         "code": "eyJDb2RlIjoiQ0E5SEFRTzQ4TiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3676dbd3b57cc164fa703391d26c8aa7.png"
+      },
+      {
+        "nickname": "莫莉安",
+        "uid": 265012888,
+        "score": 530,
+        "code": "eyJDb2RlIjoiQ0FCTTYxRjlNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/191bb53f4b769798c5d747cb927b20f1.png"
       },
       {
         "nickname": "幸运",
@@ -502,13 +558,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
       },
       {
-        "nickname": "莫莉安",
-        "uid": 265012888,
-        "score": 530,
-        "code": "eyJDb2RlIjoiQ0FCTTYxRjlNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/191bb53f4b769798c5d747cb927b20f1.png"
-      },
-      {
         "nickname": "zsx",
         "uid": 210085336,
         "score": 530,
@@ -516,11 +565,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6b83365c2e338650fb28fa629cb55483.png"
       },
       {
-        "nickname": "魈宝我老公！",
+        "nickname": "吃掉一只萌酱",
         "uid": 244577216,
         "score": 530,
         "code": "eyJDb2RlIjoiQ0E3Q0tNUzJNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3fdb5d92ae72e314dcee2b4665e0d68b.png"
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/7285b2b4e72dc315cb74a2aa18e71b7b.png"
       },
       {
         "nickname": "自信的胡小菠",
@@ -535,13 +584,6 @@ const res = {
         "score": 530,
         "code": "eyJDb2RlIjoiQ0FESFdaTlZYTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/117a24f341c4f648111ed08bf34cbf55.png"
-      },
-      {
-        "nickname": "胡胡伯",
-        "uid": 102679135,
-        "score": 530,
-        "code": "eyJDb2RlIjoiQ0E3VlcwTTcyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6b83365c2e338650fb28fa629cb55483.png"
       },
       {
         "nickname": "丶响尾蛇丶",
@@ -565,11 +607,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/b59f3598ef543f8d99a8c87fd83cab0c.png"
       },
       {
-        "nickname": "史珍香",
-        "uid": 166412477,
+        "nickname": "Takey",
+        "uid": 145994150,
         "score": 525,
-        "code": "eyJDb2RlIjoiQ0FDUEJGODA4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+        "code": "eyJDb2RlIjoiQ0FDOFAxQUQ4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
       },
       {
         "nickname": "螳螂螂小魔虾",
@@ -586,11 +628,25 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/e01b2884c77393bca013b1f5f478e7ce.png"
       },
       {
+        "nickname": "兴",
+        "uid": 171164105,
+        "score": 525,
+        "code": "eyJDb2RlIjoiQ0E3NDhZT1A4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/b9126967dd1130d3b5225f545e2effe7.png"
+      },
+      {
         "nickname": "冰红茶心甘晴愿",
         "uid": 272213502,
         "score": 525,
         "code": "eyJDb2RlIjoiQ0EyVFU0OFJNTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c9e9cd43d1226d3c4e152908a8d63ef2.png"
+      },
+      {
+        "nickname": "岚落尘",
+        "uid": 202062559,
+        "score": 525,
+        "code": "eyJDb2RlIjoiQ0E2RUdPVVFYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
         "nickname": "守明枫叶",
@@ -663,6 +719,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
+        "nickname": "舒",
+        "uid": 205030031,
+        "score": 515,
+        "code": "eyJDb2RlIjoiQ0EwWVRSOERYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+      },
+      {
         "nickname": "雨夜Mhz",
         "uid": 110361959,
         "score": 515,
@@ -670,39 +733,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
-        "nickname": "岚落尘",
-        "uid": 202062559,
-        "score": 515,
-        "code": "eyJDb2RlIjoiQ0E2RUdPVVFYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
-      },
-      {
-        "nickname": "阿晴一命",
-        "uid": 100742390,
-        "score": 510,
-        "code": "eyJDb2RlIjoiQ0E2V0g2S1kyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
-      },
-      {
-        "nickname": "理塘牢桐",
-        "uid": 187234841,
-        "score": 510,
-        "code": "eyJDb2RlIjoiQ0EwUEhYNFhYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
-      },
-      {
         "nickname": "空门天",
         "uid": 116801968,
         "score": 510,
         "code": "eyJDb2RlIjoiQ0EwTUtHM0EyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
-      },
-      {
-        "nickname": "阿浔",
-        "uid": 200027975,
-        "score": 510,
-        "code": "eyJDb2RlIjoiQ0FEWUNVWEhYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
       },
       {
         "nickname": "星辰",
@@ -717,6 +752,13 @@ const res = {
         "score": 510,
         "code": "eyJDb2RlIjoiQ0E2OUtWTFc4TiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3aaa541da4d28605079dccf20e014089.png"
+      },
+      {
+        "nickname": "BattleSpt",
+        "uid": 108603173,
+        "score": 510,
+        "code": "eyJDb2RlIjoiQ0FCUFdXWUYyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
       },
       {
         "nickname": "小柠萌i",
@@ -740,13 +782,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c9e9cd43d1226d3c4e152908a8d63ef2.png"
       },
       {
-        "nickname": "素质风男",
-        "uid": 236512854,
-        "score": 510,
-        "code": "eyJDb2RlIjoiQ0EzUjRVUE9YTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d40e0b5369e208f0c12de522b83d2270.png"
-      },
-      {
         "nickname": "Infernalzero",
         "uid": 139275463,
         "score": 510,
@@ -754,7 +789,14 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
-        "nickname": "要来一份披萨吗",
+        "nickname": "素质风男",
+        "uid": 236512854,
+        "score": 510,
+        "code": "eyJDb2RlIjoiQ0EzUjRVUE9YTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d40e0b5369e208f0c12de522b83d2270.png"
+      },
+      {
+        "nickname": "人生若只如初见",
         "uid": 100001187,
         "score": 510,
         "code": "eyJDb2RlIjoiQ0FEMEQ5M1kyTiIsIlNlYXNvbiI6M30=",
@@ -782,11 +824,32 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d670a9b78eddaca381df5ee19aefaf6b.png"
       },
       {
-        "nickname": "雀鲨",
+        "nickname": "吴意",
+        "uid": 211022207,
+        "score": 505,
+        "code": "eyJDb2RlIjoiQ0E2SzBBUzRYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+      },
+      {
+        "nickname": "雀巢脆脆鲨",
         "uid": 100406440,
         "score": 500,
         "code": "eyJDb2RlIjoiQ0E0Rlg4RlkyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/b9126967dd1130d3b5225f545e2effe7.png"
+      },
+      {
+        "nickname": "太一",
+        "uid": 167915044,
+        "score": 500,
+        "code": "eyJDb2RlIjoiQ0E4Rjg1SzA4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c5da435b862d1aca0d582445292ec46e.png"
+      },
+      {
+        "nickname": "遗尘音序",
+        "uid": 100411440,
+        "score": 500,
+        "code": "eyJDb2RlIjoiQ0E4QkoxRlkyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f943e663d77aec08ca1533ae7ec893e7.png"
       },
       {
         "nickname": "Xxsan",
@@ -817,6 +880,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
+        "nickname": "古月方源",
+        "uid": 170793612,
+        "score": 500,
+        "code": "eyJDb2RlIjoiQ0E0NVY3QlA4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/9f089d64b39fb4eac768ec0fbdbc598a.png"
+      },
+      {
         "nickname": "懒烂岚",
         "uid": 195435962,
         "score": 500,
@@ -831,10 +901,10 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
       },
       {
-        "nickname": "舒",
-        "uid": 205030031,
+        "nickname": "充钱了吗",
+        "uid": 101224887,
         "score": 495,
-        "code": "eyJDb2RlIjoiQ0EwWVRSOERYTiIsIlNlYXNvbiI6M30=",
+        "code": "eyJDb2RlIjoiQ0FDTFNaNkIyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
@@ -845,18 +915,18 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6181bbb6a8667e5e34ae2d6c6af4c2ab.png"
       },
       {
+        "nickname": "Pudain·布丁",
+        "uid": 100029370,
+        "score": 490,
+        "code": "eyJDb2RlIjoiQ0E1UzFLM1kyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
+      },
+      {
         "nickname": "鹿小喵不吃鱼",
         "uid": 183160627,
         "score": 490,
         "code": "eyJDb2RlIjoiQ0E1VlkwMjJYTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
-      },
-      {
-        "nickname": "夜袭莉莉芭",
-        "uid": 261789602,
-        "score": 490,
-        "code": "eyJDb2RlIjoiQ0E3RDE4RUhNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/4dc92b5dee6e9b0d0c0bbe63fd19424e.png"
       },
       {
         "nickname": "胡胡夜闪光",
@@ -871,13 +941,6 @@ const res = {
         "score": 490,
         "code": "eyJDb2RlIjoiQ0EzSEkzTEIyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
-      },
-      {
-        "nickname": "开尔文",
-        "uid": 217573105,
-        "score": 490,
-        "code": "eyJDb2RlIjoiQ0ExOTRRM1pYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
         "nickname": "冰之沧月",
@@ -901,18 +964,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
-        "nickname": "古月方源",
-        "uid": 170793612,
+        "nickname": "宵宫sama",
+        "uid": 190053523,
         "score": 490,
-        "code": "eyJDb2RlIjoiQ0E0NVY3QlA4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/9f089d64b39fb4eac768ec0fbdbc598a.png"
-      },
-      {
-        "nickname": "兴",
-        "uid": 171164105,
-        "score": 490,
-        "code": "eyJDb2RlIjoiQ0E3NDhZT1A4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/b9126967dd1130d3b5225f545e2effe7.png"
+        "code": "eyJDb2RlIjoiQ0ExM05SMTFYTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
       },
       {
         "nickname": "愚萌",
@@ -922,13 +978,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
-        "nickname": "Takey",
-        "uid": 145994150,
-        "score": 485,
-        "code": "eyJDb2RlIjoiQ0FDOFAxQUQ4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
-      },
-      {
         "nickname": "亦然",
         "uid": 236969343,
         "score": 485,
@@ -936,11 +985,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
       },
       {
-        "nickname": "充钱了吗",
-        "uid": 101224887,
+        "nickname": "ying",
+        "uid": 100377516,
         "score": 485,
-        "code": "eyJDb2RlIjoiQ0FDTFNaNkIyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+        "code": "eyJDb2RlIjoiQ0FFUUZMMFkyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
         "nickname": "光之曦梦",
@@ -950,7 +999,7 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3676dbd3b57cc164fa703391d26c8aa7.png"
       },
       {
-        "nickname": "饕笔",
+        "nickname": "噗沥嘶逼开尔否",
         "uid": 111582078,
         "score": 480,
         "code": "eyJDb2RlIjoiQ0ExVFVaTEkyTiIsIlNlYXNvbiI6M30=",
@@ -964,11 +1013,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
-        "nickname": "BattleSpt",
-        "uid": 108603173,
+        "nickname": "道道不哭",
+        "uid": 110581155,
         "score": 480,
-        "code": "eyJDb2RlIjoiQ0FCUFdXWUYyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f7256148a22e540267536e73b18da7d2.png"
+        "code": "eyJDb2RlIjoiQ0E3MEpNSVAyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0acad4f01acaf1fa9eb6a3e453e32829.png"
       },
       {
         "nickname": "木瓜豆腐",
@@ -978,17 +1027,17 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
-        "nickname": "苍筱迷-¿⸮？",
-        "uid": 189136803,
-        "score": 480,
-        "code": "eyJDb2RlIjoiQ0FCWE9JWk1YTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
-      },
-      {
         "nickname": "荧",
         "uid": 259200140,
         "score": 480,
         "code": "eyJDb2RlIjoiQ0E1T1hDSFVNTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+      },
+      {
+        "nickname": "苍筱迷-¿⸮？",
+        "uid": 189136803,
+        "score": 480,
+        "code": "eyJDb2RlIjoiQ0FCWE9JWk1YTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
@@ -1020,11 +1069,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/3fdb5d92ae72e314dcee2b4665e0d68b.png"
       },
       {
-        "nickname": "吴意",
-        "uid": 211022207,
+        "nickname": "萌萌哒的汐酱",
+        "uid": 117488355,
         "score": 475,
-        "code": "eyJDb2RlIjoiQ0E2SzBBUzRYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
+        "code": "eyJDb2RlIjoiQ0E2TFpUSkEyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/e8aad84acfaf749135a13f8f33cddf37.png"
       },
       {
         "nickname": "Keloni~",
@@ -1032,20 +1081,6 @@ const res = {
         "score": 470,
         "code": "eyJDb2RlIjoiQ0ExRFNNRkEyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/85a4010aa6197baa039ba2b6b5452ab6.png"
-      },
-      {
-        "nickname": "Pudain·布丁",
-        "uid": 100029370,
-        "score": 470,
-        "code": "eyJDb2RlIjoiQ0E1UzFLM1kyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
-      },
-      {
-        "nickname": "太一",
-        "uid": 167915044,
-        "score": 470,
-        "code": "eyJDb2RlIjoiQ0E4Rjg1SzA4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c5da435b862d1aca0d582445292ec46e.png"
       },
       {
         "nickname": "吉更",
@@ -1118,18 +1153,18 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/d438c0256d7555fa96c32c34508ca897.png"
       },
       {
+        "nickname": "神的微笑",
+        "uid": 140019816,
+        "score": 465,
+        "code": "eyJDb2RlIjoiQ0FDUUtYOUg4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f320e9027e2fcd4ca70ba5a0bdcd577b.png"
+      },
+      {
         "nickname": "星凌尘",
         "uid": 110777450,
         "score": 465,
         "code": "eyJDb2RlIjoiQ0FCRExRSlAyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/4c19e5da92d4d68968b588d8db977aca.png"
-      },
-      {
-        "nickname": "ying",
-        "uid": 100377516,
-        "score": 465,
-        "code": "eyJDb2RlIjoiQ0FFUUZMMFkyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
       },
       {
         "nickname": "王小雨",
@@ -1139,18 +1174,18 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6b83365c2e338650fb28fa629cb55483.png"
       },
       {
+        "nickname": "Tobby",
+        "uid": 176003273,
+        "score": 465,
+        "code": "eyJDb2RlIjoiQ0EzUEtRRk84TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+      },
+      {
         "nickname": "坤扬",
         "uid": 108461940,
         "score": 460,
         "code": "eyJDb2RlIjoiQ0E2QjA3Q0YyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0722aed0400f7ccdb08f0267fb7b8d58.png"
-      },
-      {
-        "nickname": "遗尘音序",
-        "uid": 100411440,
-        "score": 460,
-        "code": "eyJDb2RlIjoiQ0E4QkoxRlkyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/f943e663d77aec08ca1533ae7ec893e7.png"
       },
       {
         "nickname": "殇璃冰泪梦蝶",
@@ -1188,13 +1223,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c9e9cd43d1226d3c4e152908a8d63ef2.png"
       },
       {
-        "nickname": "萌萌哒的汐酱",
-        "uid": 117488355,
-        "score": 455,
-        "code": "eyJDb2RlIjoiQ0E2TFpUSkEyTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/e8aad84acfaf749135a13f8f33cddf37.png"
-      },
-      {
         "nickname": "北冥有鲲",
         "uid": 221539593,
         "score": 455,
@@ -1223,11 +1251,11 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
       },
       {
-        "nickname": "宵宫sama",
-        "uid": 190053523,
+        "nickname": "有濑夜星花",
+        "uid": 148819734,
         "score": 450,
-        "code": "eyJDb2RlIjoiQ0ExM05SMTFYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
+        "code": "eyJDb2RlIjoiQ0FFUjJXWkc4TiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/6b83365c2e338650fb28fa629cb55483.png"
       },
       {
         "nickname": "灵羽DI",
@@ -1286,13 +1314,6 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c3927c699b8a0bc4d84816bd811f4d87.png"
       },
       {
-        "nickname": "Tobby",
-        "uid": 176003273,
-        "score": 445,
-        "code": "eyJDb2RlIjoiQ0EzUEtRRk84TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
-      },
-      {
         "nickname": "Amadeus",
         "uid": 110554394,
         "score": 440,
@@ -1349,6 +1370,13 @@ const res = {
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/9f089d64b39fb4eac768ec0fbdbc598a.png"
       },
       {
+        "nickname": "弯",
+        "uid": 103450617,
+        "score": 440,
+        "code": "eyJDb2RlIjoiQ0E2NjVIWjcyTiIsIlNlYXNvbiI6M30=",
+        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/a9477d0d5f9d566f3fc5da84347ad9e5.png"
+      },
+      {
         "nickname": "冰糖胡芦vvt",
         "uid": 103408786,
         "score": 440,
@@ -1375,45 +1403,17 @@ const res = {
         "score": 440,
         "code": "eyJDb2RlIjoiQ0FCMUJMODcyTiIsIlNlYXNvbiI6M30=",
         "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/c3927c699b8a0bc4d84816bd811f4d87.png"
-      },
-      {
-        "nickname": "abuccus",
-        "uid": 178616893,
-        "score": 440,
-        "code": "eyJDb2RlIjoiQ0FEOUI5UUo4TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/42ce14b3c25695fc36b4f04fa0260a44.png"
-      },
-      {
-        "nickname": "陌上青宇",
-        "uid": 291447626,
-        "score": 440,
-        "code": "eyJDb2RlIjoiQ0ExRExXUlBNTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/0bca562c8cede19d3a4327aa4d0db1cd.png"
-      },
-      {
-        "nickname": "水白",
-        "uid": 128194858,
-        "score": 440,
-        "code": "eyJDb2RlIjoiQ0EwVUZZSE04TiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
-      },
-      {
-        "nickname": "取悦",
-        "uid": 185288595,
-        "score": 435,
-        "code": "eyJDb2RlIjoiQ0E2TFo5SDhYTiIsIlNlYXNvbiI6M30=",
-        "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8b36938509e6fb482bf89c58a76aa153.png"
       }
     ],
-    "all_score": 40,
-    "rank_score": 40,
-    "rank_num": "200+",
+    "all_score": 0,
+    "rank_score": 0,
+    "rank_num": "0",
     "has_next": false,
     "page_token": "CMgB",
     "player_level": 10,
-    "last_pass_challenge_time": 1709905080,
-    "nickname": "念冰",
-    "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/8f7184e964841f52746984cf30e5cd0f.png"
+    "last_pass_challenge_time": 0,
+    "nickname": "Liger",
+    "avatar_url": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_u0912f/9514b826b2c4faf9997cca553d7073da.png"
   }
 }
 
