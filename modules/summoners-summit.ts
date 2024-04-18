@@ -12,5 +12,8 @@ export default defineNuxtModule({
     addImports({ from: "naive-ui", name: "DataTableColumn", type: true });
     addImports({ from: "naive-ui", name: "FormRules", type: true });
     addImports({ from: "naive-ui", name: "FormItemRule", type: true });
+    addImports({ from: "naive-ui", name: "SelectOption", type: true });
+    addImports({ from: "naive-ui", name: "SelectFilter", type: true });
+    addImports({ from: "async-validator", name: "ValidateError", type: true });
   },
 });

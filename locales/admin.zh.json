@@ -3,7 +3,8 @@
     "cancel": "取消",
     "confirm": "确定",
     "enterAdminPage": "进入管理页面",
-    "leaveAdminPage": "离开管理页面"
+    "leaveAdminPage": "离开管理页面",
+    "submit": "提交"
   },
   "card": {
     "updateData": "更新卡牌数据",
@@ -14,10 +15,23 @@
     "SUCCESS": "操作成功"
   },
   "player": {
-    "selectUniqueName": "选择主要昵称"
+    "selectUniqueName": "选择主要昵称",
+    "mergePlayerData": "合并选手数据",
+    "mergeSourceLabel": "将此选手数据删除",
+    "mergeTargetLabel": "并合并到此选手数据中"
   },
   "ranks": {
+    "importFromJson": "从接口数据导入",
     "importFromTable": "从表格导入",
+    "invalidId": "游戏版本无效",
+    "jsonContentDescription": "请先{login}，然后{api}",
+    "jsonContentDescription2": "将接口数据粘贴至此处",
+    "jsonContentDescriptionApi": "访问接口",
+    "jsonContentDescriptionLogin": "登录官网",
+    "jsonContentParseError": "数据内容解析不正确",
+    "jsonContentRequired": "数据内容不能为空",
+    "nicknameNeedConfirm": "昵称需要确认",
+    "ranksRequired": "请导入榜单数据",
     "tableContentDescription": "将文档中的表格粘贴至此处",
     "tableContentParseError": "表格内容解析不正确",
     "tableContentRequired": "表格内容不能为空"

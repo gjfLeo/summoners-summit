@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Ranks } from "~/types/data";
 
-const { data, pending } = await useFetch("/api/v3/ranks/ids");
+const { data, pending, refresh } = await useFetch("/api/v3/ranks/ids");
 
 const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);
 const rankId = ref(rankIds.value[0]);
@@ -37,6 +37,11 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
     title: "积分",
   },
 ];
+
+async function handleImportDone(id: string) {
+  await refresh();
+  rankId.value = id;
+}
 </script>
 
 <template>
@@ -52,7 +57,7 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
         name="add"
         :tab="() => h('div', { class: 'i-carbon:add' })"
       >
-        <AdminRanksImport />
+        <AdminRanksImport @done="handleImportDone" />
       </NTabPane>
       <NTabPane
         v-for="id in rankIds" :key="id"

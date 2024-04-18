@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
 
   const oldUniqueName = player.uniqueName;
   player.uniqueName = uniqueName;
-  player.aliases = [...player.aliases, oldUniqueName].filter(n => n !== uniqueName).sort();
+  player.aliases = [...player.aliases, oldUniqueName].filter(n => n !== uniqueName);
   savePlayer(player);
   return responseOk();
 });

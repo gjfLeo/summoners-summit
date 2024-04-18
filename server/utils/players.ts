@@ -28,8 +28,9 @@ const ZSavePlayerParams = ZPlayer.partial({ id: true });
 type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
   const player = {
-    id: params.id ?? hash(params.uids[0]),
     ...params,
+    id: params.id ?? hash(params.uids[0]),
+    aliases: params.aliases.toSorted(),
   };
 
   updateIndex((index) => {

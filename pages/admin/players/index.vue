@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import Pinyin from "pinyin-match";
-import { AdminPlayerUniqueNameSelector, NButton, NTag } from "#components";
+import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton, NTag } from "#components";
 
-const uniqueNameSelector = ref<InstanceType<typeof AdminPlayerUniqueNameSelector>>();
+const playerUniqueNameDialog = ref<InstanceType<typeof AdminPlayerUniqueNameDialog>>();
+const playerMergeDialog = ref<InstanceType<typeof AdminPlayerMergeDialog>>();
 
 const { t } = useI18n();
 
@@ -35,7 +36,7 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
     className: "font-mono text-xs",
   },
   {
-    key: "uid",
+    key: "uids",
     title: "UID",
     width: "6rem",
     className: "font-mono text-xs",
@@ -69,8 +70,13 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
         [
           h(
             NButton,
-            { text: true, focusable: false, onClick: () => uniqueNameSelector.value?.show(row.id) },
+            { text: true, focusable: false, onClick: () => playerUniqueNameDialog.value?.show(row.id) },
             () => h("div", { class: "i-carbon:edit" }),
+          ),
+          h(
+            NButton,
+            { text: true, focusable: false, onClick: () => playerMergeDialog.value?.show(row.id, players.value) },
+            () => h("div", { class: "i-carbon:direction-merge" }),
           ),
         ],
       );
@@ -93,7 +99,8 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
       class="flex-table"
     />
     <div v-show="false">
-      <AdminPlayerUniqueNameSelector ref="uniqueNameSelector" @done="refresh()" />
+      <AdminPlayerUniqueNameDialog ref="playerUniqueNameDialog" @done="refresh()" />
+      <AdminPlayerMergeDialog ref="playerMergeDialog" @done="refresh()" />
     </div>
   </div>
 </template>
