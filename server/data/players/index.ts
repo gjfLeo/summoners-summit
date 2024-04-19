@@ -131,6 +131,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "蓝雨の迷妹": "清弦",
   "雀鲨": "雀巢脆脆鲨",
   "噗沥嘶逼开尔否": "饕笔",
+  "乐，胡能似吗？": "乐子人.超飞梨",
 
   
   
