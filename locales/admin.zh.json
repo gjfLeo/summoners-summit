@@ -15,10 +15,13 @@
     "SUCCESS": "操作成功"
   },
   "player": {
-    "selectUniqueName": "选择主要昵称",
     "mergePlayerData": "合并选手数据",
     "mergeSourceLabel": "将此选手数据删除",
-    "mergeTargetLabel": "并合并到此选手数据中"
+    "mergeSourceRequired": "请选择",
+    "mergeSourceTargetSame": "来源和目标不能相同",
+    "mergeTargetLabel": "并合并到此选手数据中",
+    "mergeTargetRequired": "请选择",
+    "selectUniqueName": "选择主要昵称"
   },
   "ranks": {
     "importFromJson": "从接口数据导入",

@@ -1,4 +1,4 @@
-type ApiResponse<T = void> = {
+export type ApiResponse<T = void> = {
   success: boolean;
   code: string;
 } & T;

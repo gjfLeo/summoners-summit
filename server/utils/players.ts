@@ -40,8 +40,28 @@ export function savePlayer(params: SavePlayerParams) {
   writeData(`players/${player.id}`, ZPlayer.parse(player));
 }
 
-function readIndex() {
-  return readData<PlayerIndex>("players/_index") ?? { uid: {} };
+export function mergePlayer(sourceId: string, targetId: string) {
+  const source = getPlayer(sourceId);
+  const target = getPlayer(targetId);
+  if (!source || !target) {
+    throw new Error("PLAYER_NOT_FOUND");
+  }
+  target.uids = target.uids.concat(source.uids);
+  const existsNicknames = Object.fromEntries([target.uniqueName, ...target.aliases].map(n => [n, true]));
+  target.aliases = target.aliases.concat([source.uniqueName, ...source.aliases].filter(n => !existsNicknames[n]));
+
+  deletePlayer(sourceId);
+  savePlayer(target);
+  updateIndex((index) => {
+    index.redirect[sourceId] = targetId;
+  });
+}
+
+function readIndex(): PlayerIndex {
+  return Object.assign(
+    { uid: {}, redirect: {} } as PlayerIndex,
+    readData<Partial<PlayerIndex>>("players/_index"),
+  );
 }
 function updateIndex(func: (index: PlayerIndex) => void) {
   const index = readIndex();

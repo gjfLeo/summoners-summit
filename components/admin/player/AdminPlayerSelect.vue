@@ -38,7 +38,7 @@ const renderLabel: SelectRenderLabel = (option) => {
     <div class="flex flex-col p-block-2">
       <div class="flex items-center gap-2">
         <div>{player.uniqueName}</div>
-        <NText class="text-xs" depth={3}>{player.uids}</NText>
+        <NText class="text-xs" depth={3}>{player.uids.join("\u2006/\u2006")}</NText>
       </div>
       <NText class="text-xs" depth={3}>{player.aliases.join("\u2006/\u2006")}</NText>
     </div>
@@ -51,7 +51,7 @@ const renderTag: SelectRenderTag = ({ option }) => {
   return (
     <div class="flex items-center gap-2">
       <div>{player.uniqueName}</div>
-      <div class="text-xs opacity-50">{player.uids}</div>
+      <div class="text-xs opacity-50">{player.uids.join("\u2006/\u2006")}</div>
     </div>
   );
 };

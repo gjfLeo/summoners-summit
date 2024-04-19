@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import Pinyin from "pinyin-match";
 import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton, NTag } from "#components";
 
@@ -40,6 +40,9 @@ const columns: DataTableColumn<typeof players.value[number]>[] = [
     title: "UID",
     width: "6rem",
     className: "font-mono text-xs",
+    render: (row) => {
+      return <div class="flex flex-col">{row.uids.map(uid => <div>{uid}</div>)}</div>;
+    },
   },
   {
     key: "uniqueName",

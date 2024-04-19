@@ -26,4 +26,5 @@ export type Ranks = z.infer<typeof ZRanks>;
 
 export interface PlayerIndex {
   uid: Record<Player["uids"][number], Player["id"]>;
+  redirect: Record<Player["id"], Player["id"]>;
 }
