@@ -10,6 +10,7 @@ export const ZPlayer = z.object({
   uniqueName: ZPlayerNickname,
   aliases: ZPlayerNickname.array(),
   ignored: z.boolean().optional(),
+  redirectFrom: ZPlayerId.array().optional(),
 }).strip();
 export type Player = z.infer<typeof ZPlayer>;
 

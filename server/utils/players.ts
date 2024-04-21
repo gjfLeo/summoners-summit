@@ -2,7 +2,11 @@ import type { z } from "zod";
 import type { PlayerIndex } from "~/types/data";
 import { ZPlayer } from "~/types/data";
 
-export function getPlayer(playerId: string) {
+export function getPlayer(playerId: string, skipRedirect = false) {
+  if (!skipRedirect) {
+    const redirectId = readIndex().redirect[playerId];
+    if (redirectId) return getPlayer(redirectId);
+  }
   return ZPlayer.optional().parse(readData(`players/${playerId}`));
 }
 export function getPlayerByUid(uid: string) {
@@ -19,6 +23,7 @@ export function deletePlayer(playerId: string) {
   if (player) {
     updateIndex((index) => {
       player.uids.forEach(uid => delete index.uid[uid]);
+      player.redirectFrom?.forEach(redirectId => delete index.redirect[redirectId]);
     });
     deleteData(`players/${playerId}`);
   }
@@ -49,6 +54,7 @@ export function mergePlayer(sourceId: string, targetId: string) {
   target.uids = target.uids.concat(source.uids);
   const existsNicknames = Object.fromEntries([target.uniqueName, ...target.aliases].map(n => [n, true]));
   target.aliases = target.aliases.concat([source.uniqueName, ...source.aliases].filter(n => !existsNicknames[n]));
+  target.redirectFrom = [...target.redirectFrom ?? [], sourceId];
 
   deletePlayer(sourceId);
   savePlayer(target);
