@@ -1,4 +1,8 @@
 {
   "mainNickname": "Main nickname",
-  "otherNicknames": "Other nicknames"
+  "nickname": "Nickname",
+  "otherNicknames": "Other nicknames",
+  "rank": "Rank",
+  "score": "Score",
+  "uid": "UID"
 }

@@ -1,7 +1,10 @@
 {
   "action": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
     "enterAdminPage": "Enter admin page",
-    "leaveAdminPage": "Leave admin page"
+    "leaveAdminPage": "Leave admin page",
+    "submit": "Submit"
   },
   "card": {
     "updateData": "Update card data",
@@ -12,6 +15,10 @@
     "SUCCESS": "Success"
   },
   "player": {
+    "mergePlayerData": "Merge player data",
     "selectUniqueName": "Select unique name"
+  },
+  "ranks": {
+    "invalidId": "Invalid game version"
   }
 }
