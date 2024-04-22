@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import type { Ranks } from "~/types/data";
 
+definePageMeta({ title: "site.titles.admin.ranks" });
+
 const { data, pending, refresh } = await useFetch("/api/v3/ranks/ids");
 
 const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);

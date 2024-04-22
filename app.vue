@@ -11,11 +11,14 @@ import { themeOverridesShared } from "@/config/theme";
       shared: themeOverridesShared,
     }"
   >
-    <NMessageProvider>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </NMessageProvider>
+    <NLoadingBarProvider>
+      <NMessageProvider>
+        <LayoutLoadingBar />
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </NMessageProvider>
+    </NLoadingBarProvider>
   </NaiveConfig>
 </template>
 

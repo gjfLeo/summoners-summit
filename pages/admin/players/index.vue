@@ -2,6 +2,8 @@
 import Pinyin from "pinyin-match";
 import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton, NTag } from "#components";
 
+definePageMeta({ title: "site.titles.admin.players" });
+
 const playerUniqueNameDialog = ref<InstanceType<typeof AdminPlayerUniqueNameDialog>>();
 const playerMergeDialog = ref<InstanceType<typeof AdminPlayerMergeDialog>>();
 

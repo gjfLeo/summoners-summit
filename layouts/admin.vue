@@ -1,6 +1,21 @@
 <script lang="ts" setup>
 import type { MenuLinkRoute } from "@bg-dev/nuxt-naiveui";
 
+const { t } = useI18n();
+const route = useRoute();
+
+useHead({
+  title: computed(() => {
+    const pageTitle = typeof route.meta.title === "string" ? t(route.meta.title as string) : null;
+    return pageTitle
+      ? t("site.titles.format", {
+        pageTitle,
+        siteTitle: t("site.name"),
+      })
+      : t("site.name");
+  }),
+});
+
 const menu: MenuLinkRoute[] = [
   {
     label: "赛事",
@@ -44,6 +59,6 @@ const menu: MenuLinkRoute[] = [
 
 <template>
   <LayoutContent :routes="menu" admin>
-    <NuxtPage />
+    <slot />
   </LayoutContent>
 </template>

@@ -1,3 +1,12 @@
 {
-  "description": "七圣召唤赛事资料"
+  "name": "召唤之巅",
+  "description": "七圣召唤赛事资料",
+  "titles": {
+    "format": "{pageTitle} {'|'} {siteTitle}",
+    "admin": {
+      "layout": "{pageTitle} {'|'} 管理模式",
+      "players": "选手列表",
+      "ranks": "选手榜单"
+    }
+  }
 }
