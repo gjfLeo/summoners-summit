@@ -3,6 +3,8 @@ import type { Ranks } from "~/types/data";
 
 definePageMeta({ title: "site.titles.admin.ranks" });
 
+const { t } = useI18n();
+
 const { data, pending, refresh } = await useFetch("/api/v3/ranks/ids");
 
 const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);
@@ -24,19 +26,19 @@ watch(rankId, async (rankId) => {
 const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
   {
     key: "rank",
-    title: "名次",
+    title: t("player.rank"),
   },
   {
     key: "uid",
-    title: "UID",
+    title: t("player.uid"),
   },
   {
     key: "nickname",
-    title: "昵称",
+    title: t("player.nickname"),
   },
   {
     key: "score",
-    title: "积分",
+    title: t("player.score"),
   },
 ];
 

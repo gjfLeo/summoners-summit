@@ -1,17 +1,100 @@
 import { z } from "zod";
 import { ZLocales } from "./locales";
+import { ZGameVersionId } from "./game-version";
+import { ZPlayerId, ZPlayerNickname } from "./player";
+import { ZDeckCharacters, ZDeckId } from "./deck";
 
-export const TournamentLevel = z.enum([
-  "A", // 影幻杯
-  "B", // 积分赛、平台赛等
-  "C", // 积分赛试办、娱乐赛等
-]);
-export const TournamentType = z.object({
-  name: z.record(ZLocales, z.string()),
-  level: TournamentLevel,
+export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);
+export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2}$/);
+export const ZGameId = z.coerce.string().regex(/^\w{16}\d{4}$/);
+
+export const ZTournamentRules = z.object({
+  numDecks: z.number(),
+  numDecksBanned: z.number().optional(),
+  numCharactersBanned: z.number().optional(),
+  numCharactersRequired: z.number().optional(),
+  mode: z.enum(["duel", "conquest"]),
+  numGames: z.number(),
+  extra: z.tuple([z.string(), z.string()]).array().optional(),
+}).strip();
+
+export const ZTournamentPart = z.object({
+  // name: z.record(ZLocales, z.string().trim()).optional(),
+  date: z.date(),
+  matchIds: ZMatchId.array(),
+}).strip();
+
+export const ZTournamentStage = z.object({
+  name: z.record(ZLocales, z.string().trim()),
+  rules: ZTournamentRules.optional(),
+  parts: ZTournamentPart.array(),
+}).strip();
+
+export const ZTournament = z.object({
+  id: z.string(),
+  name: z.record(ZLocales, z.string().trim()),
+  gameVersion: ZGameVersionId,
+  stages: ZTournamentStage.array(),
+}).strip();
+
+export const ZTournamentR = ZTournament.extend({
+  champion: z.object({
+    playerId: ZPlayerId,
+    nickname: ZPlayerNickname,
+  }).optional(),
+  dateRange: z.object({
+    start: z.date().optional(),
+    end: z.date().optional(),
+  }),
+}).strip();
+
+export const ZMatch = z.object({
+  id: ZMatchId,
+  tournamentId: ZTournamentId,
+  isFinal: z.boolean().optional(),
+
+  video: z.string().optional(),
+  playerA: z.object({
+    playerId: ZPlayerId.optional(),
+    nickname: ZPlayerNickname,
+  }),
+  playerB: z.object({
+    playerId: ZPlayerId.optional(),
+    nickname: ZPlayerNickname,
+  }),
+  winner: z.enum(["A", "B", "DRAW"]).optional(),
+  gameIds: ZGameId.array(),
+}).strip();
+
+export const ZMatchR = ZMatch.extend({
+  gameVersion: ZGameVersionId,
+  winner: z.enum(["A", "B", "DRAW"]),
 });
 
-export const TournamentTemplate = z.object({
-  name: z.record(ZLocales, z.string()),
-  type: TournamentType.shape.name.valueSchema,
+export const ZGame = z.object({
+  id: ZGameId,
+  matchId: ZMatchId,
+  playerADeck: z.object({
+    characters: ZDeckCharacters,
+    deck: ZDeckId.optional(),
+  }),
+  playerBDeck: z.object({
+    characters: ZDeckCharacters,
+    deck: ZDeckId.optional(),
+  }),
+  winner: z.enum(["A", "B", "DRAW-W", "DRAW-L"]).optional(),
+  starter: z.enum(["A", "B"]).optional(),
+});
+
+export const ZGameR = ZGame.extend({
+  gameVersion: ZGameVersionId,
+  tournamentId: ZTournamentId,
+  playerA: z.object({
+    playerId: ZPlayerId.optional(),
+    nickname: ZPlayerNickname,
+  }),
+  playerB: z.object({
+    playerId: ZPlayerId.optional(),
+    nickname: ZPlayerNickname,
+  }),
 });

@@ -5,8 +5,8 @@
     "format": "{pageTitle} {'|'} {siteTitle}",
     "admin": {
       "layout": "{pageTitle} {'|'} 管理模式",
-      "players": "选手列表",
-      "ranks": "选手榜单"
+      "players": "选手列表管理",
+      "ranks": "选手榜单管理"
     }
   }
 }
