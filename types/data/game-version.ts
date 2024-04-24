@@ -20,3 +20,5 @@ export type GameVersionId = z.infer<typeof ZGameVersionId>;
 export type SeasonPhraseId = z.infer<typeof ZSeasonPhraseId>;
 export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 export type GameVersion = z.infer<typeof ZGameVersion>;
+
+export const ZGameVersionData = z.record(ZGameVersionId, ZGameVersion);

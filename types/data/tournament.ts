@@ -39,7 +39,7 @@ export const ZTournament = z.object({
 
 export const ZTournamentR = ZTournament.extend({
   champion: z.object({
-    playerId: ZPlayerId,
+    playerId: ZPlayerId.optional(),
     nickname: ZPlayerNickname,
   }).optional(),
   dateRange: z.object({
@@ -98,3 +98,16 @@ export const ZGameR = ZGame.extend({
     nickname: ZPlayerNickname,
   }),
 });
+
+export type GameId = z.infer<typeof ZGameId>;
+export type MatchId = z.infer<typeof ZMatchId>;
+export type TournamentId = z.infer<typeof ZTournamentId>;
+export type Tournament = z.infer<typeof ZTournament>;
+export type TournamentR = z.infer<typeof ZTournamentR>;
+export type Match = z.infer<typeof ZMatch>;
+export type MatchR = z.infer<typeof ZMatchR>;
+export type Game = z.infer<typeof ZGame>;
+export type GameR = z.infer<typeof ZGameR>;
+export type TournamentRules = z.infer<typeof ZTournamentRules>;
+export type TournamentPart = z.infer<typeof ZTournamentPart>;
+export type TournamentStage = z.infer<typeof ZTournamentStage>;
