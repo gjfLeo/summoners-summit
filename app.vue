@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { dateZhCN, zhCN } from "naive-ui";
+import { dateZhCN, enUS, zhCN } from "naive-ui";
 import { themeOverridesShared } from "@/config/theme";
+
+const { locale } = useI18n();
+const naiveLocale = computed(() => {
+  return locale.value === "zh" ? zhCN : enUS;
+});
 </script>
 
 <template>
   <VitePwaManifest />
   <NaiveConfig
-    :locale="zhCN" :date-locale="dateZhCN"
+    :locale="naiveLocale" :date-locale="dateZhCN"
     :theme-config="{
       shared: themeOverridesShared,
     }"

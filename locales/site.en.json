@@ -1,3 +1,7 @@
 {
-  "description": "Tournament Match Database for GITCG"
+  "description": "Tournament Match Database for GITCG",
+  "name": "Summoners' Summit",
+  "titles": {
+    "format": "{pageTitle} {'|'} {siteTitle}"
+  }
 }

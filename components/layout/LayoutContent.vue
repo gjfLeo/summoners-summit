@@ -12,7 +12,7 @@ const adminColor = computed(() => `color-mix(in oklch, ${themeVars.value.primary
 </script>
 
 <template>
-  <NLayout style="min-height: 100vh; min-width: 100dvh;">
+  <NLayout style="height: 100vh; height: 100dvh; overflow-y: hidden;">
     <LayoutHeader
       :routes="routes"
       :style="{ backgroundColor: admin ? adminColor : undefined }"
@@ -20,6 +20,7 @@ const adminColor = computed(() => `color-mix(in oklch, ${themeVars.value.primary
     <NLayout
       :style="{ height: `calc(100vh - ${LAYOUT_HEADER_HEIGHT})` }"
       :native-scrollbar="false"
+      class="layout-scroll-area"
     >
       <NLayout
         content-class="p-4"

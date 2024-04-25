@@ -1,0 +1,23 @@
+<script lang="ts" setup>
+definePageMeta({ title: "site.titles.admin.tournament" });
+
+const route = useRoute<"admin-tournament-id___zh">();
+const id = route.params.id;
+
+const { t } = useI18n();
+
+if (id) {
+  const { data } = await useFetch(() => "/api/v3/tournaments/get", {
+    query: { id },
+  });
+  if (!data.value?.tournament) {
+    await navigateTo({ name: route.name });
+  }
+}
+</script>
+
+<template>
+  <div>
+    <NH2>{{ id ? t("admin.tournament.titleEdit") : t("admin.tournament.titleAdd") }}</NH2>
+  </div>
+</template>

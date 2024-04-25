@@ -38,5 +38,9 @@
     "tableContentDescription": "将文档中的表格粘贴至此处",
     "tableContentParseError": "表格内容解析不正确",
     "tableContentRequired": "表格内容不能为空"
+  },
+  "tournament": {
+    "titleEdit": "编辑赛事详情",
+    "titleAdd": "新增赛事详情"
   }
 }
