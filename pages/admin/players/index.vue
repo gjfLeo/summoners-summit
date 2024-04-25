@@ -1,6 +1,6 @@
 <script lang="tsx" setup>
 import Pinyin from "pinyin-match";
-import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton, NTag } from "#components";
+import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton } from "#components";
 
 definePageMeta({ title: "site.titles.admin.players" });
 

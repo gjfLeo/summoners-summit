@@ -61,8 +61,8 @@ const renderTag: SelectRenderTag = ({ option }) => {
   <NSelect
     v-model:value="playerId"
     :options="options"
-    filterable
-    clearable
+
+    clearable filterable
     :filter="selectFilter"
     :render-tag="renderTag"
     :render-label="renderLabel"

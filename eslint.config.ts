@@ -4,8 +4,9 @@ import nuxt from "./.nuxt/eslint.config.mjs";
 export default gjfleo(
   nuxt,
   {
+    files: ["locales/*.json"],
     rules: {
-      "vue/no-multiple-template-root": "off",
+      "jsonc/sort-keys": "warn",
     },
   },
 );

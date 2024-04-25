@@ -40,7 +40,7 @@
     "tableContentRequired": "表格内容不能为空"
   },
   "tournament": {
-    "titleEdit": "编辑赛事详情",
-    "titleAdd": "新增赛事详情"
+    "titleAdd": "新增赛事详情",
+    "titleEdit": "编辑赛事详情"
   }
 }
