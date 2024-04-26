@@ -8,7 +8,21 @@ export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);
 export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2}$/);
 export const ZGameId = z.coerce.string().regex(/^\w{16}\d{4}$/);
 
+export const ZTournamentType = z.object({
+  value: z.string(),
+  level: z.enum(["A", "B", "C"]).optional(),
+}).strip();
+
 export const ZTournamentRules = z.object({
+  // 禁用角色（每名选手赛前禁用X名角色）
+  // 预选阵容（每名选手赛前需要提交X套阵容，至少包含Y名角色）
+  //   预选牌组（每名选手赛前需要提交牌组，每套预选阵容只能提交1套/最多提交X套对应牌组）
+  //   禁用阵容（每名选手赛前禁用对手提交的X套阵容）
+  // 获胜X局
+  //   征服：获胜的牌组不能再次使用
+  //   决斗：出场的牌组不能再次使用
+  //   角色征服：获胜牌组包含的角色不能再次使用
+
   numDecks: z.number(),
   numDecksBanned: z.number().optional(),
   numCharactersBanned: z.number().optional(),
@@ -102,6 +116,7 @@ export const ZGameR = ZGame.extend({
 export type GameId = z.infer<typeof ZGameId>;
 export type MatchId = z.infer<typeof ZMatchId>;
 export type TournamentId = z.infer<typeof ZTournamentId>;
+export type TournamentType = z.infer<typeof ZTournamentType>;
 export type Tournament = z.infer<typeof ZTournament>;
 export type TournamentR = z.infer<typeof ZTournamentR>;
 export type Match = z.infer<typeof ZMatch>;
