@@ -1,9 +1,11 @@
 {
   "action": {
+    "add": "新增",
     "cancel": "取消",
     "confirm": "确定",
     "enterAdminPage": "进入管理页面",
     "leaveAdminPage": "离开管理页面",
+    "save": "保存",
     "submit": "提交"
   },
   "card": {
@@ -42,5 +44,9 @@
   "tournament": {
     "titleAdd": "新增赛事详情",
     "titleEdit": "编辑赛事详情"
+  },
+  "validate": {
+    "pleaseInput": "请填写{ 0 }",
+    "pleaseSelect": "请选择{ 0 }"
   }
 }

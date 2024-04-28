@@ -36,12 +36,12 @@ const columns: DataTableColumn<Player>[] = [
   },
   {
     key: "uniqueName",
-    title: t("player.mainNickname"),
+    title: t("main.player.mainNickname"),
     width: "18rem",
   },
   {
     key: "aliases",
-    title: t("player.otherNicknames"),
+    title: t("main.player.otherNicknames"),
     render: (row) => {
       return (
         <div class="flex flex-wrap gap-2">

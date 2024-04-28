@@ -23,7 +23,7 @@ watch(
   <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
     <NButton text :focusable="false">
       <template #icon>
-        <div class="i-carbon:language" />
+        <div class="i-carbon:translate" />
       </template>
     </NButton>
   </NPopselect>

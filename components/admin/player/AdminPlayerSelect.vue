@@ -6,14 +6,10 @@ import { NText } from "#components";
 
 const props = defineProps<{
   players: Player[];
-  value: string | null;
+  // value: string | null;
 }>();
 
-const emit = defineEmits<{
-  (e: "update:value", value: string | null): void;
-}>();
-
-const playerId = useVModel(props, "value", emit);
+const playerId = defineModel<string>("value");
 
 const options = computed(() => {
   return props.players.map<SelectOption>((player) => {

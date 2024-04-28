@@ -1,3 +1,4 @@
+import type { z } from "zod";
 import { ZTournament } from "~/types/data";
 import type { Tournament, TournamentId, TournamentR } from "~/types/data";
 
@@ -33,4 +34,21 @@ export function getTournamentR(tournamentId: TournamentId): TournamentR | undefi
 
 export function getTournamentList(): TournamentR[] {
   return ZTournament.array().parse(readDataList<Tournament>("tournaments")).map(fillTournamentR);
+}
+
+export const ZTournamentSaveParams = ZTournament.partial({
+  id: true,
+  stages: true,
+});
+type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
+export function saveTournament(params: TournamentSaveParams) {
+  const tournament = {
+    ...params,
+    id: params.id || hash(params.name + params.gameVersion),
+    stages: params.stages ?? [],
+  };
+
+  writeData(`tournaments/${tournament.id}`, tournament);
+
+  return tournament.id;
 }

@@ -1,10 +1,18 @@
 <script lang="ts" setup>
+import type { Tournament } from "~/types/data";
+
 definePageMeta({ title: "site.titles.admin.tournament" });
 
 const route = useRoute<"admin-tournament-id___zh">();
 const id = route.params.id;
 
 const { t } = useI18n();
+const tournament = ref<Tournament>({
+  id: "",
+  name: {},
+  gameVersion: "",
+  stages: [],
+});
 
 if (id) {
   const { data } = await useFetch(() => "/api/v3/tournaments/get", {
@@ -13,11 +21,15 @@ if (id) {
   if (!data.value?.tournament) {
     await navigateTo({ name: route.name });
   }
+  else {
+    tournament.value = data.value.tournament;
+  }
 }
 </script>
 
 <template>
   <div>
     <NH2>{{ id ? t("admin.tournament.titleEdit") : t("admin.tournament.titleAdd") }}</NH2>
+    <AdminTournamentForm v-model="tournament" />
   </div>
 </template>

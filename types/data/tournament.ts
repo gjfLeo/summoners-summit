@@ -22,14 +22,22 @@ export const ZTournamentRules = z.object({
   //   征服：获胜的牌组不能再次使用
   //   决斗：出场的牌组不能再次使用
   //   角色征服：获胜牌组包含的角色不能再次使用
-
-  numDecks: z.number(),
-  numDecksBanned: z.number().optional(),
-  numCharactersBanned: z.number().optional(),
-  numCharactersRequired: z.number().optional(),
-  mode: z.enum(["duel", "conquest"]),
+  banCharacters: z.object({
+    num: z.number().positive(),
+  }).optional(),
+  submitTeams: z.object({
+    num: z.number(),
+    numCharactersRequired: z.number().optional(),
+    submitDecks: z.object({
+      maxNumForEachTeam: z.number().optional(),
+      maxNumInTotal: z.number().optional(),
+    }).optional(),
+    banTeams: z.object({
+      num: z.number(),
+    }).optional(),
+  }).optional(),
   numGames: z.number(),
-  extra: z.tuple([z.string(), z.string()]).array().optional(),
+  mode: z.enum(["duel", "conquest", "character-conquest"]),
 }).strip();
 
 export const ZTournamentPart = z.object({

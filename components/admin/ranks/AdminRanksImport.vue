@@ -18,15 +18,15 @@ const ranks = ref<Ranks["ranks"]>([]);
 const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
   {
     key: "rank",
-    title: t("player.rank"),
+    title: t("main.player.rank"),
   },
   {
     key: "uid",
-    title: t("player.uid"),
+    title: t("main.player.uid"),
   },
   {
     key: "nickname",
-    title: t("player.nickname"),
+    title: t("main.player.nickname"),
     render: (row, index) => {
       return nicknameEditable.value
         ? h(
@@ -59,7 +59,7 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
   },
   {
     key: "score",
-    title: t("player.score"),
+    title: t("main.player.score"),
   },
 ];
 

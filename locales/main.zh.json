@@ -1,0 +1,16 @@
+{
+  "card": {
+    "invalidCardType": "无效的卡牌类型"
+  },
+  "player": {
+    "mainNickname": "主要昵称",
+    "nickname": "昵称",
+    "otherNicknames": "其他昵称",
+    "rank": "排名",
+    "score": "积分",
+    "uid": "UID"
+  },
+  "tournament": {
+    "name": "赛事名称"
+  }
+}

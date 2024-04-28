@@ -1,18 +1,10 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  value: string | undefined;
-}>();
-
-const emit = defineEmits<{
-  (e: "update:value", value: string | undefined): void;
-}>();
-
 const shared = useSharedData();
 const { t } = useI18n();
 
 const gameVersionList = computed(() => shared.gameVersionList);
 
-const gameVersion = useVModel(props, "value", emit);
+const gameVersion = defineModel<string>("value");
 
 const options = computed<SelectOption[]>(() => {
   return gameVersionList.value.map(v => ({
@@ -30,6 +22,7 @@ const options = computed<SelectOption[]>(() => {
     :fallback-option="false"
     :placeholder="t('terms.gameVersionShort')"
     clearable
-    class="w-22"
+    class="min-w-22"
+    v-bind="$attrs"
   />
 </template>

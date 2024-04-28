@@ -1,0 +1,13 @@
+{
+  "card": {
+    "invalidCardType": "Invalid card type"
+  },
+  "player": {
+    "mainNickname": "Main nickname",
+    "nickname": "Nickname",
+    "otherNicknames": "Other nicknames",
+    "rank": "Rank",
+    "score": "Score",
+    "uid": "UID"
+  }
+}
