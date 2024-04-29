@@ -11,6 +11,7 @@ const tournament = ref<Tournament>({
   id: "",
   name: {},
   gameVersion: "",
+  type: "",
   stages: [],
 });
 
@@ -30,6 +31,18 @@ if (id) {
 <template>
   <div>
     <NH2>{{ id ? t("admin.tournament.titleEdit") : t("admin.tournament.titleAdd") }}</NH2>
-    <AdminTournamentForm v-model="tournament" />
+    <AdminEditBlock v-model="tournament">
+      <template #view>
+        {{ tournament }}
+      </template>
+      <template #edit="{ data: t11 }">
+        <AdminTournamentForm v-model="tournament" />
+      </template>
+    </AdminEditBlock>
+    <template v-if="tournament">
+      <template v-for="(stage, stageIndex) in tournament.stages" :key="stageIndex">
+        <AdminTournamentStageForm v-model="tournament.stages[stageIndex]" />
+      </template>
+    </template>
   </div>
 </template>

@@ -1,7 +1,7 @@
 import type { TournamentType } from "~/types/data";
 
 export default defineEventHandler(() => {
-  const tournamentTypes: TournamentType[] = [
+  const tournamentTypeList: TournamentType[] = [
     { value: "积分赛", level: "B" },
     { value: "平台赛", level: "B" },
     { value: "入围赛", level: "B" },
@@ -10,5 +10,5 @@ export default defineEventHandler(() => {
     { value: "非官方体系", level: "C" },
   ];
 
-  return responseData({ tournamentTypes });
+  return responseData({ tournamentTypeList });
 });

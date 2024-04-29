@@ -26,6 +26,14 @@ const rules: FormRules = {
       }
     },
   },
+  type: {
+    trigger: "change",
+    validator: async () => {
+      if (!tournament.value.type) {
+        throw new Error(t("admin.validate.pleaseSelect", [t("main.tournament.type")]));
+      }
+    },
+  },
 };
 
 async function save() {
@@ -44,19 +52,23 @@ async function save() {
     await navigateTo(`/admin/tournament/${res.id}`);
   }
 }
+
+defineExpose({ save });
 </script>
 
 <template>
   <NForm ref="formRef" :model="tournament" :rules="rules">
-    <NFormItem :label="t('main.tournament.name')" path="name">
-      <NInputLocale v-model:value="tournament.name" />
-    </NFormItem>
-    <NFormItem :label="t('terms.gameVersion')" path="gameVersion">
-      <GameVersionSelect v-model:value="tournament.gameVersion" />
-    </NFormItem>
-    <NFormItem :show-label="false" flex="~ justify-end">
-      <NButton type="primary" secondary @click="save">{{ t("admin.action.save") }}</NButton>
-    </NFormItem>
+    <NGrid class="gap-x-2! gap-y-4!">
+      <NFormItemGi :span="16" :label="t('main.tournament.name')" path="name">
+        <NInputLocale v-model:value="tournament.name" />
+      </NFormItemGi>
+      <NFormItemGi :span="4" :label="t('terms.gameVersion')" path="gameVersion">
+        <GameVersionSelect v-model:value="tournament.gameVersion" />
+      </NFormItemGi>
+      <NFormItemGi :span="4" :label="t('main.tournament.type')" path="type">
+        <AdminTournamentTypeSelect v-model:value="tournament.type" />
+      </NFormItemGi>
+    </NGrid>
   </NForm>
   {{ tournament }}
 </template>
