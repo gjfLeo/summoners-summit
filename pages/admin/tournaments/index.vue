@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import type { Locales } from "~/types/data";
+
 definePageMeta({ title: "site.titles.admin.tournaments" });
 
-const { t } = useI18n();
+const { t, locale } = useI18n<unknown, Locales>();
 
 const { data } = await useFetch("/api/v3/tournaments/list");
 
@@ -17,6 +19,14 @@ const gameVersion = ref<string>();
       <div class="ml-auto" />
       <NButtonLink type="primary" secondary to="/admin/tournament">{{ t("admin.action.add") }}</NButtonLink>
     </div>
-    <div>{{ tournaments }}</div>
+    <div>
+      <template v-for="tournament in tournaments" :key="tournament.id">
+        <NuxtLinkLocale
+          :to="`/admin/tournament/${tournament.id}`"
+        >
+          {{ tournament.name[locale] }}
+        </NuxtLinkLocale>
+      </template>
+    </div>
   </div>
 </template>

@@ -4,10 +4,12 @@ import type { Tournament } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
 
-const formRef = ref<InstanceType<typeof NForm>>();
-
 const { t } = useI18n();
 const message = useMessage();
+
+const formRef = ref<InstanceType<typeof NForm>>();
+
+const editing = ref(false);
 
 const rules: FormRules = {
   name: {
@@ -43,32 +45,69 @@ async function save() {
   catch {
     return;
   }
+
   const res = await $fetch("/api/v3/tournaments/save", {
     method: "POST",
     body: tournament.value,
   });
   if (res.success) {
     message.success(t("admin.message.SUCCESS"));
-    await navigateTo(`/admin/tournament/${res.id}`);
+    if (res.id !== tournament.value.id) {
+      await navigateTo(`/admin/tournament/${res.id}`);
+    }
+    editing.value = false;
   }
 }
-
-defineExpose({ save });
 </script>
 
 <template>
-  <NForm ref="formRef" :model="tournament" :rules="rules">
-    <NGrid class="gap-x-2! gap-y-4!">
-      <NFormItemGi :span="16" :label="t('main.tournament.name')" path="name">
-        <NInputLocale v-model:value="tournament.name" />
-      </NFormItemGi>
-      <NFormItemGi :span="4" :label="t('terms.gameVersion')" path="gameVersion">
-        <GameVersionSelect v-model:value="tournament.gameVersion" />
-      </NFormItemGi>
-      <NFormItemGi :span="4" :label="t('main.tournament.type')" path="type">
-        <AdminTournamentTypeSelect v-model:value="tournament.type" />
-      </NFormItemGi>
-    </NGrid>
-  </NForm>
-  {{ tournament }}
+  <NCard title="赛事信息" content-class="flex flex-col gap-4">
+    <template #header-extra>
+      <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">编辑</CommonIconButton>
+      <CommonIconButton v-if="editing" icon="i-carbon:save" text @click="save">保存</CommonIconButton>
+    </template>
+
+    <NForm ref="formRef" :rules="rules" :model="tournament">
+      <NGrid class="gap-x-2! gap-y-4!">
+        <NFormItemGi :span="16" :label="t('main.tournament.name')" path="name">
+          <CommonTransition>
+            <NInputLocale v-if="editing" v-model:value="tournament.name" />
+            <div v-else>{{ tournament.name.zh }}</div>
+          </CommonTransition>
+        </NFormItemGi>
+        <NFormItemGi :span="4" :label="t('terms.gameVersion')" path="gameVersion">
+          <CommonTransition>
+            <GameVersionSelect v-if="editing" v-model:value="tournament.gameVersion" />
+            <div v-else>{{ tournament.gameVersion }}</div>
+          </CommonTransition>
+        </NFormItemGi>
+        <NFormItemGi :span="4" :label="t('main.tournament.type')" path="type">
+          <CommonTransition>
+            <AdminTournamentTypeSelect v-if="editing" v-model:value="tournament.type" />
+            <div v-else>{{ tournament.type }}</div>
+          </CommonTransition>
+        </NFormItemGi>
+      </NGrid>
+    </NForm>
+    <div>{{ tournament }}</div>
+
+    <template v-for="(stage, stageIndex) in tournament.stages" :key="stageIndex">
+      <AdminTournamentStageForm
+        v-model="tournament.stages[stageIndex]"
+        :editing="editing"
+        :index="stageIndex + 1"
+        @edit="editing = true"
+        @save="save"
+        @delete="tournament.stages.splice(stageIndex, 1)"
+      />
+    </template>
+
+    <AdminTournamentStageForm
+      v-if="editing"
+      v-model="tournament.stages[tournament.stages.length]"
+      :editing="editing"
+      :index="tournament.stages.length + 1"
+      @add="tournament.stages.push({ name: {}, parts: [], rules: undefined })"
+    />
+  </NCard>
 </template>

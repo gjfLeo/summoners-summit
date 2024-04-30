@@ -6,13 +6,15 @@
     "enterAdminPage": "进入管理页面",
     "leaveAdminPage": "离开管理页面",
     "save": "保存",
-    "submit": "提交"
+    "submit": "提交",
+    "delete": "删除"
   },
   "card": {
     "updateData": "更新卡牌数据",
     "updateDataDescription": "从第三方库（genshin-db）获取最新游戏版本的卡牌数据"
   },
   "message": {
+    "FAILED": "操作失败",
     "PLAYER_NOT_FOUND": "未查询到选手数据",
     "SUCCESS": "操作成功"
   },

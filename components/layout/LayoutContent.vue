@@ -23,7 +23,7 @@ const adminColor = computed(() => `color-mix(in oklch, ${themeVars.value.primary
       class="layout-scroll-area"
     >
       <NLayout
-        content-class="p-4 m-inline-auto max-w-72rem"
+        content-class="p-4 m-inline-auto max-w-72rem overflow-hidden"
         :has-sider="false"
         :style="{ minHeight: `calc(100vh - ${LAYOUT_HEADER_HEIGHT} - ${LAYOUT_FOOTER_HEIGHT})` }"
       >
