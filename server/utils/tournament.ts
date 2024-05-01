@@ -44,7 +44,7 @@ type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
 export function saveTournament(params: TournamentSaveParams) {
   const tournament = {
     ...params,
-    id: params.id || hash(params.name + params.gameVersion),
+    id: params.id || hash(params.gameVersion + params.name),
     stages: params.stages ?? [],
   };
 

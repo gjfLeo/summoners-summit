@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { NForm } from "#components";
-import type { Tournament } from "~/types/data";
+import type { Tournament, TournamentStage } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
 
@@ -9,7 +9,7 @@ const message = useMessage();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 
-const editing = ref(false);
+const editing = ref(!tournament.value.id);
 
 const rules: FormRules = {
   name: {
@@ -58,13 +58,22 @@ async function save() {
     editing.value = false;
   }
 }
+
+let key = 0;
+tournament.value.stages.forEach((stage) => {
+  (stage as TournamentStage & { _key: number })._key = key++;
+});
+
+function addStage() {
+  tournament.value.stages.push({ name: {}, parts: [], rules: undefined, _key: key++ } as TournamentStage);
+}
 </script>
 
 <template>
   <NCard title="赛事信息" content-class="flex flex-col gap-4">
     <template #header-extra>
-      <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">编辑</CommonIconButton>
-      <CommonIconButton v-if="editing" icon="i-carbon:save" text @click="save">保存</CommonIconButton>
+      <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
+      <CommonIconButton v-if="editing" icon="i-carbon:save" text @click="save">{{ t('admin.action.save') }}</CommonIconButton>
     </template>
 
     <NForm ref="formRef" :rules="rules" :model="tournament">
@@ -91,23 +100,28 @@ async function save() {
     </NForm>
     <div>{{ tournament }}</div>
 
-    <template v-for="(stage, stageIndex) in tournament.stages" :key="stageIndex">
-      <AdminTournamentStageForm
-        v-model="tournament.stages[stageIndex]"
-        :editing="editing"
-        :index="stageIndex + 1"
-        @edit="editing = true"
-        @save="save"
-        @delete="tournament.stages.splice(stageIndex, 1)"
-      />
-    </template>
-
-    <AdminTournamentStageForm
-      v-if="editing"
-      v-model="tournament.stages[tournament.stages.length]"
-      :editing="editing"
-      :index="tournament.stages.length + 1"
-      @add="tournament.stages.push({ name: {}, parts: [], rules: undefined })"
-    />
+    <CommonTransitionGroup>
+      <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
+        <AdminTournamentStageForm
+          v-model="tournament.stages[stageIndex]"
+          :editing="editing"
+          :index="stageIndex + 1"
+          @edit="editing = true"
+          @save="save"
+          @delete="tournament.stages.splice(stageIndex, 1)"
+        />
+      </template>
+    </CommonTransitionGroup>
+    <!-- <NCard
+      :key="-1"
+      class="border-dashed"
+    >
+      <template #header-extra>
+        <CommonIconButton icon="i-carbon:add" @click="addStage">添加比赛阶段</CommonIconButton>
+      </template>
+      <template #header>
+        <div />
+      </template>
+    </NCard> -->
   </NCard>
 </template>
