@@ -42,11 +42,13 @@ export const ZTournamentRules = z.object({
 
 export const ZTournamentPart = z.object({
   // name: z.record(ZLocales, z.string().trim()).optional(),
-  date: z.date(),
+  _key: z.number().optional(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   matchIds: ZMatchId.array(),
 }).strip();
 
 export const ZTournamentStage = z.object({
+  _key: z.number().optional(),
   name: z.record(ZLocales, z.string().trim()),
   rules: ZTournamentRules.optional(),
   parts: ZTournamentPart.array(),
@@ -66,8 +68,8 @@ export const ZTournamentR = ZTournament.extend({
     nickname: ZPlayerNickname,
   }).optional(),
   dateRange: z.object({
-    start: z.date().optional(),
-    end: z.date().optional(),
+    start: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    end: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
   }),
 }).strip();
 

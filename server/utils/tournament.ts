@@ -17,6 +17,13 @@ function fillTournamentR(tournament: Tournament): TournamentR {
     .map(matchId => getMatch(matchId)!);
   const final = matches.find(match => match.isFinal);
   const champion = final ? final.winner === "A" ? final.playerA : final.winner === "B" ? final.playerB : undefined : undefined;
+
+  tournament.stages.forEach((stage, stageIndex) => {
+    stage._key = stageIndex;
+    stage.parts.forEach((part, partIndex) => {
+      part._key = partIndex;
+    });
+  });
   return {
     ...tournament,
     dateRange: {
@@ -42,6 +49,12 @@ export const ZTournamentSaveParams = ZTournament.partial({
 });
 type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
 export function saveTournament(params: TournamentSaveParams) {
+  params.stages?.forEach((stage) => {
+    delete stage._key;
+    stage.parts.forEach((part) => {
+      delete part._key;
+    });
+  });
   const tournament = {
     ...params,
     id: params.id || hash(params.gameVersion + params.name),
