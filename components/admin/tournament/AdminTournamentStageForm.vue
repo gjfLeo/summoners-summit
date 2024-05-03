@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
 
 const props = defineProps<{
@@ -12,9 +13,29 @@ defineEmits<{
 
 const stage = defineModel<TournamentStage>({ required: true });
 
+const formRef = ref<InstanceType<typeof NForm>>();
+
 const { t } = useI18n();
 
 const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.index]));
+
+const hasRules = ref(false);
+const rules = {
+  name: {
+    trigger: "blur",
+    validator: async () => {
+      if (!stage.value.name.zh) {
+        throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.stageName")]));
+      }
+    },
+  },
+};
+
+function validate() {
+  return formRef.value?.validate();
+}
+
+defineExpose({ validate });
 </script>
 
 <template>
@@ -37,7 +58,20 @@ const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.
     <template #default>
       <CommonTransition v-if="stage">
         <div v-if="editing">
-          <NInputLocale v-model:value="stage.name" />
+          <NForm ref="formRef" :model="stage" :rules="rules">
+            <NFormItem :label="t('main.tournament.stageName')" path="name">
+              <NInputLocale v-model:value="stage.name" />
+            </NFormItem>
+            <NFormItem :label="t('main.tournament.rules')" path="rules">
+              <template #label>
+                <div flex="~ items-center gap-2">
+                  <span>{{ t('main.tournament.rules') }}</span>
+                  <NSwitch v-model:value="hasRules" />
+                </div>
+              </template>
+              <AdminTournamentRulesForm v-model="stage.rules" v-model:has-rules="hasRules" />
+            </NFormItem>
+          </NForm>
         </div>
         <div v-else>
           {{ stage }}

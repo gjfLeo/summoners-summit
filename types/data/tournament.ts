@@ -14,30 +14,28 @@ export const ZTournamentType = z.object({
 }).strip();
 
 export const ZTournamentRules = z.object({
+  numGames: z.number(),
+  mode: z.enum(["duel", "conquest", "character-conquest"]),
+
   // 禁用角色（每名选手赛前禁用X名角色）
-  // 预选阵容（每名选手赛前需要提交X套阵容，至少包含Y名角色）
-  //   预选牌组（每名选手赛前需要提交牌组，每套预选阵容只能提交1套/最多提交X套对应牌组）
-  //   禁用阵容（每名选手赛前禁用对手提交的X套阵容）
-  // 获胜X局
-  //   征服：获胜的牌组不能再次使用
-  //   决斗：出场的牌组不能再次使用
-  //   角色征服：获胜牌组包含的角色不能再次使用
   banCharacters: z.object({
     num: z.number().positive(),
   }).optional(),
+
+  // 预选阵容（每名选手赛前需要提交X套阵容，至少包含Y名角色）
   submitTeams: z.object({
     num: z.number(),
     numCharactersRequired: z.number().optional(),
+    // 预选牌组（每名选手赛前需要提交牌组，每套预选阵容只能提交1套/最多提交X套对应牌组）
     submitDecks: z.object({
       maxNumForEachTeam: z.number().optional(),
       maxNumInTotal: z.number().optional(),
     }).optional(),
+    // 禁用阵容（每名选手赛前禁用对手提交的X套阵容）
     banTeams: z.object({
       num: z.number(),
     }).optional(),
   }).optional(),
-  numGames: z.number(),
-  mode: z.enum(["duel", "conquest", "character-conquest"]),
 }).strip();
 
 export const ZTournamentPart = z.object({

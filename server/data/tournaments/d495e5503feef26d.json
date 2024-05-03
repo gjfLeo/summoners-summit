@@ -1,0 +1,16 @@
+{
+  "id": "d495e5503feef26d",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "4.5",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "parts": []
+    }
+  ]
+}

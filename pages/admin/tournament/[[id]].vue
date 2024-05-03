@@ -30,6 +30,7 @@ if (id) {
 
 <template>
   <div>
+    <pre class="absolute left-0 top-0 w-16rem">{{ tournament }}</pre>
     <NH2>{{ id ? t("admin.tournament.titleEdit") : t("admin.tournament.titleAdd") }}</NH2>
     <AdminTournamentForm v-model="tournament" />
   </div>

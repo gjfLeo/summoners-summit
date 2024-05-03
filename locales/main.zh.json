@@ -12,7 +12,9 @@
   },
   "tournament": {
     "name": "赛事名称",
-    "stageNameDefault": "阶段\u2006{0}",
-    "type": "赛事类型"
+    "stageName": "阶段名称",
+    "stageNameDefault": "阶段 {0}",
+    "type": "赛事类型",
+    "rules": "规则"
   }
 }

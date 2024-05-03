@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NForm } from "#components";
+import { AdminTournamentStageForm, NForm } from "#components";
 import type { Tournament, TournamentStage } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
@@ -8,6 +8,7 @@ const { t } = useI18n();
 const message = useMessage();
 
 const formRef = ref<InstanceType<typeof NForm>>();
+const stageFormRefs = ref<InstanceType<typeof AdminTournamentStageForm>[]>([]);
 
 const editing = ref(!tournament.value.id);
 
@@ -39,10 +40,12 @@ const rules: FormRules = {
 };
 
 async function save() {
-  try {
-    await formRef.value?.validate();
-  }
-  catch {
+  const results = await Promise.allSettled([
+    formRef.value?.validate(),
+    ...stageFormRefs.value.map(stageForm => stageForm.validate()),
+  ]);
+  console.log(results);
+  if (results.some(result => result.status === "rejected")) {
     return;
   }
 
@@ -59,13 +62,9 @@ async function save() {
   }
 }
 
-let key = 0;
-tournament.value.stages.forEach((stage) => {
-  (stage as TournamentStage & { _key: number })._key = key++;
-});
-
+let key = tournament.value.stages.length;
 function addStage() {
-  tournament.value.stages.push({ name: {}, parts: [], rules: undefined, _key: key++ } as TournamentStage);
+  tournament.value.stages.push({ name: {}, parts: [], rules: undefined, _key: key++ });
 }
 </script>
 
@@ -98,30 +97,29 @@ function addStage() {
         </NFormItemGi>
       </NGrid>
     </NForm>
-    <div>{{ tournament }}</div>
 
-    <CommonTransitionGroup>
+    <TransitionGroup name="common-transition-group">
       <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
         <AdminTournamentStageForm
+          ref="stageFormRefs"
           v-model="tournament.stages[stageIndex]"
           :editing="editing"
           :index="stageIndex + 1"
-          @edit="editing = true"
-          @save="save"
           @delete="tournament.stages.splice(stageIndex, 1)"
         />
       </template>
-    </CommonTransitionGroup>
-    <!-- <NCard
-      :key="-1"
-      class="border-dashed"
-    >
-      <template #header-extra>
-        <CommonIconButton icon="i-carbon:add" @click="addStage">添加比赛阶段</CommonIconButton>
-      </template>
-      <template #header>
-        <div />
-      </template>
-    </NCard> -->
+
+      <NCard
+        v-if="editing"
+        class="border-dashed"
+      >
+        <template #header-extra>
+          <CommonIconButton icon="i-carbon:add" @click="addStage">添加比赛阶段</CommonIconButton>
+        </template>
+        <template #header>
+          <div />
+        </template>
+      </NCard>
+    </TransitionGroup>
   </NCard>
 </template>
