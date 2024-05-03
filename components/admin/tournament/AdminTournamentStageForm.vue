@@ -56,13 +56,12 @@ defineExpose({ validate });
       </div>
     </template>
     <template #default>
-      <CommonTransition v-if="stage">
-        <div v-if="editing">
-          <NForm ref="formRef" :model="stage" :rules="rules">
-            <NFormItem :label="t('main.tournament.stageName')" path="name">
-              <NInputLocale v-model:value="stage.name" />
-            </NFormItem>
-            <NFormItem :label="t('main.tournament.rules')" path="rules">
+      <NCollapseTransition :show="stage && editing">
+        <NForm ref="formRef" :model="stage" :rules="rules">
+          <NFormItem :label="t('main.tournament.stageName')" path="name">
+            <NInputLocale v-model:value="stage.name" />
+          </NFormItem>
+          <!-- <NFormItem :label="t('main.tournament.rules')" path="rules">
               <template #label>
                 <div flex="~ items-center gap-2">
                   <span>{{ t('main.tournament.rules') }}</span>
@@ -70,13 +69,17 @@ defineExpose({ validate });
                 </div>
               </template>
               <AdminTournamentRulesForm v-model="stage.rules" v-model:has-rules="hasRules" />
-            </NFormItem>
-          </NForm>
+            </NFormItem> -->
+        </NForm>
+        <div flex="~ items-center gap-2">
+          <NText :depth="1" class="cursor-default">{{ t('main.tournament.rules') }}</NText>
+          <NSwitch v-model:value="hasRules" />
         </div>
-        <div v-else>
-          {{ stage }}
-        </div>
-      </CommonTransition>
+        <AdminTournamentRulesForm v-model="stage.rules" v-model:has-rules="hasRules" />
+      </NCollapseTransition>
+      <NCollapseTransition :show="stage && !editing">
+        {{ stage }}
+      </NCollapseTransition>
     </template>
   </NCard>
 </template>

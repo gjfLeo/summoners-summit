@@ -111,7 +111,7 @@ function addStage() {
 
       <NCard
         v-if="editing"
-        class="border-dashed"
+        class="border-dashed!"
       >
         <template #header-extra>
           <CommonIconButton icon="i-carbon:add" @click="addStage">添加比赛阶段</CommonIconButton>
