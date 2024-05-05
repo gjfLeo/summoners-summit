@@ -30,6 +30,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "consola": "^3.2.3",
     "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.11",
     "eslint-plugin-format": "^0.1.1",
     "eslint": "npm:eslint-ts-patch@^8.56.0-0",
     "eslint-ts-patch": "^8.56.0-0",
@@ -42,7 +43,7 @@
     "simple-git": "^3.24.0",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.16",
-    "zod": "^3.23.5"
+    "zod": "^3.23.6"
   },
   "pnpm": {
     "patchedDependencies": {

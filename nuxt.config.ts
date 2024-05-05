@@ -1,4 +1,4 @@
-import { pwa } from "./config/pwa";
+// import { pwa } from "./config/pwa";
 
 export default defineNuxtConfig({
   modules: [
@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
-    "@vite-pwa/nuxt",
+    // "@vite-pwa/nuxt",
     "nuxt-module-eslint-config",
     "@nuxtjs/i18n",
   ],
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "layout-transition", mode: "out-in" },
   },
 
-  pwa,
+  // pwa,
 
   devtools: {
     enabled: false,

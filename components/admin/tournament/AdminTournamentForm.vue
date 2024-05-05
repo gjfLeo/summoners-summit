@@ -44,7 +44,6 @@ async function save() {
     formRef.value?.validate(),
     ...stageFormRefs.value.map(stageForm => stageForm.validate()),
   ]);
-  console.log(results);
   if (results.some(result => result.status === "rejected")) {
     return;
   }
@@ -111,10 +110,11 @@ function addStage() {
 
       <NCard
         v-if="editing"
+        :key="-1"
         class="border-dashed!"
       >
         <template #header-extra>
-          <CommonIconButton icon="i-carbon:add" @click="addStage">添加比赛阶段</CommonIconButton>
+          <CommonIconButton icon="i-carbon:add" @click="addStage">{{ t('admin.tournament.addStage') }}</CommonIconButton>
         </template>
         <template #header>
           <div />

@@ -10,11 +10,79 @@
       "name": {
         "zh": "16进8"
       },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-05-05",
+          "matchIds": []
+        },
+        {
+          "name": {},
+          "date": "2024-05-05",
+          "matchIds": []
+        },
+        {
+          "name": {},
+          "date": "2024-05-05",
+          "matchIds": []
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
       "parts": []
     },
     {
       "name": {
         "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": []
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
       },
       "parts": []
     }

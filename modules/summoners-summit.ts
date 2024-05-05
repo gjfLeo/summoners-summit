@@ -9,6 +9,7 @@ export default defineNuxtModule({
   setup(_options, _nuxt) {
     // const resolver = createResolver(import.meta.url);
     // addImportsDir(resolver.resolve("./types"));
+    addImports({ from: "dayjs", name: "default", as: "dayjs" });
     addImports({ from: "naive-ui", name: "DataTableColumn", type: true });
     addImports({ from: "naive-ui", name: "FormRules", type: true });
     addImports({

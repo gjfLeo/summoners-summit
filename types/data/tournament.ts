@@ -39,8 +39,8 @@ export const ZTournamentRules = z.object({
 }).strip();
 
 export const ZTournamentPart = z.object({
-  // name: z.record(ZLocales, z.string().trim()).optional(),
   _key: z.number().optional(),
+  name: z.record(ZLocales, z.string().trim()),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   matchIds: ZMatchId.array(),
 }).strip();

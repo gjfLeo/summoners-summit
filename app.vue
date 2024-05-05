@@ -9,7 +9,7 @@ const naiveLocale = computed(() => {
 </script>
 
 <template>
-  <VitePwaManifest />
+  <!-- <VitePwaManifest /> -->
   <NaiveConfig
     :locale="naiveLocale" :date-locale="dateZhCN"
     :theme-config="{

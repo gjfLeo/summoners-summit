@@ -19,7 +19,14 @@ const { t } = useI18n();
 
 const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.index]));
 
-const hasRules = ref(false);
+const hasRules = computed({
+  get: () => {
+    return stage.value.rules !== undefined;
+  },
+  set: (v) => {
+    stage.value.rules = v ? { numGames: 3, mode: "conquest" } : undefined;
+  },
+});
 const rules = {
   name: {
     trigger: "blur",
@@ -30,6 +37,14 @@ const rules = {
     },
   },
 };
+
+function addPart() {
+  stage.value.parts.push({
+    name: {},
+    date: dayjs().subtract(20, "hours").format("YYYY-MM-DD"),
+    matchIds: [],
+  });
+}
 
 function validate() {
   return formRef.value?.validate();
@@ -43,7 +58,7 @@ defineExpose({ validate });
     <template #header>
       <div flex="~ gap-2">
         <span>{{ defaultName }}</span>
-        <span v-if="stage.name?.zh">{{ stage.name?.zh }}</span>
+        <span v-if="stage.name.zh">{{ stage.name.zh }}</span>
       </div>
     </template>
     <template #header-extra>
@@ -61,21 +76,31 @@ defineExpose({ validate });
           <NFormItem :label="t('main.tournament.stageName')" path="name">
             <NInputLocale v-model:value="stage.name" />
           </NFormItem>
-          <!-- <NFormItem :label="t('main.tournament.rules')" path="rules">
-              <template #label>
-                <div flex="~ items-center gap-2">
-                  <span>{{ t('main.tournament.rules') }}</span>
-                  <NSwitch v-model:value="hasRules" />
-                </div>
-              </template>
-              <AdminTournamentRulesForm v-model="stage.rules" v-model:has-rules="hasRules" />
-            </NFormItem> -->
         </NForm>
         <div flex="~ items-center gap-2">
           <NText :depth="1" class="cursor-default">{{ t('main.tournament.rules') }}</NText>
           <NSwitch v-model:value="hasRules" />
         </div>
-        <AdminTournamentRulesForm v-model="stage.rules" v-model:has-rules="hasRules" />
+        <NCollapseTransition :show="hasRules">
+          <AdminTournamentRulesForm v-if="stage.rules" v-model="stage.rules" />
+        </NCollapseTransition>
+        <TransitionGroup
+          name="common-transition-group" tag="div"
+          class="mt" flex="~ col gap-4"
+        >
+          <NCard
+            v-if="editing"
+            :key="-1"
+            class="border-dashed!"
+          >
+            <template #header-extra>
+              <CommonIconButton icon="i-carbon:add" @click="addPart">{{ t('admin.tournament.addPart') }}</CommonIconButton>
+            </template>
+            <template #header>
+              <div />
+            </template>
+          </NCard>
+        </TransitionGroup>
       </NCollapseTransition>
       <NCollapseTransition :show="stage && !editing">
         {{ stage }}
