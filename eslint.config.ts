@@ -7,6 +7,7 @@ export default gjfleo(
     files: ["locales/*.json"],
     rules: {
       "jsonc/sort-keys": "warn",
+      "no-irregular-whitespace": "off",
     },
   },
 );

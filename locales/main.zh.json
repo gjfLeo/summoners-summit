@@ -10,14 +10,39 @@
     "score": "积分",
     "uid": "UID"
   },
+  "rules": {
+    "banCharacters": "禁用角色：{0}",
+    "banCharactersDescription": "对战双方各禁用{0}张角色牌",
+    "bo1": "一局决胜",
+    "boX": "BO{0}",
+    "charactersNoRepeat": "无重复角色",
+    "charactersNoRepeatDescription": "不同阵容不能重复使用角色牌",
+    "charactersRequired": "包含角色：{0}",
+    "charactersRequiredDescription": "不同阵容可以重复使用角色牌，但至少需要包含 {0} 张不同角色牌",
+    "mode": {
+      "characterConquest": "角色征服",
+      "characterConquestDescription": "获胜的角色不能再使用",
+      "conquest": "征服",
+      "conquestDescription": "获胜的阵容不能再使用",
+      "duel": "决斗",
+      "duelDescription": "每个阵容只能使用一次"
+    },
+    "submitDecks": "提交牌组",
+    "submitDecksEachTeamDescription": "对战双方提交使用的牌组，每个阵容最多提交{0}套牌组",
+    "submitDecksInTotalDescription": "对战双方提交使用的牌组，全部阵容总计最多提交{0}套牌组",
+    "submitTeams": "提交阵容：{0}",
+    "submitTeamsBanTeams": "提交阵容：{0} 禁 {1}",
+    "submitTeamsBanTeamsDescription": "对战双方各提交 {0} 套阵容，并禁用对手其中 {1} 套",
+    "submitTeamsDescription": "对战双方各提交 {0} 套阵容"
+  },
   "tournament": {
     "date": "日期",
     "name": "赛事名称",
     "partName": "分组名称",
-    "partNameDefault": "分组\u2006{0}",
+    "partNameDefault": "分组 {0}",
     "rules": "规则",
     "stageName": "阶段名称",
-    "stageNameDefault": "阶段\u2006{0}",
+    "stageNameDefault": "阶段 {0}",
     "type": "赛事类型"
   }
 }

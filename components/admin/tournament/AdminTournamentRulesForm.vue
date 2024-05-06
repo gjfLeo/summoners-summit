@@ -3,6 +3,8 @@ import type { TournamentRules } from "~/types/data";
 
 const rules = defineModel<TournamentRules>({ required: true });
 
+const { t } = useI18n();
+
 const banCharacters = computed<boolean>({
   get: () => {
     return rules.value.banCharacters !== undefined;
@@ -111,9 +113,9 @@ const banTeamsNum = computed<number>({
         v-model:value="rules.mode"
         class="w-8rem"
         :options="[
-          { label: '征服', value: 'conquest' },
-          { label: '决斗', value: 'duel' },
-          { label: '角色征服', value: 'character-conquest' },
+          { label: t('main.rules.mode.conquest'), value: 'conquest' },
+          { label: t('main.rules.mode.duel'), value: 'duel' },
+          { label: t('main.rules.mode.characterConquest'), value: 'characterConquest' },
         ]"
       />
     </div>

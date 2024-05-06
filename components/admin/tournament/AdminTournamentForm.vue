@@ -41,12 +41,13 @@ const rules: FormRules = {
 
 async function save() {
   const results = await Promise.allSettled([
-    formRef.value?.validate(),
+    validateForm(formRef),
     ...stageFormRefs.value.map(stageForm => stageForm.validate()),
   ]);
-  if (results.some(result => result.status === "rejected")) {
-    return;
-  }
+  const messages = results.filter(result => result.status === "rejected")
+    .flatMap(result => (result.reason as string[]));
+  messages.forEach(m => message.error(m));
+  if (messages.length) return;
 
   const res = await $fetch("/api/v3/tournaments/save", {
     method: "POST",
@@ -63,12 +64,20 @@ async function save() {
 
 let key = tournament.value.stages.length;
 function addStage() {
-  tournament.value.stages.push({ name: {}, parts: [], rules: undefined, _key: key++ });
+  tournament.value.stages.push({
+    _key: key++,
+    name: {},
+    parts: [],
+    rules: undefined,
+  });
 }
 </script>
 
 <template>
-  <NCard title="赛事信息" content-class="flex flex-col gap-4">
+  <NCard content-class="flex flex-col gap-4">
+    <template #header>
+      <NH2 class="mb-0">赛事信息</NH2>
+    </template>
     <template #header-extra>
       <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
       <CommonIconButton v-if="editing" icon="i-carbon:save" text @click="save">{{ t('admin.action.save') }}</CommonIconButton>
@@ -121,5 +130,22 @@ function addStage() {
         </template>
       </NCard>
     </TransitionGroup>
+
+    <NFloatButton
+      v-if="!editing"
+      type="primary"
+      right="2rem" bottom="2rem"
+      @click="editing = true"
+    >
+      <div class="i-carbon:edit" />
+    </NFloatButton>
+    <NFloatButton
+      v-if="editing"
+      type="primary"
+      right="2rem" bottom="2rem"
+      @click="save"
+    >
+      <div class="i-carbon:save" />
+    </NFloatButton>
   </NCard>
 </template>

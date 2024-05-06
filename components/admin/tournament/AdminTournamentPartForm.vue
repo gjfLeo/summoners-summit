@@ -5,6 +5,7 @@ import type { TournamentPart } from "~/types/data";
 const props = defineProps<{
   index: number;
   editing?: boolean;
+  isOnlyPart: boolean;
 }>();
 defineEmits<{
   (e: "delete"): void;
@@ -21,12 +22,26 @@ const rules = {
   name: {
     trigger: "blur",
     validator: async () => {
-      if (!part.value.name.zh) {
+      if (!props.isOnlyPart && !part.value.name.zh) {
         throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.partName")]));
       }
     },
   },
+  date: {
+    trigger: "change",
+    validator: async () => {
+      if (!part.value.date) {
+        throw new Error(t("admin.validate.pleaseSelect", [t("main.tournament.date")]));
+      }
+    },
+  },
 };
+
+function validate() {
+  return validateForm(formRef);
+}
+
+defineExpose({ validate });
 </script>
 
 <template>
@@ -49,12 +64,12 @@ const rules = {
     <template #default>
       <NCollapseTransition :show="part && editing">
         <NForm ref="formRef" :model="part" :rules="rules">
-          <NGrid>
+          <NGrid class="gap-2!">
             <NFormItemGi :span="18" :label="t('main.tournament.partName')" path="name">
               <NInputLocale v-model:value="part.name" />
             </NFormItemGi>
             <NFormItemGi :span="6" :label="t('main.tournament.date')" path="date">
-              <NDatePicker type="date" />
+              <NDatePicker v-model:formatted-value="part.date" value-format="yyyy-MM-dd" type="date" />
             </NFormItemGi>
           </NGrid>
         </NForm>

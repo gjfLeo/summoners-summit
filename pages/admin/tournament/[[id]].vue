@@ -30,8 +30,27 @@ if (id) {
 
 <template>
   <div>
-    <pre class="fixed left-0 top-3rem z-1 w-16rem">{{ tournament }}</pre>
-    <NH2>{{ id ? t("admin.tournament.titleEdit") : t("admin.tournament.titleAdd") }}</NH2>
+    <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
     <AdminTournamentForm v-model="tournament" />
+
+    <Teleport to="#main-content">
+      <div class="position-fixed right-0 top-0 w-[calc(50%-32rem)]">
+        <NAnchor>
+          <NAnchorLink title="赛事信息">
+            <NAnchorLink
+              v-for="stage in tournament.stages"
+              :key="stage._key"
+              :title="stage.name.zh"
+            >
+              <NAnchorLink
+                v-for="part in stage.parts"
+                :key="part._key"
+                :title="part.name.zh"
+              />
+            </NAnchorLink>
+          </NAnchorLink>
+        </NAnchor>
+      </div>
+    </Teleport>
   </div>
 </template>

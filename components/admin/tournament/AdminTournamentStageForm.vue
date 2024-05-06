@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NForm } from "#components";
+import { AdminTournamentPartForm, NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
 
 const props = defineProps<{
@@ -14,6 +14,7 @@ defineEmits<{
 const stage = defineModel<TournamentStage>({ required: true });
 
 const formRef = ref<InstanceType<typeof NForm>>();
+const partFormRefs = ref<InstanceType<typeof AdminTournamentPartForm>[]>([]);
 
 const { t } = useI18n();
 
@@ -38,16 +39,27 @@ const rules = {
   },
 };
 
+let key = stage.value.parts.length;
 function addPart() {
+  const lastPart = stage.value.parts.at(-1);
   stage.value.parts.push({
+    _key: key++,
     name: {},
-    date: dayjs().subtract(20, "hours").format("YYYY-MM-DD"),
+    date: lastPart
+      ? dayjs(lastPart.date).add(1, "day").format("YYYY-MM-DD")
+      : dayjs().subtract(20, "hours").format("YYYY-MM-DD"),
     matchIds: [],
   });
 }
 
-function validate() {
-  return formRef.value?.validate();
+async function validate() {
+  const results = await Promise.allSettled([
+    validateForm(formRef),
+    ...partFormRefs.value.map(partForm => partForm.validate()),
+  ]);
+  const messages = results.filter(result => result.status === "rejected")
+    .flatMap(result => result.reason as string[]);
+  return Promise.reject(messages);
 }
 
 defineExpose({ validate });
@@ -88,6 +100,16 @@ defineExpose({ validate });
           name="common-transition-group" tag="div"
           class="mt" flex="~ col gap-4"
         >
+          <template v-for="(part, partIndex) in stage.parts" :key="part._key">
+            <AdminTournamentPartForm
+              ref="partFormRefs"
+              v-model="stage.parts[partIndex]"
+              :is-only-part="stage.parts.length === 1"
+              :editing="editing"
+              :index="partIndex + 1"
+              @delete="stage.parts.splice(partIndex, 1)"
+            />
+          </template>
           <NCard
             v-if="editing"
             :key="-1"
@@ -103,6 +125,7 @@ defineExpose({ validate });
         </TransitionGroup>
       </NCollapseTransition>
       <NCollapseTransition :show="stage && !editing">
+        <TournamentRules v-if="stage.rules" :rules="stage.rules" />
         {{ stage }}
       </NCollapseTransition>
     </template>

@@ -15,7 +15,7 @@ export const ZTournamentType = z.object({
 
 export const ZTournamentRules = z.object({
   numGames: z.number(),
-  mode: z.enum(["duel", "conquest", "character-conquest"]),
+  mode: z.enum(["duel", "conquest", "characterConquest"]),
 
   // 禁用角色（每名选手赛前禁用X名角色）
   banCharacters: z.object({

@@ -9,5 +9,10 @@
     "rank": "Rank",
     "score": "Score",
     "uid": "UID"
+  },
+  "rules": {
+    "submitTeams": "Submit line-ups: {0}",
+    "submitTeamsDescription": "Each player submits {0} line-ups.",
+    "submitTeamsBanTeamsDescription": "Each player submits {0} decks, then ban {1} of opponent's decks."
   }
 }

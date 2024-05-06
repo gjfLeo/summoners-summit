@@ -14,22 +14,24 @@ const adminColor = computed(() => `color-mix(in oklch, ${themeVars.value.primary
 <template>
   <NLayout style="height: 100vh; height: 100dvh; overflow-y: hidden;">
     <LayoutHeader
+      id="header"
       :routes="routes"
       :style="{ backgroundColor: admin ? adminColor : undefined }"
     />
     <NLayout
+      id="main"
       :style="{ height: `calc(100vh - ${LAYOUT_HEADER_HEIGHT})` }"
       :native-scrollbar="false"
-      class="layout-scroll-area"
     >
       <NLayout
-        content-class="p-4 m-inline-auto max-w-72rem overflow-hidden"
+        id="main-content"
+        content-class="p-4 m-inline-auto max-w-64rem overflow-hidden"
         :has-sider="false"
         :style="{ minHeight: `calc(100vh - ${LAYOUT_HEADER_HEIGHT} - ${LAYOUT_FOOTER_HEIGHT})` }"
       >
         <slot />
       </NLayout>
-      <LayoutFooter />
+      <LayoutFooter id="footer" />
     </NLayout>
   </NLayout>
 </template>
