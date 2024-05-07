@@ -6,5 +6,5 @@ afterEach(() => loadingBar.finish());
 </script>
 
 <template>
-  <div />
+  <div v-if="false" />
 </template>

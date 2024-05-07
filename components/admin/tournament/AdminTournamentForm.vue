@@ -78,7 +78,7 @@ function addStage() {
 <template>
   <NCard content-class="flex flex-col gap-4">
     <template #header>
-      <NH2 class="mb-0">赛事信息</NH2>
+      <NH2 id="title" class="m-0">赛事信息</NH2>
     </template>
     <template #header-extra>
       <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>

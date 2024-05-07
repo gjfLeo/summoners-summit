@@ -1,28 +1,28 @@
 <script lang="ts" setup>
-import type { MenuLinkRoute } from "@bg-dev/nuxt-naiveui";
+import type { SiteRoute } from "../composables/use-site-menu";
 
-const menu: MenuLinkRoute[] = [
+const routes: SiteRoute[] = [
   {
-    label: "赛事",
+    label: "tournament",
     to: "/tournaments",
   },
   {
-    label: "阵容",
+    label: "team",
     to: "/teams",
   },
   {
-    label: "卡牌",
+    label: "cards",
     to: "/cards",
   },
   {
-    label: "选手",
+    label: "player",
     to: "/players",
   },
 ];
 </script>
 
 <template>
-  <LayoutContent :routes="menu">
+  <SiteLayout :routes="routes">
     <NuxtPage />
-  </LayoutContent>
+  </SiteLayout>
 </template>

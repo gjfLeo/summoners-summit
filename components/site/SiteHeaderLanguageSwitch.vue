@@ -21,10 +21,6 @@ watch(
 
 <template>
   <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
-    <NButton text :focusable="false">
-      <template #icon>
-        <div class="i-carbon:translate" />
-      </template>
-    </NButton>
+    <CommonIconButton icon="i-carbon:translate" />
   </NPopselect>
 </template>

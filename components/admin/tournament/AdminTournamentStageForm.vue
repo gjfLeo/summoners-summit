@@ -70,10 +70,10 @@ defineExpose({ validate });
 <template>
   <NCard>
     <template #header>
-      <div flex="~ gap-2">
+      <NH3 :id="`S${stage._key}`" class="m-0" flex="~ gap-2">
         <span>{{ defaultName }}</span>
         <span v-if="stage.name.zh">{{ stage.name.zh }}</span>
-      </div>
+      </NH3>
     </template>
     <template #header-extra>
       <div flex="~ gap-2">
@@ -109,6 +109,7 @@ defineExpose({ validate });
               :is-only-part="stage.parts.length === 1"
               :editing="editing"
               :index="partIndex + 1"
+              :stage-key="stage._key!"
               @delete="stage.parts.splice(partIndex, 1)"
             />
           </template>

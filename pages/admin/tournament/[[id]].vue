@@ -33,24 +33,32 @@ if (id) {
     <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
     <AdminTournamentForm v-model="tournament" />
 
-    <Teleport to="#main-content">
-      <div class="position-fixed right-0 top-0 w-[calc(50%-32rem)]">
-        <NAnchor>
-          <NAnchorLink :title="t('admin.tournament.title')">
-            <NAnchorLink
-              v-for="stage in tournament.stages"
-              :key="stage._key"
-              :title="stage.name.zh"
-            >
+    <Teleport to="#right-sider">
+      <NAnchor
+        offset-target="#content-layout"
+        ignore-gap
+      >
+        <NAnchorLink
+          :title="t('admin.tournament.title')"
+          href="#title"
+        >
+          <NAnchorLink
+            v-for="stage in tournament.stages"
+            :key="stage._key"
+            :title="stage.name.zh"
+            :href="`#S${stage._key}`"
+          >
+            <template v-if="stage.parts.length > 1">
               <NAnchorLink
                 v-for="part in stage.parts"
                 :key="part._key"
                 :title="part.name.zh"
+                :href="`#S${stage._key}P${part._key}`"
               />
-            </NAnchorLink>
+            </template>
           </NAnchorLink>
-        </NAnchor>
-      </div>
+        </NAnchorLink>
+      </NAnchor>
     </Teleport>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { MenuLinkRoute } from "@bg-dev/nuxt-naiveui";
+import type { SiteRoute } from "~/composables/use-site-menu";
 
 const { t } = useI18n();
 const route = useRoute();
@@ -16,49 +16,55 @@ useHead({
   }),
 });
 
-const menu: MenuLinkRoute[] = [
+const routes: SiteRoute[] = [
   {
-    label: "赛事",
+    label: "tournament",
     to: "/admin/tournaments",
+    matches: [
+      /^\/admin\/tournament\/\w{16}$/,
+    ],
     children: [
       {
-        label: "赛事列表",
+        label: "tournamentList",
         to: "/admin/tournaments",
       },
       {
-        label: "赛事模板",
+        label: "tournamentTemplate",
         to: "/admin/tournaments/templates",
       },
     ],
   },
   {
-    label: "选手",
+    label: "player",
     to: "/admin/players",
     children: [
       {
-        label: "选手列表",
+        label: "playerList",
         to: "/admin/players",
       },
       {
-        label: "选手榜单",
+        label: "playerRanks",
         to: "/admin/players/ranks",
       },
     ],
   },
   {
-    label: "其他",
+    label: "others",
     children: [
       {
-        label: "卡牌",
+        label: "cards",
         to: "/admin/misc/cards",
       },
     ],
   },
 ];
+
+const themeVars = useThemeVars();
+const adminColor = computed(() => `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 16%)`);
 </script>
 
 <template>
-  <LayoutContent :routes="menu" admin>
+  <SiteLayout :routes="routes" :style="{ '--g-header-color': adminColor }">
     <slot />
-  </LayoutContent>
+  </SiteLayout>
 </template>

@@ -4,6 +4,7 @@ import type { TournamentPart } from "~/types/data";
 
 const props = defineProps<{
   index: number;
+  stageKey: number;
   editing?: boolean;
   isOnlyPart: boolean;
 }>();
@@ -47,10 +48,10 @@ defineExpose({ validate });
 <template>
   <NCard>
     <template #header>
-      <div flex="~ gap-2">
+      <NH4 :id="`S${stageKey}P${part._key}`" class="m-0" flex="~ gap-2">
         <span>{{ defaultName }}</span>
         <span v-if="part.name.zh">{{ part.name.zh }}</span>
-      </div>
+      </NH4>
     </template>
     <template #header-extra>
       <div flex="~ gap-2">

@@ -1,5 +1,16 @@
 {
   "description": "七圣召唤赛事资料",
+  "menu": {
+    "cards": "卡牌",
+    "others": "其他",
+    "player": "选手",
+    "playerList": "选手列表",
+    "playerRanks": "选手榜单",
+    "team": "阵容",
+    "tournament": "赛事",
+    "tournamentList": "赛事列表",
+    "tournamentTemplate": "赛事模板"
+  },
   "name": "召唤之巅",
   "titles": {
     "admin": {
