@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { AdminTournamentStageForm, NForm } from "#components";
-import type { Tournament, TournamentStage } from "~/types/data";
+import type { Tournament } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
 
@@ -44,8 +44,10 @@ async function save() {
     validateForm(formRef),
     ...stageFormRefs.value.map(stageForm => stageForm.validate()),
   ]);
-  const messages = results.filter(result => result.status === "rejected")
-    .flatMap(result => (result.reason as string[]));
+  const messages = results
+    .flatMap<string>(result => result.status === "rejected"
+      ? result.reason
+      : []);
   messages.forEach(m => message.error(m));
   if (messages.length) return;
 

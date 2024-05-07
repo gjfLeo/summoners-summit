@@ -36,7 +36,7 @@ if (id) {
     <Teleport to="#main-content">
       <div class="position-fixed right-0 top-0 w-[calc(50%-32rem)]">
         <NAnchor>
-          <NAnchorLink title="赛事信息">
+          <NAnchorLink :title="t('admin.tournament.title')">
             <NAnchorLink
               v-for="stage in tournament.stages"
               :key="stage._key"

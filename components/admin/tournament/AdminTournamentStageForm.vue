@@ -57,8 +57,10 @@ async function validate() {
     validateForm(formRef),
     ...partFormRefs.value.map(partForm => partForm.validate()),
   ]);
-  const messages = results.filter(result => result.status === "rejected")
-    .flatMap(result => result.reason as string[]);
+  const messages = results
+    .flatMap(result => result.status === "rejected"
+      ? result.reason as string[]
+      : []);
   return Promise.reject(messages);
 }
 

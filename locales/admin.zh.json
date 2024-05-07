@@ -47,6 +47,7 @@
   "tournament": {
     "addPart": "添加阶段分组",
     "addStage": "添加比赛阶段",
+    "title": "赛事信息",
     "titleAdd": "新增赛事详情",
     "titleEdit": "编辑赛事详情"
   },
