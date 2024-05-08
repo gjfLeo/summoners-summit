@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <NLayout class="h-screen overflow-hidden">
+  <NLayout>
     <SiteHeader
       :routes="routes"
       style="height: var(--g-header-height);"
@@ -62,5 +62,8 @@ defineProps<{
 :root {
   --g-header-height: 3rem;
   --g-footer-height: 3rem;
+}
+body {
+  overflow: hidden;
 }
 </style>

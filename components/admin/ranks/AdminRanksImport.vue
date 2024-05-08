@@ -129,8 +129,8 @@ async function submit() {
 </script>
 
 <template>
-  <div class="min-h-full" flex="~ col gap-4">
-    <div flex="~ gap-2">
+  <div class="min-h-full" un-flex="~ col gap-4">
+    <div un-flex="~ gap-2">
       <AdminRanksImportFromTable @done="importRanks($event, true)" />
       <AdminRanksImportFromJson @done="importRanks($event, false)" />
       <div class="ml-auto" />

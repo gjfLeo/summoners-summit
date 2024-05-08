@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+import type { AdminTournamentMatchEditor } from "#components";
 import { AdminTournamentPartForm, NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
 
 const props = defineProps<{
   index: number;
   editing?: boolean;
+  matchEditor: InstanceType<typeof AdminTournamentMatchEditor> | undefined;
 }>();
 
 defineEmits<{
@@ -68,69 +70,60 @@ defineExpose({ validate });
 </script>
 
 <template>
-  <NCard>
-    <template #header>
-      <NH3 :id="`S${stage._key}`" class="m-0" flex="~ gap-2">
-        <span>{{ defaultName }}</span>
-        <span v-if="stage.name.zh">{{ stage.name.zh }}</span>
-      </NH3>
-    </template>
-    <template #header-extra>
-      <div flex="~ gap-2">
+  <div class="mt">
+    <NH3 :id="`S${stage._key}`" un-flex="~ gap-2">
+      <span>{{ defaultName }}</span>
+      <span v-if="stage.name.zh">{{ stage.name.zh }}</span>
+
+      <div class="ml-auto">
         <template v-if="editing">
           <CommonConfirmButton :text="t('admin.action.delete')" @click="$emit('delete')">
             <CommonIconButton icon="i-carbon:trash-can" danger>{{ t('admin.action.delete') }}</CommonIconButton>
           </CommonConfirmButton>
         </template>
       </div>
-    </template>
-    <template #default>
-      <NCollapseTransition :show="stage && editing">
+    </NH3>
+
+    <CommonTransition>
+      <div v-if="editing">
         <NForm ref="formRef" :model="stage" :rules="rules">
           <NFormItem :label="t('main.tournament.stageName')" path="name">
             <NInputLocale v-model:value="stage.name" />
           </NFormItem>
         </NForm>
-        <div flex="~ items-center gap-2">
+        <div un-flex="~ items-center gap-2">
           <NText :depth="1" class="cursor-default">{{ t('main.tournament.rules') }}</NText>
           <NSwitch v-model:value="hasRules" />
         </div>
         <NCollapseTransition :show="hasRules">
           <AdminTournamentRulesForm v-if="stage.rules" v-model="stage.rules" />
         </NCollapseTransition>
-        <TransitionGroup
-          name="common-transition-group" tag="div"
-          class="mt" flex="~ col gap-4"
-        >
-          <template v-for="(part, partIndex) in stage.parts" :key="part._key">
-            <AdminTournamentPartForm
-              ref="partFormRefs"
-              v-model="stage.parts[partIndex]"
-              :is-only-part="stage.parts.length === 1"
-              :editing="editing"
-              :index="partIndex + 1"
-              :stage-key="stage._key!"
-              @delete="stage.parts.splice(partIndex, 1)"
-            />
-          </template>
-          <NCard
-            v-if="editing"
-            :key="-1"
-            class="border-dashed!"
-          >
-            <template #header-extra>
-              <CommonIconButton icon="i-carbon:add" @click="addPart">{{ t('admin.tournament.addPart') }}</CommonIconButton>
-            </template>
-            <template #header>
-              <div />
-            </template>
-          </NCard>
-        </TransitionGroup>
-      </NCollapseTransition>
-      <NCollapseTransition :show="stage && !editing">
+      </div>
+      <div v-else>
         <TournamentRules v-if="stage.rules" :rules="stage.rules" />
-        {{ stage }}
-      </NCollapseTransition>
-    </template>
-  </NCard>
+      </div>
+    </CommonTransition>
+    <TransitionGroup name="common-transition-group">
+      <template v-for="(part, partIndex) in stage.parts" :key="part._key">
+        <AdminTournamentPartForm
+          ref="partFormRefs"
+          v-model="stage.parts[partIndex]"
+          :is-only-part="stage.parts.length === 1"
+          :editing="editing"
+          :index="partIndex + 1"
+          :stage-key="stage._key!"
+          :match-editor="matchEditor"
+          @delete="stage.parts.splice(partIndex, 1)"
+        />
+      </template>
+      <NButton
+        v-if="editing" :key="-1"
+        class="mt w-full" dashed
+        @click="addPart"
+      >
+        <template #icon><div class="i-carbon:add" /></template>
+        <template #default>{{ t('admin.tournament.addPart') }}</template>
+      </NButton>
+    </TransitionGroup>
+  </div>
 </template>

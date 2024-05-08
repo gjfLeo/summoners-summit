@@ -12,24 +12,24 @@ async function updateData() {
 </script>
 
 <template>
-  <div flex="~ col gap-4">
+  <div un-flex="~ col gap-4">
     <div>
       <NTooltip trigger="hover">
         <template #default>{{ t("admin.card.updateDataDescription") }}</template>
         <template #trigger><NButton @click="updateData">{{ t("admin.card.updateData") }}</NButton></template>
       </NTooltip>
     </div>
-    <div grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
       <template v-for="(card, cardId) in data?.characterCards" :key="cardId">
         <CardAvatar :card="card" />
       </template>
     </div>
-    <div grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
       <template v-for="(card, cardId) in data?.characterCards" :key="cardId">
         <CardImage :card="card" />
       </template>
     </div>
-    <div grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
       <template v-for="(card, cardId) in data?.actionCards" :key="cardId">
         <CardImage :card="card" />
       </template>

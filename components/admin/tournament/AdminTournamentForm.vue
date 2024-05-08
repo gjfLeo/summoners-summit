@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AdminTournamentStageForm, NForm } from "#components";
+import { AdminTournamentMatchEditor, AdminTournamentStageForm, NForm } from "#components";
 import type { Tournament } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
@@ -9,6 +9,7 @@ const message = useMessage();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const stageFormRefs = ref<InstanceType<typeof AdminTournamentStageForm>[]>([]);
+const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
 
 const editing = ref(!tournament.value.id);
 
@@ -69,85 +70,88 @@ function addStage() {
   tournament.value.stages.push({
     _key: key++,
     name: {},
-    parts: [],
+    parts: [{
+      _key: 0,
+      name: {},
+      date: dayjs().subtract(20, "hours").format("YYYY-MM-DD"),
+      matchIds: [],
+    }],
     rules: undefined,
   });
 }
 </script>
 
 <template>
-  <NCard content-class="flex flex-col gap-4">
-    <template #header>
-      <NH2 id="title" class="m-0">赛事信息</NH2>
-    </template>
-    <template #header-extra>
-      <CommonIconButton v-if="!editing" icon="i-carbon:edit" text @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
-      <CommonIconButton v-if="editing" icon="i-carbon:save" text @click="save">{{ t('admin.action.save') }}</CommonIconButton>
-    </template>
+  <NH2 id="title" un-flex="~ gap-4">
+    <span>{{ t('admin.tournament.title') }}</span>
+    <div class="ml-auto">
+      <template v-if="!editing">
+        <CommonIconButton icon="i-carbon:edit" @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
+      </template>
+      <template v-else>
+        <CommonIconButton icon="i-carbon:save" @click="save">{{ t('admin.action.save') }}</CommonIconButton>
+      </template>
+    </div>
+  </NH2>
 
-    <NForm ref="formRef" :rules="rules" :model="tournament">
-      <NGrid class="gap-x-2! gap-y-4!">
-        <NFormItemGi :span="16" :label="t('main.tournament.name')" path="name">
-          <CommonTransition>
-            <NInputLocale v-if="editing" v-model:value="tournament.name" />
-            <div v-else>{{ tournament.name.zh }}</div>
-          </CommonTransition>
+  <CommonTransition>
+    <NForm v-if="editing" ref="formRef" :rules="rules" :model="tournament">
+      <NGrid class="gap-2!">
+        <NFormItemGi :span="24" :label="t('main.tournament.name')" path="name">
+          <NInputLocale v-model:value="tournament.name" />
         </NFormItemGi>
-        <NFormItemGi :span="4" :label="t('terms.gameVersion')" path="gameVersion">
-          <CommonTransition>
-            <GameVersionSelect v-if="editing" v-model:value="tournament.gameVersion" />
-            <div v-else>{{ tournament.gameVersion }}</div>
-          </CommonTransition>
+        <NFormItemGi :span="6" :label="t('terms.gameVersion')" path="gameVersion">
+          <GameVersionSelect v-model:value="tournament.gameVersion" />
         </NFormItemGi>
-        <NFormItemGi :span="4" :label="t('main.tournament.type')" path="type">
-          <CommonTransition>
-            <AdminTournamentTypeSelect v-if="editing" v-model:value="tournament.type" />
-            <div v-else>{{ tournament.type }}</div>
-          </CommonTransition>
+        <NFormItemGi :span="6" :label="t('main.tournament.type')" path="type">
+          <AdminTournamentTypeSelect v-model:value="tournament.type" />
         </NFormItemGi>
       </NGrid>
     </NForm>
+    <NDescriptions v-else label-placement="left" :column="1" separator="&emsp;">
+      <NDescriptionsItem :label="t('main.tournament.name')">{{ tournament.name.zh }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
+    </NDescriptions>
+  </CommonTransition>
 
-    <TransitionGroup name="common-transition-group">
-      <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
-        <AdminTournamentStageForm
-          ref="stageFormRefs"
-          v-model="tournament.stages[stageIndex]"
-          :editing="editing"
-          :index="stageIndex + 1"
-          @delete="tournament.stages.splice(stageIndex, 1)"
-        />
-      </template>
+  <TransitionGroup name="common-transition-group">
+    <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
+      <AdminTournamentStageForm
+        ref="stageFormRefs"
+        v-model="tournament.stages[stageIndex]"
+        :editing="editing"
+        :index="stageIndex + 1"
+        :match-editor="matchEditor"
+        @delete="tournament.stages.splice(stageIndex, 1)"
+      />
+    </template>
 
-      <NCard
-        v-if="editing"
-        :key="-1"
-        class="border-dashed!"
-      >
-        <template #header-extra>
-          <CommonIconButton icon="i-carbon:add" @click="addStage">{{ t('admin.tournament.addStage') }}</CommonIconButton>
-        </template>
-        <template #header>
-          <div />
-        </template>
-      </NCard>
-    </TransitionGroup>
-
-    <NFloatButton
-      v-if="!editing"
-      type="primary"
-      right="2rem" bottom="2rem"
-      @click="editing = true"
+    <NButton
+      v-if="editing" :key="-1"
+      class="mt w-full" dashed
+      @click="addStage"
     >
-      <div class="i-carbon:edit" />
-    </NFloatButton>
-    <NFloatButton
-      v-if="editing"
-      type="primary"
-      right="2rem" bottom="2rem"
-      @click="save"
-    >
-      <div class="i-carbon:save" />
-    </NFloatButton>
-  </NCard>
+      <template #icon><div class="i-carbon-add" /></template>
+      <template #default>{{ t('admin.tournament.addStage') }}</template>
+    </NButton>
+  </TransitionGroup>
+
+  <NFloatButton
+    v-if="!editing"
+    type="primary"
+    right="2rem" bottom="2rem"
+    @click="editing = true"
+  >
+    <div class="i-carbon:edit" />
+  </NFloatButton>
+  <NFloatButton
+    v-if="editing"
+    type="primary"
+    right="2rem" bottom="2rem"
+    @click="save"
+  >
+    <div class="i-carbon:save" />
+  </NFloatButton>
+  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" />
 </template>

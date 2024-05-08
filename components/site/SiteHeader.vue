@@ -14,10 +14,10 @@ const showMobileMenu = ref(false);
   <NLayoutHeader
     bordered
     class="p-inline-4"
-    grid="~ cols-[1fr_auto_1fr] items-center"
+    un-grid="~ cols-[1fr_auto_1fr] items-center"
     style="background-color: var(--g-header-color);"
   >
-    <div flex="~ gap-4">
+    <div un-flex="~ gap-4">
       <CommonIconButton class="md:hidden" icon="i-carbon:menu" @click="showMobileMenu = true" />
     </div>
     <div>
@@ -29,7 +29,7 @@ const showMobileMenu = ref(false);
         class="<md:hidden!"
       />
     </div>
-    <div flex="~ gap-4" class="justify-self-end">
+    <div un-flex="~ gap-4" class="justify-self-end">
       <LazyAdminDataCommit v-if="$route.meta.layout === 'admin'" />
       <SiteHeaderAdminSwitch />
       <SiteHeaderLanguageSwitch />

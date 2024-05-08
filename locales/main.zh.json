@@ -38,9 +38,11 @@
   "tournament": {
     "date": "日期",
     "name": "赛事名称",
+    "part": "分组",
     "partName": "分组名称",
     "partNameDefault": "分组 {0}",
     "rules": "规则",
+    "stage": "阶段",
     "stageName": "阶段名称",
     "stageNameDefault": "阶段 {0}",
     "type": "赛事类型"

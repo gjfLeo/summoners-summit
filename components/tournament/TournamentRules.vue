@@ -74,7 +74,7 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <div flex="~ wrap gap-2">
+  <div un-flex="~ wrap gap-2">
     <template v-for="(tag, i) in tags" :key="i">
       <template v-if="Array.isArray(tag)">
         <NTooltip placement="bottom-start">

@@ -45,8 +45,10 @@
     "tableContentRequired": "表格内容不能为空"
   },
   "tournament": {
+    "addMatch": "添加场次",
     "addPart": "添加阶段分组",
     "addStage": "添加比赛阶段",
+    "partNamePlaceholder1": "唯一分组名称可省略",
     "title": "赛事信息",
     "titleAdd": "新增赛事详情",
     "titleEdit": "编辑赛事详情"

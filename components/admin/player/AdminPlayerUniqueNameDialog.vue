@@ -57,7 +57,7 @@ defineExpose({
     :title="t('admin.player.selectUniqueName')"
     :show-icon="false"
   >
-    <div class="mt" flex="~ wrap gap-2">
+    <div class="mt" un-flex="~ wrap gap-2">
       <NTag
         v-for="nickname in player ? [player.uniqueName, ...player.aliases] : []" :key="nickname"
         class="cursor-pointer"

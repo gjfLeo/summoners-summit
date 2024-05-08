@@ -96,8 +96,8 @@ const banTeamsNum = computed<number>({
 </script>
 
 <template>
-  <div class="mt-4 w-full" flex="~ col gap-4">
-    <div flex="~ items-center gap-2">
+  <div class="mt-4 w-full" un-flex="~ col gap-4">
+    <div un-flex="~ items-center gap-2">
       <div>
         <NInputGroup>
           <NInputGroupLabel>BO</NInputGroupLabel>
@@ -119,7 +119,7 @@ const banTeamsNum = computed<number>({
         ]"
       />
     </div>
-    <div class="ml-4 h-34px" flex="~ items-center gap-2">
+    <div class="ml-4 h-34px" un-flex="~ items-center gap-2">
       <span>禁用角色</span>
       <NSwitch v-model:value="banCharacters" />
       <CommonTransition>
@@ -137,11 +137,11 @@ const banTeamsNum = computed<number>({
         </div>
       </CommonTransition>
     </div>
-    <div class="ml-4 h-34px" flex="~ items-center gap-2">
+    <div class="ml-4 h-34px" un-flex="~ items-center gap-2">
       <span>提交阵容</span>
       <NSwitch v-model:value="submitTeams" />
       <CommonTransition>
-        <div v-if="submitTeams" flex="~ items-center gap-2">
+        <div v-if="submitTeams" un-flex="~ items-center gap-2">
           <div>
             <NInputGroup>
               <NInputNumber
@@ -168,12 +168,12 @@ const banTeamsNum = computed<number>({
       </CommonTransition>
     </div>
     <NCollapseTransition :show="submitTeams">
-      <div flex="~ col gap-4" class="ml-8">
-        <div class="h-34px" flex="~ items-center gap-2">
+      <div un-flex="~ col gap-4" class="ml-8">
+        <div class="h-34px" un-flex="~ items-center gap-2">
           <span>提交牌组</span>
           <NSwitch v-model:value="submitDecks" />
           <CommonTransition>
-            <div v-if="submitDecks" flex="~ items-center gap-2">
+            <div v-if="submitDecks" un-flex="~ items-center gap-2">
               <div>
                 <NInputGroup>
                   <NInputGroupLabel>每个阵容最多</NInputGroupLabel>
@@ -201,7 +201,7 @@ const banTeamsNum = computed<number>({
             </div>
           </CommonTransition>
         </div>
-        <div class="h-34px" flex="~ items-center gap-2">
+        <div class="h-34px" un-flex="~ items-center gap-2">
           <span>禁用阵容</span>
           <NSwitch v-model:value="banTeams" />
           <CommonTransition>

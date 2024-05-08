@@ -30,8 +30,8 @@ const filteredPlayers = computed(() => {
 </script>
 
 <template>
-  <div flex="~ col gap-4" class="min-h-content">
-    <div flex="~ gap-2">
+  <div un-flex="~ col gap-4" class="min-h-content">
+    <div un-flex="~ gap-2">
       <div><NInput v-model:value="filterText" clearable /></div>
       <NButton type="primary" secondary @click="refresh()"><div class="i-carbon:renew" /></NButton>
     </div>

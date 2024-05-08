@@ -33,32 +33,34 @@ if (id) {
     <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
     <AdminTournamentForm v-model="tournament" />
 
-    <Teleport to="#right-sider">
-      <NAnchor
-        offset-target="#content-layout"
-        ignore-gap
-      >
-        <NAnchorLink
-          :title="t('admin.tournament.title')"
-          href="#title"
+    <ClientOnly>
+      <Teleport to="#right-sider">
+        <NAnchor
+          offset-target="#content-layout"
+          ignore-gap
         >
           <NAnchorLink
-            v-for="stage in tournament.stages"
-            :key="stage._key"
-            :title="stage.name.zh"
-            :href="`#S${stage._key}`"
+            :title="t('admin.tournament.title')"
+            href="#title"
           >
-            <template v-if="stage.parts.length > 1">
-              <NAnchorLink
-                v-for="part in stage.parts"
-                :key="part._key"
-                :title="part.name.zh"
-                :href="`#S${stage._key}P${part._key}`"
-              />
-            </template>
+            <NAnchorLink
+              v-for="stage in tournament.stages"
+              :key="stage._key"
+              :title="stage.name.zh ?? t('main.tournament.stage')"
+              :href="`#S${stage._key}`"
+            >
+              <template v-if="stage.parts.length > 1">
+                <NAnchorLink
+                  v-for="part in stage.parts"
+                  :key="part._key"
+                  :title="part.name.zh ?? t('main.tournament.part')"
+                  :href="`#S${stage._key}P${part._key}`"
+                />
+              </template>
+            </NAnchorLink>
           </NAnchorLink>
-        </NAnchorLink>
-      </NAnchor>
-    </Teleport>
+        </NAnchor>
+      </Teleport>
+    </ClientOnly>
   </div>
 </template>

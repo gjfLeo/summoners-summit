@@ -9,7 +9,7 @@ const { t } = useI18n();
 <template>
   <template v-if="isDev">
     <template v-if="route.meta.layout === 'admin'">
-      <NuxtLinkLocale to="/" flex="~">
+      <NuxtLinkLocale to="/" un-flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger><CommonIconButton icon="i-carbon:logout" /></template>
           <template #default>{{ t("admin.action.leaveAdminPage") }}</template>
@@ -17,7 +17,7 @@ const { t } = useI18n();
       </NuxtLinkLocale>
     </template>
     <template v-else>
-      <NuxtLinkLocale to="/admin" flex="~">
+      <NuxtLinkLocale to="/admin" un-flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger><CommonIconButton icon="i-carbon:login" /></template>
           <template #default>{{ t("admin.action.enterAdminPage") }}</template>
