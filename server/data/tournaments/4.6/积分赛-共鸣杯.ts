@@ -1,0 +1,132 @@
+import { defineTournament } from "~/utils/types";
+
+export default defineTournament({
+  name: "共鸣杯",
+  type: "全民积分赛",
+  gameVersion: "4.6",
+  stages: [
+    {
+      name: "16进8",
+      rules: {
+        numDecks: 3,
+        numDecksBanned: 1,
+        numGames: 3,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-05-13",
+          matches: [
+            {
+              playerA: "喵帕斯",
+              playerB: "铃紫",
+              video: "https://www.bilibili.com/video/BV1us421P7TD",
+              banned: [
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["莫娜", "早柚", "优菈"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["瑶瑶", "深渊使徒·激流", "久岐忍"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "唐傀",
+              playerB: "WinSoon",
+              video: "https://www.bilibili.com/video/BV1aD421A7pC",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "「女士」", "雷音权现"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["林尼", "珐露珊", "琳妮特"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "帷幕帷幕帷幕",
+              playerB: "打牌哥",
+              video: "https://www.bilibili.com/video/BV17U411f7zy",
+              banned: [
+                {
+                  playerACharacters: ["班尼特", "可莉", "雷音权现"],
+                  playerBCharacters: ["久岐忍", "林尼", "瑶瑶"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["林尼", "珐露珊", "琳妮特"],
+                  playerBCharacters: ["托马", "铁甲熔火帝皇", "雷音权现"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["林尼", "珐露珊", "琳妮特"],
+                  playerBCharacters: ["莱依拉", "芭芭拉", "那维莱特"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "卡密sama",
+              playerB: "雪国",
+              video: "https://www.bilibili.com/video/BV1Gz42127kY",
+              banned: [
+                {
+                  playerACharacters: ["芭芭拉", "莱依拉", "那维莱特"],
+                  playerBCharacters: ["那维莱特", "若陀龙王", "莱依拉"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["夜兰", "重云", "雷泽"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["夜兰", "重云", "雷泽"],
+                  playerBCharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+});
