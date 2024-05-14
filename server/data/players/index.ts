@@ -134,7 +134,6 @@ const playerNicknameMapRaw: Record<string, string> = {
   "乐，胡能似吗？": "乐子人.超飞梨",
   "Winsoon": "WinSoon",
   "雪国": "雪国Ink",
-  "不更鸟": "春秋蝉",
   
 
   
