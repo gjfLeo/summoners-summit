@@ -192,7 +192,7 @@ export default defineTournament({
                 {
                   playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
                   playerBCharacters: ["林尼", "琳妮特", "珐露珊"],
-                  starter: "B",
+                  starter: "A",
                   winner: "A",
                 },
                 {
