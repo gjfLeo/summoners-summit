@@ -223,8 +223,87 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-05-15",
+          matches: [
+            {
+              playerA: "桔梗",
+              playerB: "WinSoon",
+              video: "https://www.bilibili.com/video/BV1UJ4m1N76k",
+              banned: [
+                {
+                  playerACharacters: ["行秋", "重云", "雷泽"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["深渊使徒·激流", "班尼特", "千年珍珠骏麟"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["深渊使徒·激流", "班尼特", "千年珍珠骏麟"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["深渊使徒·激流", "班尼特", "千年珍珠骏麟"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["林尼", "珐露珊", "琳妮特"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "打牌哥",
+              playerB: "不更鸟",
+              video: "https://www.bilibili.com/video/BV1w1421B7yd",
+              banned: [
+                {
+                  playerACharacters: ["莫娜", "早柚", "优菈"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["久岐忍", "林尼", "瑶瑶"],
+                  playerBCharacters: ["班尼特", "雷音权现", "可莉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["托马", "铁甲熔火帝皇", "雷音权现"],
+                  playerBCharacters: ["班尼特", "雷音权现", "可莉"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["班尼特", "雷音权现", "可莉"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
 });
-
