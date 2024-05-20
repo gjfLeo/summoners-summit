@@ -390,5 +390,58 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 5,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-05-19",
+          matches: [
+            {
+              playerA: "Tobby",
+              playerB: "桔梗",
+              banned: [
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["莫娜", "「女士」", "雷音权现"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "早柚", "优菈"],
+                  playerBCharacters: ["行秋", "重云", "雷泽"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["莫娜", "早柚", "优菈"],
+                  playerBCharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["班尼特", "雷音权现", "林尼"],
+                  playerBCharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["久岐忍", "瑶瑶", "深渊使徒·激流"],
+                  playerBCharacters: ["林尼", "珐露珊", "琳妮特"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
