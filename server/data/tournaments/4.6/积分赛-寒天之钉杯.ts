@@ -998,9 +998,10 @@ export default defineTournament({
             {
               playerA: "信凛",
               playerB: "木秀",
+              video: "https://www.bilibili.com/video/BV1UZ421x7y1",
               banned: [
                 {
-                  playerACharacters: ["莱依拉", "若陀龙王", "纳西妲"],
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
                   playerBCharacters: ["莫娜", "早柚", "重云"],
                 },
               ],
