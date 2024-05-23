@@ -22,7 +22,7 @@ export default defineTournament({
           matches: [
             {
               playerA: "十一.",
-              playerB: "人子哥于途",
+              playerB: "人子歌于途",
               video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
               banned: [
                 {
