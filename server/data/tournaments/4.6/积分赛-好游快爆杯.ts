@@ -207,7 +207,7 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: ["莱依拉", "行秋", "芭芭拉"],
-                  playerBCharacters: ["久岐忍", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["久岐忍", "若陀龙王", "深渊使徒·激流"],
                 },
               ],
               games: [
