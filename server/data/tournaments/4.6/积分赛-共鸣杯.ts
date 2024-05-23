@@ -400,7 +400,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "",
+          name: "https://www.bilibili.com/video/BV1di421D7pq",
           date: "2024-05-19",
           matches: [
             {
