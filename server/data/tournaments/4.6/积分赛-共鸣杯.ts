@@ -400,12 +400,13 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "https://www.bilibili.com/video/BV1di421D7pq",
+          name: "",
           date: "2024-05-19",
           matches: [
             {
               playerA: "Tobby",
               playerB: "桔梗",
+              video: "https://www.bilibili.com/video/BV1di421D7pq",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
