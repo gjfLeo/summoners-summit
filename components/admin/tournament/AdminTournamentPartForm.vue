@@ -8,7 +8,6 @@ const props = defineProps<{
   stageKey: number;
   editing?: boolean;
   isOnlyPart: boolean;
-  matchEditor: InstanceType<typeof AdminTournamentMatchEditor> | undefined;
 }>();
 defineEmits<{
   (e: "delete"): void;
@@ -40,10 +39,11 @@ const rules = {
   },
 };
 
+const matchEditor = inject<Ref<InstanceType<typeof AdminTournamentMatchEditor>>>("matchEditor");
 async function addMatch() {
-  if (props.matchEditor) {
+  if (matchEditor?.value) {
     try {
-      const matchId = await props.matchEditor?.create();
+      const matchId = await matchEditor.value.create();
       part.value.matchIds.push(matchId);
     }
     catch {

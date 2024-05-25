@@ -9,7 +9,6 @@ const message = useMessage();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const stageFormRefs = ref<InstanceType<typeof AdminTournamentStageForm>[]>([]);
-const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
 
 const editing = ref(!tournament.value.id);
 
@@ -79,6 +78,9 @@ function addStage() {
     rules: undefined,
   });
 }
+
+const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
+provide("matchEditor", matchEditor);
 </script>
 
 <template>
@@ -122,7 +124,6 @@ function addStage() {
         v-model="tournament.stages[stageIndex]"
         :editing="editing"
         :index="stageIndex + 1"
-        :match-editor="matchEditor"
         @delete="tournament.stages.splice(stageIndex, 1)"
       />
     </template>

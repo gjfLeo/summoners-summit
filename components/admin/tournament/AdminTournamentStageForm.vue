@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import type { AdminTournamentMatchEditor } from "#components";
 import { AdminTournamentPartForm, NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
 
 const props = defineProps<{
   index: number;
   editing?: boolean;
-  matchEditor: InstanceType<typeof AdminTournamentMatchEditor> | undefined;
 }>();
 
 defineEmits<{
@@ -112,7 +110,6 @@ defineExpose({ validate });
           :editing="editing"
           :index="partIndex + 1"
           :stage-key="stage._key!"
-          :match-editor="matchEditor"
           @delete="stage.parts.splice(partIndex, 1)"
         />
       </template>
