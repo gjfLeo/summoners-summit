@@ -22,6 +22,7 @@ export default defineTournament({
             {
               playerA: "Shann",
               playerB: "biluo.",
+              video: "https://www.youtube.com/live/g2Yc7QdS7eo?si=YabQD7vRhDefd4iQ&t=2288",
               banned: [
                 {
                   playerACharacters: ["珐露珊", "林尼", "琳妮特"],
@@ -213,6 +214,7 @@ export default defineTournament({
             {
               playerA: "Kaori",
               playerB: "DVDia",
+              video: "https://www.youtube.com/live/g2Yc7QdS7eo?si=7KOPftbuIIvnylJD&t=8747",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -399,6 +401,7 @@ export default defineTournament({
             {
               playerA: "hakio",
               playerB: "FuFfu",
+              video: "https://www.youtube.com/live/g2Yc7QdS7eo?si=Wp_CgIeBkIpZE9YY&t=13030",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -542,6 +545,7 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "Riku",
+              video: "https://www.youtube.com/live/g2Yc7QdS7eo?si=gYHAn9pgly95PcTF&t=16733",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -734,6 +738,7 @@ export default defineTournament({
             {
               playerA: "Shann",
               playerB: "DVDia",
+              video: "https://www.youtube.com/live/g2Yc7QdS7eo?si=gcwNcJLlY5MpNZYJ&t=21140",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -936,6 +941,7 @@ export default defineTournament({
             {
               playerA: "biluo.",
               playerB: "Kaori",
+              video: "https://www.youtube.com/live/ZN1FLWG2IqI?t=1375",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1123,6 +1129,7 @@ export default defineTournament({
             {
               playerA: "FuFfu",
               playerB: "Riku",
+              video: "https://www.youtube.com/live/ZN1FLWG2IqI?t=6509",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "深渊使徒·激流", "铁甲熔火帝皇"],
@@ -1270,6 +1277,7 @@ export default defineTournament({
             {
               playerA: "hakio",
               playerB: "RobotWizard",
+              video: "https://www.youtube.com/live/ZN1FLWG2IqI?t=9466",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1463,6 +1471,7 @@ export default defineTournament({
             {
               playerA: "Riku",
               playerB: "Shann",
+              video: "https://www.youtube.com/live/ZN1FLWG2IqI?t=13754",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1608,6 +1617,7 @@ export default defineTournament({
             {
               playerA: "biluo.",
               playerB: "RobotWizard",
+              video: "https://www.youtube.com/live/ZN1FLWG2IqI?t=16387",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -1805,6 +1815,7 @@ export default defineTournament({
             {
               playerA: "DVDia",
               playerB: "hakio",
+              video: "https://www.youtube.com/live/Dd-WDITDSko?t=1353",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -2000,6 +2011,7 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "Shann",
+              video: "https://www.youtube.com/live/Dd-WDITDSko?t=4562",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -2146,6 +2158,7 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "hakio",
+              video: "https://www.youtube.com/live/Dd-WDITDSko?t=9066",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -2344,6 +2357,7 @@ export default defineTournament({
             {
               playerA: "Birdy",
               playerB: "Timar",
+              video: "https://www.youtube.com/live/Dd-WDITDSko?t=14422",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -2538,6 +2552,7 @@ export default defineTournament({
             {
               playerA: "ScrubbyDuck",
               playerB: "gboo",
+              video: "https://www.youtube.com/live/Dd-WDITDSko?t=17558",
               banned: [
                 {
                   playerACharacters: ["林尼", "千年珍珠骏麟", "愚人众·火之债务处理人"],
