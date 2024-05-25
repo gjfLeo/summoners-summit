@@ -15,7 +15,7 @@ const contentRef = ref<InstanceType<typeof NFormItem>>();
 const ranks = computed(() => {
   if (!content.value) return [];
   const matchResult = content.value
-    .matchAll(/^\s*(?<rank>\d+)\s+(?<nickname>.*?)\s+(?<uid>\d{9})\s+(?<score>\d+)$/gms);
+    .matchAll(/^\s*(?<rank>\d+)\s+(?<nickname>\S+)\s+(?<uid>\d{9})\s+(?<score>\d+)$/gm);
   return [...matchResult].map<Ranks["ranks"][number]>((m) => {
     const { rank, nickname, uid, score } = m.groups!;
     return {
