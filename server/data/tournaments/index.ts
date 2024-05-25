@@ -6,10 +6,12 @@ import t42 from "./4.2";
 import t43 from "./4.3";
 import t44 from "./4.4";
 import t45 from "./4.5";
+import t46p from "./4.6-pre";
 import t46 from "./4.6";
 
 export default [
   ...t46,
+  ...t46p,
   ...t45,
   ...t44,
   ...t43,
