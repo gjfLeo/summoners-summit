@@ -1,7 +1,8 @@
 import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
-  name: "小王子杯：大西洋赛区 常规赛 (The Prince Cup: ATLANTIC - Regular Season)",
+  name: "「小王子杯：大西洋赛区」常规赛 (The Prince Cup: ATLANTIC - Regular Season)",
+  type: "外服赛事",
   gameVersion: "4.6-pre",
   stages: [
     {
@@ -15,12 +16,12 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "A组",
+          name: "A组第1天",
+          date: "2024-05-04",
           matches: [
             {
               playerA: "Shann",
               playerB: "biluo.",
-              date: "2024-05-04",
               banned: [
                 {
                   playerACharacters: ["珐露珊", "林尼", "琳妮特"],
@@ -212,7 +213,6 @@ export default defineTournament({
             {
               playerA: "Kaori",
               playerB: "DVDia",
-              date: "2024-05-04",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -399,7 +399,6 @@ export default defineTournament({
             {
               playerA: "hakio",
               playerB: "FuFfu",
-              date: "2024-05-04",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -543,7 +542,6 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "Riku",
-              date: "2024-05-04",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -736,7 +734,6 @@ export default defineTournament({
             {
               playerA: "Shann",
               playerB: "DVDia",
-              date: "2024-05-04",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -930,10 +927,15 @@ export default defineTournament({
                 },
               ],
             },
+          ],
+        },
+        {
+          name: "A组第2天",
+          date: "2024-05-05",
+          matches: [
             {
               playerA: "biluo.",
               playerB: "Kaori",
-              date: "2024-05-05",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1121,7 +1123,6 @@ export default defineTournament({
             {
               playerA: "FuFfu",
               playerB: "Riku",
-              date: "2024-05-05",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "深渊使徒·激流", "铁甲熔火帝皇"],
@@ -1269,7 +1270,6 @@ export default defineTournament({
             {
               playerA: "hakio",
               playerB: "RobotWizard",
-              date: "2024-05-05",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1463,7 +1463,6 @@ export default defineTournament({
             {
               playerA: "Riku",
               playerB: "Shann",
-              date: "2024-05-05",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -1609,7 +1608,6 @@ export default defineTournament({
             {
               playerA: "biluo.",
               playerB: "RobotWizard",
-              date: "2024-05-05",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -1798,10 +1796,15 @@ export default defineTournament({
                 },
               ],
             },
+          ],
+        },
+        {
+          name: "A组第3天",
+          date: "2024-05-06",
+          matches: [
             {
               playerA: "DVDia",
               playerB: "hakio",
-              date: "2024-05-06",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -1997,7 +2000,6 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "Shann",
-              date: "2024-05-06",
               banned: [
                 {
                   playerACharacters: ["行秋", "重云", "雷泽"],
@@ -2144,7 +2146,6 @@ export default defineTournament({
             {
               playerA: "RobotWizard",
               playerB: "hakio",
-              date: "2024-05-06",
               banned: [
                 {
                   playerACharacters: ["莫娜", "雷音权现", "「女士」"],
@@ -2337,12 +2338,12 @@ export default defineTournament({
           ],
         },
         {
-          name: "B组",
+          name: "B组第1天",
+          date: "2024-05-06",
           matches: [
             {
               playerA: "Birdy",
               playerB: "Timar",
-              date: "2024-05-06",
               banned: [
                 {
                   playerACharacters: ["夜兰", "雷音权现", "「女士」"],
@@ -2537,7 +2538,6 @@ export default defineTournament({
             {
               playerA: "ScrubbyDuck",
               playerB: "gboo",
-              date: "2024-05-06",
               banned: [
                 {
                   playerACharacters: ["林尼", "千年珍珠骏麟", "愚人众·火之债务处理人"],
