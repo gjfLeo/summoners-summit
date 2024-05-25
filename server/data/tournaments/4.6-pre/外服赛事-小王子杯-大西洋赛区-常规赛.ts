@@ -16,7 +16,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "A组第1天",
+          name: "A组 DAY1",
           date: "2024-05-04",
           matches: [
             {
@@ -930,7 +930,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "A组第2天",
+          name: "A组 DAY2",
           date: "2024-05-05",
           matches: [
             {
@@ -1799,7 +1799,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "A组第3天",
+          name: "A组 DAY3",
           date: "2024-05-06",
           matches: [
             {
@@ -2338,7 +2338,7 @@ export default defineTournament({
           ],
         },
         {
-          name: "B组第1天",
+          name: "B组 DAY1",
           date: "2024-05-06",
           matches: [
             {
