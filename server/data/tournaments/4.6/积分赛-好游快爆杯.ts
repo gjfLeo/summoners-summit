@@ -229,5 +229,59 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 9,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-05-26",
+          matches: [
+            {
+              playerA: "祁音",
+              playerB: "木瓜豆腐",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["重云"],
+                  playerBCharacters: ["深渊使徒·激流"],
+                },
+                {
+                  playerACharacters: ["莱依拉", "夜兰", "宵宫"],
+                  playerBCharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莫娜", "早柚", "优菈"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["久岐忍", "那维莱特", "若陀龙王"],
+                  playerBCharacters: ["班尼特", "无相之雷", "若陀龙王"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["班尼特", "无相之雷", "若陀龙王"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
