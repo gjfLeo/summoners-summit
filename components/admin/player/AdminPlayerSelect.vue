@@ -6,19 +6,35 @@ import { NText } from "#components";
 
 const props = defineProps<{
   players: Player[];
-  // value: string | null;
+  nickname?: string;
+  placeholder?: string;
 }>();
 
-const playerId = defineModel<string>("value");
+const playerId = defineModel<string | null>("value", { default: null });
+
+// 根据昵称匹配到的ID
+const nicknameBoundIds = computed(() => {
+  const nickname = props.nickname;
+  if (!nickname) return [];
+  return props.players
+    .filter(p => p.uniqueName === nickname || p.aliases.includes(nickname))
+    .map(p => p.id);
+});
 
 const options = computed(() => {
-  return props.players.map<SelectOption>((player) => {
-    return {
-      label: player.uniqueName,
-      value: player.id,
-      player,
-    };
-  });
+  return props.players
+    .toSorted((p1, p2) => {
+      if (nicknameBoundIds.value.includes(p1.id)) return -1;
+      if (nicknameBoundIds.value.includes(p2.id)) return 1;
+      return 0;
+    })
+    .map<SelectOption>((player) => {
+      return {
+        label: player.uniqueName,
+        value: player.id,
+        player,
+      };
+    });
 });
 
 const selectFilter: SelectFilter = (pattern, option) => {
@@ -51,6 +67,22 @@ const renderTag: SelectRenderTag = ({ option }) => {
     </div>
   );
 };
+
+watch(() => props.nickname, () => {
+  if (nicknameBoundIds.value.length === 1) {
+    playerId.value = nicknameBoundIds.value[0];
+  }
+  else {
+    playerId.value = null;
+  }
+});
+
+const placeholderOverride = computed(() => {
+  if (nicknameBoundIds.value.length > 1) {
+    return `匹配到\u2006${nicknameBoundIds.value.length}\u2006个`;
+  }
+  return props.placeholder;
+});
 </script>
 
 <template>
@@ -62,5 +94,6 @@ const renderTag: SelectRenderTag = ({ option }) => {
     :filter="selectFilter"
     :render-tag="renderTag"
     :render-label="renderLabel"
+    :placeholder="placeholderOverride"
   />
 </template>

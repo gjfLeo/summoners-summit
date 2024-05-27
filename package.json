@@ -14,7 +14,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.18.1",
+    "@antfu/eslint-config": "^2.19.0",
     "@bg-dev/nuxt-naiveui": "^1.13.3",
     "@genshin-db/tcg": "^5.1.4",
     "@gjfleo/eslint-config": "^1.0.6",
@@ -45,5 +45,10 @@
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.19",
     "zod": "^3.23.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/helper-module-imports": "~7.22.15"
+    }
   }
 }

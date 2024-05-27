@@ -22,9 +22,17 @@ const playerANickname = computed<string>({
   get: () => match.value.playerA?.nickname ?? "",
   set: v => (match.value.playerA = { nickname: v }),
 });
+const playerAId = computed<string | undefined>({
+  get: () => match.value.playerA?.playerId,
+  set: v => match.value.playerA ? (match.value.playerA.playerId = v) : undefined,
+});
 const playerBNickname = computed<string>({
   get: () => match.value.playerB?.nickname ?? "",
   set: v => (match.value.playerB = { nickname: v }),
+});
+const playerBId = computed<string | undefined>({
+  get: () => match.value.playerB?.playerId,
+  set: v => match.value.playerB ? (match.value.playerB.playerId = v) : undefined,
 });
 
 async function create() {
@@ -61,6 +69,9 @@ function cancel() {
 defineExpose({
   create,
 });
+
+const { data } = await useFetch("/api/v3/players/list");
+const players = computed(() => data.value?.players ?? []);
 </script>
 
 <template>
@@ -78,15 +89,33 @@ defineExpose({
             <th>
               <div un-grid="~ cols-[8rem_1fr] items-center gap-x-4 gap-y-2">
                 <div un-grid="row-span-2 justify-self-end">选手1</div>
-                <NInput v-model:value="playerANickname" placeholder="昵称" />
-                <NInput placeholder="绑定" />
+                <NInput
+                  v-model:value="playerANickname"
+                  placeholder="昵称"
+                  clearable
+                />
+                <AdminPlayerSelect
+                  v-model:value="playerAId"
+                  :players="players"
+                  :nickname="playerANickname"
+                  placeholder="绑定选手数据"
+                />
               </div>
             </th>
             <th>
               <div un-grid="~ cols-[8rem_1fr] items-center gap-x-4 gap-y-2">
                 <div un-grid="row-span-2 justify-self-end">选手2</div>
-                <NInput v-model:value="playerBNickname" placeholder="昵称" />
-                <NInput placeholder="绑定" />
+                <NInput
+                  v-model:value="playerBNickname"
+                  placeholder="昵称"
+                  clearable
+                />
+                <AdminPlayerSelect
+                  v-model:value="playerBId"
+                  :players="players"
+                  :nickname="playerBNickname"
+                  placeholder="绑定选手数据"
+                />
               </div>
             </th>
           </tr>
