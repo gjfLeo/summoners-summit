@@ -73,7 +73,7 @@ export default defineTournament({
                   playerACharacters: ["「女士」", "深渊使徒·激流", "那维莱特"],
                   playerAActions: defineActions({
                     "暗流涌动": 1,
-                    "烬火重燃": 1,
+                    "苦痛奉还": 1,
                     "图莱杜拉的回忆": 1,
                     "千岩牢固": 2,
                     "花海甘露之光": 2,
@@ -223,7 +223,7 @@ export default defineTournament({
                   playerACharacters: ["「女士」", "深渊使徒·激流", "那维莱特"],
                   playerAActions: defineActions({
                     "暗流涌动": 1,
-                    "烬火重燃": 1,
+                    "苦痛奉还": 1,
                     "图莱杜拉的回忆": 1,
                     "千岩牢固": 2,
                     "花海甘露之光": 2,
