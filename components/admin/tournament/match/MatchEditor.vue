@@ -214,7 +214,16 @@ const players = computed(() => data.value?.players ?? []);
                   player="B"
                 />
               </td>
-              <td />
+              <td>
+                <div un-flex="~ gap-2">
+                  <CommonIconButton icon="i-carbon:video" can-active active />
+                  <template v-if="match.games.length > 1">
+                    <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
+                      <CommonIconButton icon="i-carbon:trash-can" danger />
+                    </CommonConfirmButton>
+                  </template>
+                </div>
+              </td>
             </tr>
             <tr key="G+">
               <th />
