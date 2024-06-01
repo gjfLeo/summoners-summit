@@ -4,8 +4,9 @@ import { NForm } from "#components";
 import type { TournamentPart } from "~/types/data";
 
 const props = defineProps<{
-  index: number;
+  stageIndex: number;
   stageKey: number;
+  partIndex: number;
   editing?: boolean;
   isOnlyPart: boolean;
 }>();
@@ -18,7 +19,7 @@ const formRef = ref<InstanceType<typeof NForm>>();
 
 const { t } = useI18n();
 
-const defaultName = computed(() => t("main.tournament.partNameDefault", [props.index]));
+const defaultName = computed(() => t("main.tournament.partNameDefault", [props.partIndex + 1]));
 
 const rules = {
   name: {
@@ -43,8 +44,11 @@ const matchEditor = inject<Ref<InstanceType<typeof AdminTournamentMatchEditor>>>
 async function addMatch() {
   if (matchEditor?.value) {
     try {
-      const matchId = await matchEditor.value.create();
-      part.value.matchIds.push(matchId);
+      const matchId = await matchEditor.value.create({
+        stageIndex: props.stageIndex,
+        partIndex: props.partIndex,
+      });
+      // part.value.matchIds.push(matchId);
     }
     catch {
     }

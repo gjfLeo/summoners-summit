@@ -37,6 +37,7 @@
   },
   "tournament": {
     "date": "日期",
+    "gameName": "第 {0} 局",
     "name": "赛事名称",
     "part": "分组",
     "partName": "分组名称",

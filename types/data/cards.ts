@@ -27,6 +27,7 @@ export const ZActionCardInfo = ZCardInfoBase.extend({
 
 export const ZCardInfo = z.union([ZCharacterCardInfo, ZActionCardInfo]);
 
+export type CardId = z.infer<typeof ZCardId>;
 export type CharacterCardInfo = z.infer<typeof ZCharacterCardInfo>;
 export type ActionCardInfo = z.infer<typeof ZActionCardInfo>;
 export type CardInfo = z.infer<typeof ZCardInfo>;

@@ -14,10 +14,15 @@
     "updateData": "更新卡牌数据",
     "updateDataDescription": "从第三方库（genshin-db）获取最新游戏版本的卡牌数据"
   },
+  "match": {
+    "addBan": "添加禁用",
+    "addGame": "添加对局"
+  },
   "message": {
     "FAILED": "操作失败",
     "PLAYER_NOT_FOUND": "未查询到选手数据",
-    "SUCCESS": "操作成功"
+    "SUCCESS": "操作成功",
+    "TOURNAMENT_STAGE_OR_PART_NOT_FOUND": "未查询到赛事阶段或分组数据"
   },
   "player": {
     "mergePlayerData": "合并选手数据",
@@ -26,6 +31,7 @@
     "mergeSourceTargetSame": "来源和目标不能相同",
     "mergeTargetLabel": "数据合并到此条目中",
     "mergeTargetRequired": "请选择",
+    "nicknameMatchedNum": "匹配到\\u2006{0}\\u2006个",
     "selectUniqueName": "选择主要昵称"
   },
   "ranks": {

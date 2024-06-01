@@ -123,7 +123,7 @@ provide("matchEditor", matchEditor);
         ref="stageFormRefs"
         v-model="tournament.stages[stageIndex]"
         :editing="editing"
-        :index="stageIndex + 1"
+        :stage-index="stageIndex"
         @delete="tournament.stages.splice(stageIndex, 1)"
       />
     </template>

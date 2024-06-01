@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-const shared = useSharedData();
+const { tournamentTypeList } = useSharedData();
 const { t } = useI18n();
-
-const tournamentTypeList = computed(() => shared.tournamentTypeList);
 
 const tournamentType = defineModel<string>("value");
 

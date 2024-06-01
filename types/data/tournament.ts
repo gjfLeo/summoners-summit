@@ -2,7 +2,8 @@ import { z } from "zod";
 import { ZLocales } from "./locales";
 import { ZGameVersionId } from "./game-version";
 import { ZPlayerId, ZPlayerNickname } from "./player";
-import { ZDeckCharacters, ZDeckId } from "./deck";
+import { ZDeckId, ZDeckTeamId } from "./deck";
+import { ZCardId } from "./cards";
 
 export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);
 export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2}$/);
@@ -75,8 +76,6 @@ export const ZMatch = z.object({
   id: ZMatchId,
   tournamentId: ZTournamentId,
   isFinal: z.boolean().optional(),
-
-  video: z.string().optional(),
   playerA: z.object({
     playerId: ZPlayerId.optional(),
     nickname: ZPlayerNickname,
@@ -86,7 +85,14 @@ export const ZMatch = z.object({
     nickname: ZPlayerNickname,
   }),
   winner: z.enum(["A", "B", "DRAW"]).optional(),
+  bans: z.array(
+    z.object({
+      playerACharacters: z.array(ZCardId),
+      playerBCharacters: z.array(ZCardId),
+    }),
+  ).optional(),
   gameIds: ZGameId.array(),
+  video: z.string().optional(),
 }).strip();
 
 export const ZMatchR = ZMatch.extend({
@@ -98,15 +104,18 @@ export const ZGame = z.object({
   id: ZGameId,
   matchId: ZMatchId,
   playerADeck: z.object({
-    characters: ZDeckCharacters,
+    characters: z.array(ZCardId).length(3),
+    teamId: ZDeckTeamId.optional(),
     deck: ZDeckId.optional(),
   }),
   playerBDeck: z.object({
-    characters: ZDeckCharacters,
+    characters: z.array(ZCardId).length(3),
+    teamId: ZDeckTeamId.optional(),
     deck: ZDeckId.optional(),
   }),
   winner: z.enum(["A", "B", "DRAW-W", "DRAW-L"]).optional(),
   starter: z.enum(["A", "B"]).optional(),
+  video: z.string().optional(),
 });
 
 export const ZGameR = ZGame.extend({

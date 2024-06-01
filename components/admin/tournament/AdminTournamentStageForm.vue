@@ -3,7 +3,7 @@ import { AdminTournamentPartForm, NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
 
 const props = defineProps<{
-  index: number;
+  stageIndex: number;
   editing?: boolean;
 }>();
 
@@ -18,7 +18,7 @@ const partFormRefs = ref<InstanceType<typeof AdminTournamentPartForm>[]>([]);
 
 const { t } = useI18n();
 
-const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.index]));
+const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.stageIndex + 1]));
 
 const hasRules = computed({
   get: () => {
@@ -108,8 +108,9 @@ defineExpose({ validate });
           v-model="stage.parts[partIndex]"
           :is-only-part="stage.parts.length === 1"
           :editing="editing"
-          :index="partIndex + 1"
+          :stage-index="stageIndex"
           :stage-key="stage._key!"
+          :part-index="partIndex"
           @delete="stage.parts.splice(partIndex, 1)"
         />
       </template>

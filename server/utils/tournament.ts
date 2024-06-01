@@ -46,7 +46,7 @@ export function getTournamentList(): TournamentR[] {
 export const ZTournamentSaveParams = ZTournament.partial({
   id: true,
   stages: true,
-});
+}).strip();
 type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
 export function saveTournament(params: TournamentSaveParams) {
   params.stages?.forEach((stage) => {
@@ -55,13 +55,13 @@ export function saveTournament(params: TournamentSaveParams) {
       delete part._key;
     });
   });
-  const tournament = {
+  const tournament: Tournament = {
     ...params,
     id: params.id || hash(params.gameVersion + params.name.zh),
     stages: params.stages ?? [],
   };
 
-  writeData(`tournaments/${tournament.id}`, tournament);
+  writeData(`tournaments/${tournament.id}`, ZTournament.parse(tournament));
 
   return tournament.id;
 }

@@ -12,6 +12,8 @@ const props = defineProps<{
 
 const playerId = defineModel<string | null>("value", { default: null });
 
+const { t } = useI18n();
+
 // 根据昵称匹配到的ID
 const nicknameBoundIds = computed(() => {
   const nickname = props.nickname;
@@ -79,7 +81,7 @@ watch(() => props.nickname, () => {
 
 const placeholderOverride = computed(() => {
   if (nicknameBoundIds.value.length > 1) {
-    return `匹配到\u2006${nicknameBoundIds.value.length}\u2006个`;
+    return t("admin.player.nicknameMatchedNum", [nicknameBoundIds.value.length]);
   }
   return props.placeholder;
 });

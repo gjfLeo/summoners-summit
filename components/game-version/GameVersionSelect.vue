@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-const shared = useSharedData();
+const { gameVersionList } = useSharedData();
 const { t } = useI18n();
-
-const gameVersionList = computed(() => shared.gameVersionList);
 
 const gameVersion = defineModel<string>("value");
 

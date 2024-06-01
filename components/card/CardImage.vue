@@ -1,20 +1,25 @@
 <script lang="ts" setup>
-import type { CardInfo, Locales } from "~/types/data";
+import type { CardId, CardInfo, CharacterCardInfo, Locales } from "~/types/data";
 
 const props = defineProps<{
-  card: CardInfo;
+  card: CardId;
 }>();
 
+const { characterCardById, actionCardById } = useSharedData();
 const { t, locale } = useI18n<unknown, Locales>();
 
+const cardInfo = computed<CardInfo>(() => {
+  return characterCardById.value[props.card] ?? actionCardById.value[props.card];
+});
+
 const wikiaFilename = computed(() => {
-  switch (props.card.type) {
+  switch (cardInfo.value.type) {
     case "character":
-      return `${props.card.name.en} Character Card.png`;
+      return `${cardInfo.value.name.en} Character Card.png`;
     case "action":
-      return `${props.card.name.en} ${props.card.actionType.charAt(0).toUpperCase()}${props.card.actionType.slice(1)} Card.png`;
+      return `${cardInfo.value.name.en} ${cardInfo.value.actionType.charAt(0).toUpperCase()}${cardInfo.value.actionType.slice(1)} Card.png`;
     default:
-      throw createError(t("card.invalidCardType"));
+      throw createError(t("main.card.invalidCardType"));
   }
 });
 const src = computed(() => {
@@ -26,8 +31,8 @@ const src = computed(() => {
   <NImage
     class="aspect-[7/12]"
     :src="src"
-    :alt="card.name[locale]"
-    :title="card.name[locale]"
+    :alt="cardInfo.name[locale]"
+    :title="cardInfo.name[locale]"
     preview-disabled
   />
 </template>

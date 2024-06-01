@@ -47,7 +47,7 @@ function show(sourceId: string, players_: Player[]) {
 
 async function submit() {
   try {
-    formRef.value?.validate();
+    await formRef.value?.validate();
   }
   catch (error) {
     return;

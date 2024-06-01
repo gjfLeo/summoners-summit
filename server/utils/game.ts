@@ -18,3 +18,11 @@ export function getGameR(gameId: GameId): GameR | undefined {
     playerB: match.playerB,
   };
 }
+
+export function saveGame(game: Game) {
+  writeData(`games/${game.id}`, ZGame.parse(game));
+}
+
+export function deleteGame(gameId: GameId) {
+  deleteData(`games/${gameId}`);
+}
