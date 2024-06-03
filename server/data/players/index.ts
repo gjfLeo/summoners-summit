@@ -136,6 +136,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "雪国": "雪国Ink",
   "雪夜糖|兰TJ": "TianJam",
   "不更鸟": "从不打低端局",
+  "霉逼酱": "可可酱",
   
 
   
