@@ -18,7 +18,6 @@ export default function useMenuRoutes() {
     {
       name: t("menu.tournaments"),
       path: "/tournaments",
-      withGameVersion: true,
     },
     {
       name: t("menu.teams"),

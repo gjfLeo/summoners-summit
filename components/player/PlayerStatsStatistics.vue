@@ -8,14 +8,19 @@
     <NStatistic :label="$t('player.matchWinRate')" :value="matchWinRate" />
     <NDivider class="h-12!" vertical />
     <NStatistic :label="$t('player.gameWinRate')" :value="gameWinRate" />
+    <template v-if="player.rank">
+      <NDivider class="h-12!" vertical />
+      <NStatistic :label="$t('player.dynamicRankAndScore')" :value="`${player.rank} (${player.score})`" />
+    </template>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import type { ApiPlayerStatsByVersionData } from "~/utils/types";
+import type { ApiPlayerStatsByVersionData, Player } from "~/utils/types";
 
 const props = defineProps<{
+  player: Player;
   statsByVersion: ApiPlayerStatsByVersionData["statsByVersion"];
 }>();
 

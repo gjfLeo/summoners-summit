@@ -43,7 +43,7 @@ export interface ApiTeamStatsVsTeamStatsValue {
 
 export interface ApiTeamStatsData {
   basicStats: ApiTeamStatsBasicStats;
-  cardUsageMap: Partial<Record<ActionCard, ApiTeamStatsCardUsageValue>>;
+  cardUsageMap: Record<ActionCard, ApiTeamStatsCardUsageValue>;
   typicalDeckId?: string;
   vsTeamStatsMap: Record<TeamId, ApiTeamStatsVsTeamStatsValue>;
 }
@@ -51,6 +51,18 @@ export interface ApiTeamStatsData {
 export interface ApiTeamGamesData {
   gameList: Game[];
   total: number;
+}
+
+export interface ApiTeamActionCardUsageData {
+  actionCardUsageMap: Record<ActionCard, ApiTeamActionCardUsageValue>;
+  totalNumDecks: number;
+  totalNumDecksWin: number;
+}
+export interface ApiTeamActionCardUsageValue {
+  numDecksWith1: number;
+  numDecksWith2: number;
+  numDecksWith1Win: number;
+  numDecksWith2Win: number;
 }
 
 export interface ApiTeamStatsByVersionData {

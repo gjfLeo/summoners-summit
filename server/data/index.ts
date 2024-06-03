@@ -1,9 +1,12 @@
 import { createHash } from "node:crypto";
 import tournamentsRaw from "./tournaments";
 import { playerNicknameMap } from "./players";
+import playerRanks from "./players/rank";
 import type { ActionCard, BannedData, Deck, DeckId, Game, GameId, GameVersion, Match, MatchId, Player, PlayerId, Tournament, TournamentId, TournamentPart, TournamentRawData, TournamentStage } from "~/utils/types";
 import { actionCardSorter, characterCardSorter } from "~/utils/cards";
 import type { PlayerAchievement } from "~/utils/achievements";
+import { getAllGameVersionsReversed } from "~/utils/game-version";
+import { countActionCards } from "~/utils/decks";
 
 const tournamentById: Record<TournamentId, Tournament> = {};
 const matchById: Record<MatchId, Match> = {};
@@ -26,10 +29,13 @@ function registerPlayer(uniqueName: string): PlayerId | undefined {
   }
   const id = getHashValue(uniqueName) as PlayerId;
   // 如果已存在，忽略
-  if (!playerById[id]) {
-    const aliases = Object.entries(playerNicknameMap).filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
-    playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
+  if (playerById[id]) {
+    return id;
   }
+
+  const aliases = Object.entries(playerNicknameMap)
+    .filter(([_alias, nickname]) => nickname === uniqueName).map(([alias]) => alias);
+  playerById[id] = { id, uniqueName, aliases: aliases.length ? aliases : undefined };
   return id;
 }
 function registerPlayerAchievement(playerId: PlayerId | undefined, achievement: PlayerAchievement) {
@@ -54,7 +60,7 @@ function registerDeck(characters: Deck["characterCards"], actions: Deck["actionC
   ) as Deck["actionCards"];
   const id = getHashValue(JSON.stringify({ characterCards, actionCards })) as DeckId;
   if (!deckById[id]) {
-    const actionCardCount = Object.values(actionCards).reduce((a, b) => a + b);
+    const actionCardCount = countActionCards(actionCards);
     if (actionCardCount !== 30) {
       console.error(`行动牌数量≠30：http://localhost:3000/deck/${id}`);
     }
@@ -69,9 +75,15 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
     type,
     gameVersion,
     stages: stagesRaw,
+    hideChampion,
   } = tournamentRaw;
   const tournamentId = getHashValue(gameVersion + tournamentName) as TournamentId;
   let matchTotalIndex = 0;
+
+  const startDate = stagesRaw[0].parts[0].date;
+  let endDate: string | undefined;
+  let championId: PlayerId | undefined;
+  let championNickname: string | undefined;
 
   const stages = stagesRaw.map((stageRaw): TournamentStage => {
     // stage
@@ -121,8 +133,17 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
           const winner = winnerRaw ?? (aGoals > bGoals ? "A" : "B");
 
           if (stageName === "决赛" || partName === "决赛" || matchName === "决赛") {
-            if (winner === "A") registerPlayerAward(playerAId, `${gameVersion}\u2006${tournamentName}冠军`);
-            if (winner === "B") registerPlayerAward(playerBId, `${gameVersion}\u2006${tournamentName}冠军`);
+            if (winner === "A") {
+              championId = playerAId;
+              championNickname = playerANickname;
+              registerPlayerAward(playerAId, `${gameVersion}\u2006${tournamentName}冠军`);
+            }
+            else if (winner === "B") {
+              championId = playerBId;
+              championNickname = playerBNickname;
+              registerPlayerAward(playerBId, `${gameVersion}\u2006${tournamentName}冠军`);
+            }
+            endDate = endDate ?? date;
           }
 
           const banned = bannedRaw?.map((ban): BannedData => {
@@ -206,16 +227,40 @@ function loadTournamentRaw(tournamentRaw: TournamentRawData) {
       }),
     });
   });
+
+  if (endDate === undefined && gameVersion !== getAllGameVersionsReversed()[0]) {
+    endDate = stagesRaw[stagesRaw.length - 1].parts[stagesRaw[stagesRaw.length - 1].parts.length - 1].date;
+  }
+  if (hideChampion) {
+    championId = undefined;
+    championNickname = undefined;
+  }
+
   tournamentById[tournamentId] = {
     id: tournamentId,
     name: tournamentName,
     type,
     gameVersion,
     stages,
+    dateRange: [startDate, endDate],
+    championId,
+    championNickname,
   };
 }
 
 tournamentsRaw.forEach(loadTournamentRaw);
+
+function loadPlayerRank({ nickname, score }: { nickname: string; score: number }, index: number) {
+  if (playerNicknameMap[nickname] !== undefined) {
+    return loadPlayerRank({ nickname: playerNicknameMap[nickname], score }, index);
+  }
+  const playerId = registerPlayer(nickname);
+  if (playerId) {
+    playerById[playerId].score = score;
+    playerById[playerId].rank = index + 1;
+  }
+}
+playerRanks.forEach(loadPlayerRank);
 
 export {
   tournamentById,

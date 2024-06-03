@@ -12,7 +12,7 @@ export type PlayerId = Brand<string, "PlayerId">;
 export interface Deck {
   id: DeckId;
   characterCards: CharacterCard[];
-  actionCards: Partial<Record<ActionCard, number>>;
+  actionCards: Record<ActionCard, number>;
   gameVersion: GameVersion;
 }
 
@@ -22,6 +22,9 @@ export interface Tournament {
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛" | "外服赛事";
   gameVersion: GameVersion;
   stages: TournamentStage[];
+  dateRange: [string, string | undefined];
+  championId: PlayerId | undefined;
+  championNickname: string | undefined;
 }
 
 export interface TournamentStage {
@@ -93,7 +96,7 @@ export interface Game {
   playerBDeckId?: DeckId;
 
   starter: "A" | "B" | "";
-  winner: "A" | "B";
+  winner: "A" | "B" | "D";
   turns?: number;
 }
 
@@ -103,4 +106,6 @@ export interface Player {
   aliases?: string[];
   achievements?: PlayerAchievement[];
   awards?: string[];
+  score?: number;
+  rank?: number;
 }

@@ -2,7 +2,9 @@ import { defineActions, defineTournament } from "~/utils/types";
 
 export default defineTournament({
   name: "Cat's Tail Gathering 2024 S1 ",
+  type: "外服赛事",
   gameVersion: "4.3",
+  hideChampion: true,
   stages: [
     {
       name: "亚服 Asia",
@@ -127,7 +129,7 @@ export default defineTournament({
                     "千岩牢固": 2,
                     "花海甘露之光": 2,
                     "天守阁": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "蒂玛乌斯": 2,
                     "立本": 2,
                     "迪娜泽黛": 2,
@@ -752,7 +754,7 @@ export default defineTournament({
                     "花海甘露之光": 2,
                     "天守阁": 2,
                     "须弥城": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "蒂玛乌斯": 2,
                     "立本": 2,
                     "迪娜泽黛": 1,

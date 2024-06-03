@@ -26,7 +26,7 @@ export default defineTournament({
                   playerACharacters: ["菲谢尔", "莫娜", "纳西妲"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "磐岩盟契": 1,
@@ -47,7 +47,7 @@ export default defineTournament({
                   playerBCharacters: ["重云", "雷电将军", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "寻宝仙灵": 2,
                     "磐岩盟契": 1,
@@ -72,7 +72,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -180,7 +180,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
                     "沉沦之心": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "提米": 2,
                     "拉娜": 2,
                     "风与自由": 2,
@@ -199,7 +199,7 @@ export default defineTournament({
                   playerBCharacters: ["菲谢尔", "莫娜", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "风与自由": 2,
@@ -224,7 +224,7 @@ export default defineTournament({
                   playerACharacters: ["申鹤", "重云", "雷电将军"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "鲸井小弟": 2,
                     "寻宝仙灵": 2,
@@ -244,7 +244,7 @@ export default defineTournament({
                   playerBCharacters: ["重云", "雷电将军", "申鹤"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -312,7 +312,7 @@ export default defineTournament({
                   playerBCharacters: ["雷电将军", "坎蒂丝", "雷泽"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "提米": 2,
                     "立本": 2,
                     "参量质变仪": 2,
@@ -341,7 +341,7 @@ export default defineTournament({
                     "千岩牢固": 2,
                     "璃月港口": 2,
                     "天守阁": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "旧时庭园": 1,
                     "元素共鸣：交织之岩": 2,
@@ -407,7 +407,7 @@ export default defineTournament({
                     "千岩牢固": 2,
                     "璃月港口": 2,
                     "天守阁": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "磐岩盟契": 1,
                     "元素共鸣：交织之岩": 2,
@@ -442,7 +442,7 @@ export default defineTournament({
                   playerACharacters: ["莫娜", "纳西妲", "菲谢尔"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "立本": 2,
                     "寻宝仙灵": 1,
                     "磐岩盟契": 1,
@@ -493,7 +493,7 @@ export default defineTournament({
                     "赌徒的耳环": 1,
                     "千岩牢固": 2,
                     "璃月港口": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "立本": 2,
                     "旧时庭园": 1,
@@ -513,7 +513,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "吐纳真定": 1,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "立本": 1,
                     "常九爷": 2,
                     "参量质变仪": 2,

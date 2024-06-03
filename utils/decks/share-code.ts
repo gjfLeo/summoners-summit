@@ -1,16 +1,31 @@
 import type { ActionCard, CharacterCard, Deck } from "../types";
-import { CARD_BY_ENCODE_ID, ENCODE_ID_BY_CARD } from "../cards/encode";
+import { ALL_ACTION_CARDS_INFO, ALL_CHARACTER_CARDS_INFO } from "../cards";
 import blockWords from "./block-words";
 
+const getCharacterCardByShareId = useMemoize((shareId: number): CharacterCard => {
+  if (shareId === 0) return "";
+  const card = Object.entries(ALL_CHARACTER_CARDS_INFO).find(([_card, info]) => info.shareId === shareId);
+  if (!card) throw new Error(`Invalid character card shareId during decode: ${shareId}`);
+  return card[0] as CharacterCard;
+});
+const getActionCardByShareId = useMemoize((shareId: number): ActionCard => {
+  if (shareId === 0) return "";
+  const card = Object.entries(ALL_ACTION_CARDS_INFO).find(([_card, info]) => info.shareId === shareId);
+  if (!card) throw new Error(`Invalid action card shareId during decode: ${shareId}`);
+  return card[0] as ActionCard;
+});
 export function encodeDeckCode(deck: Pick<Deck, "characterCards" | "actionCards">): string {
   // 计算牌组中的卡片编码ID
   const cardEncodingIds: number[] = [
-    ...deck.characterCards.map<number>(card => ENCODE_ID_BY_CARD[card]),
+    ...deck.characterCards.map<number>(card => ALL_CHARACTER_CARDS_INFO[card].shareId),
     ...Object.entries(deck.actionCards)
-      .flatMap<number>(([card, count]) => Array.from(
-        { length: count },
-        () => ENCODE_ID_BY_CARD[card as ActionCard],
-      )),
+      .flatMap<number>(([card, count]) =>
+        count
+          ? Array.from(
+            { length: count },
+            () => ALL_ACTION_CARDS_INFO[card as ActionCard].shareId,
+          )
+          : []),
   ];
   cardEncodingIds.push(0); // 补齐为 34 项 12-bit 数
 
@@ -64,10 +79,10 @@ export function decodeDeckCode(shareCode: string): Pick<Deck, "characterCards" |
     ]);
   cardEncodingIds.pop(); // 最后一项是多余的，共 3 张角色牌和 30 张行动牌
   const characterIds = cardEncodingIds.splice(0, 3);
-  const characterCards = characterIds.map(v => CARD_BY_ENCODE_ID[v] as CharacterCard);
+  const characterCards = characterIds.map(v => getCharacterCardByShareId(v));
   const actionCards: Deck["actionCards"] = {};
   for (let i = 0; i < cardEncodingIds.length; i++) {
-    const card = CARD_BY_ENCODE_ID[cardEncodingIds[i]] as ActionCard;
+    const card = getActionCardByShareId(cardEncodingIds[i]) as ActionCard;
     if (card) {
       actionCards[card] = (actionCards[card] ?? 0) + 1;
     }

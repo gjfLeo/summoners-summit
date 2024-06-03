@@ -28,7 +28,7 @@ export default defineTournament({
                   playerACharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -226,7 +226,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "冒险憧憬": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 1,
                     "提米": 2,
                     "立本": 2,
@@ -341,7 +341,7 @@ export default defineTournament({
                   playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -385,7 +385,7 @@ export default defineTournament({
                   playerBCharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -434,7 +434,7 @@ export default defineTournament({
                   playerACharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -480,7 +480,7 @@ export default defineTournament({
                   playerACharacters: [Chongyun, RaidenShogun, Shenhe],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -533,7 +533,7 @@ export default defineTournament({
                     "冒险憧憬": 2,
                     "赌徒的耳环": 2,
                     "璃月港口": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -695,7 +695,7 @@ export default defineTournament({
                   playerAActions: defineActions({
                     "冒险憧憬": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "派蒙": 1,
                     "提米": 2,
                     "立本": 2,
@@ -715,7 +715,7 @@ export default defineTournament({
                   playerBCharacters: [Fischl, Mona, Nahida],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "磐岩盟契": 1,
@@ -760,7 +760,7 @@ export default defineTournament({
                   playerBCharacters: [Fischl, Mona, Nahida],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "磐岩盟契": 1,
@@ -806,7 +806,7 @@ export default defineTournament({
                   playerBCharacters: [Fischl, Mona, Nahida],
                   playerBActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 2,
+                    "桓那兰那": 2,
                     "提米": 2,
                     "拉娜": 2,
                     "磐岩盟契": 1,

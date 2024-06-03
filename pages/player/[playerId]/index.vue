@@ -20,7 +20,7 @@
   </div>
 
   <PlayerStatsByVersionChart :stats-by-version="statsByVersion" />
-  <PlayerStatsStatistics :stats-by-version="statsByVersion" />
+  <PlayerStatsStatistics :stats-by-version="statsByVersion" :player="player" />
   <div class="flex justify-end">
     <NText class="flex gap-2 text-sm" :depth="3">
       <span>{{ $t('player.referenceOnly') }}</span>

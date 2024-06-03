@@ -11,10 +11,11 @@
 <script lang="ts" setup>
 import PinyinMatch from "pinyin-match";
 import { CardImage, NAutoComplete, NText } from "#components";
-import { ALL_ACTION_CARDS, type ActionCard } from "~/utils/cards";
+import { ALL_ACTION_CARDS } from "~/utils/cards";
+import type { Deck } from "~/utils/types";
 
 const props = defineProps<{
-  actions?: Partial<Record<ActionCard, number>>;
+  actions?: Deck["actionCards"];
 }>();
 
 const inputValue = ref("");

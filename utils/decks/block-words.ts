@@ -1,6 +1,7 @@
 const blockWords: string[] = [
   "64",
   "89",
+  "ba9",
   "c4",
   "cag",
   "gay",

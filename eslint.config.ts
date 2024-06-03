@@ -13,6 +13,7 @@ export default gjfleo(
       },
     },
     rules: {
+      "style/quote-props": "off",
       "custom/custom-sort-keys": ["warn", { orderedKeys: ALL_ACTION_CARDS }],
     },
   },

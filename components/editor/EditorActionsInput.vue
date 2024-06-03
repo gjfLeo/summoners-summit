@@ -25,13 +25,14 @@
 import type { NSelect } from "#components";
 import { EditorActionCardSelector } from "#components";
 import { type ActionCard, actionCardSorter } from "~/utils/cards";
+import type { Deck } from "~/utils/types";
 
 const props = defineProps<{
-  actions?: Partial<Record<ActionCard, number>>;
+  actions?: Deck["actionCards"];
 }>();
 
 const emit = defineEmits<{
-  (e: "update:actions", v: Partial<Record<ActionCard, number>>): void;
+  (e: "update:actions", v: Deck["actionCards"]): void;
   (e: "copy"): void;
   (e: "paste"): void;
 }>();

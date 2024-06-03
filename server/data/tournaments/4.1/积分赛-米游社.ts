@@ -474,7 +474,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 1,
                     "立本": 2,
                     "刘苏": 2,
@@ -520,7 +520,7 @@ export default defineTournament({
                   playerBActions: defineActions({
                     "贯月矢": 2,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 1,
                     "立本": 2,
                     "刘苏": 2,
@@ -565,7 +565,7 @@ export default defineTournament({
                   playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,
@@ -754,7 +754,7 @@ export default defineTournament({
                     "狼的末路": 1,
                     "赌徒的耳环": 1,
                     "教官的帽子": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,
@@ -901,7 +901,7 @@ export default defineTournament({
                   playerACharacters: ["重云", "雷电将军", "申鹤"],
                   playerAActions: defineActions({
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "提米": 2,
                     "立本": 2,
                     "刘苏": 2,
@@ -922,7 +922,7 @@ export default defineTournament({
                   playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,
@@ -971,7 +971,7 @@ export default defineTournament({
                   playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,
@@ -1000,7 +1000,7 @@ export default defineTournament({
                     "钟剑": 2,
                     "祭礼剑": 1,
                     "赌徒的耳环": 2,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "提米": 2,
                     "立本": 2,
@@ -1020,7 +1020,7 @@ export default defineTournament({
                   playerBCharacters: ["纯水精灵·洛蒂娅", "菲谢尔", "纳西妲"],
                   playerBActions: defineActions({
                     "赌徒的耳环": 1,
-                    "桓纳兰那": 1,
+                    "桓那兰那": 1,
                     "派蒙": 2,
                     "卯师傅": 2,
                     "立本": 2,

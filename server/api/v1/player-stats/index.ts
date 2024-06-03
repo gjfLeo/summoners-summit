@@ -6,6 +6,8 @@ function initPlayerStats(playerId: PlayerId): ApiPlayerStatsValue {
     playerId,
     uniqueName: playerById[playerId].uniqueName,
     aliases: playerById[playerId].aliases,
+    score: playerById[playerId].score,
+    rank: playerById[playerId].rank,
     matchTotal: 0,
     matchWin: 0,
     gameTotal: 0,

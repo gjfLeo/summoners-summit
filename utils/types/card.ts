@@ -65,8 +65,8 @@ export const FatuiPyroAgent = "愚人众·火之债务处理人";
 export const AbyssLectorFathomlessFlames = "深渊咏者·渊火";
 export const ElectroHypostasis = "无相之雷";
 export const MaguuKenki = "魔偶剑鬼";
-export const StonehideLawachurl = "岩盔丘丘王";
-export const JadeplumeTerrorshroom = "翠翎恐禽";
+export const StonehideLawachurl = "丘丘岩盔王";
+export const JadeplumeTerrorshroom = "翠翎恐蕈";
 
 // #endregion
 

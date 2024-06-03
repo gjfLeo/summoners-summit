@@ -7,6 +7,7 @@ export interface TournamentRawData {
   type?: "全民积分赛" | "主播资格赛" | "积分赛试办赛" | "外服赛事";
   gameVersion: GameVersion;
   stages: StageRawData[];
+  hideChampion?: boolean;
 }
 
 export interface StageRawData {
@@ -44,7 +45,7 @@ export interface GameRawData {
   playerBCharacters: Deck["characterCards"];
   playerBActions?: Deck["actionCards"];
   starter: "A" | "B" | "";
-  winner: "A" | "B";
+  winner: "A" | "B" | "D";
   turns?: number;
   video?: string;
 }

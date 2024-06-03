@@ -12,6 +12,7 @@
   <NDataTable
     :columns="columns"
     :data="data"
+    :scroll-x="1000"
     max-height="calc(100vh - 18rem)"
   />
 </template>
@@ -105,6 +106,14 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     align: "center",
     sorter: "default",
     render: row => toPercentageString(row.gameWinRate),
+  },
+  {
+    title: t("player.dynamicRankAndScore"),
+    key: "score",
+    width: "6rem",
+    align: "center",
+    sorter: (a, b) => (b.rank ?? Number.POSITIVE_INFINITY) - (a.rank ?? Number.POSITIVE_INFINITY),
+    render: row => row.score ? `${row.rank} (${row.score})` : "",
   },
 ];
 </script>
