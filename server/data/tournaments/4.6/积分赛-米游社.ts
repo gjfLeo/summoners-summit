@@ -21,7 +21,7 @@ export default defineTournament({
             {
               playerA: "冰红茶心甘晴愿",
               playerB: "晓夜blite",
-              video: "https://www.bilibili.com/video/BV1dr421w7vZ",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r",
               banned: [
                 {
                   playerACharacters: ["若陀龙王", "莱依拉", "那维莱特"],
@@ -173,7 +173,7 @@ export default defineTournament({
             {
               playerA: "鱼儿化音的迷妹",
               playerB: "今天不想吃苹果",
-              video: "https://www.bilibili.com/video/BV1dx4y1J7kn",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "那维莱特", "若陀龙王"],
@@ -288,7 +288,7 @@ export default defineTournament({
             {
               playerA: "有濑夜星花",
               playerB: "宵宫sama",
-              video: "https://www.bilibili.com/video/BV1Hn4y197tm",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r?p=2",
               banned: [
                 {
                   playerACharacters: ["申鹤", "魈", "夜兰"],
@@ -399,7 +399,7 @@ export default defineTournament({
             {
               playerA: "荧",
               playerB: "蕊梨",
-              video: "https://www.bilibili.com/video/BV1Hn4y197tm",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r?p=2",
               banned: [
                 {
                   playerACharacters: ["莱依拉", "那维莱特", "若陀龙王"],
@@ -571,7 +571,7 @@ export default defineTournament({
             {
               playerA: "今天不想吃苹果",
               playerB: "宵宫sama",
-              video: "https://www.bilibili.com/video/BV1uw4m1q7JG",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r?p=3",
               banned: [
                 {
                   playerACharacters: ["夜兰", "魈", "申鹤"],
@@ -682,7 +682,7 @@ export default defineTournament({
             {
               playerA: "冰红茶心甘晴愿",
               playerB: "蕊梨",
-              video: "https://www.bilibili.com/video/BV1PT421i7Mq",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r?p=3",
               banned: [
                 {
                   playerACharacters: ["久岐忍", "绮良良", "深渊使徒·激流"],
@@ -807,7 +807,7 @@ export default defineTournament({
             {
               playerA: "宵宫sama",
               playerB: "冰红茶心甘晴愿",
-              video: "https://www.bilibili.com/video/BV1z4421X7un",
+              video: "https://www.bilibili.com/video/BV1jM4m1673r?p=4",
               banned: [
                 {
                   playerACharacters: ["芭芭拉"],
