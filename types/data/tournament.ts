@@ -2,7 +2,7 @@ import { z } from "zod";
 import { ZLocales } from "./locales";
 import { ZGameVersionId } from "./game-version";
 import { ZPlayerId, ZPlayerNickname } from "./player";
-import { ZDeckId, ZDeckTeamId } from "./deck";
+import { ZDeckCode, ZDeckTeamId } from "./deck";
 import { ZCardId } from "./cards";
 
 export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);
@@ -106,12 +106,12 @@ export const ZGame = z.object({
   playerADeck: z.object({
     characters: z.array(ZCardId).length(3),
     teamId: ZDeckTeamId.optional(),
-    deck: ZDeckId.optional(),
+    deckCode: ZDeckCode.optional(),
   }),
   playerBDeck: z.object({
     characters: z.array(ZCardId).length(3),
     teamId: ZDeckTeamId.optional(),
-    deck: ZDeckId.optional(),
+    deckCode: ZDeckCode.optional(),
   }),
   winner: z.enum(["A", "B", "DRAW-W", "DRAW-L"]).optional(),
   starter: z.enum(["A", "B"]).optional(),

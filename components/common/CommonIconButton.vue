@@ -7,7 +7,6 @@ const props = defineProps<{
 }>();
 
 const themeVars = useThemeVars();
-const activeColor = computed(() => `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 16%)`);
 
 const style = computed(() => {
   const style = {};
@@ -26,7 +25,7 @@ const style = computed(() => {
     Object.assign(style, {
       "--n-color": `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 16%)`,
       "--n-color-hover": `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 8%)`,
-      "--n-border-radius": "3px",
+      "--n-border-radius": "6px",
     });
   }
   return style;

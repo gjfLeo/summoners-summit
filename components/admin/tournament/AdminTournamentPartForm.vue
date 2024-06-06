@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { AdminTournamentMatchEditor } from "#components";
+import type AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { NForm } from "#components";
 import type { TournamentPart } from "~/types/data";
 

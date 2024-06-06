@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { AdminTournamentMatchEditor, AdminTournamentStageForm, NForm } from "#components";
+import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
+import { AdminTournamentStageForm, NForm } from "#components";
 import type { Tournament } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });

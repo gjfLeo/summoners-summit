@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { TournamentId } from "~/types/data";
 import type { MatchSaveParams } from "~/server/utils/match";
-import type { Game, Match, TournamentId } from "~/types/data";
-import type { NForm } from "#components";
+import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
 
 const props = defineProps<{
   tournamentId: TournamentId;
@@ -109,6 +109,14 @@ defineExpose({
 
 const { data } = await useFetch("/api/v3/players/list");
 const players = computed(() => data.value?.players ?? []);
+
+const videoEditor = ref<InstanceType<typeof AdminTournamentMatchVideoEditor>>();
+function inputVideo(video: string | undefined) {
+  return videoEditor.value?.input(video);
+}
+
+const actionCardsEditor = ref<InstanceType<typeof AdminTournamentMatchActionCardsEditor>>();
+provide("actionCardsEditor", actionCardsEditor);
 </script>
 
 <template>
@@ -128,7 +136,7 @@ const players = computed(() => data.value?.players ?? []);
             <tr>
               <th />
               <th>
-                <div un-grid="~ cols-[auto_1fr] items-center gap-x-4 gap-y-2">
+                <div un-grid="~ items-center gap-x-4 gap-y-2" class="grid-cols-[auto_1fr]">
                   <div un-grid="row-span-2 justify-self-end">选手1</div>
                   <NFormItem path="playerA.nickname">
                     <NInput
@@ -147,7 +155,7 @@ const players = computed(() => data.value?.players ?? []);
               </th>
               <th />
               <th>
-                <div un-grid="~ cols-[auto_1fr] items-center gap-x-4 gap-y-2">
+                <div un-grid="~ items-center gap-x-4 gap-y-2" class="grid-cols-[auto_1fr]">
                   <div un-grid="row-span-2 justify-self-end">选手2</div>
                   <NFormItem path="playerB.nickname">
                     <NInput
@@ -169,7 +177,7 @@ const players = computed(() => data.value?.players ?? []);
           </thead>
           <TransitionGroup tag="tbody" name="common-transition-group">
             <tr key="B+">
-              <th>禁用</th>
+              <th class="text-center!">禁用</th>
               <td :colspan="3">
                 <NButton class="w-full" dashed @click="addBan">
                   <template #icon><div class="i-carbon-add" /></template>
@@ -179,7 +187,7 @@ const players = computed(() => data.value?.players ?? []);
               <td />
             </tr>
             <tr v-for="(game, gameIndex) in match.games" :key="`G${game._key}`">
-              <th>{{ t('main.tournament.gameName', [gameIndex + 1]) }}</th>
+              <th class="text-center!">{{ t('main.tournament.gameName', [gameIndex + 1]) }}</th>
               <td>
                 <AdminTournamentMatchGameSideEditor
                   v-model:deck="game.playerADeck"
@@ -188,20 +196,26 @@ const players = computed(() => data.value?.players ?? []);
                   player="A"
                 />
               </td>
-              <td>
+              <td class="text-center">
                 <NPopover trigger="click">
                   <template #trigger>
-                    <NTextSwitch
-                      :value="game.winner === 'DRAW-W' || game.winner === 'DRAW-L'"
-                      @update:value="() => {}"
-                    >
-                      平
-                    </NTextSwitch>
+                    <CommonTextButton
+                      :primary="game.winner === 'DRAW-W' || game.winner === 'DRAW-L'"
+                      text="平"
+                    />
                   </template>
                   <template #default>
                     <div un-flex="~ gap-2">
-                      <NTextSwitch :value="game.winner === 'DRAW-W'" @update:value="game.winner = 'DRAW-W'">胜</NTextSwitch>
-                      <NTextSwitch :value="game.winner === 'DRAW-L'" @update:value="game.winner = 'DRAW-L'">负</NTextSwitch>
+                      <CommonTextButton
+                        :primary="game.winner === 'DRAW-W'"
+                        text="胜"
+                        @click="game.winner = 'DRAW-W'"
+                      />
+                      <CommonTextButton
+                        :primary="game.winner === 'DRAW-L'"
+                        text="负"
+                        @click="game.winner = 'DRAW-L'"
+                      />
                     </div>
                   </template>
                 </NPopover>
@@ -216,7 +230,11 @@ const players = computed(() => data.value?.players ?? []);
               </td>
               <td>
                 <div un-flex="~ gap-2">
-                  <CommonIconButton icon="i-carbon:video" can-active active />
+                  <CommonIconButton
+                    icon="i-carbon:video" can-active
+                    :active="Boolean(game.video)"
+                    @click="async () => game.video = await inputVideo(game.video)"
+                  />
                   <template v-if="match.games.length > 1">
                     <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
                       <CommonIconButton icon="i-carbon:trash-can" danger />
@@ -240,6 +258,8 @@ const players = computed(() => data.value?.players ?? []);
           </TransitionGroup>
         </NTable>
       </NForm>
+      <AdminTournamentMatchVideoEditor ref="videoEditor" />
+      <AdminTournamentMatchActionCardsEditor ref="actionCardsEditor" />
     </template>
     <template #action>
       <NButton type="primary" secondary @click="confirm">{{ t('admin.action.confirm') }}</NButton>
@@ -247,9 +267,3 @@ const players = computed(() => data.value?.players ?? []);
     </template>
   </NModal>
 </template>
-
-<style scoped>
-th {
-  text-align: center;
-}
-</style>
