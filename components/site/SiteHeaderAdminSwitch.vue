@@ -3,7 +3,7 @@ const route = useRoute();
 
 const isDev = import.meta.env.DEV;
 
-const { t } = useI18n();
+const { t } = useLocales();
 </script>
 
 <template>

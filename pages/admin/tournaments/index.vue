@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import type { Locales } from "~/types/data";
-
 definePageMeta({ title: "site.titles.admin.tournaments" });
 
-const { t, locale } = useI18n<unknown, Locales>();
+const { t, locale } = useLocales();
 
 const { data } = await useFetch("/api/v3/tournaments/list");
 

@@ -5,7 +5,7 @@ const emit = defineEmits<{
   (e: "done"): void;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 const message = useMessage();
 
 const visible = ref(false);

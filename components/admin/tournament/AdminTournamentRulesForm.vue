@@ -3,7 +3,7 @@ import type { TournamentRules } from "~/types/data";
 
 const rules = defineModel<TournamentRules>({ required: true });
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const banCharacters = computed<boolean>({
   get: () => {

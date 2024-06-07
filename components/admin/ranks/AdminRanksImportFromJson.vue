@@ -6,7 +6,7 @@ const emit = defineEmits<{
   (e: "done", v: Ranks["ranks"]): void;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const visible = ref(false);
 const content = ref("");

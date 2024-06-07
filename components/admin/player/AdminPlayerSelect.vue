@@ -12,7 +12,7 @@ const props = defineProps<{
 
 const playerId = defineModel<string | null>("value", { default: null });
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 // 根据昵称匹配到的ID
 const nicknameBoundIds = computed(() => {

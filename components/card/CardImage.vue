@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { CardId, CardInfo, CharacterCardInfo, Locales } from "~/types/data";
+import type { CardId, CardInfo } from "~/types/data";
 
 const props = defineProps<{
   card: CardId;
 }>();
 
 const { characterCardById, actionCardById } = useSharedData();
-const { t, locale } = useI18n<unknown, Locales>();
+const { t, locale } = useLocales();
 
 const cardInfo = computed<CardInfo>(() => {
   return characterCardById.value[props.card] ?? actionCardById.value[props.card];

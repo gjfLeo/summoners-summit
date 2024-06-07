@@ -5,7 +5,7 @@ import type { Tournament } from "~/types/data";
 
 const tournament = defineModel<Tournament>({ required: true });
 
-const { t } = useI18n();
+const { t } = useLocales();
 const message = useMessage();
 
 const formRef = ref<InstanceType<typeof NForm>>();

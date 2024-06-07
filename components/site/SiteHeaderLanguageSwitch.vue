@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { t, locale, locales, setLocale } = useI18n();
+const { t, locale, locales, setLocale } = useLocales();
 const localeOptions = computed(() => {
   return locales.value
     .map(locale => (

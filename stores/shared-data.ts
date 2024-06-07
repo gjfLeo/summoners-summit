@@ -23,13 +23,11 @@ const useSharedDataStore = defineStore("shared", () => {
   onMounted(fetchTournamentTypeData);
 
   const characterCardById = ref<Record<CardId, CharacterCardInfo>>({});
+  const characterCardIds = computed(() => Object.keys(characterCardById.value).sort());
+  const characterCardList = computed(() => characterCardIds.value.map(id => characterCardById.value[id]));
   const actionCardById = ref<Record<CardId, ActionCardInfo>>({});
-  const characterCardIds = computed(() => {
-    return Object.keys(characterCardById.value);
-  });
-  const actionCardIds = computed(() => {
-    return Object.keys(actionCardById.value);
-  });
+  const actionCardIds = computed(() => Object.keys(actionCardById.value).sort());
+  const actionCardList = computed(() => actionCardIds.value.map(id => actionCardById.value[id]));
   async function fetchCardData() {
     const data = await $fetch("/api/v3/cards/getCards");
     characterCardById.value = data.characterCards;
@@ -46,9 +44,11 @@ const useSharedDataStore = defineStore("shared", () => {
     fetchTournamentTypeData,
 
     characterCardById: toComputed(characterCardById),
-    actionCardById: toComputed(actionCardById),
     characterCardIds,
+    characterCardList,
+    actionCardById: toComputed(actionCardById),
     actionCardIds,
+    actionCardList,
     fetchCardData,
   };
 });

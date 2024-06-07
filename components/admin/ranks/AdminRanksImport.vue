@@ -7,7 +7,7 @@ const emit = defineEmits<{
   (e: "done", id: string): void;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 const message = useMessage();
 
 const tableRef = ref<InstanceType<typeof NDataTable>>();

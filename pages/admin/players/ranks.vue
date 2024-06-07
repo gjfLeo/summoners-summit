@@ -3,7 +3,7 @@ import type { Ranks } from "~/types/data";
 
 definePageMeta({ title: "site.titles.admin.ranks" });
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const { data, pending, refresh } = await useFetch("/api/v3/ranks/ids");
 

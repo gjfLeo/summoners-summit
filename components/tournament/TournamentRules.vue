@@ -5,7 +5,7 @@ const props = defineProps<{
   rules: TournamentRules;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const tags = computed(() => {
   const tags = new Array<string | [string, string]>();

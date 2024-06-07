@@ -7,7 +7,7 @@ const props = defineProps<{
   tournamentId: TournamentId;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 const message = useMessage();
 
 const visible = ref(false);

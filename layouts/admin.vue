@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { SiteRoute } from "~/composables/use-site-menu";
 
-const { t } = useI18n();
+const { t } = useLocales();
 const route = useRoute();
 
 useHead({

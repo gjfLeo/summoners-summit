@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { tournamentTypeList } = useSharedData();
-const { t } = useI18n();
+const { t } = useLocales();
 
 const tournamentType = defineModel<string>("value");
 

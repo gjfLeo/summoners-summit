@@ -6,7 +6,7 @@ import type { CardId, Locales } from "~/types/data";
 const cardId = defineModel<CardId>("modelValue");
 
 const { characterCardIds, characterCardById } = useSharedData();
-const { locale } = useI18n<unknown, Locales>();
+const { locale } = useLocales();
 
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();

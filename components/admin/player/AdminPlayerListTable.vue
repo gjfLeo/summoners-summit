@@ -12,7 +12,7 @@ const emit = defineEmits<{
   (e: "mergePlayerData", id: Player["id"]): void;
 }>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const columns: DataTableColumn<Player>[] = [
   {

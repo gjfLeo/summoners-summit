@@ -54,4 +54,10 @@
     "vue",
     "vue-sfc",
   ],
+
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#00ff4040",
+    "titleBar.inactiveBackground": "#00ff4080",
+    "activityBar.background": "#00ff4020",
+  },
 }

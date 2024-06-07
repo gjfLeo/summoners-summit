@@ -18,7 +18,7 @@ const renderLabel: (option: MenuOption | MenuGroupOption) => VNode | string = (o
 };
 
 export function useSiteMenu(routes: SiteRoute[]) {
-  const { t } = useI18n();
+  const { t } = useLocales();
   const route = useRoute();
 
   const menuOptions = computed<MenuOption[]>(() => {

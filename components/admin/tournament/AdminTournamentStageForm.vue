@@ -16,7 +16,7 @@ const stage = defineModel<TournamentStage>({ required: true });
 const formRef = ref<InstanceType<typeof NForm>>();
 const partFormRefs = ref<InstanceType<typeof AdminTournamentPartForm>[]>([]);
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.stageIndex + 1]));
 

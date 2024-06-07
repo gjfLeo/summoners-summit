@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { gameVersionList } = useSharedData();
-const { t } = useI18n();
+const { t } = useLocales();
 
 const gameVersion = defineModel<string>("value");
 

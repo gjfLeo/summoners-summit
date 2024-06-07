@@ -2,7 +2,7 @@
 import { dateZhCN, enUS, zhCN } from "naive-ui";
 import { themeOverridesShared } from "@/config/theme";
 
-const { locale } = useI18n();
+const { locale } = useLocales();
 const naiveLocale = computed(() => {
   return locale.value === "zh" ? zhCN : enUS;
 });

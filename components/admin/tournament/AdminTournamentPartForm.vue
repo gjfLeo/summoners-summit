@@ -17,7 +17,7 @@ const part = defineModel<TournamentPart>({ required: true });
 
 const formRef = ref<InstanceType<typeof NForm>>();
 
-const { t } = useI18n();
+const { t } = useLocales();
 
 const defaultName = computed(() => t("main.tournament.partNameDefault", [props.partIndex + 1]));
 
