@@ -30,12 +30,12 @@ const options = computed(() => {
 
 function renderLabel(option: typeof options["value"][number]) {
   const [start, end] = option.match;
-  return [
+  return h("div", { class: "flex items-center" }, [
     h(CardImage, { card: option.value, class: "h-8 mr-2" }),
     option.label.substring(0, start),
     h(NText, { type: "primary" }, () => option.label.substring(start, end + 1)),
     option.label.substring(end + 1),
-  ];
+  ]);
 }
 
 defineExpose({

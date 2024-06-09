@@ -13,11 +13,20 @@ const deck = defineModel<Game["playerADeck"]>("deck", { required: true });
 const starter = defineModel<Game["starter"]>("starter", { required: true });
 const winner = defineModel<Game["winner"]>("winner", { required: true });
 
-const { encodeDeck } = useDeckEncoder();
+const { encodeDeck, decodeDeck } = useDeckEncoder();
 
 const actionCards = ref<CardId[]>([]);
 const characterCardSelectorRefs = ref<(InstanceType<typeof CharacterCardSelector> | null)[]>([]);
 const actionCardsEditor = inject<Ref<InstanceType<typeof ActionCardsEditor>>>("actionCardsEditor");
+
+const deckCards = computed(() => ({
+  characterCards: deck.value.characters,
+  actionCards: actionCards.value,
+}));
+watch([deck, actionCards], () => {
+  deck.value.deckCode = encodeDeck(deckCards.value);
+}, { deep: true });
+const { copy } = useCopyDeckCode(deckCards);
 
 function bindInputCharacterRef(i: number) {
   return (el: any) => characterCardSelectorRefs.value[i] = el;
@@ -40,12 +49,27 @@ async function inputActionCards() {
   }
 }
 
-watch([deck, actionCards], () => {
-  deck.value.deckCode = encodeDeck({
-    characterCards: deck.value.characters,
-    actionCards: actionCards.value,
-  });
-}, { deep: true });
+function copyDeck() {
+  copy();
+}
+
+const permissionClipboardRead = usePermission("clipboard-read");
+const message = useMessage();
+async function pasteDeck() {
+  try {
+    if (permissionClipboardRead.value === "denied") {
+      throw new Error("无读取剪贴板权限");
+    }
+    const text = await navigator.clipboard.readText();
+    const pastedDeck = decodeDeck(text);
+    deck.value.characters = pastedDeck.characterCards;
+    actionCards.value = pastedDeck.actionCards;
+    message.success("已粘贴");
+  }
+  catch (e: any) {
+    message.error(e.message);
+  }
+}
 </script>
 
 <template>
@@ -80,5 +104,7 @@ watch([deck, actionCards], () => {
     >
       行动牌 ({{ actionCards.length }})
     </CommonTextButton>
+    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
+    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
   </div>
 </template>

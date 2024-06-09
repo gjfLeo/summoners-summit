@@ -4,24 +4,24 @@ import type { DeckCards, DeckCode } from "~/types/data/deck";
 const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "ntr", "pcp", "rbq"];
 
 export function useDeckEncoder() {
-  const { characterCardById, actionCardById } = useSharedData();
+  const { characterCardById, actionCardById, characterCardList, actionCardList } = useSharedData();
 
   const getCharacterCardByShareId = useMemoize((shareId: number): CardId => {
     if (shareId === 0) return "";
-    const card = Object.entries(characterCardById).find(([_card, info]) => info.shareId === shareId);
+    const card = characterCardList.value.find(card => card.shareId === shareId);
     if (!card) throw new Error(`Invalid character card shareId during decode: ${shareId}`);
-    return card[0] as CardId;
+    return card.id as CardId;
   });
   const getActionCardByShareId = useMemoize((shareId: number): CardId => {
     if (shareId === 0) return "";
-    const card = Object.entries(actionCardById).find(([_card, info]) => info.shareId === shareId);
-    if (!card) throw new Error(`Invalid action card shareId during decode: ${shareId}`);
-    return card[0] as CardId;
+    const card = actionCardList.value.find(card => card.shareId === shareId);
+    if (!card) throw new Error(`Invalid character card shareId during decode: ${shareId}`);
+    return card.id as CardId;
   });
   function encodeDeck(deck: DeckCards): DeckCode {
     const shareIds = [
-      ...deck.characterCards.map(cardId => characterCardById.value[cardId].shareId),
-      ...deck.actionCards.map(cardId => actionCardById.value[cardId].shareId),
+      ...deck.characterCards.map(cardId => characterCardById.value[cardId]?.shareId ?? "0"),
+      ...deck.actionCards.map(cardId => actionCardById.value[cardId]?.shareId ?? "0"),
     ];
     // 补齐为34项12-bit数组
     shareIds.push(0);
@@ -76,9 +76,9 @@ export function useDeckEncoder() {
       ]);
     // 最后一项是多余的
     shareIds.pop();
-
     const characterCards = shareIds.splice(0, 3).map(shareId => getCharacterCardByShareId(shareId));
-    const actionCards = shareIds.map(shareId => getActionCardByShareId(shareId));
+    const actionCards = shareIds.map(shareId => getActionCardByShareId(shareId)).filter(card => Boolean(card));
+    console.log(characterCards, actionCards);
     return { characterCards, actionCards };
   }
 

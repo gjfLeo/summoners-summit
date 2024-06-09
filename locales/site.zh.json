@@ -11,6 +11,9 @@
     "tournamentList": "赛事列表",
     "tournamentTemplate": "赛事模板"
   },
+  "messages": {
+    "copied": "已复制"
+  },
   "name": "召唤之巅",
   "titles": {
     "admin": {

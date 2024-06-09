@@ -1,5 +1,8 @@
 {
   "description": "Tournament Match Database for GITCG",
+  "messages": {
+    "copied": "Copied!"
+  },
   "name": "Summoners' Summit",
   "titles": {
     "format": "{pageTitle} {'|'} {siteTitle}"

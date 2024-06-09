@@ -9,7 +9,7 @@ const props = defineProps<{
 const themeVars = useThemeVars();
 
 const style = computed(() => {
-  const style = {};
+  const style = { };
   if (props.danger) {
     Object.assign(style, {
       "--n-text-color-hover": themeVars.value.errorColorHover,

@@ -50,17 +50,25 @@ function handleInputCount(value: string) {
   cardSelectorRef.value?.clear();
   cardSelectorRef.value?.focus();
 }
+
+function remove(_cardId: CardId, i: number) {
+  actionCards.value.splice(i, 1);
+}
+function clear() {
+  actionCards.value = [];
+}
 </script>
 
 <template>
   <NModal
     v-model:show="visible"
     preset="dialog" :show-icon="false" :title="t('terms.actionCards')"
+    class="w-800px!"
   >
     <template #default>
       <NForm inline :show-label="false" :show-feedback="false">
         <NFormItem>
-          <EditorActionCardSelector ref="cardSelectorRef" :action-cards="actionCards" @select="handleSelectCard" />
+          <AdminTournamentMatchActionCardSelector ref="cardSelectorRef" :action-cards="actionCards" @select="handleSelectCard" />
         </NFormItem>
         <NFormItem>
           <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" placeholder="数量" @update:value="handleInputCount" />
@@ -72,9 +80,42 @@ function handleInputCount(value: string) {
           <NButton @click="clear">清空</NButton>
         </NFormItem>
       </NForm>
+      <div class="mt" un-grid="~ cols-6 md:cols-10 gap-2">
+        <template v-for="(cardId, i) in actionCards" :key="i">
+          <div class="card-container" @click="remove(cardId, i)">
+            <CardImage :card="cardId" />
+            <div class="card-shadow">
+              <NText class="text-4xl text-white"><div class="i-carbon:close" /></NText>
+            </div>
+          </div>
+        </template>
+      </div>
     </template>
     <template #action>
       <NButton type="primary" secondary @click="confirm">{{ t('admin.action.confirm') }}</NButton>
     </template>
   </NModal>
 </template>
+
+<style scoped>
+.card-container {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  cursor: pointer;
+
+  &>* {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.card-shadow {
+  border-radius: 0.25rem;
+  background-color: #4448;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-container:not(:hover) & {
+    display: none;
+  }
+}
+</style>
