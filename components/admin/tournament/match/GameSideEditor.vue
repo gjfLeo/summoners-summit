@@ -24,7 +24,7 @@ const deckCards = computed(() => ({
   actionCards: actionCards.value,
 }));
 watch([deck, actionCards], () => {
-  deck.value.deckCode = encodeDeck(deckCards.value);
+  deck.value.deckCode = deckCards.value.actionCards.length ? encodeDeck(deckCards.value) : undefined;
 }, { deep: true });
 const { copy } = useCopyDeckCode(deckCards);
 
@@ -46,6 +46,7 @@ async function inputActionCards() {
     actionCards.value = await actionCardsEditor.value.edit(actionCards.value);
   }
   catch (e) {
+    // 取消
   }
 }
 

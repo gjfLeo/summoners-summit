@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { deleteGame, saveGame } from "./game";
-import { ZGame, ZMatch } from "~/types/data";
-import type { Game, Match, MatchId, MatchR } from "~/types/data";
+import { ZCardId, ZGame, ZMatch } from "~/types/data";
+import type { Ban, Game, Match, MatchId, MatchR } from "~/types/data";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   // 通过比赛ID读取比赛数据，并解析为Match对象
@@ -29,10 +29,16 @@ export const ZMatchSaveParams = ZMatch.partial({
   id: true,
 }).omit({
   gameIds: true,
+  bans: true,
 }).extend({
   stageIndex: z.number(),
   partIndex: z.number(),
 
+  bans: z.object({
+    _key: z.number(),
+    playerACardIds: z.union([ZCardId.array().length(1), ZCardId.array().length(3)]),
+    playerBCardIds: z.union([ZCardId.array().length(1), ZCardId.array().length(3)]),
+  }).array(),
   games: ZGame.omit({
     id: true,
     matchId: true,
@@ -71,14 +77,32 @@ export function saveMatch(params: MatchSaveParams) {
       id: gameId,
       matchId,
     };
-    game.playerADeck.teamId = game.playerADeck.characters.join("-");
-    game.playerBDeck.teamId = game.playerBDeck.characters.join("-");
+    game.playerADeck.teamId = game.playerADeck.characters.toSorted().join("-");
+    game.playerBDeck.teamId = game.playerBDeck.characters.toSorted().join("-");
     return game;
+  });
+
+  const bans = params.bans.map<Ban>((banRaw) => {
+    if (banRaw.playerACardIds.length === 1) {
+      return {
+        banType: "character",
+        playerACardId: banRaw.playerACardIds[0],
+        playerBCardId: banRaw.playerBCardIds[0],
+      };
+    }
+    else {
+      return {
+        banType: "team",
+        playerATeamId: banRaw.playerACardIds.toSorted().join("-"),
+        playerBTeamId: banRaw.playerBCardIds.toSorted().join("-"),
+      };
+    }
   });
 
   const match: Match = {
     ...params,
     id: matchId,
+    bans: bans.length ? bans : undefined,
     gameIds: games.map(g => g.id),
   };
 
@@ -86,4 +110,6 @@ export function saveMatch(params: MatchSaveParams) {
   getMatch(matchId)?.gameIds.forEach(gId => deleteGame(gId));
   games.forEach(saveGame);
   saveTournament(tournament);
+
+  return matchId;
 }

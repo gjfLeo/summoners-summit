@@ -1,6 +1,5 @@
 import { z } from "zod";
 import { mergePlayer } from "~/server/utils/players";
-import type { ApiResponse } from "~/server/utils/response";
 import { ZPlayerId } from "~/types/data";
 
 const ZParams = z.object({
@@ -8,7 +7,7 @@ const ZParams = z.object({
   targetId: ZPlayerId,
 });
 
-export default defineEventHandler(async (event): Promise<ApiResponse> => {
+export default defineEventHandler(async (event) => {
   const { sourceId, targetId } = await readValidatedBody(event, ZParams.parse);
 
   try {

@@ -32,9 +32,18 @@ export function deletePlayer(playerId: string) {
 const ZSavePlayerParams = ZPlayer.partial({ id: true });
 type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
+  const oldId = params.id;
+  const newId = hash(params.uids[0] ?? params.uniqueName);
+  if (oldId) {
+    deletePlayer(oldId);
+    updateIndex((index) => {
+      index.redirect[oldId] = newId;
+    });
+  }
+
   const player = {
     ...params,
-    id: params.id ?? hash(params.uids[0]),
+    id: newId,
     aliases: params.aliases.toSorted(),
   };
 

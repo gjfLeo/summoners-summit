@@ -46,6 +46,7 @@
     "stage": "阶段",
     "stageName": "阶段名称",
     "stageNameDefault": "阶段 {0}",
-    "type": "赛事类型"
+    "type": "赛事类型",
+    "ban": "禁用"
   }
 }

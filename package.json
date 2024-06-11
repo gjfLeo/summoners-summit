@@ -41,7 +41,8 @@
     "nuxt-module-eslint-config": "^0.1.1",
     "pinia": "^2.1.7",
     "pinyin-match": "^1.2.5",
-    "simple-git": "^3.24.0",
+    "shelljs": "^0.8.5",
+    "simple-git": "^3.25.0",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.21",
     "zod": "^3.23.8"

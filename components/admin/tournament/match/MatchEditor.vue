@@ -1,10 +1,14 @@
 <script lang="ts" setup>
-import type { TournamentId } from "~/types/data";
+import type { MatchId, TournamentId } from "~/types/data";
 import type { MatchSaveParams } from "~/server/utils/match";
 import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
 
 const props = defineProps<{
   tournamentId: TournamentId;
+}>();
+
+const emit = defineEmits<{
+  (e: "done", matchId: MatchId): void;
 }>();
 
 const { t } = useLocales();
@@ -46,6 +50,7 @@ async function create(params: { stageIndex: number; partIndex: number }) {
     playerB: {
       nickname: "",
     },
+    bans: [],
     games: [],
   };
   addGame();
@@ -68,11 +73,23 @@ async function confirm() {
       .forEach(e => message.warning(e.message!));
     return;
   }
-  const res = await $fetch("/api/v3/matches/save", {
-    method: "POST",
-    body: match.value,
-  });
-  console.log(res);
+  try {
+    const res = await $fetch("/api/v3/matches/save", {
+      method: "POST",
+      body: match.value,
+    });
+    if (res?.success) {
+      message.success(t("admin.message.SUCCESS"));
+      emit("done", res.id);
+      visible.value = false;
+    }
+    else {
+      message.error(t(`admin.message.${res?.code}`));
+    }
+  }
+  catch (error) {
+    console.error(error);
+  }
 }
 
 function cancel() {
@@ -80,13 +97,6 @@ function cancel() {
   visible.value = false;
 }
 
-function addBan() {
-  // if (!match.value.bans) match.value.bans = [];
-  // match.value.bans.push({
-  //   playerACharacters: [],
-  //   playerBCharacters: [],
-  // });
-}
 let key = 0;
 function addGame() {
   match.value.games.push({
@@ -101,6 +111,16 @@ function addGame() {
 }
 function deleteGame(gameIndex: number) {
   match.value.games.splice(gameIndex, 1);
+}
+function addBan() {
+  match.value.bans.push({
+    _key: key++,
+    playerACardIds: [],
+    playerBCardIds: [],
+  });
+}
+function deleteBan(banIndex: number) {
+  match.value.bans.splice(banIndex, 1);
 }
 
 defineExpose({
@@ -176,6 +196,29 @@ provide("actionCardsEditor", actionCardsEditor);
             </tr>
           </thead>
           <TransitionGroup tag="tbody" name="common-transition-group">
+            <tr v-for="(ban, banIndex) in match.bans" :key="`B${ban._key}`">
+              <th class="text-center!">{{ t('main.tournament.ban') }}</th>
+              <td>
+                <AdminTournamentMatchBanSideEditor
+                  v-model:card-ids="ban.playerACardIds"
+                />
+              </td>
+              <td />
+              <td>
+                <AdminTournamentMatchBanSideEditor
+                  v-model:card-ids="ban.playerBCardIds"
+                />
+              </td>
+              <td>
+                <div un-flex="~ gap-2">
+                  <template v-if="match.games.length > 1">
+                    <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteBan(banIndex)">
+                      <CommonIconButton icon="i-carbon:trash-can" danger />
+                    </CommonConfirmButton>
+                  </template>
+                </div>
+              </td>
+            </tr>
             <tr key="B+">
               <th class="text-center!">禁用</th>
               <td :colspan="3">

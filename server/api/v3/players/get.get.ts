@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   const player = getPlayer(id);
 
   if (!player) {
-    return responseErrorCode<{ player: Player }>("PLAYER_NOT_FOUND");
+    return responseErrorCode("PLAYER_NOT_FOUND");
   }
 
   return responseData({ player });

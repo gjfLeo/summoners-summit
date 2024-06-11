@@ -1,13 +1,19 @@
-export type ApiResponse<T = void> = {
-  success: boolean;
+export type ApiResponseSuccess<T = void> = {
+  success: true;
   code: string;
 } & T;
+export interface ApiResponseError {
+  success: false;
+  code: string;
+}
+
+export type ApiResponse<T = void> = ApiResponseSuccess<T> | ApiResponseError;
 
 export function responseOk<T = void>() {
   return {
     success: true,
     code: "SUCCESS",
-  } as ApiResponse<T>;
+  } as ApiResponseSuccess<T>;
 }
 
 export function responseData<T>(data: T) {
@@ -15,12 +21,12 @@ export function responseData<T>(data: T) {
     success: true,
     code: "SUCCESS",
     ...data,
-  } as ApiResponse<T>;
+  } as ApiResponseSuccess<T>;
 }
 
-export function responseErrorCode<T = void>(code: string) {
+export function responseErrorCode(code: string) {
   return {
     success: false,
     code,
-  } as ApiResponse<T>;
+  } as ApiResponseError;
 }

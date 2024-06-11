@@ -3,6 +3,10 @@ import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { AdminTournamentStageForm, NForm } from "#components";
 import type { Tournament } from "~/types/data";
 
+const emit = defineEmits<{
+  (e: "save"): void;
+}>();
+
 const tournament = defineModel<Tournament>({ required: true });
 
 const { t } = useLocales();
@@ -62,6 +66,7 @@ async function save() {
       await navigateTo(`/admin/tournament/${res.id}`);
     }
     editing.value = false;
+    emit("save");
   }
 }
 
@@ -155,5 +160,5 @@ provide("matchEditor", matchEditor);
   >
     <div class="i-carbon:save" />
   </NFloatButton>
-  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" />
+  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="save" />
 </template>

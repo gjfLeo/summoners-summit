@@ -15,10 +15,12 @@ const tournament = ref<Tournament>({
   stages: [],
 });
 
+const { data, refresh } = await useFetch(() => "/api/v3/tournaments/get", {
+  query: { id },
+  immediate: false,
+});
 if (id) {
-  const { data } = await useFetch(() => "/api/v3/tournaments/get", {
-    query: { id },
-  });
+  await refresh();
   if (!data.value?.tournament) {
     await navigateTo({ name: route.name });
   }
@@ -31,7 +33,7 @@ if (id) {
 <template>
   <div>
     <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
-    <AdminTournamentForm v-model="tournament" />
+    <AdminTournamentForm v-model="tournament" @save="refresh" />
 
     <ClientOnly>
       <Teleport to="#right-sider">
