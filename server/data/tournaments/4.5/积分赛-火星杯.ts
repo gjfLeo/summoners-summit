@@ -6,7 +6,7 @@ export default defineTournament({
   gameVersion: "4.5",
   stages: [
     {
-      name: "8近4",
+      name: "8进4",
       rules: {
         numDecks: 3,
         numGames: 5,
