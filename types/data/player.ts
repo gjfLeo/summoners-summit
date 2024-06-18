@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const ZPlayerId = z.coerce.string().regex(/^\w{16}$/);
 export const ZPlayerUid = z.coerce.string().regex(/^\d{9}$/);
-export const ZPlayerNickname = z.coerce.string().trim().min(1);
+export const ZPlayerNickname = z.coerce.string().trim();
 
 export const ZPlayer = z.object({
   id: ZPlayerId,

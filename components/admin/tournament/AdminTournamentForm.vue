@@ -160,5 +160,5 @@ provide("matchEditor", matchEditor);
   >
     <div class="i-carbon:save" />
   </NFloatButton>
-  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="save" />
+  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save')" />
 </template>

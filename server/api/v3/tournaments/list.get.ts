@@ -14,5 +14,12 @@ export default defineEventHandler(async (event) => {
     tournaments = tournaments.filter(t => t.gameVersion === gameVersion);
   }
 
+  tournaments.sort((a, b) => {
+    if (!a.dateRange.start || !b.dateRange.start) {
+      return 0;
+    }
+    return b.dateRange.start.localeCompare(a.dateRange.start);
+  });
+
   return responseData({ tournaments });
 });

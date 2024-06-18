@@ -20,20 +20,21 @@ export const ZGame = z.object({
   }),
   winner: z.enum(["A", "B", "DRAW-W", "DRAW-L"]).optional(),
   starter: z.enum(["A", "B"]).optional(),
-  video: z.string().optional(),
+  gameVideo: z.string().optional(),
 });
 
 export const ZGameR = ZGame.extend({
   gameVersion: ZGameVersionId,
   tournamentId: ZTournamentId,
   playerA: z.object({
-    playerId: ZPlayerId.optional(),
+    playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }),
   playerB: z.object({
-    playerId: ZPlayerId.optional(),
+    playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }),
+  matchVideo: z.string().optional(),
 });
 
 const ZBanCharacter = z.object({

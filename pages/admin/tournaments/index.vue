@@ -1,30 +1,72 @@
 <script lang="ts" setup>
+import type { GameVersionId, SeasonPhraseId, TournamentId, TournamentRB } from "~/types/data";
+
 definePageMeta({ title: "site.titles.admin.tournaments" });
 
-const { t, locale } = useLocales();
+const { tournaments } = await useApiGetTournamentList();
+const { gameVersionList } = useSharedData();
 
-const { data } = await useFetch("/api/v3/tournaments/list");
+const bySeason = computed(() => {
+  const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentRB[]>> = {};
+  tournaments.value.forEach((tournament) => {
+    const gameVersionId = tournament.gameVersion;
+    const gameVersion = gameVersionList.value.find(v => v.id === gameVersionId);
+    if (!gameVersion) {
+      return;
+    }
+    const season = gameVersion.seasonPhrase.split(".")[0];
+    if (!bySeason[season]) bySeason[season] = {};
+    if (!bySeason[season][gameVersionId]) bySeason[season][gameVersionId] = [];
+    bySeason[season][gameVersionId].push(tournament);
+  });
+  return bySeason;
+});
+const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
 
-const tournaments = computed(() => data.value?.tournaments ?? []);
-
-const gameVersion = ref<string>();
+const router = useRouter();
+const localePath = useLocalePath();
+function handleAdd() {
+  router.push(localePath("/admin/tournament"));
+}
+function handleItemClick(tournamentId: TournamentId) {
+  router.push(localePath(`/admin/tournament/${tournamentId}`));
+}
 </script>
 
 <template>
-  <div un-flex="~ col gap-4">
-    <div un-flex="~ gap-2">
-      <div><GameVersionSelect v-model:value="gameVersion" /></div>
-      <div class="ml-auto" />
-      <NButtonLink type="primary" secondary to="/admin/tournament">{{ t("admin.action.add") }}</NButtonLink>
-    </div>
-    <div>
-      <template v-for="tournament in tournaments" :key="tournament.id">
-        <NuxtLinkLocale
-          :to="`/admin/tournament/${tournament.id}`"
-        >
-          {{ tournament.name[locale] }}
-        </NuxtLinkLocale>
+  <div>
+    <template v-for="season in seasons" :key="season">
+      <NH2 :id="`S${season}`">第{{ season }}赛季</NH2>
+      <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
+        <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
+        <TournamentList :tournaments="list" @item-click="handleItemClick" />
       </template>
-    </div>
+    </template>
+
+    <NFloatButton
+      type="primary"
+      right="2rem" bottom="2rem"
+      @click="handleAdd"
+    >
+      <div class="i-carbon:add" />
+    </NFloatButton>
+
+    <SitePageAnchors>
+      <template v-for="season in seasons" :key="season">
+        <NAnchor title="a" />
+        <NAnchor title="b" />
+        <!-- <NAnchor
+          :title="`第\u2006${season}\u2006赛季`"
+          :href="`#S${season}`"
+        >
+          <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
+            <NAnchor
+              :title="gameVersion"
+              :href="gameVersion.replace('.', '-')"
+            />
+          </template>
+        </NAnchor> -->
+      </template>
+    </SitePageAnchors>
   </div>
 </template>

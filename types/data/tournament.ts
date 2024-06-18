@@ -60,7 +60,7 @@ export const ZTournament = z.object({
 
 export const ZTournamentR = ZTournament.extend({
   champion: z.object({
-    playerId: ZPlayerId.optional(),
+    playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }).optional(),
   dateRange: z.object({
@@ -69,16 +69,20 @@ export const ZTournamentR = ZTournament.extend({
   }),
 }).strip();
 
+export const ZTournamentRB = ZTournamentR.omit({
+  stages: true,
+}).strip();
+
 export const ZMatch = z.object({
   id: ZMatchId,
   tournamentId: ZTournamentId,
   isFinal: z.boolean().optional(),
   playerA: z.object({
-    playerId: ZNullToUndefined(ZPlayerId.optional()),
+    playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }),
   playerB: z.object({
-    playerId: ZNullToUndefined(ZPlayerId.optional()),
+    playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }),
   winner: z.enum(["A", "B", "DRAW"]).optional(),
@@ -95,6 +99,7 @@ export const ZMatchR = ZMatch.extend({
 export type TournamentType = z.infer<typeof ZTournamentType>;
 export type Tournament = z.infer<typeof ZTournament>;
 export type TournamentR = z.infer<typeof ZTournamentR>;
+export type TournamentRB = z.infer<typeof ZTournamentRB>;
 export type Match = z.infer<typeof ZMatch>;
 export type MatchR = z.infer<typeof ZMatchR>;
 export type TournamentRules = z.infer<typeof ZTournamentRules>;

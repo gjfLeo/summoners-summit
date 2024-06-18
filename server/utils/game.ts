@@ -16,6 +16,7 @@ export function getGameR(gameId: GameId): GameR | undefined {
     tournamentId: match.tournamentId,
     playerA: match.playerA,
     playerB: match.playerB,
+    matchVideo: match.video,
   };
 }
 

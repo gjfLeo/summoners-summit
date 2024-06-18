@@ -8,7 +8,8 @@
     "otherNicknames": "其他昵称",
     "rank": "排名",
     "score": "积分",
-    "uid": "UID"
+    "uid": "UID",
+    "unknownPlayer": "未知选手"
   },
   "rules": {
     "banCharacters": "禁用角色：{0}",
@@ -46,7 +47,9 @@
     "stage": "阶段",
     "stageName": "阶段名称",
     "stageNameDefault": "阶段 {0}",
-    "type": "赛事类型",
-    "ban": "禁用"
+    "type": "赛事类别",
+    "ban": "禁用",
+    "dateRange": "直播赛段时间",
+    "champion": "冠军"
   }
 }

@@ -1,7 +1,10 @@
 import { z } from "zod";
 import { deleteGame, saveGame } from "./game";
-import { ZCardId, ZGame, ZMatch } from "~/types/data";
+import { bindPlayerNickname } from "./players";
+import { ZCardId, ZGame, ZMatch, ZPlayerId, ZPlayerNickname } from "~/types/data";
 import type { Ban, Game, Match, MatchId, MatchR } from "~/types/data";
+import { ZNullToUndefined } from "~/types/data/schemas";
+import { ZDeckCode } from "~/types/data/deck";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   // 通过比赛ID读取比赛数据，并解析为Match对象
@@ -30,9 +33,20 @@ export const ZMatchSaveParams = ZMatch.partial({
 }).omit({
   gameIds: true,
   bans: true,
+  playerA: true,
+  playerB: true,
 }).extend({
   stageIndex: z.number(),
   partIndex: z.number(),
+
+  playerA: z.object({
+    playerId: ZNullToUndefined(ZPlayerId.optional()),
+    nickname: ZPlayerNickname,
+  }),
+  playerB: z.object({
+    playerId: ZNullToUndefined(ZPlayerId.optional()),
+    nickname: ZPlayerNickname,
+  }),
 
   bans: z.object({
     _key: z.number(),
@@ -44,12 +58,20 @@ export const ZMatchSaveParams = ZMatch.partial({
     matchId: true,
   }).extend({
     _key: z.number(),
+    playerADeck: z.object({
+      characters: z.array(ZCardId).length(3),
+      deckCode: ZDeckCode.optional(),
+    }),
+    playerBDeck: z.object({
+      characters: z.array(ZCardId).length(3),
+      deckCode: ZDeckCode.optional(),
+    }),
   }).array(),
 }).strip();
 export type MatchSaveParams = z.infer<typeof ZMatchSaveParams>;
 export function saveMatch(params: MatchSaveParams) {
   const tournament = getTournament(params.tournamentId);
-  const matchIds = tournament?.stages[params.stageIndex].parts[params.partIndex].matchIds;
+  const matchIds = tournament?.stages[params.stageIndex]?.parts[params.partIndex]?.matchIds;
   if (!matchIds) {
     throw new Error("TOURNAMENT_STAGE_OR_PART_NOT_FOUND");
   }
@@ -68,7 +90,17 @@ export function saveMatch(params: MatchSaveParams) {
     matchId = `${tournament.id}${String(maxMatchIndex + 1).padStart(2, "0")}`;
     params.id = matchId;
     matchIds.push(matchId);
+    saveTournament(tournament);
   }
+
+  const playerA = {
+    nickname: params.playerA.nickname,
+    playerId: bindPlayerNickname(params.playerA),
+  };
+  const playerB = {
+    nickname: params.playerB.nickname,
+    playerId: bindPlayerNickname(params.playerB),
+  };
 
   const games = params.games.map((gameParam, index) => {
     const gameId = `${matchId}${String(index + 1).padStart(2, "0")}`;
@@ -102,6 +134,8 @@ export function saveMatch(params: MatchSaveParams) {
   const match: Match = {
     ...params,
     id: matchId,
+    playerA,
+    playerB,
     bans: bans.length ? bans : undefined,
     gameIds: games.map(g => g.id),
   };
@@ -109,7 +143,6 @@ export function saveMatch(params: MatchSaveParams) {
   writeData(`matches/${matchId}`, ZMatch.parse(match));
   getMatch(matchId)?.gameIds.forEach(gId => deleteGame(gId));
   games.forEach(saveGame);
-  saveTournament(tournament);
 
   return matchId;
 }

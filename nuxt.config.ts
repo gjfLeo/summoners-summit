@@ -1,4 +1,5 @@
 // import { pwa } from "./config/pwa";
+import dayjs from "dayjs";
 
 export default defineNuxtConfig({
   modules: [
@@ -11,6 +12,12 @@ export default defineNuxtConfig({
     "nuxt-module-eslint-config",
     "@nuxtjs/i18n",
   ],
+
+  runtimeConfig: {
+    public: {
+      updateTime: dayjs().add(new Date().getTimezoneOffset() + 480, "minutes").format("YYYY-MM-DD HH:mm:ss"),
+    },
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -35,7 +42,7 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-      crawlLinks: false,
+      crawlLinks: true,
       routes: ["/"],
       ignore: ["/admin"],
     },
@@ -45,9 +52,8 @@ export default defineNuxtConfig({
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
-        { rel: "icon", href: "/favicon.ico", sizes: "any" },
-        { rel: "icon", type: "image/svg+xml", href: "/nuxt.svg" },
-        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "icon", type: "image/svg+xml", href: `${process.env.NUXT_APP_BASE_URL ?? "/"}favicon.svg` },
+        { rel: "apple-touch-icon", href: `${process.env.NUXT_APP_BASE_URL ?? "/"}apple-touch-icon.png` },
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -64,11 +70,6 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: false,
-  },
-
-  features: {
-    // For UnoCSS
-    inlineStyles: false,
   },
 
   eslintConfig: {

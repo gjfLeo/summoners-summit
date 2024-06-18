@@ -34,7 +34,7 @@ type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
   const oldId = params.id;
   const newId = hash(params.uids[0] ?? params.uniqueName);
-  if (oldId) {
+  if (oldId && oldId !== newId) {
     deletePlayer(oldId);
     updateIndex((index) => {
       index.redirect[oldId] = newId;
@@ -52,6 +52,7 @@ export function savePlayer(params: SavePlayerParams) {
   });
 
   writeData(`players/${player.id}`, ZPlayer.parse(player));
+  return player.id;
 }
 
 export function mergePlayer(sourceId: string, targetId: string) {
@@ -70,6 +71,27 @@ export function mergePlayer(sourceId: string, targetId: string) {
   updateIndex((index) => {
     index.redirect[sourceId] = targetId;
   });
+}
+
+export function bindPlayerNickname({ nickname, playerId }: { nickname: string; playerId?: string }) {
+  const player = playerId ? getPlayer(playerId) : undefined;
+  if (!player) {
+    return savePlayer({
+      uniqueName: nickname,
+      aliases: [],
+      uids: [],
+    });
+  }
+  else {
+    if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
+      player.aliases.push(nickname);
+      savePlayer(player);
+      return player.id;
+    }
+    else {
+      return player.id;
+    }
+  }
 }
 
 function readIndex(): PlayerIndex {

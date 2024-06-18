@@ -41,18 +41,11 @@ const rules = {
 };
 
 const matchEditor = inject<Ref<InstanceType<typeof AdminTournamentMatchEditor>>>("matchEditor");
-async function addMatch() {
-  if (matchEditor?.value) {
-    try {
-      const matchId = await matchEditor.value.create({
-        stageIndex: props.stageIndex,
-        partIndex: props.partIndex,
-      });
-      // part.value.matchIds.push(matchId);
-    }
-    catch {
-    }
-  }
+function addMatch() {
+  matchEditor?.value.create({
+    stageIndex: props.stageIndex,
+    partIndex: props.partIndex,
+  });
 }
 
 function validate() {
@@ -94,6 +87,16 @@ defineExpose({ validate });
     </CommonTransition>
 
     <template v-if="!editing">
+      <template v-for="matchId in part.matchIds" :key="matchId">
+        <div>{{ matchId }}</div>
+      </template>
+
+      <template v-if="part.matchIds.length === 0">
+        <div class="mt">
+          <NText :depth="3">该分组下暂无场次</NText>
+        </div>
+      </template>
+
       <NButton
         class="mt w-full" dashed
         @click="addMatch"

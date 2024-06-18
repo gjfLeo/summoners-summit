@@ -16,8 +16,6 @@ const message = useMessage();
 
 const visible = ref(false);
 const match = ref<MatchSaveParams>({} as MatchSaveParams);
-const editorResolve = ref<(v: string) => void>();
-const editorReject = ref<() => void>();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const formRules: FormRules = {
@@ -56,13 +54,14 @@ async function create(params: { stageIndex: number; partIndex: number }) {
   addGame();
 
   visible.value = true;
-
-  return new Promise<string>((resolve, reject) => {
-    editorResolve.value = resolve;
-    editorReject.value = reject;
-  });
 };
 
+defineExpose({
+  create,
+});
+
+const { data, refresh: refreshPlayers } = await useFetch("/api/v3/players/list");
+const players = computed(() => data.value?.players ?? []);
 async function confirm() {
   try {
     await formRef.value?.validate();
@@ -80,6 +79,7 @@ async function confirm() {
     });
     if (res?.success) {
       message.success(t("admin.message.SUCCESS"));
+      refreshPlayers();
       emit("done", res.id);
       visible.value = false;
     }
@@ -93,7 +93,6 @@ async function confirm() {
 }
 
 function cancel() {
-  editorReject.value?.();
   visible.value = false;
 }
 
@@ -122,14 +121,6 @@ function addBan() {
 function deleteBan(banIndex: number) {
   match.value.bans.splice(banIndex, 1);
 }
-
-defineExpose({
-  create,
-});
-
-const { data } = await useFetch("/api/v3/players/list");
-const players = computed(() => data.value?.players ?? []);
-
 const videoEditor = ref<InstanceType<typeof AdminTournamentMatchVideoEditor>>();
 function inputVideo(video: string | undefined) {
   return videoEditor.value?.input(video);
@@ -192,7 +183,13 @@ provide("actionCardsEditor", actionCardsEditor);
                   />
                 </div>
               </th>
-              <th />
+              <th>
+                <CommonIconButton
+                  icon="i-carbon:video" can-active
+                  :active="Boolean(match.video)"
+                  @click="async () => match.video = await inputVideo(match.video)"
+                />
+              </th>
             </tr>
           </thead>
           <TransitionGroup tag="tbody" name="common-transition-group">
@@ -275,8 +272,8 @@ provide("actionCardsEditor", actionCardsEditor);
                 <div un-flex="~ gap-2">
                   <CommonIconButton
                     icon="i-carbon:video" can-active
-                    :active="Boolean(game.video)"
-                    @click="async () => game.video = await inputVideo(game.video)"
+                    :active="Boolean(game.gameVideo)"
+                    @click="async () => game.gameVideo = await inputVideo(game.gameVideo)"
                   />
                   <template v-if="match.games.length > 1">
                     <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
