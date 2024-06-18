@@ -109,6 +109,17 @@
     "gameVersion": "4.5",
     "actionType": "equipment"
   },
+  "211111": {
+    "id": "211111",
+    "name": {
+      "zh": "予行恶者以惩惧",
+      "en": "Terror for the Evildoers"
+    },
+    "shareId": 372,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "212011": {
     "id": "212011",
     "name": {
@@ -217,6 +228,17 @@
     "shareId": 339,
     "type": "action",
     "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "212111": {
+    "id": "212111",
+    "name": {
+      "zh": "「诸君听我颂，共举爱之杯！」",
+      "en": "\"Hear Me — Let Us Raise the Chalice of Love!\""
+    },
+    "shareId": 373,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "213011": {
@@ -340,6 +362,17 @@
     "gameVersion": "4.4",
     "actionType": "equipment"
   },
+  "213121": {
+    "id": "213121",
+    "name": {
+      "zh": "地狱里摇摆",
+      "en": "Rockin' in a Flaming World"
+    },
+    "shareId": 374,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "214011": {
     "id": "214011",
     "name": {
@@ -450,6 +483,17 @@
     "gameVersion": "4.2",
     "actionType": "equipment"
   },
+  "214111": {
+    "id": "214111",
+    "name": {
+      "zh": "割舍软弱之心",
+      "en": "To Ward Weakness"
+    },
+    "shareId": 362,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
   "215011": {
     "id": "215011",
     "name": {
@@ -538,6 +582,17 @@
     "gameVersion": "4.3",
     "actionType": "equipment"
   },
+  "215091": {
+    "id": "215091",
+    "name": {
+      "zh": "妙道合真",
+      "en": "The Wondrous Path of Truth"
+    },
+    "shareId": 352,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
   "216011": {
     "id": "216011",
     "name": {
@@ -602,6 +657,17 @@
     "shareId": 292,
     "type": "action",
     "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "216071": {
+    "id": "216071",
+    "name": {
+      "zh": "庄谐并举",
+      "en": "Decorous Harmony"
+    },
+    "shareId": 375,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "217011": {
@@ -681,6 +747,17 @@
     "gameVersion": "4.5",
     "actionType": "equipment"
   },
+  "217081": {
+    "id": "217081",
+    "name": {
+      "zh": "预算师的技艺",
+      "en": "The Art of Budgeting"
+    },
+    "shareId": 376,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "221011": {
     "id": "221011",
     "name": {
@@ -736,6 +813,28 @@
     "gameVersion": "3.3",
     "actionType": "equipment"
   },
+  "222031": {
+    "id": "222031",
+    "name": {
+      "zh": "暗流涌动",
+      "en": "Surging Undercurrent"
+    },
+    "shareId": 353,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
+  "222041": {
+    "id": "222041",
+    "name": {
+      "zh": "无光鲸噬",
+      "en": "Lightless Feeding"
+    },
+    "shareId": 377,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "223011": {
     "id": "223011",
     "name": {
@@ -767,6 +866,17 @@
     "shareId": 295,
     "type": "action",
     "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "223041": {
+    "id": "223041",
+    "name": {
+      "zh": "熔火铁甲",
+      "en": "Molten Mail"
+    },
+    "shareId": 354,
+    "type": "action",
+    "gameVersion": "4.6",
     "actionType": "equipment"
   },
   "224011": {
@@ -813,6 +923,17 @@
     "gameVersion": "4.5",
     "actionType": "equipment"
   },
+  "224051": {
+    "id": "224051",
+    "name": {
+      "zh": "亡雷凝蓄",
+      "en": "Fatal Fulmination"
+    },
+    "shareId": 378,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "225011": {
     "id": "225011",
     "name": {
@@ -833,6 +954,17 @@
     "shareId": 297,
     "type": "action",
     "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "225031": {
+    "id": "225031",
+    "name": {
+      "zh": "亡风啸卷",
+      "en": "Deathly Cyclone"
+    },
+    "shareId": 379,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "226011": {
@@ -866,6 +998,17 @@
     "shareId": 120,
     "type": "action",
     "gameVersion": "3.3",
+    "actionType": "equipment"
+  },
+  "227021": {
+    "id": "227021",
+    "name": {
+      "zh": "万千子嗣",
+      "en": "A Thousand Young"
+    },
+    "shareId": 380,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "311101": {
@@ -956,6 +1099,17 @@
     "gameVersion": "4.5",
     "actionType": "equipment"
   },
+  "311109": {
+    "id": "311109",
+    "name": {
+      "zh": "金流监督",
+      "en": "Cashflow Supervision"
+    },
+    "shareId": 381,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "311201": {
     "id": "311201",
     "name": {
@@ -1022,6 +1176,17 @@
     "gameVersion": "4.0",
     "actionType": "equipment"
   },
+  "311207": {
+    "id": "311207",
+    "name": {
+      "zh": "竭泽",
+      "en": "End of the Line"
+    },
+    "shareId": 382,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "311301": {
     "id": "311301",
     "name": {
@@ -1086,6 +1251,17 @@
     "shareId": 301,
     "type": "action",
     "gameVersion": "4.3",
+    "actionType": "equipment"
+  },
+  "311307": {
+    "id": "311307",
+    "name": {
+      "zh": "森林王器",
+      "en": "Forest Regalia"
+    },
+    "shareId": 383,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "311401": {
@@ -1165,6 +1341,17 @@
     "gameVersion": "4.3",
     "actionType": "equipment"
   },
+  "311408": {
+    "id": "311408",
+    "name": {
+      "zh": "公义的酬报",
+      "en": "Rightful Reward"
+    },
+    "shareId": 355,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
   "311501": {
     "id": "311501",
     "name": {
@@ -1240,6 +1427,17 @@
     "shareId": 327,
     "type": "action",
     "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "311508": {
+    "id": "311508",
+    "name": {
+      "zh": "静水流涌之辉",
+      "en": "Splendor of Tranquil Waters"
+    },
+    "shareId": 384,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "312001": {
@@ -1495,6 +1693,17 @@
     "gameVersion": "4.4",
     "actionType": "equipment"
   },
+  "312024": {
+    "id": "312024",
+    "name": {
+      "zh": "逐影猎人",
+      "en": "Marechaussee Hunter"
+    },
+    "shareId": 385,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
   "312025": {
     "id": "312025",
     "name": {
@@ -1504,6 +1713,39 @@
     "shareId": 343,
     "type": "action",
     "gameVersion": "4.5",
+    "actionType": "equipment"
+  },
+  "312026": {
+    "id": "312026",
+    "name": {
+      "zh": "黄金剧团",
+      "en": "Golden Troupe"
+    },
+    "shareId": 386,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
+  "312027": {
+    "id": "312027",
+    "name": {
+      "zh": "紫晶的花冠",
+      "en": "Amethyst Crown"
+    },
+    "shareId": 356,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
+  "312028": {
+    "id": "312028",
+    "name": {
+      "zh": "乐园遗落之花",
+      "en": "Flower of Paradise Lost"
+    },
+    "shareId": 387,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "equipment"
   },
   "312101": {
@@ -1858,6 +2100,39 @@
     "gameVersion": "4.5",
     "actionType": "support"
   },
+  "321019": {
+    "id": "321019",
+    "name": {
+      "zh": "清籁岛",
+      "en": "Seirai Island"
+    },
+    "shareId": 357,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "support"
+  },
+  "321020": {
+    "id": "321020",
+    "name": {
+      "zh": "赤王陵",
+      "en": "The Mausoleum of King Deshret"
+    },
+    "shareId": 388,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "support"
+  },
+  "321021": {
+    "id": "321021",
+    "name": {
+      "zh": "中央实验室遗址",
+      "en": "Central Laboratory Ruins"
+    },
+    "shareId": 389,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "support"
+  },
   "322001": {
     "id": "322001",
     "name": {
@@ -2111,6 +2386,39 @@
     "gameVersion": "4.4",
     "actionType": "support"
   },
+  "322024": {
+    "id": "322024",
+    "name": {
+      "zh": "太郎丸",
+      "en": "Taroumaru"
+    },
+    "shareId": 358,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "support"
+  },
+  "322025": {
+    "id": "322025",
+    "name": {
+      "zh": "白手套和渔夫",
+      "en": "The White Glove and the Fisherman"
+    },
+    "shareId": 359,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "support"
+  },
+  "322026": {
+    "id": "322026",
+    "name": {
+      "zh": "亚瑟先生",
+      "en": "Sir Arthur"
+    },
+    "shareId": 390,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "support"
+  },
   "323001": {
     "id": "323001",
     "name": {
@@ -2188,6 +2496,17 @@
     "gameVersion": "4.5",
     "actionType": "support"
   },
+  "323008": {
+    "id": "323008",
+    "name": {
+      "zh": "苦舍桓",
+      "en": "Kusava"
+    },
+    "shareId": 391,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "support"
+  },
   "330001": {
     "id": "330001",
     "name": {
@@ -2263,6 +2582,17 @@
     "shareId": 346,
     "type": "action",
     "gameVersion": "4.5",
+    "actionType": "event"
+  },
+  "330008": {
+    "id": "330008",
+    "name": {
+      "zh": "旧日鏖战",
+      "en": "Vicious Ancient Battle"
+    },
+    "shareId": 392,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "event"
   },
   "331101": {
@@ -2461,6 +2791,17 @@
     "shareId": 240,
     "type": "action",
     "gameVersion": "3.7",
+    "actionType": "event"
+  },
+  "331805": {
+    "id": "331805",
+    "name": {
+      "zh": "水与正义",
+      "en": "Water and Justice"
+    },
+    "shareId": 393,
+    "type": "action",
+    "gameVersion": "4.7",
     "actionType": "event"
   },
   "332001": {
@@ -2793,6 +3134,28 @@
     "gameVersion": "4.5",
     "actionType": "event"
   },
+  "332031": {
+    "id": "332031",
+    "name": {
+      "zh": "海中寻宝",
+      "en": "Underwater Treasure Hunt"
+    },
+    "shareId": 360,
+    "type": "action",
+    "gameVersion": "4.6",
+    "actionType": "event"
+  },
+  "332032": {
+    "id": "332032",
+    "name": {
+      "zh": "幻戏倒计时：3",
+      "en": "Countdown to the Show: 3"
+    },
+    "shareId": 394,
+    "type": "action",
+    "gameVersion": "4.7",
+    "actionType": "event"
+  },
   "333001": {
     "id": "333001",
     "name": {
@@ -2945,6 +3308,17 @@
     "shareId": 333,
     "type": "action",
     "gameVersion": "4.4",
+    "actionType": "event"
+  },
+  "333015": {
+    "id": "333015",
+    "name": {
+      "zh": "缤纷马卡龙",
+      "en": "Rainbow Macarons"
+    },
+    "shareId": 361,
+    "type": "action",
+    "gameVersion": "4.6",
     "actionType": "event"
   }
 }

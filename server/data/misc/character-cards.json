@@ -109,6 +109,17 @@
     "gameVersion": "4.5",
     "element": "cryo"
   },
+  "1111": {
+    "id": "1111",
+    "name": {
+      "zh": "莱欧斯利",
+      "en": "Wriothesley"
+    },
+    "shareId": 363,
+    "type": "character",
+    "gameVersion": "4.7",
+    "element": "cryo"
+  },
   "1201": {
     "id": "1201",
     "name": {
@@ -217,6 +228,17 @@
     "shareId": 335,
     "type": "character",
     "gameVersion": "4.5",
+    "element": "hydro"
+  },
+  "1211": {
+    "id": "1211",
+    "name": {
+      "zh": "芙宁娜",
+      "en": "Furina"
+    },
+    "shareId": 364,
+    "type": "character",
+    "gameVersion": "4.7",
     "element": "hydro"
   },
   "1301": {
@@ -340,6 +362,17 @@
     "gameVersion": "4.4",
     "element": "pyro"
   },
+  "1312": {
+    "id": "1312",
+    "name": {
+      "zh": "辛焱",
+      "en": "Xinyan"
+    },
+    "shareId": 365,
+    "type": "character",
+    "gameVersion": "4.7",
+    "element": "pyro"
+  },
   "1401": {
     "id": "1401",
     "name": {
@@ -450,6 +483,17 @@
     "gameVersion": "4.2",
     "element": "electro"
   },
+  "1411": {
+    "id": "1411",
+    "name": {
+      "zh": "久岐忍",
+      "en": "Kuki Shinobu"
+    },
+    "shareId": 348,
+    "type": "character",
+    "gameVersion": "4.6",
+    "element": "electro"
+  },
   "1501": {
     "id": "1501",
     "name": {
@@ -538,6 +582,17 @@
     "gameVersion": "4.3",
     "element": "anemo"
   },
+  "1509": {
+    "id": "1509",
+    "name": {
+      "zh": "珐露珊",
+      "en": "Faruzan"
+    },
+    "shareId": 349,
+    "type": "character",
+    "gameVersion": "4.6",
+    "element": "anemo"
+  },
   "1601": {
     "id": "1601",
     "name": {
@@ -602,6 +657,17 @@
     "shareId": 283,
     "type": "character",
     "gameVersion": "4.3",
+    "element": "geo"
+  },
+  "1607": {
+    "id": "1607",
+    "name": {
+      "zh": "云堇",
+      "en": "Yun Jin"
+    },
+    "shareId": 366,
+    "type": "character",
+    "gameVersion": "4.7",
     "element": "geo"
   },
   "1701": {
@@ -681,6 +747,17 @@
     "gameVersion": "4.5",
     "element": "dendro"
   },
+  "1708": {
+    "id": "1708",
+    "name": {
+      "zh": "卡维",
+      "en": "Kaveh"
+    },
+    "shareId": 367,
+    "type": "character",
+    "gameVersion": "4.7",
+    "element": "dendro"
+  },
   "2101": {
     "id": "2101",
     "name": {
@@ -736,6 +813,28 @@
     "gameVersion": "3.3",
     "element": "hydro"
   },
+  "2203": {
+    "id": "2203",
+    "name": {
+      "zh": "深渊使徒·激流",
+      "en": "Abyss Herald: Wicked Torrents"
+    },
+    "shareId": 350,
+    "type": "character",
+    "gameVersion": "4.6",
+    "element": "hydro"
+  },
+  "2204": {
+    "id": "2204",
+    "name": {
+      "zh": "吞星之鲸",
+      "en": "All-Devouring Narwhal"
+    },
+    "shareId": 368,
+    "type": "character",
+    "gameVersion": "4.7",
+    "element": "hydro"
+  },
   "2301": {
     "id": "2301",
     "name": {
@@ -767,6 +866,17 @@
     "shareId": 285,
     "type": "character",
     "gameVersion": "4.3",
+    "element": "pyro"
+  },
+  "2304": {
+    "id": "2304",
+    "name": {
+      "zh": "铁甲熔火帝皇",
+      "en": "Emperor of Fire and Iron"
+    },
+    "shareId": 351,
+    "type": "character",
+    "gameVersion": "4.6",
     "element": "pyro"
   },
   "2401": {
@@ -813,6 +923,17 @@
     "gameVersion": "4.5",
     "element": "electro"
   },
+  "2405": {
+    "id": "2405",
+    "name": {
+      "zh": "圣骸毒蝎",
+      "en": "Consecrated Scorpion"
+    },
+    "shareId": 369,
+    "type": "character",
+    "gameVersion": "4.7",
+    "element": "electro"
+  },
   "2501": {
     "id": "2501",
     "name": {
@@ -833,6 +954,17 @@
     "shareId": 287,
     "type": "character",
     "gameVersion": "4.3",
+    "element": "anemo"
+  },
+  "2503": {
+    "id": "2503",
+    "name": {
+      "zh": "圣骸飞蛇",
+      "en": "Consecrated Flying Serpent"
+    },
+    "shareId": 370,
+    "type": "character",
+    "gameVersion": "4.7",
     "element": "anemo"
   },
   "2601": {
@@ -866,6 +998,17 @@
     "shareId": 60,
     "type": "character",
     "gameVersion": "3.3",
+    "element": "dendro"
+  },
+  "2702": {
+    "id": "2702",
+    "name": {
+      "zh": "阿佩普的绿洲守望者",
+      "en": "Guardian of Apep's Oasis"
+    },
+    "shareId": 371,
+    "type": "character",
+    "gameVersion": "4.7",
     "element": "dendro"
   }
 }
