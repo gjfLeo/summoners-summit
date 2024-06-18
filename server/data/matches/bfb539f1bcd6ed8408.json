@@ -1,0 +1,18 @@
+{
+  "id": "bfb539f1bcd6ed8408",
+  "tournamentId": "bfb539f1bcd6ed84",
+  "playerA": {
+    "playerId": "bd6ea69b8dde8bff",
+    "nickname": "Dr.666"
+  },
+  "playerB": {
+    "playerId": "ff06dcb835fa2d33",
+    "nickname": "胡桃桃大魔王"
+  },
+  "winner": "B",
+  "gameIds": [
+    "bfb539f1bcd6ed840801",
+    "bfb539f1bcd6ed840802"
+  ],
+  "video": "https://weibo.com/l/wblive/p/show/1022:2321325006404200038475?mark_id=999_reallog_mark_ad%3A999%7CWeiboADNatural"
+}

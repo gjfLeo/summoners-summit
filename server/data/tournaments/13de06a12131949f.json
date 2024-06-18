@@ -1,0 +1,87 @@
+{
+  "id": "13de06a12131949f",
+  "name": {
+    "zh": "「小王子杯：大西洋赛区」常规赛",
+    "en": "The Prince Cup: ATLANTIC - Regular Season"
+  },
+  "gameVersion": "4.6",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "B组"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-05-18",
+          "matchIds": [
+            "13de06a12131949f01",
+            "13de06a12131949f02",
+            "13de06a12131949f03",
+            "13de06a12131949f04",
+            "13de06a12131949f05"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2024-05-19",
+          "matchIds": [
+            "13de06a12131949f06",
+            "13de06a12131949f07",
+            "13de06a12131949f08",
+            "13de06a12131949f09",
+            "13de06a12131949f10",
+            "13de06a12131949f11"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "C组"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-05-20",
+          "matchIds": [
+            "13de06a12131949f12",
+            "13de06a12131949f13",
+            "13de06a12131949f14",
+            "13de06a12131949f15",
+            "13de06a12131949f16"
+          ]
+        }
+      ]
+    }
+  ]
+}

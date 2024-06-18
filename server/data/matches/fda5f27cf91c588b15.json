@@ -1,0 +1,18 @@
+{
+  "id": "fda5f27cf91c588b15",
+  "tournamentId": "fda5f27cf91c588b",
+  "playerA": {
+    "playerId": "bda22541bc5e1e30",
+    "nickname": "雨中邮差"
+  },
+  "playerB": {
+    "playerId": "f53067a0b2b9cc68",
+    "nickname": "LL起翼夜鹰"
+  },
+  "winner": "A",
+  "gameIds": [
+    "fda5f27cf91c588b1501",
+    "fda5f27cf91c588b1502"
+  ],
+  "video": "https://www.huya.com/video/play/943714292.html"
+}

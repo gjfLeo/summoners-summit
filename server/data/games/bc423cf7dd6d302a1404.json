@@ -1,0 +1,22 @@
+{
+  "id": "bc423cf7dd6d302a1404",
+  "matchId": "bc423cf7dd6d302a14",
+  "playerADeck": {
+    "characters": [
+      "1203",
+      "1503",
+      "1403"
+    ],
+    "teamId": "1203-1403-1503"
+  },
+  "playerBDeck": {
+    "characters": [
+      "2301",
+      "2201",
+      "1401"
+    ],
+    "teamId": "1401-2201-2301"
+  },
+  "winner": "A",
+  "starter": "A"
+}

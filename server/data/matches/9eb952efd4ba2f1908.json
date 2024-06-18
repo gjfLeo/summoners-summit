@@ -1,0 +1,19 @@
+{
+  "id": "9eb952efd4ba2f1908",
+  "tournamentId": "9eb952efd4ba2f19",
+  "playerA": {
+    "playerId": "5d685332b736c79a",
+    "nickname": "一心传、音弦"
+  },
+  "playerB": {
+    "playerId": "3cecf7a185a26f38",
+    "nickname": "Elaina"
+  },
+  "winner": "B",
+  "gameIds": [
+    "9eb952efd4ba2f190801",
+    "9eb952efd4ba2f190802",
+    "9eb952efd4ba2f190803"
+  ],
+  "video": "https://www.bilibili.com/video/BV18T4y1b71F"
+}

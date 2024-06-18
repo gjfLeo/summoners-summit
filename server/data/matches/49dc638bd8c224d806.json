@@ -1,0 +1,26 @@
+{
+  "id": "49dc638bd8c224d806",
+  "tournamentId": "49dc638bd8c224d8",
+  "playerA": {
+    "playerId": "df1907ee9b6fdbb7",
+    "nickname": "帝降北渚"
+  },
+  "playerB": {
+    "playerId": "0d0fa57e06e04206",
+    "nickname": "雪国Ink"
+  },
+  "winner": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1201-1203-1601",
+      "playerBTeamId": "1104-1107-1407"
+    }
+  ],
+  "gameIds": [
+    "49dc638bd8c224d80601",
+    "49dc638bd8c224d80602",
+    "49dc638bd8c224d80603"
+  ],
+  "video": ""
+}

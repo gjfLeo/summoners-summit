@@ -1,0 +1,106 @@
+{
+  "id": "75517a8ce3883998",
+  "name": {
+    "zh": "Cat's Tail Gathering 2024 S1"
+  },
+  "gameVersion": "4.3",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "亚服 Asia"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2024-01-28",
+          "matchIds": [
+            "75517a8ce388399801"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2024-01-28",
+          "matchIds": [
+            "75517a8ce388399802"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "欧服 Europe"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2024-01-29",
+          "matchIds": [
+            "75517a8ce388399803"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2024-01-29",
+          "matchIds": [
+            "75517a8ce388399804"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "美服 America"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2024-01-29",
+          "matchIds": [
+            "75517a8ce388399805"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2024-01-29",
+          "matchIds": [
+            "75517a8ce388399806"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "c20763c9aa8dd021",
+  "name": {
+    "zh": "寒天之钉杯"
+  },
+  "gameVersion": "4.1",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-10-15",
+          "matchIds": [
+            "c20763c9aa8dd02101",
+            "c20763c9aa8dd02102"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-10-16",
+          "matchIds": [
+            "c20763c9aa8dd02103",
+            "c20763c9aa8dd02104"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2023-10-17",
+          "matchIds": [
+            "c20763c9aa8dd02105",
+            "c20763c9aa8dd02106"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2023-10-18",
+          "matchIds": [
+            "c20763c9aa8dd02107",
+            "c20763c9aa8dd02108"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-10-19",
+          "matchIds": [
+            "c20763c9aa8dd02109",
+            "c20763c9aa8dd02110"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-10-20",
+          "matchIds": [
+            "c20763c9aa8dd02111",
+            "c20763c9aa8dd02112"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-10-21",
+          "matchIds": [
+            "c20763c9aa8dd02113",
+            "c20763c9aa8dd02114"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "numCharactersRequired": 11,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-10-22",
+          "matchIds": [
+            "c20763c9aa8dd02115"
+          ]
+        }
+      ]
+    }
+  ]
+}

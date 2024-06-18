@@ -1,0 +1,105 @@
+{
+  "id": "f700db1cbb3aac3b",
+  "name": {
+    "zh": "花神杯"
+  },
+  "gameVersion": "3.7",
+  "type": "积分赛试办",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-29",
+          "matchIds": [
+            "f700db1cbb3aac3b01",
+            "f700db1cbb3aac3b02"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-06-30",
+          "matchIds": [
+            "f700db1cbb3aac3b03",
+            "f700db1cbb3aac3b04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-01",
+          "matchIds": [
+            "f700db1cbb3aac3b05",
+            "f700db1cbb3aac3b06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-02",
+          "matchIds": [
+            "f700db1cbb3aac3b07"
+          ]
+        }
+      ]
+    }
+  ]
+}

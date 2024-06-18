@@ -1,0 +1,19 @@
+{
+  "id": "886d25f576c7ae5403",
+  "tournamentId": "886d25f576c7ae54",
+  "playerA": {
+    "playerId": "a6856de3ec579318",
+    "nickname": "莉莉芭"
+  },
+  "playerB": {
+    "playerId": "69d519ce24299abf",
+    "nickname": "KevinZ"
+  },
+  "winner": "B",
+  "gameIds": [
+    "886d25f576c7ae540301",
+    "886d25f576c7ae540302",
+    "886d25f576c7ae540303"
+  ],
+  "video": "https://www.youtube.com/watch?v=btSoTbJzMi4"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "eb1427b0cb452b4e",
+  "name": {
+    "zh": "最终入围赛"
+  },
+  "gameVersion": "4.0",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "32进16"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-09-05",
+          "matchIds": [
+            "eb1427b0cb452b4e01",
+            "eb1427b0cb452b4e02",
+            "eb1427b0cb452b4e03",
+            "eb1427b0cb452b4e04",
+            "eb1427b0cb452b4e05"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-09-06",
+          "matchIds": [
+            "eb1427b0cb452b4e06",
+            "eb1427b0cb452b4e07",
+            "eb1427b0cb452b4e08",
+            "eb1427b0cb452b4e09"
+          ]
+        }
+      ]
+    }
+  ]
+}

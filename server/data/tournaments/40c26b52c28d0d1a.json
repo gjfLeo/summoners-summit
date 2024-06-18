@@ -1,0 +1,127 @@
+{
+  "id": "40c26b52c28d0d1a",
+  "name": {
+    "zh": "斗鱼七圣召唤资格赛"
+  },
+  "gameVersion": "4.5",
+  "type": "平台赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "A组"
+          },
+          "date": "2024-04-09",
+          "matchIds": [
+            "40c26b52c28d0d1a01",
+            "40c26b52c28d0d1a02",
+            "40c26b52c28d0d1a03",
+            "40c26b52c28d0d1a04",
+            "40c26b52c28d0d1a05",
+            "40c26b52c28d0d1a06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "B组"
+          },
+          "date": "2024-04-10",
+          "matchIds": [
+            "40c26b52c28d0d1a07",
+            "40c26b52c28d0d1a08",
+            "40c26b52c28d0d1a09",
+            "40c26b52c28d0d1a10",
+            "40c26b52c28d0d1a11",
+            "40c26b52c28d0d1a12"
+          ]
+        },
+        {
+          "name": {
+            "zh": "C组"
+          },
+          "date": "2024-04-11",
+          "matchIds": [
+            "40c26b52c28d0d1a13",
+            "40c26b52c28d0d1a14",
+            "40c26b52c28d0d1a15",
+            "40c26b52c28d0d1a16",
+            "40c26b52c28d0d1a17",
+            "40c26b52c28d0d1a18"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组"
+          },
+          "date": "2024-04-12",
+          "matchIds": [
+            "40c26b52c28d0d1a19",
+            "40c26b52c28d0d1a20",
+            "40c26b52c28d0d1a21",
+            "40c26b52c28d0d1a22",
+            "40c26b52c28d0d1a23",
+            "40c26b52c28d0d1a24"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-04-13",
+          "matchIds": [
+            "40c26b52c28d0d1a25",
+            "40c26b52c28d0d1a26"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-04-14",
+          "matchIds": [
+            "40c26b52c28d0d1a27"
+          ]
+        }
+      ]
+    }
+  ]
+}

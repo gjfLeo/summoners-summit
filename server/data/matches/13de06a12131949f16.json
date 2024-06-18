@@ -1,0 +1,26 @@
+{
+  "id": "13de06a12131949f16",
+  "tournamentId": "13de06a12131949f",
+  "playerA": {
+    "playerId": "0d670f6cc1c2a240",
+    "nickname": "binzu"
+  },
+  "playerB": {
+    "playerId": "0f47037fd69dc4ad",
+    "nickname": "Ting"
+  },
+  "winner": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1411-1704-2203",
+      "playerBTeamId": "1307-1411-1704"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f1601",
+    "13de06a12131949f1602",
+    "13de06a12131949f1603"
+  ],
+  "video": "https://www.youtube.com/live/TxFulNQ-Mos?t=23506"
+}

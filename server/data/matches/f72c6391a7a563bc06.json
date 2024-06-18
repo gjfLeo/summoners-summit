@@ -1,0 +1,26 @@
+{
+  "id": "f72c6391a7a563bc06",
+  "tournamentId": "f72c6391a7a563bc",
+  "playerA": {
+    "playerId": "7ad70ca3e0011fc4",
+    "nickname": "浅冽（重生版）"
+  },
+  "playerB": {
+    "playerId": "fbd71758185d1c29",
+    "nickname": "曲误周郎"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1106-1202",
+      "playerBTeamId": "1203-1208-1703"
+    }
+  ],
+  "gameIds": [
+    "f72c6391a7a563bc0601",
+    "f72c6391a7a563bc0602",
+    "f72c6391a7a563bc0603"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ut4y1o78C"
+}

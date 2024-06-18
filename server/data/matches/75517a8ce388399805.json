@@ -1,0 +1,18 @@
+{
+  "id": "75517a8ce388399805",
+  "tournamentId": "75517a8ce3883998",
+  "playerA": {
+    "playerId": "3bef635f1e9b07f0",
+    "nickname": "長野原花火"
+  },
+  "playerB": {
+    "playerId": "075369d09f4a30b8",
+    "nickname": "Pilot"
+  },
+  "winner": "A",
+  "gameIds": [
+    "75517a8ce38839980501",
+    "75517a8ce38839980502"
+  ],
+  "video": "https://www.youtube.com/watch?v=96KiWW6bmcA"
+}

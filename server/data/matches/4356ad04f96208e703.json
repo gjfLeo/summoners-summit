@@ -1,0 +1,18 @@
+{
+  "id": "4356ad04f96208e703",
+  "tournamentId": "4356ad04f96208e7",
+  "playerA": {
+    "playerId": "cf81f268a092cdee",
+    "nickname": "PPpig"
+  },
+  "playerB": {
+    "playerId": "c0cd670735fa3827",
+    "nickname": "Sherry"
+  },
+  "winner": "A",
+  "gameIds": [
+    "4356ad04f96208e70301",
+    "4356ad04f96208e70302"
+  ],
+  "video": "https://www.youtube.com/watch?v=Mmthl-Y-Vlw"
+}

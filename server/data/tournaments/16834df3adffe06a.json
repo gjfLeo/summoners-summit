@@ -1,0 +1,129 @@
+{
+  "id": "16834df3adffe06a",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "4.6",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-05-13",
+          "matchIds": [
+            "16834df3adffe06a01",
+            "16834df3adffe06a02",
+            "16834df3adffe06a03",
+            "16834df3adffe06a04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-05-14",
+          "matchIds": [
+            "16834df3adffe06a05",
+            "16834df3adffe06a06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-05-15",
+          "matchIds": [
+            "16834df3adffe06a07",
+            "16834df3adffe06a08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-05-18",
+          "matchIds": [
+            "16834df3adffe06a09",
+            "16834df3adffe06a10"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-05-19",
+          "matchIds": [
+            "16834df3adffe06a11"
+          ]
+        }
+      ]
+    }
+  ]
+}

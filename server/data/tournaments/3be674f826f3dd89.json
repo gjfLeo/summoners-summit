@@ -1,0 +1,156 @@
+{
+  "id": "3be674f826f3dd89",
+  "name": {
+    "zh": "「日耀」共鸣杯"
+  },
+  "gameVersion": "3.8",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-07-25",
+          "matchIds": [
+            "3be674f826f3dd8901",
+            "3be674f826f3dd8902",
+            "3be674f826f3dd8903",
+            "3be674f826f3dd8904"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-07-26",
+          "matchIds": [
+            "3be674f826f3dd8905",
+            "3be674f826f3dd8906",
+            "3be674f826f3dd8907"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-07-27",
+          "matchIds": [
+            "3be674f826f3dd8908",
+            "3be674f826f3dd8909"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-07-28",
+          "matchIds": [
+            "3be674f826f3dd8910",
+            "3be674f826f3dd8911"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-29",
+          "matchIds": [
+            "3be674f826f3dd8912",
+            "3be674f826f3dd8913"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-30",
+          "matchIds": [
+            "3be674f826f3dd8914"
+          ]
+        }
+      ]
+    }
+  ]
+}

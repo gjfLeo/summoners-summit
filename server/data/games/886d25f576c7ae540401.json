@@ -1,0 +1,25 @@
+{
+  "id": "886d25f576c7ae540401",
+  "matchId": "886d25f576c7ae5404",
+  "playerADeck": {
+    "characters": [
+      "1203",
+      "1703",
+      "1401"
+    ],
+    "teamId": "1203-1401-1703",
+    "deckCode": "ADCw8xoPA0AQ9JcPCVBw9b0PC2DQ+MkPDJCQ+dkPDdGwCu0QD7EQC/EQD+EgDvIRDzAA"
+  },
+  "playerBDeck": {
+    "characters": [
+      "2201",
+      "1401",
+      "2301"
+    ],
+    "teamId": "1401-2201-2301",
+    "deckCode": "AZCgyTUPA0Bw9HMPCVBQ9ZUPC2Aw+LMPC9CA/bgQC6GgC7sQC7HADrwQDOFwD8cQDPAA"
+  },
+  "winner": "B",
+  "starter": "A",
+  "gameVideo": "https://www.youtube.com/watch?v=btSoTbJzMi4"
+}

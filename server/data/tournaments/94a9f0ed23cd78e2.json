@@ -1,0 +1,96 @@
+{
+  "id": "94a9f0ed23cd78e2",
+  "name": {
+    "zh": "寒天之钉杯"
+  },
+  "gameVersion": "3.7",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-24",
+          "matchIds": [
+            "94a9f0ed23cd78e201",
+            "94a9f0ed23cd78e202",
+            "94a9f0ed23cd78e203",
+            "94a9f0ed23cd78e204"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-06-25",
+          "matchIds": []
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-27",
+          "matchIds": [
+            "94a9f0ed23cd78e205",
+            "94a9f0ed23cd78e206"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-06-28",
+          "matchIds": [
+            "94a9f0ed23cd78e207",
+            "94a9f0ed23cd78e208"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-06-30",
+          "matchIds": [
+            "94a9f0ed23cd78e209",
+            "94a9f0ed23cd78e210"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-02",
+          "matchIds": [
+            "94a9f0ed23cd78e211"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "a14968e1d32e885218",
+  "tournamentId": "a14968e1d32e8852",
+  "playerA": {
+    "playerId": "a3f088140ea9e829",
+    "nickname": "幽羊"
+  },
+  "playerB": {
+    "playerId": "acf6d38399a89dd3",
+    "nickname": "七圣召唤王师傅"
+  },
+  "winner": "B",
+  "gameIds": [
+    "a14968e1d32e88521801",
+    "a14968e1d32e88521802"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=4"
+}

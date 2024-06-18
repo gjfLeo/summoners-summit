@@ -1,0 +1,103 @@
+{
+  "id": "35f45f244a7e2756",
+  "name": {
+    "zh": "「燃斗无双」米游社"
+  },
+  "gameVersion": "4.1",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "下午场"
+          },
+          "date": "2023-11-04",
+          "matchIds": [
+            "35f45f244a7e275601",
+            "35f45f244a7e275602"
+          ]
+        },
+        {
+          "name": {
+            "zh": "晚间场"
+          },
+          "date": "2023-11-04",
+          "matchIds": [
+            "35f45f244a7e275603",
+            "35f45f244a7e275604"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-11-05",
+          "matchIds": [
+            "35f45f244a7e275605",
+            "35f45f244a7e275606"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-11-05",
+          "matchIds": [
+            "35f45f244a7e275607"
+          ]
+        }
+      ]
+    }
+  ]
+}

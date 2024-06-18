@@ -1,0 +1,18 @@
+{
+  "id": "3c8bf7110b0e4d7a18",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "9ec3aef837f12ad1",
+    "nickname": "帝之降兮"
+  },
+  "playerB": {
+    "playerId": "5ff3cd935e2eb8be",
+    "nickname": "秋愁几寸"
+  },
+  "winner": "A",
+  "gameIds": [
+    "3c8bf7110b0e4d7a1801",
+    "3c8bf7110b0e4d7a1802"
+  ],
+  "video": "https://v.huya.com/play/897509171.html"
+}

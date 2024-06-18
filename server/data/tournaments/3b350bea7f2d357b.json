@@ -1,0 +1,151 @@
+{
+  "id": "3b350bea7f2d357b",
+  "name": {
+    "zh": "影幻杯"
+  },
+  "gameVersion": "4.0",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "突围赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "焦点对局"
+          },
+          "date": "2023-09-17",
+          "matchIds": [
+            "3b350bea7f2d357b01",
+            "3b350bea7f2d357b02",
+            "3b350bea7f2d357b03",
+            "3b350bea7f2d357b04",
+            "3b350bea7f2d357b05",
+            "3b350bea7f2d357b06",
+            "3b350bea7f2d357b07"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-09-22",
+          "matchIds": [
+            "3b350bea7f2d357b08",
+            "3b350bea7f2d357b09",
+            "3b350bea7f2d357b10",
+            "3b350bea7f2d357b11",
+            "3b350bea7f2d357b12",
+            "3b350bea7f2d357b13",
+            "3b350bea7f2d357b14",
+            "3b350bea7f2d357b15"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-10-23",
+          "matchIds": [
+            "3b350bea7f2d357b16",
+            "3b350bea7f2d357b17",
+            "3b350bea7f2d357b18",
+            "3b350bea7f2d357b19"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-09-24",
+          "matchIds": [
+            "3b350bea7f2d357b20",
+            "3b350bea7f2d357b21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-09-24",
+          "matchIds": [
+            "3b350bea7f2d357b22"
+          ]
+        }
+      ]
+    }
+  ]
+}

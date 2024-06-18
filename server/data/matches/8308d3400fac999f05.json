@@ -1,0 +1,18 @@
+{
+  "id": "8308d3400fac999f05",
+  "tournamentId": "8308d3400fac999f",
+  "playerA": {
+    "playerId": "cd133becae644b8e",
+    "nickname": "唐傀"
+  },
+  "playerB": {
+    "playerId": "285614560b64a144",
+    "nickname": "硝子"
+  },
+  "winner": "A",
+  "gameIds": [
+    "8308d3400fac999f0501",
+    "8308d3400fac999f0502"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Db4y1373P"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "13de06a12131949f07",
+  "tournamentId": "13de06a12131949f",
+  "playerA": {
+    "playerId": "4e8d331217895c17",
+    "nickname": "MrPillow"
+  },
+  "playerB": {
+    "playerId": "72fdd9faeb7e9c60",
+    "nickname": "Timar"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1203-2102-2402",
+      "playerBTeamId": "1310-1508-1509"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f0701",
+    "13de06a12131949f0702"
+  ],
+  "video": "https://www.youtube.com/live/lY0sML5UwbA?t=5500"
+}

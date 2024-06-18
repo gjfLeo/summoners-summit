@@ -1,0 +1,19 @@
+{
+  "id": "3c8bf7110b0e4d7a02",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "5ff3cd935e2eb8be",
+    "nickname": "秋愁几寸"
+  },
+  "playerB": {
+    "playerId": "a03ae38063ee070f",
+    "nickname": "Dae丶红莲"
+  },
+  "winner": "A",
+  "gameIds": [
+    "3c8bf7110b0e4d7a0201",
+    "3c8bf7110b0e4d7a0202",
+    "3c8bf7110b0e4d7a0203"
+  ],
+  "video": "https://v.huya.com/play/897503267.html"
+}

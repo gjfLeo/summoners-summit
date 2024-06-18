@@ -1,0 +1,19 @@
+{
+  "id": "2e6451ff870b4ce908",
+  "tournamentId": "2e6451ff870b4ce9",
+  "playerA": {
+    "playerId": "43d1db16bae5f5f3",
+    "nickname": "亚路嘉"
+  },
+  "playerB": {
+    "playerId": "ea81bd6a19c1fad5",
+    "nickname": "暖冰扔进冷火里"
+  },
+  "winner": "A",
+  "gameIds": [
+    "2e6451ff870b4ce90801",
+    "2e6451ff870b4ce90802",
+    "2e6451ff870b4ce90803"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Zu4y1u7hj"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "3c8bf7110b0e4d7a01",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "4088527c052e784b",
+    "nickname": "一不小欣x"
+  },
+  "playerB": {
+    "playerId": "923136e71faa515c",
+    "nickname": "Soul【刻魂】"
+  },
+  "winner": "A",
+  "gameIds": [
+    "3c8bf7110b0e4d7a0101",
+    "3c8bf7110b0e4d7a0102",
+    "3c8bf7110b0e4d7a0103"
+  ],
+  "video": "https://v.huya.com/play/897503267.html"
+}

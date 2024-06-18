@@ -1,0 +1,144 @@
+{
+  "id": "3c8bf7110b0e4d7a",
+  "name": {
+    "zh": "虎牙主播资格赛"
+  },
+  "gameVersion": "3.8",
+  "type": "平台赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "海选小组赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-07-13",
+          "matchIds": [
+            "3c8bf7110b0e4d7a01",
+            "3c8bf7110b0e4d7a02",
+            "3c8bf7110b0e4d7a03"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-07-14",
+          "matchIds": [
+            "3c8bf7110b0e4d7a04",
+            "3c8bf7110b0e4d7a05",
+            "3c8bf7110b0e4d7a06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2023-07-15",
+          "matchIds": [
+            "3c8bf7110b0e4d7a07",
+            "3c8bf7110b0e4d7a08",
+            "3c8bf7110b0e4d7a09"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2023-07-16",
+          "matchIds": [
+            "3c8bf7110b0e4d7a10",
+            "3c8bf7110b0e4d7a11",
+            "3c8bf7110b0e4d7a12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "16强晋级赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY5"
+          },
+          "date": "2023-07-17",
+          "matchIds": [
+            "3c8bf7110b0e4d7a13",
+            "3c8bf7110b0e4d7a14"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY6"
+          },
+          "date": "2023-07-18",
+          "matchIds": [
+            "3c8bf7110b0e4d7a15",
+            "3c8bf7110b0e4d7a16",
+            "3c8bf7110b0e4d7a17",
+            "3c8bf7110b0e4d7a18"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY7"
+          },
+          "date": "2023-07-19",
+          "matchIds": [
+            "3c8bf7110b0e4d7a19",
+            "3c8bf7110b0e4d7a20",
+            "3c8bf7110b0e4d7a21",
+            "3c8bf7110b0e4d7a22"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY8"
+          },
+          "date": "2023-07-20",
+          "matchIds": [
+            "3c8bf7110b0e4d7a23",
+            "3c8bf7110b0e4d7a24",
+            "3c8bf7110b0e4d7a25",
+            "3c8bf7110b0e4d7a26"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY9"
+          },
+          "date": "2023-07-21",
+          "matchIds": [
+            "3c8bf7110b0e4d7a27",
+            "3c8bf7110b0e4d7a28",
+            "3c8bf7110b0e4d7a29",
+            "3c8bf7110b0e4d7a30"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY10"
+          },
+          "date": "2023-07-22",
+          "matchIds": [
+            "3c8bf7110b0e4d7a31",
+            "3c8bf7110b0e4d7a32",
+            "3c8bf7110b0e4d7a33"
+          ]
+        }
+      ]
+    }
+  ]
+}

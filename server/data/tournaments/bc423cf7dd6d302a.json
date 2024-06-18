@@ -1,0 +1,125 @@
+{
+  "id": "bc423cf7dd6d302a",
+  "name": {
+    "zh": "「同声相应」共鸣杯"
+  },
+  "gameVersion": "3.7",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-18",
+          "matchIds": [
+            "bc423cf7dd6d302a01",
+            "bc423cf7dd6d302a02",
+            "bc423cf7dd6d302a03"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-06-19",
+          "matchIds": [
+            "bc423cf7dd6d302a04",
+            "bc423cf7dd6d302a05",
+            "bc423cf7dd6d302a06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2023-06-20",
+          "matchIds": [
+            "bc423cf7dd6d302a07",
+            "bc423cf7dd6d302a08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-21",
+          "matchIds": [
+            "bc423cf7dd6d302a09",
+            "bc423cf7dd6d302a10"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-06-22",
+          "matchIds": [
+            "bc423cf7dd6d302a11",
+            "bc423cf7dd6d302a12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-06-23",
+          "matchIds": [
+            "bc423cf7dd6d302a13",
+            "bc423cf7dd6d302a14"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "表演赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-06-24",
+          "matchIds": [
+            "bc423cf7dd6d302a15"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-06-24",
+          "matchIds": [
+            "bc423cf7dd6d302a16"
+          ]
+        }
+      ]
+    }
+  ]
+}

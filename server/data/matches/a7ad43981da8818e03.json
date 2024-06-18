@@ -1,0 +1,18 @@
+{
+  "id": "a7ad43981da8818e03",
+  "tournamentId": "a7ad43981da8818e",
+  "playerA": {
+    "playerId": "ed4f7ffc6dc90ee7",
+    "nickname": "WilliemKmetsch"
+  },
+  "playerB": {
+    "playerId": "fcf76f3b52381391",
+    "nickname": "Zun"
+  },
+  "winner": "A",
+  "gameIds": [
+    "a7ad43981da8818e0301",
+    "a7ad43981da8818e0302"
+  ],
+  "video": ""
+}

@@ -1,0 +1,91 @@
+{
+  "id": "9f8938eb361961eb",
+  "name": {
+    "zh": "火星杯"
+  },
+  "gameVersion": "4.6",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-05-29",
+          "matchIds": [
+            "9f8938eb361961eb01",
+            "9f8938eb361961eb02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-05-30",
+          "matchIds": [
+            "9f8938eb361961eb03",
+            "9f8938eb361961eb04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-05-31",
+          "matchIds": [
+            "9f8938eb361961eb05",
+            "9f8938eb361961eb06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-06-01",
+          "matchIds": [
+            "9f8938eb361961eb07"
+          ]
+        }
+      ]
+    }
+  ]
+}

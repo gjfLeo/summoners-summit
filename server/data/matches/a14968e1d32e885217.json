@@ -1,0 +1,19 @@
+{
+  "id": "a14968e1d32e885217",
+  "tournamentId": "a14968e1d32e8852",
+  "playerA": {
+    "playerId": "8cbbf210ce939b3d",
+    "nickname": "蓬莱寺九霄啊"
+  },
+  "playerB": {
+    "playerId": "bb853b3043808227",
+    "nickname": "柠柠七喵"
+  },
+  "winner": "A",
+  "gameIds": [
+    "a14968e1d32e88521701",
+    "a14968e1d32e88521702",
+    "a14968e1d32e88521703"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Ea4y1c7z6?p=3"
+}

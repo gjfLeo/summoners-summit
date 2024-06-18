@@ -1,0 +1,106 @@
+{
+  "id": "4356ad04f96208e7",
+  "name": {
+    "zh": "Cat's Tail Gathering S4"
+  },
+  "gameVersion": "4.0",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "亚服 Asia"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-09-22",
+          "matchIds": [
+            "4356ad04f96208e701"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-09-22",
+          "matchIds": [
+            "4356ad04f96208e702"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "欧服 Europe"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-09-23",
+          "matchIds": [
+            "4356ad04f96208e703"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-09-23",
+          "matchIds": [
+            "4356ad04f96208e704"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "美服 America"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-09-23",
+          "matchIds": [
+            "4356ad04f96208e705"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-09-23",
+          "matchIds": [
+            "4356ad04f96208e706"
+          ]
+        }
+      ]
+    }
+  ]
+}

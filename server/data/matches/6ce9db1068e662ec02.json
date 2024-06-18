@@ -1,0 +1,21 @@
+{
+  "id": "6ce9db1068e662ec02",
+  "tournamentId": "6ce9db1068e662ec",
+  "playerA": {
+    "playerId": "778bac8879d827f1",
+    "nickname": "奥利维拉"
+  },
+  "playerB": {
+    "playerId": "6037f1e3e76b26b1",
+    "nickname": "Zima"
+  },
+  "winner": "B",
+  "gameIds": [
+    "6ce9db1068e662ec0201",
+    "6ce9db1068e662ec0202",
+    "6ce9db1068e662ec0203",
+    "6ce9db1068e662ec0204",
+    "6ce9db1068e662ec0205"
+  ],
+  "video": "https://www.bilibili.com/video/BV1dz4y1P7jR"
+}

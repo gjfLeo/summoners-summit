@@ -1,0 +1,18 @@
+{
+  "id": "8114e098cd447b4202",
+  "tournamentId": "8114e098cd447b42",
+  "playerA": {
+    "playerId": "a629fd8d895a56d6",
+    "nickname": "抽象牌手云来"
+  },
+  "playerB": {
+    "playerId": "86f01a67aa00ec50",
+    "nickname": "小宇"
+  },
+  "winner": "B",
+  "gameIds": [
+    "8114e098cd447b420201",
+    "8114e098cd447b420202"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0"
+}

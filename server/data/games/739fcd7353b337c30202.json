@@ -1,0 +1,23 @@
+{
+  "id": "739fcd7353b337c30202",
+  "matchId": "739fcd7353b337c302",
+  "playerADeck": {
+    "characters": [
+      "1104",
+      "1407",
+      "1107"
+    ],
+    "teamId": "1104-1107-1407"
+  },
+  "playerBDeck": {
+    "characters": [
+      "1310",
+      "1401",
+      "1703"
+    ],
+    "teamId": "1310-1401-1703"
+  },
+  "winner": "B",
+  "starter": "A",
+  "gameVideo": "https://www.bilibili.com/video/BV13W4y1N7e4?p=2"
+}

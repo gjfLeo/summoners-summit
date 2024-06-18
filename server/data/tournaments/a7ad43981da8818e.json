@@ -1,0 +1,83 @@
+{
+  "id": "a7ad43981da8818e",
+  "name": {
+    "zh": "绯雪杯"
+  },
+  "gameVersion": "3.8",
+  "type": "积分赛试办",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-17",
+          "matchIds": [
+            "a7ad43981da8818e01",
+            "a7ad43981da8818e02",
+            "a7ad43981da8818e03",
+            "a7ad43981da8818e04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-18",
+          "matchIds": [
+            "a7ad43981da8818e05",
+            "a7ad43981da8818e06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-18",
+          "matchIds": [
+            "a7ad43981da8818e07"
+          ]
+        }
+      ]
+    }
+  ]
+}

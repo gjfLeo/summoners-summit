@@ -1,0 +1,21 @@
+{
+  "id": "a1adf8e96c2639b907",
+  "tournamentId": "a1adf8e96c2639b9",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "ac3f6bc196bc8223",
+    "nickname": "半仙豆腐"
+  },
+  "playerB": {
+    "playerId": "dabe38b108e9593a",
+    "nickname": "氺水"
+  },
+  "winner": "A",
+  "gameIds": [
+    "a1adf8e96c2639b90701",
+    "a1adf8e96c2639b90702",
+    "a1adf8e96c2639b90703",
+    "a1adf8e96c2639b90704"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235"
+}

@@ -1,0 +1,93 @@
+{
+  "id": "c4fa236ca16278ef",
+  "name": {
+    "zh": "亚洲邀请赛预选赛"
+  },
+  "gameVersion": "4.3",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "DAY1"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "焦点桌"
+          },
+          "date": "2023-12-29",
+          "matchIds": [
+            "c4fa236ca16278ef01",
+            "c4fa236ca16278ef02",
+            "c4fa236ca16278ef03"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "DAY2"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "焦点桌"
+          },
+          "date": "2023-12-30",
+          "matchIds": [
+            "c4fa236ca16278ef04",
+            "c4fa236ca16278ef05",
+            "c4fa236ca16278ef06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "DAY3"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "焦点桌"
+          },
+          "date": "2023-12-31",
+          "matchIds": [
+            "c4fa236ca16278ef07",
+            "c4fa236ca16278ef08"
+          ]
+        }
+      ]
+    }
+  ]
+}

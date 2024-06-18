@@ -1,0 +1,140 @@
+{
+  "id": "1dfa8bfd9b28205d",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "4.2",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-11-27",
+          "matchIds": [
+            "1dfa8bfd9b28205d01",
+            "1dfa8bfd9b28205d02",
+            "1dfa8bfd9b28205d03"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-11-28",
+          "matchIds": [
+            "1dfa8bfd9b28205d04",
+            "1dfa8bfd9b28205d05",
+            "1dfa8bfd9b28205d06",
+            "1dfa8bfd9b28205d07"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-12-29",
+          "matchIds": [
+            "1dfa8bfd9b28205d08",
+            "1dfa8bfd9b28205d09"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-11-30",
+          "matchIds": [
+            "1dfa8bfd9b28205d10",
+            "1dfa8bfd9b28205d11"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-02",
+          "matchIds": [
+            "1dfa8bfd9b28205d12",
+            "1dfa8bfd9b28205d13"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-03",
+          "matchIds": [
+            "1dfa8bfd9b28205d14"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "8308d3400fac999f02",
+  "tournamentId": "8308d3400fac999f",
+  "playerA": {
+    "playerId": "b0a482dfc8c8e81e",
+    "nickname": "卡牌狂魔张老伯"
+  },
+  "playerB": {
+    "playerId": "bc6870fb4473c68c",
+    "nickname": "こじ"
+  },
+  "winner": "B",
+  "gameIds": [
+    "8308d3400fac999f0201",
+    "8308d3400fac999f0202",
+    "8308d3400fac999f0203"
+  ],
+  "video": "https://www.bilibili.com/video/BV1se411B7YZ"
+}

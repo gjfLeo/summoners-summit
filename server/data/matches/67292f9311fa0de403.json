@@ -1,0 +1,18 @@
+{
+  "id": "67292f9311fa0de403",
+  "tournamentId": "67292f9311fa0de4",
+  "playerA": {
+    "playerId": "d4c66f01b78e17d8",
+    "nickname": "剑舞"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "winner": "A",
+  "gameIds": [
+    "67292f9311fa0de40301",
+    "67292f9311fa0de40302"
+  ],
+  "video": "https://www.miyoushe.com/ys/article/42297129"
+}

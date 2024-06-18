@@ -1,0 +1,26 @@
+{
+  "id": "a1adf8e96c2639b901",
+  "tournamentId": "a1adf8e96c2639b9",
+  "playerA": {
+    "playerId": "3619d003d539aa4f",
+    "nickname": "史珍香"
+  },
+  "playerB": {
+    "playerId": "dabe38b108e9593a",
+    "nickname": "氺水"
+  },
+  "winner": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1402-1405",
+      "playerBTeamId": "1201-1205-1601"
+    }
+  ],
+  "gameIds": [
+    "a1adf8e96c2639b90101",
+    "a1adf8e96c2639b90102",
+    "a1adf8e96c2639b90103"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235"
+}

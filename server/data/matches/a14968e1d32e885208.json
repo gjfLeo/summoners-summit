@@ -1,0 +1,18 @@
+{
+  "id": "a14968e1d32e885208",
+  "tournamentId": "a14968e1d32e8852",
+  "playerA": {
+    "playerId": "b26fd8b8bd0cf18c",
+    "nickname": "原来是筱梦"
+  },
+  "playerB": {
+    "playerId": "ce0a176f9872525a",
+    "nickname": "今天不想吃苹果_"
+  },
+  "winner": "A",
+  "gameIds": [
+    "a14968e1d32e88520801",
+    "a14968e1d32e88520802"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Mh4y1M7vW"
+}

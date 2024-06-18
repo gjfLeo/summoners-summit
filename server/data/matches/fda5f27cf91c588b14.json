@@ -1,0 +1,18 @@
+{
+  "id": "fda5f27cf91c588b14",
+  "tournamentId": "fda5f27cf91c588b",
+  "playerA": {
+    "playerId": "9597a48bfd9e8db5",
+    "nickname": "游迪亚斯"
+  },
+  "playerB": {
+    "playerId": "fbd71758185d1c29",
+    "nickname": "曲误周郎"
+  },
+  "winner": "B",
+  "gameIds": [
+    "fda5f27cf91c588b1401",
+    "fda5f27cf91c588b1402"
+  ],
+  "video": ""
+}

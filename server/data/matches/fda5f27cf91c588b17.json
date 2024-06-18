@@ -1,0 +1,18 @@
+{
+  "id": "fda5f27cf91c588b17",
+  "tournamentId": "fda5f27cf91c588b",
+  "playerA": {
+    "playerId": "5b1fcc49c19a276d",
+    "nickname": "小红帽的大兔子"
+  },
+  "playerB": {
+    "playerId": "558548d84613072d",
+    "nickname": "小瓜皮王"
+  },
+  "winner": "B",
+  "gameIds": [
+    "fda5f27cf91c588b1701",
+    "fda5f27cf91c588b1702"
+  ],
+  "video": "https://www.huya.com/video/play/943715576.html"
+}

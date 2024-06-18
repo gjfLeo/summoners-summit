@@ -1,0 +1,19 @@
+{
+  "id": "26ba1c86d1c2a15005",
+  "tournamentId": "26ba1c86d1c2a150",
+  "playerA": {
+    "playerId": "5f6df97eebeb58e2",
+    "nickname": "RobotWizard"
+  },
+  "playerB": {
+    "playerId": "97d604832d90f639",
+    "nickname": "Proxy"
+  },
+  "winner": "B",
+  "gameIds": [
+    "26ba1c86d1c2a1500501",
+    "26ba1c86d1c2a1500502",
+    "26ba1c86d1c2a1500503"
+  ],
+  "video": "https://www.youtube.com/watch?v=KVtgGvlQf6I&t=4062s"
+}

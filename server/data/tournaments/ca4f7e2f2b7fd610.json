@@ -1,0 +1,138 @@
+{
+  "id": "ca4f7e2f2b7fd610",
+  "name": {
+    "zh": "七圣召唤主播邀请赛"
+  },
+  "gameVersion": "3.7",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "线上淘汰赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "预选赛A组"
+          },
+          "date": "2023-06-07",
+          "matchIds": [
+            "ca4f7e2f2b7fd61001",
+            "ca4f7e2f2b7fd61002",
+            "ca4f7e2f2b7fd61003",
+            "ca4f7e2f2b7fd61004",
+            "ca4f7e2f2b7fd61005",
+            "ca4f7e2f2b7fd61006"
+          ]
+        },
+        {
+          "name": {
+            "zh": "预选赛B组"
+          },
+          "date": "2023-06-08",
+          "matchIds": [
+            "ca4f7e2f2b7fd61007",
+            "ca4f7e2f2b7fd61008",
+            "ca4f7e2f2b7fd61009",
+            "ca4f7e2f2b7fd61010",
+            "ca4f7e2f2b7fd61011",
+            "ca4f7e2f2b7fd61012"
+          ]
+        },
+        {
+          "name": {
+            "zh": "预选赛C组"
+          },
+          "date": "2023-06-09",
+          "matchIds": [
+            "ca4f7e2f2b7fd61013",
+            "ca4f7e2f2b7fd61014",
+            "ca4f7e2f2b7fd61015",
+            "ca4f7e2f2b7fd61016",
+            "ca4f7e2f2b7fd61017",
+            "ca4f7e2f2b7fd61018"
+          ]
+        },
+        {
+          "name": {
+            "zh": "预选赛D组"
+          },
+          "date": "2023-06-10",
+          "matchIds": [
+            "ca4f7e2f2b7fd61019",
+            "ca4f7e2f2b7fd61020",
+            "ca4f7e2f2b7fd61021",
+            "ca4f7e2f2b7fd61022",
+            "ca4f7e2f2b7fd61023",
+            "ca4f7e2f2b7fd61024"
+          ]
+        },
+        {
+          "name": {
+            "zh": "8进4晋级赛"
+          },
+          "date": "2023-06-11",
+          "matchIds": [
+            "ca4f7e2f2b7fd61025",
+            "ca4f7e2f2b7fd61026",
+            "ca4f7e2f2b7fd61027",
+            "ca4f7e2f2b7fd61028"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "线下赛"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "胜者组淘汰赛"
+          },
+          "date": "2023-06-16",
+          "matchIds": [
+            "ca4f7e2f2b7fd61029",
+            "ca4f7e2f2b7fd61030"
+          ]
+        },
+        {
+          "name": {
+            "zh": "胜者组半决赛"
+          },
+          "date": "2023-06-16",
+          "matchIds": [
+            "ca4f7e2f2b7fd61031"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组淘汰赛"
+          },
+          "date": "2023-06-17",
+          "matchIds": [
+            "ca4f7e2f2b7fd61032"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组半决赛"
+          },
+          "date": "2023-06-17",
+          "matchIds": [
+            "ca4f7e2f2b7fd61033"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-06-17",
+          "matchIds": [
+            "ca4f7e2f2b7fd61034"
+          ]
+        }
+      ]
+    }
+  ]
+}

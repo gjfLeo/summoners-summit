@@ -1,0 +1,24 @@
+{
+  "id": "1a71da6aacf563042601",
+  "matchId": "1a71da6aacf5630426",
+  "playerADeck": {
+    "characters": [
+      "1201",
+      "1601",
+      "1205"
+    ],
+    "teamId": "1201-1205-1601",
+    "deckCode": "AJCQyQ0NAhCg0UUTB6Cg4ZwOCRDA4p0OCSDR9jQPE5BA/bkPC9GQCr0QDLFAD8QQDPAA"
+  },
+  "playerBDeck": {
+    "characters": [
+      "1401",
+      "1703",
+      "1310"
+    ],
+    "teamId": "1310-1401-1703",
+    "deckCode": "EYCQ3hoPA0AQ9ZcPCWBx9jAQE4EBCDMTE7FBOzQQDKFgC8YQDbEQDdEQDdFQEdUREzAA"
+  },
+  "winner": "A",
+  "starter": "A"
+}

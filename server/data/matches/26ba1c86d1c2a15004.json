@@ -1,0 +1,19 @@
+{
+  "id": "26ba1c86d1c2a15004",
+  "tournamentId": "26ba1c86d1c2a150",
+  "playerA": {
+    "playerId": "69d519ce24299abf",
+    "nickname": "KevinZ"
+  },
+  "playerB": {
+    "playerId": "a7851e95e73d0369",
+    "nickname": "ΚΥΡΑΝΟΣ"
+  },
+  "winner": "A",
+  "gameIds": [
+    "26ba1c86d1c2a1500401",
+    "26ba1c86d1c2a1500402",
+    "26ba1c86d1c2a1500403"
+  ],
+  "video": "https://www.youtube.com/watch?v=TTFtC289Ko4&t=3924s"
+}

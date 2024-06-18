@@ -1,0 +1,19 @@
+{
+  "id": "a14968e1d32e885214",
+  "tournamentId": "a14968e1d32e8852",
+  "playerA": {
+    "playerId": "1215505adf1339e5",
+    "nickname": "Glyou_HZ"
+  },
+  "playerB": {
+    "playerId": "0b31c77d724ac3b4",
+    "nickname": "月话牌社-音月"
+  },
+  "winner": "B",
+  "gameIds": [
+    "a14968e1d32e88521401",
+    "a14968e1d32e88521402",
+    "a14968e1d32e88521403"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Mh4y1M7vW?p=7"
+}

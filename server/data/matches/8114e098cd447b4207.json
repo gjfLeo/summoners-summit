@@ -1,0 +1,21 @@
+{
+  "id": "8114e098cd447b4207",
+  "tournamentId": "8114e098cd447b42",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "a7846ae41cd02f09",
+    "nickname": "Tobby"
+  },
+  "playerB": {
+    "playerId": "314fc9a3f19610f4",
+    "nickname": "詹妮斯"
+  },
+  "winner": "A",
+  "gameIds": [
+    "8114e098cd447b420701",
+    "8114e098cd447b420702",
+    "8114e098cd447b420703",
+    "8114e098cd447b420704"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0"
+}

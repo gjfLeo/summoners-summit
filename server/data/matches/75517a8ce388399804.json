@@ -1,0 +1,18 @@
+{
+  "id": "75517a8ce388399804",
+  "tournamentId": "75517a8ce3883998",
+  "playerA": {
+    "playerId": "a6856de3ec579318",
+    "nickname": "莉莉芭"
+  },
+  "playerB": {
+    "playerId": "84170cbb0de3f48e",
+    "nickname": "Hattie"
+  },
+  "winner": "A",
+  "gameIds": [
+    "75517a8ce38839980401",
+    "75517a8ce38839980402"
+  ],
+  "video": "https://www.youtube.com/watch?v=8g00B_kmI5Y&t=2802s"
+}

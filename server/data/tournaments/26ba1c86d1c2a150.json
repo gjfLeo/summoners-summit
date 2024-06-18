@@ -1,0 +1,106 @@
+{
+  "id": "26ba1c86d1c2a150",
+  "name": {
+    "zh": "Cat's Tail Gathering S5"
+  },
+  "gameVersion": "4.1",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "亚服 Asia"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-11-05",
+          "matchIds": [
+            "26ba1c86d1c2a15001"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-11-05",
+          "matchIds": [
+            "26ba1c86d1c2a15002"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "欧服 Europe"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-11-06",
+          "matchIds": [
+            "26ba1c86d1c2a15003"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-11-06",
+          "matchIds": [
+            "26ba1c86d1c2a15004"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "美服 America"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-11-06",
+          "matchIds": [
+            "26ba1c86d1c2a15005"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-11-06",
+          "matchIds": [
+            "26ba1c86d1c2a15006"
+          ]
+        }
+      ]
+    }
+  ]
+}

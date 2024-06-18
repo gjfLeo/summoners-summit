@@ -1,0 +1,127 @@
+{
+  "id": "1a71da6aacf56304",
+  "name": {
+    "zh": "哔哩哔哩七圣召唤平台资格赛"
+  },
+  "gameVersion": "4.3",
+  "type": "平台赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "晋级赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "A组"
+          },
+          "date": "2023-12-27",
+          "matchIds": [
+            "1a71da6aacf5630401",
+            "1a71da6aacf5630402",
+            "1a71da6aacf5630403",
+            "1a71da6aacf5630404",
+            "1a71da6aacf5630405"
+          ]
+        },
+        {
+          "name": {
+            "zh": "B组"
+          },
+          "date": "2023-12-28",
+          "matchIds": [
+            "1a71da6aacf5630406",
+            "1a71da6aacf5630407",
+            "1a71da6aacf5630408",
+            "1a71da6aacf5630409",
+            "1a71da6aacf5630410"
+          ]
+        },
+        {
+          "name": {
+            "zh": "C组"
+          },
+          "date": "2023-12-29",
+          "matchIds": [
+            "1a71da6aacf5630411",
+            "1a71da6aacf5630412",
+            "1a71da6aacf5630413",
+            "1a71da6aacf5630414",
+            "1a71da6aacf5630415"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组"
+          },
+          "date": "2023-12-30",
+          "matchIds": [
+            "1a71da6aacf5630416",
+            "1a71da6aacf5630417",
+            "1a71da6aacf5630418",
+            "1a71da6aacf5630419",
+            "1a71da6aacf5630420"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-31",
+          "matchIds": [
+            "1a71da6aacf5630421",
+            "1a71da6aacf5630422",
+            "1a71da6aacf5630423",
+            "1a71da6aacf5630424",
+            "1a71da6aacf5630425",
+            "1a71da6aacf5630426"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-31",
+          "matchIds": [
+            "1a71da6aacf5630427"
+          ]
+        }
+      ]
+    }
+  ]
+}

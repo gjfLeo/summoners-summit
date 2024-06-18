@@ -1,0 +1,26 @@
+{
+  "id": "13de06a12131949f01",
+  "tournamentId": "13de06a12131949f",
+  "playerA": {
+    "playerId": "7d44fae20bea224d",
+    "nickname": "Lieil"
+  },
+  "playerB": {
+    "playerId": "2ebdf7d8d35cae49",
+    "nickname": "Matt Mario"
+  },
+  "winner": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1106-1203-1507",
+      "playerBTeamId": "1109-2203-2304"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f0101",
+    "13de06a12131949f0102",
+    "13de06a12131949f0103"
+  ],
+  "video": "https://www.youtube.com/live/GKibbRTCCIA?t=1374"
+}

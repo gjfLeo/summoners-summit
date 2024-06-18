@@ -1,0 +1,19 @@
+{
+  "id": "3c8bf7110b0e4d7a03",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "0c33dfe4dae95df8",
+    "nickname": "狗神儿"
+  },
+  "playerB": {
+    "playerId": "4c2387fef69bad1a",
+    "nickname": "花神杯-小桜"
+  },
+  "winner": "B",
+  "gameIds": [
+    "3c8bf7110b0e4d7a0301",
+    "3c8bf7110b0e4d7a0302",
+    "3c8bf7110b0e4d7a0303"
+  ],
+  "video": "https://v.huya.com/play/897506333.html"
+}

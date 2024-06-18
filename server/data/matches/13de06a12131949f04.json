@@ -1,0 +1,25 @@
+{
+  "id": "13de06a12131949f04",
+  "tournamentId": "13de06a12131949f",
+  "playerA": {
+    "playerId": "e2afb0300b4e5ef6",
+    "nickname": "Birdy"
+  },
+  "playerB": {
+    "playerId": "09da673b1a284085",
+    "nickname": "ScrubbyDuck"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1311-2304-2402",
+      "playerBTeamId": "1310-2301-2403"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f0401",
+    "13de06a12131949f0402"
+  ],
+  "video": "https://www.youtube.com/live/GKibbRTCCIA?t=13011"
+}

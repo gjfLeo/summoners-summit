@@ -1,0 +1,74 @@
+{
+  "id": "886d25f576c7ae54",
+  "name": {
+    "zh": "Cat's Tail Gathering S3"
+  },
+  "gameVersion": "3.8",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "亚服 Asia"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-08-13",
+          "matchIds": [
+            "886d25f576c7ae5401"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-08-13",
+          "matchIds": [
+            "886d25f576c7ae5402"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "欧服 Europe"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "季军赛"
+          },
+          "date": "2023-08-14",
+          "matchIds": [
+            "886d25f576c7ae5403"
+          ]
+        },
+        {
+          "name": {
+            "zh": "决赛"
+          },
+          "date": "2023-08-14",
+          "matchIds": [
+            "886d25f576c7ae5404"
+          ]
+        }
+      ]
+    }
+  ]
+}

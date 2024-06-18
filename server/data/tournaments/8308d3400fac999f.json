@@ -1,0 +1,85 @@
+{
+  "id": "8308d3400fac999f",
+  "name": {
+    "zh": "「大利神杯」中日七圣对抗赛"
+  },
+  "gameVersion": "4.3",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "娱乐赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-22",
+          "matchIds": [
+            "8308d3400fac999f01",
+            "8308d3400fac999f02",
+            "8308d3400fac999f03"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "表演赛"
+      },
+      "rules": {
+        "numGames": 1,
+        "mode": "duel",
+        "submitTeams": {
+          "num": 1
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-23",
+          "matchIds": [
+            "8308d3400fac999f04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "竞技赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-23",
+          "matchIds": [
+            "8308d3400fac999f05",
+            "8308d3400fac999f06",
+            "8308d3400fac999f07"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "8b3a1deceb388f4302",
+  "tournamentId": "8b3a1deceb388f43",
+  "playerA": {
+    "playerId": "47dce1226ff1f04d",
+    "nickname": "鱼儿化音的迷妹"
+  },
+  "playerB": {
+    "playerId": "9a0149ab002a3b3a",
+    "nickname": "今天不想吃苹果"
+  },
+  "winner": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1210-2602",
+      "playerBTeamId": "1104-1202-1402"
+    }
+  ],
+  "gameIds": [
+    "8b3a1deceb388f430201",
+    "8b3a1deceb388f430202"
+  ],
+  "video": "https://www.bilibili.com/video/BV1jM4m1673r"
+}

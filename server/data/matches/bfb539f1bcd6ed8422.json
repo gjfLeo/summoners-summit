@@ -1,0 +1,19 @@
+{
+  "id": "bfb539f1bcd6ed8422",
+  "tournamentId": "bfb539f1bcd6ed84",
+  "playerA": {
+    "playerId": "c3b51d028a073248",
+    "nickname": "琉環冰"
+  },
+  "playerB": {
+    "playerId": "24a4de1216a63be9",
+    "nickname": "hl"
+  },
+  "winner": "B",
+  "gameIds": [
+    "bfb539f1bcd6ed842201",
+    "bfb539f1bcd6ed842202",
+    "bfb539f1bcd6ed842203"
+  ],
+  "video": "https://weibo.com/l/wblive/p/show/1022:2321325007498724900920?mark_id=999_reallog_mark_ad%3A999%7CWeiboADNatural"
+}

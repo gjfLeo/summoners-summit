@@ -1,0 +1,20 @@
+{
+  "id": "d4897e2605029c9502",
+  "tournamentId": "d4897e2605029c95",
+  "playerA": {
+    "playerId": "aa717943ad3fbd8e",
+    "nickname": "Tonbo"
+  },
+  "playerB": {
+    "playerId": "1ca822bb6b26ad83",
+    "nickname": "帕尔特"
+  },
+  "winner": "A",
+  "gameIds": [
+    "d4897e2605029c950201",
+    "d4897e2605029c950202",
+    "d4897e2605029c950203",
+    "d4897e2605029c950204"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ue411n7fD"
+}

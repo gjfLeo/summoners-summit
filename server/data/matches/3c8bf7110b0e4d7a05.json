@@ -1,0 +1,18 @@
+{
+  "id": "3c8bf7110b0e4d7a05",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "58ed68cadaabf51c",
+    "nickname": "卓越、疯猫"
+  },
+  "playerB": {
+    "playerId": "7e9d00eadb6db6cd",
+    "nickname": "哈士奇的冰激凌"
+  },
+  "winner": "B",
+  "gameIds": [
+    "3c8bf7110b0e4d7a0501",
+    "3c8bf7110b0e4d7a0502"
+  ],
+  "video": "https://v.huya.com/play/897506655.html"
+}

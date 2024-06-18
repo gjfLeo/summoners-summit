@@ -1,0 +1,161 @@
+{
+  "id": "9e3220d81e22c87f",
+  "name": {
+    "zh": "寒天之钉杯"
+  },
+  "gameVersion": "4.3",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 8,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-01-07",
+          "matchIds": [
+            "9e3220d81e22c87f01",
+            "9e3220d81e22c87f02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-01-08",
+          "matchIds": [
+            "9e3220d81e22c87f03",
+            "9e3220d81e22c87f04"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2024-01-09",
+          "matchIds": [
+            "9e3220d81e22c87f05",
+            "9e3220d81e22c87f06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2024-01-10",
+          "matchIds": [
+            "9e3220d81e22c87f07",
+            "9e3220d81e22c87f08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 10,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-01-11",
+          "matchIds": [
+            "9e3220d81e22c87f09",
+            "9e3220d81e22c87f10"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-01-12",
+          "matchIds": [
+            "9e3220d81e22c87f11",
+            "9e3220d81e22c87f12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 10,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-01-13",
+          "matchIds": [
+            "9e3220d81e22c87f13",
+            "9e3220d81e22c87f14"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "numCharactersRequired": 13,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-01-14",
+          "matchIds": [
+            "9e3220d81e22c87f15"
+          ]
+        }
+      ]
+    }
+  ]
+}

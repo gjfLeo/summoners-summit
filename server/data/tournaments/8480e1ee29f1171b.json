@@ -1,0 +1,96 @@
+{
+  "id": "8480e1ee29f1171b",
+  "name": {
+    "zh": "「燃斗无双」米游社"
+  },
+  "gameVersion": "4.5",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-04-04",
+          "matchIds": [
+            "8480e1ee29f1171b01",
+            "8480e1ee29f1171b02",
+            "8480e1ee29f1171b03",
+            "8480e1ee29f1171b04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-04-05",
+          "matchIds": [
+            "8480e1ee29f1171b05",
+            "8480e1ee29f1171b06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-04-06",
+          "matchIds": [
+            "8480e1ee29f1171b07"
+          ]
+        }
+      ]
+    }
+  ]
+}

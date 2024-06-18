@@ -1,0 +1,21 @@
+{
+  "id": "964e20f8443917cd08",
+  "tournamentId": "964e20f8443917cd",
+  "playerA": {
+    "playerId": "7d28d6d78866d2c5",
+    "nickname": "物語"
+  },
+  "playerB": {
+    "playerId": "7979277d5a426bf7",
+    "nickname": "取极限的狸花猫"
+  },
+  "winner": "A",
+  "gameIds": [
+    "964e20f8443917cd0801",
+    "964e20f8443917cd0802",
+    "964e20f8443917cd0803",
+    "964e20f8443917cd0804",
+    "964e20f8443917cd0805"
+  ],
+  "video": "https://www.bilibili.com/video/BV1MP411t7DN"
+}

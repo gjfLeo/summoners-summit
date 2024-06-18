@@ -1,0 +1,30 @@
+{
+  "id": "76ee73d43f820afe04",
+  "tournamentId": "76ee73d43f820afe",
+  "playerA": {
+    "playerId": "b4472ce728455271",
+    "nickname": "零之启"
+  },
+  "playerB": {
+    "playerId": "5f95f7e55ca146e5",
+    "nickname": "Winsoon"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "1703",
+      "playerBCardId": "2602"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1203-2102-2402",
+      "playerBTeamId": "1203-2102-2402"
+    }
+  ],
+  "gameIds": [
+    "76ee73d43f820afe0401",
+    "76ee73d43f820afe0402"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235"
+}

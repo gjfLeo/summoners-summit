@@ -1,0 +1,149 @@
+{
+  "id": "bfb539f1bcd6ed84",
+  "name": {
+    "zh": "微博杯七圣召唤平台资格赛"
+  },
+  "gameVersion": "4.4",
+  "type": "平台赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "小组赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "A组"
+          },
+          "date": "2024-02-27",
+          "matchIds": [
+            "bfb539f1bcd6ed8401",
+            "bfb539f1bcd6ed8402",
+            "bfb539f1bcd6ed8403",
+            "bfb539f1bcd6ed8404",
+            "bfb539f1bcd6ed8405"
+          ]
+        },
+        {
+          "name": {
+            "zh": "B组"
+          },
+          "date": "2024-02-28",
+          "matchIds": [
+            "bfb539f1bcd6ed8406",
+            "bfb539f1bcd6ed8407",
+            "bfb539f1bcd6ed8408",
+            "bfb539f1bcd6ed8409",
+            "bfb539f1bcd6ed8410"
+          ]
+        },
+        {
+          "name": {
+            "zh": "C组"
+          },
+          "date": "2024-02-29",
+          "matchIds": [
+            "bfb539f1bcd6ed8411",
+            "bfb539f1bcd6ed8412",
+            "bfb539f1bcd6ed8413",
+            "bfb539f1bcd6ed8414",
+            "bfb539f1bcd6ed8415"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组"
+          },
+          "date": "2024-03-01",
+          "matchIds": [
+            "bfb539f1bcd6ed8416",
+            "bfb539f1bcd6ed8417",
+            "bfb539f1bcd6ed8418",
+            "bfb539f1bcd6ed8419",
+            "bfb539f1bcd6ed8420"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "8进4"
+          },
+          "date": "2024-03-02",
+          "matchIds": [
+            "bfb539f1bcd6ed8421",
+            "bfb539f1bcd6ed8422",
+            "bfb539f1bcd6ed8423",
+            "bfb539f1bcd6ed8424"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-03-03",
+          "matchIds": [
+            "bfb539f1bcd6ed8425",
+            "bfb539f1bcd6ed8426"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-03-03",
+          "matchIds": [
+            "bfb539f1bcd6ed8427"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "8114e098cd447b4203",
+  "tournamentId": "8114e098cd447b42",
+  "playerA": {
+    "playerId": "5ed19bab43d242a8",
+    "nickname": "自信的菠萝蜜"
+  },
+  "playerB": {
+    "playerId": "208d9c327f813eb3",
+    "nickname": "摸鱼"
+  },
+  "winner": "B",
+  "gameIds": [
+    "8114e098cd447b420301",
+    "8114e098cd447b420302",
+    "8114e098cd447b420303"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0"
+}

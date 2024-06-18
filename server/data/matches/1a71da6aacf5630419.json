@@ -1,0 +1,18 @@
+{
+  "id": "1a71da6aacf5630419",
+  "tournamentId": "1a71da6aacf56304",
+  "playerA": {
+    "playerId": "bce59078f3fba32a",
+    "nickname": "时堕YL"
+  },
+  "playerB": {
+    "playerId": "71176666315aee48",
+    "nickname": "莫莉安wink"
+  },
+  "winner": "A",
+  "gameIds": [
+    "1a71da6aacf563041901",
+    "1a71da6aacf563041902",
+    "1a71da6aacf563041903"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "94a9f0ed23cd78e207",
+  "tournamentId": "94a9f0ed23cd78e2",
+  "playerA": {
+    "playerId": "87e1a3266b3a0dfb",
+    "nickname": "StarMeaning"
+  },
+  "playerB": {
+    "playerId": "7e319f0dde17d05b",
+    "nickname": "柚恩柚恩了"
+  },
+  "winner": "B",
+  "gameIds": [
+    "94a9f0ed23cd78e20701",
+    "94a9f0ed23cd78e20702",
+    "94a9f0ed23cd78e20703"
+  ],
+  "video": ""
+}

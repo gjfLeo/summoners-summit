@@ -1,0 +1,19 @@
+{
+  "id": "f757340119508e9521",
+  "tournamentId": "f757340119508e95",
+  "playerA": {
+    "playerId": "2807fd289c5283f0",
+    "nickname": "袋大鼠"
+  },
+  "playerB": {
+    "playerId": "74045fc74589b099",
+    "nickname": "胜利哥哥的迷妹"
+  },
+  "winner": "B",
+  "gameIds": [
+    "f757340119508e952101",
+    "f757340119508e952102",
+    "f757340119508e952103"
+  ],
+  "video": "https://v.douyu.com/show/jwzOvpxz6N9vZVRm"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bfb539f1bcd6ed8403",
+  "tournamentId": "bfb539f1bcd6ed84",
+  "playerA": {
+    "playerId": "7862a43569da93e5",
+    "nickname": "吴意"
+  },
+  "playerB": {
+    "playerId": "f53067a0b2b9cc68",
+    "nickname": "LL起翼夜鹰"
+  },
+  "winner": "B",
+  "gameIds": [
+    "bfb539f1bcd6ed840301",
+    "bfb539f1bcd6ed840302"
+  ],
+  "video": "https://weibo.com/l/wblive/p/show/1022:2321325006014473961659?mark_id=999_reallog_mark_ad%3A999%7CWeiboADNatural"
+}

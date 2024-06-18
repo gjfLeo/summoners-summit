@@ -1,0 +1,18 @@
+{
+  "id": "3be674f826f3dd8903",
+  "tournamentId": "3be674f826f3dd89",
+  "playerA": {
+    "playerId": "0f85006feff61a5c",
+    "nickname": "铃紫"
+  },
+  "playerB": {
+    "playerId": "1b0d742dcfde749d",
+    "nickname": "诛仙还怡文"
+  },
+  "winner": "A",
+  "gameIds": [
+    "3be674f826f3dd890301",
+    "3be674f826f3dd890302"
+  ],
+  "video": "https://www.bilibili.com/video/BV1uV411j7TD"
+}

@@ -1,0 +1,91 @@
+{
+  "id": "b0d9f5ddda951d8e",
+  "name": {
+    "zh": "火星杯"
+  },
+  "gameVersion": "3.7",
+  "type": "积分赛试办",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-06-29",
+          "matchIds": [
+            "b0d9f5ddda951d8e01",
+            "b0d9f5ddda951d8e02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-06-30",
+          "matchIds": [
+            "b0d9f5ddda951d8e03",
+            "b0d9f5ddda951d8e04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-01",
+          "matchIds": [
+            "b0d9f5ddda951d8e05",
+            "b0d9f5ddda951d8e06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-07-02",
+          "matchIds": [
+            "b0d9f5ddda951d8e07"
+          ]
+        }
+      ]
+    }
+  ]
+}

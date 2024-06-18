@@ -1,0 +1,21 @@
+{
+  "id": "55a3dccd1dcc1d7407",
+  "tournamentId": "55a3dccd1dcc1d74",
+  "playerA": {
+    "playerId": "16ccd135d2f2e5af",
+    "nickname": "蕊梨"
+  },
+  "playerB": {
+    "playerId": "d800986db8907930",
+    "nickname": "净善宫的男主人"
+  },
+  "winner": "A",
+  "gameIds": [
+    "55a3dccd1dcc1d740701",
+    "55a3dccd1dcc1d740702",
+    "55a3dccd1dcc1d740703",
+    "55a3dccd1dcc1d740704",
+    "55a3dccd1dcc1d740705"
+  ],
+  "video": "https://www.bilibili.com/video/BV1jS421P7nF"
+}

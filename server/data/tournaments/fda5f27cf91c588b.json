@@ -1,0 +1,151 @@
+{
+  "id": "fda5f27cf91c588b",
+  "name": {
+    "zh": "虎牙主播资格赛"
+  },
+  "gameVersion": "4.2",
+  "type": "平台赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2023-12-01",
+          "matchIds": [
+            "fda5f27cf91c588b01",
+            "fda5f27cf91c588b02",
+            "fda5f27cf91c588b03",
+            "fda5f27cf91c588b04",
+            "fda5f27cf91c588b05"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2023-12-02",
+          "matchIds": [
+            "fda5f27cf91c588b06",
+            "fda5f27cf91c588b07",
+            "fda5f27cf91c588b08",
+            "fda5f27cf91c588b09",
+            "fda5f27cf91c588b10"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2023-12-03",
+          "matchIds": [
+            "fda5f27cf91c588b11",
+            "fda5f27cf91c588b12",
+            "fda5f27cf91c588b13",
+            "fda5f27cf91c588b14",
+            "fda5f27cf91c588b15"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2023-12-04",
+          "matchIds": [
+            "fda5f27cf91c588b16",
+            "fda5f27cf91c588b17",
+            "fda5f27cf91c588b18",
+            "fda5f27cf91c588b19",
+            "fda5f27cf91c588b20"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-09",
+          "matchIds": [
+            "fda5f27cf91c588b21",
+            "fda5f27cf91c588b22",
+            "fda5f27cf91c588b23",
+            "fda5f27cf91c588b24",
+            "fda5f27cf91c588b25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 2
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-10",
+          "matchIds": [
+            "fda5f27cf91c588b26",
+            "fda5f27cf91c588b27",
+            "fda5f27cf91c588b28"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2023-12-10",
+          "matchIds": [
+            "fda5f27cf91c588b29"
+          ]
+        }
+      ]
+    }
+  ]
+}

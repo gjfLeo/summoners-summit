@@ -1,0 +1,18 @@
+{
+  "id": "40c26b52c28d0d1a12",
+  "tournamentId": "40c26b52c28d0d1a",
+  "playerA": {
+    "playerId": "0d0fa57e06e04206",
+    "nickname": "雪国Ink"
+  },
+  "playerB": {
+    "playerId": "7465d7a9c391ed96",
+    "nickname": "终末我家"
+  },
+  "winner": "A",
+  "gameIds": [
+    "40c26b52c28d0d1a1201",
+    "40c26b52c28d0d1a1202"
+  ],
+  "video": "https://v.douyu.com/show/8KxjMdGPrro7VLwb"
+}

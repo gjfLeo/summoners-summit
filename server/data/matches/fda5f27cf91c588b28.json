@@ -1,0 +1,18 @@
+{
+  "id": "fda5f27cf91c588b28",
+  "tournamentId": "fda5f27cf91c588b",
+  "playerA": {
+    "playerId": "9a0149ab002a3b3a",
+    "nickname": "今天不想吃苹果"
+  },
+  "playerB": {
+    "playerId": "f2f939495fe7f537",
+    "nickname": "瓦莉拉"
+  },
+  "winner": "B",
+  "gameIds": [
+    "fda5f27cf91c588b2801",
+    "fda5f27cf91c588b2802"
+  ],
+  "video": "https://www.huya.com/video/play/943718934.html"
+}

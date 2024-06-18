@@ -1,0 +1,152 @@
+{
+  "id": "9eb952efd4ba2f19",
+  "name": {
+    "zh": "「逐辉星聚」月话杯"
+  },
+  "gameVersion": "4.3",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-01-21",
+          "matchIds": [
+            "9eb952efd4ba2f1901",
+            "9eb952efd4ba2f1902",
+            "9eb952efd4ba2f1903",
+            "9eb952efd4ba2f1904"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-01-22",
+          "matchIds": [
+            "9eb952efd4ba2f1905",
+            "9eb952efd4ba2f1906"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2024-01-23",
+          "matchIds": [
+            "9eb952efd4ba2f1907",
+            "9eb952efd4ba2f1908"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-01-25",
+          "matchIds": [
+            "9eb952efd4ba2f1909",
+            "9eb952efd4ba2f1910"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-01-26",
+          "matchIds": [
+            "9eb952efd4ba2f1911",
+            "9eb952efd4ba2f1912"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-01-27",
+          "matchIds": [
+            "9eb952efd4ba2f1913",
+            "9eb952efd4ba2f1914"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-01-28",
+          "matchIds": [
+            "9eb952efd4ba2f1915"
+          ]
+        }
+      ]
+    }
+  ]
+}

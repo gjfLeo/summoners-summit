@@ -1,0 +1,31 @@
+{
+  "id": "215e944fe590bbd302",
+  "tournamentId": "215e944fe590bbd3",
+  "playerA": {
+    "playerId": "0d0a69a3a6e06964",
+    "nickname": "守明枫叶"
+  },
+  "playerB": {
+    "playerId": "50c0a9372c5cfdbc",
+    "nickname": "Sakumi"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "2403",
+      "playerBCardId": "2402"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1310-1401-1703",
+      "playerBTeamId": "1104-1202-1402"
+    }
+  ],
+  "gameIds": [
+    "215e944fe590bbd30201",
+    "215e944fe590bbd30202",
+    "215e944fe590bbd30203"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235"
+}

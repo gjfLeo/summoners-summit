@@ -1,0 +1,18 @@
+{
+  "id": "64eb9958f313e17001",
+  "tournamentId": "64eb9958f313e170",
+  "playerA": {
+    "playerId": "c3b51d028a073248",
+    "nickname": "那菈琉環冰"
+  },
+  "playerB": {
+    "playerId": "477c80964ce847b5",
+    "nickname": "枫间璃"
+  },
+  "winner": "A",
+  "gameIds": [
+    "64eb9958f313e1700101",
+    "64eb9958f313e1700102"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ha4y1A7vD"
+}

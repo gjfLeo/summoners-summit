@@ -1,0 +1,20 @@
+{
+  "id": "2e6451ff870b4ce909",
+  "tournamentId": "2e6451ff870b4ce9",
+  "playerA": {
+    "playerId": "3a4596bf727955c3",
+    "nickname": "Karasawa"
+  },
+  "playerB": {
+    "playerId": "e9cc487cd5fe5cab",
+    "nickname": "胡芙芙大魔王"
+  },
+  "winner": "B",
+  "gameIds": [
+    "2e6451ff870b4ce90901",
+    "2e6451ff870b4ce90902",
+    "2e6451ff870b4ce90903",
+    "2e6451ff870b4ce90904"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Fg4y117yp"
+}

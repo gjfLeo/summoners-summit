@@ -1,0 +1,28 @@
+{
+  "id": "1dfa8bfd9b28205d13",
+  "tournamentId": "1dfa8bfd9b28205d",
+  "playerA": {
+    "playerId": "3a89d3d6d33bacae",
+    "nickname": "镜莲华的葬送"
+  },
+  "playerB": {
+    "playerId": "fc2e0ff185285967",
+    "nickname": "玖哀"
+  },
+  "winner": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1401-2201-2301",
+      "playerBTeamId": "1203-1208-1703"
+    }
+  ],
+  "gameIds": [
+    "1dfa8bfd9b28205d1301",
+    "1dfa8bfd9b28205d1302",
+    "1dfa8bfd9b28205d1303",
+    "1dfa8bfd9b28205d1304",
+    "1dfa8bfd9b28205d1305"
+  ],
+  "video": "https://www.bilibili.com/video/BV19G411e7MU"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "3c8bf7110b0e4d7a19",
+  "tournamentId": "3c8bf7110b0e4d7a",
+  "playerA": {
+    "playerId": "1110fdbc16a4667a",
+    "nickname": "无光之眼"
+  },
+  "playerB": {
+    "playerId": "4088527c052e784b",
+    "nickname": "一不小欣x"
+  },
+  "winner": "A",
+  "gameIds": [
+    "3c8bf7110b0e4d7a1901",
+    "3c8bf7110b0e4d7a1902",
+    "3c8bf7110b0e4d7a1903"
+  ],
+  "video": "https://v.huya.com/play/897509319.html"
+}

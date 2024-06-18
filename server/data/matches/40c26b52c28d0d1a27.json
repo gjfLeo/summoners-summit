@@ -1,0 +1,21 @@
+{
+  "id": "40c26b52c28d0d1a27",
+  "tournamentId": "40c26b52c28d0d1a",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "06a9c720a7156e07",
+    "nickname": "点点点"
+  },
+  "playerB": {
+    "playerId": "742ad70755eb8d9b",
+    "nickname": "皮皮猪"
+  },
+  "winner": "B",
+  "gameIds": [
+    "40c26b52c28d0d1a2701",
+    "40c26b52c28d0d1a2702",
+    "40c26b52c28d0d1a2703",
+    "40c26b52c28d0d1a2704"
+  ],
+  "video": "https://v.douyu.com/show/EO0XvNbXDjXvDrBd"
+}

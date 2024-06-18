@@ -1,0 +1,19 @@
+{
+  "id": "ca4f7e2f2b7fd61033",
+  "tournamentId": "ca4f7e2f2b7fd610",
+  "playerA": {
+    "playerId": "b54429001280d09e",
+    "nickname": "甜甜花酿鸡队"
+  },
+  "playerB": {
+    "playerId": "91fca2d8ec1e67cc",
+    "nickname": "黄油蟹蟹队"
+  },
+  "winner": "B",
+  "gameIds": [
+    "ca4f7e2f2b7fd6103301",
+    "ca4f7e2f2b7fd6103302",
+    "ca4f7e2f2b7fd6103303"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ek4y1M7jd?p=5"
+}
