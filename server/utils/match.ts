@@ -28,6 +28,10 @@ export function getMatchR(matchId: MatchId): MatchR | undefined {
   };
 }
 
+export function getMatchList(): Match[] {
+  return ZMatch.array().parse(readDataList("matches"));
+}
+
 export const ZMatchSaveParams = ZMatch.partial({
   id: true,
 }).omit({

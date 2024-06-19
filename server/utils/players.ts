@@ -1,10 +1,21 @@
 import type { z } from "zod";
+import { getMatchList } from "./match";
 import type { PlayerIndex } from "~/types/data";
-import { ZPlayer } from "~/types/data";
+import { ZMatch, ZPlayer } from "~/types/data";
 
 export function getPlayer(playerId: string, skipRedirect = false) {
   if (!skipRedirect) {
     const redirectId = readIndex().redirect[playerId];
+    if (readIndex().redirect[redirectId]) {
+      if (getPlayer(playerId, true)) {
+        console.error(`${playerId} -> ${redirectId}`);
+        throw new Error("错误重定向");
+      }
+      console.warn(`player: ${playerId} -> ${redirectId} -> ${readIndex().redirect[redirectId]}`);
+      if (playerId === readIndex().redirect[redirectId]) {
+        throw new Error("循环重定向");
+      }
+    }
     if (redirectId) return getPlayer(redirectId);
   }
   return ZPlayer.optional().parse(readData(`players/${playerId}`));
@@ -37,6 +48,10 @@ export function savePlayer(params: SavePlayerParams) {
   if (oldId && oldId !== newId) {
     deletePlayer(oldId);
     updateIndex((index) => {
+      Object.entries(index.redirect)
+        .filter(([, b]) => b === oldId)
+        .forEach(([a]) => index.redirect[a] = newId);
+      delete index.redirect[newId];
       index.redirect[oldId] = newId;
     });
   }
@@ -69,7 +84,7 @@ export function mergePlayer(sourceId: string, targetId: string) {
   deletePlayer(sourceId);
   savePlayer(target);
   updateIndex((index) => {
-    index.redirect[sourceId] = targetId;
+    index.redirect[source.id] = target.id;
   });
 }
 
@@ -104,4 +119,38 @@ function updateIndex(func: (index: PlayerIndex) => void) {
   const index = readIndex();
   func(index);
   writeData("players/_index", index);
+}
+
+export function cleanUpPlayers() {
+  updateIndex((index) => {
+    index.redirect = {};
+    getPlayerList().forEach((player) => {
+      player.redirectFrom?.forEach(redirectId => index.redirect[redirectId] = player.id);
+    });
+  });
+
+  const matches = getMatchList();
+
+  matches.forEach((match) => {
+    const playerA = getPlayer(match.playerA.playerId);
+    const playerB = getPlayer(match.playerB.playerId);
+
+    if (!playerA || !playerB) {
+      console.log("PLAYER_NOT_FOUND", match.playerA, match.playerB);
+      throw new Error("PLAYER_NOT_FOUND");
+    };
+
+    if (playerA.id !== match.playerA.playerId) {
+      match.playerA.playerId = playerA.id;
+    }
+    if (playerB.id !== match.playerB.playerId) {
+      match.playerB.playerId = playerB.id;
+    }
+
+    writeData(`matches/${match.id}`, ZMatch.parse(match));
+  });
+
+  updateIndex((index) => {
+    index.redirect = {};
+  });
 }

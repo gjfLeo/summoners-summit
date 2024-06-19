@@ -14,5 +14,8 @@
     "submitTeams": "Submit line-ups: {0}",
     "submitTeamsBanTeamsDescription": "Each player submits {0} decks, then ban {1} of opponent's decks.",
     "submitTeamsDescription": "Each player submits {0} line-ups."
+  },
+  "tournament": {
+    "champion": "Champion"
   }
 }

@@ -5,16 +5,11 @@ defineProps<{
   tournament: TournamentRB;
 }>();
 
-const { locale, t } = useLocales();
+const { currentLocalized, t } = useLocales();
 </script>
 
 <template>
-  <NCard :title="tournament.name[locale]" hoverable class="h-full cursor-pointer">
-    <!-- <template #header>
-      <div class="flex flex-wrap items-center">
-        <div>{{ tournament.name[locale] }}</div>
-      </div>
-    </template> -->
+  <NCard :title="currentLocalized(tournament.name)" hoverable class="h-full cursor-pointer">
     <template #default>
       <dl class="tournament-dl">
         <dt>{{ t('main.tournament.type') }}</dt>

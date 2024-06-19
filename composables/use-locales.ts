@@ -1,5 +1,13 @@
 import type { Locales } from "~/types/data";
 
 export function useLocales() {
-  return useI18n<unknown, Locales>();
+  const i18n = useI18n<unknown, Locales>();
+
+  function currentLocalized(data: Partial<Record<Locales, string>>) {
+    return data[i18n.locale.value] ?? data.zh;
+  }
+  return {
+    ...i18n,
+    currentLocalized,
+  };
 }

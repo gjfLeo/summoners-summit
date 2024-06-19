@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { NInput } from "#components";
 import type { Player } from "~/types/data";
 
 const emit = defineEmits<{
@@ -12,6 +13,7 @@ const visible = ref(false);
 const player = ref<Player>({} as Player);
 const uniqueName = ref<string>();
 const submitLoading = ref(false);
+const inputting = ref(false);
 
 async function show(playerId: Player["id"]) {
   const res = await $fetch("/api/v3/players/get", {
@@ -25,11 +27,14 @@ async function show(playerId: Player["id"]) {
   }
   player.value = res.player;
   uniqueName.value = res.player.uniqueName;
-
+  inputting.value = false;
   visible.value = true;
 }
 
 async function submit() {
+  if (!uniqueName.value) {
+    return;
+  };
   submitLoading.value = true;
   const { success } = await $fetch("/api/v3/players/setUniqueName", {
     method: "POST",
@@ -43,6 +48,15 @@ async function submit() {
     emit("done");
     visible.value = false;
   }
+}
+
+const input = ref<InstanceType<typeof NInput>>();
+function handleAdd() {
+  inputting.value = true;
+  uniqueName.value = "";
+  nextTick(() => {
+    input.value?.focus();
+  });
 }
 
 defineExpose({
@@ -61,15 +75,25 @@ defineExpose({
       <NTag
         v-for="nickname in player ? [player.uniqueName, ...player.aliases] : []" :key="nickname"
         class="cursor-pointer"
-        :type="nickname === uniqueName ? 'primary' : 'default'"
-        @click="uniqueName = nickname"
+        :type="nickname === uniqueName && !inputting ? 'primary' : 'default'"
+        @click="uniqueName = nickname, inputting = false"
       >
         {{ nickname }}
       </NTag>
+      <NTag v-if="!inputting" key="####1" type="default" @click="handleAdd">
+        <div class="i-carbon:add" />
+      </NTag>
+      <NInput
+        v-if="inputting"
+        ref="input"
+        v-model:value.trim="uniqueName"
+        placeholder=""
+        size="small" autosize class="min-w-8"
+      />
     </div>
 
     <template #action>
-      <NButton type="primary" secondary :loading="submitLoading" @click="submit">
+      <NButton type="primary" secondary :disabled="uniqueName === ''" :loading="submitLoading" @click="submit">
         <template #icon><div class="i-carbon:checkmark" /></template>
       </NButton>
     </template>
