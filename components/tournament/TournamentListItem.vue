@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { TournamentRB } from "~/types/data";
+import type { TournamentDetailBrief } from "~/types/data";
 
 defineProps<{
-  tournament: TournamentRB;
+  tournament: TournamentDetailBrief;
 }>();
 
 const { currentLocalized, t } = useLocales();

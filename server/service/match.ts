@@ -1,35 +1,17 @@
 import { z } from "zod";
-import { deleteGame, saveGame } from "./game";
-import { bindPlayerNickname } from "./players";
-import { ZCardId, ZGame, ZMatch, ZPlayerId, ZPlayerNickname } from "~/types/data";
-import type { Ban, Game, Match, MatchId, MatchR } from "~/types/data";
-import { ZNullToUndefined } from "~/types/data/schemas";
-import { ZDeckCode } from "~/types/data/deck";
+import { getTournament, saveTournament } from "./tournament";
+import { bindPlayerNickname } from "./player";
+import { deleteGame, getGame, saveGame } from "./game";
+import { readData, readDataList, writeData } from "~/server/utils";
+import type { Ban, Game, Match, MatchDetail, MatchId } from "~/types";
+import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayerNickname } from "~/types";
 
 export function getMatch(matchId: MatchId): Match | undefined {
-  // 通过比赛ID读取比赛数据，并解析为Match对象
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
 }
 
-export function getMatchR(matchId: MatchId): MatchR | undefined {
-  const match = getMatch(matchId);
-  if (!match) return;
-  const tournament = getTournament(match.tournamentId)!;
-  const games = match.gameIds.map(gameId => getGame(gameId)!);
-  const aWinDiff = games.reduce((value, game) => {
-    if (game.winner === "A") return value + 1;
-    if (game.winner === "B") return value - 1;
-    return value;
-  }, 0);
-  return {
-    ...match,
-    gameVersion: tournament.gameVersion,
-    winner: match.winner ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
-  };
-}
-
 export function getMatchList(): Match[] {
-  return ZMatch.array().parse(readDataList("matches"));
+  return ZMatch.array().parse(readDataList<Match>("matches"));
 }
 
 export const ZMatchSaveParams = ZMatch.partial({
@@ -149,4 +131,21 @@ export function saveMatch(params: MatchSaveParams) {
   games.forEach(saveGame);
 
   return matchId;
+}
+
+export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
+  const match = getMatch(matchId);
+  if (!match) return;
+  const tournament = getTournament(match.tournamentId)!;
+  const games = match.gameIds.map(gameId => getGame(gameId)!);
+  const aWinDiff = games.reduce((value, game) => {
+    if (game.winner === "A") return value + 1;
+    if (game.winner === "B") return value - 1;
+    return value;
+  }, 0);
+  return {
+    ...match,
+    gameVersion: tournament.gameVersion,
+    winner: match.winner ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
+  };
 }

@@ -1,5 +1,8 @@
 import { z } from "zod";
 import { ZGameVersionId } from "~/types/data";
+import { responseData } from "~/server/utils";
+import { defineEventHandler, getValidatedQuery } from "#imports";
+import { getTournamentDetailBriefList } from "~/server/service";
 
 const ZParams = z.object({
   gameVersion: ZGameVersionId.optional(),
@@ -8,7 +11,7 @@ const ZParams = z.object({
 export default defineEventHandler(async (event) => {
   const { gameVersion } = await getValidatedQuery(event, ZParams.parse);
 
-  let tournaments = getTournamentList();
+  let tournaments = getTournamentDetailBriefList();
 
   if (gameVersion) {
     tournaments = tournaments.filter(t => t.gameVersion === gameVersion);

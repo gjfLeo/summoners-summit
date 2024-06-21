@@ -1,3 +1,5 @@
+import { defineEventHandler } from "#imports";
+import { responseData } from "~/server/utils";
 import type { TournamentType } from "~/types/data";
 
 export default defineEventHandler(() => {

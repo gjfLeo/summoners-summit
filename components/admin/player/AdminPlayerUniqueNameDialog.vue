@@ -36,7 +36,7 @@ async function submit() {
     return;
   };
   submitLoading.value = true;
-  const { success } = await $fetch("/api/v3/players/setUniqueName", {
+  const { success } = await $fetch("/api/v3/players/changeUniqueName", {
     method: "POST",
     body: {
       id: player.value.id,

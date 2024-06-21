@@ -1,4 +1,5 @@
-import type { Ranks } from "~/types/data";
+import { readData, readDataList, writeData } from "~/server/utils";
+import type { Ranks } from "~/types";
 
 export function getRanks(id: string) {
   return readData<Ranks>(`ranks/${id}`);

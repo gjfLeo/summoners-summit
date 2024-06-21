@@ -1,6 +1,7 @@
 import path from "node:path";
 import fse from "fs-extra";
 import fg from "fast-glob";
+import type { PlayerIndex } from "~/types";
 
 export function readData<R, P extends string = string>(dataPath: P): R | undefined {
   const fullPath = path.resolve("server/data", `${dataPath}.json`);

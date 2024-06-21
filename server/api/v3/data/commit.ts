@@ -1,11 +1,12 @@
 import { simpleGit } from "simple-git";
 import { z } from "zod";
+import { defineEventHandler, readValidatedBody } from "#imports";
 
 const schema = z.object({
   message: z.string().default("更新数据"),
 });
 
-export default eventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
   const { message } = await readValidatedBody(event, schema.parse);
 
   const git = simpleGit();

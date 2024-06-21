@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types/data";
+import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
+import { readData } from "~/server/utils";
 
 export function getCharacterCards() {
   return z.record(ZCardId, ZCharacterCardInfo).parse(readData("misc/character-cards"));

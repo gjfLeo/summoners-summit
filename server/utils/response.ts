@@ -1,3 +1,5 @@
+import { errorCodes } from "#imports";
+
 export type ApiResponseSuccess<T = void> = {
   success: true;
   code: string;
@@ -29,4 +31,14 @@ export function responseErrorCode(code: string) {
     success: false,
     code,
   } as ApiResponseError;
+}
+
+export function responseError(e: any) {
+  if (e instanceof Error) {
+    return responseErrorCode(e.message);
+  }
+  if (typeof e === "string") {
+    return responseErrorCode(e);
+  }
+  return responseErrorCode(errorCodes.UNKNOWN_ERROR);
 }

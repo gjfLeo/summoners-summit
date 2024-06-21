@@ -1,6 +1,8 @@
 import { z } from "zod";
-import { mergePlayer } from "~/server/utils/players";
-import { ZPlayerId } from "~/types/data";
+import { defineEventHandler, readValidatedBody } from "#imports";
+import { redirectPlayer } from "~/server/service";
+import { responseError, responseOk } from "~/server/utils";
+import { ZPlayerId } from "~/types";
 
 const ZParams = z.object({
   sourceId: ZPlayerId,
@@ -11,12 +13,10 @@ export default defineEventHandler(async (event) => {
   const { sourceId, targetId } = await readValidatedBody(event, ZParams.parse);
 
   try {
-    mergePlayer(sourceId, targetId);
+    redirectPlayer(sourceId, targetId);
   }
-  catch (error) {
-    if (error instanceof Error) {
-      return responseErrorCode(error.message);
-    }
+  catch (e) {
+    return responseError(e);
   }
 
   return responseOk();

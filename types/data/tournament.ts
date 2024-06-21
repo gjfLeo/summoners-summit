@@ -2,7 +2,6 @@ import { z } from "zod";
 import { ZLocales } from "./locales";
 import { ZGameVersionId } from "./game-version";
 import { ZPlayerId, ZPlayerNickname } from "./player";
-import { ZNullToUndefined } from "./schemas";
 import { ZBan } from "./game";
 import { ZGameId, ZMatchId, ZTournamentId } from "./ids";
 
@@ -58,7 +57,7 @@ export const ZTournament = z.object({
   stages: ZTournamentStage.array(),
 }).strip();
 
-export const ZTournamentR = ZTournament.extend({
+export const ZTournamentDetail = ZTournament.extend({
   champion: z.object({
     playerId: ZPlayerId,
     nickname: ZPlayerNickname,
@@ -69,7 +68,7 @@ export const ZTournamentR = ZTournament.extend({
   }),
 }).strip();
 
-export const ZTournamentRB = ZTournamentR.omit({
+export const ZTournamentDetailBrief = ZTournamentDetail.omit({
   stages: true,
 }).strip();
 
@@ -91,17 +90,17 @@ export const ZMatch = z.object({
   video: z.string().optional(),
 }).strip();
 
-export const ZMatchR = ZMatch.extend({
+export const ZMatchDetail = ZMatch.extend({
   gameVersion: ZGameVersionId,
   winner: z.enum(["A", "B", "DRAW"]),
 });
 
 export type TournamentType = z.infer<typeof ZTournamentType>;
 export type Tournament = z.infer<typeof ZTournament>;
-export type TournamentR = z.infer<typeof ZTournamentR>;
-export type TournamentRB = z.infer<typeof ZTournamentRB>;
+export type TournamentDetail = z.infer<typeof ZTournamentDetail>;
+export type TournamentDetailBrief = z.infer<typeof ZTournamentDetailBrief>;
 export type Match = z.infer<typeof ZMatch>;
-export type MatchR = z.infer<typeof ZMatchR>;
+export type MatchDetail = z.infer<typeof ZMatchDetail>;
 export type TournamentRules = z.infer<typeof ZTournamentRules>;
 export type TournamentPart = z.infer<typeof ZTournamentPart>;
 export type TournamentStage = z.infer<typeof ZTournamentStage>;

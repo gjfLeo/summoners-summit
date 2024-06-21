@@ -4,8 +4,10 @@ import gameById from "./games.json";
 import deckById from "./decks.json";
 // import playerById from "./players.json";
 import type { Ban, CardId, Game, Tournament, TournamentRules } from "~/types/data";
-import type { MatchSaveParams } from "~/server/utils/match";
 import type { DeckCards, DeckCode } from "~/types/data/deck";
+import type { MatchSaveParams } from "~/server/service";
+import { ZMatchSaveParams, ZTournamentSaveParams, getActionCards, getCharacterCards, getPlayerList, saveMatch, saveTournament } from "~/server/service";
+import { defineEventHandler } from "#imports";
 
 // const playerNicknameMapRaw: Record<string, string> = {
 //   /*
@@ -188,7 +190,7 @@ function getTournamentType(old?: string): Tournament["type"] {
       return "未分类（外服）";
     default:
       console.error(old);
-      throw createError(`Unknown tournament type: ${old}`);
+      throw new Error(`Unknown tournament type: ${old}`);
   }
 }
 
@@ -212,7 +214,7 @@ function getStageRules(old?: {
   }
   if (old?.extra?.length) {
     console.error(old.extra);
-    throw createError("Tournament extra rules are not supported yet");
+    throw new Error("Tournament extra rules are not supported yet");
   }
 
   return old
@@ -265,7 +267,7 @@ function getCardId(name: string) {
     ...Object.values(characterCardById),
     ...Object.values(actionCardById),
   ].find(c => c.name.zh === name);
-  if (!card) throw createError(`Card not found${name}`);
+  if (!card) throw new Error(`Card not found${name}`);
   cardIdByName[name] = card.id;
   return card.id;
 }
@@ -332,7 +334,7 @@ export default defineEventHandler(async () => {
     const stages = oldTournament.stages.map((oldStage) => {
       const parts = oldStage.parts.map((oldPart) => {
         if (!oldPart.name && oldStage.parts.length > 1) {
-          throw createError("Stage part name is required");
+          throw new Error("Stage part name is required");
         }
         return {
           name: { zh: oldPart.name },
@@ -359,7 +361,7 @@ export default defineEventHandler(async () => {
       oldStage.parts.forEach((oldPart, partIndex) => {
         oldPart.matchIds.map(mId => matchById[mId as keyof typeof matchById])
           .forEach((oldMatch) => {
-            if (!oldMatch) throw createError("match not found");
+            if (!oldMatch) throw new Error("match not found");
 
             const bans = "banned" in oldMatch
               ? oldMatch.banned.map<MatchSaveParams["bans"][number]>((oldBan) => {

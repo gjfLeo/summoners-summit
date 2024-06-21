@@ -23,7 +23,7 @@ export const ZGame = z.object({
   gameVideo: z.string().optional(),
 });
 
-export const ZGameR = ZGame.extend({
+export const ZGameDetail = ZGame.extend({
   gameVersion: ZGameVersionId,
   tournamentId: ZTournamentId,
   playerA: z.object({
@@ -50,5 +50,5 @@ const ZBanTeam = z.object({
 export const ZBan = z.union([ZBanCharacter, ZBanTeam]);
 
 export type Game = z.infer<typeof ZGame>;
-export type GameR = z.infer<typeof ZGameR>;
+export type GameDetail = z.infer<typeof ZGameDetail>;
 export type Ban = z.infer<typeof ZBan>;

@@ -1,0 +1,4 @@
+export const errorCodes = {
+  PLAYER_NOT_FOUND: "PLAYER_NOT_FOUND",
+  UNKNOWN_ERROR: "UNKNOWN_ERROR",
+};

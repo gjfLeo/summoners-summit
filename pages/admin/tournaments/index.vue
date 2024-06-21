@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { GameVersionId, SeasonPhraseId, TournamentId, TournamentRB } from "~/types/data";
+import type { GameVersionId, SeasonPhraseId, TournamentId, TournamentDetailBrief } from "~/types/data";
 
 definePageMeta({ title: "site.titles.admin.tournaments" });
 
@@ -7,7 +7,7 @@ const { tournaments } = await useApiGetTournamentList();
 const { gameVersionList } = useSharedData();
 
 const bySeason = computed(() => {
-  const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentRB[]>> = {};
+  const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};
   tournaments.value.forEach((tournament) => {
     const gameVersionId = tournament.gameVersion;
     const gameVersion = gameVersionList.value.find(v => v.id === gameVersionId);

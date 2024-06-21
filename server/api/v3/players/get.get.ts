@@ -1,7 +1,12 @@
-import type { Player } from "~/types/data";
-import { ZPlayer } from "~/types/data";
+import { z } from "zod";
+import { defineEventHandler, getValidatedQuery } from "#imports";
+import { getPlayer } from "~/server/service";
+import { responseData, responseErrorCode } from "~/server/utils";
+import { ZPlayerId } from "~/types";
 
-const ZParams = ZPlayer.pick({ id: true });
+const ZParams = z.object({
+  id: ZPlayerId,
+});
 
 export default defineEventHandler(async (event) => {
   const params = await getValidatedQuery(event, ZParams.parse);

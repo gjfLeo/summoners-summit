@@ -1,11 +1,14 @@
+import { getMatch } from "./match";
+import { getTournament } from "./tournament";
 import { ZGame } from "~/types/data";
-import type { Game, GameId, GameR } from "~/types/data";
+import type { Game, GameDetail, GameId } from "~/types/data";
+import { deleteData, readData, writeData } from "~/server/utils";
 
 export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));
 }
 
-export function getGameR(gameId: GameId): GameR | undefined {
+export function getGameR(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
   if (!game) return;
   const match = getMatch(game.matchId)!;

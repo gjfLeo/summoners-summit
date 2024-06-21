@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { TournamentId, TournamentRB } from "~/types/data";
+import type { TournamentId, TournamentDetailBrief } from "~/types/data";
 
 defineProps<{
-  tournaments: TournamentRB[];
+  tournaments: TournamentDetailBrief[];
 }>();
 
 const emit = defineEmits<{
