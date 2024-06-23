@@ -1,6 +1,9 @@
 {
   "id": "75517a8ce388399802",
   "tournamentId": "75517a8ce3883998",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "bf904b20e86455f2",
     "nickname": "Komorebi"

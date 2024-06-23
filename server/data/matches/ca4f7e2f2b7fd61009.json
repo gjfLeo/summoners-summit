@@ -1,6 +1,9 @@
 {
   "id": "ca4f7e2f2b7fd61009",
   "tournamentId": "ca4f7e2f2b7fd610",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 2,
   "playerA": {
     "playerId": "6e2707a45bb0d3f3",
     "nickname": "卡密sama"

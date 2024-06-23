@@ -1,6 +1,9 @@
 {
   "id": "3b7b4231e9f892ad13",
   "tournamentId": "3b7b4231e9f892ad",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "5f348d6babdc3ffb",
     "nickname": "明彰先生"

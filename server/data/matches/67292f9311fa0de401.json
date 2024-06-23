@@ -1,6 +1,9 @@
 {
   "id": "67292f9311fa0de401",
   "tournamentId": "67292f9311fa0de4",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "5ed19bab43d242a8",
     "nickname": "自信的菠萝蜜"

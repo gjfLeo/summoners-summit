@@ -1,6 +1,9 @@
 {
   "id": "ca4f7e2f2b7fd61031",
   "tournamentId": "ca4f7e2f2b7fd610",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "b54429001280d09e",
     "nickname": "甜甜花酿鸡队"

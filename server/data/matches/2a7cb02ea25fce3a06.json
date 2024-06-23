@@ -1,6 +1,9 @@
 {
   "id": "2a7cb02ea25fce3a06",
   "tournamentId": "2a7cb02ea25fce3a",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "0fbd09c9eec8e0d5",
     "nickname": "祁音"

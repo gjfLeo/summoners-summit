@@ -1,6 +1,9 @@
 {
   "id": "49dc638bd8c224d806",
   "tournamentId": "49dc638bd8c224d8",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "df1907ee9b6fdbb7",
     "nickname": "帝降北渚"

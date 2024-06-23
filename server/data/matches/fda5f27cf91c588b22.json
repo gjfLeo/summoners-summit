@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b22",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "26e9520cdef16ab6",
     "nickname": "道诡异仙李火旺"

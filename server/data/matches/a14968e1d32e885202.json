@@ -1,6 +1,9 @@
 {
   "id": "a14968e1d32e885202",
   "tournamentId": "a14968e1d32e8852",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "74449e9e58072897",
     "nickname": "企鹅带带北极熊"

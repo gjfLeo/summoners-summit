@@ -1,6 +1,9 @@
 {
   "id": "75517a8ce388399805",
   "tournamentId": "75517a8ce3883998",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "3bef635f1e9b07f0",
     "nickname": "長野原花火"

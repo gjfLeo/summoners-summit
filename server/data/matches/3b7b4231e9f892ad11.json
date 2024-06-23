@@ -1,6 +1,9 @@
 {
   "id": "3b7b4231e9f892ad11",
   "tournamentId": "3b7b4231e9f892ad",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "161c913c3c9475e8",
     "nickname": "叶叁伍"

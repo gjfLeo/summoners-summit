@@ -1,6 +1,9 @@
 {
   "id": "6b5977742444e0b101",
   "tournamentId": "6b5977742444e0b1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "48a05673e9dc9ac6",
     "nickname": "雪夜糖|兰TJ"

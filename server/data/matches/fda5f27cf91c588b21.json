@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b21",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "f858f3229ef4cb39",
     "nickname": "Ling-神罚"

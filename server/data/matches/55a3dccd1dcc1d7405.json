@@ -1,6 +1,9 @@
 {
   "id": "55a3dccd1dcc1d7405",
   "tournamentId": "55a3dccd1dcc1d74",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "9a0149ab002a3b3a",
     "nickname": "今天不想吃苹果"

@@ -1,6 +1,9 @@
 {
   "id": "64eb9958f313e17002",
   "tournamentId": "64eb9958f313e170",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "74bfe9a79416ae62",
     "nickname": "长野原斯汪"

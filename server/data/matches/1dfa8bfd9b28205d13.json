@@ -1,6 +1,9 @@
 {
   "id": "1dfa8bfd9b28205d13",
   "tournamentId": "1dfa8bfd9b28205d",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "3a89d3d6d33bacae",
     "nickname": "镜莲华的葬送"

@@ -1,6 +1,9 @@
 {
   "id": "ed7dcf1c206314d002",
   "tournamentId": "ed7dcf1c206314d0",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "b6616f18abe9fb78",
     "nickname": "蓬莱寺九霄"

@@ -1,6 +1,9 @@
 {
   "id": "a14968e1d32e885211",
   "tournamentId": "a14968e1d32e8852",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "0b31c77d724ac3b4",
     "nickname": "月话牌社-音月"

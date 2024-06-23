@@ -1,6 +1,9 @@
 {
   "id": "8308d3400fac999f02",
   "tournamentId": "8308d3400fac999f",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "b0a482dfc8c8e81e",
     "nickname": "卡牌狂魔张老伯"

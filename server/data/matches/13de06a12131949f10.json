@@ -1,6 +1,9 @@
 {
   "id": "13de06a12131949f10",
   "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 4,
   "playerA": {
     "playerId": "c21e35122d1f9313",
     "nickname": "Silkylove"

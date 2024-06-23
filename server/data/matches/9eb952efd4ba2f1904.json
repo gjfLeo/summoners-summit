@@ -1,6 +1,9 @@
 {
   "id": "9eb952efd4ba2f1904",
   "tournamentId": "9eb952efd4ba2f19",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "ed4f7ffc6dc90ee7",
     "nickname": "贝尔格里"

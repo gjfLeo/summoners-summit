@@ -1,6 +1,9 @@
 {
   "id": "8b3a1deceb388f4303",
   "tournamentId": "8b3a1deceb388f43",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "f72f4702562bc700",
     "nickname": "有濑夜星花"

@@ -1,6 +1,9 @@
 {
   "id": "a1adf8e96c2639b901",
   "tournamentId": "a1adf8e96c2639b9",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "3619d003d539aa4f",
     "nickname": "史珍香"

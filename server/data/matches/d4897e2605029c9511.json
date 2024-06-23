@@ -1,6 +1,9 @@
 {
   "id": "d4897e2605029c9511",
   "tournamentId": "d4897e2605029c95",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "54980de7c75538b6",
     "nickname": "冷たい空"

@@ -1,6 +1,9 @@
 {
   "id": "8b3a1deceb388f4302",
   "tournamentId": "8b3a1deceb388f43",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "47dce1226ff1f04d",
     "nickname": "鱼儿化音的迷妹"

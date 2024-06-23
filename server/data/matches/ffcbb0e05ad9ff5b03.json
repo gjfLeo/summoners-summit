@@ -1,6 +1,9 @@
 {
   "id": "ffcbb0e05ad9ff5b03",
   "tournamentId": "ffcbb0e05ad9ff5b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 2,
   "playerA": {
     "playerId": "ec9d5910626c2949",
     "nickname": "周正福"

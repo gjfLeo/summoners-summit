@@ -1,6 +1,9 @@
 {
   "id": "b837d5a69a36454d03",
   "tournamentId": "b837d5a69a36454d",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "0d0fa57e06e04206",
     "nickname": "雪国Ink"

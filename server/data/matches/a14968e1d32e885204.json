@@ -1,6 +1,9 @@
 {
   "id": "a14968e1d32e885204",
   "tournamentId": "a14968e1d32e8852",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "499559d3c35bb775",
     "nickname": "回忆往昔的遗憾"

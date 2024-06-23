@@ -1,6 +1,9 @@
 {
   "id": "26ba1c86d1c2a15005",
   "tournamentId": "26ba1c86d1c2a150",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "5f6df97eebeb58e2",
     "nickname": "RobotWizard"

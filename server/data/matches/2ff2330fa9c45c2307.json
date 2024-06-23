@@ -1,6 +1,9 @@
 {
   "id": "2ff2330fa9c45c2307",
   "tournamentId": "2ff2330fa9c45c23",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "7c2f0512e8c8a6d5",
     "nickname": "贪魔赌鬼神圣天"

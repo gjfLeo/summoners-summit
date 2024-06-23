@@ -1,6 +1,9 @@
 {
   "id": "c20763c9aa8dd02101",
   "tournamentId": "c20763c9aa8dd021",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "dc26a8b181cdba57",
     "nickname": "越过寒冷"

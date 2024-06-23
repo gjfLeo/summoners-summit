@@ -1,6 +1,9 @@
 {
   "id": "6a639aa80045919e12",
   "tournamentId": "6a639aa80045919e",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "46a6e71eb691f420",
     "nickname": "裁哥们儿"

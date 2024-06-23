@@ -1,6 +1,9 @@
 {
   "id": "40c26b52c28d0d1a02",
   "tournamentId": "40c26b52c28d0d1a",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "5ffe01f5fe9c3c56",
     "nickname": "轮舞曲"

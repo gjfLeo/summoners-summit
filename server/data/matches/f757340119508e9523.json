@@ -1,6 +1,9 @@
 {
   "id": "f757340119508e9523",
   "tournamentId": "f757340119508e95",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "62219a1658205cf0",
     "nickname": "人子歌于途"

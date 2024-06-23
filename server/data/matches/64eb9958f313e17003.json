@@ -1,6 +1,9 @@
 {
   "id": "64eb9958f313e17003",
   "tournamentId": "64eb9958f313e170",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "c3b51d028a073248",
     "nickname": "那菈琉環冰"

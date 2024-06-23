@@ -1,6 +1,9 @@
 {
   "id": "c20763c9aa8dd02111",
   "tournamentId": "c20763c9aa8dd021",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "cd133becae644b8e",
     "nickname": "唐傀"

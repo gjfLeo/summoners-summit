@@ -1,6 +1,9 @@
 {
   "id": "3c8bf7110b0e4d7a04",
   "tournamentId": "3c8bf7110b0e4d7a",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "6ce9701bd776e01b",
     "nickname": "牌手Aurora"

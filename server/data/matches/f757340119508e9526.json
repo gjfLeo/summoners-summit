@@ -1,6 +1,9 @@
 {
   "id": "f757340119508e9526",
   "tournamentId": "f757340119508e95",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 6,
   "playerA": {
     "playerId": "74045fc74589b099",
     "nickname": "胜利哥哥的迷妹"

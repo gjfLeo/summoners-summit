@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b18",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 2,
   "playerA": {
     "playerId": "fbd71758185d1c29",
     "nickname": "曲误周郎"

@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b13",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 2,
   "playerA": {
     "playerId": "42beec7743a07d73",
     "nickname": "菓茶"

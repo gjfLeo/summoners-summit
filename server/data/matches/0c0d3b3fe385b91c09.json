@@ -1,6 +1,9 @@
 {
   "id": "0c0d3b3fe385b91c09",
   "tournamentId": "0c0d3b3fe385b91c",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "0eaf6a25ed034536",
     "nickname": "理塘牢桐"

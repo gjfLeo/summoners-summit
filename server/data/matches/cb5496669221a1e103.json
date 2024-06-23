@@ -1,6 +1,9 @@
 {
   "id": "cb5496669221a1e103",
   "tournamentId": "cb5496669221a1e1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 2,
   "playerA": {
     "playerId": "09a00c241360537f",
     "nickname": "棉袜乃莉塔"

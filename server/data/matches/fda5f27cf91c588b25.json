@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b25",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 4,
   "playerA": {
     "playerId": "558548d84613072d",
     "nickname": "小瓜皮王"

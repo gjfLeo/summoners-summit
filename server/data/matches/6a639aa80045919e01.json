@@ -1,6 +1,9 @@
 {
   "id": "6a639aa80045919e01",
   "tournamentId": "6a639aa80045919e",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "d6f460412876dc1e",
     "nickname": "全都是失误"

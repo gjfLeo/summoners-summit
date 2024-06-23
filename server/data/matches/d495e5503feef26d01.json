@@ -1,6 +1,9 @@
 {
   "id": "d495e5503feef26d01",
   "tournamentId": "d495e5503feef26d",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "62d983894c074ba2",
     "nickname": "今天我不吃牛肉"

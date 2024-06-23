@@ -1,6 +1,9 @@
 {
   "id": "40c26b52c28d0d1a04",
   "tournamentId": "40c26b52c28d0d1a",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "abd7531e73a68f32",
     "nickname": "本吃包"

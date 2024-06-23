@@ -1,6 +1,9 @@
 {
   "id": "e1465b96425236e306",
   "tournamentId": "e1465b96425236e3",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "62613ea0ce6563ab",
     "nickname": "乐，胡能似吗？"

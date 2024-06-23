@@ -1,6 +1,9 @@
 {
   "id": "13de06a12131949f06",
   "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "2ebdf7d8d35cae49",
     "nickname": "Matt Mario"

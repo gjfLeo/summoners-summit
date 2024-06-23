@@ -1,6 +1,9 @@
 {
   "id": "3c8bf7110b0e4d7a08",
   "tournamentId": "3c8bf7110b0e4d7a",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "4c2387fef69bad1a",
     "nickname": "花神杯-小桜"

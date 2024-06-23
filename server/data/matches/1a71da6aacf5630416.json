@@ -1,6 +1,9 @@
 {
   "id": "1a71da6aacf5630416",
   "tournamentId": "1a71da6aacf56304",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "bce59078f3fba32a",
     "nickname": "时堕YL"

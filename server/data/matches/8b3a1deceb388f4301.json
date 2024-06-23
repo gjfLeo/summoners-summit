@@ -1,6 +1,9 @@
 {
   "id": "8b3a1deceb388f4301",
   "tournamentId": "8b3a1deceb388f43",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "710be88085b08006",
     "nickname": "冰红茶心甘晴愿"

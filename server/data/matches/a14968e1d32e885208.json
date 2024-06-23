@@ -1,6 +1,9 @@
 {
   "id": "a14968e1d32e885208",
   "tournamentId": "a14968e1d32e8852",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "b26fd8b8bd0cf18c",
     "nickname": "原来是筱梦"

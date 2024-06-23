@@ -1,6 +1,9 @@
 {
   "id": "b0d9f5ddda951d8e06",
   "tournamentId": "b0d9f5ddda951d8e",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "d4c66f01b78e17d8",
     "nickname": "剑舞"

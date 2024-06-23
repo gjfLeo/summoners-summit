@@ -1,6 +1,9 @@
 {
   "id": "a1adf8e96c2639b903",
   "tournamentId": "a1adf8e96c2639b9",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "ac3f6bc196bc8223",
     "nickname": "半仙豆腐"

@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b15",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 4,
   "playerA": {
     "playerId": "bda22541bc5e1e30",
     "nickname": "雨中邮差"

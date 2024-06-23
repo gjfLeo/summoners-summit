@@ -1,6 +1,9 @@
 {
   "id": "94a9f0ed23cd78e208",
   "tournamentId": "94a9f0ed23cd78e2",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "8752750a3809d85d",
     "nickname": "trepas_angel"

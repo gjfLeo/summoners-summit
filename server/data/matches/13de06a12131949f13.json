@@ -1,6 +1,9 @@
 {
   "id": "13de06a12131949f13",
   "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "50ae5c348dfd9040",
     "nickname": "RunaTobio"

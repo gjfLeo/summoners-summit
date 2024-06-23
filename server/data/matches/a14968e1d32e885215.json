@@ -1,6 +1,9 @@
 {
   "id": "a14968e1d32e885215",
   "tournamentId": "a14968e1d32e8852",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "0a5d03a1791ae009",
     "nickname": "阿源今晚吃派蒙"

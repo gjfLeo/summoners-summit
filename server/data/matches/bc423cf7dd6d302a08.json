@@ -1,6 +1,9 @@
 {
   "id": "bc423cf7dd6d302a08",
   "tournamentId": "bc423cf7dd6d302a",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "2d0d1ef2ad5e7a12",
     "nickname": "燃火之蝶"

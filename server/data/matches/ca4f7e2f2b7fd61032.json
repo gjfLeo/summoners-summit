@@ -1,6 +1,9 @@
 {
   "id": "ca4f7e2f2b7fd61032",
   "tournamentId": "ca4f7e2f2b7fd610",
+  "stageIndex": 1,
+  "partIndex": 2,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "91fca2d8ec1e67cc",
     "nickname": "黄油蟹蟹队"

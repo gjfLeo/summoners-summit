@@ -1,6 +1,9 @@
 {
   "id": "fda5f27cf91c588b17",
   "tournamentId": "fda5f27cf91c588b",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "5b1fcc49c19a276d",
     "nickname": "小红帽的大兔子"

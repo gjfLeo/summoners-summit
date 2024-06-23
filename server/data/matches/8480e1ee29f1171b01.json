@@ -1,6 +1,9 @@
 {
   "id": "8480e1ee29f1171b01",
   "tournamentId": "8480e1ee29f1171b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "f53067a0b2b9cc68",
     "nickname": "LL起翼夜鹰"

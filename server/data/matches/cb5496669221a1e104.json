@@ -1,6 +1,9 @@
 {
   "id": "cb5496669221a1e104",
   "tournamentId": "cb5496669221a1e1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
   "playerA": {
     "playerId": "1d1ffd8660901de3",
     "nickname": "藤原妹红"

@@ -1,6 +1,9 @@
 {
   "id": "c4fa236ca16278ef01",
   "tournamentId": "c4fa236ca16278ef",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
   "playerA": {
     "playerId": "fd815760744fb331",
     "nickname": "洛甄黎"

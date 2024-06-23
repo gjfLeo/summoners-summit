@@ -1,6 +1,9 @@
 {
   "id": "964e20f8443917cd04",
   "tournamentId": "964e20f8443917cd",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "7979277d5a426bf7",
     "nickname": "取极限的狸花猫"

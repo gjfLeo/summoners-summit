@@ -1,6 +1,9 @@
 {
   "id": "8114e098cd447b4202",
   "tournamentId": "8114e098cd447b42",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
   "playerA": {
     "playerId": "a629fd8d895a56d6",
     "nickname": "抽象牌手云来"

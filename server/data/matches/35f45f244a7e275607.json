@@ -1,6 +1,9 @@
 {
   "id": "35f45f244a7e275607",
   "tournamentId": "35f45f244a7e2756",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
   "isFinal": true,
   "playerA": {
     "playerId": "a6856de3ec579318",
