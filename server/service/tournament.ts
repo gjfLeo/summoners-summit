@@ -2,7 +2,6 @@ import type { z } from "zod";
 import { getMatch } from "./match";
 import { ZTournament, ZTournamentDetailBrief } from "~/types";
 import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
-import { hash, readData, readDataList, writeData } from "~/server/utils";
 
 export function getTournament(tournamentId: TournamentId): Tournament | undefined {
   return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));

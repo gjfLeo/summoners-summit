@@ -1,4 +1,3 @@
-import { NButton } from "#components";
 import type { DeckCards } from "~/types/data/deck";
 
 export default function useCopyDeckShareCode(deckMaybeRef: MaybeRef<DeckCards>) {

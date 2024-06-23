@@ -28,22 +28,7 @@ defineProps<{
         >
           <slot />
         </NLayoutContent>
-        <NLayoutSider
-          :width="128"
-          class="<xl:hidden"
-        >
-          <NScrollbar
-            class="side-scroll"
-            style="
-              position: fixed;
-              top: var(--g-header-height);
-              max-height: calc(100dvh - var(--g-header-height));
-              width: 192px;
-            "
-          >
-            <div id="right-sider" class="p-4" />
-          </NScrollbar>
-        </NLayoutSider>
+        <aside id="layout-right-sider" class="p-4 empty:hidden lg:w-16rem" />
       </NLayout>
       <SiteFooter
         style="height: var(--g-footer-height);"

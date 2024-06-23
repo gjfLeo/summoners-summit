@@ -1,6 +1,4 @@
-import { defineEventHandler } from "#imports";
-import { ZSeasonPhrase } from "~/types/data";
-import { responseOk, writeData } from "~/server/utils";
+import { ZSeasonPhrase } from "~/types";
 
 export default defineEventHandler(async () => {
   writeData(

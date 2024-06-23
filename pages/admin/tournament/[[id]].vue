@@ -3,7 +3,7 @@ import type { Tournament } from "~/types/data";
 
 definePageMeta({ title: "site.titles.admin.tournament" });
 
-const route = useRoute<"admin-tournament-id___zh">();
+const route = useRoute("admin-tournament-id___zh");
 const id = route.params.id;
 
 const { t } = useLocales();

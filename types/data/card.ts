@@ -1,9 +1,5 @@
 import { z } from "zod";
-import { ZLocales } from "./locales";
-import { ZGameVersionId } from "./game-version";
-
-export const ZCardId = z.coerce.string()/* .brand<"CardId">() */;
-export type CardId = z.infer<typeof ZCardId>;
+import { ZCardId, ZGameVersionId, ZLocales } from "./base";
 
 export const ZCardType = z.enum(["character", "action"]);
 export const ZCharacterElement = z.enum(["cryo", "hydro", "pyro", "electro", "anemo", "geo", "dendro"]);

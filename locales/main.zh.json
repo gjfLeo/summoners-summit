@@ -2,6 +2,20 @@
   "card": {
     "invalidCardType": "无效的卡牌类型"
   },
+  "deck": {
+    "copyDeckShareCode": "复制分享码",
+    "deckDetail": "牌组详情",
+    "gameList": "对局记录",
+    "teamDetail": "查看阵容详情"
+  },
+  "gameInfo": {
+    "banned": "禁用",
+    "firstMove": "先手",
+    "lose": "负",
+    "secondMove": "后手",
+    "viewDeck": "查看牌组",
+    "win": "胜"
+  },
   "player": {
     "mainNickname": "主要昵称",
     "nickname": "昵称",
@@ -37,8 +51,12 @@
     "submitTeamsDescription": "对战双方各提交 {0} 套阵容"
   },
   "tournament": {
+    "ban": "禁用",
+    "champion": "冠军",
     "date": "日期",
+    "dateRange": "直播赛段时间",
     "gameName": "第 {0} 局",
+    "matchName": "第{0}场",
     "name": "赛事名称",
     "part": "分组",
     "partName": "分组名称",
@@ -47,9 +65,8 @@
     "stage": "阶段",
     "stageName": "阶段名称",
     "stageNameDefault": "阶段 {0}",
+    "tournamentDetails": "赛事详情",
     "type": "赛事类别",
-    "ban": "禁用",
-    "dateRange": "直播赛段时间",
-    "champion": "冠军"
+    "watchReplay": "观看录像"
   }
 }

@@ -4,12 +4,13 @@ import {
   type AdminTournamentMatchActionCardsEditor as ActionCardsEditor,
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";
+import type { MatchSaveParams } from "~/server/service";
 
 defineProps<{
   player: "A" | "B";
 }>();
 
-const deck = defineModel<Game["playerADeck"]>("deck", { required: true });
+const deck = defineModel<MatchSaveParams["games"][number]["playerADeck"]>("deck", { required: true });
 const starter = defineModel<Game["starter"]>("starter", { required: true });
 const winner = defineModel<Game["winner"]>("winner", { required: true });
 

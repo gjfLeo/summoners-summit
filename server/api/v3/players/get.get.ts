@@ -1,7 +1,5 @@
 import { z } from "zod";
-import { defineEventHandler, getValidatedQuery } from "#imports";
 import { getPlayer } from "~/server/service";
-import { responseData, responseErrorCode } from "~/server/utils";
 import { ZPlayerId } from "~/types";
 
 const ZParams = z.object({

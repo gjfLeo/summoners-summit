@@ -1,5 +1,3 @@
-import { errorCodes } from "#imports";
-
 export type ApiResponseSuccess<T = void> = {
   success: true;
   code: string;
@@ -11,14 +9,14 @@ export interface ApiResponseError {
 
 export type ApiResponse<T = void> = ApiResponseSuccess<T> | ApiResponseError;
 
-export function responseOk<T = void>() {
+export function responseOk<T = void>(): ApiResponseSuccess<T> {
   return {
     success: true,
     code: "SUCCESS",
   } as ApiResponseSuccess<T>;
 }
 
-export function responseData<T>(data: T) {
+export function responseData<T>(data: T): ApiResponseSuccess<T> {
   return {
     success: true,
     code: "SUCCESS",
@@ -26,14 +24,14 @@ export function responseData<T>(data: T) {
   } as ApiResponseSuccess<T>;
 }
 
-export function responseErrorCode(code: string) {
+export function responseErrorCode(code: string): ApiResponseError {
   return {
     success: false,
     code,
   } as ApiResponseError;
 }
 
-export function responseError(e: any) {
+export function responseError(e: any): ApiResponseError {
   if (e instanceof Error) {
     return responseErrorCode(e.message);
   }

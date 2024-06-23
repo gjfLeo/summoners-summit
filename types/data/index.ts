@@ -1,9 +1,11 @@
-export * from "./locales";
+export * from "./base";
 export * from "./game-version";
-export * from "./cards";
+export * from "./card";
 export * from "./deck";
 export * from "./player";
 
-export * from "./ids";
-export * from "./tournament";
 export * from "./game";
+export * from "./match";
+export * from "./tournament";
+
+export * from "./detail";

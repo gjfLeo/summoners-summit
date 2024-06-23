@@ -3,11 +3,10 @@ import matchById from "./matches.json";
 import gameById from "./games.json";
 import deckById from "./decks.json";
 // import playerById from "./players.json";
-import type { Ban, CardId, Game, Tournament, TournamentRules } from "~/types/data";
+import type { CardId, Game, Tournament, TournamentRules } from "~/types";
 import type { DeckCards, DeckCode } from "~/types/data/deck";
 import type { MatchSaveParams } from "~/server/service";
 import { ZMatchSaveParams, ZTournamentSaveParams, getActionCards, getCharacterCards, getPlayerList, saveMatch, saveTournament } from "~/server/service";
-import { defineEventHandler } from "#imports";
 
 // const playerNicknameMapRaw: Record<string, string> = {
 //   /*
@@ -360,7 +359,7 @@ export default defineEventHandler(async () => {
     oldTournament.stages.forEach((oldStage, stageIndex) => {
       oldStage.parts.forEach((oldPart, partIndex) => {
         oldPart.matchIds.map(mId => matchById[mId as keyof typeof matchById])
-          .forEach((oldMatch) => {
+          .forEach((oldMatch, matchIndex) => {
             if (!oldMatch) throw new Error("match not found");
 
             const bans = "banned" in oldMatch
@@ -395,6 +394,7 @@ export default defineEventHandler(async () => {
               tournamentId: oldTournament.id,
               stageIndex,
               partIndex,
+              matchIndex,
               isFinal: oldStage.name === "决赛" || oldStage.name === "决赛" ? true : undefined,
               playerA: {
                 playerId: findPlayerId(oldMatch.playerANickname),

@@ -2,7 +2,6 @@ import { z } from "zod";
 import { getTournament, saveTournament } from "./tournament";
 import { bindPlayerNickname } from "./player";
 import { deleteGame, getGame, saveGame } from "./game";
-import { readData, readDataList, writeData } from "~/server/utils";
 import type { Ban, Game, Match, MatchDetail, MatchId } from "~/types";
 import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayerNickname } from "~/types";
 
@@ -22,9 +21,6 @@ export const ZMatchSaveParams = ZMatch.partial({
   playerA: true,
   playerB: true,
 }).extend({
-  stageIndex: z.number(),
-  partIndex: z.number(),
-
   playerA: z.object({
     playerId: ZNullToUndefined(ZPlayerId.optional()),
     nickname: ZPlayerNickname,
@@ -92,11 +88,17 @@ export function saveMatch(params: MatchSaveParams) {
     const gameId = `${matchId}${String(index + 1).padStart(2, "0")}`;
     const game: Game = {
       ...gameParam,
+      playerADeck: {
+        ...gameParam.playerADeck,
+        teamId: gameParam.playerADeck.characters.toSorted().join("-"),
+      },
+      playerBDeck: {
+        ...gameParam.playerBDeck,
+        teamId: gameParam.playerBDeck.characters.toSorted().join("-"),
+      },
       id: gameId,
       matchId,
     };
-    game.playerADeck.teamId = game.playerADeck.characters.toSorted().join("-");
-    game.playerBDeck.teamId = game.playerBDeck.characters.toSorted().join("-");
     return game;
   });
 

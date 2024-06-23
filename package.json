@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.1.2",
+  "packageManager": "pnpm@9.4.0",
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
@@ -18,7 +18,7 @@
     "@bg-dev/nuxt-naiveui": "^1.14.0",
     "@genshin-db/tcg": "^5.1.6",
     "@gjfleo/eslint-config": "^1.0.6",
-    "@iconify-json/carbon": "^1.1.35",
+    "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/i18n": "^8.3.1",
@@ -27,8 +27,8 @@
     "@types/fs-extra": "^11.0.4",
     "@unocss/eslint-config": "^0.61.0",
     "@unocss/nuxt": "^0.61.0",
-    "@vite-pwa/nuxt": "^0.8.0",
-    "@vueuse/nuxt": "^10.10.1",
+    "@vite-pwa/nuxt": "^0.8.1",
+    "@vueuse/nuxt": "^10.11.0",
     "consola": "^3.2.3",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.11",
@@ -43,13 +43,8 @@
     "pinyin-match": "^1.2.5",
     "shelljs": "^0.8.5",
     "simple-git": "^3.25.0",
-    "typescript": "^5.4.5",
-    "vue-tsc": "^2.0.21",
+    "typescript": "^5.5.2",
+    "vue-tsc": "^2.0.22",
     "zod": "^3.23.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "@babel/helper-module-imports": "~7.22.15"
-    }
   }
 }

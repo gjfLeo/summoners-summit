@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { CardId, Game } from "~/types/data";
+import type { CardId } from "~/types/data";
 import {
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";

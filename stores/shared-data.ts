@@ -13,14 +13,12 @@ const useSharedDataStore = defineStore("shared", () => {
     const data = await $fetch("/api/v3/game-versions/list");
     gameVersionList.value = data.gameVersionList;
   }
-  onBeforeMount(fetchGameVersionData);
 
   const tournamentTypeList = ref<TournamentType[]>([]);
   async function fetchTournamentTypeData() {
     const data = await $fetch("/api/v3/tournaments/getTypeList");
     tournamentTypeList.value = data.tournamentTypeList;
   }
-  onBeforeMount(fetchTournamentTypeData);
 
   const characterCardById = ref<Record<CardId, CharacterCardInfo>>({});
   const characterCardIds = computed(() => Object.keys(characterCardById.value).sort());
@@ -33,7 +31,19 @@ const useSharedDataStore = defineStore("shared", () => {
     characterCardById.value = data.characterCards;
     actionCardById.value = data.actionCards;
   }
-  onBeforeMount(fetchCardData);
+
+  const dataInitialized = ref(false);
+  Promise.all([
+    fetchGameVersionData(),
+    fetchTournamentTypeData(),
+    fetchCardData(),
+  ]).then(() => {
+    dataInitialized.value = true;
+  });
+
+  async function awaitData() {
+    return await until(dataInitialized).toBe(true);
+  }
 
   return {
     gameVersionList: toComputed(gameVersionList),
@@ -50,6 +60,9 @@ const useSharedDataStore = defineStore("shared", () => {
     actionCardIds,
     actionCardList,
     fetchCardData,
+
+    dataInitialized: toComputed(dataInitialized),
+    awaitData,
   };
 });
 

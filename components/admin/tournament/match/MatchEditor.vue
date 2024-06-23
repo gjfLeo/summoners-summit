@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { MatchId, TournamentId } from "~/types/data";
-import type { MatchSaveParams } from "~/server/utils/match";
+import type { MatchId, TournamentId } from "~/types";
 import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
+import type { MatchSaveParams } from "~/server/service";
 
 const props = defineProps<{
   tournamentId: TournamentId;
@@ -38,7 +38,7 @@ const formRules: FormRules = {
   },
 };
 
-async function create(params: { stageIndex: number; partIndex: number }) {
+async function create(params: { stageIndex: number; partIndex: number; matchIndex: number }) {
   match.value = {
     ...params,
     tournamentId: props.tournamentId,

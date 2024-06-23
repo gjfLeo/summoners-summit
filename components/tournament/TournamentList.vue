@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TournamentId, TournamentDetailBrief } from "~/types/data";
+import type { TournamentDetailBrief, TournamentId } from "~/types/data";
 
 defineProps<{
   tournaments: TournamentDetailBrief[];

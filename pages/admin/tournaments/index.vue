@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { GameVersionId, SeasonPhraseId, TournamentId, TournamentDetailBrief } from "~/types/data";
+import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId } from "~/types/data";
 
 definePageMeta({ title: "site.titles.admin.tournaments" });
 
@@ -53,19 +53,17 @@ function handleItemClick(tournamentId: TournamentId) {
 
     <SitePageAnchors>
       <template v-for="season in seasons" :key="season">
-        <NAnchor title="a" />
-        <NAnchor title="b" />
-        <!-- <NAnchor
+        <NAnchorLink
           :title="`第\u2006${season}\u2006赛季`"
           :href="`#S${season}`"
         >
           <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
-            <NAnchor
+            <NAnchorLink
               :title="gameVersion"
-              :href="gameVersion.replace('.', '-')"
+              :href="`#${gameVersion.replace('.', '-')}`"
             />
           </template>
-        </NAnchor> -->
+        </NAnchorLink>
       </template>
     </SitePageAnchors>
   </div>

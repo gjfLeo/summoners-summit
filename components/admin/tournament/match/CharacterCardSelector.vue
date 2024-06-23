@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import PinyinMatch from "pinyin-match";
 import { CardImage, NAutoComplete, NPopover, NText } from "#components";
-import type { CardId, Locales } from "~/types/data";
+import type { CardId } from "~/types/data";
 
 const cardId = defineModel<CardId>("modelValue");
 

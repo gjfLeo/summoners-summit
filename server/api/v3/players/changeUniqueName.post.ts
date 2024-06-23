@@ -1,7 +1,5 @@
-import { defineEventHandler, readValidatedBody } from "#imports";
 import { ZPlayer } from "~/types";
-import { responseError, responseErrorCode, responseOk } from "~/server/utils";
-import { changePlayerUniqueName, getPlayer, savePlayer } from "~/server/service";
+import { changePlayerUniqueName } from "~/server/service";
 
 const ZParams = ZPlayer.pick({
   id: true,

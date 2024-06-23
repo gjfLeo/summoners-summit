@@ -1,6 +1,5 @@
 import { simpleGit } from "simple-git";
 import { z } from "zod";
-import { defineEventHandler, readValidatedBody } from "#imports";
 
 const schema = z.object({
   message: z.string().default("更新数据"),

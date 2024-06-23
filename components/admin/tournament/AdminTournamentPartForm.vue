@@ -45,6 +45,7 @@ function addMatch() {
   matchEditor?.value.create({
     stageIndex: props.stageIndex,
     partIndex: props.partIndex,
+    matchIndex: part.value.matchIds.length,
   });
 }
 

@@ -1,6 +1,5 @@
 <script lang="tsx" setup>
 import { NButton, NTag } from "#components";
-import { useLocales } from "#imports";
 import type { Player } from "~/types/data";
 
 defineProps<{

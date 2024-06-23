@@ -16,8 +16,8 @@
   },
   "player": {
     "mergePlayerData": "Merge player data",
-    "selectUniqueName": "Select unique name",
-    "nicknameMatchedNum": "{0} matched"
+    "nicknameMatchedNum": "{0} matched",
+    "selectUniqueName": "Select unique name"
   },
   "ranks": {
     "invalidId": "Invalid game version"

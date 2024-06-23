@@ -1,6 +1,4 @@
-import { defineEventHandler, getValidatedQuery } from "#imports";
 import { getRanks } from "~/server/service";
-import { responseData } from "~/server/utils";
 import { ZRanks } from "~/types";
 
 const ZParams = ZRanks.pick({ id: true });

@@ -1,10 +1,5 @@
 import { z } from "zod";
-import { ZLocales } from "./locales";
-
-export const ZGameVersionId = z.string().regex(/^\d\.\d$/)/* .brand("GameVersionId") */;
-export const ZSeasonPhraseId = z.string().regex(/^\d\.\d$/)/* .brand("SeasonPhraseId") */;
-export type GameVersionId = z.infer<typeof ZGameVersionId>;
-export type SeasonPhraseId = z.infer<typeof ZSeasonPhraseId>;
+import { ZGameVersionId, ZLocales, ZSeasonPhraseId } from "./base";
 
 export const ZSeasonPhrase = z.object({
   id: ZSeasonPhraseId,
@@ -12,13 +7,12 @@ export const ZSeasonPhrase = z.object({
   cardBackName: z.record(ZLocales, z.string()),
   cardBackDescription: z.record(ZLocales, z.string()),
 }).strip();
+export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 
 export const ZGameVersion = z.object({
   id: ZGameVersionId,
   seasonPhrase: ZSeasonPhraseId,
 }).strip();
-
-export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 export type GameVersion = z.infer<typeof ZGameVersion>;
 
 export const ZGameVersionData = z.record(ZGameVersionId, ZGameVersion);

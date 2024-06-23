@@ -1,7 +1,5 @@
 import { z } from "zod";
-import { ZGameVersionId } from "~/types/data";
-import { responseData } from "~/server/utils";
-import { defineEventHandler, getValidatedQuery } from "#imports";
+import { ZGameVersionId } from "~/types";
 import { getTournamentDetailBriefList } from "~/server/service";
 
 const ZParams = z.object({

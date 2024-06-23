@@ -1,7 +1,5 @@
 import gdb from "@genshin-db/tcg";
 import { z } from "zod";
-import { defineEventHandler } from "#imports";
-import { readData, responseOk, writeData } from "~/server/utils";
 import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZGameVersion, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
