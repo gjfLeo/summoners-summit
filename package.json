@@ -19,7 +19,7 @@
     "@bg-dev/nuxt-naiveui": "^1.10.4",
     "@css-render/vue3-ssr": "^0.15.12",
     "@dagrejs/dagre": "^1.1.1",
-    "@genshin-db/tcg": "^5.1.4",
+    "@genshin-db/tcg": "^5.1.6",
     "@gjfleo/eslint-config": "^1.0.4",
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/mdi": "^1.1.64",
