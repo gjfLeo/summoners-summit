@@ -1,8 +1,9 @@
 import md5 from "crypto-js/md5";
 
 export function getImageUrl(filename: string) {
-  filename = filename.replace(":", "");
-  filename = filename.replace("?", "");
+  filename = filename.replaceAll(":", "");
+  filename = filename.replaceAll("?", "");
+  filename = filename.replaceAll("\"", "");
   filename = filename.replaceAll(" ", "_");
   const hash = md5(filename).toString();
   filename = filename.replace("'", "%27");
