@@ -8,7 +8,7 @@ import t44 from "./4.4";
 import t45 from "./4.5";
 import t46p from "./4.6-pre";
 import t46 from "./4.6";
-import t46 from "./4.7";
+import t47 from "./4.7";
 
 export default [
   ...t47,
