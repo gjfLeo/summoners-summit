@@ -3,8 +3,9 @@ import { ALL_ACTION_CARDS_INFO, ALL_CHARACTER_CARDS_INFO } from "../cards";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 
 function getImageUrl(filename: string) {
-  filename = filename.replace(":", "");
-  filename = filename.replace("?", "");
+  filename = filename.replaceAll(":", "");
+  filename = filename.replaceAll("?", "");
+  filename = filename.replaceAll("\"", "");
   filename = filename.replaceAll(" ", "_");
   const hash = md5(filename).toString();
   filename = filename.replace("'", "%27");
