@@ -39,10 +39,8 @@ export const characterCardSorter = (a: CharacterCard, b: CharacterCard) => chara
 
 const characterIds: Record<CharacterCard, string> = Object.fromEntries(
   Object.entries(ALL_CHARACTER_CARDS_INFO)
-    .map(([card, { nameEn }]) => {
-      const characterId = nameEn.split(" ")
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join("");
-      return [card, characterId];
+    .map(([card, { id }]) => {
+      return [card, String(id)];
     }),
 ) as Record<CharacterCard, string>;
 
