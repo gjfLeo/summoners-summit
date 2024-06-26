@@ -1,6 +1,7 @@
 import type { z } from "zod";
+import { getMatchList } from "./match";
 import type { Player, PlayerId, PlayerIndex } from "~/types/data";
-import { ZPlayer } from "~/types/data";
+import { ZMatch, ZPlayer } from "~/types/data";
 
 export function getPlayer(playerId: PlayerId): Player | undefined {
   return ZPlayer.optional().parse(readData<Player>(`players/${playerId}`));
@@ -27,11 +28,13 @@ export function deletePlayer(playerId: PlayerId): void {
 
 const ZSavePlayerParams = ZPlayer.partial({ id: true });
 type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
-export function savePlayer(params: SavePlayerParams) {
+export function savePlayer(params: SavePlayerParams, skipRedirect: boolean = false) {
   const oldId = params.id;
   const newId = hash(params.uids[0] ?? params.uniqueName);
-  if (oldId && oldId !== newId) {
-    redirectPlayer(oldId, newId);
+  if (!skipRedirect) {
+    if (oldId && oldId !== newId) {
+      redirectPlayer(oldId, newId);
+    }
   }
 
   const player = {
@@ -89,8 +92,18 @@ export function redirectPlayer(oldId: string, newId: string) {
     existsNicknames[nickname] = true;
   });
 
+  getMatchList().forEach((match) => {
+    if (match.playerA.playerId === oldId) {
+      match.playerA.playerId = newId;
+    }
+    if (match.playerB.playerId === oldId) {
+      match.playerB.playerId = newId;
+    }
+    writeData(`matches/${match.id}`, ZMatch.parse(match));
+  });
+
   deletePlayer(oldId);
-  savePlayer(player);
+  savePlayer(player, true);
 }
 
 export function changePlayerUniqueName(playerId: PlayerId, nickname: string) {
