@@ -31,7 +31,7 @@
     "mergeSourceTargetSame": "来源和目标不能相同",
     "mergeTargetLabel": "数据合并到此条目中",
     "mergeTargetRequired": "请选择",
-    "nicknameMatchedNum": "匹配到\\u2006{0}\\u2006个",
+    "nicknameMatchedNum": "匹配到\u2006{0}\u2006个",
     "selectUniqueName": "选择主要昵称"
   },
   "ranks": {
@@ -54,6 +54,10 @@
     "addMatch": "添加场次",
     "addPart": "添加阶段分组",
     "addStage": "添加比赛阶段",
+    "decks": "{0}\u2006/\u2006{1}\u2006牌组",
+    "gameVideos": "{0}\u2006/\u2006{1}\u2006录像",
+    "games": "{0}\u2006局",
+    "matchVideo": "场次录像",
     "partNamePlaceholder1": "唯一分组名称可省略",
     "title": "赛事信息",
     "titleAdd": "新增赛事详情",

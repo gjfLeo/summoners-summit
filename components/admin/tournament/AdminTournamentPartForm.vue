@@ -57,6 +57,23 @@ function validate() {
 }
 
 defineExpose({ validate });
+
+function countGames(matchId: MatchId) {
+  return matches.value[matchId].gameIds.length;
+}
+function countGameVideos(matchId: MatchId) {
+  return matches.value[matchId].gameIds
+    .map(gameId => games.value[gameId])
+    .filter(game => game.gameVideo)
+    .length;
+}
+function countDecks(matchId: MatchId) {
+  return matches.value[matchId].gameIds
+    .map(gameId => games.value[gameId])
+    .flatMap(game => [game.playerADeck, game.playerBDeck])
+    .filter(deck => deck.deckCode)
+    .length;
+}
 </script>
 
 <template>
@@ -91,34 +108,47 @@ defineExpose({ validate });
     </CommonTransition>
 
     <template v-if="!editing">
-      <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
-        <NCard style="--n-padding-bottom: 0.5rem; --n-padding-top: 0.5rem" class="mt">
-          <div un-flex="~ items-baseline gap-2">
-            <div>{{ t('main.tournament.matchName', [matchIndex + 1]) }}</div>
-            <div :class="{ 'text-orange-500': matches[matchId].winner === 'A' }">
-              <PlayerName :id="matches[matchId].playerA.playerId" :nickname="matches[matchId].playerA.nickname" />
-            </div>
-            <div class="text-sm">VS</div>
-            <div :class="{ 'text-orange-500': matches[matchId].winner === 'B' }">
-              <PlayerName :id="matches[matchId].playerB.playerId" :nickname="matches[matchId].playerB.nickname" />
-            </div>
-            <div>{{ matches[matchId].gameIds.length }}局</div>
-          </div>
-        </NCard>
-      </template>
+      <NTable v-if="part.matchIds.length" class="mt">
+        <tbody>
+          <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
+            <tr class="text-center">
+              <th class="text-center!">{{ t('main.tournament.matchName', [matchIndex + 1]) }}</th>
+              <td class="w-40%">
+                <div un-grid="~ cols-[1fr_min-content_1fr] gap-2">
+                  <div :class="{ 'text-orange-500': matches[matchId].winner === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
+                  <div>VS</div>
+                  <div :class="{ 'text-orange-500': matches[matchId].winner === 'B' }" class="justify-self-start">{{ matches[matchId].playerB.nickname }}</div>
+                </div>
+              </td>
+              <td>{{ t('admin.tournament.games', [countGames(matchId)]) }}</td>
+              <td>{{ t('admin.tournament.decks', [countDecks(matchId), countGames(matchId) * 2]) }}</td>
+              <td>
+                <template v-if="matches[matchId].video">{{ t('admin.tournament.matchVideo') }}</template>
+                <template v-else>{{ t('admin.tournament.gameVideos', [countGameVideos(matchId), countGames(matchId)]) }}</template>
+              </td>
+              <td>
+                <CommonIconButton icon="i-carbon:edit" />
+              </td>
+            </tr>
+          </template>
+          <tr>
+            <th />
+            <td :colspan="4">
+              <NButton class="w-full" dashed @click="addMatch">
+                <template #icon><div class="i-carbon-add" /></template>
+                <template #default>{{ t('admin.tournament.addMatch') }}</template>
+              </NButton>
+            </td>
+            <td />
+          </tr>
+        </tbody>
+      </NTable>
 
-      <template v-if="part.matchIds.length === 0">
+      <template v-else>
         <div class="mt">
           <NText :depth="3">该分组下暂无场次</NText>
         </div>
       </template>
-
-      <NButton
-        class="mt w-full" dashed
-        @click="addMatch"
-      >
-        {{ t('admin.tournament.addMatch') }}
-      </NButton>
     </template>
   </div>
 </template>
