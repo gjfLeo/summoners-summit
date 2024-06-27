@@ -28,13 +28,11 @@ export function deletePlayer(playerId: PlayerId): void {
 
 const ZSavePlayerParams = ZPlayer.partial({ id: true });
 type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
-export function savePlayer(params: SavePlayerParams, skipRedirect: boolean = false) {
+export function savePlayer(params: SavePlayerParams) {
   const oldId = params.id;
   const newId = hash(params.uids[0] ?? params.uniqueName);
-  if (!skipRedirect) {
-    if (oldId && oldId !== newId) {
-      redirectPlayer(oldId, newId);
-    }
+  if (oldId && oldId !== newId) {
+    redirectPlayer(oldId, newId);
   }
 
   const player = {
@@ -53,57 +51,59 @@ export function savePlayer(params: SavePlayerParams, skipRedirect: boolean = fal
   return player.id;
 }
 
-export function redirectPlayer(oldId: string, newId: string) {
-  const oldPlayer = getPlayer(oldId);
-  const newPlayer = getPlayer(newId);
+export function redirectPlayer(sourceId: string, targetId: string) {
+  const sourcePlayer = getPlayer(sourceId);
+  const targetPlayer = getPlayer(targetId);
 
-  if (!oldPlayer && !newPlayer) {
+  if (!sourcePlayer && !targetPlayer) {
     throw new Error(errorCodes.PLAYER_NOT_FOUND);
   }
 
-  if (!oldPlayer) {
+  if (!sourcePlayer) {
     return;
   }
 
   const player: Player = {
-    id: newId,
+    id: "",
     uids: [],
-    uniqueName: newPlayer?.uniqueName ?? oldPlayer.uniqueName,
+    uniqueName: targetPlayer?.uniqueName ?? sourcePlayer.uniqueName,
     aliases: [],
-    ignored: newPlayer?.ignored ?? oldPlayer.ignored,
+    ignored: targetPlayer?.ignored ?? sourcePlayer.ignored,
   };
 
   const existsUid: Record<string, true> = {};
-  [...newPlayer?.uids ?? [], ...oldPlayer.uids].forEach((uid) => {
+  [...targetPlayer?.uids ?? [], ...sourcePlayer.uids].forEach((uid) => {
     if (existsUid[uid]) return;
     player.uids.push(uid);
     existsUid[uid] = true;
   });
+
+  const existsNicknames: Record<string, true> = { [player.uniqueName]: true };
+  [...targetPlayer?.aliases ?? [], sourcePlayer.uniqueName, ...sourcePlayer.aliases].forEach((nickname) => {
+    if (existsNicknames[nickname]) return;
+    player.aliases.push(nickname);
+    existsNicknames[nickname] = true;
+  });
+
+  deletePlayer(sourceId);
+  deletePlayer(targetId);
+  player.id = savePlayer({ ...player, id: undefined });
+
   updatePlayerIndex((index) => {
     player.uids.forEach((uid) => {
       index.uid[uid] = player.id;
     });
   });
 
-  const existsNicknames: Record<string, true> = { [player.uniqueName]: true };
-  [...newPlayer?.aliases ?? [], oldPlayer.uniqueName, ...oldPlayer.aliases].forEach((nickname) => {
-    if (existsNicknames[nickname]) return;
-    player.aliases.push(nickname);
-    existsNicknames[nickname] = true;
-  });
-
   getMatchList().forEach((match) => {
-    if (match.playerA.playerId === oldId) {
-      match.playerA.playerId = newId;
+    if (match.playerA.playerId === sourceId || match.playerA.playerId === targetId) {
+      match.playerA.playerId = player.id;
     }
-    if (match.playerB.playerId === oldId) {
-      match.playerB.playerId = newId;
+    if (match.playerB.playerId === sourceId || match.playerB.playerId === targetId) {
+      match.playerB.playerId = player.id;
     }
     writeData(`matches/${match.id}`, ZMatch.parse(match));
   });
-
-  deletePlayer(oldId);
-  savePlayer(player, true);
 }
 
 export function changePlayerUniqueName(playerId: PlayerId, nickname: string) {
