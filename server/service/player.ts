@@ -52,6 +52,9 @@ export function savePlayer(params: SavePlayerParams) {
 }
 
 export function redirectPlayer(sourceId: string, targetId: string) {
+  if (sourceId === targetId) {
+    return;
+  }
   const sourcePlayer = getPlayer(sourceId);
   const targetPlayer = getPlayer(targetId);
 
