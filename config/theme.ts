@@ -4,6 +4,21 @@ export const themeOverridesShared: GlobalThemeOverrides = {
   common: {
     fontFamily: "Microsoft YaHei",
     fontFamilyMono: "Ubuntu Mono",
+    fontSize: "1rem",
+    fontSizeMini: "0.75rem",
+    fontSizeTiny: "0.75rem",
+    fontSizeSmall: "0.875rem",
+    fontSizeMedium: "1rem",
+    fontSizeLarge: "1.125rem",
+    fontSizeHuge: "1.25rem",
+  },
+  Typography: {
+    headerFontSize1: "2rem",
+    headerFontSize2: "1.5rem",
+    headerFontSize3: "1.25rem",
+    headerFontSize4: "1.125rem",
+    headerFontSize5: "1.125rem",
+    headerFontSize6: "1.125rem",
   },
 };
 

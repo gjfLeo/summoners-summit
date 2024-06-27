@@ -27,21 +27,21 @@ async function updateData() {
         <template #trigger><NButton @click="updateData">{{ t("admin.card.updateData") }}</NButton></template>
       </NTooltip>
     </div>
-    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(2rem,auto))] gap-1">
       <TransitionGroup name="common-transition-group">
         <template v-for="cardId in characterCardIds" :key="cardId">
-          <CardAvatar :card="cardId" />
+          <CardAvatar :card="cardId" class="w-full" />
         </template>
       </TransitionGroup>
     </div>
-    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(2rem,auto))] gap-1">
       <TransitionGroup name="common-transition-group">
         <template v-for="cardId in characterCardIds" :key="cardId">
           <CardImage :card="cardId" />
         </template>
       </TransitionGroup>
     </div>
-    <div un-grid="~ cols-[repeat(auto-fit,minmax(50px,auto))] gap-1">
+    <div un-grid="~ cols-[repeat(auto-fit,minmax(2rem,auto))] gap-1">
       <TransitionGroup name="common-transition-group">
         <template v-for="cardId in actionCardIds" :key="cardId">
           <CardImage :card="cardId" />

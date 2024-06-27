@@ -11,7 +11,7 @@ export async function useApiGetTournamentList() {
 export async function useApiGetTournament(query: { id: TournamentId }) {
   const { data, refresh } = await useFetch("/api/v3/tournaments/get", { query });
   return {
-    tournament: computed<Tournament | undefined>(() => data.value?.tournament),
+    tournament: computed<Tournament>(() => data.value?.tournament as Tournament),
     matches: computed<Record<MatchId, Match>>(() => data.value?.matches ?? {}),
     games: computed<Record<GameId, Game>>(() => data.value?.games ?? {}),
     refresh,

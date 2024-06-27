@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { NForm } from "#components";
-import type { TournamentPart } from "~/types/data";
+import type { Game, GameId, Match, MatchId, TournamentPart } from "~/types/data";
 
 const props = defineProps<{
   stageIndex: number;
@@ -20,6 +20,9 @@ const formRef = ref<InstanceType<typeof NForm>>();
 const { t } = useLocales();
 
 const defaultName = computed(() => t("main.tournament.partNameDefault", [props.partIndex + 1]));
+
+const matches = inject<Ref<Record<MatchId, Match>>>("matches", ref({}));
+const games = inject<Ref<Record<GameId, Game>>>("games", ref({}));
 
 const rules = {
   name: {
@@ -88,8 +91,20 @@ defineExpose({ validate });
     </CommonTransition>
 
     <template v-if="!editing">
-      <template v-for="matchId in part.matchIds" :key="matchId">
-        <div>{{ matchId }}</div>
+      <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
+        <NCard style="--n-padding-bottom: 0.5rem; --n-padding-top: 0.5rem" class="mt">
+          <div un-flex="~ items-baseline gap-2">
+            <div>{{ t('main.tournament.matchName', [matchIndex + 1]) }}</div>
+            <div :class="{ 'text-orange-500': matches[matchId].winner === 'A' }">
+              <PlayerName :id="matches[matchId].playerA.playerId" :nickname="matches[matchId].playerA.nickname" />
+            </div>
+            <div class="text-sm">VS</div>
+            <div :class="{ 'text-orange-500': matches[matchId].winner === 'B' }">
+              <PlayerName :id="matches[matchId].playerB.playerId" :nickname="matches[matchId].playerB.nickname" />
+            </div>
+            <div>{{ matches[matchId].gameIds.length }}局</div>
+          </div>
+        </NCard>
       </template>
 
       <template v-if="part.matchIds.length === 0">

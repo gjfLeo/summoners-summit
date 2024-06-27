@@ -7,6 +7,10 @@
 </template>
 
 <style>
+:root {
+  font-size: 14px;
+}
+
 .layout-transition-enter-active,
 .layout-transition-leave-active {
   /* position: absolute;

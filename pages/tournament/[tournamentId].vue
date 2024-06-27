@@ -41,7 +41,6 @@ const { tournament, matches, games } = await useApiGetTournament({ id: tournamen
 
               <!-- 右侧 -->
               <div class="ml-auto flex gap-2 text-sm text-gray">
-                <LinkVideo v-if="matches[matchId].video" :video="matches[matchId].video" />
                 <div>{{ part.date }}</div>
               </div>
             </NH4>
