@@ -1,12 +1,13 @@
-import tournamentById from "./tournaments.json";
-import matchById from "./matches.json";
-import gameById from "./games.json";
-import deckById from "./decks.json";
-// import playerById from "./players.json";
+import tournamentById from "~/server/data/old/tournamentById.json";
+import matchById from "~/server/data/old/matchById.json";
+import gameById from "~/server/data/old/gameById.json";
+import deckById from "~/server/data/old/deckById.json";
+
 import type { CardId, Game, Tournament, TournamentRules } from "~/types";
 import type { DeckCards, DeckCode } from "~/types/data/deck";
 import type { MatchSaveParams } from "~/server/service";
-import { ZMatchSaveParams, ZTournamentSaveParams, getActionCards, getCharacterCards, getPlayerList, saveMatch, saveTournament } from "~/server/service";
+import { ZMatchSaveParams, ZTournamentSaveParams, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayerList, getTournamentList, saveMatch, saveTournament } from "~/server/service";
+import AdminPlayerSelect from "~/components/admin/player/AdminPlayerSelect.vue";
 
 function getTournamentType(old?: string): Tournament["type"] {
   if (!old) return "未分类";
@@ -157,6 +158,20 @@ function getDeckCode(oldDeckId: string) {
 }
 
 export default defineEventHandler(async () => {
+  // 删除旧数据
+  getGameList().forEach((game) => {
+    deleteData(`/games/${game.id}`);
+  });
+  getMatchList().forEach((match) => {
+    deleteData(`/matches/${match.id}`);
+  });
+  getTournamentList().forEach((tournament) => {
+    deleteData(`/tournaments/${tournament.id}`);
+  });
+  getPlayerList().filter(player => player.uids.length === 0 && player.aliases.length === 0).forEach((player) => {
+    deleteData(`/players/${player.id}`);
+  });
+
   Object.values(tournamentById).forEach((oldTournament) => {
     if (oldTournament.gameVersion.includes("pre")) {
       console.warn(`Tournament ${oldTournament.name} has pre-release game version`);
@@ -224,6 +239,13 @@ export default defineEventHandler(async () => {
                 } satisfies MatchSaveParams["games"][number];
               });
 
+            const aWinDiff = games.reduce((diff, game) => {
+              if (game.winner === "A") return diff + 1;
+              if (game.winner === "B") return diff - 1;
+              return diff;
+            }, 0);
+            const winner = aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW";
+
             const matchParams: MatchSaveParams = {
               tournamentId: oldTournament.id,
               stageIndex,
@@ -238,7 +260,7 @@ export default defineEventHandler(async () => {
                 playerId: findPlayerId(oldMatch.playerBNickname),
                 nickname: oldMatch.playerBNickname,
               },
-              winner: oldMatch.winner as MatchSaveParams["winner"],
+              winnerOverride: winner === oldMatch.winner ? undefined : oldMatch.winner as MatchSaveParams["winnerOverride"],
               video: "video" in oldMatch ? oldMatch.video : undefined,
 
               bans,
