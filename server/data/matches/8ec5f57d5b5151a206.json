@@ -9,10 +9,9 @@
     "nickname": "贝尔格里"
   },
   "playerB": {
-    "playerId": "eb1a9ffad3657fba",
+    "playerId": "46f35dad56769cec",
     "nickname": "萌萌带格蕾修"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

@@ -5,14 +5,13 @@
   "partIndex": 2,
   "matchIndex": 2,
   "playerA": {
-    "playerId": "9052653243a96a4e",
+    "playerId": "ee87073f7fe769ba",
     "nickname": "Shin"
   },
   "playerB": {
-    "playerId": "075369d09f4a30b8",
+    "playerId": "24b8f57205f11203",
     "nickname": "Pilot"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "team",

@@ -1,0 +1,78 @@
+{
+  "id": "1e1309c3388bbc4d",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "4.7",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-06-23",
+          "matchIds": [
+            "1e1309c3388bbc4d01",
+            "1e1309c3388bbc4d02",
+            "1e1309c3388bbc4d03",
+            "1e1309c3388bbc4d04"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-06-24",
+          "matchIds": [
+            "1e1309c3388bbc4d05",
+            "1e1309c3388bbc4d06",
+            "1e1309c3388bbc4d07",
+            "1e1309c3388bbc4d08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-06-25",
+          "matchIds": [
+            "1e1309c3388bbc4d09",
+            "1e1309c3388bbc4d10"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,14 +5,13 @@
   "partIndex": 0,
   "matchIndex": 2,
   "playerA": {
-    "playerId": "48fc8cd409dc3d6e",
+    "playerId": "493f81feaa9bf647",
     "nickname": "大叔ky"
   },
   "playerB": {
-    "playerId": "a7b1c5a26a2febe5",
+    "playerId": "e3fcdab3060e7ab3",
     "nickname": "Lava没睡醒"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

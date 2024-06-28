@@ -1,0 +1,28 @@
+{
+  "id": "1e1309c3388bbc4d01",
+  "tournamentId": "1e1309c3388bbc4d",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "playerA": {
+    "playerId": "1e083a8320be5301",
+    "nickname": "Reaper"
+  },
+  "playerB": {
+    "playerId": "fc2e0ff185285967",
+    "nickname": "玖哀"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "2204-2405-2503",
+      "playerBTeamId": "2204-2405-2503"
+    }
+  ],
+  "gameIds": [
+    "1e1309c3388bbc4d0101",
+    "1e1309c3388bbc4d0102",
+    "1e1309c3388bbc4d0103"
+  ],
+  "video": "https://www.bilibili.com/video/BV1CS421d7W5"
+}

@@ -5,14 +5,13 @@
   "partIndex": 1,
   "matchIndex": 0,
   "playerA": {
-    "playerId": "815cf59b03075baa",
+    "playerId": "55add284f81a9d29",
     "nickname": "元"
   },
   "playerB": {
     "playerId": "5f95f7e55ca146e5",
     "nickname": "Winsoon"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "character",

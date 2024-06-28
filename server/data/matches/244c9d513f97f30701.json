@@ -9,10 +9,9 @@
     "nickname": "今天不想吃苹果"
   },
   "playerB": {
-    "playerId": "302d25fb2eb0a5f1",
+    "playerId": "e88fa453e817d8b1",
     "nickname": "仄言"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

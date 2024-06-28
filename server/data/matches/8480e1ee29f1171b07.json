@@ -10,10 +10,9 @@
     "nickname": "和大名"
   },
   "playerB": {
-    "playerId": "cd9b0c02721a8226",
+    "playerId": "eae9bd99723f25fe",
     "nickname": "光"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "character",

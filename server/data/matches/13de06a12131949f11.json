@@ -5,14 +5,13 @@
   "partIndex": 1,
   "matchIndex": 5,
   "playerA": {
-    "playerId": "4e8d331217895c17",
+    "playerId": "d77b152360b88e1e",
     "nickname": "MrPillow"
   },
   "playerB": {
-    "playerId": "2ebdf7d8d35cae49",
+    "playerId": "ef995a7d99ffb112",
     "nickname": "Matt Mario"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

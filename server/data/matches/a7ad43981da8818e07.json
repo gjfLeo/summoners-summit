@@ -6,14 +6,13 @@
   "matchIndex": 0,
   "isFinal": true,
   "playerA": {
-    "playerId": "0cad1d412f80b84d",
+    "playerId": "358d9c39cf7d95e6",
     "nickname": "C"
   },
   "playerB": {
     "playerId": "c21e2361ca148168",
     "nickname": "夭九"
   },
-  "winner": "B",
   "gameIds": [
     "a7ad43981da8818e0701",
     "a7ad43981da8818e0702"

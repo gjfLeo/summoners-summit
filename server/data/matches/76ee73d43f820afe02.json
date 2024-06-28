@@ -9,10 +9,9 @@
     "nickname": "神的微笑"
   },
   "playerB": {
-    "playerId": "8193ed48cdae6a26",
+    "playerId": "547c1612382145e7",
     "nickname": "Smile"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "character",

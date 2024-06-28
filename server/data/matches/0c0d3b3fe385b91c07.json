@@ -9,10 +9,9 @@
     "nickname": "Takey"
   },
   "playerB": {
-    "playerId": "1cb753f5b6efd5e8",
+    "playerId": "f108bd22ad7b3b6c",
     "nickname": "飞舞的流荧"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

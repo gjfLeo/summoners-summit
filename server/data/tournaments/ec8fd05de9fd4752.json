@@ -1,0 +1,36 @@
+{
+  "id": "ec8fd05de9fd4752",
+  "name": {
+    "zh": "「燃斗无双」米游社"
+  },
+  "gameVersion": "4.7",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-06-27",
+          "matchIds": [
+            "ec8fd05de9fd475201"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,10 +9,9 @@
     "nickname": "Sept"
   },
   "playerB": {
-    "playerId": "b45a910f95459367",
+    "playerId": "6e6e5e8a24bacc2d",
     "nickname": "昨夜风"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

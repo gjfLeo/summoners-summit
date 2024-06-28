@@ -9,10 +9,9 @@
     "nickname": "Amadeus"
   },
   "playerB": {
-    "playerId": "5a8be0d11db9da78",
+    "playerId": "df1513cccd665f27",
     "nickname": "真实王枝明"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

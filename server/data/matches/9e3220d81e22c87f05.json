@@ -9,10 +9,9 @@
     "nickname": "大呆瓜"
   },
   "playerB": {
-    "playerId": "fad3c85dc1d9d95e",
+    "playerId": "2825fd10aab396b6",
     "nickname": "移灯惊梦"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "team",

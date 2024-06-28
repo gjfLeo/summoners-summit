@@ -9,10 +9,9 @@
     "nickname": "唐傀"
   },
   "playerB": {
-    "playerId": "46a6e71eb691f420",
+    "playerId": "d642d368e3f1e23a",
     "nickname": "裁哥们儿"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "team",

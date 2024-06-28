@@ -9,10 +9,9 @@
     "nickname": "小铭同学"
   },
   "playerB": {
-    "playerId": "0fd8c4ec20509f8f",
+    "playerId": "98ee2e3c798bc127",
     "nickname": "翁静"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

@@ -5,14 +5,13 @@
   "partIndex": 0,
   "matchIndex": 1,
   "playerA": {
-    "playerId": "a3ae829d8cd202ea",
+    "playerId": "f616717771ae4dc5",
     "nickname": "Banapp"
   },
   "playerB": {
-    "playerId": "33b8930f8d6fee0d",
+    "playerId": "69af773ad6b01752",
     "nickname": "Mango"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

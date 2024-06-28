@@ -1,0 +1,28 @@
+{
+  "id": "13de06a12131949f37",
+  "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 7,
+  "matchIndex": 5,
+  "playerA": {
+    "playerId": "cbcbd9c08652ffdb",
+    "nickname": "llb"
+  },
+  "playerB": {
+    "playerId": "88ac72f9c8fb2f33",
+    "nickname": "Nyahida"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1106-1203-1506",
+      "playerBTeamId": "1106-1203-1507"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f3701",
+    "13de06a12131949f3702",
+    "13de06a12131949f3703"
+  ],
+  "video": "https://www.youtube.com/live/TMqCPKULA3g?t=22682"
+}

@@ -1,15 +1,14 @@
 {
   "id": "13de06a12131949f",
   "name": {
-    "zh": "「小王子杯：大西洋赛区」常规赛",
-    "en": "The Prince Cup: ATLANTIC - Regular Season"
+    "zh": "「小王子杯：大西洋赛区」常规赛 (The Prince Cup: ATLANTIC - Regular Season)"
   },
   "gameVersion": "4.6",
   "type": "未分类（外服）",
   "stages": [
     {
       "name": {
-        "zh": "B组"
+        "zh": "32进8"
       },
       "rules": {
         "numGames": 3,
@@ -25,7 +24,7 @@
       "parts": [
         {
           "name": {
-            "zh": "DAY2"
+            "zh": "B组 DAY2"
           },
           "date": "2024-05-18",
           "matchIds": [
@@ -38,7 +37,7 @@
         },
         {
           "name": {
-            "zh": "DAY3"
+            "zh": "B组 DAY3"
           },
           "date": "2024-05-19",
           "matchIds": [
@@ -49,28 +48,10 @@
             "13de06a12131949f10",
             "13de06a12131949f11"
           ]
-        }
-      ]
-    },
-    {
-      "name": {
-        "zh": "C组"
-      },
-      "rules": {
-        "numGames": 3,
-        "mode": "conquest",
-        "submitTeams": {
-          "num": 3,
-          "numCharactersRequired": 9,
-          "banTeams": {
-            "num": 1
-          }
-        }
-      },
-      "parts": [
+        },
         {
           "name": {
-            "zh": "DAY1"
+            "zh": "C组 DAY1"
           },
           "date": "2024-05-20",
           "matchIds": [
@@ -79,6 +60,67 @@
             "13de06a12131949f14",
             "13de06a12131949f15",
             "13de06a12131949f16"
+          ]
+        },
+        {
+          "name": {
+            "zh": "C组 DAY2"
+          },
+          "date": "2024-05-26",
+          "matchIds": [
+            "13de06a12131949f17",
+            "13de06a12131949f18",
+            "13de06a12131949f19",
+            "13de06a12131949f20",
+            "13de06a12131949f21"
+          ]
+        },
+        {
+          "name": {
+            "zh": "C组 DAY3"
+          },
+          "date": "2024-05-27",
+          "matchIds": [
+            "13de06a12131949f22",
+            "13de06a12131949f23",
+            "13de06a12131949f24"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组 DAY1"
+          },
+          "date": "2024-05-27",
+          "matchIds": [
+            "13de06a12131949f25",
+            "13de06a12131949f26"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组 DAY2"
+          },
+          "date": "2024-06-02",
+          "matchIds": [
+            "13de06a12131949f27",
+            "13de06a12131949f28",
+            "13de06a12131949f29",
+            "13de06a12131949f30",
+            "13de06a12131949f31"
+          ]
+        },
+        {
+          "name": {
+            "zh": "D组 DAY3"
+          },
+          "date": "2024-06-03",
+          "matchIds": [
+            "13de06a12131949f32",
+            "13de06a12131949f33",
+            "13de06a12131949f34",
+            "13de06a12131949f35",
+            "13de06a12131949f36",
+            "13de06a12131949f37"
           ]
         }
       ]

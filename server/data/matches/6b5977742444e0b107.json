@@ -10,10 +10,9 @@
     "nickname": "太一"
   },
   "playerB": {
-    "playerId": "b781bfa9677fe612",
+    "playerId": "445b571a14bcb06b",
     "nickname": "信凛"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "team",

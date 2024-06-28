@@ -5,14 +5,13 @@
   "partIndex": 3,
   "matchIndex": 0,
   "playerA": {
-    "playerId": "3cecf7a185a26f38",
+    "playerId": "e4fed268ca7e4706",
     "nickname": "Elaina"
   },
   "playerB": {
     "playerId": "6e2707a45bb0d3f3",
     "nickname": "卡密sama"
   },
-  "winner": "B",
   "gameIds": [
     "ed7dcf1c206314d00601",
     "ed7dcf1c206314d00602",

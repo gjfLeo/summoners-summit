@@ -9,10 +9,10 @@
     "nickname": "九千羽"
   },
   "playerB": {
-    "playerId": "3cecf7a185a26f38",
+    "playerId": "0a6657edc33bef82",
     "nickname": "Elaina"
   },
-  "winner": "A",
+  "winnerOverride": "A",
   "bans": [
     {
       "banType": "team",

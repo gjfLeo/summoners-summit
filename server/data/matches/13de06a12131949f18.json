@@ -1,0 +1,27 @@
+{
+  "id": "13de06a12131949f18",
+  "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 1,
+  "playerA": {
+    "playerId": "ee87073f7fe769ba",
+    "nickname": "Shin"
+  },
+  "playerB": {
+    "playerId": "4de2cd91d9b55ab3",
+    "nickname": "magnamak"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1203-2102-2402",
+      "playerBTeamId": "1106-1203-1507"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f1801",
+    "13de06a12131949f1802"
+  ],
+  "video": "https://www.youtube.com/live/OLUzXo2yIiI?t=7824"
+}

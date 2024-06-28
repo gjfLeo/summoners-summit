@@ -1,0 +1,27 @@
+{
+  "id": "13de06a12131949f19",
+  "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 2,
+  "playerA": {
+    "playerId": "24b8f57205f11203",
+    "nickname": "Pilot"
+  },
+  "playerB": {
+    "playerId": "002aa1d03de8c40e",
+    "nickname": "Kalomon"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1202-1402",
+      "playerBTeamId": "1104-1202-1402"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f1901",
+    "13de06a12131949f1902"
+  ],
+  "video": "https://www.youtube.com/live/OLUzXo2yIiI?t=11591"
+}

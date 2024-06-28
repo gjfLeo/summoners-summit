@@ -6,14 +6,13 @@
   "matchIndex": 0,
   "isFinal": true,
   "playerA": {
-    "playerId": "3cecf7a185a26f38",
+    "playerId": "e26a3914676cbf8a",
     "nickname": "Elaina"
   },
   "playerB": {
     "playerId": "1215505adf1339e5",
     "nickname": "Glyou_HZ"
   },
-  "winner": "A",
   "bans": [
     {
       "banType": "team",

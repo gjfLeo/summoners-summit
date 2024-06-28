@@ -5,14 +5,13 @@
   "partIndex": 0,
   "matchIndex": 0,
   "playerA": {
-    "playerId": "62d983894c074ba2",
+    "playerId": "c681f53c10e5ec01",
     "nickname": "今天我不吃牛肉"
   },
   "playerB": {
     "playerId": "9a0149ab002a3b3a",
     "nickname": "今天不想吃苹果"
   },
-  "winner": "B",
   "bans": [
     {
       "banType": "team",
