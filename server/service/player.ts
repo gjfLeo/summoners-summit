@@ -30,7 +30,7 @@ const ZSavePlayerParams = ZPlayer.partial({ id: true });
 type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
   const oldId = params.id;
-  const newId = hash(params.uids[0] ?? params.uniqueName);
+  const newId = params.uids[0] ? hash(params.uids[0]) : (oldId ?? hash());
   if (oldId && oldId !== newId) {
     redirectPlayer(oldId, newId);
   }
@@ -40,6 +40,8 @@ export function savePlayer(params: SavePlayerParams) {
     id: newId,
     aliases: params.aliases.toSorted(),
   };
+
+  if (!player.ignored) delete player.ignored;
 
   updatePlayerIndex((index) => {
     player.uids.forEach((uid) => {
@@ -51,9 +53,9 @@ export function savePlayer(params: SavePlayerParams) {
   return player.id;
 }
 
-export function redirectPlayer(sourceId: string, targetId: string) {
+export function redirectPlayer(sourceId: PlayerId, targetId: PlayerId): PlayerId {
   if (sourceId === targetId) {
-    return;
+    return targetId;
   }
   const sourcePlayer = getPlayer(sourceId);
   const targetPlayer = getPlayer(targetId);
@@ -63,7 +65,7 @@ export function redirectPlayer(sourceId: string, targetId: string) {
   }
 
   if (!sourcePlayer) {
-    return;
+    return targetId;
   }
 
   const player: Player = {
@@ -107,6 +109,7 @@ export function redirectPlayer(sourceId: string, targetId: string) {
     }
     writeData(`matches/${match.id}`, ZMatch.parse(match));
   });
+  return player.id;
 }
 
 export function changePlayerUniqueName(playerId: PlayerId, nickname: string) {

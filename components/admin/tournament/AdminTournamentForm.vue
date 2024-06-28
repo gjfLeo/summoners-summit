@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { AdminTournamentStageForm, NForm } from "#components";
-import type { Tournament } from "~/types/data";
+import type { Tournament, TournamentId } from "~/types/data";
 
 const emit = defineEmits<{
-  (e: "save"): void;
+  (e: "save", tournamentId: TournamentId): void;
 }>();
 
 const tournament = defineModel<Tournament>({ required: true });
@@ -62,11 +62,8 @@ async function save() {
   });
   if (res.success) {
     message.success(t("admin.message.SUCCESS"));
-    if (res.id !== tournament.value.id) {
-      await navigateTo(`/admin/tournament/${res.id}`);
-    }
     editing.value = false;
-    emit("save");
+    emit("save", res.id);
   }
 }
 
@@ -160,5 +157,5 @@ provide("matchEditor", matchEditor);
   >
     <div class="i-carbon:save" />
   </NFloatButton>
-  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save')" />
+  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save', tournament.id)" />
 </template>

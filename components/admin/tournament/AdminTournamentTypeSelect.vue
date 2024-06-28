@@ -18,6 +18,7 @@ const options = computed<SelectOption[]>(() => {
     :options="options"
     :loading="options.length === 0"
     :fallback-option="false"
+    filterable
     :placeholder="t('main.tournament.type')"
     clearable
     v-bind="$attrs"

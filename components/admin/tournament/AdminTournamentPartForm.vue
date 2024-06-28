@@ -51,6 +51,9 @@ function addMatch() {
     matchIndex: part.value.matchIds.length,
   });
 }
+function handleEdit(matchId: MatchId) {
+  matchEditor?.value.edit();
+}
 
 function validate() {
   return validateForm(formRef);
@@ -73,6 +76,20 @@ function countDecks(matchId: MatchId) {
     .flatMap(game => [game.playerADeck, game.playerBDeck])
     .filter(deck => deck.deckCode)
     .length;
+}
+function getMatchWinner(matchId: MatchId): NonNullable<Match["winner"]> {
+  const match = matches.value[matchId];
+  if (match.winner) return match.winner;
+  const abDiff = match.gameIds.map(gameId => games.value[gameId])
+    .map(game => game.winner)
+    .reduce((diff, winner) => {
+      if (winner === "A") return diff + 1;
+      if (winner === "B") return diff - 1;
+      return diff;
+    }, 0);
+  if (abDiff > 0) return "A";
+  if (abDiff < 0) return "B";
+  return "DRAW";
 }
 </script>
 
@@ -108,16 +125,16 @@ function countDecks(matchId: MatchId) {
     </CommonTransition>
 
     <template v-if="!editing">
-      <NTable v-if="part.matchIds.length" class="mt">
+      <NTable class="mt">
         <tbody>
           <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
             <tr class="text-center">
               <th class="text-center!">{{ t('main.tournament.matchName', [matchIndex + 1]) }}</th>
               <td class="w-40%">
                 <div un-grid="~ cols-[1fr_min-content_1fr] gap-2">
-                  <div :class="{ 'text-orange-500': matches[matchId].winner === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
+                  <div :class="{ 'text-orange-500': getMatchWinner(matchId) === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
                   <div>VS</div>
-                  <div :class="{ 'text-orange-500': matches[matchId].winner === 'B' }" class="justify-self-start">{{ matches[matchId].playerB.nickname }}</div>
+                  <div :class="{ 'text-orange-500': getMatchWinner(matchId) === 'B' }" class="justify-self-start">{{ matches[matchId].playerB.nickname }}</div>
                 </div>
               </td>
               <td>{{ t('admin.tournament.games', [countGames(matchId)]) }}</td>
@@ -127,7 +144,7 @@ function countDecks(matchId: MatchId) {
                 <template v-else>{{ t('admin.tournament.gameVideos', [countGameVideos(matchId), countGames(matchId)]) }}</template>
               </td>
               <td>
-                <CommonIconButton icon="i-carbon:edit" />
+                <CommonIconButton icon="i-carbon:edit" @click="handleEdit(matchId)" />
               </td>
             </tr>
           </template>
@@ -143,12 +160,6 @@ function countDecks(matchId: MatchId) {
           </tr>
         </tbody>
       </NTable>
-
-      <template v-else>
-        <div class="mt">
-          <NText :depth="3">该分组下暂无场次</NText>
-        </div>
-      </template>
     </template>
   </div>
 </template>

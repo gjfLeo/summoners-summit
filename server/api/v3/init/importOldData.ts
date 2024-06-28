@@ -2,12 +2,12 @@ import tournamentById from "~/server/data/old/tournamentById.json";
 import matchById from "~/server/data/old/matchById.json";
 import gameById from "~/server/data/old/gameById.json";
 import deckById from "~/server/data/old/deckById.json";
+import playerRedirect from "~/server/data/old/playerRedirect.json";
 
-import type { CardId, Game, Tournament, TournamentRules } from "~/types";
+import type { CardId, Game, PlayerId, Tournament, TournamentRules } from "~/types";
 import type { DeckCards, DeckCode } from "~/types/data/deck";
 import type { MatchSaveParams } from "~/server/service";
-import { ZMatchSaveParams, ZTournamentSaveParams, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayerList, getTournamentList, saveMatch, saveTournament } from "~/server/service";
-import AdminPlayerSelect from "~/components/admin/player/AdminPlayerSelect.vue";
+import { ZMatchSaveParams, ZTournamentSaveParams, changePlayerUniqueName, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament } from "~/server/service";
 
 function getTournamentType(old?: string): Tournament["type"] {
   if (!old) return "未分类";
@@ -66,7 +66,7 @@ function getStageRules(old?: {
         ? {
             num: old.numDecks,
             numCharactersRequired: old.numCharactersRequired,
-            submitDecks: submitDecks.maxNumForEachTeam || submitDecks.maxNumInTotal ? submitDecks : undefined,
+            submitDecks: (submitDecks.maxNumForEachTeam || submitDecks.maxNumInTotal) ? submitDecks : undefined,
             banTeams: old.numDecksBanned
               ? {
                   num: old.numDecksBanned,
@@ -76,16 +76,6 @@ function getStageRules(old?: {
         : undefined,
     } satisfies TournamentRules
     : undefined;
-}
-
-function findPlayer(nickname: string) {
-  const matched = getPlayerList().filter(p => p.uniqueName === nickname || p.aliases.includes(nickname));
-  if (matched.length === 1) {
-    return matched[0];
-  }
-}
-function findPlayerId(nickname: string) {
-  return findPlayer(nickname)?.id;
 }
 
 const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "ntr", "pcp", "rbq"];
@@ -160,21 +150,58 @@ function getDeckCode(oldDeckId: string) {
 export default defineEventHandler(async () => {
   // 删除旧数据
   getGameList().forEach((game) => {
-    deleteData(`/games/${game.id}`);
+    deleteData(`games/${game.id}`);
   });
   getMatchList().forEach((match) => {
-    deleteData(`/matches/${match.id}`);
+    deleteData(`matches/${match.id}`);
   });
   getTournamentList().forEach((tournament) => {
-    deleteData(`/tournaments/${tournament.id}`);
+    deleteData(`tournaments/${tournament.id}`);
   });
   getPlayerList().filter(player => player.uids.length === 0 && player.aliases.length === 0).forEach((player) => {
-    deleteData(`/players/${player.id}`);
+    deleteData(`players/${player.id}`);
+  });
+
+  Object.entries(playerRedirect).forEach(([nickname1, nickname2]) => {
+    let player1Id: PlayerId, player2Id: PlayerId;
+    const player1matched = getPlayerList()
+      .filter(p => p.uniqueName === nickname1 || p.aliases.includes(nickname1));
+    if (player1matched.length === 0) {
+      player1Id = savePlayer({ uniqueName: nickname1, uids: [], aliases: [] });
+    }
+    else if (player1matched.length === 1) {
+      player1Id = player1matched[0].id;
+    }
+    else {
+      throw new Error(`昵称${nickname1}找到${player1matched.length}条选手数据`);
+    }
+
+    if (nickname2 === "") {
+      const player = getPlayer(player1Id)!;
+      player.ignored = true;
+      savePlayer(player);
+      return;
+    }
+
+    const player2matched = getPlayerList()
+      .filter(p => p.uniqueName === nickname2 || p.aliases.includes(nickname2));
+    if (player2matched.length === 0) {
+      player2Id = savePlayer({ uniqueName: nickname2, uids: [], aliases: [] });
+    }
+    else if (player2matched.length === 1) {
+      player2Id = player2matched[0].id;
+    }
+    else {
+      throw new Error(`昵称${nickname2}找到${player2matched.length}条选手数据`);
+    }
+
+    const playerId = redirectPlayer(player1Id, player2Id);
+    changePlayerUniqueName(playerId, nickname2);
   });
 
   Object.values(tournamentById).forEach((oldTournament) => {
     if (oldTournament.gameVersion.includes("pre")) {
-      console.warn(`Tournament ${oldTournament.name} has pre-release game version`);
+      console.warn(`跳过${oldTournament.name}（${oldTournament.gameVersion}版本）`);
       return;
     };
 
@@ -205,11 +232,29 @@ export default defineEventHandler(async () => {
       stages,
     }));
 
+    const tournamentPlayerMap: Record<string, PlayerId> = {};
+
     oldTournament.stages.forEach((oldStage, stageIndex) => {
       oldStage.parts.forEach((oldPart, partIndex) => {
         oldPart.matchIds.map(mId => matchById[mId as keyof typeof matchById])
           .forEach((oldMatch, matchIndex) => {
             if (!oldMatch) throw new Error("match not found");
+
+            ([oldMatch.playerANickname, oldMatch.playerBNickname]).forEach((nickname) => {
+              if (tournamentPlayerMap[nickname]) return;
+              const matchedPlayers = getPlayerList()
+                .filter(p => p.uniqueName === nickname || p.aliases.includes(nickname));
+              if (matchedPlayers.length === 1) {
+                tournamentPlayerMap[nickname] = matchedPlayers[0].id;
+              }
+              else {
+                tournamentPlayerMap[nickname] = savePlayer({
+                  uniqueName: nickname,
+                  uids: [],
+                  aliases: [],
+                });
+              }
+            });
 
             const bans = "banned" in oldMatch
               ? oldMatch.banned.map<MatchSaveParams["bans"][number]>((oldBan) => {
@@ -253,11 +298,11 @@ export default defineEventHandler(async () => {
               matchIndex,
               isFinal: oldStage.name === "决赛" || oldStage.name === "决赛" ? true : undefined,
               playerA: {
-                playerId: findPlayerId(oldMatch.playerANickname),
+                playerId: tournamentPlayerMap[oldMatch.playerANickname],
                 nickname: oldMatch.playerANickname,
               },
               playerB: {
-                playerId: findPlayerId(oldMatch.playerBNickname),
+                playerId: tournamentPlayerMap[oldMatch.playerBNickname],
                 nickname: oldMatch.playerBNickname,
               },
               winnerOverride: winner === oldMatch.winner ? undefined : oldMatch.winner as MatchSaveParams["winnerOverride"],

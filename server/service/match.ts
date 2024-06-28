@@ -148,6 +148,6 @@ export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
   return {
     ...match,
     gameVersion: tournament.gameVersion,
-    winner: match.winner ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
+    winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
   };
 }

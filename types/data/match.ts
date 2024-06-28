@@ -31,7 +31,7 @@ export const ZMatch = z.object({
     playerId: ZPlayerId,
     nickname: ZPlayerNickname,
   }),
-  winner: z.enum(["A", "B", "DRAW"]).optional(),
+  winnerOverride: z.enum(["A", "B", "DRAW"]).optional(),
   bans: ZBan.array().optional(),
   gameIds: ZGameId.array(),
   video: z.string().optional(),

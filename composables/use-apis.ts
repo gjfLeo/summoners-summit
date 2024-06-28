@@ -1,3 +1,4 @@
+import type { UseFetchOptions } from "#app";
 import type { Game, GameDetail, GameId, GetGameListParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
 
 export async function useApiGetTournamentList() {

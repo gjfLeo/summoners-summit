@@ -55,6 +55,10 @@ async function create(params: { stageIndex: number; partIndex: number; matchInde
 
   visible.value = true;
 };
+async function edit(params: MatchSaveParams) {
+  match.value = params;
+  visible.value = true;
+}
 
 defineExpose({
   create,
