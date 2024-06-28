@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import fs from "node:fs/promises";
 import tournamentsRaw from "./tournaments";
 import { playerNicknameMap } from "./players";
 import playerRanks from "./players/rank";
@@ -261,6 +262,13 @@ function loadPlayerRank({ nickname, score }: { nickname: string; score: number }
   }
 }
 playerRanks.forEach(loadPlayerRank);
+
+// fs.writeFile("../summoners-summit-v3/server/data/old/tournamentById.json", JSON.stringify(tournamentById));
+// fs.writeFile("../summoners-summit-v3/server/data/old/matchById.json", JSON.stringify(matchById));
+// fs.writeFile("../summoners-summit-v3/server/data/old/gameById.json", JSON.stringify(gameById));
+// fs.writeFile("../summoners-summit-v3/server/data/old/deckById.json", JSON.stringify(deckById));
+// fs.writeFile("../summoners-summit-v3/server/data/old/playerById.json", JSON.stringify(playerById));
+// fs.writeFile("../summoners-summit-v3/server/data/old/playerRedirect.json", JSON.stringify(playerNicknameMap));
 
 export {
   tournamentById,
