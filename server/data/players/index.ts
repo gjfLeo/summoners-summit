@@ -139,6 +139,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "霉逼酱": "可可酱",
   "Keloni~": "一簇西语",
   "星莹Sweet.Rain": "千折以奉",
+  "…": "...",
   
   
 
