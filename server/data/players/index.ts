@@ -108,7 +108,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "懒烂岚": "｜蓝兰岚｜",
   "哀酱从小就可爱": "Sherry",
   "古月方源": "春秋蝉",
-  "冰红茶心甘晴愿": "冰红茶|荧",
+  "冰红茶|荧": "冰红茶心甘晴愿",
   "幸运": "夭九",
   "浅冽": "鱼儿化音的迷妹",
   "偶尔来打牌": "某七圣召唤选手",
@@ -127,7 +127,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "纳西妲入我怀": "净善宫的男主人",
   "光熙": "TianJam",
   "爱酱单推人": "路过的诡法师",
-  "吃掉一只萌酱": "魈宝我老公！",
+  "魈宝我老公！": "吃掉一只萌酱",
   "蓝雨の迷妹": "清弦",
   "雀鲨": "雀巢脆脆鲨",
   "噗沥嘶逼开尔否": "饕笔",
@@ -139,6 +139,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "霉逼酱": "可可酱",
   "Keloni~": "一簇西语",
   "星莹Sweet.Rain": "千折以奉",
+  
   
 
   
