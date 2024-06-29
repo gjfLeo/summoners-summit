@@ -904,6 +904,7 @@ export default defineTournament({
             {
               playerA: "诗和远方1666",
               playerB: "不浪浪浪",
+              video: "https://www.bilibili.com/video/BV16M4m1m7TQ",
               banned: [
                 {
                   playerACharacters: ["圣骸毒蝎", "圣骸飞蛇", "吞星之鲸"],
@@ -1153,6 +1154,7 @@ export default defineTournament({
             {
               playerA: "吟风咏月",
               playerB: "木瓜豆腐",
+              video: "https://www.bilibili.com/video/BV1mz421B7Qh",
               games: [
                 {
                   playerACharacters: ["莱欧斯利", "芙宁娜", "深渊使徒·激流"],
