@@ -379,6 +379,7 @@ export default defineTournament({
             {
               playerA: "星莹Sweet.Rain",
               playerB: "轮舞曲",
+              video: "https://www.bilibili.com/video/BV1nw4m1e7ma",
               banned: [
                 {
                   playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
