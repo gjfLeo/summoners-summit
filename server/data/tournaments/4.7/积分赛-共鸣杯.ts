@@ -335,6 +335,85 @@ export default defineTournament({
             },
           ],
         },
+        {
+          name: "DAY2",
+          date: "2024-06-26",
+          matches: [
+            {
+              playerA: "小心海王",
+              playerB: "Sept",
+              video: "https://www.bilibili.com/video/BV1Km421G7o5",
+              banned: [
+                {
+                  playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                  playerBCharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "早柚", "重云"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "魈", "夜兰"],
+                  playerBCharacters: ["久岐忍", "绮良良", "深渊使徒·激流"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["芙宁娜", "莱欧斯利", "深渊使徒·激流"],
+                  playerBCharacters: ["申鹤", "魈", "夜兰"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莫娜", "早柚", "重云"],
+                  playerBCharacters: ["久岐忍", "绮良良", "深渊使徒·激流"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
+            {
+              playerA: "星莹Sweet.Rain",
+              playerB: "轮舞曲",
+              banned: [
+                {
+                  playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                  playerBCharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["申鹤", "魈", "夜兰"],
+                  playerBCharacters: ["申鹤", "魈", "夜兰"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["申鹤", "魈", "夜兰"],
+                  playerBCharacters: ["芙宁娜", "莱欧斯利", "深渊使徒·激流"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["深渊使徒·激流", "芙宁娜", "莱欧斯利"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["申鹤", "魈", "夜兰"],
+                  playerBCharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  starter: "B",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
