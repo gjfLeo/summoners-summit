@@ -494,5 +494,64 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numGames: 7,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-06-29",
+          matches: [
+            {
+              playerA: "玖哀",
+              playerB: "轮舞曲",
+              banned: [
+                {
+                  playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                  playerBCharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["深渊使徒·激流", "早柚", "重云"],
+                  playerBCharacters: ["林尼", "珐露珊", "琳妮特"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["申鹤", "魈", "夜兰"],
+                  playerBCharacters: ["芙宁娜", "莱欧斯利", "深渊使徒·激流"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  playerBCharacters: ["林尼", "珐露珊", "琳妮特"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["无相之冰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["无相之冰", "雷音权现", "「女士」"],
+                  playerBCharacters: ["芙宁娜", "莱欧斯利", "深渊使徒·激流"],
+                  starter: "B",
+                  winner: "A",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
