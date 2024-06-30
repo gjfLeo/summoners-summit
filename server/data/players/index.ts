@@ -141,6 +141,8 @@ const playerNicknameMapRaw: Record<string, string> = {
   "星莹Sweet.Rain": "千折以奉",
   "…": "...",
   "...": "点点点",
+  "LL吟风咏月": "吟风咏月",
+  
   
   
   
