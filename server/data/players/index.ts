@@ -142,6 +142,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "…": "...",
   "...": "点点点",
   "LL吟风咏月": "吟风咏月",
+  "棉袜乃莉塔": "届不到的莉芭芭",
   
   
   
