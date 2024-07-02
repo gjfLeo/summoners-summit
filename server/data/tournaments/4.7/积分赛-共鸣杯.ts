@@ -433,6 +433,7 @@ export default defineTournament({
             {
               playerA: "玖哀",
               playerB: "晓夜blite",
+              video: "https://www.bilibili.com/video/BV19i421e7An",
               banned: [
                 {
                   playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
@@ -463,6 +464,7 @@ export default defineTournament({
             {
               playerA: "小心海王",
               playerB: "轮舞曲",
+              video: "https://www.bilibili.com/video/BV13z421z7Un",
               banned: [
                 {
                   playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
@@ -509,7 +511,7 @@ export default defineTournament({
           matches: [
             {
               playerA: "玖哀",
-              playerB: "轮舞曲",
+              playerB: "轮舞曲",            
               banned: [
                 {
                   playerACharacters: ["圣骸飞蛇", "圣骸毒蝎", "吞星之鲸"],
