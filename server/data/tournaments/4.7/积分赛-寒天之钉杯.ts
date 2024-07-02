@@ -20,7 +20,7 @@ export default defineTournament({
           date: "2024-06-26",
           matches: [
             {
-              playerA: "诗与远方1666",
+              playerA: "诗和远方1666",
               playerB: "磬风揽月",
               video: "https://www.bilibili.com/video/BV1vi421e7sD",
               banned: [
