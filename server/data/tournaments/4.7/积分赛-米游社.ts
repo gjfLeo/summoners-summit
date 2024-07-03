@@ -132,7 +132,7 @@ export default defineTournament({
           date: "2024-07-28",
           matches: [
             {
-              playerA: " 吃掉一只萌酱",
+              playerA: "吃掉一只萌酱",
               playerB: "袭人",
               video: "https://www.bilibili.com/video/BV1jy411z7EU?p=2",
               banned: [
