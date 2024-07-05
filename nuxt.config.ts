@@ -86,4 +86,6 @@ export default defineNuxtConfig({
       defaultSFCLang: "yaml",
     },
   },
+
+  compatibilityDate: "2024-07-03",
 });
