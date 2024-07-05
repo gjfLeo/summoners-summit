@@ -129,7 +129,7 @@ export default defineTournament({
         },
         {
           name: "DAY2",
-          date: "2024-07-28",
+          date: "2024-06-28",
           matches: [
             {
               playerA: "吃掉一只萌酱",
