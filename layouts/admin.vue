@@ -1,3 +1,9 @@
+<template>
+  <SiteLayout :routes="routes" :style="{ '--g-header-color': adminColor }">
+    <slot />
+  </SiteLayout>
+</template>
+
 <script lang="ts" setup>
 import type { SiteRoute } from "~/composables/use-site-menu";
 
@@ -62,9 +68,3 @@ const routes: SiteRoute[] = [
 const themeVars = useThemeVars();
 const adminColor = computed(() => `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 16%)`);
 </script>
-
-<template>
-  <SiteLayout :routes="routes" :style="{ '--g-header-color': adminColor }">
-    <slot />
-  </SiteLayout>
-</template>

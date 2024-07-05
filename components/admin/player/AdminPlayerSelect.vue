@@ -1,3 +1,16 @@
+<template>
+  <NSelect
+    v-model:value="playerId"
+    :options="options"
+
+    clearable filterable
+    :filter="selectFilter"
+    :render-tag="renderTag"
+    :render-label="renderLabel"
+    :placeholder="placeholderOverride"
+  />
+</template>
+
 <script lang="tsx" setup>
 import Pinyin from "pinyin-match";
 import type { SelectRenderLabel, SelectRenderTag } from "naive-ui";
@@ -86,16 +99,3 @@ const placeholderOverride = computed(() => {
   return props.placeholder;
 });
 </script>
-
-<template>
-  <NSelect
-    v-model:value="playerId"
-    :options="options"
-
-    clearable filterable
-    :filter="selectFilter"
-    :render-tag="renderTag"
-    :render-label="renderLabel"
-    :placeholder="placeholderOverride"
-  />
-</template>

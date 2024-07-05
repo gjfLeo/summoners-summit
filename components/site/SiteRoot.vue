@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import { dateZhCN, enUS, zhCN } from "naive-ui";
-import { themeOverridesShared } from "@/config/theme";
-
-const { locale } = useLocales();
-const naiveLocale = computed(() => {
-  return locale.value === "zh" ? zhCN : enUS;
-});
-</script>
-
 <template>
   <!-- <VitePwaManifest /> -->
   <NaiveConfig
@@ -24,3 +14,13 @@ const naiveLocale = computed(() => {
     </NLoadingBarProvider>
   </NaiveConfig>
 </template>
+
+<script setup lang="ts">
+import { dateZhCN, enUS, zhCN } from "naive-ui";
+import { themeOverridesShared } from "@/config/theme";
+
+const { locale } = useLocales();
+const naiveLocale = computed(() => {
+  return locale.value === "zh" ? zhCN : enUS;
+});
+</script>

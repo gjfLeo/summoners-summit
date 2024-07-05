@@ -1,3 +1,77 @@
+<template>
+  <NH2 id="title" un-flex="~ gap-4">
+    <span>{{ t('admin.tournament.title') }}</span>
+    <div class="ml-auto">
+      <template v-if="!editing">
+        <CommonIconButton icon="i-carbon:edit" @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
+      </template>
+      <template v-else>
+        <CommonIconButton icon="i-carbon:save" @click="save">{{ t('admin.action.save') }}</CommonIconButton>
+      </template>
+    </div>
+  </NH2>
+
+  <CommonTransition>
+    <NForm v-if="editing" ref="formRef" :rules="rules" :model="tournament">
+      <NGrid class="gap-2!">
+        <NFormItemGi :span="24" :label="t('main.tournament.name')" path="name">
+          <NInputLocale v-model:value="tournament.name" />
+        </NFormItemGi>
+        <NFormItemGi :span="6" :label="t('terms.gameVersion')" path="gameVersion">
+          <GameVersionSelect v-model:value="tournament.gameVersion" />
+        </NFormItemGi>
+        <NFormItemGi :span="6" :label="t('main.tournament.type')" path="type">
+          <AdminTournamentTypeSelect v-model:value="tournament.type" />
+        </NFormItemGi>
+      </NGrid>
+    </NForm>
+    <NDescriptions v-else label-placement="left" :column="1" separator="&emsp;">
+      <NDescriptionsItem :label="t('main.tournament.name')">{{ tournament.name.zh }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
+    </NDescriptions>
+  </CommonTransition>
+
+  <TransitionGroup name="common-transition-group">
+    <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
+      <AdminTournamentStageForm
+        ref="stageFormRefs"
+        v-model="tournament.stages[stageIndex]"
+        :editing="editing"
+        :stage-index="stageIndex"
+        @delete="tournament.stages.splice(stageIndex, 1)"
+      />
+    </template>
+
+    <NButton
+      v-if="editing" :key="-1"
+      class="mt w-full" dashed
+      @click="addStage"
+    >
+      <template #icon><div class="i-carbon-add" /></template>
+      <template #default>{{ t('admin.tournament.addStage') }}</template>
+    </NButton>
+  </TransitionGroup>
+
+  <NFloatButton
+    v-if="!editing"
+    type="primary"
+    right="2rem" bottom="2rem"
+    @click="editing = true"
+  >
+    <div class="i-carbon:edit" />
+  </NFloatButton>
+  <NFloatButton
+    v-if="editing"
+    type="primary"
+    right="2rem" bottom="2rem"
+    @click="save"
+  >
+    <div class="i-carbon:save" />
+  </NFloatButton>
+  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save', tournament.id)" />
+</template>
+
 <script lang="ts" setup>
 import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { AdminTournamentStageForm, NForm } from "#components";
@@ -85,77 +159,3 @@ function addStage() {
 const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
 provide("matchEditor", matchEditor);
 </script>
-
-<template>
-  <NH2 id="title" un-flex="~ gap-4">
-    <span>{{ t('admin.tournament.title') }}</span>
-    <div class="ml-auto">
-      <template v-if="!editing">
-        <CommonIconButton icon="i-carbon:edit" @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
-      </template>
-      <template v-else>
-        <CommonIconButton icon="i-carbon:save" @click="save">{{ t('admin.action.save') }}</CommonIconButton>
-      </template>
-    </div>
-  </NH2>
-
-  <CommonTransition>
-    <NForm v-if="editing" ref="formRef" :rules="rules" :model="tournament">
-      <NGrid class="gap-2!">
-        <NFormItemGi :span="24" :label="t('main.tournament.name')" path="name">
-          <NInputLocale v-model:value="tournament.name" />
-        </NFormItemGi>
-        <NFormItemGi :span="6" :label="t('terms.gameVersion')" path="gameVersion">
-          <GameVersionSelect v-model:value="tournament.gameVersion" />
-        </NFormItemGi>
-        <NFormItemGi :span="6" :label="t('main.tournament.type')" path="type">
-          <AdminTournamentTypeSelect v-model:value="tournament.type" />
-        </NFormItemGi>
-      </NGrid>
-    </NForm>
-    <NDescriptions v-else label-placement="left" :column="1" separator="&emsp;">
-      <NDescriptionsItem :label="t('main.tournament.name')">{{ tournament.name.zh }}</NDescriptionsItem>
-      <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
-      <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
-    </NDescriptions>
-  </CommonTransition>
-
-  <TransitionGroup name="common-transition-group">
-    <template v-for="(stage, stageIndex) in tournament.stages" :key="stage._key">
-      <AdminTournamentStageForm
-        ref="stageFormRefs"
-        v-model="tournament.stages[stageIndex]"
-        :editing="editing"
-        :stage-index="stageIndex"
-        @delete="tournament.stages.splice(stageIndex, 1)"
-      />
-    </template>
-
-    <NButton
-      v-if="editing" :key="-1"
-      class="mt w-full" dashed
-      @click="addStage"
-    >
-      <template #icon><div class="i-carbon-add" /></template>
-      <template #default>{{ t('admin.tournament.addStage') }}</template>
-    </NButton>
-  </TransitionGroup>
-
-  <NFloatButton
-    v-if="!editing"
-    type="primary"
-    right="2rem" bottom="2rem"
-    @click="editing = true"
-  >
-    <div class="i-carbon:edit" />
-  </NFloatButton>
-  <NFloatButton
-    v-if="editing"
-    type="primary"
-    right="2rem" bottom="2rem"
-    @click="save"
-  >
-    <div class="i-carbon:save" />
-  </NFloatButton>
-  <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save', tournament.id)" />
-</template>

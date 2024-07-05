@@ -1,38 +1,3 @@
-<script lang="ts" setup>
-import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId } from "~/types/data";
-
-definePageMeta({ title: "site.titles.admin.tournaments" });
-
-const { tournaments } = await useApiGetTournamentList();
-const { gameVersionList } = useSharedData();
-
-const bySeason = computed(() => {
-  const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};
-  tournaments.value.forEach((tournament) => {
-    const gameVersionId = tournament.gameVersion;
-    const gameVersion = gameVersionList.value.find(v => v.id === gameVersionId);
-    if (!gameVersion) {
-      return;
-    }
-    const season = gameVersion.seasonPhrase.split(".")[0];
-    if (!bySeason[season]) bySeason[season] = {};
-    if (!bySeason[season][gameVersionId]) bySeason[season][gameVersionId] = [];
-    bySeason[season][gameVersionId].push(tournament);
-  });
-  return bySeason;
-});
-const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
-
-const router = useRouter();
-const localePath = useLocalePath();
-function handleAdd() {
-  router.push(localePath("/admin/tournament"));
-}
-function handleItemClick(tournamentId: TournamentId) {
-  router.push(localePath(`/admin/tournament/${tournamentId}`));
-}
-</script>
-
 <template>
   <div>
     <template v-for="season in seasons" :key="season">
@@ -68,3 +33,38 @@ function handleItemClick(tournamentId: TournamentId) {
     </SitePageAnchors>
   </div>
 </template>
+
+<script lang="ts" setup>
+import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId } from "~/types/data";
+
+definePageMeta({ title: "site.titles.admin.tournaments" });
+
+const { tournaments } = await useApiGetTournamentList();
+const { gameVersionList } = useSharedData();
+
+const bySeason = computed(() => {
+  const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};
+  tournaments.value.forEach((tournament) => {
+    const gameVersionId = tournament.gameVersion;
+    const gameVersion = gameVersionList.value.find(v => v.id === gameVersionId);
+    if (!gameVersion) {
+      return;
+    }
+    const season = gameVersion.seasonPhrase.split(".")[0];
+    if (!bySeason[season]) bySeason[season] = {};
+    if (!bySeason[season][gameVersionId]) bySeason[season][gameVersionId] = [];
+    bySeason[season][gameVersionId].push(tournament);
+  });
+  return bySeason;
+});
+const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
+
+const router = useRouter();
+const localePath = useLocalePath();
+function handleAdd() {
+  router.push(localePath("/admin/tournament"));
+}
+function handleItemClick(tournamentId: TournamentId) {
+  router.push(localePath(`/admin/tournament/${tournamentId}`));
+}
+</script>

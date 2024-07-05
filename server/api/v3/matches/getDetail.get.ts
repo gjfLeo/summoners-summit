@@ -9,5 +9,11 @@ const ZParams = z.object({
 export default defineEventHandler(async (event) => {
   const params = await getValidatedQuery(event, ZParams.parse);
 
-  getMatchDetail(params.id);
+  const detail = getMatchDetail(params.id);
+
+  if (!detail) {
+    return responseErrorCode(errorCodes.MATCH_NOT_FOUND);
+  }
+
+  return responseData({ match: detail });
 });

@@ -1,3 +1,18 @@
+<template>
+  <NButton
+    text
+    :style="style"
+    :focusable="false"
+  >
+    <template #icon>
+      <div :class="icon" />
+    </template>
+    <template #default>
+      <slot />
+    </template>
+  </NButton>
+</template>
+
 <script lang="ts" setup>
 const props = defineProps<{
   icon: string;
@@ -31,18 +46,3 @@ const style = computed(() => {
   return style;
 });
 </script>
-
-<template>
-  <NButton
-    text
-    :style="style"
-    :focusable="false"
-  >
-    <template #icon>
-      <div :class="icon" />
-    </template>
-    <template #default>
-      <slot />
-    </template>
-  </NButton>
-</template>

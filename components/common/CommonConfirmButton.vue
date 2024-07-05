@@ -1,13 +1,3 @@
-<script lang="ts" setup>
-defineProps<{
-  text: string;
-}>();
-
-defineEmits<{
-  (e: "click"): void;
-}>();
-</script>
-
 <template>
   <NPopover
     trigger="click"
@@ -22,3 +12,13 @@ defineEmits<{
     </template>
   </NPopover>
 </template>
+
+<script lang="ts" setup>
+defineProps<{
+  text: string;
+}>();
+
+defineEmits<{
+  (e: "click"): void;
+}>();
+</script>

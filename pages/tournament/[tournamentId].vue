@@ -1,12 +1,3 @@
-<script lang="ts" setup>
-const route = useRoute("tournament-tournamentId___zh");
-const tournamentId = route.params.tournamentId;
-
-const { t, currentLocalized } = useLocales();
-
-const { tournament, matches, games } = await useApiGetTournament({ id: tournamentId });
-</script>
-
 <template>
   <div v-if="tournament">
     <NH1 :id="currentLocalized(tournament.name)" un-flex="~ items-end">
@@ -71,3 +62,12 @@ const { tournament, matches, games } = await useApiGetTournament({ id: tournamen
     </SitePageAnchors>
   </div>
 </template>
+
+<script lang="ts" setup>
+const route = useRoute("tournament-tournamentId___zh");
+const tournamentId = route.params.tournamentId;
+
+const { t, currentLocalized } = useLocales();
+
+const { tournament, matches, games } = await useApiGetTournament({ id: tournamentId });
+</script>

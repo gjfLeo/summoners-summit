@@ -10,4 +10,10 @@ export default gjfleo(
       "no-irregular-whitespace": "off",
     },
   },
+  {
+    files: ["server/data/old/*.json"],
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
 );

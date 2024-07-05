@@ -1,11 +1,3 @@
-<script lang="ts" setup>
-const route = useRoute();
-
-const isDev = import.meta.env.DEV;
-
-const { t } = useLocales();
-</script>
-
 <template>
   <template v-if="isDev">
     <template v-if="route.meta.layout === 'admin'">
@@ -26,3 +18,11 @@ const { t } = useLocales();
     </template>
   </template>
 </template>
+
+<script lang="ts" setup>
+const route = useRoute();
+
+const isDev = import.meta.env.DEV;
+
+const { t } = useLocales();
+</script>

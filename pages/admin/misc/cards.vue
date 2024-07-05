@@ -1,24 +1,3 @@
-<script lang="ts" setup>
-const { t } = useLocales();
-const message = useMessage();
-
-const {
-  characterCardIds,
-  actionCardIds,
-  fetchCardData,
-  fetchGameVersionData,
-} = useSharedData();
-
-async function updateData() {
-  await $fetch("/api/v3/cards/updateData");
-  message.success(t("admin.message.SUCCESS"));
-  return Promise.all([
-    fetchCardData(),
-    fetchGameVersionData(),
-  ]);
-}
-</script>
-
 <template>
   <div un-flex="~ col gap-4">
     <div>
@@ -50,3 +29,24 @@ async function updateData() {
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const { t } = useLocales();
+const message = useMessage();
+
+const {
+  characterCardIds,
+  actionCardIds,
+  fetchCardData,
+  fetchGameVersionData,
+} = useSharedData();
+
+async function updateData() {
+  await $fetch("/api/v3/cards/updateData");
+  message.success(t("admin.message.SUCCESS"));
+  return Promise.all([
+    fetchCardData(),
+    fetchGameVersionData(),
+  ]);
+}
+</script>

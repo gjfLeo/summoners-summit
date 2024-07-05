@@ -1,3 +1,30 @@
+<template>
+  <NModal
+    v-model:show="visible"
+    preset="dialog" :show-title="false" :show-icon="false"
+    :closable="false" :mask-closable="false"
+    style="width: 40vw"
+  >
+    <template #default>
+      <NForm label-placement="left" label-width="auto">
+        <NFormItem label="视频地址">
+          <NInput v-model:value.trim="value" placeholder="请输入视频链接" />
+        </NFormItem>
+        <NFormItem label="精确至分P">
+          <NSwitch
+            :value="canHasBilibiliPart && hasPart" :disabled="!canHasBilibiliPart"
+            @update:value="hasPart = $event"
+          />
+        </NFormItem>
+      </NForm>
+    </template>
+    <template #action>
+      <NButton type="primary" secondary @click="confirm">确定</NButton>
+      <NButton secondary @click="cancel">取消</NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 const message = useMessage();
 
@@ -48,30 +75,3 @@ const canHasBilibiliPart = computed(() => {
   return value.value?.includes("www.bilibili.com") && value.value?.includes("p=");
 });
 </script>
-
-<template>
-  <NModal
-    v-model:show="visible"
-    preset="dialog" :show-title="false" :show-icon="false"
-    :closable="false" :mask-closable="false"
-    style="width: 40vw"
-  >
-    <template #default>
-      <NForm label-placement="left" label-width="auto">
-        <NFormItem label="视频地址">
-          <NInput v-model:value.trim="value" placeholder="请输入视频链接" />
-        </NFormItem>
-        <NFormItem label="精确至分P">
-          <NSwitch
-            :value="canHasBilibiliPart && hasPart" :disabled="!canHasBilibiliPart"
-            @update:value="hasPart = $event"
-          />
-        </NFormItem>
-      </NForm>
-    </template>
-    <template #action>
-      <NButton type="primary" secondary @click="confirm">确定</NButton>
-      <NButton secondary @click="cancel">取消</NButton>
-    </template>
-  </NModal>
-</template>

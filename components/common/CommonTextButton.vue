@@ -1,3 +1,14 @@
+<template>
+  <NText
+    :type="type" :depth="depth"
+    :style="style"
+    :focusable="false"
+    class="cursor-pointer"
+  >
+    <slot>{{ text }}</slot>
+  </NText>
+</template>
+
 <script lang="ts" setup>
 const props = defineProps<{
   primary?: boolean;
@@ -23,14 +34,3 @@ const style = computed(() => {
   };
 });
 </script>
-
-<template>
-  <NText
-    :type="type" :depth="depth"
-    :style="style"
-    :focusable="false"
-    class="cursor-pointer"
-  >
-    <slot>{{ text }}</slot>
-  </NText>
-</template>

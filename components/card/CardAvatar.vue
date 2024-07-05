@@ -1,3 +1,13 @@
+<template>
+  <NImage
+    class="aspect-[1/1] w-8 rounded-full"
+    :src="src"
+    :alt="cardInfo?.name[locale]"
+    :title="cardInfo?.name[locale]"
+    preview-disabled
+  />
+</template>
+
 <script lang="ts" setup>
 import type { CardId } from "~/types/data";
 
@@ -20,13 +30,3 @@ const src = computed(() => {
   return getImageUrl(`${cardInfoValue.name.en} TCG Avatar Icon.png`);
 });
 </script>
-
-<template>
-  <NImage
-    class="aspect-[1/1] w-8 rounded-full"
-    :src="src"
-    :alt="cardInfo?.name[locale]"
-    :title="cardInfo?.name[locale]"
-    preview-disabled
-  />
-</template>

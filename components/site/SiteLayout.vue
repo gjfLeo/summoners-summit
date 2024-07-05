@@ -1,11 +1,3 @@
-<script lang="ts" setup>
-import type { SiteRoute } from "~/composables/use-site-menu";
-
-defineProps<{
-  routes: SiteRoute[];
-}>();
-</script>
-
 <template>
   <NLayout>
     <SiteHeader
@@ -36,6 +28,14 @@ defineProps<{
     </NLayout>
   </NLayout>
 </template>
+
+<script lang="ts" setup>
+import type { SiteRoute } from "~/composables/use-site-menu";
+
+defineProps<{
+  routes: SiteRoute[];
+}>();
+</script>
 
 <style scoped>
 :deep(.side-scroll) .n-scrollbar-rail {

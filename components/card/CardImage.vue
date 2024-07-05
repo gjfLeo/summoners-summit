@@ -1,3 +1,13 @@
+<template>
+  <NImage
+    class="aspect-[7/12]"
+    :src="src"
+    :alt="cardInfo.name[locale]"
+    :title="cardInfo.name[locale]"
+    preview-disabled
+  />
+</template>
+
 <script lang="ts" setup>
 import type { CardId, CardInfo } from "~/types/data";
 
@@ -26,13 +36,3 @@ const src = computed(() => {
   return getImageUrl(wikiaFilename.value);
 });
 </script>
-
-<template>
-  <NImage
-    class="aspect-[7/12]"
-    :src="src"
-    :alt="cardInfo.name[locale]"
-    :title="cardInfo.name[locale]"
-    preview-disabled
-  />
-</template>

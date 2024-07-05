@@ -1,13 +1,3 @@
-<script lang="ts" setup>
-import type { TournamentDetailBrief } from "~/types/data";
-
-defineProps<{
-  tournament: TournamentDetailBrief;
-}>();
-
-const { currentLocalized, t } = useLocales();
-</script>
-
 <template>
   <NCard :title="currentLocalized(tournament.name)" hoverable class="h-full cursor-pointer">
     <template #default>
@@ -26,6 +16,16 @@ const { currentLocalized, t } = useLocales();
     </template>
   </NCard>
 </template>
+
+<script lang="ts" setup>
+import type { TournamentDetailBrief } from "~/types/data";
+
+defineProps<{
+  tournament: TournamentDetailBrief;
+}>();
+
+const { currentLocalized, t } = useLocales();
+</script>
 
 <style scoped>
 .tournament-dl {

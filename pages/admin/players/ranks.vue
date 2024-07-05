@@ -1,3 +1,35 @@
+<template>
+  <NSpin :show="pending">
+    <NTabs
+      v-model:value="rankId"
+      type="card"
+      placement="left"
+      tab-style="justify-content: center"
+      class="h-content"
+    >
+      <NTabPane
+        name="add"
+        :tab="() => h('div', { class: 'i-carbon:add' })"
+      >
+        <AdminRanksImport @done="handleImportDone" />
+      </NTabPane>
+      <NTabPane
+        v-for="id in rankIds" :key="id"
+        :name="id"
+        :tab="id"
+      >
+        <NDataTable
+          :data="ranks?.ranks"
+          :columns="columns"
+          :loading="ranksLoading"
+          flex-height
+          class="h-full"
+        />
+      </NTabPane>
+    </NTabs>
+  </NSpin>
+</template>
+
 <script lang="ts" setup>
 import type { Ranks } from "~/types/data";
 
@@ -47,35 +79,3 @@ async function handleImportDone(id: string) {
   rankId.value = id;
 }
 </script>
-
-<template>
-  <NSpin :show="pending">
-    <NTabs
-      v-model:value="rankId"
-      type="card"
-      placement="left"
-      tab-style="justify-content: center"
-      class="h-content"
-    >
-      <NTabPane
-        name="add"
-        :tab="() => h('div', { class: 'i-carbon:add' })"
-      >
-        <AdminRanksImport @done="handleImportDone" />
-      </NTabPane>
-      <NTabPane
-        v-for="id in rankIds" :key="id"
-        :name="id"
-        :tab="id"
-      >
-        <NDataTable
-          :data="ranks?.ranks"
-          :columns="columns"
-          :loading="ranksLoading"
-          flex-height
-          class="h-full"
-        />
-      </NTabPane>
-    </NTabs>
-  </NSpin>
-</template>

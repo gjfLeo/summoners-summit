@@ -1,11 +1,3 @@
-<script lang="ts" setup>
-import type { Locales } from "~/types/data";
-
-const value = defineModel<Partial<Record<Locales, string>>>("value", { required: true });
-
-const i18nVisible = ref(false);
-</script>
-
 <template>
   <div class="w-full">
     <NInput v-bind="$attrs" v-model:value="value.zh">
@@ -35,3 +27,11 @@ const i18nVisible = ref(false);
     </NModal>
   </div>
 </template>
+
+<script lang="ts" setup>
+import type { Locales } from "~/types/data";
+
+const value = defineModel<Partial<Record<Locales, string>>>("value", { required: true });
+
+const i18nVisible = ref(false);
+</script>

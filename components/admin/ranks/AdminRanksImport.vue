@@ -1,3 +1,29 @@
+<template>
+  <div class="min-h-full" un-flex="~ col gap-4">
+    <div un-flex="~ gap-2">
+      <AdminRanksImportFromTable @done="importRanks($event, true)" />
+      <AdminRanksImportFromJson @done="importRanks($event, false)" />
+      <div class="ml-auto" />
+      <NFormItem
+        ref="idRef"
+        :show-label="false" :show-feedback="false"
+        :rule="idRule"
+        :placeholder="t('terms.gameVersion')"
+      >
+        <NInput v-model:value="id" />
+      </NFormItem>
+      <NButton secondary type="primary" @click="submit">{{ t("admin.action.submit") }}</NButton>
+    </div>
+    <NDataTable
+      ref="tableRef"
+      :data="ranks"
+      :columns="columns"
+      flex-height
+      class="flex-table flex-basis-none"
+    />
+  </div>
+</template>
+
 <script lang="ts" setup>
 import type { ValidateError } from "async-validator";
 import { NButton, NDataTable, NFormItem, NInput } from "#components";
@@ -127,29 +153,3 @@ async function submit() {
   emit("done", id.value);
 }
 </script>
-
-<template>
-  <div class="min-h-full" un-flex="~ col gap-4">
-    <div un-flex="~ gap-2">
-      <AdminRanksImportFromTable @done="importRanks($event, true)" />
-      <AdminRanksImportFromJson @done="importRanks($event, false)" />
-      <div class="ml-auto" />
-      <NFormItem
-        ref="idRef"
-        :show-label="false" :show-feedback="false"
-        :rule="idRule"
-        :placeholder="t('terms.gameVersion')"
-      >
-        <NInput v-model:value="id" />
-      </NFormItem>
-      <NButton secondary type="primary" @click="submit">{{ t("admin.action.submit") }}</NButton>
-    </div>
-    <NDataTable
-      ref="tableRef"
-      :data="ranks"
-      :columns="columns"
-      flex-height
-      class="flex-table flex-basis-none"
-    />
-  </div>
-</template>

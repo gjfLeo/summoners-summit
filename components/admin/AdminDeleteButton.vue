@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-defineEmits<{
-  (e: "confirm"): void;
-}>();
-</script>
-
 <template>
   <NPopconfirm
     :positive-button-props="{ size: 'tiny', type: 'error' }"
@@ -29,3 +23,9 @@ defineEmits<{
     </template>
   </NPopconfirm>
 </template>
+
+<script lang="ts" setup>
+defineEmits<{
+  (e: "confirm"): void;
+}>();
+</script>

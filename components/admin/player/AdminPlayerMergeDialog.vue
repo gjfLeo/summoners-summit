@@ -1,3 +1,28 @@
+<template>
+  <NModal
+    v-model:show="visible"
+    preset="dialog"
+    :title="t('admin.player.mergePlayerData')"
+    :show-icon="false"
+  >
+    <NForm
+      ref="formRef" :model="form" :rules="formRules"
+      :show-require-mark="false"
+    >
+      <NFormItem :label="t('admin.player.mergeSourceLabel')" path="sourceId">
+        <AdminPlayerSelect v-model:value="form.sourceId" :players="players" />
+      </NFormItem>
+      <NFormItem :label="t('admin.player.mergeTargetLabel')" path="targetId">
+        <AdminPlayerSelect v-model:value="form.targetId" :players="players" />
+      </NFormItem>
+    </NForm>
+    <template #action>
+      <NButton secondary type="primary" @click="submit">{{ t("admin.action.submit") }}</NButton>
+      <NButton secondary @click="visible = false">{{ t("admin.action.cancel") }}</NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 import { NForm } from "#components";
 import type { Player } from "~/types/data";
@@ -71,28 +96,3 @@ async function submit() {
 
 defineExpose({ show });
 </script>
-
-<template>
-  <NModal
-    v-model:show="visible"
-    preset="dialog"
-    :title="t('admin.player.mergePlayerData')"
-    :show-icon="false"
-  >
-    <NForm
-      ref="formRef" :model="form" :rules="formRules"
-      :show-require-mark="false"
-    >
-      <NFormItem :label="t('admin.player.mergeSourceLabel')" path="sourceId">
-        <AdminPlayerSelect v-model:value="form.sourceId" :players="players" />
-      </NFormItem>
-      <NFormItem :label="t('admin.player.mergeTargetLabel')" path="targetId">
-        <AdminPlayerSelect v-model:value="form.targetId" :players="players" />
-      </NFormItem>
-    </NForm>
-    <template #action>
-      <NButton secondary type="primary" @click="submit">{{ t("admin.action.submit") }}</NButton>
-      <NButton secondary @click="visible = false">{{ t("admin.action.cancel") }}</NButton>
-    </template>
-  </NModal>
-</template>

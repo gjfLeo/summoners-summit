@@ -1,3 +1,16 @@
+<template>
+  <NSelect
+    v-model:value="tournamentType"
+    :options="options"
+    :loading="options.length === 0"
+    :fallback-option="false"
+    filterable
+    :placeholder="t('main.tournament.type')"
+    clearable
+    v-bind="$attrs"
+  />
+</template>
+
 <script lang="ts" setup>
 const { tournamentTypeList } = useSharedData();
 const { t } = useLocales();
@@ -11,16 +24,3 @@ const options = computed<SelectOption[]>(() => {
   }));
 });
 </script>
-
-<template>
-  <NSelect
-    v-model:value="tournamentType"
-    :options="options"
-    :loading="options.length === 0"
-    :fallback-option="false"
-    filterable
-    :placeholder="t('main.tournament.type')"
-    clearable
-    v-bind="$attrs"
-  />
-</template>

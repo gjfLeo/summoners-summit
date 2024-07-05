@@ -1,12 +1,3 @@
-<script lang="ts" setup>
-import type { Game, GameId, Match } from "~/types";
-
-defineProps<{
-  match: Match;
-  games: Record<GameId, Game>;
-}>();
-</script>
-
 <template>
   <div un-grid="~ lg:cols-3 md:cols-2 row-gap-4 col-gap-4">
     <template v-for="(ban, banIndex) in match.bans ?? []" :key="banIndex">
@@ -83,6 +74,15 @@ defineProps<{
     </template>
   </div>
 </template>
+
+<script lang="ts" setup>
+import type { Game, GameId, Match } from "~/types";
+
+defineProps<{
+  match: Match;
+  games: Record<GameId, Game>;
+}>();
+</script>
 
 <style scoped>
 .game-card:not(:hover) .video {

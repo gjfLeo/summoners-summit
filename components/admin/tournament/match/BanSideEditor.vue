@@ -1,3 +1,19 @@
+<template>
+  <div un-flex="~ items-center justify-center gap-2">
+    <div un-flex="~ gap-1">
+      <template v-for="i in 3" :key="i">
+        <CharacterCardSelector
+          :ref="bindInputCharacterRef(i - 1)"
+          v-model="cardIds[i - 1]"
+          @update:model-value="handleCharacterSelected(i - 1)"
+        />
+      </template>
+    </div>
+    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
+    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
+  </div>
+</template>
+
 <script lang="ts" setup>
 import type { CardId } from "~/types/data";
 import {
@@ -47,19 +63,3 @@ async function pasteDeck() {
   }
 }
 </script>
-
-<template>
-  <div un-flex="~ items-center justify-center gap-2">
-    <div un-flex="~ gap-1">
-      <template v-for="i in 3" :key="i">
-        <CharacterCardSelector
-          :ref="bindInputCharacterRef(i - 1)"
-          v-model="cardIds[i - 1]"
-          @update:model-value="handleCharacterSelected(i - 1)"
-        />
-      </template>
-    </div>
-    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
-    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
-  </div>
-</template>

@@ -1,3 +1,13 @@
+<template>
+  <NAutoComplete
+    ref="autoCompleteRef"
+    v-model:value="inputValue"
+    :options="options"
+    :render-label="renderLabel"
+    :placeholder="t('terms.actionCards')"
+  />
+</template>
+
 <script lang="ts" setup>
 import PinyinMatch from "pinyin-match";
 import { CardImage, NAutoComplete, NText } from "#components";
@@ -47,13 +57,3 @@ defineExpose({
   },
 });
 </script>
-
-<template>
-  <NAutoComplete
-    ref="autoCompleteRef"
-    v-model:value="inputValue"
-    :options="options"
-    :render-label="renderLabel"
-    :placeholder="t('terms.actionCards')"
-  />
-</template>

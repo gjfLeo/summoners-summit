@@ -1,20 +1,3 @@
-<script lang="ts" setup>
-const route = useRoute("deck-deckCode___zh");
-const deckCode = toBase64(route.params.deckCode);
-
-const { t } = useLocales();
-const { awaitData } = useSharedData();
-const { decodeDeck } = useDeckEncoder();
-
-await awaitData();
-const deckCards = decodeDeck(deckCode);
-const teamId = deckCards.characterCards.toSorted().join("-");
-
-const { copy: copyDeckCode } = useCopyDeckCode(deckCards);
-
-const { games } = await useApiGetGameList({ deckCode });
-</script>
-
 <template>
   <div id="deck">
     <!-- 角色牌 -->
@@ -46,3 +29,20 @@ const { games } = await useApiGetGameList({ deckCode });
     </SitePageAnchors>
   </div>
 </template>
+
+<script lang="ts" setup>
+const route = useRoute("deck-deckCode___zh");
+const deckCode = toBase64(route.params.deckCode);
+
+const { t } = useLocales();
+const { awaitData } = useSharedData();
+const { decodeDeck } = useDeckEncoder();
+
+await awaitData();
+const deckCards = decodeDeck(deckCode);
+const teamId = deckCards.characterCards.toSorted().join("-");
+
+const { copy: copyDeckCode } = useCopyDeckCode(deckCards);
+
+const { games } = await useApiGetGameList({ deckCode });
+</script>

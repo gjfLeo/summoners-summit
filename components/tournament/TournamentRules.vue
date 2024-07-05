@@ -1,3 +1,19 @@
+<template>
+  <div un-flex="~ wrap gap-2">
+    <template v-for="(tag, i) in tags" :key="i">
+      <template v-if="Array.isArray(tag)">
+        <NTooltip placement="bottom-start">
+          <template #trigger><NTag round size="small">{{ tag[0] }}</NTag></template>
+          <template #default>{{ tag[1] }}</template>
+        </NTooltip>
+      </template>
+      <template v-else>
+        <NTag round size="small">{{ tag }}</NTag>
+      </template>
+    </template>
+  </div>
+</template>
+
 <script lang="ts" setup>
 import type { TournamentRules } from "~/types/data";
 
@@ -72,19 +88,3 @@ const tags = computed(() => {
   return tags;
 });
 </script>
-
-<template>
-  <div un-flex="~ wrap gap-2">
-    <template v-for="(tag, i) in tags" :key="i">
-      <template v-if="Array.isArray(tag)">
-        <NTooltip placement="bottom-start">
-          <template #trigger><NTag round size="small">{{ tag[0] }}</NTag></template>
-          <template #default>{{ tag[1] }}</template>
-        </NTooltip>
-      </template>
-      <template v-else>
-        <NTag round size="small">{{ tag }}</NTag>
-      </template>
-    </template>
-  </div>
-</template>

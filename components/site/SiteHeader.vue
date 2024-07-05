@@ -1,15 +1,3 @@
-<script lang="tsx" setup>
-import { type SiteRoute, useSiteMenu } from "~/composables/use-site-menu";
-
-const props = defineProps<{
-  routes: SiteRoute[];
-}>();
-
-const { menuOptions, menuValue, renderLabel } = useSiteMenu(props.routes);
-
-const showMobileMenu = ref(false);
-</script>
-
 <template>
   <NLayoutHeader
     bordered
@@ -46,3 +34,15 @@ const showMobileMenu = ref(false);
     </NDrawer>
   </NLayoutHeader>
 </template>
+
+<script lang="tsx" setup>
+import { type SiteRoute, useSiteMenu } from "~/composables/use-site-menu";
+
+const props = defineProps<{
+  routes: SiteRoute[];
+}>();
+
+const { menuOptions, menuValue, renderLabel } = useSiteMenu(props.routes);
+
+const showMobileMenu = ref(false);
+</script>

@@ -1,3 +1,39 @@
+<template>
+  <NModal
+    v-model:show="visible"
+    preset="dialog"
+    :title="t('admin.player.selectUniqueName')"
+    :show-icon="false"
+  >
+    <div class="mt" un-flex="~ wrap gap-2">
+      <NTag
+        v-for="nickname in player ? [player.uniqueName, ...player.aliases] : []" :key="nickname"
+        class="cursor-pointer"
+        :type="nickname === uniqueName && !inputting ? 'primary' : 'default'"
+        @click="uniqueName = nickname, inputting = false"
+      >
+        {{ nickname }}
+      </NTag>
+      <NTag v-if="!inputting" key="####1" type="default" @click="handleAdd">
+        <div class="i-carbon:add" />
+      </NTag>
+      <NInput
+        v-if="inputting"
+        ref="input"
+        v-model:value.trim="uniqueName"
+        placeholder=""
+        size="small" autosize class="min-w-8"
+      />
+    </div>
+
+    <template #action>
+      <NButton type="primary" secondary :disabled="uniqueName === ''" :loading="submitLoading" @click="submit">
+        <template #icon><div class="i-carbon:checkmark" /></template>
+      </NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 import type { NInput } from "#components";
 import type { Player } from "~/types/data";
@@ -63,39 +99,3 @@ defineExpose({
   show,
 });
 </script>
-
-<template>
-  <NModal
-    v-model:show="visible"
-    preset="dialog"
-    :title="t('admin.player.selectUniqueName')"
-    :show-icon="false"
-  >
-    <div class="mt" un-flex="~ wrap gap-2">
-      <NTag
-        v-for="nickname in player ? [player.uniqueName, ...player.aliases] : []" :key="nickname"
-        class="cursor-pointer"
-        :type="nickname === uniqueName && !inputting ? 'primary' : 'default'"
-        @click="uniqueName = nickname, inputting = false"
-      >
-        {{ nickname }}
-      </NTag>
-      <NTag v-if="!inputting" key="####1" type="default" @click="handleAdd">
-        <div class="i-carbon:add" />
-      </NTag>
-      <NInput
-        v-if="inputting"
-        ref="input"
-        v-model:value.trim="uniqueName"
-        placeholder=""
-        size="small" autosize class="min-w-8"
-      />
-    </div>
-
-    <template #action>
-      <NButton type="primary" secondary :disabled="uniqueName === ''" :loading="submitLoading" @click="submit">
-        <template #icon><div class="i-carbon:checkmark" /></template>
-      </NButton>
-    </template>
-  </NModal>
-</template>

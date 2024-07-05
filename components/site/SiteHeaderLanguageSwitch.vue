@@ -1,3 +1,9 @@
+<template>
+  <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
+    <CommonIconButton icon="i-carbon:translate" />
+  </NPopselect>
+</template>
+
 <script lang="ts" setup>
 const { t, locale, locales, setLocale } = useLocales();
 const localeOptions = computed(() => {
@@ -18,9 +24,3 @@ watch(
   { immediate: true },
 );
 </script>
-
-<template>
-  <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
-    <CommonIconButton icon="i-carbon:translate" />
-  </NPopselect>
-</template>

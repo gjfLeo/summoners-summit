@@ -1,3 +1,9 @@
+<template>
+  <SiteLayout :routes="routes">
+    <NuxtPage />
+  </SiteLayout>
+</template>
+
 <script lang="ts" setup>
 import type { SiteRoute } from "../composables/use-site-menu";
 
@@ -20,9 +26,3 @@ const routes: SiteRoute[] = [
   },
 ];
 </script>
-
-<template>
-  <SiteLayout :routes="routes">
-    <NuxtPage />
-  </SiteLayout>
-</template>

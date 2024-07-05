@@ -1,4 +1,4 @@
-import { getPlayer, getPlayerList, redirectPlayer, savePlayer } from "~/server/service";
+import { getPlayerList, redirectPlayer, savePlayer } from "~/server/service";
 import type { Player } from "~/types";
 
 const playerNicknameMapRaw: Record<string, string> = {

@@ -1,3 +1,7 @@
+<template>
+  <CommonIconButton icon="dark:i-carbon:sun i-carbon:moon" @click="toggleColorMode" />
+</template>
+
 <script lang="ts" setup>
 const { colorModePreference, colorMode } = useNaiveColorMode();
 
@@ -10,7 +14,3 @@ function toggleColorMode() {
   preference.value = preference.value === "dark" ? "light" : "dark";
 }
 </script>
-
-<template>
-  <CommonIconButton icon="dark:i-carbon:sun i-carbon:moon" @click="toggleColorMode" />
-</template>

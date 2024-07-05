@@ -1,3 +1,33 @@
+<template>
+  <div>
+    <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
+    <AdminTournamentForm v-model="tournament" @save="queryTournamentDetail" />
+
+    <SitePageAnchors>
+      <NAnchorLink
+        :title="t('admin.tournament.title')"
+        href="#title"
+      >
+        <NAnchorLink
+          v-for="stage in tournament.stages"
+          :key="stage._key"
+          :title="stage.name.zh ?? t('main.tournament.stage')"
+          :href="`#S${stage._key}`"
+        >
+          <template v-if="stage.parts.length > 1">
+            <NAnchorLink
+              v-for="part in stage.parts"
+              :key="part._key"
+              :title="part.name.zh ?? t('main.tournament.part')"
+              :href="`#S${stage._key}P${part._key}`"
+            />
+          </template>
+        </NAnchorLink>
+      </NAnchorLink>
+    </SitePageAnchors>
+  </div>
+</template>
+
 <script lang="ts" setup>
 import type { Game, GameId, Match, MatchId, Tournament, TournamentId } from "~/types";
 
@@ -46,33 +76,3 @@ if (id) {
 provide("matches", matches);
 provide("games", games);
 </script>
-
-<template>
-  <div>
-    <!-- <pre class="fixed z-1 w-16rem">{{ tournament }}</pre> -->
-    <AdminTournamentForm v-model="tournament" @save="queryTournamentDetail" />
-
-    <SitePageAnchors>
-      <NAnchorLink
-        :title="t('admin.tournament.title')"
-        href="#title"
-      >
-        <NAnchorLink
-          v-for="stage in tournament.stages"
-          :key="stage._key"
-          :title="stage.name.zh ?? t('main.tournament.stage')"
-          :href="`#S${stage._key}`"
-        >
-          <template v-if="stage.parts.length > 1">
-            <NAnchorLink
-              v-for="part in stage.parts"
-              :key="part._key"
-              :title="part.name.zh ?? t('main.tournament.part')"
-              :href="`#S${stage._key}P${part._key}`"
-            />
-          </template>
-        </NAnchorLink>
-      </NAnchorLink>
-    </SitePageAnchors>
-  </div>
-</template>

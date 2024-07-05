@@ -1,139 +1,3 @@
-<script lang="ts" setup>
-import type { MatchId, TournamentId } from "~/types";
-import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
-import type { MatchSaveParams } from "~/server/service";
-
-const props = defineProps<{
-  tournamentId: TournamentId;
-}>();
-
-const emit = defineEmits<{
-  (e: "done", matchId: MatchId): void;
-}>();
-
-const { t } = useLocales();
-const message = useMessage();
-
-const visible = ref(false);
-const match = ref<MatchSaveParams>({} as MatchSaveParams);
-
-const formRef = ref<InstanceType<typeof NForm>>();
-const formRules: FormRules = {
-  "playerA.nickname": { required: true, message: "选手1昵称不能为空", trigger: "input" },
-  "playerB.nickname": { required: true, message: "选手2昵称不能为空", trigger: "input" },
-  "games": {
-    validator: () => {
-      if (match.value.games.length === 0) {
-        return new Error("至少需要包含1场对局");
-      }
-      const i = match.value.games.findIndex(g =>
-        g.playerADeck.characters.filter(c => c).length < 3
-        || g.playerBDeck.characters.filter(c => c).length < 3,
-      );
-      if (i !== -1) {
-        return new Error(`第\u2006${i + 1}\u2006局阵容不完整`);
-      }
-      return true;
-    },
-  },
-};
-
-async function create(params: { stageIndex: number; partIndex: number; matchIndex: number }) {
-  match.value = {
-    ...params,
-    tournamentId: props.tournamentId,
-    playerA: {
-      nickname: "",
-    },
-    playerB: {
-      nickname: "",
-    },
-    bans: [],
-    games: [],
-  };
-  addGame();
-
-  visible.value = true;
-};
-async function edit(params: MatchSaveParams) {
-  match.value = params;
-  visible.value = true;
-}
-
-defineExpose({
-  create,
-});
-
-const { data, refresh: refreshPlayers } = await useFetch("/api/v3/players/list");
-const players = computed(() => data.value?.players ?? []);
-async function confirm() {
-  try {
-    await formRef.value?.validate();
-  }
-  catch (error: any) {
-    (error as ValidateError[][])
-      .flatMap(e => e).flatMap(e => e)
-      .forEach(e => message.warning(e.message!));
-    return;
-  }
-  try {
-    const res = await $fetch("/api/v3/matches/save", {
-      method: "POST",
-      body: match.value,
-    });
-    if (res?.success) {
-      message.success(t("admin.message.SUCCESS"));
-      refreshPlayers();
-      emit("done", res.id);
-      visible.value = false;
-    }
-    else {
-      message.error(t(`admin.message.${res?.code}`));
-    }
-  }
-  catch (error) {
-    console.error(error);
-  }
-}
-
-function cancel() {
-  visible.value = false;
-}
-
-let key = 0;
-function addGame() {
-  match.value.games.push({
-    _key: key++,
-    playerADeck: {
-      characters: [],
-    },
-    playerBDeck: {
-      characters: [],
-    },
-  });
-}
-function deleteGame(gameIndex: number) {
-  match.value.games.splice(gameIndex, 1);
-}
-function addBan() {
-  match.value.bans.push({
-    _key: key++,
-    playerACardIds: [],
-    playerBCardIds: [],
-  });
-}
-function deleteBan(banIndex: number) {
-  match.value.bans.splice(banIndex, 1);
-}
-const videoEditor = ref<InstanceType<typeof AdminTournamentMatchVideoEditor>>();
-function inputVideo(video: string | undefined) {
-  return videoEditor.value?.input(video);
-}
-
-const actionCardsEditor = ref<InstanceType<typeof AdminTournamentMatchActionCardsEditor>>();
-provide("actionCardsEditor", actionCardsEditor);
-</script>
-
 <template>
   <NModal
     v-model:show="visible"
@@ -311,3 +175,140 @@ provide("actionCardsEditor", actionCardsEditor);
     </template>
   </NModal>
 </template>
+
+<script lang="ts" setup>
+import type { MatchId, TournamentId } from "~/types";
+import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
+import type { MatchSaveParams } from "~/server/service";
+
+const props = defineProps<{
+  tournamentId: TournamentId;
+}>();
+
+const emit = defineEmits<{
+  (e: "done", matchId: MatchId): void;
+}>();
+
+const { t } = useLocales();
+const message = useMessage();
+
+const visible = ref(false);
+const match = ref<MatchSaveParams>({} as MatchSaveParams);
+
+const formRef = ref<InstanceType<typeof NForm>>();
+const formRules: FormRules = {
+  "playerA.nickname": { required: true, message: "选手1昵称不能为空", trigger: "input" },
+  "playerB.nickname": { required: true, message: "选手2昵称不能为空", trigger: "input" },
+  "games": {
+    validator: () => {
+      if (match.value.games.length === 0) {
+        return new Error("至少需要包含1场对局");
+      }
+      const i = match.value.games.findIndex(g =>
+        g.playerADeck.characters.filter(c => c).length < 3
+        || g.playerBDeck.characters.filter(c => c).length < 3,
+      );
+      if (i !== -1) {
+        return new Error(`第\u2006${i + 1}\u2006局阵容不完整`);
+      }
+      return true;
+    },
+  },
+};
+
+async function create(params: { stageIndex: number; partIndex: number; matchIndex: number }) {
+  match.value = {
+    ...params,
+    tournamentId: props.tournamentId,
+    playerA: {
+      nickname: "",
+    },
+    playerB: {
+      nickname: "",
+    },
+    bans: [],
+    games: [],
+  };
+  addGame();
+
+  visible.value = true;
+};
+async function edit(params: MatchSaveParams) {
+  match.value = params;
+  visible.value = true;
+}
+
+defineExpose({
+  create,
+  edit,
+});
+
+const { data, refresh: refreshPlayers } = await useFetch("/api/v3/players/list");
+const players = computed(() => data.value?.players ?? []);
+async function confirm() {
+  try {
+    await formRef.value?.validate();
+  }
+  catch (error: any) {
+    (error as ValidateError[][])
+      .flatMap(e => e).flatMap(e => e)
+      .forEach(e => message.warning(e.message!));
+    return;
+  }
+  try {
+    const res = await $fetch("/api/v3/matches/save", {
+      method: "POST",
+      body: match.value,
+    });
+    if (res?.success) {
+      message.success(t("admin.message.SUCCESS"));
+      refreshPlayers();
+      emit("done", res.id);
+      visible.value = false;
+    }
+    else {
+      message.error(t(`admin.message.${res?.code}`));
+    }
+  }
+  catch (error) {
+    console.error(error);
+  }
+}
+
+function cancel() {
+  visible.value = false;
+}
+
+let key = 0;
+function addGame() {
+  match.value.games.push({
+    _key: key++,
+    playerADeck: {
+      characters: [],
+    },
+    playerBDeck: {
+      characters: [],
+    },
+  });
+}
+function deleteGame(gameIndex: number) {
+  match.value.games.splice(gameIndex, 1);
+}
+function addBan() {
+  match.value.bans.push({
+    _key: key++,
+    playerACardIds: [],
+    playerBCardIds: [],
+  });
+}
+function deleteBan(banIndex: number) {
+  match.value.bans.splice(banIndex, 1);
+}
+const videoEditor = ref<InstanceType<typeof AdminTournamentMatchVideoEditor>>();
+function inputVideo(video: string | undefined) {
+  return videoEditor.value?.input(video);
+}
+
+const actionCardsEditor = ref<InstanceType<typeof AdminTournamentMatchActionCardsEditor>>();
+provide("actionCardsEditor", actionCardsEditor);
+</script>

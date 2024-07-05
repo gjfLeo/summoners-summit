@@ -1,3 +1,12 @@
+<template>
+  <NDataTable
+    :data="data"
+    :columns="columns"
+    :loading="loading"
+    flex-height
+  />
+</template>
+
 <script lang="tsx" setup>
 import { NButton, NTag } from "#components";
 import type { Player } from "~/types/data";
@@ -68,12 +77,3 @@ const columns: DataTableColumn<Player>[] = [
   },
 ];
 </script>
-
-<template>
-  <NDataTable
-    :data="data"
-    :columns="columns"
-    :loading="loading"
-    flex-height
-  />
-</template>

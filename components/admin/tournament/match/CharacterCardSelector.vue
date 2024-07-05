@@ -1,3 +1,23 @@
+<template>
+  <NPopover ref="popoverRef" trigger="click" placement="bottom" @update:show="handlePopoverUpdateShow">
+    <template #trigger>
+      <CardAvatar :card="cardId" class="cursor-pointer" />
+    </template>
+    <template #default>
+      <NAutoComplete
+        ref="autoCompleteRef"
+        v-model:value="inputValue"
+        :options="options"
+        :render-label="renderLabel"
+        placeholder="角色"
+        placement="bottom"
+        :get-show="() => true"
+        @select="handleSelect"
+      />
+    </template>
+  </NPopover>
+</template>
+
 <script lang="ts" setup>
 import PinyinMatch from "pinyin-match";
 import { CardImage, NAutoComplete, NPopover, NText } from "#components";
@@ -69,23 +89,3 @@ defineExpose({
   },
 });
 </script>
-
-<template>
-  <NPopover ref="popoverRef" trigger="click" placement="bottom" @update:show="handlePopoverUpdateShow">
-    <template #trigger>
-      <CardAvatar :card="cardId" class="cursor-pointer" />
-    </template>
-    <template #default>
-      <NAutoComplete
-        ref="autoCompleteRef"
-        v-model:value="inputValue"
-        :options="options"
-        :render-label="renderLabel"
-        placeholder="角色"
-        placement="bottom"
-        :get-show="() => true"
-        @select="handleSelect"
-      />
-    </template>
-  </NPopover>
-</template>

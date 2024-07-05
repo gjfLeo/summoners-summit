@@ -1,3 +1,11 @@
+<template>
+  <NuxtLinkLocale :to="to" :prefetch="prefetch">
+    <NButton v-bind="$attrs">
+      <slot />
+    </NButton>
+  </NuxtLinkLocale>
+</template>
+
 <script lang="ts" setup>
 withDefaults(
   defineProps<{
@@ -9,11 +17,3 @@ withDefaults(
   },
 );
 </script>
-
-<template>
-  <NuxtLinkLocale :to="to" :prefetch="prefetch">
-    <NButton v-bind="$attrs">
-      <slot />
-    </NButton>
-  </NuxtLinkLocale>
-</template>

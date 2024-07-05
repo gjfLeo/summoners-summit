@@ -1,3 +1,41 @@
+<template>
+  <NModal
+    v-model:show="visible"
+    preset="dialog" :show-icon="false" :title="t('terms.actionCards')"
+    class="w-800px!"
+  >
+    <template #default>
+      <NForm inline :show-label="false" :show-feedback="false">
+        <NFormItem>
+          <AdminTournamentMatchActionCardSelector ref="cardSelectorRef" :action-cards="actionCards" @select="handleSelectCard" />
+        </NFormItem>
+        <NFormItem>
+          <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" placeholder="数量" @update:value="handleInputCount" />
+        </NFormItem>
+        <NFormItem>
+          <NText>已包含 {{ actionCards.length }} 张</NText>
+        </NFormItem>
+        <NFormItem>
+          <NButton @click="clear">清空</NButton>
+        </NFormItem>
+      </NForm>
+      <div class="mt" un-grid="~ cols-6 md:cols-10 gap-2">
+        <template v-for="(cardId, i) in actionCards" :key="i">
+          <div class="card-container" @click="remove(cardId, i)">
+            <CardImage :card="cardId" />
+            <div class="card-shadow">
+              <NText class="text-4xl text-white"><div class="i-carbon:close" /></NText>
+            </div>
+          </div>
+        </template>
+      </div>
+    </template>
+    <template #action>
+      <NButton type="primary" secondary @click="confirm">{{ t('admin.action.confirm') }}</NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 import type { AdminTournamentMatchActionCardSelector, NAutoComplete } from "#components";
 import type { CardId } from "~/types/data";
@@ -59,51 +97,13 @@ function clear() {
 }
 </script>
 
-<template>
-  <NModal
-    v-model:show="visible"
-    preset="dialog" :show-icon="false" :title="t('terms.actionCards')"
-    class="w-800px!"
-  >
-    <template #default>
-      <NForm inline :show-label="false" :show-feedback="false">
-        <NFormItem>
-          <AdminTournamentMatchActionCardSelector ref="cardSelectorRef" :action-cards="actionCards" @select="handleSelectCard" />
-        </NFormItem>
-        <NFormItem>
-          <NAutoComplete ref="countSelectorRef" v-model:value="inputCount" :options="['1', '2']" :get-show="() => true" placeholder="数量" @update:value="handleInputCount" />
-        </NFormItem>
-        <NFormItem>
-          <NText>已包含 {{ actionCards.length }} 张</NText>
-        </NFormItem>
-        <NFormItem>
-          <NButton @click="clear">清空</NButton>
-        </NFormItem>
-      </NForm>
-      <div class="mt" un-grid="~ cols-6 md:cols-10 gap-2">
-        <template v-for="(cardId, i) in actionCards" :key="i">
-          <div class="card-container" @click="remove(cardId, i)">
-            <CardImage :card="cardId" />
-            <div class="card-shadow">
-              <NText class="text-4xl text-white"><div class="i-carbon:close" /></NText>
-            </div>
-          </div>
-        </template>
-      </div>
-    </template>
-    <template #action>
-      <NButton type="primary" secondary @click="confirm">{{ t('admin.action.confirm') }}</NButton>
-    </template>
-  </NModal>
-</template>
-
 <style scoped>
 .card-container {
   display: grid;
   grid-template: 1fr / 1fr;
   cursor: pointer;
 
-  &>* {
+  & > * {
     grid-area: 1 / 1 / 2 / 2;
   }
 }

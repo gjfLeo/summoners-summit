@@ -1,3 +1,25 @@
+<template>
+  <NButton text :focusable="false" @click="commit">
+    <template #icon>
+      <div class="i-carbon:save" />
+    </template>
+  </NButton>
+  <NModal v-model:show="modalVisible" preset="dialog">
+    <template #header>
+      提交至代码库
+    </template>
+    <template #default>
+      <NFormItem label="提交信息">
+        <NInput v-model:value="commitMessage" placeholder="更新数据" />
+      </NFormItem>
+    </template>
+    <template #action>
+      <NButton :loading="submitLoading" @click="submit">提交</NButton>
+      <NButton @click="modalVisible = false">取消</NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 const modalVisible = ref(false);
 const commitMessage = ref("");
@@ -23,25 +45,3 @@ async function submit() {
   message.success("提交成功");
 }
 </script>
-
-<template>
-  <NButton text :focusable="false" @click="commit">
-    <template #icon>
-      <div class="i-carbon:save" />
-    </template>
-  </NButton>
-  <NModal v-model:show="modalVisible" preset="dialog">
-    <template #header>
-      提交至代码库
-    </template>
-    <template #default>
-      <NFormItem label="提交信息">
-        <NInput v-model:value="commitMessage" placeholder="更新数据" />
-      </NFormItem>
-    </template>
-    <template #action>
-      <NButton :loading="submitLoading" @click="submit">提交</NButton>
-      <NButton @click="modalVisible = false">取消</NButton>
-    </template>
-  </NModal>
-</template>

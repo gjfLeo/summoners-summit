@@ -1,3 +1,40 @@
+<template>
+  <div un-flex="~ items-center justify-center gap-2">
+    <CommonTextButton
+      :primary="starter === player"
+      :strong="starter === player"
+      :error="starter === undefined"
+      text="先"
+      @click="starter = player"
+    />
+    <CommonTextButton
+      :primary="winner === player"
+      :strong="winner === player"
+      :error="winner === undefined"
+      text="胜"
+      @click="winner = player"
+    />
+    <div un-flex="~ gap-1">
+      <template v-for="i in 3" :key="i">
+        <CharacterCardSelector
+          :ref="bindInputCharacterRef(i - 1)"
+          v-model="deck.characters[i - 1]"
+          @update:model-value="handleCharacterSelected(i - 1)"
+        />
+      </template>
+    </div>
+    <CommonTextButton
+      :primary="actionCards.length === 30"
+      :error="actionCards.length > 0 && actionCards.length < 30"
+      @click="inputActionCards"
+    >
+      行动牌 ({{ actionCards.length }})
+    </CommonTextButton>
+    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
+    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
+  </div>
+</template>
+
 <script lang="ts" setup>
 import type { CardId, Game } from "~/types/data";
 import {
@@ -73,40 +110,3 @@ async function pasteDeck() {
   }
 }
 </script>
-
-<template>
-  <div un-flex="~ items-center justify-center gap-2">
-    <CommonTextButton
-      :primary="starter === player"
-      :strong="starter === player"
-      :error="starter === undefined"
-      text="先"
-      @click="starter = player"
-    />
-    <CommonTextButton
-      :primary="winner === player"
-      :strong="winner === player"
-      :error="winner === undefined"
-      text="胜"
-      @click="winner = player"
-    />
-    <div un-flex="~ gap-1">
-      <template v-for="i in 3" :key="i">
-        <CharacterCardSelector
-          :ref="bindInputCharacterRef(i - 1)"
-          v-model="deck.characters[i - 1]"
-          @update:model-value="handleCharacterSelected(i - 1)"
-        />
-      </template>
-    </div>
-    <CommonTextButton
-      :primary="actionCards.length === 30"
-      :error="actionCards.length > 0 && actionCards.length < 30"
-      @click="inputActionCards"
-    >
-      行动牌 ({{ actionCards.length }})
-    </CommonTextButton>
-    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
-    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
-  </div>
-</template>

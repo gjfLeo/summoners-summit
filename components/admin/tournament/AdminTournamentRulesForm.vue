@@ -1,100 +1,3 @@
-<script lang="ts" setup>
-import type { TournamentRules } from "~/types/data";
-
-const rules = defineModel<TournamentRules>({ required: true });
-
-const { t } = useLocales();
-
-const banCharacters = computed<boolean>({
-  get: () => {
-    return rules.value.banCharacters !== undefined;
-  },
-  set: (v) => {
-    rules.value.banCharacters = v ? (rules.value.banCharacters ?? { num: 1 }) : undefined;
-  },
-});
-const banCharactersNum = computed<number>({
-  get: () => {
-    return rules.value.banCharacters?.num ?? 1;
-  },
-  set: (v) => {
-    rules.value.banCharacters = rules.value.banCharacters ?? { num: v };
-  },
-});
-
-const submitTeams = computed<boolean>({
-  get: () => {
-    return rules.value.submitTeams !== undefined;
-  },
-  set: (v) => {
-    rules.value.submitTeams = v ? { num: (rules.value.numGames + 1) / 2 } : undefined;
-  },
-});
-const submitTeamsNum = computed<number>({
-  get: () => {
-    return rules.value.submitTeams?.num ?? 3;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams) {
-      rules.value.submitTeams.num = v;
-    }
-  },
-});
-
-const submitDecks = computed<boolean>({
-  get: () => {
-    return rules.value.submitTeams?.submitDecks !== undefined;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams) {
-      rules.value.submitTeams.submitDecks = v ? {} : undefined;
-    }
-  },
-});
-const submitDecksMaxNumForEachTeam = computed<number | undefined>({
-  get: () => {
-    return rules.value.submitTeams?.submitDecks?.maxNumForEachTeam;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams?.submitDecks) {
-      rules.value.submitTeams.submitDecks.maxNumForEachTeam = v;
-    }
-  },
-});
-const submitDecksMaxNumInTotal = computed<number | undefined>({
-  get: () => {
-    return rules.value.submitTeams?.submitDecks?.maxNumInTotal;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams?.submitDecks) {
-      rules.value.submitTeams.submitDecks.maxNumInTotal = v;
-    }
-  },
-});
-
-const banTeams = computed<boolean>({
-  get: () => {
-    return rules.value.submitTeams?.banTeams !== undefined;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams) {
-      rules.value.submitTeams.banTeams = v ? { num: 1 } : undefined;
-      rules.value.submitTeams.num = Math.max(rules.value.submitTeams.num, (rules.value.numGames + 1) / 2 + 1);
-    }
-  },
-});
-const banTeamsNum = computed<number>({
-  get: () => {
-    return rules.value.submitTeams?.banTeams?.num ?? 1;
-  },
-  set: (v) => {
-    if (rules.value.submitTeams?.banTeams) {
-      rules.value.submitTeams.banTeams.num = v;
-    }
-  },
-});
-</script>
-
 <template>
   <div class="mt-4 w-full" un-flex="~ col gap-4">
     <div un-flex="~ items-center gap-2">
@@ -223,3 +126,100 @@ const banTeamsNum = computed<number>({
     </NCollapseTransition>
   </div>
 </template>
+
+<script lang="ts" setup>
+import type { TournamentRules } from "~/types/data";
+
+const rules = defineModel<TournamentRules>({ required: true });
+
+const { t } = useLocales();
+
+const banCharacters = computed<boolean>({
+  get: () => {
+    return rules.value.banCharacters !== undefined;
+  },
+  set: (v) => {
+    rules.value.banCharacters = v ? (rules.value.banCharacters ?? { num: 1 }) : undefined;
+  },
+});
+const banCharactersNum = computed<number>({
+  get: () => {
+    return rules.value.banCharacters?.num ?? 1;
+  },
+  set: (v) => {
+    rules.value.banCharacters = rules.value.banCharacters ?? { num: v };
+  },
+});
+
+const submitTeams = computed<boolean>({
+  get: () => {
+    return rules.value.submitTeams !== undefined;
+  },
+  set: (v) => {
+    rules.value.submitTeams = v ? { num: (rules.value.numGames + 1) / 2 } : undefined;
+  },
+});
+const submitTeamsNum = computed<number>({
+  get: () => {
+    return rules.value.submitTeams?.num ?? 3;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams) {
+      rules.value.submitTeams.num = v;
+    }
+  },
+});
+
+const submitDecks = computed<boolean>({
+  get: () => {
+    return rules.value.submitTeams?.submitDecks !== undefined;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams) {
+      rules.value.submitTeams.submitDecks = v ? {} : undefined;
+    }
+  },
+});
+const submitDecksMaxNumForEachTeam = computed<number | undefined>({
+  get: () => {
+    return rules.value.submitTeams?.submitDecks?.maxNumForEachTeam;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams?.submitDecks) {
+      rules.value.submitTeams.submitDecks.maxNumForEachTeam = v;
+    }
+  },
+});
+const submitDecksMaxNumInTotal = computed<number | undefined>({
+  get: () => {
+    return rules.value.submitTeams?.submitDecks?.maxNumInTotal;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams?.submitDecks) {
+      rules.value.submitTeams.submitDecks.maxNumInTotal = v;
+    }
+  },
+});
+
+const banTeams = computed<boolean>({
+  get: () => {
+    return rules.value.submitTeams?.banTeams !== undefined;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams) {
+      rules.value.submitTeams.banTeams = v ? { num: 1 } : undefined;
+      rules.value.submitTeams.num = Math.max(rules.value.submitTeams.num, (rules.value.numGames + 1) / 2 + 1);
+    }
+  },
+});
+const banTeamsNum = computed<number>({
+  get: () => {
+    return rules.value.submitTeams?.banTeams?.num ?? 1;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams?.banTeams) {
+      rules.value.submitTeams.banTeams.num = v;
+    }
+  },
+});
+</script>

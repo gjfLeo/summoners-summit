@@ -1,3 +1,31 @@
+<template>
+  <NButton @click="open">{{ t("admin.ranks.importFromTable") }}</NButton>
+  <NModal
+    v-model:show="visible"
+    preset="dialog"
+    :title="t('admin.ranks.importFromTable')"
+    :show-icon="false"
+  >
+    <NFormItem
+      ref="contentRef"
+      :rule="contentRule"
+      :show-label="false"
+      class="mt"
+    >
+      <NInput
+        v-model:value="content"
+        type="textarea"
+        :autosize="{ minRows: 3, maxRows: 10 }"
+        :placeholder="t('admin.ranks.tableContentDescription')"
+      />
+    </NFormItem>
+    <template #action>
+      <NButton secondary type="primary" @click="confirm">{{ t("admin.action.confirm") }}</NButton>
+      <NButton secondary @click="visible = false">{{ t("admin.action.cancel") }}</NButton>
+    </template>
+  </NModal>
+</template>
+
 <script lang="ts" setup>
 import { NFormItem } from "#components";
 import type { Ranks } from "~/types/data";
@@ -54,31 +82,3 @@ async function confirm() {
   visible.value = false;
 }
 </script>
-
-<template>
-  <NButton @click="open">{{ t("admin.ranks.importFromTable") }}</NButton>
-  <NModal
-    v-model:show="visible"
-    preset="dialog"
-    :title="t('admin.ranks.importFromTable')"
-    :show-icon="false"
-  >
-    <NFormItem
-      ref="contentRef"
-      :rule="contentRule"
-      :show-label="false"
-      class="mt"
-    >
-      <NInput
-        v-model:value="content"
-        type="textarea"
-        :autosize="{ minRows: 3, maxRows: 10 }"
-        :placeholder="t('admin.ranks.tableContentDescription')"
-      />
-    </NFormItem>
-    <template #action>
-      <NButton secondary type="primary" @click="confirm">{{ t("admin.action.confirm") }}</NButton>
-      <NButton secondary @click="visible = false">{{ t("admin.action.cancel") }}</NButton>
-    </template>
-  </NModal>
-</template>

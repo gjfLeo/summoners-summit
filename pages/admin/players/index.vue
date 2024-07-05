@@ -1,3 +1,23 @@
+<template>
+  <div un-flex="~ col gap-4" class="min-h-content">
+    <div un-flex="~ gap-2">
+      <div><NInput v-model:value="filterText" clearable /></div>
+      <NButton type="primary" secondary @click="refresh()"><div class="i-carbon:renew" /></NButton>
+    </div>
+    <AdminPlayerListTable
+      :data="filteredPlayers"
+      :loading="pending"
+      class="flex-table"
+      @select-unique-name="playerUniqueNameDialog?.show($event)"
+      @merge-player-data="playerMergeDialog?.show($event, players)"
+    />
+    <div v-show="false">
+      <AdminPlayerUniqueNameDialog ref="playerUniqueNameDialog" @done="refresh()" />
+      <AdminPlayerMergeDialog ref="playerMergeDialog" @done="refresh()" />
+    </div>
+  </div>
+</template>
+
 <script lang="tsx" setup>
 import Pinyin from "pinyin-match";
 import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton } from "#components";
@@ -28,23 +48,3 @@ const filteredPlayers = computed(() => {
   });
 });
 </script>
-
-<template>
-  <div un-flex="~ col gap-4" class="min-h-content">
-    <div un-flex="~ gap-2">
-      <div><NInput v-model:value="filterText" clearable /></div>
-      <NButton type="primary" secondary @click="refresh()"><div class="i-carbon:renew" /></NButton>
-    </div>
-    <AdminPlayerListTable
-      :data="filteredPlayers"
-      :loading="pending"
-      class="flex-table"
-      @select-unique-name="playerUniqueNameDialog?.show($event)"
-      @merge-player-data="playerMergeDialog?.show($event, players)"
-    />
-    <div v-show="false">
-      <AdminPlayerUniqueNameDialog ref="playerUniqueNameDialog" @done="refresh()" />
-      <AdminPlayerMergeDialog ref="playerMergeDialog" @done="refresh()" />
-    </div>
-  </div>
-</template>
