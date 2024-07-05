@@ -51,19 +51,27 @@ const deck = defineModel<MatchSaveParams["games"][number]["playerADeck"]>("deck"
 const starter = defineModel<Game["starter"]>("starter", { required: true });
 const winner = defineModel<Game["winner"]>("winner", { required: true });
 
+const { awaitData } = useSharedData();
+await awaitData();
 const { encodeDeck, decodeDeck } = useDeckEncoder();
 
-const actionCards = ref<CardId[]>([]);
 const characterCardSelectorRefs = ref<(InstanceType<typeof CharacterCardSelector> | null)[]>([]);
 const actionCardsEditor = inject<Ref<InstanceType<typeof ActionCardsEditor>>>("actionCardsEditor");
 
+const actionCards = computed<CardId[]>({
+  get() {
+    return deck.value.deckCode ? decodeDeck(deck.value.deckCode).actionCards : [];
+  },
+  set(cards) {
+    deck.value.deckCode = cards.length
+      ? encodeDeck({ characterCards: deck.value.characters, actionCards: cards })
+      : undefined;
+  },
+});
 const deckCards = computed(() => ({
   characterCards: deck.value.characters,
   actionCards: actionCards.value,
 }));
-watch([deck, actionCards], () => {
-  deck.value.deckCode = deckCards.value.actionCards.length ? encodeDeck(deckCards.value) : undefined;
-}, { deep: true });
 const { copy } = useCopyDeckCode(deckCards);
 
 function bindInputCharacterRef(i: number) {

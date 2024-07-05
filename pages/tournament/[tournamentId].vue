@@ -22,11 +22,11 @@
 
               <!-- 小屏幕换行 -->
               <div class="h-0 w-full md:hidden" />
-              <div class="text-base" :class="{ 'text-orange-500': matches[matchId].winner === 'A' }">
+              <div class="text-base" :class="{ 'text-orange-500': getMatchWinner(matches[matchId], games) === 'A' }">
                 <PlayerName :id="matches[matchId].playerA.playerId" :nickname="matches[matchId].playerA.nickname" />
               </div>
               <div class="text-sm">VS</div>
-              <div class="text-base" :class="{ 'text-orange-500': matches[matchId].winner === 'B' }">
+              <div class="text-base" :class="{ 'text-orange-500': getMatchWinner(matches[matchId], games) === 'B' }">
                 <PlayerName :id="matches[matchId].playerB.playerId" :nickname="matches[matchId].playerB.nickname" />
               </div>
 

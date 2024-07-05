@@ -37,9 +37,9 @@
               <th class="text-center!">{{ t('main.tournament.matchName', [matchIndex + 1]) }}</th>
               <td class="w-40%">
                 <div un-grid="~ cols-[1fr_min-content_1fr] gap-2">
-                  <div :class="{ 'text-orange-500': getMatchWinner(matchId) === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
+                  <div :class="{ 'text-orange-500': getMatchWinner(matches[matchId], games) === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
                   <div>VS</div>
-                  <div :class="{ 'text-orange-500': getMatchWinner(matchId) === 'B' }" class="justify-self-start">{{ matches[matchId].playerB.nickname }}</div>
+                  <div :class="{ 'text-orange-500': getMatchWinner(matches[matchId], games) === 'B' }" class="justify-self-start">{{ matches[matchId].playerB.nickname }}</div>
                 </div>
               </td>
               <td>{{ t('admin.tournament.games', [countGames(matchId)]) }}</td>
@@ -73,6 +73,7 @@
 import type AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { NForm } from "#components";
 import type { Game, GameId, Match, MatchId, TournamentPart } from "~/types/data";
+import type { MatchSaveParams } from "~/server/service";
 
 const props = defineProps<{
   stageIndex: number;
@@ -122,8 +123,35 @@ function addMatch() {
     matchIndex: part.value.matchIds.length,
   });
 }
-function handleEdit(matchId: MatchId) {
-  matchEditor?.value.edit();
+const message = useMessage();
+async function handleEdit(matchId: MatchId) {
+  const loading = message.loading(t("admin.action.loading"), { duration: 0 });
+  const { match, games } = await $fetch("/api/v3/matches/getDetail", { query: { id: matchId } });
+  loading.destroy();
+  const params = {
+    ...match,
+    games: match.gameIds.map((gameId, i) => ({
+      ...games[gameId],
+      _key: i,
+    })),
+    bans: match.bans?.map<MatchSaveParams["bans"][0]>((ban, i) => {
+      if (ban.banType === "character") {
+        return {
+          _key: i,
+          playerACardIds: [ban.playerACardId],
+          playerBCardIds: [ban.playerBCardId],
+        };
+      }
+      else {
+        return {
+          _key: i,
+          playerACardIds: ban.playerATeamId.split("-"),
+          playerBCardIds: ban.playerBTeamId.split("-"),
+        };
+      }
+    }) ?? [],
+  } satisfies MatchSaveParams;
+  matchEditor?.value.edit(params);
 }
 
 function validate() {
@@ -147,19 +175,5 @@ function countDecks(matchId: MatchId) {
     .flatMap(game => [game.playerADeck, game.playerBDeck])
     .filter(deck => deck.deckCode)
     .length;
-}
-function getMatchWinner(matchId: MatchId): NonNullable<Match["winner"]> {
-  const match = matches.value[matchId];
-  if (match.winner) return match.winner;
-  const abDiff = match.gameIds.map(gameId => games.value[gameId])
-    .map(game => game.winner)
-    .reduce((diff, winner) => {
-      if (winner === "A") return diff + 1;
-      if (winner === "B") return diff - 1;
-      return diff;
-    }, 0);
-  if (abDiff > 0) return "A";
-  if (abDiff < 0) return "B";
-  return "DRAW";
 }
 </script>

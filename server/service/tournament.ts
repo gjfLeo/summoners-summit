@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import { getMatch } from "./match";
+import { getMatchDetail } from "./match";
 import { ZTournament, ZTournamentDetailBrief } from "~/types";
 import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
 
@@ -42,7 +42,7 @@ function fillTournamentDetail(tournament: Tournament): TournamentDetail {
   const matches = tournament.stages
     .flatMap(stage => stage.parts)
     .flatMap(part => part.matchIds)
-    .map(matchId => getMatch(matchId)!);
+    .map(matchId => getMatchDetail(matchId)!);
   const final = matches.find(match => match.isFinal);
   const champion = final ? final.winner === "A" ? final.playerA : final.winner === "B" ? final.playerB : undefined : undefined;
 
