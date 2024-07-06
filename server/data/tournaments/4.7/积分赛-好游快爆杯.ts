@@ -235,5 +235,65 @@ export default defineTournament({
         },
       ],
     },
+    {
+      name: "决赛",
+      rules: {
+        numDecks: 4,
+        numDecksBanned: 1,
+        numCharactersBanned: 1,
+        numCharactersRequired: 9,
+        numGames: 5,
+        mode: "Conquest",
+      },
+      parts: [
+        {
+          name: "",
+          date: "2024-07-06",
+          matches: [
+            {
+              playerA: "胡桃花开青雀鸣",
+              playerB: "吟风咏月",
+              video: "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235",
+              banned: [
+                {
+                  playerACharacters: ["深渊使徒·激流"],
+                  playerBCharacters: ["圣骸飞蛇"],
+                },
+                {
+                  playerACharacters: ["莱依拉", "那维莱特", "若陀龙王"],
+                  playerBCharacters: ["莱依拉", "若陀龙王", "那维莱特"],
+                },
+              ],
+              games: [
+                {
+                  playerACharacters: ["莫娜", "卡维", "吞星之鲸"],
+                  playerBCharacters: ["「女士」", "那维莱特", "若陀龙王"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["愚人众·雷萤术士", "辛焱", "阿佩普的绿洲守望者"],
+                  playerBCharacters: ["芙宁娜", "那维莱特", "莱欧斯利"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["久岐忍", "辛焱", "阿佩普的绿洲守望者"],
+                  playerBCharacters: ["芙宁娜", "那维莱特", "莱欧斯利"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["久岐忍", "辛焱", "阿佩普的绿洲守望者"],
+                  playerBCharacters: ["夜兰", "魈", "申鹤"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });
