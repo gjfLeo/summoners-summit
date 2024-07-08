@@ -14,7 +14,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.2",
+    "@antfu/eslint-config": "^2.21.3",
     "@bg-dev/nuxt-naiveui": "^1.14.0",
     "@genshin-db/tcg": "^5.1.6",
     "@gjfleo/eslint-config": "^1.0.8",
@@ -25,8 +25,8 @@
     "@pinia/nuxt": "^0.5.1",
     "@types/crypto-js": "^4.2.2",
     "@types/fs-extra": "^11.0.4",
-    "@unocss/eslint-config": "^0.61.0",
-    "@unocss/nuxt": "^0.61.0",
+    "@unocss/eslint-config": "^0.61.3",
+    "@unocss/nuxt": "^0.61.3",
     "@vite-pwa/nuxt": "^0.8.1",
     "@vueuse/nuxt": "^10.11.0",
     "consola": "^3.2.3",
