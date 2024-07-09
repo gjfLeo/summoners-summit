@@ -137,12 +137,13 @@ const playerNicknameMapRaw: Record<string, string> = {
   "雪夜糖|兰TJ": "TianJam",
   "不更鸟": "从不打低端局",
   "霉逼酱": "可可酱",
-  "Keloni~": "一簇西语",
+  "一簇西语": "Keloni~",
   "星莹Sweet.Rain": "千折以奉",
   "…": "...",
   "...": "点点点",
   "LL吟风咏月": "吟风咏月",
   "棉袜乃莉塔": "届不到的莉芭芭",
+  "Keloni~": "Keloni",
   
   
   
