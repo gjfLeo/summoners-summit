@@ -7,7 +7,7 @@ function toComputed<T>(r: Ref<T>) {
 const useSharedDataStore = defineStore("shared", () => {
   const gameVersionList = ref<GameVersion[]>([]);
   const gameVersionLatest = computed(() => {
-    return gameVersionList.value.length ? gameVersionList.value[0].id : undefined;
+    return gameVersionList.value.length ? gameVersionList.value[0].id : "";
   });
   async function fetchGameVersionData() {
     const data = await $fetch("/api/v3/game-versions/list");
@@ -73,4 +73,10 @@ export function useSharedData() {
     ...store,
     ...refs,
   };
+}
+
+export async function useAsyncSharedData() {
+  const sharedData = useSharedData();
+  await sharedData.awaitData();
+  return sharedData;
 }

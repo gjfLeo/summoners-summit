@@ -19,6 +19,7 @@
     </div>
     <div un-flex="~ gap-4" class="justify-self-end">
       <LazyAdminDataCommit v-if="$route.meta.layout === 'admin'" />
+      <SiteHeaderGameVersionSelect v-if="$route.meta.layout !== 'admin'" />
       <SiteHeaderAdminSwitch />
       <SiteHeaderLanguageSwitch />
       <SiteHeaderColorSwitch />

@@ -145,8 +145,8 @@ async function handleEdit(matchId: MatchId) {
       else {
         return {
           _key: i,
-          playerACardIds: ban.playerATeamId.split("-"),
-          playerBCardIds: ban.playerBTeamId.split("-"),
+          playerACardIds: getCharacterCardsByTeamId(ban.playerATeamId),
+          playerBCardIds: getCharacterCardsByTeamId(ban.playerBTeamId),
         };
       }
     }) ?? [],

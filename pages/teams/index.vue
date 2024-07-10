@@ -1,3 +1,11 @@
 <template>
-  <div>Teams</div>
+  <GameVersionNavigator />
 </template>
+
+<script lang="ts" setup>
+definePageMeta({
+  middleware: [
+    "game-version-navigator",
+  ],
+});
+</script>
