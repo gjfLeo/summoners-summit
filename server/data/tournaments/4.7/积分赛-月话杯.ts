@@ -569,7 +569,7 @@ export default defineTournament({
             },
             {
               playerA: "栗子尖",
-              playerB: "筱熙小迷妹",
+              playerB: "筱熙的小迷妹",
               video: "https://www.bilibili.com/video/BV1HS421R7Fn",
               games: [
                 {
