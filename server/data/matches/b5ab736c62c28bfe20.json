@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 3,
   "matchIndex": 4,
+  "gameVersion": "4.3",
   "playerA": {
     "playerId": "d2ecbeaa9fd79c91",
     "nickname": "Kirisa"
   },
   "playerB": {
-    "playerId": "6e43ceaee9922fb6",
+    "playerId": "05c7910a396dd46b",
     "nickname": "Inzhagi"
   },
   "bans": [

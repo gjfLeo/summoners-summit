@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 2,
+  "gameVersion": "4.5",
   "playerA": {
-    "playerId": "f3981e5fefc54b34",
+    "playerId": "8121264606b8e4fa",
     "nickname": "弦聆aeon"
   },
   "playerB": {
-    "playerId": "c8b04dcde70a1619",
+    "playerId": "27985779fe87e8d5",
     "nickname": "长岛原来没有雪"
   },
   "bans": [

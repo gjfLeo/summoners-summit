@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 0,
   "matchIndex": 1,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "1661a9de6108f33e",
     "nickname": "只玩水草皇呜呜"
   },
   "playerB": {
-    "playerId": "16d086bf07e8ef0c",
+    "playerId": "afbd11dddcd25408",
     "nickname": "蝶隐之时"
   },
   "gameIds": [

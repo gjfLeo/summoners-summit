@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 3,
+  "gameVersion": "4.7",
   "playerA": {
     "playerId": "ac9aff8927acdfb8",
     "nickname": "星莹Sweet.Rain"
   },
   "playerB": {
-    "playerId": "85a639b74afc8033",
+    "playerId": "6f03ac738451aad1",
     "nickname": "不浪浪浪"
   },
   "bans": [

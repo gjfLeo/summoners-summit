@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 1,
+  "gameVersion": "3.7",
   "playerA": {
     "playerId": "1215505adf1339e5",
     "nickname": "Glyou_HZ"
   },
   "playerB": {
-    "playerId": "caf904914ec94c26",
+    "playerId": "4d63221d0d82d0a3",
     "nickname": "芭芭拉教主"
   },
   "gameIds": [

@@ -4,9 +4,10 @@
   "stageIndex": 2,
   "partIndex": 0,
   "matchIndex": 0,
+  "gameVersion": "3.8",
   "isFinal": true,
   "playerA": {
-    "playerId": "108ea19e874b9640",
+    "playerId": "1868cefe947ac87b",
     "nickname": "C"
   },
   "playerB": {

@@ -4,12 +4,13 @@
   "stageIndex": 1,
   "partIndex": 0,
   "matchIndex": 0,
+  "gameVersion": "4.2",
   "playerA": {
-    "playerId": "38843171293f28ad",
+    "playerId": "8e104f889d02a21a",
     "nickname": "Ling-神罚"
   },
   "playerB": {
-    "playerId": "b233d31e1c104bbc",
+    "playerId": "d3a32af6ab252173",
     "nickname": "Ling-树叶"
   },
   "gameIds": [

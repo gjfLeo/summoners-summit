@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 0,
   "matchIndex": 1,
+  "gameVersion": "4.3",
   "playerA": {
     "playerId": "828c6fa4cda2c687",
     "nickname": "卡牌狂魔张老伯"
   },
   "playerB": {
-    "playerId": "07d0885585b54200",
+    "playerId": "fd518af03f4a29f1",
     "nickname": "こじ"
   },
   "gameIds": [

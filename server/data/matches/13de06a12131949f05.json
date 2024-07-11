@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 0,
   "matchIndex": 4,
+  "gameVersion": "4.6",
   "playerA": {
-    "playerId": "8c0af2d8e3948a2c",
+    "playerId": "1ae98c0caf14417b",
     "nickname": "Lieil"
   },
   "playerB": {
-    "playerId": "df6a1f34f0793cce",
+    "playerId": "9b3d37bbcbf8602c",
     "nickname": "MrPillow"
   },
   "bans": [

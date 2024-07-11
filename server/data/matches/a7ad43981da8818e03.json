@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 0,
   "matchIndex": 2,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "ed4f7ffc6dc90ee7",
     "nickname": "WilliemKmetsch"
   },
   "playerB": {
-    "playerId": "7dd3d715c5338875",
+    "playerId": "9802039b0a913f9a",
     "nickname": "Zun"
   },
   "gameIds": [

@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 0,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "36f27fd362807050",
     "nickname": "牌手Aurora"
   },
   "playerB": {
-    "playerId": "769bdd5c773153c2",
+    "playerId": "28ab29d5df21e70c",
     "nickname": "丶绯雾"
   },
   "gameIds": [

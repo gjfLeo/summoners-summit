@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 3,
   "matchIndex": 1,
+  "gameVersion": "4.2",
   "playerA": {
     "playerId": "27996ddd31eed26d",
     "nickname": "九千羽"
   },
   "playerB": {
-    "playerId": "78dd09a53d2c1749",
+    "playerId": "64f572039ac379cd",
     "nickname": "Elaina"
   },
   "winnerOverride": "A",

@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 2,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "477c80964ce847b5",
     "nickname": "枫间璃"
   },
   "playerB": {
-    "playerId": "5d6cb70cd4f7ca95",
+    "playerId": "a8c3a8adadbd6d10",
     "nickname": "红莲"
   },
   "gameIds": [

@@ -4,8 +4,9 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 2,
+  "gameVersion": "3.8",
   "playerA": {
-    "playerId": "5dd99e2c65125a06",
+    "playerId": "793adfc7d802c093",
     "nickname": "Sherlock"
   },
   "playerB": {

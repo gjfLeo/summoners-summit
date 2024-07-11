@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 1,
+  "gameVersion": "3.8",
   "playerA": {
-    "playerId": "62d0c1dcdadeb5c9",
+    "playerId": "e904daa1b22cd8c7",
     "nickname": "卓越、疯猫"
   },
   "playerB": {
-    "playerId": "00662abba9d240b5",
+    "playerId": "465f52fb9191115a",
     "nickname": "哈士奇的冰激凌"
   },
   "gameIds": [

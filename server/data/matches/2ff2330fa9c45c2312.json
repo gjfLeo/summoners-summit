@@ -4,12 +4,13 @@
   "stageIndex": 1,
   "partIndex": 2,
   "matchIndex": 1,
+  "gameVersion": "4.1",
   "playerA": {
     "playerId": "7c2f0512e8c8a6d5",
     "nickname": "贪魔赌鬼神圣天"
   },
   "playerB": {
-    "playerId": "3a31c4a49e75f958",
+    "playerId": "b6e3a7c436a8b075",
     "nickname": "古卡王傀喵鹰猪"
   },
   "gameIds": [

@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 0,
   "matchIndex": 0,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "b694b5086c596c92",
     "nickname": "一不小欣x"
   },
   "playerB": {
-    "playerId": "964edf604bee92e2",
+    "playerId": "e49834d6f70bd44b",
     "nickname": "Soul【刻魂】"
   },
   "gameIds": [

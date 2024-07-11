@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 2,
   "matchIndex": 0,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "742ad70755eb8d9b",
     "nickname": "皮皮猪今晚吃阿源"
   },
   "playerB": {
-    "playerId": "b9c0c0f48d90ea1c",
+    "playerId": "448f18af5b17ebcd",
     "nickname": "忘尘希熙"
   },
   "gameIds": [

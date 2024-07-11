@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 2,
+  "gameVersion": "3.7",
   "playerA": {
     "playerId": "6e2707a45bb0d3f3",
     "nickname": "卡密sama"
   },
   "playerB": {
-    "playerId": "2c352b1ac01c898a",
+    "playerId": "3e222c20fe2296ae",
     "nickname": "企鹅带带北极熊"
   },
   "gameIds": [

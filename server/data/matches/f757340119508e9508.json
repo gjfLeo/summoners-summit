@@ -4,12 +4,13 @@
   "stageIndex": 0,
   "partIndex": 1,
   "matchIndex": 1,
+  "gameVersion": "3.8",
   "playerA": {
     "playerId": "cc96e027195f742d",
     "nickname": "胡桃小姐单推人"
   },
   "playerB": {
-    "playerId": "a306ccfa9f357ff5",
+    "playerId": "094e49ff2dbf2136",
     "nickname": "袋大鼠"
   },
   "gameIds": [
