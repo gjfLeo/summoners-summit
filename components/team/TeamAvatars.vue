@@ -10,6 +10,7 @@
       <template #trigger>
         <CardAvatar
           :card="card"
+          alt=""
           class="mr--1 h-8 border border-light-9 rd-50% last-mr-0"
         />
       </template>

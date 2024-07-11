@@ -16,6 +16,7 @@ export function getMatchList(): Match[] {
 export const ZMatchSaveParams = ZMatch.partial({
   id: true,
 }).omit({
+  gameVersion: true,
   gameIds: true,
   bans: true,
   playerA: true,
@@ -38,6 +39,7 @@ export const ZMatchSaveParams = ZMatch.partial({
   games: ZGame.omit({
     id: true,
     matchId: true,
+    gameVersion: true,
   }).extend({
     _key: z.number(),
     playerADeck: z.object({
@@ -88,6 +90,7 @@ export function saveMatch(params: MatchSaveParams) {
     const gameId = `${matchId}${String(index + 1).padStart(2, "0")}`;
     const game: Game = {
       ...gameParam,
+      gameVersion: tournament.gameVersion,
       playerADeck: {
         ...gameParam.playerADeck,
         teamId: gameParam.playerADeck.characters.toSorted().join("-"),
@@ -122,6 +125,7 @@ export function saveMatch(params: MatchSaveParams) {
   const match: Match = {
     ...params,
     id: matchId,
+    gameVersion: tournament.gameVersion,
     playerA,
     playerB,
     bans: bans.length ? bans : undefined,

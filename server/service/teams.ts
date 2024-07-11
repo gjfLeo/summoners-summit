@@ -1,7 +1,7 @@
 import { getGameList } from "./game";
 import { getTournament } from "./tournament";
 import { getMatch, getMatchList } from "./match";
-import type { DeckTeamId, GetTeamStatsParams, TeamStats } from "~/types";
+import type { DeckTeamId, GetTeamMatchupsParams, GetTeamStatsParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 
 export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeamId, TeamStats> {
@@ -10,6 +10,7 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
   const records: Record<DeckTeamId, TeamStats> = {};
   function getRecord(teamId: DeckTeamId): TeamStats {
     return records[teamId] ??= {
+      teamId,
       games: 0,
       gamesWin: 0,
       gamesStarter: 0,
@@ -22,14 +23,6 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
   }
 
   const games = getGameList()
-    .map((game) => {
-      const match = getMatch(game.matchId)!;
-      const tournament = getTournament(match.tournamentId)!;
-      return {
-        gameVersion: tournament.gameVersion,
-        ...game,
-      };
-    })
     .filter(game => game.gameVersion === gameVersion)
     .flatMap(game => [game, getMirroredGame(game)]);
 
@@ -54,13 +47,6 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
   });
 
   const matches = getMatchList()
-    .map((match) => {
-      const tournament = getTournament(match.tournamentId)!;
-      return {
-        gameVersion: tournament.gameVersion,
-        ...match,
-      };
-    })
     .filter(match => match.gameVersion === gameVersion);
   matches.flatMap(match => match.bans ?? [])
     .filter(ban => ban.banType === "team")
@@ -69,6 +55,25 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
       const record = getRecord(teamId);
       record.banned++;
     });
+
+  return records;
+}
+
+export function getTeamMatchupsRecords(params: GetTeamMatchupsParams): Record<`${DeckTeamId}/${DeckTeamId}`, TeamMatchups> {
+  const { gameVersion, minGames } = params;
+
+  const records: Record<`${DeckTeamId}/${DeckTeamId}`, TeamMatchups> = {};
+  function getRecord(teamAId: DeckTeamId, teamBId: DeckTeamId): TeamMatchups {
+    if (teamAId > teamBId) {
+      [teamAId, teamBId] = [teamBId, teamAId];
+    }
+    return records[`${teamAId}/${teamBId}`] ??= {
+      teamAId,
+      teamBId,
+      gamesAWin: 0,
+      gamesBWin: 0,
+    };
+  }
 
   return records;
 }

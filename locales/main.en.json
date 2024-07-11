@@ -17,5 +17,8 @@
   },
   "tournament": {
     "champion": "Champion"
+  },
+  "stats": {
+    "gamesPlayed": "Played"
   }
 }

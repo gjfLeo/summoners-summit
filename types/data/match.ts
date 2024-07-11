@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ZCardId, ZGameId, ZMatchId, ZTournamentId } from "./base";
+import { ZCardId, ZGameId, ZGameVersionId, ZMatchId, ZTournamentId } from "./base";
 import { ZDeckTeamId } from "./deck";
 import { ZPlayerId, ZPlayerNickname } from "./player";
 
@@ -22,6 +22,7 @@ export const ZMatch = z.object({
   stageIndex: z.number(),
   partIndex: z.number(),
   matchIndex: z.number(),
+  gameVersion: ZGameVersionId,
   isFinal: z.boolean().optional(),
   playerA: z.object({
     playerId: ZPlayerId,

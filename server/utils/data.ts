@@ -21,9 +21,8 @@ export function readDataList<R, P extends string = string>(dataPath: P): R[] {
 
 export function writeData<R, P extends string = string>(dataPath: P, data: R): void {
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
-  fse.writeJsonSync(fullPath, data, {
-    spaces: 2,
-  });
+  fse.ensureDirSync(path.dirname(fullPath));
+  fse.writeJsonSync(fullPath, data, { spaces: 2 });
 }
 
 export function deleteData<P extends string = string>(dataPath: P): void {

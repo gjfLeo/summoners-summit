@@ -68,5 +68,19 @@
     "tournamentDetails": "赛事详情",
     "type": "赛事类别",
     "watchReplay": "观看录像"
+  },
+  "stats": {
+    "gamesPlayed": "场数",
+    "atLeast": "至少{0}场",
+    "gamesBanned": "禁用",
+    "gamesBP": "场数+禁用",
+    "winRate": "胜率",
+    "gamesWin": "胜场",
+    "gamesNetWin": "净胜",
+    "gamesExcludeMirror": "非镜像场数",
+    "gamesWinExcludeMirror": "非镜像胜场",
+    "winRateExcludeMirror": "非镜像胜率",
+    "starterWinRate": "先手胜率",
+    "followerWinRate": "后手胜率"
   }
 }

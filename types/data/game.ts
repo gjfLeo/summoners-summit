@@ -1,10 +1,11 @@
 import { z } from "zod";
-import { ZCardId, ZGameId, ZMatchId } from "./base";
+import { ZCardId, ZGameId, ZGameVersionId, ZMatchId } from "./base";
 import { ZDeckCode, ZDeckTeamId } from "./deck";
 
 export const ZGame = z.object({
   id: ZGameId,
   matchId: ZMatchId,
+  gameVersion: ZGameVersionId,
   playerADeck: z.object({
     characters: z.array(ZCardId).length(3),
     teamId: ZDeckTeamId,

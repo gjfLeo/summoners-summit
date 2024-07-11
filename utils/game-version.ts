@@ -6,3 +6,7 @@ export function getGameVersionPath(gameVersion: GameVersionId | GameVersion): st
   }
   return gameVersion.replace(".", "-");
 }
+
+export function getGameVersionIdByPath(gameVersionPath: string): GameVersionId {
+  return gameVersionPath.replace("-", ".");
+}

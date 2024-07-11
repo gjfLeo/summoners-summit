@@ -1,4 +1,4 @@
-import type { Game, GameDetail, GameId, GetGameListParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
+import type { Game, GameDetail, GameId, GameVersionId, GetGameListParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
 
 export async function useApiGetTournamentList() {
   const { data, refresh } = await useFetch("/api/v3/tournaments/list");
@@ -23,5 +23,12 @@ export async function useApiGetGameList(params: GetGameListParams) {
   return {
     games: computed<GameDetail[]>(() => data.value?.games ?? []),
     refresh,
+  };
+}
+
+export async function useApiGetTeamStatsRecords(query: { gameVersion: GameVersionId }) {
+  const { data } = await useFetch("/api/v3/teams/stats", { query });
+  return {
+    teamStatsRecords: computed(() => data.value?.teamStatsRecords ?? {}),
   };
 }

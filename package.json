@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.3",
-    "@bg-dev/nuxt-naiveui": "^1.14.0",
+    "@bg-dev/nuxt-naiveui": "1.0.0-edge.2",
     "@genshin-db/tcg": "^5.1.6",
     "@gjfleo/eslint-config": "^1.0.8",
     "@iconify-json/carbon": "^1.1.36",
@@ -37,6 +37,7 @@
     "eslint-ts-patch": "8.57.0-0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
+    "mathjs": "^13.0.2",
     "nuxt": "^3.12.3",
     "nuxt-module-eslint-config": "^0.1.1",
     "pinia": "^2.1.7",

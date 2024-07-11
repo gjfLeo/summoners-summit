@@ -1,4 +1,4 @@
-import { getTeamStatsRecords } from "~/server/service/teams";
+import { getTeamStatsRecords } from "~/server/service";
 import { ZGetTeamStatsParams } from "~/types";
 
 export default defineEventHandler(async (event) => {
