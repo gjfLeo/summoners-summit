@@ -4,7 +4,7 @@ import type { DeckCards, DeckCode } from "~/types/data/deck";
 const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "ntr", "pcp", "rbq"];
 
 export function useDeckEncoder() {
-  const { characterCardById, actionCardById, characterCardList, actionCardList, dataInitialized } = useSharedData();
+  const { characterCardById, actionCardById, characterCardList, actionCardList } = useSharedData();
 
   const getCharacterCardByShareId = useMemoize((shareId: number): CardId => {
     if (shareId === 0) return "";
@@ -19,8 +19,6 @@ export function useDeckEncoder() {
     return card.id as CardId;
   });
   function encodeDeck(deck: DeckCards): DeckCode {
-    if (!dataInitialized.value) throw new Error("SharedData not initialized");
-
     const shareIds = [
       ...deck.characterCards.map(cardId => characterCardById.value[cardId]?.shareId ?? "0"),
       ...deck.actionCards.map(cardId => actionCardById.value[cardId]?.shareId ?? "0"),
@@ -57,8 +55,6 @@ export function useDeckEncoder() {
   }
 
   function decodeDeck(deckCode: DeckCode): DeckCards {
-    if (!dataInitialized.value) throw new Error("SharedData not initialized");
-
     const reorderedByteArray = Array.from(atob(deckCode), c => c.codePointAt(0)!);
     if (reorderedByteArray.length !== 51) {
       throw new Error("无效的分享码");

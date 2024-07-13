@@ -5,44 +5,39 @@ function toComputed<T>(r: Ref<T>) {
 }
 
 const useSharedDataStore = defineStore("shared", () => {
-  const gameVersionList = ref<GameVersion[]>([]);
+  const { data: gameVersionListData, refresh: fetchGameVersionData, status: gameVersionDataStatus } = useAsyncData(
+    "gameVersionList",
+    () => $fetch("/api/v3/game-versions/list"),
+  );
+  const gameVersionList = computed(() => gameVersionListData.value?.gameVersionList ?? []);
   const gameVersionLatest = computed(() => {
     return gameVersionList.value.length ? gameVersionList.value[0].id : "";
   });
-  async function fetchGameVersionData() {
-    const data = await $fetch("/api/v3/game-versions/list");
-    gameVersionList.value = data.gameVersionList;
-  }
 
-  const tournamentTypeList = ref<TournamentType[]>([]);
-  async function fetchTournamentTypeData() {
-    const data = await $fetch("/api/v3/tournaments/getTypeList");
-    tournamentTypeList.value = data.tournamentTypeList;
-  }
+  const { data: tournamentTypeListData, refresh: fetchTournamentTypeData, status: tournamentTypeDataStatus } = useAsyncData(
+    "tournamentTypeList",
+    () => $fetch("/api/v3/tournaments/getTypeList"),
+  );
+  const tournamentTypeList = computed(() => tournamentTypeListData.value?.tournamentTypeList ?? []);
 
-  const characterCardById = ref<Record<CardId, CharacterCardInfo>>({});
+  const { data: cardData, refresh: fetchCardData, status: cardDataStatus } = useAsyncData(
+    "cards",
+    () => $fetch("/api/v3/cards/getCards"),
+  );
+
+  const characterCardById = computed(() => cardData.value?.characterCards ?? {});
   const characterCardIds = computed(() => Object.keys(characterCardById.value).sort());
   const characterCardList = computed(() => characterCardIds.value.map(id => characterCardById.value[id]));
-  const actionCardById = ref<Record<CardId, ActionCardInfo>>({});
+  const actionCardById = computed(() => cardData.value?.actionCards ?? {});
   const actionCardIds = computed(() => Object.keys(actionCardById.value).sort());
   const actionCardList = computed(() => actionCardIds.value.map(id => actionCardById.value[id]));
-  async function fetchCardData() {
-    const data = await $fetch("/api/v3/cards/getCards");
-    characterCardById.value = data.characterCards;
-    actionCardById.value = data.actionCards;
-  }
-
-  const dataInitialized = ref(false);
-  Promise.all([
-    fetchGameVersionData(),
-    fetchTournamentTypeData(),
-    fetchCardData(),
-  ]).then(() => {
-    dataInitialized.value = true;
-  });
 
   async function awaitData() {
-    return await until(dataInitialized).toBe(true);
+    return await Promise.all([
+      until(gameVersionDataStatus).not.toBe("pending"),
+      until(tournamentTypeDataStatus).not.toBe("pending"),
+      until(cardDataStatus).not.toBe("pending"),
+    ]);
   }
 
   return {
@@ -61,7 +56,6 @@ const useSharedDataStore = defineStore("shared", () => {
     actionCardList,
     fetchCardData,
 
-    dataInitialized: toComputed(dataInitialized),
     awaitData,
   };
 });

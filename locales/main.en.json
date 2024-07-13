@@ -20,5 +20,10 @@
   },
   "stats": {
     "gamesPlayed": "Played"
+  },
+  "teams": {
+    "matchupTable": {
+      "minGamesNum": "Games"
+    }
   }
 }

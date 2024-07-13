@@ -1,5 +1,5 @@
 <template>
-  <div un-flex="~ col gap-4" class="min-h-content">
+  <div un-flex="~ col" class="min-h-content" style="gap: 1rem">
     <div un-flex="~ gap-2">
       <div><NInput v-model:value="filterText" clearable /></div>
       <NButton type="primary" secondary @click="refresh()"><div class="i-carbon:renew" /></NButton>

@@ -82,5 +82,12 @@
     "winRateExcludeMirror": "非镜像胜率",
     "starterWinRate": "先手胜率",
     "followerWinRate": "后手胜率"
+  },
+  "teams": {
+    "matchupTable": {
+      "minGamesNum": "最小场数"
+    },
+    "characterSelectorFocusPlaceholder": "支持拼音和首字母筛选",
+    "characterSelectorDefaultPlaceholder": "角色"
   }
 }

@@ -34,14 +34,16 @@ const { currentLocalized, t } = useLocales();
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem 2rem;
+}
 
-  @screen lt-sm {
-    & {
-      display: flex;
-      flex-direction: column;
-    }
+@screen lt-sm {
+  .tournament-dl {
+    display: flex;
+    flex-direction: column;
+
     dd {
-      @apply ml-6 mt--1;
+      margin-left: 1.5rem;
+      margin-top: -0.25rem;
     }
   }
 }

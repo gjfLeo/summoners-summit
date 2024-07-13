@@ -1,9 +1,9 @@
-import { getTeamMatchupsRecords } from "~/server/service";
+import { getTeamMatchupStats } from "~/server/service";
 import { ZGetTeamMatchupsParams } from "~/types";
 
 export default defineEventHandler(async (event) => {
   const query = await getValidatedQuery(event, ZGetTeamMatchupsParams.parse);
-  const records = getTeamMatchupsRecords(query);
+  const { teams, matchupStats } = getTeamMatchupStats(query);
 
-  return responseData({ teamMatchupRecords: records });
+  return responseData({ teams, matchupStats });
 });

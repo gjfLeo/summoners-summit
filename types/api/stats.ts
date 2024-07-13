@@ -21,13 +21,19 @@ export interface TeamStats {
 
 export const ZGetTeamMatchupsParams = z.object({
   gameVersion: ZGameVersionId,
-  minGames: z.number().optional(),
 }).strip();
 export type GetTeamMatchupsParams = z.infer<typeof ZGetTeamMatchupsParams>;
 
 export interface TeamMatchups {
-  teamAId: DeckTeamId;
-  teamBId: DeckTeamId;
-  gamesAWin: number;
-  gamesBWin: number;
-}
+  teamId: DeckTeamId;
+  opponents: {
+    [opponentTeamId: DeckTeamId]: {
+      numGames: number;
+      numGamesWin: number;
+    };
+  };
+  overall: {
+    numGames: number;
+    numGamesWin: number;
+  };
+};

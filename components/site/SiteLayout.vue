@@ -15,6 +15,7 @@
         content-class="justify-center"
       >
         <NLayoutContent
+          id="top"
           class="z-2 max-w-1024px"
           content-style="padding: 1rem"
         >
