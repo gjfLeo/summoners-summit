@@ -37,3 +37,16 @@ export interface TeamMatchups {
     numGamesWin: number;
   };
 };
+
+export interface CharacterCardStats {
+  numGames: number;
+  numGamesWin: number;
+  numBanned: number;
+}
+
+export interface ActionCardStats {
+  numGames: number;
+  numGamesWin: number;
+  numPicked: number;
+  numPickedWin: number;
+}
