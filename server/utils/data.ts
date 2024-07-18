@@ -2,12 +2,14 @@ import path from "node:path";
 import fse from "fs-extra";
 import fg from "fast-glob";
 
-export function readData<R, P extends string = string>(dataPath: P): R | undefined {
+export function readData<R, P extends string = string>(dataPath: P): R | undefined;
+export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
+export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   if (!fse.existsSync(fullPath)) {
-    return undefined;
+    return defaultData;
   }
-  return fse.readJsonSync(fullPath) as R;
+  return fse.readJsonSync(fullPath) as R ?? defaultData;
 }
 
 export function readDataList<R, P extends string = string>(dataPath: P): R[] {

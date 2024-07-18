@@ -33,3 +33,24 @@ export function getMirroredGame<T extends Pick<Game, "playerADeck" | "playerBDec
     winner: getMirroredPlayer(t.winner),
   };
 }
+
+export function getMirroredMatch<T extends Pick<Match, "playerA" | "playerB" | "bans" | "winnerOverride">>(t: T): T {
+  return {
+    ...t,
+    playerA: t.playerB,
+    playerB: t.playerA,
+    bans: t.bans?.map(b => (
+      b.banType === "character"
+        ? {
+            ...b,
+            playerACardId: b.playerBCardId,
+            playerBCardId: b.playerACardId,
+          }
+        : {
+            ...b,
+            playerATeamId: b.playerBTeamId,
+            playerBTeamId: b.playerATeamId,
+          })),
+    winnerOverride: getMirroredPlayer(t.winnerOverride),
+  };
+}
