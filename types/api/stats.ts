@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { ZGameVersionId } from "../data";
-import type { DeckTeamId } from "../data";
+import type { CardId, DeckTeamId } from "../data";
 
 export const ZGetTeamStatsParams = z.object({
   gameVersion: ZGameVersionId,
@@ -39,12 +39,14 @@ export interface TeamMatchups {
 };
 
 export interface CharacterCardStats {
+  cardId: CardId;
   numGames: number;
   numGamesWin: number;
   numBanned: number;
 }
 
 export interface ActionCardStats {
+  cardId: CardId;
   numGames: number;
   numGamesWin: number;
   numPicked: number;

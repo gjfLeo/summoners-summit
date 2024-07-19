@@ -99,6 +99,7 @@ async function confirm() {
     await contentRef.value?.validate();
   }
   catch (error) {
+    console.error(error);
     return;
   }
   emit("done", ranks.value);

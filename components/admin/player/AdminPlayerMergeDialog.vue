@@ -75,6 +75,7 @@ async function submit() {
     await formRef.value?.validate();
   }
   catch (error) {
+    console.error(error);
     return;
   }
 

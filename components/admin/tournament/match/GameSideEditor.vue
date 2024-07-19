@@ -91,7 +91,7 @@ async function inputActionCards() {
   try {
     actionCards.value = await actionCardsEditor.value.edit(actionCards.value);
   }
-  catch (e) {
+  catch {
     // 取消
   }
 }

@@ -40,3 +40,11 @@ export async function useApiGetTeamMatchupStats(query: { gameVersion: GameVersio
     matchupStats: computed(() => data.value?.matchupStats ?? []),
   };
 }
+
+export async function useApiGetCharacterCardStats(query: { gameVersion: GameVersionId }) {
+  const { data } = await useFetch("/api/v3/cards/getCharacterCardStats", { query });
+  return {
+    characterCardStats: computed(() => data.value?.characterCardStats ?? []),
+    numGames: computed(() => data.value?.numGames ?? 0),
+  };
+}

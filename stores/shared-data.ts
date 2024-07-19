@@ -1,5 +1,3 @@
-import type { ActionCardInfo, CardId, CharacterCardInfo, GameVersion, TournamentType } from "~/types/data";
-
 function toComputed<T>(r: Ref<T>) {
   return computed(() => r.value);
 }

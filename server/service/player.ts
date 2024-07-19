@@ -26,8 +26,8 @@ export function deletePlayer(playerId: PlayerId): void {
   deleteData(`players/${playerId}`);
 }
 
-const ZSavePlayerParams = ZPlayer.partial({ id: true });
-type SavePlayerParams = z.infer<typeof ZSavePlayerParams>;
+const _ZSavePlayerParams = ZPlayer.partial({ id: true });
+type SavePlayerParams = z.infer<typeof _ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
   const oldId = params.id;
   const newId = params.uids[0] ? hash(params.uids[0]) : (oldId ?? hash());

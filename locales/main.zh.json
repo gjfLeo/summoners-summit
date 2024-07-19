@@ -50,6 +50,27 @@
     "submitTeamsBanTeamsDescription": "对战双方各提交 {0} 套阵容，并禁用对手其中 {1} 套",
     "submitTeamsDescription": "对战双方各提交 {0} 套阵容"
   },
+  "stats": {
+    "atLeast": "至少{0}场",
+    "followerWinRate": "后手胜率",
+    "gamesBP": "场数+禁用",
+    "gamesBanned": "禁用",
+    "gamesExcludeMirror": "非镜像场数",
+    "gamesNetWin": "净胜",
+    "gamesPlayed": "场数",
+    "gamesWin": "胜场",
+    "gamesWinExcludeMirror": "非镜像胜场",
+    "starterWinRate": "先手胜率",
+    "winRate": "胜率",
+    "winRateExcludeMirror": "非镜像胜率"
+  },
+  "teams": {
+    "characterSelectorDefaultPlaceholder": "角色",
+    "characterSelectorFocusPlaceholder": "支持拼音和首字母筛选",
+    "matchupTable": {
+      "minGamesNum": "最小场数"
+    }
+  },
   "tournament": {
     "ban": "禁用",
     "champion": "冠军",
@@ -69,25 +90,11 @@
     "type": "赛事类别",
     "watchReplay": "观看录像"
   },
-  "stats": {
-    "gamesPlayed": "场数",
-    "atLeast": "至少{0}场",
-    "gamesBanned": "禁用",
-    "gamesBP": "场数+禁用",
-    "winRate": "胜率",
-    "gamesWin": "胜场",
-    "gamesNetWin": "净胜",
-    "gamesExcludeMirror": "非镜像场数",
-    "gamesWinExcludeMirror": "非镜像胜场",
-    "winRateExcludeMirror": "非镜像胜率",
-    "starterWinRate": "先手胜率",
-    "followerWinRate": "后手胜率"
-  },
-  "teams": {
-    "matchupTable": {
-      "minGamesNum": "最小场数"
-    },
-    "characterSelectorFocusPlaceholder": "支持拼音和首字母筛选",
-    "characterSelectorDefaultPlaceholder": "角色"
+  "cards": {
+    "characterBarChart": {
+      "numGamesWin": "获胜对局数",
+      "numGamesLose": "落败对局数",
+      "numBanned": "被禁用次数"
+    }
   }
 }

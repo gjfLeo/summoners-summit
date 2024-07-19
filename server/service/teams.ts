@@ -1,6 +1,5 @@
 import { getGameList } from "./game";
-import { getTournament } from "./tournament";
-import { getMatch, getMatchList } from "./match";
+import { getMatchList } from "./match";
 import type { DeckTeamId, GetTeamMatchupsParams, GetTeamStatsParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 
