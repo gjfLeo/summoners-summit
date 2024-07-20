@@ -1,0 +1,22 @@
+{
+  "id": "8fc737cff291ed6403",
+  "tournamentId": "8fc737cff291ed64",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "ea0cfc1d39ee4415",
+    "nickname": "TaKey"
+  },
+  "playerB": {
+    "playerId": "449cb8767216ff83",
+    "nickname": "Xxsan"
+  },
+  "gameIds": [
+    "8fc737cff291ed640301",
+    "8fc737cff291ed640302",
+    "8fc737cff291ed640303"
+  ],
+  "video": "https://www.bilibili.com/video/BV1NZ421T72N"
+}

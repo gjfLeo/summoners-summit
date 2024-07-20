@@ -1,0 +1,23 @@
+{
+  "id": "8fc737cff291ed6402",
+  "tournamentId": "8fc737cff291ed64",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "bd6ea69b8dde8bff",
+    "nickname": "Dr.666"
+  },
+  "playerB": {
+    "playerId": "c93b91895431d094",
+    "nickname": "星夜の浮梦"
+  },
+  "gameIds": [
+    "8fc737cff291ed640201",
+    "8fc737cff291ed640202",
+    "8fc737cff291ed640203",
+    "8fc737cff291ed640204"
+  ],
+  "video": "https://www.bilibili.com/video/BV1MJ4m1M7bf"
+}

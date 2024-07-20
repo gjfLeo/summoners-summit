@@ -1,0 +1,24 @@
+{
+  "id": "8fc737cff291ed6406",
+  "tournamentId": "8fc737cff291ed64",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "bd6ea69b8dde8bff",
+    "nickname": "Dr.666"
+  },
+  "playerB": {
+    "playerId": "9de4785d58d2aa3f",
+    "nickname": "Takey"
+  },
+  "gameIds": [
+    "8fc737cff291ed640601",
+    "8fc737cff291ed640602",
+    "8fc737cff291ed640603",
+    "8fc737cff291ed640604",
+    "8fc737cff291ed640605"
+  ],
+  "video": "https://www.bilibili.com/video/BV136421f7FU"
+}

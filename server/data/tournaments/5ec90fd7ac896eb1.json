@@ -1,0 +1,104 @@
+{
+  "id": "5ec90fd7ac896eb1",
+  "name": {
+    "zh": "好游快爆杯"
+  },
+  "gameVersion": "4.7",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-06-29",
+          "matchIds": [
+            "5ec90fd7ac896eb101",
+            "5ec90fd7ac896eb102",
+            "5ec90fd7ac896eb103",
+            "5ec90fd7ac896eb104"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 3,
+          "numCharactersRequired": 7,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-07-03",
+          "matchIds": [
+            "5ec90fd7ac896eb105",
+            "5ec90fd7ac896eb106"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "banCharacters": {
+          "num": 1
+        },
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 9,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-07-06",
+          "matchIds": [
+            "5ec90fd7ac896eb107"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ee8db6a7b31bc3f005",
+  "tournamentId": "ee8db6a7b31bc3f0",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "932f6cb64c228bb5",
+    "nickname": "草莓味果酱"
+  },
+  "playerB": {
+    "playerId": "8c86ff706fdadf8a",
+    "nickname": "JKJKJ"
+  },
+  "gameIds": [
+    "ee8db6a7b31bc3f00501",
+    "ee8db6a7b31bc3f00502",
+    "ee8db6a7b31bc3f00503",
+    "ee8db6a7b31bc3f00504"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ni421h7CQ"
+}

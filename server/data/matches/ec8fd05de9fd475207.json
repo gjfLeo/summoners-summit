@@ -1,0 +1,36 @@
+{
+  "id": "ec8fd05de9fd475207",
+  "tournamentId": "ec8fd05de9fd4752",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.7",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "11df8c4eabb514ec",
+    "nickname": "吟风咏月"
+  },
+  "playerB": {
+    "playerId": "8752750a3809d85d",
+    "nickname": "届不到的莉芭芭"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "2503",
+      "playerBCardId": "2203"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1107-1209-1504",
+      "playerBTeamId": "1107-1209-1504"
+    }
+  ],
+  "gameIds": [
+    "ec8fd05de9fd47520701",
+    "ec8fd05de9fd47520702",
+    "ec8fd05de9fd47520703",
+    "ec8fd05de9fd47520704"
+  ],
+  "video": "https://www.bilibili.com/video/BV1jy411z7EU?p=4"
+}

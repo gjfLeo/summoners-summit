@@ -1,0 +1,30 @@
+{
+  "id": "1e1309c3388bbc4d12",
+  "tournamentId": "1e1309c3388bbc4d",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "ac9aff8927acdfb8",
+    "nickname": "星莹Sweet.Rain"
+  },
+  "playerB": {
+    "playerId": "5ffe01f5fe9c3c56",
+    "nickname": "轮舞曲"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "2204-2405-2503",
+      "playerBTeamId": "2204-2405-2503"
+    }
+  ],
+  "gameIds": [
+    "1e1309c3388bbc4d1201",
+    "1e1309c3388bbc4d1202",
+    "1e1309c3388bbc4d1203",
+    "1e1309c3388bbc4d1204"
+  ],
+  "video": "https://www.bilibili.com/video/BV1nw4m1e7ma"
+}

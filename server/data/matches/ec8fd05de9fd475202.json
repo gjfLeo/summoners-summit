@@ -1,0 +1,28 @@
+{
+  "id": "ec8fd05de9fd475202",
+  "tournamentId": "ec8fd05de9fd4752",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "6d4a0c7591d47f8d",
+    "nickname": "吃掉一只萌酱"
+  },
+  "playerB": {
+    "playerId": "37b7b6d052199ecb",
+    "nickname": "袭人"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "2204-2405-2503",
+      "playerBTeamId": "2204-2405-2503"
+    }
+  ],
+  "gameIds": [
+    "ec8fd05de9fd47520201",
+    "ec8fd05de9fd47520202"
+  ],
+  "video": "https://www.bilibili.com/video/BV1jy411z7EU?p=2"
+}

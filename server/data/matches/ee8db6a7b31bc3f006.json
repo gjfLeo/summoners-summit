@@ -1,0 +1,24 @@
+{
+  "id": "ee8db6a7b31bc3f006",
+  "tournamentId": "ee8db6a7b31bc3f0",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "3f8df132866b9195",
+    "nickname": "红颜~nano"
+  },
+  "playerB": {
+    "playerId": "366ac4e1c41ef59f",
+    "nickname": "小七"
+  },
+  "gameIds": [
+    "ee8db6a7b31bc3f00601",
+    "ee8db6a7b31bc3f00602",
+    "ee8db6a7b31bc3f00603",
+    "ee8db6a7b31bc3f00604",
+    "ee8db6a7b31bc3f00605"
+  ],
+  "video": "https://www.bilibili.com/video/BV1or421T7mj"
+}

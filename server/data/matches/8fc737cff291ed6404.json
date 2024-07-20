@@ -1,0 +1,23 @@
+{
+  "id": "8fc737cff291ed6404",
+  "tournamentId": "8fc737cff291ed64",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "4.7",
+  "playerA": {
+    "playerId": "f4368b8ee00a6d1a",
+    "nickname": "栗子尖"
+  },
+  "playerB": {
+    "playerId": "5ffe01f5fe9c3c56",
+    "nickname": "筱熙的小迷妹"
+  },
+  "gameIds": [
+    "8fc737cff291ed640401",
+    "8fc737cff291ed640402",
+    "8fc737cff291ed640403",
+    "8fc737cff291ed640404"
+  ],
+  "video": "https://www.bilibili.com/video/BV1HS421R7Fn"
+}

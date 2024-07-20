@@ -1,0 +1,36 @@
+{
+  "id": "5ec90fd7ac896eb107",
+  "tournamentId": "5ec90fd7ac896eb1",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.7",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "cc96e027195f742d",
+    "nickname": "胡桃花开青雀鸣"
+  },
+  "playerB": {
+    "playerId": "11df8c4eabb514ec",
+    "nickname": "吟风咏月"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "2203",
+      "playerBCardId": "2503"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1210-2602",
+      "playerBTeamId": "1109-1210-2602"
+    }
+  ],
+  "gameIds": [
+    "5ec90fd7ac896eb10701",
+    "5ec90fd7ac896eb10702",
+    "5ec90fd7ac896eb10703",
+    "5ec90fd7ac896eb10704"
+  ],
+  "video": "https://live.i3839.com/n/hykb/zhibo/m/?comm_id=14&imm=0&gameid=106235"
+}

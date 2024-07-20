@@ -71,6 +71,69 @@
             "1e1309c3388bbc4d09",
             "1e1309c3388bbc4d10"
           ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-06-26",
+          "matchIds": [
+            "1e1309c3388bbc4d11",
+            "1e1309c3388bbc4d12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-06-27",
+          "matchIds": [
+            "1e1309c3388bbc4d13",
+            "1e1309c3388bbc4d14"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-06-29",
+          "matchIds": [
+            "1e1309c3388bbc4d15"
+          ]
         }
       ]
     }
