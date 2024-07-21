@@ -10,6 +10,7 @@
     "postinstall": "nuxi prepare",
     "start": "node .output/server/index.mjs",
     "start:generate": "npx serve .output/public -p 4000",
+    "generate-preview": "nuxi generate && npx serve .output/public -p 4000",
     "lint": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit"
   },

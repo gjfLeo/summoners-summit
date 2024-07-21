@@ -2,6 +2,14 @@
   "card": {
     "invalidCardType": "无效的卡牌类型"
   },
+  "cards": {
+    "characterBarChart": {
+      "numBanned": "被禁用次数",
+      "numGamesLose": "落败对局数",
+      "numGamesWin": "获胜对局数",
+      "summary": "共统计 {0} 场比赛 / {1} 场对局"
+    }
+  },
   "deck": {
     "copyDeckShareCode": "复制分享码",
     "deckDetail": "牌组详情",
@@ -89,12 +97,5 @@
     "tournamentDetails": "赛事详情",
     "type": "赛事类别",
     "watchReplay": "观看录像"
-  },
-  "cards": {
-    "characterBarChart": {
-      "numGamesWin": "获胜对局数",
-      "numGamesLose": "落败对局数",
-      "numBanned": "被禁用次数"
-    }
   }
 }

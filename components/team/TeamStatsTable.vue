@@ -172,4 +172,10 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     render: row => renderWinRate(row.gamesFollowerWin, row.gamesFollower, row.followerWinRate),
   },
 ];
+
+onMounted(() => {
+  if (import.meta.client && history.state?.includeCharacters) {
+    includeCharacters.value = history.state.includeCharacters;
+  }
+});
 </script>

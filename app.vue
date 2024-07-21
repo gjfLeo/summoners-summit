@@ -6,6 +6,14 @@
   </SiteRoot>
 </template>
 
+<script lang="ts" setup>
+import { ROOT_FONT_SIZE_PX } from "~/config/layout";
+
+if (ROOT_FONT_SIZE_PX !== 14) {
+  console.error(`根元素font-size应为${ROOT_FONT_SIZE_PX}px，请修改app.vue`);
+}
+</script>
+
 <style>
 :root {
   font-size: 14px;

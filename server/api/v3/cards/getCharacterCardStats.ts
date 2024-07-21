@@ -17,6 +17,7 @@ export default defineEventHandler(async (event) => {
     cardId,
     numGames: 0,
     numGamesWin: 0,
+    numMatches: 0,
     numBanned: 0,
   });
 
@@ -31,23 +32,47 @@ export default defineEventHandler(async (event) => {
       });
     });
 
-  getMatchList()
-    .filter(match => match.gameVersion === gameVersion)
+  const matches = getMatchList().filter(match => match.gameVersion === gameVersion);
+  matches
     .forEach((match) => {
+      const playerACharacters: Record<CardId, true> = {};
+      const playerBCharacters: Record<CardId, true> = {};
       match.bans?.forEach((ban) => {
         if (ban.banType === "character") {
+          playerACharacters[ban.playerACardId] = true;
+          playerBCharacters[ban.playerBCardId] = true;
           getRecord(ban.playerACardId).numBanned++;
           getRecord(ban.playerBCardId).numBanned++;
         }
         else {
-          getCharacterCardsByTeamId(ban.playerATeamId).forEach(cardId => getRecord(cardId).numBanned++);
-          getCharacterCardsByTeamId(ban.playerBTeamId).forEach(cardId => getRecord(cardId).numBanned++);
+          getCharacterCardsByTeamId(ban.playerATeamId).forEach((cardId) => {
+            playerACharacters[cardId] = true;
+            getRecord(cardId).numBanned++;
+          });
+          getCharacterCardsByTeamId(ban.playerBTeamId).forEach((cardId) => {
+            playerBCharacters[cardId] = true;
+            getRecord(cardId).numBanned++;
+          });
         }
       });
+      match.gameIds.forEach((gameId) => {
+        const game = games.find(game => game.id === gameId);
+        game?.playerADeck.characters.forEach((cardId) => {
+          playerACharacters[cardId] = true;
+        });
+        game?.playerBDeck.characters.forEach((cardId) => {
+          playerBCharacters[cardId] = true;
+        });
+      });
+      [...Object.keys(playerACharacters), ...Object.keys(playerBCharacters)]
+        .forEach((cardId) => {
+          getRecord(cardId).numMatches++;
+        });
     });
 
   const numGames = games.length;
+  const numMatches = matches.length;
   const characterCardStats = Object.values(record).sort(sorter("numGames")).reverse();
 
-  return responseData({ characterCardStats, numGames });
+  return responseData({ characterCardStats, numGames, numMatches });
 });

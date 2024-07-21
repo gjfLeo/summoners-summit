@@ -46,5 +46,6 @@ export async function useApiGetCharacterCardStats(query: { gameVersion: GameVers
   return {
     characterCardStats: computed(() => data.value?.characterCardStats ?? []),
     numGames: computed(() => data.value?.numGames ?? 0),
+    numMatches: computed(() => data.value?.numMatches ?? 0),
   };
 }
