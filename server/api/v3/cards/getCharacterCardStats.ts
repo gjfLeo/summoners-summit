@@ -39,7 +39,10 @@ export default defineEventHandler(async (event) => {
       const playerBCharacters: Record<CardId, true> = {};
       match.bans?.forEach((ban) => {
         if (ban.banType === "character") {
+          // 角色禁用后双方均不可选择，算两边都上场
           playerACharacters[ban.playerACardId] = true;
+          playerACharacters[ban.playerBCardId] = true;
+          playerBCharacters[ban.playerACardId] = true;
           playerBCharacters[ban.playerBCardId] = true;
           getRecord(ban.playerACardId).numBanned++;
           getRecord(ban.playerBCardId).numBanned++;

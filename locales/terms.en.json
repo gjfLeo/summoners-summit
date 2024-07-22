@@ -1,4 +1,6 @@
 {
+  "actionCards": "Action Cards",
+  "characterCards": "Character Cards",
   "gameVersion": "Game version",
   "gameVersionShort": "Version"
 }

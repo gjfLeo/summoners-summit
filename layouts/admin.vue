@@ -24,7 +24,7 @@ useHead({
 
 const routes: SiteRoute[] = [
   {
-    label: "tournament",
+    label: "tournaments",
     to: "/admin/tournaments",
     matches: [
       /^\/admin\/tournament\/\w{16}$/,
@@ -41,7 +41,7 @@ const routes: SiteRoute[] = [
     ],
   },
   {
-    label: "player",
+    label: "players",
     to: "/admin/players",
     children: [
       {

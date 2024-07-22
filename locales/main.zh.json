@@ -8,6 +8,9 @@
       "numGamesLose": "落败对局数",
       "numGamesWin": "获胜对局数",
       "summary": "共统计 {0} 场比赛 / {1} 场对局"
+    },
+    "characterPickRateBarChart": {
+      "pickRatePercentage": "选取率\u2006(%)"
     }
   },
   "deck": {

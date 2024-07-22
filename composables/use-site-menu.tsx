@@ -37,20 +37,17 @@ export function useSiteMenu(routes: SiteRoute[]) {
 
   function checkRoute(options: MenuOption[]): string | undefined {
     for (const option of options) {
+      const routeOption = option as SiteRoute;
       if (option.children) {
         const key = checkRoute(option.children);
         if (key) return key;
       }
-      if ("to" in option) {
-        if (route.path === option.to as string) {
-          return option.key as string;
-        }
+      if (route.path === routeOption.to) {
+        return option.key as string;
       }
-      if ("matches" in option) {
-        for (const match of (option.matches as SiteRoute["matches"] ?? [])) {
-          if (match.test(route.path)) {
-            return option.key as string;
-          }
+      for (const match of (routeOption.matches ?? [])) {
+        if (match.test(route.path)) {
+          return option.key as string;
         }
       }
     }

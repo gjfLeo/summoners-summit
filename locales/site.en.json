@@ -1,5 +1,11 @@
 {
   "description": "Tournament Match Database for GITCG",
+  "menu": {
+    "cards": "Cards",
+    "players": "Players",
+    "teams": "Teams",
+    "tournaments": "Tournaments"
+  },
   "messages": {
     "copied": "Copied!"
   },

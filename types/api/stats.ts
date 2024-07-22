@@ -48,8 +48,8 @@ export interface CharacterCardStats {
 
 export interface ActionCardStats {
   cardId: CardId;
-  numGames: number;
-  numGamesWin: number;
+  numGameDecks: number;
+  numGameDecksWin: number;
   numPicked: number;
   numPickedWin: number;
 }

@@ -9,11 +9,11 @@ import type { SiteRoute } from "../composables/use-site-menu";
 
 const routes: SiteRoute[] = [
   {
-    label: "tournament",
+    label: "tournaments",
     to: "/tournaments",
   },
   {
-    label: "team",
+    label: "teams",
     to: "/teams",
   },
   {
@@ -21,7 +21,7 @@ const routes: SiteRoute[] = [
     to: "/cards",
   },
   {
-    label: "player",
+    label: "players",
     to: "/players",
   },
 ];

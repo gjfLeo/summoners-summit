@@ -1,15 +1,35 @@
-import { format, multiply, number, subtract } from "mathjs/number";
+import { divide, format, multiply, number, subtract } from "mathjs/number";
 
 /**
  * 将数值转换为百分比字符串
  *
- * @param value 要转换的数值
+ * @param x 要转换的数值
  * @returns 百分比字符串，如果值为NaN则返回"-"
  */
-export function toPercentageString(value: number) {
-  if (Number.isNaN(value)) return "-";
-  const percentageValue = format(multiply(value, 100), { precision: 4 });
-  return `${percentageValue}%`;
+export function toPercentageString(x: number): string;
+
+/**
+ * 将数值转换为百分比字符串
+ *
+ * @param a 分子
+ * @param b 分母
+ * @returns 百分比字符串，如果值为NaN则返回"-"
+ */
+export function toPercentageString(a: number, b: number): string;
+
+export function toPercentageString(a: number, b?: number) {
+  const percentageValue = typeof b === "undefined" ? toPercentageValue(a) : toPercentageValue(a, b);
+  if (Number.isNaN(percentageValue)) return "-";
+  const formattedPercentage = format(percentageValue, { precision: 4 });
+  return `${formattedPercentage}%`;
+}
+
+export function toPercentageValue(x: number): number;
+export function toPercentageValue(a: number, b: number): number;
+export function toPercentageValue(a: number, b?: number): number {
+  const value = typeof b === "undefined" ? a : divide(a, b);
+  if (Number.isNaN(value)) return Number.NaN;
+  return multiply(value, 100);
 }
 
 /**

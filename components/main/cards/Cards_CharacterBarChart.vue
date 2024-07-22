@@ -18,7 +18,6 @@ import type { DataZoomComponentOption, GridComponentOption, LegendComponentOptio
 import type { CardId } from "~/types";
 
 use([
-  // GridComponent,
   BarChart,
   SVGRenderer,
   GridComponent,
@@ -90,6 +89,7 @@ const chartOption = computed<EChartsOption>(() => {
       inverse: true,
       data: characterCardStats.value.map(card => card.cardId),
       axisLabel: {
+        interval: 0,
         formatter: (value) => {
           return `{${value}| }`;
         },
