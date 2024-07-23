@@ -49,3 +49,11 @@ export async function useApiGetCharacterCardStats(query: { gameVersion: GameVers
     numMatches: computed(() => data.value?.numMatches ?? 0),
   };
 }
+
+export async function useApiGetActionCardStats(query: { gameVersion: GameVersionId }) {
+  const { data } = await useFetch("/api/v3/cards/getActionCardStats", { query });
+  return {
+    actionCardStats: computed(() => data.value?.actionCardStats ?? []),
+    numGameDecks: computed(() => data.value?.numGameDecks ?? 0),
+  };
+}

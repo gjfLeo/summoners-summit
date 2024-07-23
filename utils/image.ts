@@ -1,6 +1,6 @@
 import md5 from "crypto-js/md5";
 
-export function getImageUrl(filename: string) {
+export function getFandomImageUrl(filename: string) {
   filename = filename.replaceAll(":", "");
   filename = filename.replaceAll("?", "");
   filename = filename.replaceAll("\"", "");

@@ -15,24 +15,12 @@ const props = defineProps<{
   card: CardId;
 }>();
 
-const { characterCardById, actionCardById } = useSharedData();
-const { t, locale } = useLocales();
+const { characterCardById, actionCardById, getCardImage } = useSharedData();
+const { locale } = useLocales();
 
 const cardInfo = computed<CardInfo>(() => {
   return characterCardById.value[props.card] ?? actionCardById.value[props.card];
 });
 
-const wikiaFilename = computed(() => {
-  switch (cardInfo.value.type) {
-    case "character":
-      return `${cardInfo.value.name.en} Character Card.png`;
-    case "action":
-      return `${cardInfo.value.name.en} ${cardInfo.value.actionType.charAt(0).toUpperCase()}${cardInfo.value.actionType.slice(1)} Card.png`;
-    default:
-      throw createError(t("main.card.invalidCardType"));
-  }
-});
-const src = computed(() => {
-  return getImageUrl(wikiaFilename.value);
-});
+const src = computed(() => props.card ? getCardImage(props.card) : undefined);
 </script>

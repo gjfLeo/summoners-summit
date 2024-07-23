@@ -1,7 +1,4 @@
 {
-  "card": {
-    "invalidCardType": "无效的卡牌类型"
-  },
   "cards": {
     "characterBarChart": {
       "numBanned": "被禁用次数",

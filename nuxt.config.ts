@@ -9,8 +9,9 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
     // "@vite-pwa/nuxt",
-    "nuxt-module-eslint-config",
+    "@nuxt/eslint",
     "@nuxtjs/i18n",
+    "nuxt-echarts",
   ],
 
   runtimeConfig: {
@@ -76,9 +77,10 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-
-  eslintConfig: {
-    setup: false,
+  eslint: {
+    config: {
+      standalone: false,
+    },
   },
 
   i18n: {
@@ -93,4 +95,10 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2024-07-03",
+
+  echarts: {
+    renderer: "svg",
+    charts: ["BarChart"],
+    components: ["GridComponent", "TooltipComponent", "LegendComponent", "DataZoomComponent"],
+  },
 });

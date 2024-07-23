@@ -1,46 +1,38 @@
 <template>
   <div>
     <NText :depth="3" class="text-sm">{{ t('main.cards.characterBarChart.summary', [numMatches, numGames]) }}</NText>
-    <div ref="chartDom" class="mt h-[calc(100vh-16rem)] min-h-30rem" @click="handleChartClick" />
+    <VChart
+      class="mt h-[calc(100vh-16rem)] min-h-30rem"
+      :option="option" autoresize @native:click="handleChartClick"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
-import * as echarts from "echarts/core";
-import { use } from "echarts/core";
-import { BarChart } from "echarts/charts";
-import { DataZoomComponent, GridComponent, LegendComponent, TooltipComponent } from "echarts/components";
-import { SVGRenderer } from "echarts/renderers";
-import type { ComposeOption } from "echarts/core";
-import type { BarSeriesOption } from "echarts/charts";
-import type { DataZoomComponentOption, GridComponentOption, LegendComponentOption, TooltipComponentOption } from "echarts/components";
 import type { CardId } from "~/types";
-
-use([
-  BarChart,
-  SVGRenderer,
-  GridComponent,
-  LegendComponent,
-  DataZoomComponent,
-  TooltipComponent,
-]);
-
-type EChartsOption = ComposeOption<
-  | BarSeriesOption
-  | GridComponentOption
-  | LegendComponentOption
-  | DataZoomComponentOption
-  | TooltipComponentOption
->;
 
 const { gameVersion } = useGameVersion();
 const { t, currentLocalized } = useLocales();
 const { characterCardStats, numGames, numMatches } = await useApiGetCharacterCardStats({ gameVersion: gameVersion.value });
-const { characterCardById } = await useAsyncSharedData();
+const { characterCardById, getCardAvatar } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
-const chartOption = computed<EChartsOption>(() => {
+const data = computed(() => {
+  return characterCardStats.value
+    .map(item => ({
+      cardId: item.cardId,
+      numGames: item.numGames,
+      numGamesWin: item.numGamesWin,
+      numGamesLose: item.numGames - item.numGamesWin,
+      numBanned: item.numBanned,
+      avatar: getCardAvatar(item.cardId),
+    }))
+    .sort(sorter("numGames"))
+    .reverse();
+});
+
+const option = computed<ECOption>(() => {
   // t('main.cards.characterBarChart.numGamesWin') t('main.cards.characterBarChart.numGamesLose') t('main.cards.characterBarChart.numBanned')
   const localizedSeriesName = (name: string) => t(`main.cards.characterBarChart.${name}`);
 
@@ -50,9 +42,6 @@ const chartOption = computed<EChartsOption>(() => {
       left: "center",
       formatter: name => localizedSeriesName(name),
       data: ["numGamesWin", "numGamesLose", "numBanned"],
-      textStyle: {
-        color: themeVars.value.textColor2,
-      },
     },
     grid: {
       top: remToPx(3),
@@ -87,24 +76,21 @@ const chartOption = computed<EChartsOption>(() => {
     yAxis: {
       type: "category",
       inverse: true,
-      data: characterCardStats.value.map(card => card.cardId),
+      data: data.value.map(card => card.cardId),
       axisLabel: {
         interval: 0,
         formatter: (value) => {
           return `{${value}| }`;
         },
-        color: themeVars.value.textColor2,
         margin: remToPx(0.5),
         rich: {
           ...Object.fromEntries(
-            characterCardStats.value.map((item) => {
-              const card = characterCardById.value[item.cardId];
-              const image = getImageUrl(`${card.name.en} TCG Avatar Icon.png`);
+            data.value.map((item) => {
               return [item.cardId, {
                 height: remToPx(2),
                 width: remToPx(2),
                 backgroundColor: {
-                  image,
+                  image: item.avatar,
                 },
               }];
             }),
@@ -115,20 +101,12 @@ const chartOption = computed<EChartsOption>(() => {
     xAxis: {
       type: "value",
       position: "top",
-      axisLabel: {
-        color: themeVars.value.textColor2,
-      },
-      splitLine: {
-        lineStyle: {
-          color: themeVars.value.borderColor,
-        },
-      },
     },
     series: [
       {
         name: "numGamesWin",
         type: "bar",
-        data: characterCardStats.value.map(item => item.numGamesWin),
+        data: data.value.map(item => item.numGamesWin),
         stack: "numGames",
         label: {
           show: true,
@@ -145,7 +123,7 @@ const chartOption = computed<EChartsOption>(() => {
       {
         name: "numGamesLose",
         type: "bar",
-        data: characterCardStats.value.map(item => item.numGames - item.numGamesWin),
+        data: data.value.map(item => item.numGamesLose),
         stack: "numGames",
         label: {
           show: true,
@@ -162,7 +140,7 @@ const chartOption = computed<EChartsOption>(() => {
       {
         name: "numBanned",
         type: "bar",
-        data: characterCardStats.value.map(item => item.numBanned),
+        data: data.value.map(item => item.numBanned),
         label: {
           show: true,
           position: "inside",
@@ -182,11 +160,6 @@ const chartOption = computed<EChartsOption>(() => {
       axisPointer: {
         type: "shadow",
       },
-      backgroundColor: themeVars.value.cardColor,
-      borderColor: themeVars.value.borderColor,
-      textStyle: {
-        color: themeVars.value.textColor2,
-      },
       trigger: "axis",
       formatter: (params) => {
         if (!Array.isArray(params)) {
@@ -194,7 +167,7 @@ const chartOption = computed<EChartsOption>(() => {
         }
         const cardId = params[0].name;
         const card = characterCardById.value[cardId];
-        const avatarUrl = getImageUrl(`${card.name.en} TCG Avatar Icon.png`);
+        const avatarUrl = getCardAvatar(cardId);
         const numGames = Number(params[0].value) + Number(params[1].value);
 
         return `
@@ -227,27 +200,7 @@ const chartOption = computed<EChartsOption>(() => {
       },
 
     },
-  } satisfies EChartsOption;
-});
-
-const chartDom = ref<HTMLDivElement>();
-const chartInstance = shallowRef<echarts.ECharts>();
-
-onMounted(() => {
-  chartInstance.value = echarts.init(chartDom.value);
-  chartInstance.value.setOption(chartOption.value);
-});
-watch(chartOption, () => {
-  if (chartInstance.value) {
-    chartInstance.value.setOption(chartOption.value);
-  }
-}, { deep: true });
-
-const elementSize = useElementSize(chartDom);
-watch([elementSize.width, elementSize.height], () => {
-  if (chartInstance.value) {
-    chartInstance.value.resize();
-  }
+  } satisfies ECOption;
 });
 
 function handleChartClick(event: MouseEvent) {

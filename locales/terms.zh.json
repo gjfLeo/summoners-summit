@@ -1,6 +1,6 @@
 {
   "actionCards": "行动牌",
+  "characterCards": "角色牌",
   "gameVersion": "游戏版本",
-  "gameVersionShort": "版本",
-  "characterCards": "角色牌"
+  "gameVersionShort": "版本"
 }

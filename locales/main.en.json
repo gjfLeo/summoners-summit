@@ -1,7 +1,4 @@
 {
-  "card": {
-    "invalidCardType": "Invalid card type"
-  },
   "cards": {
     "characterBarChart": {
       "numBanned": "Banned",

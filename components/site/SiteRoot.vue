@@ -23,4 +23,6 @@ const { locale } = useLocales();
 const naiveLocale = computed(() => {
   return locale.value === "zh" ? zhCN : enUS;
 });
+
+initECharts();
 </script>

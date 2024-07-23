@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div ref="chartDom" class="mt h-[calc(100vh-16rem)] min-h-30rem" @click="handleChartClick" />
+    <VChart
+      class="mt h-[calc(100vh-16rem)] min-h-30rem"
+      :option="option" autoresize
+    />
     <!--
       选取率计算方式：
       选取率 = （作为角色被禁用次数 * 2 + 阵容中被禁用次数 + 阵容比赛中上场次数） / (总场数 * 2)
@@ -11,38 +14,12 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, pickRandom } from "mathjs/number";
-import * as echarts from "echarts/core";
-import { use } from "echarts/core";
-import { BarChart } from "echarts/charts";
-import { DataZoomComponent, GridComponent, LegendComponent, TooltipComponent } from "echarts/components";
-import { SVGRenderer } from "echarts/renderers";
-import type { ComposeOption } from "echarts/core";
-import type { BarSeriesOption } from "echarts/charts";
-import type { DataZoomComponentOption, GridComponentOption, LegendComponentOption, TooltipComponentOption } from "echarts/components";
-import type { CardId } from "~/types";
-
-use([
-  BarChart,
-  SVGRenderer,
-  GridComponent,
-  LegendComponent,
-  DataZoomComponent,
-  TooltipComponent,
-]);
-
-type EChartsOption = ComposeOption<
-  | BarSeriesOption
-  | GridComponentOption
-  | LegendComponentOption
-  | DataZoomComponentOption
-  | TooltipComponentOption
->;
+import { divide } from "mathjs/number";
 
 const { gameVersion } = useGameVersion();
 const { t } = useLocales();
 const { characterCardStats, numMatches } = await useApiGetCharacterCardStats({ gameVersion: gameVersion.value });
-const { characterCardById } = await useAsyncSharedData();
+const { getCardAvatar } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
 const data = computed(() => {
@@ -50,12 +27,13 @@ const data = computed(() => {
     .map(item => ({
       cardId: item.cardId,
       pickRate: divide(item.numMatches, numMatches.value * 2),
+      avatar: getCardAvatar(item.cardId),
     }))
     .toSorted(sorter("pickRate"))
     .toReversed();
 });
 
-const chartOption = computed<EChartsOption>(() => {
+const option = computed<ECOption>(() => {
   return {
     grid: {
       top: remToPx(3),
@@ -64,29 +42,6 @@ const chartOption = computed<EChartsOption>(() => {
       bottom: 0,
       containLabel: true,
     },
-    // dataZoom: [
-    //   {
-    //     type: "inside",
-    //     id: "insideY",
-    //     yAxisIndex: 0,
-    //     filterMode: "empty",
-    //     start: 0,
-    //     maxValueSpan: 7,
-    //     minValueSpan: 7,
-    //     zoomLock: true,
-    //     zoomOnMouseWheel: false,
-    //     moveOnMouseMove: true,
-    //     moveOnMouseWheel: true,
-    //   },
-    //   {
-    //     type: "slider",
-    //     id: "sliderY",
-    //     yAxisIndex: 0,
-    //     showDetail: false,
-    //     handleSize: 0,
-    //     brushSelect: false,
-    //   },
-    // ],
     xAxis: {
       type: "category",
       data: data.value.map(card => card.cardId),
@@ -100,13 +55,11 @@ const chartOption = computed<EChartsOption>(() => {
         rich: {
           ...Object.fromEntries(
             data.value.map((item) => {
-              const card = characterCardById.value[item.cardId];
-              const image = getImageUrl(`${card.name.en} TCG Avatar Icon.png`);
               return [item.cardId, {
                 height: remToPx(2),
                 width: remToPx(2),
                 backgroundColor: {
-                  image,
+                  image: item.avatar,
                 },
               }];
             }),
@@ -156,89 +109,6 @@ const chartOption = computed<EChartsOption>(() => {
         color: themeVars.value.infoColor,
       },
     ],
-    // tooltip: {
-    //   triggerOn: "click",
-    //   axisPointer: {
-    //     type: "shadow",
-    //   },
-    //   backgroundColor: themeVars.value.cardColor,
-    //   borderColor: themeVars.value.borderColor,
-    //   textStyle: {
-    //     color: themeVars.value.textColor2,
-    //   },
-    //   trigger: "axis",
-    //   formatter: (params) => {
-    //     if (!Array.isArray(params)) {
-    //       throw new TypeError("tooltip formatter params is not an array");
-    //     }
-    //     const cardId = params[0].name;
-    //     const card = characterCardById.value[cardId];
-    //     const avatarUrl = getImageUrl(`${card.name.en} TCG Avatar Icon.png`);
-    //     const numGames = Number(params[0].value) + Number(params[1].value);
-
-    //     return `
-    //       <div class="grid grid-cols-[auto_auto_1fr] items-center gap-2 select-none">
-    //         <div class="grid-col-span-3 flex items-center gap-2">
-    //           <img src="${avatarUrl}" class="aspect-[1/1] h-8" />
-    //           <span>${currentLocalized(card.name)}</span>
-    //         </div>
-    //         ${
-    //           params.map((param) => {
-    //             const value = param.seriesName !== "numBanned"
-    //             ? `${param.value} (${toPercentageString(divide(Number(param.value), numGames))})`
-    //             : param.value;
-    //             return `
-    //               <div class="w-3 h-3 rounded-full" style="background-color: ${param.color}"></div>
-    //               <div>${localizedSeriesName(param.seriesName!)}</div>
-    //               <div class="ml-4 font-bold">${value}</div>
-    //             `;
-    //           }).join("\n")
-    //         }
-    //         <div class="grid-col-span-3">
-    //           <span class="text-sm text-primary underline-dashed cursor-pointer" data-role="go-to-team" data-card-id="${cardId}">相关阵容</span>
-    //         </div>
-    //       </div>
-    //     `;
-    //   },
-    //   enterable: true,
-    //   position: (point) => {
-    //     return [point[0] + remToPx(1), point[1] + remToPx(1)];
-    //   },
-
-    // },
-  } satisfies EChartsOption;
+  } satisfies ECOption;
 });
-
-const chartDom = ref<HTMLDivElement>();
-const chartInstance = shallowRef<echarts.ECharts>();
-
-onMounted(() => {
-  chartInstance.value = echarts.init(chartDom.value);
-  chartInstance.value.setOption(chartOption.value);
-});
-watch(chartOption, () => {
-  if (chartInstance.value) {
-    chartInstance.value.setOption(chartOption.value);
-  }
-}, { deep: true });
-
-const elementSize = useElementSize(chartDom);
-watch([elementSize.width, elementSize.height], () => {
-  if (chartInstance.value) {
-    chartInstance.value.resize();
-  }
-});
-
-function handleChartClick(event: MouseEvent) {
-  const target = event.target as HTMLElement;
-  if (target.dataset.role === "go-to-team") {
-    const cardId = target.dataset.cardId as CardId;
-    return navigateTo({
-      name: "teams-gameVersion___zh",
-      state: {
-        includeCharacters: [cardId],
-      },
-    });
-  }
-}
 </script>
