@@ -1,7 +1,7 @@
 import type { CardId, DeckTeamId } from "~/types";
 
 export function getTeamId(characterCards: CardId[]): DeckTeamId {
-  return characterCards.toSorted().join("-");
+  return [...characterCards].sort().join("-");
 }
 
 export function getCharacterCardsByTeamId(teamId: DeckTeamId): CardId[] {

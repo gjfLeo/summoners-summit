@@ -38,7 +38,7 @@ export function savePlayer(params: SavePlayerParams) {
   const player = {
     ...params,
     id: newId,
-    aliases: params.aliases.toSorted(),
+    aliases: [...params.aliases].sort(),
   };
 
   if (!player.ignored) delete player.ignored;

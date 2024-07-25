@@ -4,6 +4,7 @@ import { bindPlayerNickname } from "./player";
 import { deleteGame, getGame, saveGame } from "./game";
 import type { Ban, Game, Match, MatchDetail, MatchId } from "~/types";
 import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayerNickname } from "~/types";
+import { getTeamId } from "~/utils/team";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
@@ -93,11 +94,11 @@ export function saveMatch(params: MatchSaveParams) {
       gameVersion: tournament.gameVersion,
       playerADeck: {
         ...gameParam.playerADeck,
-        teamId: gameParam.playerADeck.characters.toSorted().join("-"),
+        teamId: getTeamId(gameParam.playerADeck.characters),
       },
       playerBDeck: {
         ...gameParam.playerBDeck,
-        teamId: gameParam.playerBDeck.characters.toSorted().join("-"),
+        teamId: getTeamId(gameParam.playerBDeck.characters),
       },
       id: gameId,
       matchId,
@@ -116,8 +117,8 @@ export function saveMatch(params: MatchSaveParams) {
     else {
       return {
         banType: "team",
-        playerATeamId: banRaw.playerACardIds.toSorted().join("-"),
-        playerBTeamId: banRaw.playerBCardIds.toSorted().join("-"),
+        playerATeamId: getTeamId(banRaw.playerACardIds),
+        playerBTeamId: getTeamId(banRaw.playerBCardIds),
       };
     }
   });
