@@ -37,8 +37,8 @@ const nicknameBoundIds = computed(() => {
 });
 
 const options = computed(() => {
-  return props.players
-    .toSorted((p1, p2) => {
+  return [...props.players]
+    .sort((p1, p2) => {
       if (nicknameBoundIds.value.includes(p1.id)) return -1;
       if (nicknameBoundIds.value.includes(p2.id)) return 1;
       return 0;

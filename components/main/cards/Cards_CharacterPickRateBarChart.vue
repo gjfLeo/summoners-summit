@@ -29,8 +29,8 @@ const data = computed(() => {
       pickRate: divide(item.numMatches, numMatches.value * 2),
       avatar: getCardAvatar(item.cardId),
     }))
-    .toSorted(sorter("pickRate"))
-    .toReversed();
+    .sort(sorter("pickRate"))
+    .reverse();
 });
 
 const option = computed<ECOption>(() => {

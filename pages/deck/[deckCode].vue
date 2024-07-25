@@ -40,7 +40,7 @@ const { decodeDeck } = useDeckEncoder();
 
 await awaitData();
 const deckCards = decodeDeck(deckCode);
-const teamId = deckCards.characterCards.toSorted().join("-");
+const teamId = getTeamId(deckCards.characterCards);
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCards);
 
