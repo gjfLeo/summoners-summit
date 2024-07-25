@@ -16,8 +16,8 @@ export default defineEventHandler(async (event) => {
     cardId,
     numGameDecks: 0,
     numGameDecksWin: 0,
-    numPicked: 0,
-    numPickedWin: 0,
+    numUsages: 0,
+    numUsagesWin: 0,
   });
 
   const games = getGameList()
@@ -36,13 +36,13 @@ export default defineEventHandler(async (event) => {
           recordItem.numGameDecks++;
           if (game.winner === "A") recordItem.numGameDecksWin++;
         }
-        recordItem.numPicked++;
-        if (game.winner === "A") recordItem.numPickedWin++;
+        recordItem.numUsages++;
+        if (game.winner === "A") recordItem.numUsagesWin++;
       });
     });
 
   const numGameDecks = games.length;
-  const actionCardStats = Object.values(record).sort(sorter("numPicked")).reverse();
+  const actionCardStats = Object.values(record).sort(sorter("numUsages")).reverse();
 
   return responseData({ actionCardStats, numGameDecks });
 });

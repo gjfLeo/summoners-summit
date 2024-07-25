@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
+import { divide, sqrt } from "mathjs/number";
 
 const { gameVersion } = useGameVersion();
 const { t } = useLocales();
@@ -106,7 +106,7 @@ const option = computed<ECOption>(() => {
           },
         },
         barWidth: remToPx(1),
-        // color: themeVars.value.infoColor,
+        animationDelay: i => 1500 / data.value.length * i,
       },
     ],
   } satisfies ECOption;

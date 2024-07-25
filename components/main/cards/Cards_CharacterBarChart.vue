@@ -45,8 +45,8 @@ const option = computed<ECOption>(() => {
     },
     grid: {
       top: remToPx(3),
-      left: remToPx(1),
-      right: remToPx(1),
+      left: remToPx(0),
+      right: remToPx(2),
       bottom: 0,
       containLabel: true,
     },
@@ -71,6 +71,8 @@ const option = computed<ECOption>(() => {
         showDetail: false,
         handleSize: 0,
         brushSelect: false,
+        right: 0,
+        width: remToPx(1),
       },
     ],
     yAxis: {
@@ -119,6 +121,7 @@ const option = computed<ECOption>(() => {
         emphasis: { focus: "series" },
         barWidth: remToPx(1.5),
         color: themeVars.value.primaryColor,
+        animationDelay: i => i * 1500 / 8,
       },
       {
         name: "numGamesLose",
@@ -136,6 +139,7 @@ const option = computed<ECOption>(() => {
         emphasis: { focus: "series" },
         barWidth: remToPx(1.5),
         color: themeVars.value.placeholderColor,
+        animationDelay: i => i * 1500 / 8 + 500,
       },
       {
         name: "numBanned",
@@ -153,6 +157,7 @@ const option = computed<ECOption>(() => {
         barWidth: remToPx(0.75),
         barGap: 0.25,
         color: themeVars.value.errorColor,
+        animationDelay: i => i * 1500 / 8,
       },
     ],
     tooltip: {

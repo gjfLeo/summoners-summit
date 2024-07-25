@@ -50,6 +50,6 @@ export interface ActionCardStats {
   cardId: CardId;
   numGameDecks: number;
   numGameDecksWin: number;
-  numPicked: number;
-  numPickedWin: number;
+  numUsages: number;
+  numUsagesWin: number;
 }

@@ -1,5 +1,8 @@
 {
   "cards": {
+    "actionBarChart": {
+      "summary": "共统计 {0} 套对局牌组"
+    },
     "characterBarChart": {
       "numBanned": "被禁用次数",
       "numGamesLose": "落败对局数",
