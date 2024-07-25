@@ -106,7 +106,7 @@ const option = computed<ECOption>(() => {
           },
         },
         barWidth: remToPx(1),
-        color: themeVars.value.infoColor,
+        // color: themeVars.value.infoColor,
       },
     ],
   } satisfies ECOption;

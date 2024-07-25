@@ -34,26 +34,28 @@ const useSharedDataStore = defineStore("shared", () => {
   const actionCardList = computed(() => actionCardIds.value.map(id => actionCardById.value[id]));
 
   function getCardImage(cardId: CardId) {
-    let card: CardInfo | undefined;
-    let filename;
-    if ((card = characterCardById.value[cardId])) {
-      filename = `${card.name.en} Character Card.png`;
-    }
-    else if ((card = actionCardById.value[cardId])) {
-      filename = `${card.name.en} ${card.actionType.charAt(0).toUpperCase()}${card.actionType.slice(1)} Card.png`;
-    }
-    else {
-      throw new Error(`Card ${cardId} not found`);
-    }
-    return getFandomImageUrl(filename);
+    return `https://gi-tcg-assets.guyutongxue.site/api/v2/images/${cardId}`;
+    // let card: CardInfo | undefined;
+    // let filename;
+    // if ((card = characterCardById.value[cardId])) {
+    //   filename = `${card.name.en} Character Card.png`;
+    // }
+    // else if ((card = actionCardById.value[cardId])) {
+    //   filename = `${card.name.en} ${card.actionType.charAt(0).toUpperCase()}${card.actionType.slice(1)} Card.png`;
+    // }
+    // else {
+    //   throw new Error(`Card ${cardId} not found`);
+    // }
+    // return getFandomImageUrl(filename);
   }
   function getCardAvatar(cardId: CardId) {
-    const card = characterCardById.value[cardId];
-    if (!card) {
-      throw new Error(`Card ${cardId} not found`);
-    }
-    const filename = `${card.name.en} TCG Avatar Icon.png`;
-    return getFandomImageUrl(filename);
+    return `https://gi-tcg-assets.guyutongxue.site/api/v2/images/character_icons/${cardId}`;
+    // const card = characterCardById.value[cardId];
+    // if (!card) {
+    //   throw new Error(`Card ${cardId} not found`);
+    // }
+    // const filename = `${card.name.en} TCG Avatar Icon.png`;
+    // return getFandomImageUrl(filename);
   }
 
   async function awaitData() {

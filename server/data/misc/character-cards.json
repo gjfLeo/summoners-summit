@@ -373,6 +373,17 @@
     "gameVersion": "4.7",
     "element": "pyro"
   },
+  "1313": {
+    "id": "1313",
+    "name": {
+      "zh": "夏沃蕾",
+      "en": "Chevreuse"
+    },
+    "shareId": 395,
+    "type": "character",
+    "gameVersion": "4.8",
+    "element": "pyro"
+  },
   "1401": {
     "id": "1401",
     "name": {
@@ -670,6 +681,17 @@
     "gameVersion": "4.7",
     "element": "geo"
   },
+  "1608": {
+    "id": "1608",
+    "name": {
+      "zh": "娜维娅",
+      "en": "Navia"
+    },
+    "shareId": 396,
+    "type": "character",
+    "gameVersion": "4.8",
+    "element": "geo"
+  },
   "1701": {
     "id": "1701",
     "name": {
@@ -789,6 +811,17 @@
     "shareId": 321,
     "type": "character",
     "gameVersion": "4.4",
+    "element": "cryo"
+  },
+  "2104": {
+    "id": "2104",
+    "name": {
+      "zh": "愚人众·霜役人",
+      "en": "Frost Operative"
+    },
+    "shareId": 397,
+    "type": "character",
+    "gameVersion": "4.8",
     "element": "cryo"
   },
   "2201": {

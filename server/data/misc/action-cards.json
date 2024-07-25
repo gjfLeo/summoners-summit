@@ -373,6 +373,17 @@
     "gameVersion": "4.7",
     "actionType": "equipment"
   },
+  "213131": {
+    "id": "213131",
+    "name": {
+      "zh": "尖兵协同战法",
+      "en": "Vanguard's Coordinated Tactics"
+    },
+    "shareId": 398,
+    "type": "action",
+    "gameVersion": "4.8",
+    "actionType": "equipment"
+  },
   "214011": {
     "id": "214011",
     "name": {
@@ -670,6 +681,17 @@
     "gameVersion": "4.7",
     "actionType": "equipment"
   },
+  "216081": {
+    "id": "216081",
+    "name": {
+      "zh": "不明流通渠道",
+      "en": "Undisclosed Distribution Channels"
+    },
+    "shareId": 399,
+    "type": "action",
+    "gameVersion": "4.8",
+    "actionType": "equipment"
+  },
   "217011": {
     "id": "217011",
     "name": {
@@ -789,6 +811,17 @@
     "shareId": 325,
     "type": "action",
     "gameVersion": "4.4",
+    "actionType": "equipment"
+  },
+  "221041": {
+    "id": "221041",
+    "name": {
+      "zh": "冰雅刺剑",
+      "en": "Rimeflow Rapier"
+    },
+    "shareId": 400,
+    "type": "action",
+    "gameVersion": "4.8",
     "actionType": "equipment"
   },
   "222011": {
@@ -1264,6 +1297,17 @@
     "gameVersion": "4.7",
     "actionType": "equipment"
   },
+  "311308": {
+    "id": "311308",
+    "name": {
+      "zh": "「究极霸王超级魔剑」",
+      "en": "\"Ultimate Overlord's Mega Magic Sword\""
+    },
+    "shareId": 401,
+    "type": "action",
+    "gameVersion": "4.8",
+    "actionType": "equipment"
+  },
   "311401": {
     "id": "311401",
     "name": {
@@ -1350,6 +1394,17 @@
     "shareId": 355,
     "type": "action",
     "gameVersion": "4.6",
+    "actionType": "equipment"
+  },
+  "311409": {
+    "id": "311409",
+    "name": {
+      "zh": "勘探钻机",
+      "en": "Prospector's Drill"
+    },
+    "shareId": 402,
+    "type": "action",
+    "gameVersion": "4.8",
     "actionType": "equipment"
   },
   "311501": {
@@ -1746,6 +1801,17 @@
     "shareId": 387,
     "type": "action",
     "gameVersion": "4.7",
+    "actionType": "equipment"
+  },
+  "312029": {
+    "id": "312029",
+    "name": {
+      "zh": "角斗士的凯旋",
+      "en": "Gladiator's Triumphus"
+    },
+    "shareId": 403,
+    "type": "action",
+    "gameVersion": "4.8",
     "actionType": "equipment"
   },
   "312101": {
@@ -2417,6 +2483,17 @@
     "shareId": 390,
     "type": "action",
     "gameVersion": "4.7",
+    "actionType": "support"
+  },
+  "322027": {
+    "id": "322027",
+    "name": {
+      "zh": "瑟琳",
+      "en": "Serene"
+    },
+    "shareId": 404,
+    "type": "action",
+    "gameVersion": "4.8",
     "actionType": "support"
   },
   "323001": {
@@ -3154,6 +3231,28 @@
     "shareId": 394,
     "type": "action",
     "gameVersion": "4.7",
+    "actionType": "event"
+  },
+  "332036": {
+    "id": "332036",
+    "name": {
+      "zh": "「看到那小子挣钱…」",
+      "en": "\"I'd Rather Lose Money Myself...\""
+    },
+    "shareId": 405,
+    "type": "action",
+    "gameVersion": "4.8",
+    "actionType": "event"
+  },
+  "332037": {
+    "id": "332037",
+    "name": {
+      "zh": "噔噔！",
+      "en": "Tada!"
+    },
+    "shareId": 406,
+    "type": "action",
+    "gameVersion": "4.8",
     "actionType": "event"
   },
   "333001": {
