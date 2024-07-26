@@ -20,29 +20,8 @@ export default defineNuxtConfig({
     },
   },
 
-  components: [
-    { path: "~/components" },
-    { path: "~/components/main", pathPrefix: false },
-  ],
-
-  css: [
-    "@unocss/reset/tailwind.css",
-  ],
-
-  colorMode: {
-    classSuffix: "",
-  },
-
-  experimental: {
-    // when using generate, payload js assets included in sw precache manifest
-    // but missing on offline, disabling extraction it until fixed
-    // payloadExtraction: false,
-    renderJsonPayloads: true,
-    typedPages: true,
-  },
-
   routeRules: {
-    "/**": { prerender: true, isr: false },
+    "/**": { prerender: true },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
   },
@@ -70,13 +49,39 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "description", content: "七圣召唤赛事资料" },
         { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
         { name: "theme-color", media: "(prefers-color-scheme: light)", content: "white" },
         { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#222222" },
       ],
+      // script: [
+      //   "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";",
+      //   { async: true, src: "https://www.statcounter.com/counter/counter.js" },
+      // ],
     },
     layoutTransition: { name: "layout-transition", mode: "out-in" },
     pageTransition: { name: "layout-transition", mode: "out-in" },
+  },
+
+  experimental: {
+    // when using generate, payload js assets included in sw precache manifest
+    // but missing on offline, disabling extraction it until fixed
+    // payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
+  },
+
+  components: [
+    { path: "~/components" },
+    { path: "~/components/main", pathPrefix: false },
+  ],
+
+  css: [
+    "@unocss/reset/tailwind.css",
+  ],
+
+  colorMode: {
+    classSuffix: "",
   },
 
   // pwa,
@@ -84,6 +89,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
+
   eslint: {
     config: {
       standalone: false,
@@ -91,14 +97,12 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    locales: [
-      { code: "zh", iso: "zh", name: "简体中文" },
-      { code: "en", iso: "en", name: "English" },
-    ],
+    strategy: "prefix_except_default",
     defaultLocale: "zh",
-    customBlocks: {
-      defaultSFCLang: "yaml",
-    },
+    locales: [
+      { code: "zh", iso: "zh-CN", name: "简体中文", isCatchallLocale: true },
+      { code: "en", iso: "en-US", name: "English" },
+    ],
   },
 
   compatibilityDate: "2024-07-03",
