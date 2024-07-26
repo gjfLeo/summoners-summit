@@ -25,6 +25,14 @@ export default defineNuxtConfig({
     { path: "~/components/main", pathPrefix: false },
   ],
 
+  css: [
+    "@unocss/reset/tailwind.css",
+  ],
+
+  colorMode: {
+    classSuffix: "",
+  },
+
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -33,12 +41,10 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  css: [
-    "@unocss/reset/tailwind.css",
-  ],
-
-  colorMode: {
-    classSuffix: "",
+  routeRules: {
+    "/": { prerender: true, isr: false },
+    "/admin/**": { ssr: false, prerender: false },
+    "/en/admin/**": { ssr: false, prerender: false },
   },
 
   nitro: {
