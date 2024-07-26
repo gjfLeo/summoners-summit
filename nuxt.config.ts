@@ -27,15 +27,15 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    static: true,
-    esbuild: {
-      options: {
-        target: "esnext",
-      },
-    },
+    // static: true,
+    // esbuild: {
+    //   options: {
+    //     target: "esnext",
+    //   },
+    // },
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      // routes: ["/"],
       ignore: ["/admin"],
     },
   },
