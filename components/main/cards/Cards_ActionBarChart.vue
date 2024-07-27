@@ -13,9 +13,11 @@
 import { divide, format } from "mathjs/number";
 import type { VChart } from "#components";
 
-const { gameVersion } = useGameVersion();
+type DataType = Awaited<ReturnType<typeof useApiGetActionCardStats>>;
+const actionCardStats = inject<DataType["actionCardStats"]>("actionCardStats", computed(() => []));
+const numGameDecks = inject<DataType["numGameDecks"]>("numGameDecks", computed(() => 0));
+
 const { t } = useLocales();
-const { actionCardStats, numGameDecks } = await useApiGetActionCardStats({ gameVersion: gameVersion.value });
 const { getCardImage } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 const chart = ref<ComponentPublicInstance>();
@@ -55,7 +57,7 @@ const option = computed<ECOption>(() => {
       {
         type: "inside",
         xAxisIndex: [0, 1],
-        filterMode: "empty",
+        filterMode: "filter",
         start: 0,
         maxValueSpan: 20,
         minValueSpan: 20,

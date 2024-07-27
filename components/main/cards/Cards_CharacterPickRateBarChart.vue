@@ -16,9 +16,11 @@
 <script lang="ts" setup>
 import { divide, sqrt } from "mathjs/number";
 
-const { gameVersion } = useGameVersion();
+type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
+const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));
+const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
+
 const { t } = useLocales();
-const { characterCardStats, numMatches } = await useApiGetCharacterCardStats({ gameVersion: gameVersion.value });
 const { getCardAvatar } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 

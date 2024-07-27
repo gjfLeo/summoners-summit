@@ -12,9 +12,12 @@
 import { divide } from "mathjs/number";
 import type { CardId } from "~/types";
 
-const { gameVersion } = useGameVersion();
+type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
+const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));
+const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
+const numGames = inject<DataType["numGames"]>("numMatches", computed(() => 0));
+
 const { t, currentLocalized } = useLocales();
-const { characterCardStats, numGames, numMatches } = await useApiGetCharacterCardStats({ gameVersion: gameVersion.value });
 const { characterCardById, getCardAvatar } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
@@ -121,7 +124,8 @@ const option = computed<ECOption>(() => {
         emphasis: { focus: "series" },
         barWidth: remToPx(1.5),
         color: themeVars.value.primaryColor,
-        animationDelay: i => i * 1500 / 8,
+        animationDuration: 800,
+        animationDelay: i => i * 1000 / 8,
       },
       {
         name: "numGamesLose",
@@ -139,7 +143,8 @@ const option = computed<ECOption>(() => {
         emphasis: { focus: "series" },
         barWidth: remToPx(1.5),
         color: themeVars.value.placeholderColor,
-        animationDelay: i => i * 1500 / 8 + 500,
+        animationDelay: i => i * 1000 / 8 + 500,
+        animationDuration: 500,
       },
       {
         name: "numBanned",
@@ -157,7 +162,7 @@ const option = computed<ECOption>(() => {
         barWidth: remToPx(0.75),
         barGap: 0.25,
         color: themeVars.value.errorColor,
-        animationDelay: i => i * 1500 / 8,
+        animationDelay: i => i * 1000 / 8,
       },
     ],
     tooltip: {
