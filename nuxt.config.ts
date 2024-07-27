@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/**": { prerender: true },
+    "/**": { prerender: true, isr: false },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
   },
