@@ -1,5 +1,5 @@
 <template>
-  <NSpin :show="pending">
+  <NSpin :show="status === 'pending'">
     <NTabs
       v-model:value="rankId"
       type="card"
@@ -33,11 +33,10 @@
 <script lang="ts" setup>
 import type { Ranks } from "~/types/data";
 
-definePageMeta({ title: "site.titles.admin.ranks" });
-
 const { t } = useLocales();
+useHead({ title: t("site.titles.admin.ranks") });
 
-const { data, pending, refresh } = await useFetch("/api/v3/ranks/ids");
+const { data, status, refresh } = await useFetch("/api/v3/ranks/ids");
 
 const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);
 const rankId = ref(rankIds.value[0]);

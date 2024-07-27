@@ -9,6 +9,13 @@
 <script lang="ts" setup>
 import { ROOT_FONT_SIZE_PX } from "~/config/layout";
 
+const { t } = useLocales();
+useHead({
+  titleTemplate(title) {
+    return title ? t("site.titles.format1", [title, t("site.name")]) : t("site.name");
+  },
+});
+
 if (ROOT_FONT_SIZE_PX !== 14) {
   console.error(`根元素font-size应为${ROOT_FONT_SIZE_PX}px，请修改app.vue`);
 }

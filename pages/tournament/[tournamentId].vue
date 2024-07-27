@@ -68,6 +68,6 @@ const route = useRoute("tournament-tournamentId___zh");
 const tournamentId = route.params.tournamentId;
 
 const { t, currentLocalized } = useLocales();
-
 const { tournament, matches, games } = await useApiGetTournament({ id: tournamentId });
+useHead({ title: `${tournament.value.gameVersion} ${currentLocalized(tournament.value.name)}` });
 </script>

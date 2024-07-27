@@ -18,6 +18,8 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
       gamesFollowerWin: 0,
       gamesMirror: 0,
       banned: 0,
+      gamesWithDeck: 0,
+      gamesWithDeckWin: 0,
     };
   }
 
@@ -42,6 +44,12 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
     }
     if (game.playerBDeck.teamId === teamId) {
       record.gamesMirror++;
+    }
+    if (game.playerADeck.deckCode) {
+      record.gamesWithDeck++;
+      if (game.winner === "A") {
+        record.gamesWithDeckWin++;
+      }
     }
   });
 

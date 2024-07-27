@@ -37,7 +37,8 @@
 <script lang="ts" setup>
 import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId } from "~/types/data";
 
-definePageMeta({ title: "site.titles.admin.tournaments" });
+const { t } = useLocales();
+useHead({ title: t("site.titles.admin.tournaments") });
 
 const { tournaments } = await useApiGetTournamentList();
 const { gameVersionList } = useSharedData();

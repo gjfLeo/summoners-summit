@@ -1,5 +1,10 @@
 {
   "cards": {
+    "actionBarChart": {
+      "numUsages": "Usages in Deck",
+      "pickFrequency": "Pick Frequency",
+      "summary": "Calculated from {0} decks."
+    },
     "characterBarChart": {
       "numBanned": "Banned",
       "numGamesLose": "Game Losses",
@@ -10,28 +15,100 @@
       "pickRatePercentage": "Pick Rate (%)"
     }
   },
+  "deck": {
+    "copyDeckShareCode": "Copy Share Code",
+    "deckDetail": "Deck Details",
+    "gameList": "Game List",
+    "teamDetail": "View Lineup Details"
+  },
+  "gameInfo": {
+    "banned": "Banned",
+    "firstMove": "Start First",
+    "lose": "L",
+    "secondMove": "Start Second",
+    "viewDeck": "View Deck Details",
+    "win": "W"
+  },
   "player": {
     "mainNickname": "Main nickname",
     "nickname": "Nickname",
     "otherNicknames": "Other nicknames",
     "rank": "Rank",
     "score": "Score",
-    "uid": "UID"
+    "uid": "UID",
+    "unknownPlayer": "Unknown player"
   },
   "rules": {
-    "submitTeams": "Submit line-ups: {0}",
+    "banCharacters": "{0} characters banned",
+    "banCharactersDescription": "Each player ban {0} character card | Each player bans {0} character cards",
+    "bo1": "BO1",
+    "boX": "BO{0}",
+    "charactersNoRepeat": "No duplicate characters",
+    "charactersNoRepeatDescription": "Character cards cannot be reused in different lineups",
+    "charactersRequired": "{0} characters required",
+    "charactersRequiredDescription": "Character cards can be reused in different lineups, but at least {0} different characters are required overall.",
+    "mode": {
+      "characterConquest": "Conquest (character)",
+      "characterConquestDescription": "The winning character cannot be used again",
+      "conquest": "Conquest",
+      "conquestDescription": "The winning lineup cannot be used again",
+      "duel": "Duel",
+      "duelDescription": "Each lineup can only be used once"
+    },
+    "submitDecks": "Submit decks",
+    "submitDecksEachTeamDescription": "Both sides submit the decks before match starts. A maximum of {0} decks can be submitted for each lineup.",
+    "submitDecksInTotalDescription": "Both sides submit the decks before match starts. A maximum of {0} decks can be submitted for all lineups.",
+    "submitTeams": "Submit {0} lineups",
+    "submitTeamsBanTeams": "Submit {0} lineups ({1} banned)",
     "submitTeamsBanTeamsDescription": "Each player submits {0} decks, then ban {1} of opponent's decks.",
-    "submitTeamsDescription": "Each player submits {0} line-ups."
+    "submitTeamsDescription": "Each player submits {0} lineups."
   },
   "stats": {
-    "gamesPlayed": "Played"
+    "atLeast": "≥ {0} games",
+    "followerWinRate": "\"Start Second\" win rate",
+    "gamesBP": "Games played + banned",
+    "gamesBanned": "Banned",
+    "gamesExcludeMirror": "Game count w/o mirror match",
+    "gamesNetWin": "Net wins",
+    "gamesPlayed": "Played",
+    "gamesWin": "Wins",
+    "gamesWinExcludeMirror": "Win count w/o mirror match",
+    "starterWinRate": "\"Start First\" win rate",
+    "winRate": "Win rate",
+    "winRateExcludeMirror": "Win rate w/o mirror match"
   },
   "teams": {
+    "characterSelectorDefaultPlaceholder": "Characters",
+    "characterSelectorFocusPlaceholder": "Input to filter",
     "matchupTable": {
       "minGamesNum": "Games"
     }
   },
   "tournament": {
-    "champion": "Champion"
+    "ban": "Ban",
+    "champion": "Champion",
+    "date": "Date",
+    "dateRange": "Live match",
+    "gameName": "Game name",
+    "matchName": "Match name",
+    "name": "Tournament name",
+    "part": "Part",
+    "partName": "Part name",
+    "partNameDefault": "Part {0}",
+    "rules": "Rules",
+    "stage": "Stage",
+    "stageName": "Stage name",
+    "stageNameDefault": "Stage {0}",
+    "tournamentDetails": "Tournament Details",
+    "type": "Tournament type",
+    "watchReplay": "Watch replay"
+  },
+  "team": {
+    "basicStats": {
+      "games": "Played",
+      "gamesWin": "Wins",
+      "gamesNetWin": "Net Wins",
+      "winRate": "Win Rate"
+    }
   }
 }

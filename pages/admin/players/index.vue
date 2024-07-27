@@ -6,7 +6,7 @@
     </div>
     <AdminPlayerListTable
       :data="filteredPlayers"
-      :loading="pending"
+      :loading="status === 'pending'"
       class="flex-table"
       @select-unique-name="playerUniqueNameDialog?.show($event)"
       @merge-player-data="playerMergeDialog?.show($event, players)"
@@ -22,12 +22,13 @@
 import Pinyin from "pinyin-match";
 import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton } from "#components";
 
-definePageMeta({ title: "site.titles.admin.players" });
+const { t } = useLocales();
+useHead({ title: t("site.titles.admin.players") });
 
 const playerUniqueNameDialog = ref<InstanceType<typeof AdminPlayerUniqueNameDialog>>();
 const playerMergeDialog = ref<InstanceType<typeof AdminPlayerMergeDialog>>();
 
-const { data, pending, refresh } = await useFetch("/api/v3/players/list");
+const { data, status, refresh } = await useFetch("/api/v3/players/list");
 
 const players = computed(() => data.value?.players ?? []);
 

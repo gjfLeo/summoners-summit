@@ -2,8 +2,13 @@
   "description": "Tournament Match Database for GITCG",
   "menu": {
     "cards": "Cards",
+    "others": "Others",
+    "playerList": "Player List",
+    "playerRanks": "Player Ranks",
     "players": "Players",
-    "teams": "Teams",
+    "teams": "Lineups",
+    "tournamentList": "Tournament List",
+    "tournamentTemplate": "Tournament Templates",
     "tournaments": "Tournaments"
   },
   "messages": {
@@ -11,6 +16,17 @@
   },
   "name": "Summoners' Summit",
   "titles": {
-    "format": "{pageTitle} {'|'} {siteTitle}"
+    "admin": {
+      "players": "Player Management",
+      "ranks": "Player Rank Management",
+      "tournament": "Tournament Management",
+      "tournaments": "Tournament Management"
+    },
+    "format1": "{0} {'|'} {1}",
+    "main": {
+      "cards": "Cards",
+      "tournaments": "Tournaments",
+      "team": "{0} - Lineup Details"
+    }
   }
 }

@@ -7,27 +7,12 @@
 <script lang="ts" setup>
 import type { SiteRoute } from "~/composables/use-site-menu";
 
-const { t } = useLocales();
-const route = useRoute();
-
-useHead({
-  title: computed(() => {
-    const pageTitle = typeof route.meta.title === "string" ? t(route.meta.title as string) : null;
-    return pageTitle
-      ? t("site.titles.format", {
-        pageTitle,
-        siteTitle: t("site.name"),
-      })
-      : t("site.name");
-  }),
-});
-
 const routes: SiteRoute[] = [
   {
     label: "tournaments",
     to: "/admin/tournaments",
     matches: [
-      /^\/admin\/tournament\/\w{16}$/,
+      /^\/admin\/tournament\//,
     ],
     children: [
       {

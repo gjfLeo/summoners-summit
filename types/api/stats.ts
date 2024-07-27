@@ -17,6 +17,8 @@ export interface TeamStats {
   gamesFollowerWin: number;
   gamesMirror: number;
   banned: number;
+  gamesWithDeck: number;
+  gamesWithDeckWin: number;
 }
 
 export const ZGetTeamMatchupsParams = z.object({

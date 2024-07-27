@@ -118,12 +118,12 @@ const option = computed<ECOption>(() => {
       {
         gridIndex: 0,
         type: "value",
-        name: "总携带张数",
+        name: t("main.cards.actionBarChart.numUsages"),
       },
       {
         gridIndex: 1,
         type: "value",
-        name: "平均张数",
+        name: t("main.cards.actionBarChart.pickFrequency"),
         scale: true,
         inverse: true,
       },

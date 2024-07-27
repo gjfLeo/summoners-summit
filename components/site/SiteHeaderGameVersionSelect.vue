@@ -1,9 +1,16 @@
 <template>
-  <GameVersionSelect
-    v-model:value="gameVersion"
-    :clearable="false"
-    class="w-6.25rem"
-  />
+  <ClientOnly>
+    <template #default>
+      <GameVersionSelect
+        v-model:value="gameVersion"
+        :clearable="false"
+        class="w-6.25rem"
+      />
+    </template>
+    <template #fallback>
+      <NSelect loading placeholder="" class="w-6.25rem" />
+    </template>
+  </ClientOnly>
 </template>
 
 <script lang="ts" setup>

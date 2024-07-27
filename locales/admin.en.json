@@ -1,25 +1,71 @@
 {
   "action": {
+    "add": "Add",
     "cancel": "Cancel",
     "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
     "enterAdminPage": "Enter admin page",
     "leaveAdminPage": "Leave admin page",
+    "loading": "Loading",
+    "save": "Save",
     "submit": "Submit"
   },
   "card": {
     "updateData": "Update card data",
     "updateDataDescription": "Get the latest card data from the third-party library (genshin-db)"
   },
+  "match": {
+    "addBan": "Add Ban",
+    "addGame": "Add Game"
+  },
   "message": {
+    "FAILED": "Failed",
     "PLAYER_NOT_FOUND": "Player not found",
-    "SUCCESS": "Success"
+    "SUCCESS": "Success",
+    "TOURNAMENT_STAGE_OR_PART_NOT_FOUND": "Tournament stage or part not found"
   },
   "player": {
     "mergePlayerData": "Merge player data",
+    "mergeSourceLabel": "This will be deleted",
+    "mergeSourceRequired": "Select",
+    "mergeSourceTargetSame": "Source and target cannot be the same",
+    "mergeTargetLabel": "Merged into this",
+    "mergeTargetRequired": "Select",
     "nicknameMatchedNum": "{0} matched",
     "selectUniqueName": "Select unique name"
   },
   "ranks": {
-    "invalidId": "Invalid game version"
+    "importFromJson": "[Currently For CN Only]",
+    "importFromTable": "[Currently For CN Only]",
+    "invalidId": "Game version is invalid",
+    "jsonContentDescription": "Please {login} first, then {api}",
+    "jsonContentDescription2": "Paste interface data here",
+    "jsonContentDescriptionApi": "Access interface",
+    "jsonContentDescriptionLogin": "Log in to the official website",
+    "jsonContentParseError": "Data content parsed incorrectly",
+    "jsonContentRequired": "Data content cannot be empty",
+    "nicknameNeedConfirm": "Nickname needs confirmation",
+    "ranksRequired": "Please import list data",
+    "tableContentDescription": "Paste the table from the document here",
+    "tableContentParseError": "Table contents parsed incorrectly",
+    "tableContentRequired": "Table content cannot be empty"
+  },
+  "tournament": {
+    "addMatch": "Add Match",
+    "addPart": "Add Stage Part",
+    "addStage": "Add Stage",
+    "decks": "{0} / {1} decks",
+    "gameVideos": "{0} / {1} videos",
+    "games": "{0} games | {0} game",
+    "matchVideo": "Match video",
+    "partNamePlaceholder1": "Name of the only part can be omitted",
+    "title": "Tournament Information",
+    "titleAdd": "Add Tournament",
+    "titleEdit": "Edit Tournament Information"
+  },
+  "validate": {
+    "pleaseInput": "Input {0}",
+    "pleaseSelect": "Select {0}"
   }
 }

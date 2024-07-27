@@ -15,7 +15,7 @@ import type { CardId } from "~/types";
 type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
 const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));
 const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
-const numGames = inject<DataType["numGames"]>("numMatches", computed(() => 0));
+const numGames = inject<DataType["numGames"]>("numGames", computed(() => 0));
 
 const { t, currentLocalized } = useLocales();
 const { characterCardById, getCardAvatar } = await useAsyncSharedData();

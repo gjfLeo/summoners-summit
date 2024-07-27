@@ -1,6 +1,8 @@
 {
   "cards": {
     "actionBarChart": {
+      "numUsages": "总携带张数",
+      "pickFrequency": "平均张数",
       "summary": "共统计 {0} 套对局牌组"
     },
     "characterBarChart": {
@@ -10,7 +12,7 @@
       "summary": "共统计 {0} 场比赛 / {1} 场对局"
     },
     "characterPickRateBarChart": {
-      "pickRatePercentage": "选取率\u2006(%)"
+      "pickRatePercentage": "选取率 (%)"
     }
   },
   "deck": {
@@ -100,5 +102,13 @@
     "tournamentDetails": "赛事详情",
     "type": "赛事类别",
     "watchReplay": "观看录像"
+  },
+  "team": {
+    "basicStats": {
+      "games": "场数",
+      "gamesWin": "胜场数",
+      "winRate": "胜率",
+      "gamesNetWin": "净胜"
+    }
   }
 }

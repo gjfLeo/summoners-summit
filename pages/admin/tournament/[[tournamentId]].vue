@@ -31,12 +31,11 @@
 <script lang="ts" setup>
 import type { Game, GameId, Match, MatchId, Tournament, TournamentId } from "~/types";
 
-definePageMeta({ title: "site.titles.admin.tournament" });
-
 const route = useRoute("admin-tournament-tournamentId___zh");
 const id = route.params.tournamentId;
 
 const { t } = useLocales();
+useHead({ title: t("site.titles.admin.tournament") });
 
 const { data, refresh } = await useFetch("/api/v3/tournaments/get", {
   query: { id: id as string },

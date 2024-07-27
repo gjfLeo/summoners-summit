@@ -14,6 +14,7 @@
 
 <script lang="ts" setup>
 const { t } = useLocales();
+useHead({ title: t("site.titles.main.cards") });
 
 const { gameVersion } = useGameVersion();
 
