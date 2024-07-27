@@ -1,25 +1,25 @@
 import path from "node:path";
+import fs from "node:fs";
 import fse from "fs-extra";
-import fg from "fast-glob";
 
 export function readData<R, P extends string = string>(dataPath: P): R | undefined;
 export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
 export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
-  const fullPath = path.resolve("server/data", `${dataPath}.json`);
-  console.log(fullPath);
-  if (!fse.existsSync(fullPath)) {
+  const filePath = path.resolve("server/data", `${dataPath}.json`);
+  if (!fse.existsSync(filePath)) {
     return defaultData;
   }
-  return fse.readJsonSync(fullPath) as R ?? defaultData;
+  return fse.readJsonSync(filePath) as R ?? defaultData;
 }
 
 export function readDataList<R, P extends string = string>(dataPath: P): R[] {
-  const fullPath = path.resolve("server/data", `${dataPath}/*.json`);
-  const fullIgnoredPath = path.resolve("server/data", `${dataPath}/_*.json`);
-  console.log(fullPath, fg.sync(fg.convertPathToPattern(fullPath)));
-  return fg.sync([fg.convertPathToPattern(fullPath), `!${fg.convertPathToPattern(fullIgnoredPath)}`])
+  const dirPath = path.resolve("server/data", `${dataPath}`);
+  return fs.readdirSync(dirPath, { withFileTypes: true })
+    .filter(file => file.isFile() && file.name.endsWith(".json"))
+    .filter(file => !file.name.startsWith("_"))
     .map((file) => {
-      return fse.readJsonSync(file) as R;
+      const filePath = path.resolve(dirPath, file.name);
+      return fse.readJsonSync(filePath) as R;
     });
 }
 
