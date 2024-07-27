@@ -31,8 +31,7 @@ import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId
 
 definePageMeta({ title: "site.titles.main.tournaments" });
 
-const { tournaments } = useTournamentListData();
-// const { tournaments } = await useApiGetTournamentList();
+const { tournaments } = await useApiGetTournamentList();
 const { gameVersionList } = useSharedData();
 
 const bySeason = computed(() => {

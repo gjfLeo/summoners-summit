@@ -21,21 +21,21 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/**": { prerender: true, isr: false, cache: false },
-    "/admin/**": { ssr: false, prerender: false, isr: false },
-    "/en/admin/**": { ssr: false, prerender: false, isr: false },
+    "/**": { prerender: true },
+    "/admin/**": { ssr: false, prerender: false },
+    "/en/admin/**": { ssr: false, prerender: false },
   },
 
   nitro: {
-    // static: true,
-    // esbuild: {
-    //   options: {
-    //     target: "esnext",
-    //   },
-    // },
+    static: true,
+    esbuild: {
+      options: {
+        target: "esnext",
+      },
+    },
     prerender: {
-      crawlLinks: false,
-      routes: ["/", "/tournaments"],
+      crawlLinks: true,
+      // routes: ["/", "/tournaments"],
       ignore: ["/admin"],
     },
   },
