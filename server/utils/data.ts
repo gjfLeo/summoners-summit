@@ -15,6 +15,7 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
 export function readDataList<R, P extends string = string>(dataPath: P): R[] {
   const fullPath = path.resolve("server/data", `${dataPath}/*.json`);
   const fullIgnoredPath = path.resolve("server/data", `${dataPath}/_*.json`);
+  console.log(fullPath, fg.sync(fg.convertPathToPattern(fullPath)));
   return fg.sync([fg.convertPathToPattern(fullPath), `!${fg.convertPathToPattern(fullIgnoredPath)}`])
     .map((file) => {
       return fse.readJsonSync(file) as R;
