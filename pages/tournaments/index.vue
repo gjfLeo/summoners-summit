@@ -31,7 +31,10 @@ import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId
 
 definePageMeta({ title: "site.titles.main.tournaments" });
 
-const { data } = await useFetch("/api/v3/tournaments/list");
+const { data } = useAsyncData(
+  "tournamentList",
+  () => $fetch("/api/v3/tournaments/list"),
+);
 const tournaments = computed(() => data.value?.tournaments ?? []);
 
 // const { tournaments } = await useApiGetTournamentList();
