@@ -34,8 +34,8 @@ export default defineNuxtConfig({
     //   },
     // },
     prerender: {
-      crawlLinks: true,
-      // routes: ["/"],
+      crawlLinks: false,
+      routes: ["/", "/tournaments"],
       ignore: ["/admin"],
     },
   },
@@ -59,15 +59,15 @@ export default defineNuxtConfig({
       //   { async: true, src: "https://www.statcounter.com/counter/counter.js" },
       // ],
     },
-    layoutTransition: { name: "layout-transition", mode: "out-in" },
-    pageTransition: { name: "layout-transition", mode: "out-in" },
+    // layoutTransition: { name: "layout-transition", mode: "out-in" },
+    // pageTransition: { name: "layout-transition", mode: "out-in" },
   },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
     // payloadExtraction: false,
-    renderJsonPayloads: true,
+    renderJsonPayloads: false,
     typedPages: true,
   },
 
@@ -80,9 +80,9 @@ export default defineNuxtConfig({
     "@unocss/reset/tailwind.css",
   ],
 
-  colorMode: {
-    classSuffix: "",
-  },
+  // colorMode: {
+  //   classSuffix: "",
+  // },
 
   // pwa,
 
@@ -105,11 +105,12 @@ export default defineNuxtConfig({
     ],
   },
 
-  compatibilityDate: "2024-07-03",
-
   echarts: {
     renderer: "svg",
     charts: ["BarChart"],
     components: ["GridComponent", "TooltipComponent", "LegendComponent", "DataZoomComponent"],
   },
+
+  compatibilityDate: "2024-07-03",
+
 });
