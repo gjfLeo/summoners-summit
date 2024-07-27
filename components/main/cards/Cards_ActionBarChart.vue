@@ -1,11 +1,15 @@
 <template>
   <div>
     <NText :depth="3" class="text-sm">{{ t('main.cards.actionBarChart.summary', [numGameDecks]) }}</NText>
-    <VChart
+    <div
       ref="chart"
       class="mt h-[calc(100vh-16rem)] min-h-30rem"
-      :option="option" autoresize
-    />
+    >
+      <VChart
+        v-if="chartHeight > 0"
+        :option="option" autoresize
+      />
+    </div>
   </div>
 </template>
 
@@ -21,7 +25,8 @@ const { t } = useLocales();
 const { getCardImage } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 const chart = ref<ComponentPublicInstance>();
-const { height: chartHeight } = useElementSize(chart);
+const { height: chartHeight, width: chartWidth } = useElementSize(chart);
+const barNum = computed(() => Math.floor((chartWidth.value - remToPx(3)) / remToPx(3)));
 
 const data = computed(() => {
   return actionCardStats.value
@@ -59,8 +64,8 @@ const option = computed<ECOption>(() => {
         xAxisIndex: [0, 1],
         filterMode: "filter",
         start: 0,
-        maxValueSpan: 20,
-        minValueSpan: 20,
+        maxValueSpan: barNum.value,
+        minValueSpan: barNum.value,
         zoomLock: true,
         zoomOnMouseWheel: false,
         moveOnMouseMove: true,
@@ -141,6 +146,7 @@ const option = computed<ECOption>(() => {
           },
         },
         barWidth: remToPx(1.5),
+        animationDelay: i => i * 1000 / barNum.value,
       },
       {
         name: "pickFrequency",
@@ -162,6 +168,7 @@ const option = computed<ECOption>(() => {
         barWidth: remToPx(1.5),
         xAxisIndex: 1,
         yAxisIndex: 1,
+        animationDelay: i => i * 1000 / barNum.value,
       },
     ],
   } satisfies ECOption;

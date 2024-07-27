@@ -58,7 +58,7 @@ const option = computed<ECOption>(() => {
         type: "inside",
         id: "insideY",
         yAxisIndex: 0,
-        filterMode: "empty",
+        filterMode: "filter",
         start: 0,
         maxValueSpan: 7,
         minValueSpan: 7,

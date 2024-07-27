@@ -1,9 +1,14 @@
 <template>
   <div>
-    <VChart
+    <div
+      ref="chart"
       class="mt h-[calc(100vh-16rem)] min-h-30rem"
-      :option="option" autoresize
-    />
+    >
+      <VChart
+        v-if="chartHeight > 0"
+        :option="option" autoresize
+      />
+    </div>
     <!--
       选取率计算方式：
       选取率 = （作为角色被禁用次数 * 2 + 阵容中被禁用次数 + 阵容比赛中上场次数） / (总场数 * 2)
@@ -24,6 +29,10 @@ const { t } = useLocales();
 const { getCardAvatar } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
+const chart = ref<ComponentPublicInstance>();
+const { height: chartHeight, width: chartWidth } = useElementSize(chart);
+const barNum = computed(() => Math.floor((chartWidth.value - remToPx(3)) / remToPx(3)));
+
 const data = computed(() => {
   return characterCardStats.value
     .map(item => ({
@@ -41,9 +50,32 @@ const option = computed<ECOption>(() => {
       top: remToPx(3),
       left: remToPx(1),
       right: remToPx(1),
-      bottom: 0,
+      bottom: remToPx(2),
       containLabel: true,
     },
+    dataZoom: [
+      {
+        type: "inside",
+        xAxisIndex: [0, 1],
+        filterMode: "filter",
+        start: 0,
+        maxValueSpan: barNum.value,
+        minValueSpan: barNum.value,
+        zoomLock: true,
+        zoomOnMouseWheel: false,
+        moveOnMouseMove: true,
+        moveOnMouseWheel: true,
+      },
+      {
+        type: "slider",
+        xAxisIndex: [0, 1],
+        showDetail: false,
+        handleSize: 0,
+        brushSelect: false,
+        height: remToPx(1),
+        bottom: 0,
+      },
+    ],
     xAxis: {
       type: "category",
       data: data.value.map(card => card.cardId),
@@ -74,7 +106,7 @@ const option = computed<ECOption>(() => {
       name: t("main.cards.characterPickRateBarChart.pickRatePercentage"),
       axisLabel: {
         color: themeVars.value.textColor2,
-        formatter: value => toPercentageValue(value).toString(),
+        formatter: value => toPercentageValue(value).toFixed(0),
       },
       splitLine: {
         lineStyle: {
@@ -107,7 +139,7 @@ const option = computed<ECOption>(() => {
             },
           },
         },
-        barWidth: remToPx(1),
+        barWidth: remToPx(1.5),
         animationDelay: i => 1500 / data.value.length * i,
       },
     ],
