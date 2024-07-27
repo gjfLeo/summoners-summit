@@ -109,6 +109,7 @@
       "gamesWin": "Wins",
       "gamesNetWin": "Net Wins",
       "winRate": "Win Rate"
-    }
+    },
+    "noData": "This lineup has no data in the currently selected game version."
   }
 }

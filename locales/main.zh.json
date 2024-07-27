@@ -109,6 +109,7 @@
       "gamesWin": "胜场数",
       "winRate": "胜率",
       "gamesNetWin": "净胜"
-    }
+    },
+    "noData": "此阵容在当前选择的版本中无数据。"
   }
 }
