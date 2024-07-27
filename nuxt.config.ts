@@ -59,15 +59,11 @@ export default defineNuxtConfig({
       //   { async: true, src: "https://www.statcounter.com/counter/counter.js" },
       // ],
     },
-    // layoutTransition: { name: "layout-transition", mode: "out-in" },
-    // pageTransition: { name: "layout-transition", mode: "out-in" },
+    layoutTransition: { name: "layout-transition", mode: "out-in" },
+    pageTransition: { name: "layout-transition", mode: "out-in" },
   },
 
   experimental: {
-    // when using generate, payload js assets included in sw precache manifest
-    // but missing on offline, disabling extraction it until fixed
-    // payloadExtraction: false,
-    renderJsonPayloads: false,
     typedPages: true,
   },
 
