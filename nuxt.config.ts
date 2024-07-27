@@ -21,9 +21,9 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/**": { prerender: true, isr: false },
-    "/admin/**": { ssr: false, prerender: false },
-    "/en/admin/**": { ssr: false, prerender: false },
+    "/**": { prerender: true, isr: false, cache: false },
+    "/admin/**": { ssr: false, prerender: false, isr: false },
+    "/en/admin/**": { ssr: false, prerender: false, isr: false },
   },
 
   nitro: {
