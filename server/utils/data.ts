@@ -6,6 +6,7 @@ export function readData<R, P extends string = string>(dataPath: P): R | undefin
 export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
 export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
+  console.log(fullPath);
   if (!fse.existsSync(fullPath)) {
     return defaultData;
   }
