@@ -1,6 +1,6 @@
 <template>
   <div class="hidden">
-    <template v-for="version in gameVersionList" :key="version.id">
+    <template v-for="version in gameVersionList.slice(0, 4)" :key="version.id">
       <div><NuxtLinkLocale :to="getLink(version)" no-prefetch>{{ version.id }}</NuxtLinkLocale></div>
     </template>
   </div>
