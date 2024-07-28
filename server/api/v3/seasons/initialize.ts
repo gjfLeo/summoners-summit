@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { SeasonPhrase, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
+import { ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
 export default defineEventHandler(async () => {
   writeData(

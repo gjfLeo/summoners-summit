@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, sqrt } from "mathjs/number";
+import { divide } from "mathjs/number";
 
 type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
 const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));

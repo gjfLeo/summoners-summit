@@ -17,18 +17,18 @@
   "name": "召唤之巅",
   "titles": {
     "admin": {
+      "cards": "卡牌管理",
       "players": "选手管理",
       "ranks": "选手榜单管理",
       "tournament": "赛事管理",
-      "tournaments": "赛事管理",
-      "cards": "卡牌管理"
+      "tournaments": "赛事管理"
     },
     "format1": "{0}｜{1}",
     "main": {
       "cards": "卡牌",
-      "tournaments": "赛事",
       "team": "{0} - 阵容详情",
-      "tournament": "赛事详情"
+      "tournament": "赛事详情",
+      "tournaments": "赛事"
     }
   }
 }

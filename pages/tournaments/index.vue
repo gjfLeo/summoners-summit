@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief, TournamentId } from "~/types/data";
+import type { GameVersionId, SeasonPhraseId, TournamentDetailBrief } from "~/types/data";
 
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.tournaments") });
