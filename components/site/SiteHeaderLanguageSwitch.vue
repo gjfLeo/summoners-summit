@@ -1,6 +1,6 @@
 <template>
   <NPopselect :value="locale" :options="localeOptions" @update:value="setLocale">
-    <CommonIconButton icon="i-carbon:translate" />
+    <CommonIconButton icon="i-mingcute:translate-2-line" />
   </NPopselect>
 </template>
 

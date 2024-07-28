@@ -20,6 +20,7 @@
     "@genshin-db/tcg": "^5.1.7",
     "@gjfleo/eslint-config": "^1.0.15",
     "@iconify-json/carbon": "^1.1.36",
+    "@iconify-json/mingcute": "^1.1.18",
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/color-mode": "^3.4.2",

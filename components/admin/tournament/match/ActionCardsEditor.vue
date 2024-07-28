@@ -24,7 +24,7 @@
           <div class="card-container" @click="remove(cardId, i)">
             <CardImage :card="cardId" />
             <div class="card-shadow">
-              <NText class="text-4xl text-white"><div class="i-carbon:close" /></NText>
+              <NText class="text-4xl text-white"><div class="i-mingcute:close-line" /></NText>
             </div>
           </div>
         </template>

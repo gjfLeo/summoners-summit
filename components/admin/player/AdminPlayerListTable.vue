@@ -66,10 +66,10 @@ const columns: DataTableColumn<Player>[] = [
       return (
         <div class="flex flex-wrap gap-2">
           <NButton text focusable={false} onClick={() => emit("selectUniqueName", row.id)}>
-            <div class="i-carbon:edit" />
+            <div class="i-mingcute:edit-line" />
           </NButton>
           <NButton text focusable={false} onClick={() => emit("mergePlayerData", row.id)}>
-            <div class="i-carbon:direction-merge" />
+            <div class="i-mingcute:combine-line" />
           </NButton>
         </div>
       );

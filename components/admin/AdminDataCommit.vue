@@ -1,7 +1,7 @@
 <template>
   <NButton text :focusable="false" @click="commit">
     <template #icon>
-      <div class="i-carbon:save" />
+      <div class="i-mingcute:save-2-line" />
     </template>
   </NButton>
   <NModal v-model:show="modalVisible" preset="dialog">

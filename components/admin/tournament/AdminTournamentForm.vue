@@ -3,10 +3,10 @@
     <span>{{ t('admin.tournament.title') }}</span>
     <div class="ml-auto">
       <template v-if="!editing">
-        <CommonIconButton icon="i-carbon:edit" @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
+        <CommonIconButton icon="i-mingcute:edit-line" @click="editing = true">{{ t('admin.action.edit') }}</CommonIconButton>
       </template>
       <template v-else>
-        <CommonIconButton icon="i-carbon:save" @click="save">{{ t('admin.action.save') }}</CommonIconButton>
+        <CommonIconButton icon="i-mingcute:save-2-line" @click="save">{{ t('admin.action.save') }}</CommonIconButton>
       </template>
     </div>
   </NH2>
@@ -48,7 +48,7 @@
       class="mt w-full" dashed
       @click="addStage"
     >
-      <template #icon><div class="i-carbon-add" /></template>
+      <template #icon><div class="i-mingcute:add-line" /></template>
       <template #default>{{ t('admin.tournament.addStage') }}</template>
     </NButton>
   </TransitionGroup>
@@ -59,7 +59,7 @@
     right="2rem" bottom="2rem"
     @click="editing = true"
   >
-    <div class="i-carbon:edit" />
+    <div class="i-mingcute:edit-line" />
   </NFloatButton>
   <NFloatButton
     v-if="editing"
@@ -67,7 +67,7 @@
     right="2rem" bottom="2rem"
     @click="save"
   >
-    <div class="i-carbon:save" />
+    <div class="i-mingcute:save-2-line" />
   </NFloatButton>
   <AdminTournamentMatchEditor ref="matchEditor" :tournament-id="tournament.id" @done="emit('save', tournament.id)" />
 </template>

@@ -17,7 +17,6 @@
 const props = defineProps<{
   icon: string;
   danger?: boolean;
-  canActive?: boolean;
   active?: boolean;
 }>();
 
@@ -29,11 +28,6 @@ const style = computed(() => {
     Object.assign(style, {
       "--n-text-color-hover": themeVars.value.errorColorHover,
       "--n-text-color-pressed": themeVars.value.errorColorPressed,
-    });
-  }
-  if (props.canActive) {
-    Object.assign(style, {
-      "--n-padding": "1px",
     });
   }
   if (props.active) {

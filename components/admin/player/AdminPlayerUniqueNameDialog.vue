@@ -15,7 +15,7 @@
         {{ nickname }}
       </NTag>
       <NTag v-if="!inputting" key="####1" type="default" @click="handleAdd">
-        <div class="i-carbon:add" />
+        <div class="i-mingcute:add-line" />
       </NTag>
       <NInput
         v-if="inputting"
@@ -28,7 +28,7 @@
 
     <template #action>
       <NButton type="primary" secondary :disabled="uniqueName === ''" :loading="submitLoading" @click="submit">
-        <template #icon><div class="i-carbon:checkmark" /></template>
+        <template #icon><div class="i-mingcute:check-line" /></template>
       </NButton>
     </template>
   </NModal>

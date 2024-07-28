@@ -7,7 +7,7 @@
       <div class="ml-auto">
         <template v-if="editing">
           <CommonConfirmButton :text="t('admin.action.delete')" @click="$emit('delete')">
-            <CommonIconButton icon="i-carbon:trash-can" danger>{{ t('admin.action.delete') }}</CommonIconButton>
+            <CommonIconButton icon="i-mingcute:delete-2-line" danger>{{ t('admin.action.delete') }}</CommonIconButton>
           </CommonConfirmButton>
         </template>
       </div>
@@ -50,7 +50,7 @@
         class="mt w-full" dashed
         @click="addPart"
       >
-        <template #icon><div class="i-carbon:add" /></template>
+        <template #icon><div class="i-mingcute:add-line" /></template>
         <template #default>{{ t('admin.tournament.addPart') }}</template>
       </NButton>
     </TransitionGroup>

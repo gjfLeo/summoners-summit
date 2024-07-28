@@ -1,5 +1,5 @@
 <template>
-  <CommonIconButton icon="dark:i-carbon:sun i-carbon:moon" @click="toggleColorMode" />
+  <CommonIconButton icon="dark:i-mingcute:sun-line i-mingcute:moon-line" @click="toggleColorMode" />
 </template>
 
 <script lang="ts" setup>

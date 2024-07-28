@@ -9,7 +9,7 @@
     >
       <NTabPane
         name="add"
-        :tab="() => h('div', { class: 'i-carbon:add' })"
+        :tab="() => h('div', { class: 'i-mingcute:add-line' })"
       >
         <AdminRanksImport @done="handleImportDone" />
       </NTabPane>

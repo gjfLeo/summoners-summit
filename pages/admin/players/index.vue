@@ -2,7 +2,7 @@
   <div un-flex="~ col" class="min-h-content" style="gap: 1rem">
     <div un-flex="~ gap-2">
       <div><NInput v-model:value="filterText" clearable /></div>
-      <NButton type="primary" secondary @click="refresh()"><div class="i-carbon:renew" /></NButton>
+      <NButton type="primary" secondary @click="refresh()"><div class="i-mingcute:refresh-1-line" /></NButton>
     </div>
     <AdminPlayerListTable
       :data="filteredPlayers"

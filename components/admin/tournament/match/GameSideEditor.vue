@@ -30,7 +30,7 @@
     >
       行动牌 ({{ actionCards.length }})
     </CommonTextButton>
-    <CommonIconButton size="tiny" icon="i-carbon:copy" @click="copyDeck" />
+    <CommonIconButton size="tiny" icon="i-mingcute:copy-line" @click="copyDeck" />
     <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
   </div>
 </template>

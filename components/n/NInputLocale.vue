@@ -2,7 +2,7 @@
   <div class="w-full">
     <NInput v-bind="$attrs" v-model:value="value.zh">
       <template #suffix>
-        <NButton text><div class="i-carbon:translate" @click="i18nVisible = true" /></NButton>
+        <NButton text><div class="i-mingcute:translate-2-line" @click="i18nVisible = true" /></NButton>
       </template>
     </NInput>
     <NModal

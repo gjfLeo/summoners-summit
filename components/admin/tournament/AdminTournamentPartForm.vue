@@ -7,7 +7,7 @@
       <div class="ml-auto" un-flex="~ gap-2">
         <template v-if="editing">
           <CommonConfirmButton :text="t('admin.action.delete')" @click="$emit('delete')">
-            <CommonIconButton icon="i-carbon:trash-can" danger>{{ t('admin.action.delete') }}</CommonIconButton>
+            <CommonIconButton icon="i-mingcute:delete-2-line" danger>{{ t('admin.action.delete') }}</CommonIconButton>
           </CommonConfirmButton>
         </template>
       </div>
@@ -34,7 +34,7 @@
         <tbody>
           <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
             <tr class="text-center">
-              <th class="text-center!">{{ t('main.tournament.matchName', [matchIndex + 1]) }}</th>
+              <th class="text-center!">{{ t('main.tournament.matchNameDefault', [matchIndex + 1]) }}</th>
               <td class="w-40%">
                 <div un-grid="~ cols-[1fr_min-content_1fr] gap-2">
                   <div :class="{ 'text-orange-500': getMatchWinner(matches[matchId], games) === 'A' }" class="justify-self-end">{{ matches[matchId].playerA.nickname }}</div>
@@ -49,7 +49,7 @@
                 <template v-else>{{ t('admin.tournament.gameVideos', [countGameVideos(matchId), countGames(matchId)]) }}</template>
               </td>
               <td>
-                <CommonIconButton icon="i-carbon:edit" @click="handleEdit(matchId)" />
+                <CommonIconButton icon="i-mingcute:edit-line" @click="handleEdit(matchId)" />
               </td>
             </tr>
           </template>
@@ -57,7 +57,7 @@
             <th />
             <td :colspan="4">
               <NButton class="w-full" dashed @click="addMatch">
-                <template #icon><div class="i-carbon-add" /></template>
+                <template #icon><div class="i-mingcute:add-line" /></template>
                 <template #default>{{ t('admin.tournament.addMatch') }}</template>
               </NButton>
             </td>

@@ -76,7 +76,7 @@ const renderOption: SelectRenderOption = ({ node, option, selected }) => {
             class: ["justify-self-end", "self-end"],
             style: { "grid-area": "1 / 1 / 2 / 2" },
           },
-          () => h("div", { class: "i-carbon:checkmark" }),
+          () => h("div", { class: "i-mingcute:check-line" }),
         )
         : undefined,
     ],

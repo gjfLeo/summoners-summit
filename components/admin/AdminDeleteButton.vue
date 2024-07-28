@@ -14,7 +14,7 @@
             --n-text-color-focus: var(--error-color-focus);
           "
         >
-          <div class="i-carbon:trash-can" />
+          <div class="i-mingcute:delete-2-line" />
         </NButton>
       </NElement>
     </template>

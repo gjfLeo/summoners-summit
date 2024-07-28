@@ -83,7 +83,7 @@ const columns = computed<DataTableColumns<typeof matchupStats["value"][0]>>(() =
         }, {
           icon: () => h(
             "div",
-            { class: "i-carbon:settings" },
+            { class: "i-mingcute:settings-1-line" },
           ),
         }),
         default: () => h(

@@ -77,6 +77,15 @@
     "winRate": "Win rate",
     "winRateExcludeMirror": "Win rate w/o mirror match"
   },
+  "team": {
+    "basicStats": {
+      "games": "Played",
+      "gamesNetWin": "Net Wins",
+      "gamesWin": "Wins",
+      "winRate": "Win Rate"
+    },
+    "noData": "This lineup has no data in the currently selected game version."
+  },
   "teams": {
     "characterSelectorDefaultPlaceholder": "Characters",
     "characterSelectorFocusPlaceholder": "Input to filter",
@@ -89,8 +98,8 @@
     "champion": "Champion",
     "date": "Date",
     "dateRange": "Live match",
-    "gameName": "Game name",
-    "matchName": "Match name",
+    "gameNameDefault": "Game {0}",
+    "matchNameDefault": "Match {0}",
     "name": "Tournament name",
     "part": "Part",
     "partName": "Part name",
@@ -102,15 +111,6 @@
     "tournamentDetails": "Tournament Details",
     "type": "Tournament type",
     "watchReplay": "Watch replay"
-  },
-  "team": {
-    "basicStats": {
-      "games": "Played",
-      "gamesWin": "Wins",
-      "gamesNetWin": "Net Wins",
-      "winRate": "Win Rate"
-    },
-    "noData": "This lineup has no data in the currently selected game version."
   },
   "tournaments": {
     "seasonName": "Season {0}"

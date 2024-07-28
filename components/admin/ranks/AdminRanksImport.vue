@@ -75,7 +75,7 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
                       nicknameNeedConfirm.value[index] = false;
                     },
                   },
-                  () => h("div", { class: "i-carbon:checkmark" }),
+                  () => h("div", { class: "i-mingcute:check-line" }),
                 )
               : undefined,
           },

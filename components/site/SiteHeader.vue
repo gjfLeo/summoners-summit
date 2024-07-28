@@ -6,7 +6,10 @@
     style="background-color: var(--g-header-color);"
   >
     <div un-flex="~ gap-4">
-      <CommonIconButton class="md:hidden" icon="i-carbon:menu" @click="showMobileMenu = true" />
+      <NuxtLinkLocale v-if="localePath($route.path, 'zh') !== '/'" to="/">
+        <CommonIconButton icon="i-mingcute:home-3-line" />
+      </NuxtLinkLocale>
+      <CommonIconButton class="md:hidden" icon="i-mingcute:menu-line" @click="showMobileMenu = true" />
     </div>
     <div>
       <NMenu
@@ -43,6 +46,7 @@ const props = defineProps<{
   routes: SiteRoute[];
 }>();
 
+const localePath = useLocalePath();
 const { menuOptions, menuValue, renderLabel } = useSiteMenu(props.routes);
 
 const showMobileMenu = ref(false);

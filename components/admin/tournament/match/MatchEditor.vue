@@ -53,8 +53,7 @@
               </th>
               <th>
                 <CommonIconButton
-                  icon="i-carbon:video" can-active
-                  :active="Boolean(match.video)"
+                  :icon="Boolean(match.video) ? 'i-mingcute:video-camera-fill' : 'i-mingcute:video-camera-line'"
                   @click="async () => match.video = await inputVideo(match.video)"
                 />
               </th>
@@ -78,7 +77,7 @@
                 <div un-flex="~ gap-2">
                   <template v-if="match.games.length > 1">
                     <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteBan(banIndex)">
-                      <CommonIconButton icon="i-carbon:trash-can" danger />
+                      <CommonIconButton icon="i-mingcute:delete-2-line" danger />
                     </CommonConfirmButton>
                   </template>
                 </div>
@@ -88,14 +87,14 @@
               <th class="text-center!">禁用</th>
               <td :colspan="3">
                 <NButton class="w-full" dashed @click="addBan">
-                  <template #icon><div class="i-carbon-add" /></template>
+                  <template #icon><div class="i-mingcute:add-line" /></template>
                   <template #default>{{ t('admin.match.addBan') }}</template>
                 </NButton>
               </td>
               <td />
             </tr>
             <tr v-for="(game, gameIndex) in match.games" :key="`G${game._key}`">
-              <th class="text-center!">{{ t('main.tournament.gameName', [gameIndex + 1]) }}</th>
+              <th class="text-center!">{{ t('main.tournament.gameNameDefault', [gameIndex + 1]) }}</th>
               <td>
                 <AdminTournamentMatchGameSideEditor
                   v-model:deck="game.playerADeck"
@@ -139,13 +138,12 @@
               <td>
                 <div un-flex="~ gap-2">
                   <CommonIconButton
-                    icon="i-carbon:video" can-active
-                    :active="Boolean(game.gameVideo)"
+                    :icon="Boolean(game.gameVideo) ? 'i-mingcute:video-camera-fill' : 'i-mingcute:video-camera-line'"
                     @click="async () => game.gameVideo = await inputVideo(game.gameVideo)"
                   />
                   <template v-if="match.games.length > 1">
                     <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
-                      <CommonIconButton icon="i-carbon:trash-can" danger />
+                      <CommonIconButton icon="i-mingcute:delete-2-line" danger />
                     </CommonConfirmButton>
                   </template>
                 </div>
@@ -156,7 +154,7 @@
               <td :colspan="3">
                 <NFormItem path="games">
                   <NButton class="w-full" dashed @click="addGame">
-                    <template #icon><div class="i-carbon-add" /></template>
+                    <template #icon><div class="i-mingcute:add-line" /></template>
                     <template #default>{{ t('admin.match.addGame') }}</template>
                   </NButton>
                 </NFormItem>

@@ -4,7 +4,7 @@
   >
     <template #trigger>
       <NuxtLinkLocale :to="video" target="_blank" no-prefetch u-flex="~ items-center">
-        <CommonIconButton icon="i-carbon:video" />
+        <CommonIconButton icon="i-mingcute:video-line" />
       </NuxtLinkLocale>
     </template>
     <span>{{ t('main.tournament.watchReplay') }}</span>
