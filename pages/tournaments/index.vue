@@ -1,17 +1,24 @@
 <template>
   <div>
     <template v-for="season in seasons" :key="season">
-      <NH2 :id="`S${season}`">第{{ season }}赛季</NH2>
+      <NH2 :id="`S${season}`">{{ t('main.tournaments.seasonName', [season]) }}</NH2>
       <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
         <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
-        <TournamentList :tournaments="list" @item-click="handleItemClick" />
+
+        <TournamentList>
+          <template v-for="tournament in list" :key="tournament.id">
+            <NuxtLinkLocale :to="`/tournament/${tournament.id}`">
+              <TournamentListItem :tournament="tournament" />
+            </NuxtLinkLocale>
+          </template>
+        </TournamentList>
       </template>
     </template>
 
     <SitePageAnchors>
       <template v-for="season in seasons" :key="season">
         <NAnchorLink
-          :title="`第\u2006${season}\u2006赛季`"
+          :title="t('main.tournaments.seasonName', [season])"
           :href="`#S${season}`"
         >
           <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
@@ -51,10 +58,4 @@ const bySeason = computed(() => {
   return bySeason;
 });
 const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
-
-const router = useRouter();
-const localePath = useLocalePath();
-function handleItemClick(tournamentId: TournamentId) {
-  router.push(localePath(`/tournament/${tournamentId}`));
-}
 </script>

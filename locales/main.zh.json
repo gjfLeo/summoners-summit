@@ -77,6 +77,15 @@
     "winRate": "胜率",
     "winRateExcludeMirror": "非镜像胜率"
   },
+  "team": {
+    "basicStats": {
+      "games": "场数",
+      "gamesNetWin": "净胜",
+      "gamesWin": "胜场数",
+      "winRate": "胜率"
+    },
+    "noData": "此阵容在当前选择的版本中无数据。"
+  },
   "teams": {
     "characterSelectorDefaultPlaceholder": "角色",
     "characterSelectorFocusPlaceholder": "支持拼音和首字母筛选",
@@ -103,13 +112,7 @@
     "type": "赛事类别",
     "watchReplay": "观看录像"
   },
-  "team": {
-    "basicStats": {
-      "games": "场数",
-      "gamesWin": "胜场数",
-      "winRate": "胜率",
-      "gamesNetWin": "净胜"
-    },
-    "noData": "此阵容在当前选择的版本中无数据。"
+  "tournaments": {
+    "seasonName": "第 {0} 赛季"
   }
 }

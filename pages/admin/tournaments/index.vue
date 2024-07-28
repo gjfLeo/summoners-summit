@@ -4,7 +4,13 @@
       <NH2 :id="`S${season}`">第{{ season }}赛季</NH2>
       <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
         <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
-        <TournamentList :tournaments="list" @item-click="handleItemClick" />
+        <TournamentList>
+          <template v-for="tournament in list" :key="tournament.id">
+            <NuxtLinkLocale :to="`/admin/tournament/${tournament.id}`">
+              <TournamentListItem :tournament="tournament" />
+            </NuxtLinkLocale>
+          </template>
+        </TournamentList>
       </template>
     </template>
 
@@ -64,8 +70,5 @@ const router = useRouter();
 const localePath = useLocalePath();
 function handleAdd() {
   router.push(localePath("/admin/tournament"));
-}
-function handleItemClick(tournamentId: TournamentId) {
-  router.push(localePath(`/admin/tournament/${tournamentId}`));
 }
 </script>

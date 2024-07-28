@@ -1,5 +1,5 @@
 <template>
-  <NCard :title="currentLocalized(tournament.name)" hoverable class="h-full cursor-pointer">
+  <NCard :title="currentLocalized(tournament.name)" hoverable class="h-full">
     <template #default>
       <dl class="tournament-dl">
         <dt>{{ t('main.tournament.type') }}</dt>
