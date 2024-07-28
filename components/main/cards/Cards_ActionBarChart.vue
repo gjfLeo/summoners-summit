@@ -22,7 +22,7 @@ const actionCardStats = inject<DataType["actionCardStats"]>("actionCardStats", c
 const numGameDecks = inject<DataType["numGameDecks"]>("numGameDecks", computed(() => 0));
 
 const { t } = useLocales();
-const { getCardImage } = await useAsyncSharedData();
+const { actionCardById } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 const chart = ref<ComponentPublicInstance>();
 const { height: chartHeight, width: chartWidth } = useElementSize(chart);
@@ -32,7 +32,7 @@ const data = computed(() => {
   return actionCardStats.value
     .map(item => ({
       cardId: item.cardId,
-      image: getCardImage(item.cardId),
+      image: actionCardById.value[item.cardId].image,
       numUsages: item.numUsages,
       pickFrequency: divide(item.numUsages, item.numGameDecks),
     }))

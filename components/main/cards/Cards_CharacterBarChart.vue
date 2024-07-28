@@ -18,7 +18,7 @@ const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0
 const numGames = inject<DataType["numGames"]>("numGames", computed(() => 0));
 
 const { t, currentLocalized } = useLocales();
-const { characterCardById, getCardAvatar } = await useAsyncSharedData();
+const { characterCardById } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
 const data = computed(() => {
@@ -29,7 +29,7 @@ const data = computed(() => {
       numGamesWin: item.numGamesWin,
       numGamesLose: item.numGames - item.numGamesWin,
       numBanned: item.numBanned,
-      avatar: getCardAvatar(item.cardId),
+      avatar: characterCardById.value[item.cardId].avatar,
     }))
     .sort(sorter("numGames"))
     .reverse();
@@ -177,7 +177,7 @@ const option = computed<ECOption>(() => {
         }
         const cardId = params[0].name;
         const card = characterCardById.value[cardId];
-        const avatarUrl = getCardAvatar(cardId);
+        const avatarUrl = characterCardById.value[cardId].avatar;
         const numGames = Number(params[0].value) + Number(params[1].value);
 
         return `

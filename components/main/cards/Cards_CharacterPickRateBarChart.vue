@@ -26,7 +26,7 @@ const characterCardStats = inject<DataType["characterCardStats"]>("characterCard
 const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
 
 const { t } = useLocales();
-const { getCardAvatar } = await useAsyncSharedData();
+const { characterCardById } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
 const chart = ref<ComponentPublicInstance>();
@@ -38,7 +38,7 @@ const data = computed(() => {
     .map(item => ({
       cardId: item.cardId,
       pickRate: divide(item.numMatches, numMatches.value * 2),
-      avatar: getCardAvatar(item.cardId),
+      avatar: characterCardById.value[item.cardId].avatar,
     }))
     .sort(sorter("pickRate"))
     .reverse();

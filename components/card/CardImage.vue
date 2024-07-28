@@ -15,12 +15,12 @@ const props = defineProps<{
   card: CardId;
 }>();
 
-const { characterCardById, actionCardById, getCardImage } = useSharedData();
+const { characterCardById, actionCardById } = useSharedData();
 const { locale } = useLocales();
 
 const cardInfo = computed<CardInfo>(() => {
   return characterCardById.value[props.card] ?? actionCardById.value[props.card];
 });
 
-const src = computed(() => props.card ? getCardImage(props.card) : undefined);
+const src = computed(() => cardInfo.value.image);
 </script>

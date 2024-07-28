@@ -15,9 +15,9 @@ const props = defineProps<{
   card?: CardId;
 }>();
 
-const { characterCardById, getCardAvatar } = useSharedData();
+const { characterCardById } = useSharedData();
 const { currentLocalized } = useLocales();
 
 const cardInfo = computed(() => props.card ? characterCardById.value[props.card] : undefined);
-const src = computed(() => props.card ? getCardAvatar(props.card) : undefined);
+const src = computed(() => cardInfo.value?.avatar);
 </script>

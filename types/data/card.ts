@@ -16,11 +16,14 @@ const ZCardInfoBase = z.object({
 export const ZCharacterCardInfo = ZCardInfoBase.extend({
   type: z.literal(ZCardType.enum.character),
   element: ZCharacterElement,
+  image: z.string(),
+  avatar: z.string(),
 }).strip();
 
 export const ZActionCardInfo = ZCardInfoBase.extend({
   type: z.literal(ZCardType.enum.action),
   actionType: ZActionCardType,
+  image: z.string(),
 }).strip();
 
 export const ZCardInfo = z.union([ZCharacterCardInfo, ZActionCardInfo]);

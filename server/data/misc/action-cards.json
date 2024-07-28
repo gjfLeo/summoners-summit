@@ -8,7 +8,8 @@
     "shareId": 61,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Undivided_Heart_Equipment_Card.png"
   },
   "211021": {
     "id": "211021",
@@ -19,7 +20,8 @@
     "shareId": 62,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Shaken,_Not_Purred_Equipment_Card.png"
   },
   "211031": {
     "id": "211031",
@@ -30,7 +32,8 @@
     "shareId": 63,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Cold-Blooded_Strike_Equipment_Card.png"
   },
   "211041": {
     "id": "211041",
@@ -41,7 +44,8 @@
     "shareId": 64,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Steady_Breathing_Equipment_Card.png"
   },
   "211051": {
     "id": "211051",
@@ -52,7 +56,8 @@
     "shareId": 65,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Kanten_Senmyou_Blessing_Equipment_Card.png"
   },
   "211061": {
     "id": "211061",
@@ -63,7 +68,8 @@
     "shareId": 66,
     "type": "action",
     "gameVersion": "3.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Wellspring_of_War-Lust_Equipment_Card.png"
   },
   "211071": {
     "id": "211071",
@@ -74,7 +80,8 @@
     "shareId": 67,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Mystical_Abandon_Equipment_Card.png"
   },
   "211081": {
     "id": "211081",
@@ -85,7 +92,8 @@
     "shareId": 68,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Rite_of_Resurrection_Equipment_Card.png"
   },
   "211091": {
     "id": "211091",
@@ -96,7 +104,8 @@
     "shareId": 288,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Light%27s_Remit_Equipment_Card.png"
   },
   "211101": {
     "id": "211101",
@@ -107,7 +116,8 @@
     "shareId": 338,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/A_Summation_of_Interest_Equipment_Card.png"
   },
   "211111": {
     "id": "211111",
@@ -118,7 +128,8 @@
     "shareId": 372,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Terror_for_the_Evildoers_Equipment_Card.png"
   },
   "212011": {
     "id": "212011",
@@ -129,7 +140,8 @@
     "shareId": 69,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Glorious_Season_Equipment_Card.png"
   },
   "212021": {
     "id": "212021",
@@ -140,7 +152,8 @@
     "shareId": 70,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/The_Scent_Remained_Equipment_Card.png"
   },
   "212031": {
     "id": "212031",
@@ -151,7 +164,8 @@
     "shareId": 71,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Prophecy_of_Submersion_Equipment_Card.png"
   },
   "212041": {
     "id": "212041",
@@ -162,7 +176,8 @@
     "shareId": 72,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Abyssal_Mayhem_Hydrospout_Equipment_Card.png"
   },
   "212051": {
     "id": "212051",
@@ -173,7 +188,8 @@
     "shareId": 73,
     "type": "action",
     "gameVersion": "3.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Tamakushi_Casket_Equipment_Card.png"
   },
   "212061": {
     "id": "212061",
@@ -184,7 +200,8 @@
     "shareId": 74,
     "type": "action",
     "gameVersion": "3.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Kyouka_Fuushi_Equipment_Card.png"
   },
   "212071": {
     "id": "212071",
@@ -195,7 +212,8 @@
     "shareId": 75,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/The_Overflow_Equipment_Card.png"
   },
   "212081": {
     "id": "212081",
@@ -206,7 +224,8 @@
     "shareId": 76,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/The_Starry_Skies_Their_Flowers_Rain_Equipment_Card.png"
   },
   "212091": {
     "id": "212091",
@@ -217,7 +236,8 @@
     "shareId": 289,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Turn_Control_Equipment_Card.png"
   },
   "212101": {
     "id": "212101",
@@ -228,7 +248,8 @@
     "shareId": 339,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Heir_to_the_Ancient_Sea%27s_Authority_Equipment_Card.png"
   },
   "212111": {
     "id": "212111",
@@ -239,7 +260,8 @@
     "shareId": 373,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Hear_Me_—_Let_Us_Raise_the_Chalice_of_Love!_Equipment_Card.png"
   },
   "213011": {
     "id": "213011",
@@ -250,7 +272,8 @@
     "shareId": 77,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Flowing_Flame_Equipment_Card.png"
   },
   "213021": {
     "id": "213021",
@@ -261,7 +284,8 @@
     "shareId": 78,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Crossfire_Equipment_Card.png"
   },
   "213031": {
     "id": "213031",
@@ -272,7 +296,8 @@
     "shareId": 79,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Grand_Expectation_Equipment_Card.png"
   },
   "213041": {
     "id": "213041",
@@ -283,7 +308,8 @@
     "shareId": 80,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Bunny_Triggered_Equipment_Card.png"
   },
   "213051": {
     "id": "213051",
@@ -294,7 +320,8 @@
     "shareId": 81,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Naganohara_Meteor_Swarm_Equipment_Card.png"
   },
   "213061": {
     "id": "213061",
@@ -305,7 +332,8 @@
     "shareId": 82,
     "type": "action",
     "gameVersion": "3.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Pounding_Surprise_Equipment_Card.png"
   },
   "213071": {
     "id": "213071",
@@ -316,7 +344,8 @@
     "shareId": 83,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Sanguine_Rouge_Equipment_Card.png"
   },
   "213081": {
     "id": "213081",
@@ -327,7 +356,8 @@
     "shareId": 84,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Right_of_Final_Interpretation_Equipment_Card.png"
   },
   "213091": {
     "id": "213091",
@@ -338,7 +368,8 @@
     "shareId": 85,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stalwart_and_True_Equipment_Card.png"
   },
   "213101": {
     "id": "213101",
@@ -349,7 +380,8 @@
     "shareId": 290,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Conclusive_Ovation_Equipment_Card.png"
   },
   "213111": {
     "id": "213111",
@@ -360,7 +392,8 @@
     "shareId": 323,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/A_Subordinate%27s_Skills_Equipment_Card.png"
   },
   "213121": {
     "id": "213121",
@@ -371,7 +404,8 @@
     "shareId": 374,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Rockin%27_in_a_Flaming_World_Equipment_Card.png"
   },
   "213131": {
     "id": "213131",
@@ -382,7 +416,8 @@
     "shareId": 398,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Vanguard%27s_Coordinated_Tactics_Equipment_Card.png"
   },
   "214011": {
     "id": "214011",
@@ -393,7 +428,8 @@
     "shareId": 86,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Stellar_Predator_Equipment_Card.png"
   },
   "214021": {
     "id": "214021",
@@ -404,7 +440,8 @@
     "shareId": 87,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Awakening_Equipment_Card.png"
   },
   "214031": {
     "id": "214031",
@@ -415,7 +452,8 @@
     "shareId": 88,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Thundering_Penance_Equipment_Card.png"
   },
   "214041": {
     "id": "214041",
@@ -426,7 +464,8 @@
     "shareId": 89,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Featherfall_Judgment_Equipment_Card.png"
   },
   "214051": {
     "id": "214051",
@@ -437,7 +476,8 @@
     "shareId": 90,
     "type": "action",
     "gameVersion": "3.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Lightning_Storm_Equipment_Card.png"
   },
   "214061": {
     "id": "214061",
@@ -448,7 +488,8 @@
     "shareId": 91,
     "type": "action",
     "gameVersion": "3.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Sin_of_Pride_Equipment_Card.png"
   },
   "214071": {
     "id": "214071",
@@ -459,7 +500,8 @@
     "shareId": 92,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Wishes_Unnumbered_Equipment_Card.png"
   },
   "214081": {
     "id": "214081",
@@ -470,7 +512,8 @@
     "shareId": 93,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/The_Shrine%27s_Sacred_Shade_Equipment_Card.png"
   },
   "214091": {
     "id": "214091",
@@ -481,7 +524,8 @@
     "shareId": 94,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Pulsating_Witch_Equipment_Card.png"
   },
   "214101": {
     "id": "214101",
@@ -492,7 +536,8 @@
     "shareId": 95,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Discretionary_Supplement_Equipment_Card.png"
   },
   "214111": {
     "id": "214111",
@@ -503,7 +548,8 @@
     "shareId": 362,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/To_Ward_Weakness_Equipment_Card.png"
   },
   "215011": {
     "id": "215011",
@@ -514,7 +560,8 @@
     "shareId": 96,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Chaotic_Entropy_Equipment_Card.png"
   },
   "215021": {
     "id": "215021",
@@ -525,7 +572,8 @@
     "shareId": 97,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Lands_of_Dandelion_Equipment_Card.png"
   },
   "215031": {
     "id": "215031",
@@ -536,7 +584,8 @@
     "shareId": 98,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Embrace_of_Winds_Equipment_Card.png"
   },
   "215041": {
     "id": "215041",
@@ -547,7 +596,8 @@
     "shareId": 99,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Conqueror_of_Evil_Guardian_Yaksha_Equipment_Card.png"
   },
   "215051": {
     "id": "215051",
@@ -558,7 +608,8 @@
     "shareId": 100,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Poetics_of_Fuubutsu_Equipment_Card.png"
   },
   "215061": {
     "id": "215061",
@@ -569,7 +620,8 @@
     "shareId": 101,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Gales_of_Reverie_Equipment_Card.png"
   },
   "215071": {
     "id": "215071",
@@ -580,7 +632,8 @@
     "shareId": 324,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Skiving_New_and_Improved_Equipment_Card.png"
   },
   "215081": {
     "id": "215081",
@@ -591,7 +644,8 @@
     "shareId": 291,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/A_Cold_Blade_Like_a_Shadow_Equipment_Card.png"
   },
   "215091": {
     "id": "215091",
@@ -602,7 +656,8 @@
     "shareId": 352,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/The_Wondrous_Path_of_Truth_Equipment_Card.png"
   },
   "216011": {
     "id": "216011",
@@ -613,7 +668,8 @@
     "shareId": 102,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Strategic_Reserve_Equipment_Card.png"
   },
   "216021": {
     "id": "216021",
@@ -624,7 +680,8 @@
     "shareId": 103,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/I_Got_Your_Back_Equipment_Card.png"
   },
   "216031": {
     "id": "216031",
@@ -635,7 +692,8 @@
     "shareId": 104,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Dominance_of_Earth_Equipment_Card.png"
   },
   "216041": {
     "id": "216041",
@@ -646,7 +704,8 @@
     "shareId": 105,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Descent_of_Divinity_Equipment_Card.png"
   },
   "216051": {
     "id": "216051",
@@ -657,7 +716,8 @@
     "shareId": 106,
     "type": "action",
     "gameVersion": "3.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Arataki_Ichiban_Equipment_Card.png"
   },
   "216061": {
     "id": "216061",
@@ -668,7 +728,8 @@
     "shareId": 292,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Rushing_Hound_Swift_as_the_Wind_Equipment_Card.png"
   },
   "216071": {
     "id": "216071",
@@ -679,7 +740,8 @@
     "shareId": 375,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Decorous_Harmony_Equipment_Card.png"
   },
   "216081": {
     "id": "216081",
@@ -690,7 +752,8 @@
     "shareId": 399,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Undisclosed_Distribution_Channels_Equipment_Card.png"
   },
   "217011": {
     "id": "217011",
@@ -701,7 +764,8 @@
     "shareId": 107,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Floral_Sidewinder_Equipment_Card.png"
   },
   "217021": {
     "id": "217021",
@@ -712,7 +776,8 @@
     "shareId": 108,
     "type": "action",
     "gameVersion": "3.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Keen_Sight_Equipment_Card.png"
   },
   "217031": {
     "id": "217031",
@@ -723,7 +788,8 @@
     "shareId": 109,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/The_Seed_of_Stored_Knowledge_Equipment_Card.png"
   },
   "217041": {
     "id": "217041",
@@ -734,7 +800,8 @@
     "shareId": 110,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Beneficent_Equipment_Card.png"
   },
   "217051": {
     "id": "217051",
@@ -745,7 +812,8 @@
     "shareId": 111,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/All_Things_Are_of_the_Earth_Equipment_Card.png"
   },
   "217061": {
     "id": "217061",
@@ -756,7 +824,8 @@
     "shareId": 293,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Structuration_Equipment_Card.png"
   },
   "217071": {
     "id": "217071",
@@ -767,7 +836,8 @@
     "shareId": 340,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Countless_Sights_to_See_Equipment_Card.png"
   },
   "217081": {
     "id": "217081",
@@ -778,7 +848,8 @@
     "shareId": 376,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/The_Art_of_Budgeting_Equipment_Card.png"
   },
   "221011": {
     "id": "221011",
@@ -789,7 +860,8 @@
     "shareId": 112,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Cicin%27s_Cold_Glare_Equipment_Card.png"
   },
   "221021": {
     "id": "221021",
@@ -800,7 +872,8 @@
     "shareId": 294,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Pain_for_Pain_Equipment_Card.png"
   },
   "221031": {
     "id": "221031",
@@ -811,7 +884,8 @@
     "shareId": 325,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Sternfrost_Prism_Equipment_Card.png"
   },
   "221041": {
     "id": "221041",
@@ -822,7 +896,8 @@
     "shareId": 400,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Rimeflow_Rapier_Equipment_Card.png"
   },
   "222011": {
     "id": "222011",
@@ -833,7 +908,8 @@
     "shareId": 113,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Streaming_Surge_Equipment_Card.png"
   },
   "222021": {
     "id": "222021",
@@ -844,7 +920,8 @@
     "shareId": 114,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Mirror_Cage_Equipment_Card.png"
   },
   "222031": {
     "id": "222031",
@@ -855,7 +932,8 @@
     "shareId": 353,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Surging_Undercurrent_Equipment_Card.png"
   },
   "222041": {
     "id": "222041",
@@ -866,7 +944,8 @@
     "shareId": 377,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Lightless_Feeding_Equipment_Card.png"
   },
   "223011": {
     "id": "223011",
@@ -877,7 +956,8 @@
     "shareId": 115,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Paid_in_Full_Equipment_Card.png"
   },
   "223021": {
     "id": "223021",
@@ -888,7 +968,8 @@
     "shareId": 116,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Embers_Rekindled_Equipment_Card.png"
   },
   "223031": {
     "id": "223031",
@@ -899,7 +980,8 @@
     "shareId": 295,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Scorpocalypse_Equipment_Card.png"
   },
   "223041": {
     "id": "223041",
@@ -910,7 +992,8 @@
     "shareId": 354,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Molten_Mail_Equipment_Card.png"
   },
   "224011": {
     "id": "224011",
@@ -921,7 +1004,8 @@
     "shareId": 117,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Absorbing_Prism_Event_Card.png"
   },
   "224021": {
     "id": "224021",
@@ -932,7 +1016,8 @@
     "shareId": 296,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Grieving_Echo_Equipment_Card.png"
   },
   "224031": {
     "id": "224031",
@@ -943,7 +1028,8 @@
     "shareId": 326,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Pearl_Solidification_Equipment_Card.png"
   },
   "224041": {
     "id": "224041",
@@ -954,7 +1040,8 @@
     "shareId": 341,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Electro_Cicin%27s_Gleam_Equipment_Card.png"
   },
   "224051": {
     "id": "224051",
@@ -965,7 +1052,8 @@
     "shareId": 378,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Fatal_Fulmination_Equipment_Card.png"
   },
   "225011": {
     "id": "225011",
@@ -976,7 +1064,8 @@
     "shareId": 118,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Transcendent_Automaton_Equipment_Card.png"
   },
   "225021": {
     "id": "225021",
@@ -987,7 +1076,8 @@
     "shareId": 297,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Rending_Vortex_Equipment_Card.png"
   },
   "225031": {
     "id": "225031",
@@ -998,7 +1088,8 @@
     "shareId": 379,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Deathly_Cyclone_Equipment_Card.png"
   },
   "226011": {
     "id": "226011",
@@ -1009,7 +1100,8 @@
     "shareId": 119,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Stonehide_Reforged_Equipment_Card.png"
   },
   "226022": {
     "id": "226022",
@@ -1020,7 +1112,8 @@
     "shareId": 298,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Lunar_Cycles_Unending_Event_Card.png"
   },
   "227011": {
     "id": "227011",
@@ -1031,7 +1124,8 @@
     "shareId": 120,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Proliferating_Spores_Equipment_Card.png"
   },
   "227021": {
     "id": "227021",
@@ -1042,7 +1136,8 @@
     "shareId": 380,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/A_Thousand_Young_Equipment_Card.png"
   },
   "311101": {
     "id": "311101",
@@ -1053,7 +1148,8 @@
     "shareId": 121,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Magic_Guide_Equipment_Card.png"
   },
   "311102": {
     "id": "311102",
@@ -1064,7 +1160,8 @@
     "shareId": 122,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Sacrificial_Fragments_Equipment_Card.png"
   },
   "311103": {
     "id": "311103",
@@ -1075,7 +1172,8 @@
     "shareId": 123,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Skyward_Atlas_Equipment_Card.png"
   },
   "311104": {
     "id": "311104",
@@ -1086,7 +1184,8 @@
     "shareId": 124,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/A_Thousand_Floating_Dreams_Equipment_Card.png"
   },
   "311105": {
     "id": "311105",
@@ -1097,7 +1196,8 @@
     "shareId": 125,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Fruit_of_Fulfillment_Equipment_Card.png"
   },
   "311106": {
     "id": "311106",
@@ -1108,7 +1208,8 @@
     "shareId": 299,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Lost_Prayer_to_the_Sacred_Winds_Equipment_Card.png"
   },
   "311107": {
     "id": "311107",
@@ -1119,7 +1220,8 @@
     "shareId": 300,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Tulaytullah%27s_Remembrance_Equipment_Card.png"
   },
   "311108": {
     "id": "311108",
@@ -1130,7 +1232,8 @@
     "shareId": 342,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Tome_of_the_Eternal_Flow_Equipment_Card.png"
   },
   "311109": {
     "id": "311109",
@@ -1141,7 +1244,8 @@
     "shareId": 381,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Cashflow_Supervision_Equipment_Card.png"
   },
   "311201": {
     "id": "311201",
@@ -1152,7 +1256,8 @@
     "shareId": 126,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Raven_Bow_Equipment_Card.png"
   },
   "311202": {
     "id": "311202",
@@ -1163,7 +1268,8 @@
     "shareId": 127,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Sacrificial_Bow_Equipment_Card.png"
   },
   "311203": {
     "id": "311203",
@@ -1174,7 +1280,8 @@
     "shareId": 128,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Skyward_Harp_Equipment_Card.png"
   },
   "311204": {
     "id": "311204",
@@ -1185,7 +1292,8 @@
     "shareId": 129,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Amos%27_Bow_Equipment_Card.png"
   },
   "311205": {
     "id": "311205",
@@ -1196,7 +1304,8 @@
     "shareId": 130,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Elegy_for_the_End_Equipment_Card.png"
   },
   "311206": {
     "id": "311206",
@@ -1207,7 +1316,8 @@
     "shareId": 131,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/King%27s_Squire_Equipment_Card.png"
   },
   "311207": {
     "id": "311207",
@@ -1218,7 +1328,8 @@
     "shareId": 382,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/End_of_the_Line_Equipment_Card.png"
   },
   "311301": {
     "id": "311301",
@@ -1229,7 +1340,8 @@
     "shareId": 132,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/White_Iron_Greatsword_Equipment_Card.png"
   },
   "311302": {
     "id": "311302",
@@ -1240,7 +1352,8 @@
     "shareId": 133,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Sacrificial_Greatsword_Equipment_Card.png"
   },
   "311303": {
     "id": "311303",
@@ -1251,7 +1364,8 @@
     "shareId": 134,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Wolf%27s_Gravestone_Equipment_Card.png"
   },
   "311304": {
     "id": "311304",
@@ -1262,7 +1376,8 @@
     "shareId": 135,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Skyward_Pride_Equipment_Card.png"
   },
   "311305": {
     "id": "311305",
@@ -1273,7 +1388,8 @@
     "shareId": 136,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/The_Bell_Equipment_Card.png"
   },
   "311306": {
     "id": "311306",
@@ -1284,7 +1400,8 @@
     "shareId": 301,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Beacon_of_the_Reed_Sea_Equipment_Card.png"
   },
   "311307": {
     "id": "311307",
@@ -1295,7 +1412,8 @@
     "shareId": 383,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Forest_Regalia_Equipment_Card.png"
   },
   "311308": {
     "id": "311308",
@@ -1306,7 +1424,8 @@
     "shareId": 401,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/%22Ultimate_Overlord%27s_Mega_Magic_Sword\"_Equipment_Card.png"
   },
   "311401": {
     "id": "311401",
@@ -1317,7 +1436,8 @@
     "shareId": 137,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/White_Tassel_Equipment_Card.png"
   },
   "311402": {
     "id": "311402",
@@ -1328,7 +1448,8 @@
     "shareId": 138,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Lithic_Spear_Equipment_Card.png"
   },
   "311403": {
     "id": "311403",
@@ -1339,7 +1460,8 @@
     "shareId": 139,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Skyward_Spine_Equipment_Card.png"
   },
   "311404": {
     "id": "311404",
@@ -1350,7 +1472,8 @@
     "shareId": 140,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Vortex_Vanquisher_Equipment_Card.png"
   },
   "311405": {
     "id": "311405",
@@ -1361,7 +1484,8 @@
     "shareId": 141,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Engulfing_Lightning_Equipment_Card.png"
   },
   "311406": {
     "id": "311406",
@@ -1372,7 +1496,8 @@
     "shareId": 142,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Moonpiercer_Equipment_Card.png"
   },
   "311407": {
     "id": "311407",
@@ -1383,7 +1508,8 @@
     "shareId": 302,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Primordial_Jade_Winged-Spear_Equipment_Card.png"
   },
   "311408": {
     "id": "311408",
@@ -1394,7 +1520,8 @@
     "shareId": 355,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Rightful_Reward_Equipment_Card.png"
   },
   "311409": {
     "id": "311409",
@@ -1405,7 +1532,8 @@
     "shareId": 402,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Prospector%27s_Drill_Equipment_Card.png"
   },
   "311501": {
     "id": "311501",
@@ -1416,7 +1544,8 @@
     "shareId": 143,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Traveler%27s_Handy_Sword_Equipment_Card.png"
   },
   "311502": {
     "id": "311502",
@@ -1427,7 +1556,8 @@
     "shareId": 144,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Sacrificial_Sword_Equipment_Card.png"
   },
   "311503": {
     "id": "311503",
@@ -1438,7 +1568,8 @@
     "shareId": 145,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Aquila_Favonia_Equipment_Card.png"
   },
   "311504": {
     "id": "311504",
@@ -1449,7 +1580,8 @@
     "shareId": 146,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Skyward_Blade_Equipment_Card.png"
   },
   "311505": {
     "id": "311505",
@@ -1460,7 +1592,8 @@
     "shareId": 147,
     "type": "action",
     "gameVersion": "3.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Favonius_Sword_Equipment_Card.png"
   },
   "311506": {
     "id": "311506",
@@ -1471,7 +1604,8 @@
     "shareId": 303,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Light_of_Foliar_Incision_Equipment_Card.png"
   },
   "311507": {
     "id": "311507",
@@ -1482,7 +1616,8 @@
     "shareId": 327,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Sapwood_Blade_Equipment_Card.png"
   },
   "311508": {
     "id": "311508",
@@ -1493,7 +1628,8 @@
     "shareId": 384,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Splendor_of_Tranquil_Waters_Equipment_Card.png"
   },
   "312001": {
     "id": "312001",
@@ -1504,7 +1640,8 @@
     "shareId": 148,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Adventurer%27s_Bandana_Equipment_Card.png"
   },
   "312002": {
     "id": "312002",
@@ -1515,7 +1652,8 @@
     "shareId": 149,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Lucky_Dog%27s_Silver_Circlet_Equipment_Card.png"
   },
   "312003": {
     "id": "312003",
@@ -1526,7 +1664,8 @@
     "shareId": 150,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Traveling_Doctor%27s_Handkerchief_Equipment_Card.png"
   },
   "312004": {
     "id": "312004",
@@ -1537,7 +1676,8 @@
     "shareId": 151,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Gambler%27s_Earrings_Equipment_Card.png"
   },
   "312005": {
     "id": "312005",
@@ -1548,7 +1688,8 @@
     "shareId": 152,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Instructor%27s_Cap_Equipment_Card.png"
   },
   "312006": {
     "id": "312006",
@@ -1559,7 +1700,8 @@
     "shareId": 153,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Exile%27s_Circlet_Equipment_Card.png"
   },
   "312007": {
     "id": "312007",
@@ -1570,7 +1712,8 @@
     "shareId": 154,
     "type": "action",
     "gameVersion": "3.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Ornate_Kabuto_Equipment_Card.png"
   },
   "312008": {
     "id": "312008",
@@ -1581,7 +1724,8 @@
     "shareId": 155,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Emblem_of_Severed_Fate_Equipment_Card.png"
   },
   "312009": {
     "id": "312009",
@@ -1592,7 +1736,8 @@
     "shareId": 156,
     "type": "action",
     "gameVersion": "3.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/General%27s_Ancient_Helm_Equipment_Card.png"
   },
   "312010": {
     "id": "312010",
@@ -1603,7 +1748,8 @@
     "shareId": 157,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Tenacity_of_the_Millelith_Equipment_Card.png"
   },
   "312011": {
     "id": "312011",
@@ -1614,7 +1760,8 @@
     "shareId": 158,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Thundering_Poise_Equipment_Card.png"
   },
   "312012": {
     "id": "312012",
@@ -1625,7 +1772,8 @@
     "shareId": 159,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Vermillion_Hereafter_Equipment_Card.png"
   },
   "312013": {
     "id": "312013",
@@ -1636,7 +1784,8 @@
     "shareId": 160,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Capricious_Visage_Equipment_Card.png"
   },
   "312014": {
     "id": "312014",
@@ -1647,7 +1796,8 @@
     "shareId": 161,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Shimenawa%27s_Reminiscence_Equipment_Card.png"
   },
   "312015": {
     "id": "312015",
@@ -1658,7 +1808,8 @@
     "shareId": 162,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Crown_of_Watatsumi_Equipment_Card.png"
   },
   "312016": {
     "id": "312016",
@@ -1669,7 +1820,8 @@
     "shareId": 163,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Ocean-Hued_Clam_Equipment_Card.png"
   },
   "312017": {
     "id": "312017",
@@ -1680,7 +1832,8 @@
     "shareId": 164,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Shadow_of_the_Sand_King_Equipment_Card.png"
   },
   "312018": {
     "id": "312018",
@@ -1691,7 +1844,8 @@
     "shareId": 304,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Gilded_Dreams_Equipment_Card.png"
   },
   "312019": {
     "id": "312019",
@@ -1702,7 +1856,8 @@
     "shareId": 305,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Flowing_Rings_Equipment_Card.png"
   },
   "312020": {
     "id": "312020",
@@ -1713,7 +1868,8 @@
     "shareId": 306,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Echoes_of_an_Offering_Equipment_Card.png"
   },
   "312021": {
     "id": "312021",
@@ -1724,7 +1880,8 @@
     "shareId": 307,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Heart_of_Khvarena%27s_Brilliance_Equipment_Card.png"
   },
   "312022": {
     "id": "312022",
@@ -1735,7 +1892,8 @@
     "shareId": 308,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Vourukasha%27s_Glow_Equipment_Card.png"
   },
   "312023": {
     "id": "312023",
@@ -1746,7 +1904,8 @@
     "shareId": 328,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Veteran%27s_Visage_Equipment_Card.png"
   },
   "312024": {
     "id": "312024",
@@ -1757,7 +1916,8 @@
     "shareId": 385,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Marechaussee_Hunter_Equipment_Card.png"
   },
   "312025": {
     "id": "312025",
@@ -1768,7 +1928,8 @@
     "shareId": 343,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Golden_Troupe%27s_Reward_Equipment_Card.png"
   },
   "312026": {
     "id": "312026",
@@ -1779,7 +1940,8 @@
     "shareId": 386,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Golden_Troupe_Equipment_Card.png"
   },
   "312027": {
     "id": "312027",
@@ -1790,7 +1952,8 @@
     "shareId": 356,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Amethyst_Crown_Equipment_Card.png"
   },
   "312028": {
     "id": "312028",
@@ -1801,7 +1964,8 @@
     "shareId": 387,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Flower_of_Paradise_Lost_Equipment_Card.png"
   },
   "312029": {
     "id": "312029",
@@ -1812,7 +1976,8 @@
     "shareId": 403,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Gladiator%27s_Triumphus_Equipment_Card.png"
   },
   "312101": {
     "id": "312101",
@@ -1823,7 +1988,8 @@
     "shareId": 165,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Broken_Rime%27s_Echo_Equipment_Card.png"
   },
   "312102": {
     "id": "312102",
@@ -1834,7 +2000,8 @@
     "shareId": 166,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Blizzard_Strayer_Equipment_Card.png"
   },
   "312201": {
     "id": "312201",
@@ -1845,7 +2012,8 @@
     "shareId": 167,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Wine-Stained_Tricorne_Equipment_Card.png"
   },
   "312202": {
     "id": "312202",
@@ -1856,7 +2024,8 @@
     "shareId": 168,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Heart_of_Depth_Equipment_Card.png"
   },
   "312301": {
     "id": "312301",
@@ -1867,7 +2036,8 @@
     "shareId": 169,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Witch%27s_Scorching_Hat_Equipment_Card.png"
   },
   "312302": {
     "id": "312302",
@@ -1878,7 +2048,8 @@
     "shareId": 170,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Crimson_Witch_of_Flames_Equipment_Card.png"
   },
   "312401": {
     "id": "312401",
@@ -1889,7 +2060,8 @@
     "shareId": 171,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Thunder_Summoner%27s_Crown_Equipment_Card.png"
   },
   "312402": {
     "id": "312402",
@@ -1900,7 +2072,8 @@
     "shareId": 172,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thundering_Fury_Equipment_Card.png"
   },
   "312501": {
     "id": "312501",
@@ -1911,7 +2084,8 @@
     "shareId": 173,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Viridescent_Venerer%27s_Diadem_Equipment_Card.png"
   },
   "312502": {
     "id": "312502",
@@ -1922,7 +2096,8 @@
     "shareId": 174,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Viridescent_Venerer_Equipment_Card.png"
   },
   "312601": {
     "id": "312601",
@@ -1933,7 +2108,8 @@
     "shareId": 175,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Mask_of_Solitude_Basalt_Equipment_Card.png"
   },
   "312602": {
     "id": "312602",
@@ -1944,7 +2120,8 @@
     "shareId": 176,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Archaic_Petra_Equipment_Card.png"
   },
   "312701": {
     "id": "312701",
@@ -1955,7 +2132,8 @@
     "shareId": 177,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Laurel_Coronet_Equipment_Card.png"
   },
   "312702": {
     "id": "312702",
@@ -1966,7 +2144,8 @@
     "shareId": 178,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "equipment"
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Deepwood_Memories_Equipment_Card.png"
   },
   "321001": {
     "id": "321001",
@@ -1977,7 +2156,8 @@
     "shareId": 179,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Liyue_Harbor_Wharf_Support_Card.png"
   },
   "321002": {
     "id": "321002",
@@ -1988,7 +2168,8 @@
     "shareId": 180,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Knights_of_Favonius_Library_Support_Card.png"
   },
   "321003": {
     "id": "321003",
@@ -1999,7 +2180,8 @@
     "shareId": 181,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Jade_Chamber_Support_Card.png"
   },
   "321004": {
     "id": "321004",
@@ -2010,7 +2192,8 @@
     "shareId": 182,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Dawn_Winery_Support_Card.png"
   },
   "321005": {
     "id": "321005",
@@ -2021,7 +2204,8 @@
     "shareId": 183,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Wangshu_Inn_Support_Card.png"
   },
   "321006": {
     "id": "321006",
@@ -2032,7 +2216,8 @@
     "shareId": 184,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Favonius_Cathedral_Support_Card.png"
   },
   "321007": {
     "id": "321007",
@@ -2043,7 +2228,8 @@
     "shareId": 185,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Tenshukaku_Support_Card.png"
   },
   "321008": {
     "id": "321008",
@@ -2054,7 +2240,8 @@
     "shareId": 186,
     "type": "action",
     "gameVersion": "3.6",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Grand_Narukami_Shrine_Support_Card.png"
   },
   "321009": {
     "id": "321009",
@@ -2065,7 +2252,8 @@
     "shareId": 187,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Sangonomiya_Shrine_Support_Card.png"
   },
   "321010": {
     "id": "321010",
@@ -2076,7 +2264,8 @@
     "shareId": 188,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Sumeru_City_Support_Card.png"
   },
   "321011": {
     "id": "321011",
@@ -2087,7 +2276,8 @@
     "shareId": 189,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Vanarana_Support_Card.png"
   },
   "321012": {
     "id": "321012",
@@ -2098,7 +2288,8 @@
     "shareId": 190,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Chinju_Forest_Support_Card.png"
   },
   "321013": {
     "id": "321013",
@@ -2109,7 +2300,8 @@
     "shareId": 191,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Golden_House_Support_Card.png"
   },
   "321014": {
     "id": "321014",
@@ -2120,7 +2312,8 @@
     "shareId": 192,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Gandharva_Ville_Support_Card.png"
   },
   "321015": {
     "id": "321015",
@@ -2131,7 +2324,8 @@
     "shareId": 193,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Stormterror%27s_Lair_Support_Card.png"
   },
   "321016": {
     "id": "321016",
@@ -2142,7 +2336,8 @@
     "shareId": 309,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Weeping_Willow_of_the_Lake_Support_Card.png"
   },
   "321017": {
     "id": "321017",
@@ -2153,7 +2348,8 @@
     "shareId": 310,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Opera_Epiclese_Support_Card.png"
   },
   "321018": {
     "id": "321018",
@@ -2164,7 +2360,8 @@
     "shareId": 344,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Fortress_of_Meropide_Support_Card.png"
   },
   "321019": {
     "id": "321019",
@@ -2175,7 +2372,8 @@
     "shareId": 357,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Seirai_Island_Support_Card.png"
   },
   "321020": {
     "id": "321020",
@@ -2186,7 +2384,8 @@
     "shareId": 388,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/The_Mausoleum_of_King_Deshret_Support_Card.png"
   },
   "321021": {
     "id": "321021",
@@ -2197,7 +2396,8 @@
     "shareId": 389,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Central_Laboratory_Ruins_Support_Card.png"
   },
   "322001": {
     "id": "322001",
@@ -2208,7 +2408,8 @@
     "shareId": 194,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Paimon_Support_Card.png"
   },
   "322002": {
     "id": "322002",
@@ -2219,7 +2420,8 @@
     "shareId": 195,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Katheryne_Support_Card.png"
   },
   "322003": {
     "id": "322003",
@@ -2230,7 +2432,8 @@
     "shareId": 196,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Timaeus_Support_Card.png"
   },
   "322004": {
     "id": "322004",
@@ -2241,7 +2444,8 @@
     "shareId": 197,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Wagner_Support_Card.png"
   },
   "322005": {
     "id": "322005",
@@ -2252,7 +2456,8 @@
     "shareId": 198,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Chef_Mao_Support_Card.png"
   },
   "322006": {
     "id": "322006",
@@ -2263,7 +2468,8 @@
     "shareId": 199,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Tubby_Support_Card.png"
   },
   "322007": {
     "id": "322007",
@@ -2274,7 +2480,8 @@
     "shareId": 200,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Timmie_Support_Card.png"
   },
   "322008": {
     "id": "322008",
@@ -2285,7 +2492,8 @@
     "shareId": 201,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Liben_Support_Card.png"
   },
   "322009": {
     "id": "322009",
@@ -2296,7 +2504,8 @@
     "shareId": 202,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Chang_the_Ninth_Support_Card.png"
   },
   "322010": {
     "id": "322010",
@@ -2307,7 +2516,8 @@
     "shareId": 203,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Ellin_Support_Card.png"
   },
   "322011": {
     "id": "322011",
@@ -2318,7 +2528,8 @@
     "shareId": 204,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Iron_Tongue_Tian_Support_Card.png"
   },
   "322012": {
     "id": "322012",
@@ -2329,7 +2540,8 @@
     "shareId": 205,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Liu_Su_Support_Card.png"
   },
   "322013": {
     "id": "322013",
@@ -2340,7 +2552,8 @@
     "shareId": 206,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Hanachirusato_Support_Card.png"
   },
   "322014": {
     "id": "322014",
@@ -2351,7 +2564,8 @@
     "shareId": 207,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Kid_Kujirai_Support_Card.png"
   },
   "322015": {
     "id": "322015",
@@ -2362,7 +2576,8 @@
     "shareId": 208,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Xudong_Support_Card.png"
   },
   "322016": {
     "id": "322016",
@@ -2373,7 +2588,8 @@
     "shareId": 209,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Dunyarzad_Support_Card.png"
   },
   "322017": {
     "id": "322017",
@@ -2384,7 +2600,8 @@
     "shareId": 210,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Rana_Support_Card.png"
   },
   "322018": {
     "id": "322018",
@@ -2395,7 +2612,8 @@
     "shareId": 211,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Master_Zhang_Support_Card.png"
   },
   "322019": {
     "id": "322019",
@@ -2406,7 +2624,8 @@
     "shareId": 212,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Setaria_Support_Card.png"
   },
   "322020": {
     "id": "322020",
@@ -2417,7 +2636,8 @@
     "shareId": 213,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Yayoi_Nanatsuki_Support_Card.png"
   },
   "322021": {
     "id": "322021",
@@ -2428,7 +2648,8 @@
     "shareId": 311,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Mamere_Support_Card.png"
   },
   "322022": {
     "id": "322022",
@@ -2439,7 +2660,8 @@
     "shareId": 329,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Jeht_Support_Card.png"
   },
   "322023": {
     "id": "322023",
@@ -2450,7 +2672,8 @@
     "shareId": 330,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Silver_and_Melus_Support_Card.png"
   },
   "322024": {
     "id": "322024",
@@ -2461,7 +2684,8 @@
     "shareId": 358,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Taroumaru_Support_Card.png"
   },
   "322025": {
     "id": "322025",
@@ -2472,7 +2696,8 @@
     "shareId": 359,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/The_White_Glove_and_the_Fisherman_Support_Card.png"
   },
   "322026": {
     "id": "322026",
@@ -2483,7 +2708,8 @@
     "shareId": 390,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Sir_Arthur_Support_Card.png"
   },
   "322027": {
     "id": "322027",
@@ -2494,7 +2720,8 @@
     "shareId": 404,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Serene_Support_Card.png"
   },
   "323001": {
     "id": "323001",
@@ -2505,7 +2732,8 @@
     "shareId": 214,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Parametric_Transformer_Support_Card.png"
   },
   "323002": {
     "id": "323002",
@@ -2516,7 +2744,8 @@
     "shareId": 215,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/NRE_Support_Card.png"
   },
   "323003": {
     "id": "323003",
@@ -2527,7 +2756,8 @@
     "shareId": 216,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Red_Feather_Fan_Support_Card.png"
   },
   "323004": {
     "id": "323004",
@@ -2538,7 +2768,8 @@
     "shareId": 217,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Treasure-Seeking_Seelie_Support_Card.png"
   },
   "323005": {
     "id": "323005",
@@ -2549,7 +2780,8 @@
     "shareId": 312,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Seed_Dispensary_Support_Card.png"
   },
   "323006": {
     "id": "323006",
@@ -2560,7 +2792,8 @@
     "shareId": 313,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Memento_Lens_Support_Card.png"
   },
   "323007": {
     "id": "323007",
@@ -2571,7 +2804,8 @@
     "shareId": 345,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Lumenstone_Adjuvant_Support_Card.png"
   },
   "323008": {
     "id": "323008",
@@ -2582,7 +2816,8 @@
     "shareId": 391,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "support"
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Kusava_Support_Card.png"
   },
   "330001": {
     "id": "330001",
@@ -2593,7 +2828,8 @@
     "shareId": 218,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Ancient_Courtyard_Event_Card.png"
   },
   "330002": {
     "id": "330002",
@@ -2604,7 +2840,8 @@
     "shareId": 219,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Covenant_of_Rock_Event_Card.png"
   },
   "330003": {
     "id": "330003",
@@ -2615,7 +2852,8 @@
     "shareId": 220,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Joyous_Celebration_Event_Card.png"
   },
   "330004": {
     "id": "330004",
@@ -2626,7 +2864,8 @@
     "shareId": 221,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Fresh_Wind_of_Freedom_Event_Card.png"
   },
   "330005": {
     "id": "330005",
@@ -2637,7 +2876,8 @@
     "shareId": 222,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/In_Every_House_a_Stove_Event_Card.png"
   },
   "330006": {
     "id": "330006",
@@ -2648,7 +2888,8 @@
     "shareId": 314,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Passing_of_Judgment_Event_Card.png"
   },
   "330007": {
     "id": "330007",
@@ -2659,7 +2900,8 @@
     "shareId": 346,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Day_of_Resistance_Moment_of_Shattered_Dreams_Event_Card.png"
   },
   "330008": {
     "id": "330008",
@@ -2670,7 +2912,8 @@
     "shareId": 392,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Vicious_Ancient_Battle_Event_Card.png"
   },
   "331101": {
     "id": "331101",
@@ -2681,7 +2924,8 @@
     "shareId": 223,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Elemental_Resonance_Woven_Ice_Event_Card.png"
   },
   "331102": {
     "id": "331102",
@@ -2692,7 +2936,8 @@
     "shareId": 224,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Elemental_Resonance_Shattering_Ice_Event_Card.png"
   },
   "331201": {
     "id": "331201",
@@ -2703,7 +2948,8 @@
     "shareId": 225,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Elemental_Resonance_Woven_Waters_Event_Card.png"
   },
   "331202": {
     "id": "331202",
@@ -2714,7 +2960,8 @@
     "shareId": 226,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Elemental_Resonance_Soothing_Water_Event_Card.png"
   },
   "331301": {
     "id": "331301",
@@ -2725,7 +2972,8 @@
     "shareId": 227,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Elemental_Resonance_Woven_Flames_Event_Card.png"
   },
   "331302": {
     "id": "331302",
@@ -2736,7 +2984,8 @@
     "shareId": 228,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Elemental_Resonance_Fervent_Flames_Event_Card.png"
   },
   "331401": {
     "id": "331401",
@@ -2747,7 +2996,8 @@
     "shareId": 229,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Elemental_Resonance_Woven_Thunder_Event_Card.png"
   },
   "331402": {
     "id": "331402",
@@ -2758,7 +3008,8 @@
     "shareId": 230,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Elemental_Resonance_High_Voltage_Event_Card.png"
   },
   "331501": {
     "id": "331501",
@@ -2769,7 +3020,8 @@
     "shareId": 231,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Elemental_Resonance_Woven_Winds_Event_Card.png"
   },
   "331502": {
     "id": "331502",
@@ -2780,7 +3032,8 @@
     "shareId": 232,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Elemental_Resonance_Impetuous_Winds_Event_Card.png"
   },
   "331601": {
     "id": "331601",
@@ -2791,7 +3044,8 @@
     "shareId": 233,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Elemental_Resonance_Woven_Stone_Event_Card.png"
   },
   "331602": {
     "id": "331602",
@@ -2802,7 +3056,8 @@
     "shareId": 234,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Elemental_Resonance_Enduring_Rock_Event_Card.png"
   },
   "331701": {
     "id": "331701",
@@ -2813,7 +3068,8 @@
     "shareId": 235,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Elemental_Resonance_Woven_Weeds_Event_Card.png"
   },
   "331702": {
     "id": "331702",
@@ -2824,7 +3080,8 @@
     "shareId": 236,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Elemental_Resonance_Sprawling_Greenery_Event_Card.png"
   },
   "331801": {
     "id": "331801",
@@ -2835,7 +3092,8 @@
     "shareId": 237,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Wind_and_Freedom_Event_Card.png"
   },
   "331802": {
     "id": "331802",
@@ -2846,7 +3104,8 @@
     "shareId": 238,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Stone_and_Contracts_Event_Card.png"
   },
   "331803": {
     "id": "331803",
@@ -2857,7 +3116,8 @@
     "shareId": 239,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Thunder_and_Eternity_Event_Card.png"
   },
   "331804": {
     "id": "331804",
@@ -2868,7 +3128,8 @@
     "shareId": 240,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Nature_and_Wisdom_Event_Card.png"
   },
   "331805": {
     "id": "331805",
@@ -2879,7 +3140,8 @@
     "shareId": 393,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Water_and_Justice_Event_Card.png"
   },
   "332001": {
     "id": "332001",
@@ -2890,7 +3152,8 @@
     "shareId": 241,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/The_Bestest_Travel_Companion!_Event_Card.png"
   },
   "332002": {
     "id": "332002",
@@ -2901,7 +3164,8 @@
     "shareId": 242,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Changing_Shifts_Event_Card.png"
   },
   "332003": {
     "id": "332003",
@@ -2912,7 +3176,8 @@
     "shareId": 243,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Toss-Up_Event_Card.png"
   },
   "332004": {
     "id": "332004",
@@ -2923,7 +3188,8 @@
     "shareId": 244,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Strategize_Event_Card.png"
   },
   "332005": {
     "id": "332005",
@@ -2934,7 +3200,8 @@
     "shareId": 245,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/I_Haven%27t_Lost_Yet!_Event_Card.png"
   },
   "332006": {
     "id": "332006",
@@ -2945,7 +3212,8 @@
     "shareId": 246,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Leave_It_to_Me!_Event_Card.png"
   },
   "332007": {
     "id": "332007",
@@ -2956,7 +3224,8 @@
     "shareId": 247,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/When_the_Crane_Returned_Event_Card.png"
   },
   "332008": {
     "id": "332008",
@@ -2967,7 +3236,8 @@
     "shareId": 248,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Starsigns_Event_Card.png"
   },
   "332009": {
     "id": "332009",
@@ -2978,7 +3248,8 @@
     "shareId": 249,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Calx%27s_Arts_Event_Card.png"
   },
   "332010": {
     "id": "332010",
@@ -2989,7 +3260,8 @@
     "shareId": 250,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Master_of_Weaponry_Event_Card.png"
   },
   "332011": {
     "id": "332011",
@@ -3000,7 +3272,8 @@
     "shareId": 251,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Blessing_of_the_Divine_Relic%27s_Installation_Event_Card.png"
   },
   "332012": {
     "id": "332012",
@@ -3011,7 +3284,8 @@
     "shareId": 252,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Quick_Knit_Event_Card.png"
   },
   "332013": {
     "id": "332013",
@@ -3022,7 +3296,8 @@
     "shareId": 253,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Send_Off_Event_Card.png"
   },
   "332014": {
     "id": "332014",
@@ -3033,7 +3308,8 @@
     "shareId": 254,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Guardian%27s_Oath_Event_Card.png"
   },
   "332015": {
     "id": "332015",
@@ -3044,7 +3320,8 @@
     "shareId": 255,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Abyssal_Summons_Event_Card.png"
   },
   "332016": {
     "id": "332016",
@@ -3055,7 +3332,8 @@
     "shareId": 256,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Fatui_Conspiracy_Event_Card.png"
   },
   "332017": {
     "id": "332017",
@@ -3066,7 +3344,8 @@
     "shareId": 257,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Plunging_Strike_Event_Card.png"
   },
   "332018": {
     "id": "332018",
@@ -3077,7 +3356,8 @@
     "shareId": 258,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Heavy_Strike_Event_Card.png"
   },
   "332019": {
     "id": "332019",
@@ -3088,7 +3368,8 @@
     "shareId": 259,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/The_Legend_of_Vennessa_Event_Card.png"
   },
   "332020": {
     "id": "332020",
@@ -3099,7 +3380,8 @@
     "shareId": 260,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Friendship_Eternal_Event_Card.png"
   },
   "332021": {
     "id": "332021",
@@ -3110,7 +3392,8 @@
     "shareId": 261,
     "type": "action",
     "gameVersion": "3.8",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Rhythm_of_the_Great_Dream_Event_Card.png"
   },
   "332022": {
     "id": "332022",
@@ -3121,7 +3404,8 @@
     "shareId": 262,
     "type": "action",
     "gameVersion": "4.0",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Where_Is_the_Unseen_Razor_Event_Card.png"
   },
   "332023": {
     "id": "332023",
@@ -3132,7 +3416,8 @@
     "shareId": 263,
     "type": "action",
     "gameVersion": "4.1",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Pankration!_Event_Card.png"
   },
   "332024": {
     "id": "332024",
@@ -3143,7 +3428,8 @@
     "shareId": 264,
     "type": "action",
     "gameVersion": "4.2",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Lyresong_Event_Card.png"
   },
   "332025": {
     "id": "332025",
@@ -3154,7 +3440,8 @@
     "shareId": 315,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/The_Boar_Princess_Event_Card.png"
   },
   "332026": {
     "id": "332026",
@@ -3165,7 +3452,8 @@
     "shareId": 316,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Falls_and_Fortune_Event_Card.png"
   },
   "332027": {
     "id": "332027",
@@ -3176,7 +3464,8 @@
     "shareId": 317,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Flickering_Four-Leaf_Sigil_Event_Card.png"
   },
   "332028": {
     "id": "332028",
@@ -3187,7 +3476,8 @@
     "shareId": 331,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Machine_Assembly_Line_Event_Card.png"
   },
   "332029": {
     "id": "332029",
@@ -3198,7 +3488,8 @@
     "shareId": 332,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Sunyata_Flower_Event_Card.png"
   },
   "332030": {
     "id": "332030",
@@ -3209,7 +3500,8 @@
     "shareId": 347,
     "type": "action",
     "gameVersion": "4.5",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Controlled_Directional_Blast_Event_Card.png"
   },
   "332031": {
     "id": "332031",
@@ -3220,7 +3512,8 @@
     "shareId": 360,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Underwater_Treasure_Hunt_Event_Card.png"
   },
   "332032": {
     "id": "332032",
@@ -3231,7 +3524,8 @@
     "shareId": 394,
     "type": "action",
     "gameVersion": "4.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Countdown_to_the_Show_3_Event_Card.png"
   },
   "332036": {
     "id": "332036",
@@ -3242,7 +3536,8 @@
     "shareId": 405,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/%22I%27d_Rather_Lose_Money_Myself...\"_Event_Card.png"
   },
   "332037": {
     "id": "332037",
@@ -3253,7 +3548,8 @@
     "shareId": 406,
     "type": "action",
     "gameVersion": "4.8",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Tada!_Event_Card.png"
   },
   "333001": {
     "id": "333001",
@@ -3264,7 +3560,8 @@
     "shareId": 265,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Jueyun_Guoba_Event_Card.png"
   },
   "333002": {
     "id": "333002",
@@ -3275,7 +3572,8 @@
     "shareId": 266,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Adeptus%27_Temptation_Event_Card.png"
   },
   "333003": {
     "id": "333003",
@@ -3286,7 +3584,8 @@
     "shareId": 267,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Lotus_Flower_Crisp_Event_Card.png"
   },
   "333004": {
     "id": "333004",
@@ -3297,7 +3596,8 @@
     "shareId": 268,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Northern_Smoked_Chicken_Event_Card.png"
   },
   "333005": {
     "id": "333005",
@@ -3308,7 +3608,8 @@
     "shareId": 269,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Sweet_Madame_Event_Card.png"
   },
   "333006": {
     "id": "333006",
@@ -3319,7 +3620,8 @@
     "shareId": 270,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Mondstadt_Hash_Brown_Event_Card.png"
   },
   "333007": {
     "id": "333007",
@@ -3330,7 +3632,8 @@
     "shareId": 271,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Mushroom_Pizza_Event_Card.png"
   },
   "333008": {
     "id": "333008",
@@ -3341,7 +3644,8 @@
     "shareId": 272,
     "type": "action",
     "gameVersion": "3.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Minty_Meat_Rolls_Event_Card.png"
   },
   "333009": {
     "id": "333009",
@@ -3352,7 +3656,8 @@
     "shareId": 273,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Teyvat_Fried_Egg_Event_Card.png"
   },
   "333010": {
     "id": "333010",
@@ -3363,7 +3668,8 @@
     "shareId": 274,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Sashimi_Platter_Event_Card.png"
   },
   "333011": {
     "id": "333011",
@@ -3374,7 +3680,8 @@
     "shareId": 275,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Tandoori_Roast_Chicken_Event_Card.png"
   },
   "333012": {
     "id": "333012",
@@ -3385,7 +3692,8 @@
     "shareId": 276,
     "type": "action",
     "gameVersion": "3.7",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Butter_Crab_Event_Card.png"
   },
   "333013": {
     "id": "333013",
@@ -3396,7 +3704,8 @@
     "shareId": 318,
     "type": "action",
     "gameVersion": "4.3",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Fish_and_Chips_Event_Card.png"
   },
   "333014": {
     "id": "333014",
@@ -3407,7 +3716,8 @@
     "shareId": 333,
     "type": "action",
     "gameVersion": "4.4",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Matsutake_Meat_Rolls_Event_Card.png"
   },
   "333015": {
     "id": "333015",
@@ -3418,6 +3728,7 @@
     "shareId": 361,
     "type": "action",
     "gameVersion": "4.6",
-    "actionType": "event"
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Rainbow_Macarons_Event_Card.png"
   }
 }
