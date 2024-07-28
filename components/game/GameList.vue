@@ -1,6 +1,6 @@
 <template>
   <div
-    un-grid="~ justify-center gap-4 cols-[repeat(auto-fill,20rem)]"
+    un-grid="~ justify-center gap-4 cols-[repeat(auto-fill,24rem)]"
   >
     <template v-for="game in games" :key="`${game.id}-${game.winner}`">
       <GameListItem :game="game" />

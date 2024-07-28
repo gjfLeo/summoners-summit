@@ -7,7 +7,7 @@
           <NuxtLinkLocale class="text-sm" :to="`/tournament/${game.tournamentId}`" no-prefetch>
             {{ game.gameVersion }} {{ currentLocalized(game.tournamentName) }}
           </NuxtLinkLocale>
-          <NText :depth="3" class="flex gap-2 text-xs">
+          <NText :depth="3" class="flex items-center gap-2 text-xs">
             <LinkVideo v-if="game.gameVideo" :video="game.gameVideo" />
             <LinkVideo v-else-if="game.matchVideo" :video="game.matchVideo" />
             <div>{{ game.date }}</div>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="grid-col-[1/4] pb-2 text-xs">
-        {{ currentLocalized(game.stageName) }} {{ currentLocalized(game.partName) }} {{ t("main.tournament.matchName", [game.matchIndex + 1]) }}
+        {{ currentLocalized(game.stageName) }} {{ currentLocalized(game.partName) }} {{ t("main.tournament.matchNameDefault", [game.matchIndex + 1]) }}
       </div>
 
       <div class="self-center justify-self-end"><PlayerName :id="game.playerA.playerId" :nickname="game.playerA.nickname" /></div>
@@ -27,7 +27,7 @@
       <div class="self-center justify-self-start"><TeamAvatars :team="game.playerBDeck.teamId" /></div>
 
       <div class="flex justify-end gap-1 text-sm">
-        <LinkDeck v-if="game.playerADeck.deckCode" :deck-code="game.playerADeck.deckCode" />
+        <LinkDeck v-if="game.playerADeck.deckCode && showDeckLink" :deck-code="game.playerADeck.deckCode" />
         <div v-if="game.starter">{{ game.starter === 'A' ? t('main.gameInfo.firstMove') : t('main.gameInfo.secondMove') }}</div>
         <div :class="{ 'text-orange-500': game.winner === 'A' }">{{ game.winner === 'A' ? t('main.gameInfo.win') : t('main.gameInfo.lose') }}</div>
       </div>
@@ -35,7 +35,7 @@
       <div class="flex justify-start gap-1 text-sm">
         <div :class="{ 'text-orange-500': game.winner === 'B' }">{{ game.winner === 'B' ? t('main.gameInfo.win') : t('main.gameInfo.lose') }}</div>
         <div v-if="game.starter">{{ game.starter === 'B' ? t('main.gameInfo.firstMove') : t('main.gameInfo.secondMove') }}</div>
-        <LinkDeck v-if="game.playerBDeck.deckCode" :deck-code="game.playerBDeck.deckCode" />
+        <LinkDeck v-if="game.playerBDeck.deckCode && showDeckLink" :deck-code="game.playerBDeck.deckCode" />
       </div>
     </div>
   </NCard>
@@ -44,9 +44,14 @@
 <script lang="ts" setup>
 import type { GameDetail } from "~/types";
 
-defineProps<{
+const props = defineProps<{
   game: GameDetail;
 }>();
 
 const { t, currentLocalized } = useLocales();
+const { gameVersionList } = await useAsyncSharedData();
+
+const showDeckLink = computed(() => {
+  return gameVersionList.value.map(v => v.id).includes(props.game.gameVersion);
+});
 </script>

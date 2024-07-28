@@ -4,7 +4,7 @@
       <GameVersionSelect
         v-model:value="gameVersion"
         :clearable="false"
-        :limit="4"
+        :full="false"
         class="w-6.25rem"
       />
     </template>

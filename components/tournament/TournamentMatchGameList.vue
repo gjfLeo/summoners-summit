@@ -56,7 +56,7 @@
         </div>
 
         <div class="flex justify-end gap-1 text-sm">
-          <LinkDeck v-if="games[gameId].playerADeck.deckCode" :deck-code="games[gameId].playerADeck.deckCode" />
+          <LinkDeck v-if="games[gameId].playerADeck.deckCode && showDeckLink" :deck-code="games[gameId].playerADeck.deckCode" />
           <div v-if="games[gameId].starter">{{ games[gameId].starter === 'A' ? $t('main.gameInfo.firstMove') : $t('main.gameInfo.secondMove') }}</div>
           <div :class="{ 'text-orange-500': games[gameId].winner === 'A' }">{{ games[gameId].winner === 'A' ? $t('main.gameInfo.win') : $t('main.gameInfo.lose') }}</div>
         </div>
@@ -64,7 +64,7 @@
         <div class="flex justify-start gap-1 text-sm">
           <div :class="{ 'text-orange-500': games[gameId].winner === 'B' }">{{ games[gameId].winner === 'B' ? $t('main.gameInfo.win') : $t('main.gameInfo.lose') }}</div>
           <div v-if="games[gameId].starter">{{ games[gameId].starter === 'B' ? $t('main.gameInfo.firstMove') : $t('main.gameInfo.secondMove') }}</div>
-          <LinkDeck v-if="games[gameId].playerBDeck.deckCode" :deck-code="games[gameId].playerBDeck.deckCode" />
+          <LinkDeck v-if="games[gameId].playerBDeck.deckCode && showDeckLink" :deck-code="games[gameId].playerBDeck.deckCode" />
         </div>
 
         <div class="video absolute right-2 top-2 transition-200">
@@ -78,10 +78,16 @@
 <script lang="ts" setup>
 import type { Game, GameId, Match } from "~/types";
 
-defineProps<{
+const props = defineProps<{
   match: Match;
   games: Record<GameId, Game>;
 }>();
+
+const { gameVersionList } = await useAsyncSharedData();
+
+const showDeckLink = computed(() => {
+  return gameVersionList.value.map(v => v.id).includes(props.match.gameVersion);
+});
 </script>
 
 <style scoped>

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-const { gameVersionList } = useSharedData();
+const { gameVersionList } = await useAsyncSharedData();
 </script>

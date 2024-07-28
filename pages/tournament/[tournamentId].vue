@@ -18,7 +18,7 @@
 
           <template v-for="(matchId, matchIndex) in part.matchIds" :key="matchId">
             <NH4 class="flex flex-wrap items-baseline gap-2">
-              <div>{{ t('main.tournament.matchName', [matchIndex + 1]) }}</div>
+              <div>{{ t('main.tournament.matchNameDefault', [matchIndex + 1]) }}</div>
 
               <!-- 小屏幕换行 -->
               <div class="h-0 w-full md:hidden" />

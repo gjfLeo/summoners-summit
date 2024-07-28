@@ -19,7 +19,7 @@
       right="2rem" bottom="2rem"
       @click="handleAdd"
     >
-      <div class="i-carbon:add" />
+      <div class="i-mingcute:add-line" />
     </NFloatButton>
 
     <SitePageAnchors>
@@ -47,13 +47,13 @@ const { t } = useLocales();
 useHead({ title: t("site.titles.admin.tournaments") });
 
 const { tournaments } = await useApiGetTournamentList();
-const { gameVersionList } = useSharedData();
+const { gameVersionFullList } = await useAsyncSharedData();
 
 const bySeason = computed(() => {
   const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};
   tournaments.value.forEach((tournament) => {
     const gameVersionId = tournament.gameVersion;
-    const gameVersion = gameVersionList.value.find(v => v.id === gameVersionId);
+    const gameVersion = gameVersionFullList.value.find(v => v.id === gameVersionId);
     if (!gameVersion) {
       return;
     }

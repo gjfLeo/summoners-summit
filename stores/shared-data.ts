@@ -1,13 +1,10 @@
-function toComputed<T>(r: Ref<T>) {
-  return computed(() => r.value);
-}
-
 const useSharedDataStore = defineStore("shared", () => {
   const { data: gameVersionListData, refresh: fetchGameVersionData, status: gameVersionDataStatus } = useAsyncData(
     "gameVersionList",
     () => $fetch("/api/v3/game-versions/list"),
   );
-  const gameVersionList = computed(() => gameVersionListData.value?.gameVersionList ?? []);
+  const gameVersionFullList = computed(() => gameVersionListData.value?.gameVersionList ?? []);
+  const gameVersionList = computed(() => gameVersionFullList.value.slice(0, 4));
   const gameVersionLatest = computed(() => {
     return gameVersionList.value.length ? gameVersionList.value[0].id : "";
   });
@@ -39,17 +36,18 @@ const useSharedDataStore = defineStore("shared", () => {
   }
 
   return {
-    gameVersionList: toComputed(gameVersionList),
-    gameVersionLatest: toComputed(gameVersionLatest),
+    gameVersionFullList,
+    gameVersionList,
+    gameVersionLatest,
     fetchGameVersionData,
 
-    tournamentTypeList: toComputed(tournamentTypeList),
+    tournamentTypeList,
     fetchTournamentTypeData,
 
-    characterCardById: toComputed(characterCardById),
+    characterCardById,
     characterCardIds,
     characterCardList,
-    actionCardById: toComputed(actionCardById),
+    actionCardById,
     actionCardIds,
     actionCardList,
     fetchCardData,
