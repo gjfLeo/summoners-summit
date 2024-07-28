@@ -27,7 +27,8 @@
     "main": {
       "cards": "Cards",
       "team": "{0} - Lineup Details",
-      "tournaments": "Tournaments"
+      "tournaments": "Tournaments",
+      "tournament": "Tournament Detail"
     }
   }
 }

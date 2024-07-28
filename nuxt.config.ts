@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      // routes: ["/", "/tournaments"],
       ignore: ["/admin"],
     },
   },

@@ -27,7 +27,8 @@
     "main": {
       "cards": "卡牌",
       "tournaments": "赛事",
-      "team": "{0} - 阵容详情"
+      "team": "{0} - 阵容详情",
+      "tournament": "赛事详情"
     }
   }
 }
