@@ -6,6 +6,9 @@
         <template #trigger><NButton @click="updateData">{{ t("admin.card.updateData") }}</NButton></template>
       </NTooltip>
     </div>
+    <div>
+      <NText class="text-sm">{{ t('admin.card.updateDataWarning') }}</NText>
+    </div>
     <div un-grid="~ cols-[repeat(auto-fit,minmax(2rem,auto))] gap-1">
       <TransitionGroup name="common-transition-group">
         <template v-for="cardId in characterCardIds" :key="cardId">
@@ -32,6 +35,8 @@
 
 <script lang="ts" setup>
 const { t } = useLocales();
+useHead({ title: t("site.titles.admin.cards") });
+
 const message = useMessage();
 
 const {

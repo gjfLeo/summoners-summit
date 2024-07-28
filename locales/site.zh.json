@@ -20,7 +20,8 @@
       "players": "选手管理",
       "ranks": "选手榜单管理",
       "tournament": "赛事管理",
-      "tournaments": "赛事管理"
+      "tournaments": "赛事管理",
+      "cards": "卡牌管理"
     },
     "format1": "{0}｜{1}",
     "main": {

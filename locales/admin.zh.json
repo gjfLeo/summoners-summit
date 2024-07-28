@@ -13,7 +13,8 @@
   },
   "card": {
     "updateData": "更新卡牌数据",
-    "updateDataDescription": "从第三方库（genshin-db）获取最新游戏版本的卡牌数据"
+    "updateDataDescription": "从第三方库（genshin-db）获取最新游戏版本的卡牌数据",
+    "updateDataWarning": "注意：右上角的版本可选项会随卡牌数据更新，为了防止最新版本数据为空，最好和赛事数据一起更新。"
   },
   "match": {
     "addBan": "添加禁用",
