@@ -11,6 +11,7 @@
         <NStatistic :label="t('main.team.basicStats.gamesWin')" :value="teamBasicStats.gamesWin" />
         <NStatistic :label="t('main.team.basicStats.winRate')" :value="teamBasicStats.winRate" />
         <NStatistic :label="t('main.team.basicStats.gamesNetWin')" :value="teamBasicStats.gamesNetWin" />
+        <NStatistic :label="t('main.team.basicStats.banned')" :value="teamBasicStats.banned" />
       </div>
     </div>
     <div v-if="!teamBasicStats" class="mt">

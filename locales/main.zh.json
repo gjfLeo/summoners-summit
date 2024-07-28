@@ -79,6 +79,7 @@
   },
   "team": {
     "basicStats": {
+      "banned": "被禁用",
       "games": "场数",
       "gamesNetWin": "净胜",
       "gamesWin": "胜场数",
