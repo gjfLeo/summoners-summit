@@ -48,7 +48,7 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: "七圣召唤赛事资料" },
+        // { name: "description", content: "七圣召唤赛事资料" },
         { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
         { name: "theme-color", media: "(prefers-color-scheme: light)", content: "white" },
         { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#222222" },

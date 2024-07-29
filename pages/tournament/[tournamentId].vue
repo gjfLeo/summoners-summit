@@ -69,11 +69,7 @@ const tournamentId = route.params.tournamentId;
 
 const { t, currentLocalized } = useLocales();
 
-const { data } = await useFetch("/api/v3/tournaments/get", { query: { id: tournamentId } });
-
-const tournament = computed(() => data.value?.tournament);
-const matches = computed(() => data.value?.matches ?? {});
-const games = computed(() => data.value?.games ?? {});
+const { tournament, matches, games } = await useApiGetTournament({ id: tournamentId });
 
 useHead({ title: tournament.value ? `${tournament.value.gameVersion} ${currentLocalized(tournament.value.name)}` : t("site.titles.main.tournament") });
 </script>

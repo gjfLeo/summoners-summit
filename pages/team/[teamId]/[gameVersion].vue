@@ -17,6 +17,8 @@
     <div v-if="!teamBasicStats" class="mt">
       <NText :depth="3">{{ t('main.team.noData') }}</NText>
     </div>
+
+    <div>{{ exampleDeck }}</div>
   </div>
 </template>
 
@@ -42,4 +44,6 @@ const teamBasicStats = computed(() => {
     gamesNetWin: stats.gamesWin - (stats.games - stats.gamesWin),
   };
 });
+
+const { exampleDeck } = await useApiGetTeamDecks({ teamId, gameVersion: gameVersion.value });
 </script>

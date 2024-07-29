@@ -1,9 +1,12 @@
+import { add, pow, subtract } from "mathjs/number";
+import { decodeDeck } from "./card";
 import { getGameList } from "./game";
 import { getMatchList } from "./match";
-import type { DeckTeamId, GetTeamMatchupsParams, GetTeamStatsParams, TeamMatchups, TeamStats } from "~/types";
+import type { CardId, DeckCode, DeckTeamId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, GetTeamExampleDeckParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
+import { sorter } from "~/utils/statistics";
 
-export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeamId, TeamStats> {
+export function getTeamStatsRecords(params: GetAllTeamStatsParams): Record<DeckTeamId, TeamStats> {
   const { gameVersion } = params;
 
   const records: Record<DeckTeamId, TeamStats> = {};
@@ -66,7 +69,7 @@ export function getTeamStatsRecords(params: GetTeamStatsParams): Record<DeckTeam
   return records;
 }
 
-export function getTeamMatchupStats(params: GetTeamMatchupsParams) {
+export function getTeamMatchupStats(params: GetAllTeamMatchupsParams) {
   const { gameVersion } = params;
 
   const games = getGameList()
@@ -118,4 +121,63 @@ export function getTeamMatchupStats(params: GetTeamMatchupsParams) {
   const matchupStats = Object.values(records).sort((a, b) => teams.indexOf(a.teamId) - teams.indexOf(b.teamId));
 
   return { teams, matchupStats };
+}
+
+export function getTeamDecks(params: GetTeamExampleDeckParams) {
+  const { gameVersion, teamId } = params;
+
+  const gameDeckList = getGameList()
+    .filter(game => game.gameVersion === gameVersion)
+    .flatMap(game => [game, getMirroredGame(game)])
+    .filter(game => game.playerADeck.teamId === teamId)
+    .filter(game => game.playerADeck.deckCode)
+    .map((game) => {
+      const deckCode = game.playerADeck.deckCode!;
+      const actionCards = decodeDeck(deckCode).actionCards;
+      const cardCountRecords: Record<CardId, number> = {};
+      actionCards.forEach((card) => {
+        cardCountRecords[card] = (cardCountRecords[card] ?? 0) + 1;
+      });
+      return {
+        deckCode,
+        cardCountRecords,
+        win: game.winner === "A",
+      };
+    });
+
+  const cardCountOverall = gameDeckList.reduce<Record<CardId, number>>(
+    (acc, cur) => {
+      Object.entries(cur.cardCountRecords).forEach(([cardId, count]) => {
+        acc[cardId] = (acc[cardId] ?? 0) + count;
+      });
+      return acc;
+    },
+    {},
+  );
+  const cardCountInAverage: Record<CardId, number> = Object.fromEntries(
+    Object.entries(cardCountOverall)
+      .map(([cardId, count]) => [cardId, count / gameDeckList.length]),
+  );
+
+  const deckRecord: Record<DeckCode, {
+    deckCode: DeckCode;
+    games: number;
+    gamesWin: number;
+    distanceToAverage: number;
+  }> = {};
+  gameDeckList.forEach((game) => {
+    const recordItem = deckRecord[game.deckCode] ??= {
+      deckCode: game.deckCode,
+      games: 0,
+      gamesWin: 0,
+      distanceToAverage: Object.entries(cardCountInAverage)
+        .map(([cardId, count]) => Math.abs(count - (game.cardCountRecords[cardId] ?? 0)))
+        .reduce((acc, cur) => acc + cur, 0),
+    };
+    recordItem.games++;
+    if (game.win) recordItem.gamesWin++;
+  });
+
+  const decks = Object.values(deckRecord).sort(sorter("distanceToAverage"));
+  return decks;
 }
