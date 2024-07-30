@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       ignore: ["/admin"],
+      failOnError: true,
     },
   },
 
