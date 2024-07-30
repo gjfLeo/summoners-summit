@@ -1,11 +1,12 @@
 import dayjs from "dayjs";
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
-  routeRules: {
-    "/**": { prerender: true },
-  },
+  modules: [
+    "@bg-dev/nuxt-naiveui",
+    "@vueuse/nuxt",
+    "@unocss/nuxt",
+    "@nuxtjs/i18n",
+  ],
 
   runtimeConfig: {
     public: {
@@ -13,23 +14,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    // https://nuxt-naiveui.bg.tn/
-    "@bg-dev/nuxt-naiveui",
-    "@unocss/nuxt",
-    "@vueuse/nuxt",
-    "@nuxtjs/i18n",
-  ],
-
-  postcss: {
-    plugins: {
-      "postcss-nested": {},
-    },
+  routeRules: {
+    "/**": { prerender: true },
   },
 
-  css: [
-    "@unocss/reset/tailwind-compat.css",
-  ],
+  nitro: {
+    prerender: {
+      crawlLinks: process.env.NUXT_APP_CRAWL_LINKS !== "false",
+    },
+  },
 
   app: {
     head: {
@@ -53,12 +46,14 @@ export default defineNuxtConfig({
     },
   },
 
-  nitro: {
-    prerender: {
-      crawlLinks: process.env.NUXT_APP_CRAWL_LINKS !== "false",
+  css: [
+    "@unocss/reset/tailwind-compat.css",
+  ],
+  postcss: {
+    plugins: {
+      "postcss-nested": {},
     },
   },
-
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "chs",
