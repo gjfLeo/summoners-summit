@@ -8,7 +8,7 @@
         :card="card"
       />
     </div>
-    <div un-flex="~ items-center" class="mt-2">
+    <div un-flex="~ items-center wrap" class="mt-2">
       <div un-flex="~ items-center gap-2">
         <CommonIconButton
           icon="i-mingcute:left-line"
@@ -22,7 +22,6 @@
           @click="() => currentDeckIndex++"
         />
         <TeamAvatars :team="deckCards.characterCards" />
-        <NText>{{ deck.gamesWin }} 胜 / {{ deck.games }} 场，{{ deck.distanceToAverage.toFixed(3) }} 距离平均</NText>
       </div>
 
       <div un-flex="~ items-center gap-4" class="ml-auto">
