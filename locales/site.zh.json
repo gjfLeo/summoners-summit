@@ -12,7 +12,8 @@
     "tournaments": "赛事"
   },
   "messages": {
-    "copied": "已复制"
+    "copied": "已复制",
+    "doNotShowAgain": "不再提示"
   },
   "name": "召唤之巅",
   "titles": {
@@ -29,6 +30,12 @@
       "team": "{0} - 阵容详情",
       "tournament": "赛事详情",
       "tournaments": "赛事"
+    }
+  },
+  "notifications": {
+    "copyDeckCode": {
+      "title": "牌组分享码已复制",
+      "content": "由于算法限制，目前有小几率生成无效的分享码。如果发现了无效分享码，请联系维护者（查看页脚），谢谢您的帮助！"
     }
   }
 }

@@ -1,4 +1,4 @@
-import type { Game, GameDetail, GameId, GameVersionId, GetGameListParams, GetTeamExampleDeckParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
+import type { Game, GameDetail, GameId, GameVersionId, GetGameListParams, GetTeamDecksParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
 
 export async function useApiGetTournamentList() {
   const { data, refresh } = await useFetch("/api/v3/tournaments/list");
@@ -58,9 +58,9 @@ export async function useApiGetActionCardStats(query: { gameVersion: GameVersion
   };
 }
 
-export async function useApiGetTeamDecks(query: GetTeamExampleDeckParams) {
+export async function useApiGetTeamDecks(query: GetTeamDecksParams) {
   const { data } = await useFetch("/api/v3/teams/getDecks", { query });
   return {
-    exampleDeck: computed(() => data.value?.decks ?? []),
+    decks: computed(() => data.value?.decks ?? []),
   };
 }

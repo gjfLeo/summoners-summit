@@ -12,7 +12,8 @@
     "tournaments": "Tournaments"
   },
   "messages": {
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "doNotShowAgain": "Don't show again"
   },
   "name": "Summoners' Summit",
   "titles": {
@@ -29,6 +30,12 @@
       "team": "{0} - Lineup Details",
       "tournament": "Tournament Detail",
       "tournaments": "Tournaments"
+    }
+  },
+  "notifications": {
+    "copyDeckCode": {
+      "title": "Deck Share Code Copied",
+      "content": "Due to algorithm limitations, there is currently a small chance of generating an invalid sharing code. If you find an invalid share, please contact the maintainer (see footer), thank you for your help!"
     }
   }
 }

@@ -6,44 +6,21 @@
           <CardImage class="" :card="cardId" />
         </div>
       </div>
-      <div v-if="teamBasicStats" class="mt flex flex-wrap gap-8">
-        <NStatistic :label="t('main.team.basicStats.games')" :value="teamBasicStats.games" />
-        <NStatistic :label="t('main.team.basicStats.gamesWin')" :value="teamBasicStats.gamesWin" />
-        <NStatistic :label="t('main.team.basicStats.winRate')" :value="teamBasicStats.winRate" />
-        <NStatistic :label="t('main.team.basicStats.gamesNetWin')" :value="teamBasicStats.gamesNetWin" />
-        <NStatistic :label="t('main.team.basicStats.banned')" :value="teamBasicStats.banned" />
-      </div>
-    </div>
-    <div v-if="!teamBasicStats" class="mt">
-      <NText :depth="3">{{ t('main.team.noData') }}</NText>
+      <Team_BasicStats />
     </div>
 
-    <div>{{ exampleDeck }}</div>
+    <Team_Decks />
   </div>
 </template>
 
 <script lang="ts" setup>
 const route = useRoute("team-teamId-gameVersion___zh");
-const teamId = route.params.teamId;
-const characters = getCharacterCardsByTeamId(teamId);
+const teamId = computed(() => route.params.teamId);
 
 const { t, currentLocalized } = useLocales();
-const { gameVersion } = useGameVersion();
 const { characterCardById } = await useAsyncSharedData();
 
-const teamName = computed(() => characters.map(cardId => currentLocalized(characterCardById.value[cardId].name)).join(" & "));
+const characters = computed(() => getCharacterCardsByTeamId(teamId.value));
+const teamName = computed(() => characters.value.map(cardId => currentLocalized(characterCardById.value[cardId].name)).join(" & "));
 useHead({ title: t("site.titles.main.team", [teamName.value]) });
-
-const { teamStatsRecords } = await useApiGetTeamStatsRecords({ gameVersion: gameVersion.value });
-const teamBasicStats = computed(() => {
-  const stats = teamStatsRecords.value[teamId];
-  if (!stats) return null;
-  return {
-    ...stats,
-    winRate: toPercentageString(stats.gamesWin, stats.games),
-    gamesNetWin: stats.gamesWin - (stats.games - stats.gamesWin),
-  };
-});
-
-const { exampleDeck } = await useApiGetTeamDecks({ teamId, gameVersion: gameVersion.value });
 </script>

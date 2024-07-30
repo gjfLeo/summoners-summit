@@ -7,10 +7,12 @@
     }"
   >
     <NLoadingBarProvider>
-      <NMessageProvider>
-        <SiteLoadingBar />
-        <slot />
-      </NMessageProvider>
+      <NNotificationProvider>
+        <NMessageProvider>
+          <SiteLoadingBar />
+          <slot />
+        </NMessageProvider>
+      </NNotificationProvider>
     </NLoadingBarProvider>
   </NaiveConfig>
 </template>

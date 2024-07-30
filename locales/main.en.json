@@ -85,7 +85,9 @@
       "gamesWin": "Wins",
       "winRate": "Win Rate"
     },
-    "noData": "This lineup has no data in the currently selected game version."
+    "noData": "This lineup has no data in the currently selected game version.",
+    "decks": "Decks",
+    "viewDeckDetails": "View Deck Details"
   },
   "teams": {
     "characterSelectorDefaultPlaceholder": "Characters",

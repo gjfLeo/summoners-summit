@@ -1,38 +1,21 @@
-import type { DeckCards } from "~/types/data/deck";
+import type { DeckCards, DeckCode } from "~/types/data/deck";
 
-export default function useCopyDeckShareCode(deckMaybeRef: MaybeRef<DeckCards>) {
+export default function useCopyDeckCode(deckMaybeRef: MaybeRef<DeckCards> | MaybeRef<DeckCode>) {
   const { copy: copyToClipboard } = useClipboard();
   const message = useMessage();
-  // const notification = useNotification();
-  // const notificationRead = useLocalStorage("copyDeckCodeNotificationRead", 0);
   const { t } = useLocales();
   const { encodeDeck } = useDeckEncoder();
+
+  const { showNotification } = useSiteNotification();
 
   async function copy() {
     const deck = unref(deckMaybeRef);
     if (!deck) return;
 
-    await copyToClipboard(encodeDeck(deck));
+    await copyToClipboard(typeof deck === "string" ? deck : encodeDeck(deck));
     message.success(t("site.messages.copied"));
 
-    // if (notificationRead.value < 1) {
-    //   const notificationInstance = notification.success({
-    //     title: t("actions.copyDeckShareCodeNotifyTitle"),
-    //     content: t("actions.copyDeckShareCodeNotifyContent"),
-    //     action: () => {
-    //       return h(NButton, {
-    //         tertiary: true,
-    //         size: "small",
-    //         onClick: () => {
-    //           notificationRead.value = 1;
-    //           notificationInstance.destroy();
-    //         },
-    //       }, () => t("actions.doNotShowAgain"));
-    //     },
-    //     keepAliveOnHover: true,
-    //     duration: 8000,
-    //   });
-    // }
+    showNotification("copyDeckCode");
   }
 
   return { copy };

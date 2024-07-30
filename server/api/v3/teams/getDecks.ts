@@ -1,8 +1,8 @@
 import { getTeamDecks } from "~/server/service";
-import { ZGetTeamExampleDeckParams } from "~/types";
+import { ZGetTeamDecksParams } from "~/types";
 
 export default defineEventHandler(async (event) => {
-  const params = await getValidatedQuery(event, ZGetTeamExampleDeckParams.parse);
+  const params = await getValidatedQuery(event, ZGetTeamDecksParams.parse);
   const decks = getTeamDecks(params);
 
   return responseData({ decks });

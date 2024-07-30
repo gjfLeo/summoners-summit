@@ -1,8 +1,7 @@
-import { add, pow, subtract } from "mathjs/number";
 import { decodeDeck } from "./card";
 import { getGameList } from "./game";
 import { getMatchList } from "./match";
-import type { CardId, DeckCode, DeckTeamId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, GetTeamExampleDeckParams, TeamMatchups, TeamStats } from "~/types";
+import type { CardId, DeckCode, DeckTeamId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, GetTeamDecksParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
 
@@ -123,7 +122,7 @@ export function getTeamMatchupStats(params: GetAllTeamMatchupsParams) {
   return { teams, matchupStats };
 }
 
-export function getTeamDecks(params: GetTeamExampleDeckParams) {
+export function getTeamDecks(params: GetTeamDecksParams) {
   const { gameVersion, teamId } = params;
 
   const gameDeckList = getGameList()

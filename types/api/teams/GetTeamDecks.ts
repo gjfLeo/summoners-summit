@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { ZDeckTeamId, ZGameVersionId } from "~/types/data";
 
-export const ZGetTeamExampleDeckParams = z.object({
+export const ZGetTeamDecksParams = z.object({
   gameVersion: ZGameVersionId,
   teamId: ZDeckTeamId,
 }).strip();
-export type GetTeamExampleDeckParams = z.infer<typeof ZGetTeamExampleDeckParams>;
+export type GetTeamDecksParams = z.infer<typeof ZGetTeamDecksParams>;
