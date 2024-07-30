@@ -7,7 +7,7 @@ import playerRedirect from "~/server/data/old/playerRedirect.json";
 import type { CardId, Game, PlayerId, Tournament, TournamentRules } from "~/types";
 import type { DeckCards, DeckCode } from "~/types/data/deck";
 import type { MatchSaveParams } from "~/server/service";
-import { ZMatchSaveParams, ZTournamentSaveParams, changePlayerUniqueName, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament } from "~/server/service";
+import { ZMatchSaveParams, ZTournamentSaveParams, changePlayerUniqueName, encodeDeck, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament } from "~/server/service";
 
 function getTournamentType(old?: string): Tournament["type"] {
   if (!old) return "未分类";
@@ -78,7 +78,6 @@ function getStageRules(old?: {
     : undefined;
 }
 
-const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "ntr", "pcp", "rbq"];
 const characterCardById = getCharacterCards();
 const actionCardById = getActionCards();
 
@@ -96,47 +95,11 @@ function getCardId(name: string) {
   return card.id;
 }
 
-function encodeDeck(deck: DeckCards): DeckCode {
-  const shareIds = [
-    ...deck.characterCards.map(cardId => characterCardById[cardId]?.shareId ?? "0"),
-    ...deck.actionCards.map(cardId => actionCardById[cardId]?.shareId ?? "0"),
-  ];
-  // 补齐为34项12-bit数组
-  shareIds.push(0);
-
-  // 重组为51项 8-bit数组
-  const byteArray = Array.from({ length: 17 })
-    .flatMap((_, i) => [
-      shareIds[i * 2] >> 4,
-      ((shareIds[i * 2] & 0xF) << 4) + (shareIds[i * 2 + 1] >> 8),
-      shareIds[i * 2 + 1] & 0xFF,
-    ]);
-
-  // 以此尝试最后一个字节，寻找不含屏蔽词的分享码
-  for (let lastByte = 0; lastByte < 256; lastByte++) {
-    // 加上掩码，奇偶重排
-    // 原本的前25个字节放在偶数位，后25个字节放在奇数位
-    const reorderedByteArray = Array.from({ length: 25 })
-      .flatMap((_, i) => [
-        (byteArray[i] + lastByte) & 0xFF,
-        (byteArray[i + 25] + lastByte) & 0xFF,
-      ]);
-
-    // 编码为Base64
-    const shareCode = btoa(String.fromCodePoint(...reorderedByteArray, lastByte));
-    if (!blockWords.some(word => new RegExp(word.split("").join("\\+*"), "i").test(shareCode))) {
-      return shareCode;
-    }
-  }
-
-  throw new Error("无法生成有效的分享码");
-}
-
-function getDeckCode(oldDeckId: string) {
+function getDeckCode(oldDeckId: string, characterCards: CardId[]) {
   const oldDeck = deckById[oldDeckId as keyof typeof deckById];
   if (!oldDeck) return;
   return encodeDeck({
-    characterCards: oldDeck.characterCards.map(getCardId),
+    characterCards,
     actionCards: Object.entries(oldDeck.actionCards)
       .reduce<CardId[]>((a, [name, count]) => {
         for (let i = 0; i < count; i++) {
@@ -272,11 +235,11 @@ export default defineEventHandler(async () => {
                   _key: 0,
                   playerADeck: {
                     characters: oldGame.playerACharacters.map(getCardId),
-                    deckCode: "playerADeckId" in oldGame ? getDeckCode(oldGame.playerADeckId) : undefined,
+                    deckCode: "playerADeckId" in oldGame ? getDeckCode(oldGame.playerADeckId, oldGame.playerACharacters.map(getCardId)) : undefined,
                   },
                   playerBDeck: {
                     characters: oldGame.playerBCharacters.map(getCardId),
-                    deckCode: "playerBDeckId" in oldGame ? getDeckCode(oldGame.playerBDeckId) : undefined,
+                    deckCode: "playerBDeckId" in oldGame ? getDeckCode(oldGame.playerBDeckId, oldGame.playerBCharacters.map(getCardId)) : undefined,
                   },
                   winner: oldGame.winner === "D" ? "DRAW-L" : oldGame.winner as Game["winner"],
                   starter: oldGame.starter === "" ? undefined : oldGame.starter as Game["starter"],

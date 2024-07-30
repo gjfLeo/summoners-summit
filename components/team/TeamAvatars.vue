@@ -30,7 +30,7 @@ const { currentLocalized } = useLocales();
 
 const cards = computed<CardId[]>(() => {
   if (typeof props.team === "string") {
-    return props.team.split("-");
+    return getCharacterCardsByTeamId(props.team);
   }
   else {
     return props.team;

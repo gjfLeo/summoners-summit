@@ -123,6 +123,8 @@ export function getTeamMatchupStats(params: GetAllTeamMatchupsParams) {
 }
 
 export function getTeamDecks(params: GetTeamDecksParams) {
+  const winWeight = 2; // 胜率影响因子，1表示不考虑胜率
+
   const { gameVersion, teamId } = params;
 
   const gameDeckList = getGameList()
@@ -147,7 +149,7 @@ export function getTeamDecks(params: GetTeamDecksParams) {
   const cardCountOverall = gameDeckList.reduce<Record<CardId, number>>(
     (acc, cur) => {
       Object.entries(cur.cardCountRecords).forEach(([cardId, count]) => {
-        acc[cardId] = (acc[cardId] ?? 0) + count;
+        acc[cardId] = (acc[cardId] ?? 0) + count * (cur.win ? winWeight : 1);
       });
       return acc;
     },
@@ -155,7 +157,10 @@ export function getTeamDecks(params: GetTeamDecksParams) {
   );
   const cardCountInAverage: Record<CardId, number> = Object.fromEntries(
     Object.entries(cardCountOverall)
-      .map(([cardId, count]) => [cardId, count / gameDeckList.length]),
+      .map(([cardId, count]) => [cardId, count / (
+        gameDeckList.length
+        + gameDeckList.filter(game => game.win).length * (winWeight - 1)
+      )]),
   );
 
   const deckRecord: Record<DeckCode, {
@@ -169,6 +174,13 @@ export function getTeamDecks(params: GetTeamDecksParams) {
       deckCode: game.deckCode,
       games: 0,
       gamesWin: 0,
+      // 欧氏距离
+      // distanceToAverage: Math.sqrt(
+      //   Object.entries(cardCountInAverage)
+      //     .map(([cardId, count]) => (count - (game.cardCountRecords[cardId] ?? 0)) ** 2)
+      //     .reduce((acc, cur) => acc + cur, 0),
+      // ),
+      // 曼哈顿距离
       distanceToAverage: Object.entries(cardCountInAverage)
         .map(([cardId, count]) => Math.abs(count - (game.cardCountRecords[cardId] ?? 0)))
         .reduce((acc, cur) => acc + cur, 0),

@@ -1,5 +1,5 @@
 <template>
-  <template v-if="decks.length > 0">
+  <template v-if="decks.length > 0 && deck">
     <NH2>{{ t('main.team.decks') }}</NH2>
     <div un-grid="~ md:cols-15 sm:cols-10 cols-6 gap-2">
       <CardImage
@@ -21,6 +21,8 @@
           :disabled="currentDeckIndex >= decks.length - 1"
           @click="() => currentDeckIndex++"
         />
+        <TeamAvatars :team="deckCards.characterCards" />
+        <NText>{{ deck.gamesWin }} 胜 / {{ deck.games }} 场，{{ deck.distanceToAverage.toFixed(3) }} 距离平均</NText>
       </div>
 
       <div un-flex="~ items-center gap-4" class="ml-auto">
@@ -57,8 +59,9 @@ const { decks } = await useApiGetTeamDecks({
 });
 
 const currentDeckIndex = ref(0);
-const deckCode = computed(() => decks.value.length > 0 ? decks.value[currentDeckIndex.value].deckCode : "");
-const deckCards = computed(() => deckCode.value ? decodeDeck(deckCode.value) : { actionCards: [] });
+const deck = computed(() => decks.value[currentDeckIndex.value]);
+const deckCode = computed(() => deck.value?.deckCode ?? "");
+const deckCards = computed(() => deckCode.value ? decodeDeck(deckCode.value) : { actionCards: [], characterCards: [] });
 
 const { copy: copyShareCode } = useCopyDeckCode(deckCode);
 </script>
