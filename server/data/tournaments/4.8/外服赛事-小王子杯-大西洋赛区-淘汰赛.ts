@@ -837,7 +837,7 @@ export default defineTournament({
                     "北地烟熏鸡": 2,
                     "兽肉薄荷卷": 2,
                   }),
-                  starter: "",
+                  starter: "B",
                   winner: "B",
                   video: "https://www.youtube.com/live/7pVTbIJ3oYc?t=22720",
                 },
