@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div un-flex="~ col" class="h-[calc(100vh-16rem)] min-h-30rem">
     <NText :depth="3" class="text-sm">{{ t('main.cards.actionBarChart.summary', [numGameDecks]) }}</NText>
     <div
       ref="chart"
-      class="mt h-[calc(100vh-16rem)] min-h-30rem"
+      class="mt flex-1"
     >
       <VChart
         v-if="chartHeight > 0"
@@ -16,10 +16,12 @@
 <script lang="ts" setup>
 import { divide, format } from "mathjs/number";
 import type { VChart } from "#components";
+import type { ActionCardStats } from "~/types";
 
-type DataType = Awaited<ReturnType<typeof useApiGetActionCardStats>>;
-const actionCardStats = inject<DataType["actionCardStats"]>("actionCardStats", computed(() => []));
-const numGameDecks = inject<DataType["numGameDecks"]>("numGameDecks", computed(() => 0));
+const props = defineProps<{
+  actionCardStats: ActionCardStats[];
+  numGameDecks: number;
+}>();
 
 const { t } = useLocales();
 const { actionCardById } = await useAsyncSharedData();
@@ -29,7 +31,7 @@ const { height: chartHeight, width: chartWidth } = useElementSize(chart);
 const barNum = computed(() => Math.floor((chartWidth.value - remToPx(3)) / remToPx(3)));
 
 const data = computed(() => {
-  return actionCardStats.value
+  return props.actionCardStats
     .map(item => ({
       cardId: item.cardId,
       image: actionCardById.value[item.cardId].image,

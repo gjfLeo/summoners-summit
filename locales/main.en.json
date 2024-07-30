@@ -16,10 +16,10 @@
     }
   },
   "deck": {
-    "copyDeckShareCode": "Copy Share Code",
+    "copyDeckShareCode": "Copy share code",
     "deckDetail": "Deck Details",
     "gameList": "Game List",
-    "teamDetail": "View Lineup Details"
+    "teamDetail": "View lineup details"
   },
   "gameInfo": {
     "banned": "Banned",
@@ -85,9 +85,10 @@
       "gamesWin": "Wins",
       "winRate": "Win Rate"
     },
-    "noData": "This lineup has no data in the currently selected game version.",
+    "cards": "Cards",
     "decks": "Decks",
-    "viewDeckDetails": "View Deck Details"
+    "noData": "This lineup has no data in the currently selected game version.",
+    "viewDeckDetails": "View deck details"
   },
   "teams": {
     "characterSelectorDefaultPlaceholder": "Characters",

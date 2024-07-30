@@ -16,6 +16,12 @@
     "doNotShowAgain": "不再提示"
   },
   "name": "召唤之巅",
+  "notifications": {
+    "copyDeckCode": {
+      "content": "由于算法限制，目前有小几率生成无效的分享码。如果发现了无效分享码，请联系维护者（查看页脚），谢谢您的帮助！",
+      "title": "牌组分享码已复制"
+    }
+  },
   "titles": {
     "admin": {
       "cards": "卡牌管理",
@@ -27,15 +33,11 @@
     "format1": "{0}｜{1}",
     "main": {
       "cards": "卡牌",
+      "deck": "牌组详情",
       "team": "{0} - 阵容详情",
+      "teams": "阵容",
       "tournament": "赛事详情",
       "tournaments": "赛事"
-    }
-  },
-  "notifications": {
-    "copyDeckCode": {
-      "title": "牌组分享码已复制",
-      "content": "由于算法限制，目前有小几率生成无效的分享码。如果发现了无效分享码，请联系维护者（查看页脚），谢谢您的帮助！"
     }
   }
 }

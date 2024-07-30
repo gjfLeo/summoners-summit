@@ -6,14 +6,25 @@ export interface SiteRoute {
   to?: string;
   matches?: RegExp[];
   children?: SiteRoute[];
+  icon?: string;
 }
 
 const renderLabel: (option: MenuOption | MenuGroupOption) => VNode | string = (option) => {
+  const content = h(
+    "div",
+    {
+      class: "flex items-center gap-1",
+    },
+    [
+      ...(option.iconClass ? [h("div", { class: option.iconClass })] : []),
+      option.label as string,
+    ],
+  );
   if ("to" in option) {
-    return <NuxtLinkLocale to={option.to} prefetch={false}>{option.label}</NuxtLinkLocale>;
+    return <NuxtLinkLocale to={option.to} prefetch={false}>{content}</NuxtLinkLocale>;
   }
   else {
-    return option.label as string;
+    return content;
   }
 };
 
@@ -32,6 +43,7 @@ export function useSiteMenu(routes: SiteRoute[]) {
       children: route.children?.map((child, i) => routeToOption(child, [...keys, i])),
       to: route.to,
       matches: route.matches,
+      iconClass: route.icon,
     };
   }
 

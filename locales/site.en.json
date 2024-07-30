@@ -16,6 +16,12 @@
     "doNotShowAgain": "Don't show again"
   },
   "name": "Summoners' Summit",
+  "notifications": {
+    "copyDeckCode": {
+      "content": "Due to algorithm limitations, there is currently a small chance of generating an invalid sharing code. If you find an invalid share, please contact the maintainer (see footer), thank you for your help!",
+      "title": "Deck Share Code Copied"
+    }
+  },
   "titles": {
     "admin": {
       "cards": "Card Management",
@@ -27,15 +33,11 @@
     "format1": "{0} {'|'} {1}",
     "main": {
       "cards": "Cards",
+      "deck": "Deck Details",
       "team": "{0} - Lineup Details",
+      "teams": "Lineups",
       "tournament": "Tournament Detail",
       "tournaments": "Tournaments"
-    }
-  },
-  "notifications": {
-    "copyDeckCode": {
-      "title": "Deck Share Code Copied",
-      "content": "Due to algorithm limitations, there is currently a small chance of generating an invalid sharing code. If you find an invalid share, please contact the maintainer (see footer), thank you for your help!"
     }
   }
 }

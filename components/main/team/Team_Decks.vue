@@ -1,6 +1,5 @@
 <template>
   <template v-if="decks.length > 0 && deck">
-    <NH2>{{ t('main.team.decks') }}</NH2>
     <div un-grid="~ md:cols-15 sm:cols-10 cols-6 gap-2">
       <CardImage
         v-for="(card, index) in deckCards.actionCards"
@@ -8,7 +7,7 @@
         :card="card"
       />
     </div>
-    <div un-flex="~ items-center wrap" class="mt-2">
+    <div un-flex="~ items-center wrap gap-x-4 gap-y-2" class="mt-2">
       <div un-flex="~ items-center gap-2">
         <CommonIconButton
           icon="i-mingcute:left-line"
@@ -21,10 +20,18 @@
           :disabled="currentDeckIndex >= decks.length - 1"
           @click="() => currentDeckIndex++"
         />
-        <TeamAvatars :team="deckCards.characterCards" />
+        <div un-flex="~ items-center">
+          <TransitionGroup name="common-transition-group">
+            <CardAvatar
+              v-for="(card) in deckCards.characterCards" :key="card"
+              class="mr--1 h-8 last-mr-0"
+              :card="card"
+            />
+          </TransitionGroup>
+        </div>
       </div>
 
-      <div un-flex="~ items-center gap-4" class="ml-auto">
+      <div un-flex="~ items-center gap-4" class="md:ml-auto">
         <NuxtLinkLocale :to="`/deck/${toBase64Url(deckCode)}`">
           <CommonIconButton
             :scale="0.9"

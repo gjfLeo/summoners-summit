@@ -85,8 +85,9 @@
       "gamesWin": "胜场数",
       "winRate": "胜率"
     },
-    "noData": "此阵容在当前选择的版本中无数据。",
+    "cards": "卡牌",
     "decks": "牌组",
+    "noData": "此阵容在当前选择的版本中无数据。",
     "viewDeckDetails": "查看牌组详情"
   },
   "teams": {

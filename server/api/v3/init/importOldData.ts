@@ -5,7 +5,6 @@ import deckById from "~/server/data/old/deckById.json";
 import playerRedirect from "~/server/data/old/playerRedirect.json";
 
 import type { CardId, Game, PlayerId, Tournament, TournamentRules } from "~/types";
-import type { DeckCards, DeckCode } from "~/types/data/deck";
 import type { MatchSaveParams } from "~/server/service";
 import { ZMatchSaveParams, ZTournamentSaveParams, changePlayerUniqueName, encodeDeck, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament } from "~/server/service";
 

@@ -11,4 +11,6 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useLocales();
+useHead({ title: t("site.titles.main.teams") });
 </script>

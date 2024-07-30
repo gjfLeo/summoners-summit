@@ -7,11 +7,3 @@ export interface CharacterCardStats {
   numMatches: number;
   numBanned: number;
 }
-
-export interface ActionCardStats {
-  cardId: CardId;
-  numGameDecks: number;
-  numGameDecksWin: number;
-  numUsages: number;
-  numUsagesWin: number;
-}

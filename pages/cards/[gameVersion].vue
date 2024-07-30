@@ -6,7 +6,10 @@
         <Cards_CharacterPickRateBarChart />
       </NTabPane>
       <NTabPane name="actions" :tab="t('terms.actionCards')">
-        <Cards_ActionBarChart />
+        <Cards_ActionBarChart
+          :action-card-stats="actionCardStats"
+          :num-game-decks="numGameDecks"
+        />
       </NTabPane>
     </NTabs>
   </div>
@@ -24,6 +27,4 @@ provide("numMatches", numMatches);
 provide("numGames", numGames);
 
 const { actionCardStats, numGameDecks } = await useApiGetActionCardStats({ gameVersion: gameVersion.value });
-provide("actionCardStats", actionCardStats);
-provide("numGameDecks", numGameDecks);
 </script>

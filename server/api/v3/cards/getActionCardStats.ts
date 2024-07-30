@@ -1,15 +1,19 @@
-import { z } from "zod";
 import { decodeDeck, getGameList } from "~/server/service";
-import type { ActionCardStats, CardId } from "~/types";
+import { type ActionCardStats, type CardId, ZGetActionCardStatsParams } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
 
-const ZParams = z.object({
-  gameVersion: z.string(),
-}).strip();
-
 export default defineEventHandler(async (event) => {
-  const { gameVersion } = await getValidatedQuery(event, ZParams.parse);
+  const { gameVersion, teamId } = await getValidatedQuery(event, ZGetActionCardStatsParams.parse);
+
+  let games = getGameList()
+    .filter(game => game.gameVersion === gameVersion)
+    .flatMap(game => [game, getMirroredGame(game)])
+    .filter(game => game.playerADeck.deckCode);
+
+  if (teamId) {
+    games = games.filter(game => game.playerADeck.teamId === teamId);
+  }
 
   const record: Record<CardId, ActionCardStats> = {};
   const getRecord = (cardId: CardId) => (record[cardId] ??= {
@@ -20,10 +24,6 @@ export default defineEventHandler(async (event) => {
     numUsagesWin: 0,
   });
 
-  const games = getGameList()
-    .filter(game => game.gameVersion === gameVersion)
-    .flatMap(game => [game, getMirroredGame(game)])
-    .filter(game => game.playerADeck.deckCode);
   games
     .forEach((game) => {
       const deckCode = game.playerADeck.deckCode!;

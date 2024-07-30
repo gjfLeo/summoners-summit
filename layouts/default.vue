@@ -11,10 +11,12 @@ const routes: SiteRoute[] = [
   {
     label: "tournaments",
     to: "/tournaments",
+    // icon: "i-mingcute:medal-line",
   },
   {
     label: "teams",
     to: "/teams",
+    // icon: "i-mingcute:group-3-line",
   },
   {
     label: "cards",
@@ -23,6 +25,7 @@ const routes: SiteRoute[] = [
   {
     label: "players",
     to: "/players",
+    // icon: "i-mingcute:user-4-line",
   },
 ];
 </script>

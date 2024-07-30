@@ -1,15 +1,21 @@
 <template>
   <div id="deck">
     <!-- 角色牌 -->
-    <div un-grid="~ gap-2 cols-[1fr_repeat(3,minmax(0,8rem))_1fr]">
+    <div un-grid="~ gap-4 cols-[1fr_auto_1fr]">
       <div />
-      <template v-for="(card, i) in deckCards.characterCards" :key="i">
-        <CardImage :card="card" class="w-100%" />
-      </template>
-      <div class="flex flex-col self-end justify-self-start gap-2">
-        <NButton @click="copyDeckCode">{{ $t('main.deck.copyDeckShareCode') }}</NButton>
+      <div un-grid="~ gap-2 cols-[repeat(3,minmax(0,8rem))]">
+        <template v-for="(card, i) in deckCards.characterCards" :key="i">
+          <CardImage :card="card" class="w-100%" />
+        </template>
+      </div>
+      <div class="flex flex-col items-start self-end justify-self-start gap-2">
+        <CommonIconButton icon="i-mingcute:copy-line" @click="copyDeckCode">
+          {{ $t('main.deck.copyDeckShareCode') }}
+        </CommonIconButton>
         <NuxtLinkLocale :to="`/team/${teamId}`" prefetch>
-          <NButton>{{ $t('main.deck.teamDetail') }}</NButton>
+          <CommonIconButton icon="i-mingcute:group-3-line">
+            {{ $t('main.deck.teamDetail') }}
+          </CommonIconButton>
         </NuxtLinkLocale>
       </div>
     </div>
@@ -35,6 +41,8 @@ const route = useRoute("deck-deckCode___zh");
 const deckCode = toBase64(route.params.deckCode);
 
 const { t } = useLocales();
+useHead({ title: t("site.titles.main.deck") });
+
 const { awaitData } = useSharedData();
 const { decodeDeck } = useDeckEncoder();
 
@@ -42,7 +50,7 @@ await awaitData();
 const deckCards = decodeDeck(deckCode);
 const teamId = getTeamId(deckCards.characterCards);
 
-const { copy: copyDeckCode } = useCopyDeckCode(deckCards);
+const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
 const { games } = await useApiGetGameList({ deckCode });
 </script>
