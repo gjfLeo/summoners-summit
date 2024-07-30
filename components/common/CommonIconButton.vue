@@ -5,7 +5,7 @@
     :focusable="false"
   >
     <template #icon>
-      <div :class="icon" />
+      <div :class="icon ?? 'i-mingcute:question-line'" :style="iconStyle" />
     </template>
     <template #default>
       <slot />
@@ -15,9 +15,10 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-  icon: string;
+  icon?: string;
+  iconDataUrl?: string;
   danger?: boolean;
-  active?: boolean;
+  scale?: number;
 }>();
 
 const themeVars = useThemeVars();
@@ -30,11 +31,20 @@ const style = computed(() => {
       "--n-text-color-pressed": themeVars.value.errorColorPressed,
     });
   }
-  if (props.active) {
+  return style;
+});
+
+const iconStyle = computed(() => {
+  const style = { };
+  if (props.iconDataUrl) {
     Object.assign(style, {
-      "--n-color": `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 16%)`,
-      "--n-color-hover": `color-mix(in oklch, transparent, ${themeVars.value.primaryColor} 8%)`,
-      "--n-border-radius": "6px",
+      "--un-icon": `url(${props.iconDataUrl})`,
+    });
+  }
+  if (props.scale) {
+    Object.assign(style, {
+      width: `${props.scale}em`,
+      height: `${props.scale}em`,
     });
   }
   return style;

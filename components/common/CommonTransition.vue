@@ -7,7 +7,7 @@
 <style scoped>
 .common-enter-active,
 .common-leave-active {
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 /* .common-leave-active {
   position: absolute;
