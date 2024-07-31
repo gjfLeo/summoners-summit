@@ -88,6 +88,14 @@
     "cards": "Cards",
     "decks": "Decks",
     "noData": "This lineup has no data in the currently selected game version.",
+    "statsByVersion": {
+      "axisNumGames": "Games",
+      "axisWinRate": "Win Rate (%)",
+      "numBanned": "Banned",
+      "numGamesLose": "Game Losses",
+      "numGamesWin": "Game Wins",
+      "winRate": "Win Rate"
+    },
     "viewDeckDetails": "View deck details"
   },
   "teams": {

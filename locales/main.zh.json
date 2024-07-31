@@ -88,6 +88,14 @@
     "cards": "卡牌",
     "decks": "牌组",
     "noData": "此阵容在当前选择的版本中无数据。",
+    "statsByVersion": {
+      "axisNumGames": "场数",
+      "axisWinRate": "胜率 (%)",
+      "numBanned": "被禁用次数",
+      "numGamesLose": "落败对局数",
+      "numGamesWin": "胜利对局数",
+      "winRate": "胜率"
+    },
     "viewDeckDetails": "查看牌组详情"
   },
   "teams": {

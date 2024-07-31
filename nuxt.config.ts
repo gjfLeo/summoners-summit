@@ -103,7 +103,7 @@ export default defineNuxtConfig({
 
   echarts: {
     renderer: "svg",
-    charts: ["BarChart"],
+    charts: ["BarChart", "LineChart"],
     components: ["GridComponent", "TooltipComponent", "LegendComponent", "DataZoomComponent"],
   },
 

@@ -15,10 +15,14 @@
     <NH2 id="cards">{{ t('main.team.cards') }}</NH2>
     <Team_CardUsages />
 
+    <NH3 id="stats-by-version">版本数据</NH3>
+    <Team_StatsByVersion />
+
     <SitePageAnchors>
       <NAnchorLink title="基本信息" href="#basic" />
       <NAnchorLink title="牌组" href="#decks" />
       <NAnchorLink title="卡牌" href="#cards" />
+      <NAnchorLink title="版本数据" href="#stats-by-version" />
     </SitePageAnchors>
   </div>
 </template>
