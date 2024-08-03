@@ -147,6 +147,8 @@ const playerNicknameMapRaw: Record<string, string> = {
   "筱熙的小迷妹": "轮舞曲",
   "刻晴": "草莓味果酱",
   "龙4S": "龙4s",
+  "卓龙": "岩van♂deep君",
+  "胡胡胡胡胡小兰": "｜蓝兰岚｜",
   
   
   
