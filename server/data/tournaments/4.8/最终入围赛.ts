@@ -185,6 +185,75 @@ export default defineTournament({
                 },
               ],
             },
+            {
+              playerA: "伊天汐",
+              playerB: "安中的夏",
+              video: "https://www.bilibili.com/video/BV1Gf421B77g",
+              games: [
+                {
+                  playerACharacters: ["莫娜", "早柚", "优菈"],
+                  playerBCharacters: ["吞星之鲸", "刻晴", "莱依拉"],
+                  starter: "B",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["刻晴", "莱依拉", "吞星之鲸"],
+                  playerBCharacters: ["夏沃蕾", "赛诺", "迪希雅"],
+                  starter: "A",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["莫娜", "早柚", "优菈"],
+                  playerBCharacters: ["夏沃蕾", "赛诺", "迪希雅"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "卡卡",
+              playerB: "胡胡胡胡胡小兰",
+              video: "https://www.bilibili.com/video/BV1yi421h7Bw",
+              games: [
+                {
+                  playerACharacters: ["刻晴", "无相之冰", "吞星之鲸"],
+                  playerBCharacters: ["吞星之鲸", "刻晴", "莱依拉"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["刻晴", "无相之冰", "吞星之鲸"],
+                  playerBCharacters: ["班尼特", "深渊使徒·激流", "无相之雷"],
+                  starter: "A",
+                  winner: "B",
+                },
+              ],
+            },
+            {
+              playerA: "小白一只",
+              playerB: "星辰",
+              video: "https://www.bilibili.com/video/BV1Zx4y1x79F",
+              games: [
+                {
+                  playerACharacters: ["无相之雷", "深渊使徒·激流", "班尼特"],
+                  playerBCharacters: ["深渊使徒·激流", "早柚", "重云"],
+                  starter: "A",
+                  winner: "B",
+                },
+                {
+                  playerACharacters: ["刻晴", "莱依拉", "吞星之鲸"],
+                  playerBCharacters: ["吞星之鲸", "莱依拉", "刻晴"],
+                  starter: "B",
+                  winner: "A",
+                },
+                {
+                  playerACharacters: ["无相之雷", "深渊使徒·激流", "班尼特"],
+                  playerBCharacters: ["吞星之鲸", "莱依拉", "刻晴"],
+                  starter: "A",
+                  winner: "A",
+                },
+              ],
+            },
           ],
         },
         {
@@ -244,8 +313,14 @@ export default defineTournament({
             {
               playerA: "Lava没睡醒",
               playerB: "onlysky",
-              video: "https://www.bilibili.com/video/BV1DVigehES2",
+              video: "https://www.bilibili.com/video/BV1ES42197cN",
               games: [
+                {
+                  playerACharacters: ["刻晴", "无相之冰", "吞星之鲸"],
+                  playerBCharacters: ["刻晴", "莱依拉", "吞星之鲸"],
+                  starter: "B",
+                  winner: "A",
+                },
                 {
                   playerACharacters: ["迪希雅", "赛诺", "夏沃蕾"],
                   playerBCharacters: ["刻晴", "莱依拉", "吞星之鲸"],
