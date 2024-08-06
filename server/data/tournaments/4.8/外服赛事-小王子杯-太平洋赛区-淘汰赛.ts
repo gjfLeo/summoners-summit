@@ -211,7 +211,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "KDF EnKoo",
+              playerA: "KDF EnKoe",
               playerB: "Dio",
               video: "https://www.bilibili.com/video/BV1rw4m1r7ff",
               banned: [
@@ -1197,7 +1197,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "KDF Enkoe",
+              playerA: "KDF EnKoe",
               playerB: "Chikuwa",
               video: "https://www.youtube.com/watch?v=_0-jypYMArw",
               banned: [
