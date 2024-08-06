@@ -2,12 +2,21 @@ import { fillGameDetail, getGameList, mirrorGame } from "~/server/service";
 import { ZGetGameListParams } from "~/types";
 
 export default defineEventHandler(async (event) => {
-  const params = await getValidatedQuery(event, ZGetGameListParams.parse);
+  const { gameVersion, deckCode, teamId } = await getValidatedQuery(event, ZGetGameListParams.parse);
 
-  let games = getGameList().flatMap(game => [game, mirrorGame(game)]);
+  let games = getGameList();
 
-  if (params.deckCode) {
-    games = games.filter(game => game.playerADeck.deckCode === params.deckCode);
+  if (gameVersion) {
+    games = games.filter(game => game.gameVersion === gameVersion);
+  }
+
+  games = games.flatMap(game => [game, mirrorGame(game)]);
+
+  if (teamId) {
+    games = games.filter(game => game.playerADeck.teamId === teamId);
+  }
+  if (deckCode) {
+    games = games.filter(game => game.playerADeck.deckCode === deckCode);
   }
 
   games = games.slice(0, 30);

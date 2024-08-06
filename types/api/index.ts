@@ -1,5 +1,6 @@
-export * from "./game";
 export * from "./stats";
+
+export * from "./games/GetGameList";
 
 export * from "./cards/GetActionCardStats";
 
