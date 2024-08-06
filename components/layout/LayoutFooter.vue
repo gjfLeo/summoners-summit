@@ -40,6 +40,7 @@
             <span u-flex="inline gap-2">
               <NuxtLinkLocale class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLinkLocale>
               <NuxtLinkLocale class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLinkLocale>
+              <NuxtLinkLocale class="underline" to="https://2qb.bio.link/" target="_blank"><NA>TwoQuantumBits</NA></NuxtLinkLocale>
             </span>
           </NText>
           <NText :depth="3">{{ $t('footer.lastUpdate', [updateTime]) }}</NText>
