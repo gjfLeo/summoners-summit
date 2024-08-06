@@ -1,5 +1,14 @@
 {
   "description": "七圣召唤赛事资料",
+  "footer": {
+    "about": "关于本站",
+    "author": "by gjfLeo",
+    "lastUpdate": "更新时间：{0}",
+    "qq": "QQ: {0}",
+    "suggestion": "欢迎建议和纠错",
+    "text": "召唤之巅——七圣召唤赛事资料",
+    "thanks": "感谢帮助："
+  },
   "menu": {
     "cards": "卡牌",
     "others": "其他",

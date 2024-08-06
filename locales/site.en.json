@@ -1,5 +1,14 @@
 {
   "description": "Tournament Match Database for GITCG",
+  "footer": {
+    "about": "About",
+    "author": "by gjfLeo",
+    "lastUpdate": "Last update: {0}",
+    "qq": "QQ: {0}",
+    "suggestion": "Feel free to offer any suggestions or corrections!",
+    "text": "Summoners' Summit: Tournament Match Database for GITCG",
+    "thanks": "Thanks to: "
+  },
   "menu": {
     "cards": "Cards",
     "others": "Miscellaneous",
