@@ -161,7 +161,7 @@ export default defineTournament({
               ],
             },
             {
-              playerA: "屹立于大地之上",
+              playerA: "屹立大地之上",
               playerB: "木瓜星灵二号机",
               video: "https://www.bilibili.com/video/BV1SwiVeiEEg",
               games: [
