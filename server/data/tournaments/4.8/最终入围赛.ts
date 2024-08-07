@@ -98,7 +98,7 @@ export default defineTournament({
                 },
                 {
                   playerACharacters: ["「女士」", "无相之冰", "雷音权现"],
-                  playerBCharacters: ["无相之冰", "那维莱特", "雷音权现"],
+                  playerBCharacters: ["无相之冰", "「女士」", "雷音权现"],
                   starter: "B",
                   winner: "A",
                 },
