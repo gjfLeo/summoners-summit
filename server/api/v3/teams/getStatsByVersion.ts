@@ -45,6 +45,8 @@ export default defineEventHandler(async (event) => {
 
   const statsByVersion = Object.values(statsByVersionRecord)
     .sort((a, b) => a.gameVersion.localeCompare(b.gameVersion));
+  while (statsByVersion.length > 1 && statsByVersion[0].numGames === 0 && statsByVersion[1].numGames === 0) statsByVersion.shift();
+  while (statsByVersion.length > 1 && statsByVersion[statsByVersion.length - 2].numGames === 0 && statsByVersion[statsByVersion.length - 1].numGames === 0) statsByVersion.pop();
 
   return responseData({ statsByVersion });
 });
