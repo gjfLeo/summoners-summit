@@ -21,7 +21,7 @@
         >
           <slot />
         </NLayoutContent>
-        <aside id="layout-right-sider" class="p-4 empty:hidden lg:w-16rem" />
+        <aside id="layout-right-sider" class="w-16rem p-4 <lg:hidden empty:hidden" />
       </NLayout>
       <SiteFooter
         style="height: var(--g-footer-height);"
