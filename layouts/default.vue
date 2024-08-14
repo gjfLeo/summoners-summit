@@ -27,5 +27,14 @@ const routes: SiteRoute[] = [
     to: "/players",
     // icon: "i-mingcute:user-4-line",
   },
+  {
+    label: "tools",
+    children: [
+      {
+        label: "decodeDeckCode",
+        to: "/tools/decode-deck-code",
+      },
+    ],
+  },
 ];
 </script>

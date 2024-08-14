@@ -11,11 +11,13 @@
   },
   "menu": {
     "cards": "Cards",
+    "decodeDeckCode": "Decode Deck Share Code",
     "others": "Miscellaneous",
     "playerList": "Player List",
     "playerRanks": "Player Ranks",
     "players": "Players",
     "teams": "Lineups",
+    "tools": "Tools",
     "tournamentList": "Tournament List",
     "tournamentTemplate": "Tournament Templates",
     "tournaments": "Tournaments"
@@ -43,6 +45,7 @@
     "main": {
       "cards": "Cards",
       "deck": "Deck Details",
+      "decodeDeckCode": "Decode Deck Share Code",
       "team": "{0} - Lineup Details",
       "teams": "Lineups",
       "tournament": "Tournament Detail",

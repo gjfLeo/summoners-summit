@@ -11,11 +11,13 @@
   },
   "menu": {
     "cards": "卡牌",
+    "decodeDeckCode": "牌组分享码解析",
     "others": "其他",
     "playerList": "选手列表",
     "playerRanks": "选手榜单",
     "players": "选手",
     "teams": "阵容",
+    "tools": "工具",
     "tournamentList": "赛事列表",
     "tournamentTemplate": "赛事模板",
     "tournaments": "赛事"
@@ -43,6 +45,7 @@
     "main": {
       "cards": "卡牌",
       "deck": "牌组详情",
+      "decodeDeckCode": "牌组分享码解析",
       "team": "{0} - 阵容详情",
       "teams": "阵容",
       "tournament": "赛事详情",

@@ -126,5 +126,11 @@
   },
   "tournaments": {
     "seasonName": "第 {0} 赛季"
+  },
+  "tools": {
+    "decodeDeckCode": {
+      "decode": "解析",
+      "inputPlaceholder": "请输入牌组分享码"
+    }
   }
 }

@@ -126,5 +126,11 @@
   },
   "tournaments": {
     "seasonName": "Season {0}"
+  },
+  "tools": {
+    "decodeDeckCode": {
+      "inputPlaceholder": "Input deck share code",
+      "decode": "Decode"
+    }
   }
 }
