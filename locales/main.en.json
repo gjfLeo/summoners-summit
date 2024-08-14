@@ -38,6 +38,15 @@
     "uid": "UID",
     "unknownPlayer": "Unknown player"
   },
+  "players": {
+    "gameWinRate": "Game win rate",
+    "matchWinRate": "Match win rate",
+    "numGames": "Games",
+    "numGamesWin": "Games Win",
+    "numMatches": "Matches",
+    "numMatchesWin": "Matches win",
+    "rankAndScore": "Rank and Score (CN)"
+  },
   "rules": {
     "banCharacters": "{0} characters banned",
     "banCharactersDescription": "Each player ban {0} character card | Each player bans {0} character cards",
@@ -105,6 +114,12 @@
       "minGamesNum": "Games"
     }
   },
+  "tools": {
+    "decodeDeckCode": {
+      "decode": "Decode",
+      "inputPlaceholder": "Input deck share code"
+    }
+  },
   "tournament": {
     "ban": "Ban",
     "champion": "Champion",
@@ -126,11 +141,5 @@
   },
   "tournaments": {
     "seasonName": "Season {0}"
-  },
-  "tools": {
-    "decodeDeckCode": {
-      "inputPlaceholder": "Input deck share code",
-      "decode": "Decode"
-    }
   }
 }

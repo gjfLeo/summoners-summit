@@ -1,4 +1,4 @@
-import type { Game, GameId, Match } from "~/types";
+import type { Game, GameDetail, GameId, Match, MatchDetail } from "~/types";
 
 export function getMatchWinner(match: Match, games: Record<GameId, Game>): NonNullable<Match["winnerOverride"]> {
   if (match.winnerOverride) return match.winnerOverride;
@@ -24,7 +24,7 @@ export function getMirroredPlayer<T extends string | undefined>(player: T | "A" 
   return player;
 }
 
-export function getMirroredGame<T extends Pick<Game, "playerADeck" | "playerBDeck" | "starter" | "winner">>(t: T): T {
+export function getMirroredGame(t: Game): Game {
   return {
     ...t,
     playerADeck: t.playerBDeck,
@@ -34,7 +34,19 @@ export function getMirroredGame<T extends Pick<Game, "playerADeck" | "playerBDec
   };
 }
 
-export function getMirroredMatch<T extends Pick<Match, "playerA" | "playerB" | "bans" | "winnerOverride">>(t: T): T {
+export function getMirroredGameDetail(game: GameDetail): GameDetail {
+  return {
+    ...game,
+    playerA: game.playerB,
+    playerB: game.playerA,
+    playerADeck: game.playerBDeck,
+    playerBDeck: game.playerADeck,
+    starter: getMirroredPlayer(game.starter),
+    winner: getMirroredPlayer(game.winner),
+  };
+}
+
+export function getMirroredMatch(t: Match): Match {
   return {
     ...t,
     playerA: t.playerB,
@@ -52,5 +64,28 @@ export function getMirroredMatch<T extends Pick<Match, "playerA" | "playerB" | "
             playerBTeamId: b.playerATeamId,
           })),
     winnerOverride: getMirroredPlayer(t.winnerOverride),
+  };
+}
+
+export function getMirroredMatchDetail(match: MatchDetail): MatchDetail {
+  return {
+    ...match,
+
+    playerA: match.playerB,
+    playerB: match.playerA,
+    bans: match.bans?.map(b => (
+      b.banType === "character"
+        ? {
+            ...b,
+            playerACardId: b.playerBCardId,
+            playerBCardId: b.playerACardId,
+          }
+        : {
+            ...b,
+            playerATeamId: b.playerBTeamId,
+            playerBTeamId: b.playerATeamId,
+          })),
+    winnerOverride: getMirroredPlayer(match.winnerOverride),
+    winner: getMirroredPlayer(match.winner),
   };
 }

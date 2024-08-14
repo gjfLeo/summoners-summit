@@ -38,6 +38,15 @@
     "uid": "UID",
     "unknownPlayer": "未知选手"
   },
+  "players": {
+    "gameWinRate": "对局胜率",
+    "matchWinRate": "场次胜率",
+    "numGames": "对局数",
+    "numGamesWin": "获胜对局数",
+    "numMatches": "场次数",
+    "numMatchesWin": "获胜场次数",
+    "rankAndScore": "积分榜名次"
+  },
   "rules": {
     "banCharacters": "禁用角色：{0}",
     "banCharactersDescription": "对战双方各禁用{0}张角色牌",
@@ -105,6 +114,12 @@
       "minGamesNum": "最小场数"
     }
   },
+  "tools": {
+    "decodeDeckCode": {
+      "decode": "解析",
+      "inputPlaceholder": "请输入牌组分享码"
+    }
+  },
   "tournament": {
     "ban": "禁用",
     "champion": "冠军",
@@ -126,11 +141,5 @@
   },
   "tournaments": {
     "seasonName": "第 {0} 赛季"
-  },
-  "tools": {
-    "decodeDeckCode": {
-      "decode": "解析",
-      "inputPlaceholder": "请输入牌组分享码"
-    }
   }
 }

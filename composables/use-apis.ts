@@ -1,4 +1,4 @@
-import type { Game, GameDetail, GameId, GameVersionId, GetActionCardStatsParams, GetGameListParams, GetTeamDecksParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
+import type { Game, GameDetail, GameId, GameVersionId, GetActionCardStatsParams, GetGameListParams, GetPlayerStatsRecordParams, GetTeamDecksParams, Match, MatchId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
 import type { GetTeamStatsByVersionParams } from "~/types/api/teams/GetTeamStatsByVersion";
 
 export async function useApiGetTournamentList() {
@@ -70,5 +70,12 @@ export async function useApiGetTeamStatsByVersion(query: GetTeamStatsByVersionPa
   const { data } = await useFetch("/api/v3/teams/getStatsByVersion", { query });
   return {
     statsByVersion: computed(() => data.value?.statsByVersion ?? []),
+  };
+}
+
+export async function useApiGetPlayerStatsRecord(query: GetPlayerStatsRecordParams) {
+  const { data } = await useFetch("/api/v3/players/getStatsRecord", { query });
+  return {
+    playerStatsRecord: computed(() => data.value?.playerStatsRecord ?? {}),
   };
 }

@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <div>Players</div>
-    <div>{{ data?.players }}</div>
-  </div>
+  <GameVersionNavigator />
 </template>
 
-<script setup lang="ts">
-const { data } = await useFetch("/api/v3/players/list");
+<script lang="ts" setup>
+definePageMeta({
+  middleware: [
+    "game-version-navigator",
+  ],
+});
 </script>
