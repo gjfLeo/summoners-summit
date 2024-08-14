@@ -3,7 +3,7 @@ import { ALL_ACTION_CARDS_INFO, ALL_CHARACTER_CARDS_INFO } from "../cards";
 import type { ActionCard, CharacterCard } from "~/utils/types";
 
 const fandomFilenameOverrides: Record<string, string> = {
-  212111: "Hear Me — Let Us Raise the Chalice of Love! Equipment Card.png",
+  "「诸君听我颂，共举爱之杯！」": "Hear Me — Let Us Raise the Chalice of Love! Equipment Card.png",
 };
 
 function getImageUrl(filename: string) {
