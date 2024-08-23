@@ -13,6 +13,7 @@
     "cards": "卡牌",
     "decodeDeckCode": "牌组分享码解析",
     "others": "其他",
+    "playerAchievements": "选手荣誉",
     "playerList": "选手列表",
     "playerRanks": "选手榜单",
     "players": "选手",
@@ -35,6 +36,7 @@
   },
   "titles": {
     "admin": {
+      "achievements": "选手荣誉管理",
       "cards": "卡牌管理",
       "players": "选手管理",
       "ranks": "选手榜单管理",

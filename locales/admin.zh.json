@@ -27,6 +27,9 @@
     "TOURNAMENT_STAGE_OR_PART_NOT_FOUND": "未查询到赛事阶段或分组数据"
   },
   "player": {
+    "achievements": {
+      "addPlayers": "添加选手"
+    },
     "mergePlayerData": "合并选手数据",
     "mergeSourceLabel": "将此条目删除",
     "mergeSourceRequired": "请选择",

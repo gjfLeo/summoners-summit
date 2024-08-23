@@ -27,6 +27,9 @@
     "TOURNAMENT_STAGE_OR_PART_NOT_FOUND": "Tournament stage or part not found"
   },
   "player": {
+    "achievements": {
+      "addPlayers": "Add Players"
+    },
     "mergePlayerData": "Merge player data",
     "mergeSourceLabel": "This will be deleted",
     "mergeSourceRequired": "Select",

@@ -13,6 +13,7 @@
     "cards": "Cards",
     "decodeDeckCode": "Decode Deck Share Code",
     "others": "Miscellaneous",
+    "playerAchievements": "Player Achievements",
     "playerList": "Player List",
     "playerRanks": "Player Ranks",
     "players": "Players",
@@ -35,6 +36,7 @@
   },
   "titles": {
     "admin": {
+      "achievements": "Player Achievements Manage Management",
       "cards": "Card Management",
       "players": "Player Management",
       "ranks": "Player Rank Management",

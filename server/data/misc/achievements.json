@@ -1,0 +1,84 @@
+[
+  {
+    "id": "season1-dynamic",
+    "name": {
+      "zh": "龙脊雪山·冠冕",
+      "en": "Dragonspine: Crown"
+    },
+    "flavorText": {
+      "zh": "破晓之时的龙脊雪山，如同冒险家生涯的冠冕，作为牌手的象征之物时，则代表着「顶峰」级的实力……",
+      "en": "The splendor of Dragonspine at daybreak, as the symbol of a duelist, symbolizes the \"summit\" of their skill..."
+    },
+    "description": {
+      "zh": "在全民赛季第一赛季的影幻杯中取得十六强。"
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
+    "playerIds": [
+      "f53067a0b2b9cc68",
+      "d2b084af89a32bf5",
+      "07a2f9a288f2ad45",
+      "abd7531e73a68f32",
+      "fbd71758185d1c29",
+      "e24bf320649522c8",
+      "933172314e5d6b08",
+      "6e2707a45bb0d3f3",
+      "b72b25aef63ca940",
+      "c56f242c875bbde2",
+      "742ad70755eb8d9b",
+      "35aa5bdbf67cbc68",
+      "e9ff7a95659bf889",
+      "6b49316d6da7b8aa",
+      "3819992cb8b26213",
+      "4c63f6a25b8a26b8"
+    ]
+  },
+  {
+    "id": "season1-princess",
+    "name": {
+      "zh": "龙脊雪山·冠冕",
+      "en": "Dragonspine: Crown"
+    },
+    "flavorText": {
+      "zh": "破晓之时的龙脊雪山，如同冒险家生涯的冠冕，作为牌手的象征之物时，则代表着「顶峰」级的实力……",
+      "en": "The splendor of Dragonspine at daybreak, as the symbol of a duelist, symbolizes the \"summit\" of their skill..."
+    },
+    "description": {
+      "zh": "在全民赛季第一赛季的小王子杯中取得十六强。"
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
+    "playerIds": []
+  },
+  {
+    "id": "season2-fonta",
+    "name": {
+      "zh": "层岩巨渊·冠冕",
+      "en": "The Chasm: Crown"
+    },
+    "flavorText": {
+      "zh": "黄金代表最为辉煌的财富，无论冒险家、矿工还是牌手，都将这色彩视为事业的冠冕……",
+      "en": "Gold, the most glorious form that wealth can take. Whether you're an adventurer, miner, or card player, it represents the crowning achievement of your career..."
+    },
+    "description": {
+      "zh": "在全民赛季第二赛季的枫达杯中取得十六强。"
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
+    "playerIds": [
+      "828c6fa4cda2c687",
+      "0d0fa57e06e04206",
+      "980eb55272be9530",
+      "0eaf6a25ed034536",
+      "161c913c3c9475e8",
+      "3819992cb8b26213",
+      "ec9d5910626c2949",
+      "06a9c720a7156e07",
+      "9ceb8fe866303118",
+      "742ad70755eb8d9b",
+      "a2a041ea65e702b6",
+      "ff06dcb835fa2d33",
+      "d2b084af89a32bf5",
+      "f53067a0b2b9cc68",
+      "6c3f63dab9956792",
+      "357f80d929a918ce"
+    ]
+  }
+]

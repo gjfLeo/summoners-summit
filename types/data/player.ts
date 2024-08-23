@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ZLocales } from "./base";
 
 export const ZPlayerId = z.coerce.string().regex(/^\w{16}$/);
 export const ZPlayerUid = z.coerce.string().regex(/^\d{9}$/);
@@ -29,3 +30,13 @@ export type Ranks = z.infer<typeof ZRanks>;
 export interface PlayerIndex {
   uid: Record<Player["uids"][number], Player["id"]>;
 }
+
+export const ZAchievement = z.object({
+  id: z.coerce.string().trim(),
+  name: z.record(ZLocales, z.string()),
+  flavorText: z.record(ZLocales, z.string()),
+  description: z.record(ZLocales, z.string()),
+  imageUrl: z.string(),
+  playerIds: z.array(ZPlayerId),
+}).strip();
+export type Achievement = z.infer<typeof ZAchievement>;

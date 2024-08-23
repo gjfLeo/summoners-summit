@@ -37,6 +37,10 @@ const routes: SiteRoute[] = [
         label: "playerRanks",
         to: "/admin/players/ranks",
       },
+      {
+        label: "playerAchievements",
+        to: "/admin/players/achievements",
+      },
     ],
   },
   {

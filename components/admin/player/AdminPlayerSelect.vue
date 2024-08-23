@@ -23,7 +23,7 @@ const props = defineProps<{
   placeholder?: string;
 }>();
 
-const playerId = defineModel<string | null>("value", { default: null });
+const playerId = defineModel<string[] | string | null>("value", { default: null });
 
 const { t } = useLocales();
 
