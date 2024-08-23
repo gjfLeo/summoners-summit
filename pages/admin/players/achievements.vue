@@ -1,25 +1,23 @@
 <template>
   <div un-flex="~ col gap-4">
     <NCard v-for="achievement in achievementList" :key="achievement.id">
-      <div>
-        <div class="flex items-center gap-4">
-          <NImage
-            :src="achievement.imageUrl" :alt="currentLocalized(achievement.name)"
-            class="inline-block aspect-ratio-200/343 h-30 object-cover"
-          />
-          <div class="flex flex-col gap-2">
-            <NText :depth="1" class="text-120%">{{ currentLocalized(achievement.name) }}</NText>
-            <NText :depth="2">{{ currentLocalized(achievement.description) }}</NText>
-            <NText :depth="3">{{ currentLocalized(achievement.flavorText) }}</NText>
-          </div>
+      <div class="flex items-center gap-4">
+        <NImage
+          :src="achievement.imageUrl" :alt="currentLocalized(achievement.name)"
+          class="inline-block aspect-ratio-200/343 h-30 object-cover"
+        />
+        <div class="flex flex-col gap-2">
+          <NText :depth="1" class="text-120%">{{ currentLocalized(achievement.name) }}</NText>
+          <NText :depth="2">{{ currentLocalized(achievement.description) }}</NText>
+          <NText :depth="3">{{ currentLocalized(achievement.flavorText) }}</NText>
         </div>
-        <div un-grid="~ cols-4 gap-x-8 gap-y-2" class="mt">
-          <div v-for="playerId in achievement.playerIds" :key="playerId" un-flex="~ items-center">
-            <span>{{ players.find((player) => player.id === playerId)?.uniqueName }}</span>
-            <CommonIconButton icon="i-mingcute:delete-2-line" danger class="ml" />
-          </div>
-          <NButton primary @click="showAdd(achievement.id)">添加</NButton>
+      </div>
+      <div un-grid="~ cols-4 gap-x-8 gap-y-2" class="mt">
+        <div v-for="playerId in achievement.playerIds" :key="playerId" un-flex="~ items-center">
+          <span>{{ players.find((player) => player.id === playerId)?.uniqueName }}</span>
+          <CommonIconButton icon="i-mingcute:delete-2-line" danger class="ml" />
         </div>
+        <NButton primary @click="showAdd(achievement.id)">添加</NButton>
       </div>
     </NCard>
     <NModal

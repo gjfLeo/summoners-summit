@@ -13,14 +13,20 @@ export default defineEventHandler(async (event) => {
   const player = getPlayer(id);
 
   if (!player) {
-    return responseErrorCode("PLAYER_NOT_FOUND");
+    throw createError(errorCodes.PLAYER_NOT_FOUND);
   }
 
   const achievements = getPlayerAchievements(id);
 
   const tournaments = getTournamentDetailBriefList();
-  const champions = tournaments.filter(tournament => tournament.champion?.playerId === id);
-
+  const champions = tournaments.filter(tournament => tournament.champion?.playerId === id)
+    .sort((a, b) => b.gameVersion.localeCompare(a.gameVersion))
+    .sort((a, b) => {
+      if (!a.dateRange.start || !b.dateRange.start) {
+        return 0;
+      }
+      return b.dateRange.start.localeCompare(a.dateRange.start);
+    });
   return responseData({
     player: {
       ...player,

@@ -52,7 +52,8 @@
       "team": "{0} - 阵容详情",
       "teams": "阵容",
       "tournament": "赛事详情",
-      "tournaments": "赛事"
+      "tournaments": "赛事",
+      "player": "选手详情"
     }
   }
 }

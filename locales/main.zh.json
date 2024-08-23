@@ -30,11 +30,16 @@
     "win": "胜"
   },
   "player": {
+    "championOf": "{0}冠军",
     "mainNickname": "主要昵称",
     "nickname": "昵称",
     "otherNicknames": "其他昵称",
+    "otherNicknames1": "其他昵称：{0}",
+    "playerDetail": "选手详情",
     "rank": "排名",
+    "recent": "近期记录",
     "score": "积分",
+    "stats": "选手数据",
     "uid": "UID",
     "unknownPlayer": "未知选手"
   },

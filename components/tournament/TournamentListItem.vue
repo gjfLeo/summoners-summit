@@ -9,7 +9,7 @@
         <template v-if="tournament.champion">
           <dt>{{ t('main.tournament.champion') }}</dt>
           <dd>
-            <PlayerName :id="tournament.champion.playerId" :nickname="tournament.champion.nickname" />
+            <PlayerName :id="tournament.champion.playerId" :nickname="tournament.champion.nickname" :link="false" />
           </dd>
         </template>
       </dl>

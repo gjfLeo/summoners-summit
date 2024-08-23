@@ -79,3 +79,10 @@ export async function useApiGetPlayerStatsRecord(query: GetPlayerStatsRecordPara
     playerStatsRecord: computed(() => data.value?.playerStatsRecord ?? {}),
   };
 }
+
+export async function useApiGetPlayerDetail(query: { id: string }) {
+  const { data } = await useFetch("/api/v3/players/getDetail", { query });
+  return {
+    player: computed(() => data.value?.player),
+  };
+}

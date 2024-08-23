@@ -36,7 +36,9 @@
     "rank": "Rank",
     "score": "Score",
     "uid": "UID",
-    "unknownPlayer": "Unknown player"
+    "unknownPlayer": "Unknown player",
+    "otherNicknames1": "Other nicknames: {0}",
+    "championOf": "Champion of {0}"
   },
   "players": {
     "gameWinRate": "Game win rate",
