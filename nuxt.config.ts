@@ -1,5 +1,6 @@
 // import { pwa } from "./config/pwa";
 import dayjs from "dayjs";
+import { themeOverridesShared } from "./config/theme";
 
 export default defineNuxtConfig({
   modules: [
@@ -76,6 +77,12 @@ export default defineNuxtConfig({
     "@unocss/reset/tailwind.css",
   ],
 
+  naiveui: {
+    themeConfig: {
+      shared: themeOverridesShared,
+    },
+  },
+
   // colorMode: {
   //   classSuffix: "",
   // },
@@ -96,8 +103,8 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
     defaultLocale: "zh",
     locales: [
-      { code: "zh", iso: "zh-CN", name: "简体中文", isCatchallLocale: true },
-      { code: "en", iso: "en-US", name: "English" },
+      { code: "zh", language: "zh-CN", name: "简体中文", isCatchallLocale: true },
+      { code: "en", language: "en-US", name: "English" },
     ],
   },
 

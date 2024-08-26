@@ -2,9 +2,6 @@
   <!-- <VitePwaManifest /> -->
   <NaiveConfig
     :locale="naiveLocale" :date-locale="dateZhCN"
-    :theme-config="{
-      shared: themeOverridesShared,
-    }"
   >
     <NLoadingBarProvider>
       <NNotificationProvider>
@@ -19,7 +16,6 @@
 
 <script setup lang="ts">
 import { dateZhCN, enUS, zhCN } from "naive-ui";
-import { themeOverridesShared } from "@/config/theme";
 
 const { locale } = useLocales();
 const naiveLocale = computed(() => {
