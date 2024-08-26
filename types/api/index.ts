@@ -9,3 +9,4 @@ export * from "./teams/GetAllTeamMatchups";
 export * from "./teams/GetTeamDecks";
 
 export * from "./players/GetPlayerStatsRecord";
+export * from "./players/GetPlayerStatsByVersion";

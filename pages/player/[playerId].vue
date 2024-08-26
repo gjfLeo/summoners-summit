@@ -24,6 +24,9 @@
       </NCard>
     </div>
 
+    <NH2 id="stats">{{ t('main.player.stats') }}</NH2>
+    <Player_StatsByVersion v-bind="{ statsByVersion }" />
+
     <SitePageAnchors>
       <NAnchorLink :title="t('main.player.playerDetail')" :href="`#${player.uniqueName}`">
         <NAnchorLink :title="t('main.player.stats')" href="#stats" />
@@ -42,4 +45,6 @@ const { t, currentLocalized } = useLocales();
 const { player } = await useApiGetPlayerDetail({ id: playerId });
 
 useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.player") });
+
+const { statsByVersion } = await useApiGetPlayerStatsByVersion(playerId);
 </script>

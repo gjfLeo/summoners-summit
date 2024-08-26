@@ -40,6 +40,14 @@
     "recent": "近期记录",
     "score": "积分",
     "stats": "选手数据",
+    "statsByVersion": {
+      "axisNumGames": "场数",
+      "axisWinRate": "胜率 (%)",
+      "gameWinRate": "对局胜率 ",
+      "matchWinRate": "场次胜率",
+      "numGamesLose": "落败对局数",
+      "numGamesWin": "胜利对局数"
+    },
     "uid": "UID",
     "unknownPlayer": "未知选手"
   },
