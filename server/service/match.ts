@@ -152,7 +152,14 @@ export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
   }, 0);
   return {
     ...match,
+
+    tournamentName: tournament.name,
     gameVersion: tournament.gameVersion,
+
+    stageName: tournament.stages[match.stageIndex].name,
+    partName: tournament.stages[match.stageIndex].parts[match.partIndex].name,
+    date: tournament.stages[match.stageIndex].parts[match.partIndex].date,
+
     winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
   };
 }

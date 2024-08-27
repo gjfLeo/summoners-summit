@@ -24,7 +24,11 @@ export const ZGameDetail = ZGame.extend({
 export type GameDetail = z.infer<typeof ZGameDetail>;
 
 export const ZMatchDetail = ZMatch.extend({
+  tournamentName: ZTournament.shape.name,
   gameVersion: ZGameVersionId,
+  stageName: ZTournamentStage.shape.name,
+  partName: ZTournamentPart.shape.name,
+  date: ZTournamentPart.shape.date,
   winner: z.enum(["A", "B", "DRAW"]),
 });
 export type MatchDetail = z.infer<typeof ZMatchDetail>;

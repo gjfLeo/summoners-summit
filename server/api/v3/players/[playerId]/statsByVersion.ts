@@ -1,7 +1,7 @@
 import { getGameDetail, getGameVersionList, getMatchDetail, getMatchList } from "~/server/service";
 import { getMirroredGameDetail, getMirroredMatch } from "~/utils/match";
 import {
-  ZApiGetPlayerStatsByVersionRouteParams as ZParams,
+  ZApiPlayerRouterParams as ZRouterParams,
 } from "~/types";
 import type {
   GameDetail,
@@ -11,7 +11,7 @@ import type {
 } from "~/types";
 
 export default defineEventHandler(async (event) => {
-  const { playerId } = await getValidatedRouterParams(event, ZParams.parse);
+  const { playerId } = await getValidatedRouterParams(event, ZRouterParams.parse);
 
   const record: Record<GameVersionId, Item>
     = Object.fromEntries(

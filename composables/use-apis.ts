@@ -93,3 +93,11 @@ export async function useApiGetPlayerStatsByVersion(playerId: PlayerId) {
     statsByVersion: computed(() => data.value?.success ? data.value.statsByVersion : []),
   };
 }
+
+export async function useApiGetPlayerMatches(playerId: PlayerId) {
+  const { data } = await useFetch(`/api/v3/players/${playerId}/matches`);
+  return {
+    matchList: computed(() => data.value?.success ? data.value.matchList : []),
+    games: computed(() => data.value?.success ? data.value.games : {}),
+  };
+}
