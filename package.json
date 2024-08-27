@@ -42,7 +42,7 @@
     "fs-extra": "^11.2.0",
     "mathjs": "^13.0.3",
     "nuxt": "^3.13.0",
-    "nuxt-echarts": "^0.1.0",
+    "nuxt-echarts": "^0.2.2",
     "pinia": "^2.2.2",
     "pinyin-match": "^1.2.5",
     "shelljs": "^0.8.5",
