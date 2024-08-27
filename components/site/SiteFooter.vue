@@ -12,19 +12,11 @@
         <div class="flex flex-col gap-2">
           <div class="flex items-center gap-2">
             <NText>{{ $t('site.footer.author') }}</NText>
-            <NuxtLinkLocale :to="githubRepositry" target="_blank">
-              <CommonIconButton icon="i-mingcute:github-line" />
-            </NuxtLinkLocale>
           </div>
           <div class="flex items-center gap-2">
             <NText>{{ $t('site.footer.suggestion') }}</NText>
-            <NuxtLinkLocale :to="contactNGAThread" target="_blank">
-              <NTooltip trigger="hover">
-                <template #trigger>
-                  <NIcon class="text-lg"><div class="i-nga" /></NIcon>
-                </template>
-                <span>NGA</span>
-              </NTooltip>
+            <NuxtLinkLocale :to="githubRepositry" target="_blank">
+              <CommonIconButton icon="i-mingcute:github-line" />
             </NuxtLinkLocale>
             <div class="cursor-pointer" @click="handleQQClick">
               <NTooltip trigger="hover">
@@ -34,6 +26,9 @@
                 <span>{{ $t('site.footer.qq', [contactQQ]) }}</span>
               </NTooltip>
             </div>
+            <NuxtLinkLocale :to="contactNGAThread" target="_blank">
+              <div class="i-nga" />
+            </NuxtLinkLocale>
           </div>
           <NText>
             <span>{{ $t('site.footer.thanks') }}</span>
@@ -73,6 +68,7 @@ async function handleQQClick() {
 
 <style scoped>
 .i-nga {
+  display: inline-block;
   width: 1.2em;
   height: 1.2em;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9btSIVETOIdMhQneyiIuJUqlgEC6Wt0KqDyaUfQpOGJMXFUXAtOPixWHVwcdbVwVUQBD9AXF2cFF2kxP8lhRYxHhz34929x907wN+oMNXsigGqZhnpRFzM5VfE4Ct6EMYgBMxKzNSTmYUsPMfXPXx8vYvyLO9zf45+pWAywCcSx5huWMTrxNObls55n1hgZUkhPiceN+iCxI9cl11+41xy2M8zBSObniMWiMVSB8sdzMqGSjxFHFFUjfL9OZcVzluc1UqNte7JXxgqaMsZrtMMI4FFJJGCCBk1bKACC1FaNVJMpGk/7uEfcfwpcsnk2gAjxzyqUCE5fvA/+N2tWZyccJNCcaD7xbY/RoHgLtCs2/b3sW03T4DAM3Cltf3VBjDzSXq9rUWOgIFt4OK6rcl7wOUOMPykS4bkSAGa/mIReD+jb8oDQ7dA36rbW2sfpw9AlrpaugEODoGxEmWveby7t7O3f8+0+vsB/XZy3jc0RloAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfnBhwRLCqtdPciAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAatJREFUSMftlT9oVEEQh7/TIEJ6hSjKQUjQbqPN4jYBLUUbEwikMQhqICgKNoJiE4vjBBs50WsUPEKq1HdFYHCawGBxCoIgZ7DQRlCRQECbPViO+/vuGuGmmvnt7Pve7My+B2P7L835cDXxrzgfLgyy/0AfgOfAxejngRLwNcaloSHOh7vANeBIlO4Dh4CG82EdOBrzzjofjmeCmEoBeAQUovQTeAVMAXeAHefDDLBhKrvD9ONkB73ofJh1PlSdD2+aFbXLzfUAVIBFYA/4EnvRAJ6ZytuYUwZeAJeBP6byoG+I82Gr2fA2tg8UTeVekl8F1k2l1hfE+XAbKMbwO7AGTAJngOvJvg/ADVPZzjJd6aT8MpWKqbw0lZvAAvAjrp0Cas6HJ1kg9cTPOx+OJRO3CZwDLEoHgVvOh/mBIKZSTh5CPKZ0/b2pzAHlKH0DfneCTHSpchVYAg4Dfzu8zIrz4ampvOt2XLkM9+Yh8Bn42BzjXpYFklZVM5XzQ38gWwAnWqR558PpkUJMpQG8brmUuZFCImgZ+BTDsqnURw6JoGngEvB4/Esfuf0D78qHsw5IfaAAAAAASUVORK5CYII=");
