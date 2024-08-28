@@ -5,7 +5,7 @@ export default defineTournament({
   gameVersion: "4.8",
   stages: [
     {
-      name: "突围赛",
+      name: "突围赛 官方流",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -13,7 +13,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "官方流",
+          name: "",
           date: "2024-08-10",
           matches: [
             {
@@ -466,7 +466,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "突围赛 晋级赛",
+      name: "突围赛官方流 晋级赛",
       rules: {
         numDecks: 3,
         numGames: 5,
@@ -474,7 +474,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "官方流",
+          name: "",
           date: "2024-08-10",
           matches: [
             {
@@ -673,7 +673,7 @@ export default defineTournament({
       ],
     },
     {
-      name: "突围赛",
+      name: "突围赛 共鸣杯流",
       rules: {
         numDecks: 3,
         numGames: 3,
@@ -681,7 +681,7 @@ export default defineTournament({
       },
       parts: [
         {
-          name: "共鸣杯流",
+          name: "",
           date: "2024-08-10",
           matches: [
             {
