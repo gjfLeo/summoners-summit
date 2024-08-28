@@ -29,6 +29,15 @@
     "viewDeck": "查看牌组",
     "win": "胜"
   },
+  "home": {
+    "overview": {
+      "gameVersion": "游戏版本",
+      "numGames": "收录对局数",
+      "numGamesWithDeck": "含牌组对局数",
+      "starterWinRate": "先手胜率"
+    },
+    "welcome": "欢迎来到召唤之巅！<br />近期本站代码进行了一次大幅度修改，如遇问题欢迎反馈。"
+  },
   "player": {
     "championOf": "{0}冠军",
     "mainNickname": "主要昵称",

@@ -101,3 +101,10 @@ export async function useApiGetPlayerMatches(playerId: PlayerId) {
     games: computed(() => data.value?.success ? data.value.games : {}),
   };
 }
+
+export async function useApiGetOverviewStats() {
+  const { data } = await useFetch("/api/v3/overview");
+  return {
+    overview: computed(() => data.value?.success ? data.value.overview : []),
+  };
+}

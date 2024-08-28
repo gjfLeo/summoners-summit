@@ -29,16 +29,25 @@
     "viewDeck": "View Deck Details",
     "win": "W"
   },
+  "home": {
+    "overview": {
+      "gameVersion": "Game Version",
+      "numGames": "Games Collected",
+      "numGamesWithDeck": "Games with Deck",
+      "starterWinRate": "\"Start First\" Win Rate"
+    },
+    "welcome": "Welcome to <i>Summoners' Summit</i> !<br />Recently, the code of this site has been significantly modified. Feedback is welcome if you encounter any problems."
+  },
   "player": {
+    "championOf": "Champion of {0}",
     "mainNickname": "Main nickname",
     "nickname": "Nickname",
     "otherNicknames": "Other nicknames",
+    "otherNicknames1": "Other nicknames: {0}",
     "rank": "Rank",
     "score": "Score",
     "uid": "UID",
-    "unknownPlayer": "Unknown player",
-    "otherNicknames1": "Other nicknames: {0}",
-    "championOf": "Champion of {0}"
+    "unknownPlayer": "Unknown player"
   },
   "players": {
     "gameWinRate": "Game win rate",
