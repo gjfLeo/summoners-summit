@@ -1,12 +1,6 @@
 <template>
   <template v-if="decks.length > 0 && deck">
-    <div un-grid="~ md:cols-15 sm:cols-10 cols-6 gap-2">
-      <CardImage
-        v-for="(card, index) in deckCards.actionCards"
-        :key="card + (deckCards.actionCards[index - 1] === card ? '-2' : '')"
-        :card="card"
-      />
-    </div>
+    <DeckActionLIst :cards="deckCards.actionCards" />
     <div un-flex="~ items-center wrap gap-x-4 gap-y-2" class="mt-2">
       <div un-flex="~ items-center gap-2">
         <CommonIconButton

@@ -3,9 +3,9 @@
     <!-- 角色牌 -->
     <div un-grid="~ gap-4 cols-[1fr_auto_1fr]">
       <div />
-      <div un-grid="~ gap-2 cols-[repeat(3,minmax(0,8rem))]">
+      <div un-grid="~ gap-2 cols-[repeat(3,minmax(0,5rem))]">
         <template v-for="(card, i) in deckCards.characterCards" :key="i">
-          <CardImage :card="card" class="w-100%" />
+          <CardAvatar :card="card" class="w-5rem!" />
         </template>
       </div>
       <div class="flex flex-col items-start self-end justify-self-start gap-2">
@@ -20,11 +20,7 @@
       </div>
     </div>
     <!-- 行动牌 -->
-    <div un-grid="~ gap-2 cols-6 md:cols-10" class="mt">
-      <template v-for="(card, i) in deckCards.actionCards" :key="i">
-        <CardImage :card="card" class="w-100%" />
-      </template>
-    </div>
+    <DeckActionList :cards="deckCards.actionCards" class="mt" />
 
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <GameList :games="games" />
