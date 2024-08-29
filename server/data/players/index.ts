@@ -150,6 +150,7 @@ const playerNicknameMapRaw: Record<string, string> = {
   "隼龙": "岩van♂deep君",
   "胡胡胡胡胡小兰": "｜蓝兰岚｜",
   "届不到的莉芭芭": "赤木开司",
+  "改造木卫三": "胡桃桃大魔王",
 
   
   
