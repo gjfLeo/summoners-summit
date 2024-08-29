@@ -5338,6 +5338,7 @@ export default defineTournament({
             {
               playerA: "改造木卫三",
               playerB: "张伯伦",
+              video: "https://www.bilibili.com/video/BV16T421k7Cp",
               banned: [
                 {
                   playerACharacters: ["刻晴", "莱依拉", "吞星之鲸"],
