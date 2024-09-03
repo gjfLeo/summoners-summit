@@ -45,7 +45,7 @@ const playerId = route.params.playerId;
 
 const { t, currentLocalized } = useLocales();
 
-const { player } = await useApiGetPlayerDetail({ id: playerId });
+const { player } = await useApiGetPlayerDetail(playerId);
 
 useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.player") });
 

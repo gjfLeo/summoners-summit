@@ -52,7 +52,7 @@ const submitLoading = ref(false);
 const inputting = ref(false);
 
 async function show(playerId: Player["id"]) {
-  const res = await $fetch("/api/v3/players/get", {
+  const res = await $fetch(`/api/v3/players/${playerId}/details`, {
     method: "GET",
     params: { id: playerId },
   });

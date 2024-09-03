@@ -19,6 +19,14 @@
     "copyDeckShareCode": "复制分享码",
     "deckDetail": "牌组详情",
     "gameList": "对局记录",
+    "similar": "相似牌组",
+    "similarTable": {
+      "current": "当前",
+      "deck": "牌组",
+      "numGames": "对局数",
+      "view": "查看详情",
+      "winRate": "胜率"
+    },
     "teamDetail": "查看阵容详情"
   },
   "gameInfo": {

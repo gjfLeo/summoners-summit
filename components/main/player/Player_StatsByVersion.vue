@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs";
+import { divide } from "mathjs/number";
 import type { ApiGetPlayerStatsByVersionItem } from "~/types";
 
 const props = defineProps<{

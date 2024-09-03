@@ -19,6 +19,14 @@
     "copyDeckShareCode": "Copy share code",
     "deckDetail": "Deck Details",
     "gameList": "Game List",
+    "similar": "Similar Decks",
+    "similarTable": {
+      "current": "Current",
+      "deck": "Deck",
+      "numGames": "Games",
+      "view": "View Details",
+      "winRate": "Winrate"
+    },
     "teamDetail": "View lineup details"
   },
   "gameInfo": {
@@ -44,8 +52,19 @@
     "nickname": "Nickname",
     "otherNicknames": "Other nicknames",
     "otherNicknames1": "Other nicknames: {0}",
+    "playerDetail": "Player Details",
     "rank": "Rank",
+    "recent": "Recent Matches",
     "score": "Score",
+    "stats": "Player Stats",
+    "statsByVersion": {
+      "axisNumGames": "Games",
+      "axisWinRate": "Winrate (%)",
+      "gameWinRate": "Game Winrate",
+      "matchWinRate": "Match Winrate",
+      "numGamesLose": "Game Loses",
+      "numGamesWin": "Game Wins"
+    },
     "uid": "UID",
     "unknownPlayer": "Unknown player"
   },

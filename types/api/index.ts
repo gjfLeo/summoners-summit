@@ -7,6 +7,7 @@ export * from "./cards/GetActionCardStats";
 export * from "./teams/GetAllTeamStats";
 export * from "./teams/GetAllTeamMatchups";
 export * from "./teams/GetTeamDecks";
+export * from "./teams/GetTeamStatsByVersion";
 
 export * from "./players/shared";
 export * from "./players/GetPlayerMatches";

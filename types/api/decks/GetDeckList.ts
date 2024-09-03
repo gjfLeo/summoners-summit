@@ -4,10 +4,16 @@ import type { DeckCode } from "~/types";
 
 export const ZGetDeckListParams = z.object({
   teamId: ZDeckTeamId.optional(),
-  offset: z.number().optional().default(0),
-  limit: z.number().optional().default(100),
+  offset: z.number().optional(),
+  limit: z.number().optional(),
 });
+export type GetDeckListParams = z.infer<typeof ZGetDeckListParams>;
 
+export interface GetDeckListResponseItem {
+  deckCode: DeckCode;
+  numGames: number;
+  numGamesWin: number;
+}
 export interface GetDeckListResponse {
-  decks: DeckCode[];
+  deckList: GetDeckListResponseItem[];
 }

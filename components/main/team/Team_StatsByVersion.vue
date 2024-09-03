@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
+import { divide } from "mathjs/number";
 import type { ECElementEvent } from "echarts/core";
-import { divide } from "mathjs";
 
 const route = useRoute("team-teamId-gameVersion___zh");
 const teamId = route.params.teamId;

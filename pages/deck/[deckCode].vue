@@ -25,9 +25,13 @@
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <GameList :games="games" />
 
+    <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
+    <Deck_SimilarDecks v-bind="{ deckCode, deckList }" />
+
     <SitePageAnchors>
       <NAnchorLink :title="t('main.deck.deckDetail')" href="#deck" />
       <NAnchorLink :title="t('main.deck.gameList')" href="#game-list" />
+      <NAnchorLink :title="t('main.deck.similar')" href="#similar" />
     </SitePageAnchors>
   </div>
 </template>
@@ -49,4 +53,6 @@ const teamId = getTeamId(deckCards.characterCards);
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
 const { games } = await useApiGetGameList({ deckCode });
+
+const { deckList } = await useApiGetDeckList({ teamId });
 </script>
