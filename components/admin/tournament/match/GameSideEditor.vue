@@ -38,9 +38,10 @@
 <script lang="ts" setup>
 import type { CardId, Game } from "~/types/data";
 import {
-  type AdminTournamentMatchActionCardsEditor as ActionCardsEditor,
+
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";
+import type { AdminTournamentMatchActionCardsEditor as ActionCardsEditor } from "#components";
 import type { MatchSaveParams } from "~/server/service";
 
 defineProps<{

@@ -36,14 +36,11 @@ const data = computed(() => {
 });
 
 const option = computed<ECOption>(() => {
-  // t('main.cards.characterBarChart.numGamesWin') t('main.cards.characterBarChart.numGamesLose') t('main.cards.characterBarChart.numBanned')
-  const localizedSeriesName = (name: string) => t(`main.cards.characterBarChart.${name}`);
-
   return {
     legend: {
       top: 0,
       left: "center",
-      formatter: name => localizedSeriesName(name),
+      formatter: name => t(`main.cards.characterBarChart.${name}`),
       data: ["numGamesWin", "numGamesLose", "numBanned"],
     },
     grid: {
@@ -189,11 +186,11 @@ const option = computed<ECOption>(() => {
             ${
               params.map((param) => {
                 const value = param.seriesName !== "numBanned"
-                ? `${param.value} (${toPercentageString(divide(Number(param.value), numGames))})`
-                : param.value;
+                  ? `${param.value} (${toPercentageString(divide(Number(param.value), numGames))})`
+                  : param.value;
                 return `
                   <div class="w-3 h-3 rounded-full" style="background-color: ${param.color}"></div>
-                  <div>${localizedSeriesName(param.seriesName!)}</div>
+                  <div>${t(`main.cards.characterBarChart.${param.seriesName}`)}</div>
                   <div class="ml-4 font-bold">${value}</div>
                 `;
               }).join("\n")

@@ -48,12 +48,12 @@
       "cards": "卡牌",
       "deck": "牌组详情",
       "decodeDeckCode": "牌组分享码解析",
+      "player": "选手详情",
       "players": "选手",
       "team": "{0} - 阵容详情",
       "teams": "阵容",
       "tournament": "赛事详情",
-      "tournaments": "赛事",
-      "player": "选手详情"
+      "tournaments": "赛事"
     }
   }
 }

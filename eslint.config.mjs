@@ -1,11 +1,11 @@
 import gjfleo from "@gjfleo/eslint-config";
+
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt().prepend(
   gjfleo(
     {
       rules: {
-        "no-cond-assign": ["error", "except-parens"],
       },
     },
     {
@@ -16,10 +16,7 @@ export default withNuxt().prepend(
       },
     },
     {
-      files: ["server/data/**/*.json"],
-      rules: {
-        "no-irregular-whitespace": "off",
-      },
+      ignores: ["server/data/**/*.json"],
     },
   ),
 );

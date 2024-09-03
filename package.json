@@ -15,10 +15,9 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.27.3",
     "@bg-dev/nuxt-naiveui": "2.0.0-rc.1",
     "@genshin-db/tcg": "^5.1.8",
-    "@gjfleo/eslint-config": "^1.0.15",
+    "@gjfleo/eslint-config": "^1.0.18",
     "@iconify-json/carbon": "^1.1.37",
     "@iconify-json/mingcute": "^1.1.20",
     "@iconify-json/twemoji": "^1.1.16",
@@ -36,8 +35,6 @@
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
     "echarts": "^5.5.1",
-    "eslint": "9.9.1",
-    "eslint-plugin-format": "^0.1.2",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
     "mathjs": "^13.1.1",

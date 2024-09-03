@@ -1,6 +1,6 @@
 import { getGameList } from "~/server/service";
 import type { DeckCode } from "~/types";
-import { ZGetDeckListParams } from "~/types/api/decks/GetDeckList";
+import { ZGetDeckListParams } from "~/types";
 
 export default defineEventHandler(async (event) => {
   const { teamId, offset, limit } = await getValidatedQuery(event, ZGetDeckListParams.parse);

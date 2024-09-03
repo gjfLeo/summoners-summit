@@ -8,7 +8,8 @@
 </template>
 
 <script lang="ts" setup>
-import { type DataTableColumn, type DataTableColumns, NButton, NFormItem, NPopover, NSlider } from "naive-ui";
+import { NButton, NFormItem, NPopover, NSlider } from "naive-ui";
+import type { DataTableColumn, DataTableColumns } from "naive-ui";
 import { divide } from "mathjs/number";
 import { NuxtLinkLocale, TeamAvatars } from "#components";
 

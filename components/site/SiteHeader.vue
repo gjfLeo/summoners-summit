@@ -40,7 +40,8 @@
 </template>
 
 <script lang="tsx" setup>
-import { type SiteRoute, useSiteMenu } from "~/composables/use-site-menu";
+import { useSiteMenu } from "~/composables/use-site-menu";
+import type { SiteRoute } from "~/composables/use-site-menu";
 
 const props = defineProps<{
   routes: SiteRoute[];

@@ -1,7 +1,7 @@
 import { getGameDetail, getGameList, getMatchDetail, getMatchList, getPlayer, getPlayerRank } from "~/server/service";
 import type { PlayerId, PlayerStats } from "~/types";
 import { ZGetPlayerStatsRecordParams } from "~/types";
-import { getMirroredGame, getMirroredGameDetail, getMirroredMatch, getMirroredMatchDetail } from "~/utils/match";
+import { getMirroredGameDetail, getMirroredMatchDetail } from "~/utils/match";
 
 export default defineEventHandler(async (event) => {
   const { gameVersion } = await getValidatedQuery(event, ZGetPlayerStatsRecordParams.parse);

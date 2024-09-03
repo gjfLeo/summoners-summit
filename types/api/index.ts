@@ -12,3 +12,5 @@ export * from "./players/shared";
 export * from "./players/GetPlayerMatches";
 export * from "./players/GetPlayerStatsRecord";
 export * from "./players/GetPlayerStatsByVersion";
+
+export * from "./decks/GetDeckList";

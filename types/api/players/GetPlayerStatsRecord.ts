@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { type PlayerId, ZGameVersionId } from "~/types/data";
+import { ZGameVersionId } from "~/types/data";
+import type { PlayerId } from "~/types/data";
 
 export const ZGetPlayerStatsRecordParams = z.object({
   gameVersion: ZGameVersionId,

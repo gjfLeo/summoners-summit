@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { type CardId, ZDeckTeamId, ZGameVersionId } from "~/types/data";
+import { ZDeckTeamId, ZGameVersionId } from "~/types/data";
+import type { CardId } from "~/types/data";
 
 export const ZGetActionCardStatsParams = z.object({
   gameVersion: ZGameVersionId,
