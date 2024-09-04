@@ -133,9 +133,24 @@
       "numBanned": "被禁用次数",
       "numGamesLose": "落败对局数",
       "numGamesWin": "胜利对局数",
-      "winRate": "胜率"
+      "winRate": "胜率",
+      "title": "版本数据"
     },
-    "viewDeckDetails": "查看牌组详情"
+    "viewDeckDetails": "查看牌组详情",
+    "gameList": {
+      "opponentCharacters": "对手角色",
+      "title": "对局列表"
+    },
+    "matchups": {
+      "followerWinRate": "后手胜率",
+      "starterWinRate": "先手胜率",
+      "winRate": "胜率",
+      "numGames": "对局数",
+      "opponent": "对手",
+      "view": "查看对局",
+      "title": "对阵数据"
+    },
+    "details": "阵容详情"
   },
   "teams": {
     "characterSelectorDefaultPlaceholder": "角色",

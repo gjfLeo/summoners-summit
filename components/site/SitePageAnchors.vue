@@ -11,6 +11,7 @@
       "
       >
         <NAnchor
+          ref="refAnchor"
           offset-target="#content-layout"
           ignore-gap
         >
@@ -20,3 +21,16 @@
     </Teleport>
   </ClientOnly>
 </template>
+
+<script lang="ts" setup>
+import { NAnchor } from "#components";
+
+const refAnchor = ref<InstanceType<typeof NAnchor>>();
+function scrollTo(href: string) {
+  return refAnchor.value?.scrollTo(href);
+}
+
+defineExpose({
+  scrollTo,
+});
+</script>

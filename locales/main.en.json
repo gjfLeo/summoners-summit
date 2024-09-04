@@ -126,6 +126,16 @@
     },
     "cards": "Cards",
     "decks": "Decks",
+    "gameList": {
+      "opponentCharacters": "Opponent's Character"
+    },
+    "matchups": {
+      "followerWinRate": "\"Start Second\" Win Rate",
+      "numGames": "Games",
+      "opponent": "Opponent",
+      "starterWinRate": "\"Start First\" Win Rate",
+      "winRate": "Winrate"
+    },
     "noData": "This lineup has no data in the currently selected game version.",
     "statsByVersion": {
       "axisNumGames": "Games",

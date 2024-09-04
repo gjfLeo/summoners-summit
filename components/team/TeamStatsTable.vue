@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 import type { CardId } from "~/types";
-import { NTooltip, NuxtLinkLocale, TeamAvatars } from "#components";
+import { NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
 
 const { gameVersion } = useGameVersion();
 const { teamStatsRecords } = await useApiGetTeamStatsRecords({ gameVersion: gameVersion.value });
@@ -54,20 +54,6 @@ const teamStatsList = computed(() => {
       };
     });
 });
-
-function renderWinRate(win: number, total: number, winRate?: number) {
-  return h(
-    NTooltip,
-    {
-      trigger: "hover",
-      placement: "right",
-    },
-    {
-      trigger: () => h("span", toPercentageString(winRate ?? divide(win, total))),
-      default: () => h("span", `${win} / ${total}`),
-    },
-  );
-}
 
 const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
   {
@@ -116,7 +102,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => renderWinRate(row.gamesWin, row.games, row.winRate),
+    render: row => RenderWinRate(row.gamesWin, row.games, row.winRate),
   },
   {
     title: t("main.stats.gamesWin"),
@@ -153,7 +139,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => renderWinRate(row.gamesWinExcludeMirror, row.gamesExcludeMirror, row.winRateExcludeMirror),
+    render: row => RenderWinRate(row.gamesWinExcludeMirror, row.gamesExcludeMirror, row.winRateExcludeMirror),
   },
   {
     title: t("main.stats.starterWinRate"),
@@ -161,7 +147,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => renderWinRate(row.gamesStarterWin, row.gamesStarter, row.starterWinRate),
+    render: row => RenderWinRate(row.gamesStarterWin, row.gamesStarter, row.starterWinRate),
   },
   {
     title: t("main.stats.followerWinRate"),
@@ -169,7 +155,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => renderWinRate(row.gamesFollowerWin, row.gamesFollower, row.followerWinRate),
+    render: row => RenderWinRate(row.gamesFollowerWin, row.gamesFollower, row.followerWinRate),
   },
 ];
 
