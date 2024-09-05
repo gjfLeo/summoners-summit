@@ -1,0 +1,31 @@
+{
+  "id": "94fd5b1d6c1a61db03",
+  "tournamentId": "94fd5b1d6c1a61db",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "224db7dd49d62bf4",
+    "nickname": "Nyahida"
+  },
+  "playerB": {
+    "playerId": "dab6be6ec4ce15cc",
+    "nickname": "RunaTobio"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1109-1403-2204"
+    }
+  ],
+  "gameIds": [
+    "94fd5b1d6c1a61db0301",
+    "94fd5b1d6c1a61db0302",
+    "94fd5b1d6c1a61db0303",
+    "94fd5b1d6c1a61db0304",
+    "94fd5b1d6c1a61db0305"
+  ],
+  "video": "https://www.youtube.com/live/7pVTbIJ3oYc?t=13221"
+}

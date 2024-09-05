@@ -5,12 +5,13 @@
   "partIndex": 4,
   "matchIndex": 0,
   "gameVersion": "3.7",
+  "isFinal": true,
   "playerA": {
-    "playerId": "f5bf504e018c098d",
+    "playerId": "6403804e66b1a071",
     "nickname": "提瓦特煎蛋队"
   },
   "playerB": {
-    "playerId": "c5e3dfb8e1ee5f56",
+    "playerId": "0b48c1310dda6212",
     "nickname": "黄油蟹蟹队"
   },
   "gameIds": [

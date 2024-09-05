@@ -1,0 +1,33 @@
+{
+  "id": "94fd5b1d6c1a61db10",
+  "tournamentId": "94fd5b1d6c1a61db",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "a0dd39f6c9ee83bd",
+    "nickname": "Ting"
+  },
+  "playerB": {
+    "playerId": "69d519ce24299abf",
+    "nickname": "KevinZ"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1309-1313-1404",
+      "playerBTeamId": "1311-1404-2304"
+    }
+  ],
+  "gameIds": [
+    "94fd5b1d6c1a61db1001",
+    "94fd5b1d6c1a61db1002",
+    "94fd5b1d6c1a61db1003",
+    "94fd5b1d6c1a61db1004",
+    "94fd5b1d6c1a61db1005",
+    "94fd5b1d6c1a61db1006",
+    "94fd5b1d6c1a61db1007"
+  ],
+  "video": "https://www.youtube.com/live/MoH_UWQWIVM?t=9934"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "fb3439ba20a9143433",
+  "tournamentId": "fb3439ba20a91434",
+  "stageIndex": 10,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "ff06dcb835fa2d33",
+    "nickname": "改造木卫三"
+  },
+  "playerB": {
+    "playerId": "828c6fa4cda2c687",
+    "nickname": "张伯伦"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1403-2204",
+      "playerBTeamId": "1109-1403-2204"
+    }
+  ],
+  "gameIds": [
+    "fb3439ba20a914343301",
+    "fb3439ba20a914343302",
+    "fb3439ba20a914343303",
+    "fb3439ba20a914343304",
+    "fb3439ba20a914343305"
+  ],
+  "video": "https://www.bilibili.com/video/BV16T421k7Cp"
+}

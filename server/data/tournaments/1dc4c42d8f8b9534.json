@@ -1,0 +1,111 @@
+{
+  "id": "1dc4c42d8f8b9534",
+  "name": {
+    "zh": "「小王子杯：太平洋赛区」淘汰赛 (The Prince Cup: Pacific - Knockout Stage)"
+  },
+  "gameVersion": "4.8",
+  "region": "CN",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "胜者组第1轮 (UB R1)"
+          },
+          "date": "2024-08-02",
+          "matchIds": [
+            "1dc4c42d8f8b953401",
+            "1dc4c42d8f8b953402"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组第1轮 (LB R1)"
+          },
+          "date": "2024-08-02",
+          "matchIds": [
+            "1dc4c42d8f8b953403",
+            "1dc4c42d8f8b953404"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组第2轮 (LB R2)"
+          },
+          "date": "2024-08-03",
+          "matchIds": [
+            "1dc4c42d8f8b953405",
+            "1dc4c42d8f8b953406"
+          ]
+        },
+        {
+          "name": {
+            "zh": "胜者组决赛 (UB F)"
+          },
+          "date": "2024-08-03",
+          "matchIds": [
+            "1dc4c42d8f8b953407"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组半决赛 (LB SF)"
+          },
+          "date": "2024-08-03",
+          "matchIds": [
+            "1dc4c42d8f8b953408"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组决赛 (LB F)"
+          },
+          "date": "2024-08-04",
+          "matchIds": [
+            "1dc4c42d8f8b953409"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "总决赛 (GF)"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-04",
+          "matchIds": [
+            "1dc4c42d8f8b953410"
+          ]
+        }
+      ]
+    }
+  ]
+}

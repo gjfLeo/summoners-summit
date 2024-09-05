@@ -1,0 +1,29 @@
+{
+  "id": "94fd5b1d6c1a61db05",
+  "tournamentId": "94fd5b1d6c1a61db",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "dab6be6ec4ce15cc",
+    "nickname": "RunaTobio"
+  },
+  "playerB": {
+    "playerId": "d60310ed0cfedfd8",
+    "nickname": "gboo"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1403-2204",
+      "playerBTeamId": "1403-2103-2204"
+    }
+  ],
+  "gameIds": [
+    "94fd5b1d6c1a61db0501",
+    "94fd5b1d6c1a61db0502",
+    "94fd5b1d6c1a61db0503"
+  ],
+  "video": "https://www.youtube.com/live/g10pFkAGSxE?t=1410"
+}

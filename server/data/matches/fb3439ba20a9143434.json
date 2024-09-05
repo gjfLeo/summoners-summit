@@ -1,0 +1,34 @@
+{
+  "id": "fb3439ba20a9143434",
+  "tournamentId": "fb3439ba20a91434",
+  "stageIndex": 11,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "0d0fa57e06e04206",
+    "nickname": "雪国Ink"
+  },
+  "playerB": {
+    "playerId": "828c6fa4cda2c687",
+    "nickname": "张伯伦"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1403-2103-2204"
+    }
+  ],
+  "gameIds": [
+    "fb3439ba20a914343401",
+    "fb3439ba20a914343402",
+    "fb3439ba20a914343403",
+    "fb3439ba20a914343404",
+    "fb3439ba20a914343405",
+    "fb3439ba20a914343406",
+    "fb3439ba20a914343407"
+  ],
+  "video": "https://www.bilibili.com/video/BV16T421k7Cp?p=6"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "fb3439ba20a9143406",
+  "tournamentId": "fb3439ba20a91434",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "6e2707a45bb0d3f3",
+    "nickname": "卡密sama"
+  },
+  "playerB": {
+    "playerId": "e3cc88fef0c0e335",
+    "nickname": "阿源今晚吃派蒙"
+  },
+  "gameIds": [
+    "fb3439ba20a914340601",
+    "fb3439ba20a914340602"
+  ],
+  "video": "https://www.bilibili.com/video/BV13E421w73z"
+}

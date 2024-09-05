@@ -1,0 +1,30 @@
+{
+  "id": "94fd5b1d6c1a61db09",
+  "tournamentId": "94fd5b1d6c1a61db",
+  "stageIndex": 0,
+  "partIndex": 5,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "69d519ce24299abf",
+    "nickname": "KevinZ"
+  },
+  "playerB": {
+    "playerId": "5f6df97eebeb58e2",
+    "nickname": "RobotWizard"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1203-1505-2102",
+      "playerBTeamId": "1403-2103-2204"
+    }
+  ],
+  "gameIds": [
+    "94fd5b1d6c1a61db0901",
+    "94fd5b1d6c1a61db0902",
+    "94fd5b1d6c1a61db0903",
+    "94fd5b1d6c1a61db0904"
+  ],
+  "video": "https://www.youtube.com/live/MoH_UWQWIVM?t=1376"
+}

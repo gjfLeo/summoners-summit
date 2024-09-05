@@ -1,0 +1,22 @@
+{
+  "id": "51974c09acef986712",
+  "tournamentId": "51974c09acef9867",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 1,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "43adea1735c86fa9",
+    "nickname": "九方羽幻"
+  },
+  "playerB": {
+    "playerId": "74fd909ed89221fa",
+    "nickname": "Seniorious"
+  },
+  "gameIds": [
+    "51974c09acef98671201",
+    "51974c09acef98671202",
+    "51974c09acef98671203"
+  ],
+  "video": "https://www.bilibili.com/video/BV18LigeFE4n"
+}

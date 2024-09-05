@@ -1,0 +1,30 @@
+{
+  "id": "94fd5b1d6c1a61db01",
+  "tournamentId": "94fd5b1d6c1a61db",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "5f6df97eebeb58e2",
+    "nickname": "RobotWizard"
+  },
+  "playerB": {
+    "playerId": "d60310ed0cfedfd8",
+    "nickname": "gboo"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1403-2103-2204"
+    }
+  ],
+  "gameIds": [
+    "94fd5b1d6c1a61db0101",
+    "94fd5b1d6c1a61db0102",
+    "94fd5b1d6c1a61db0103",
+    "94fd5b1d6c1a61db0104"
+  ],
+  "video": "https://www.youtube.com/live/7pVTbIJ3oYc?t=1689"
+}

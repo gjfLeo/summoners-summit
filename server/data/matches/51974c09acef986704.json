@@ -1,0 +1,22 @@
+{
+  "id": "51974c09acef986704",
+  "tournamentId": "51974c09acef9867",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "a795f7ef881da848",
+    "nickname": "屹立大地之上"
+  },
+  "playerB": {
+    "playerId": "1d300de2294f9388",
+    "nickname": "隼龙"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "51974c09acef98670401",
+    "51974c09acef98670402"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ZQv9ehEV9"
+}

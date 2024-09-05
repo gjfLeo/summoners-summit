@@ -1,0 +1,22 @@
+{
+  "id": "51974c09acef986707",
+  "tournamentId": "51974c09acef9867",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "a795f7ef881da848",
+    "nickname": "屹立大地之上"
+  },
+  "playerB": {
+    "playerId": "9e2026e8a8c3a9fb",
+    "nickname": "木瓜星灵二号机"
+  },
+  "gameIds": [
+    "51974c09acef98670701",
+    "51974c09acef98670702",
+    "51974c09acef98670703"
+  ],
+  "video": "https://www.bilibili.com/video/BV1SwiVeiEEg"
+}

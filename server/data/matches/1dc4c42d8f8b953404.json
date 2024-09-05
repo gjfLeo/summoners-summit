@@ -1,0 +1,31 @@
+{
+  "id": "1dc4c42d8f8b953404",
+  "tournamentId": "1dc4c42d8f8b9534",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "e1e56d73f02b66b7",
+    "nickname": "Chikuwa"
+  },
+  "playerB": {
+    "playerId": "df71dc0b703ba126",
+    "nickname": "CJRzzZ"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1109-1403-2204"
+    }
+  ],
+  "gameIds": [
+    "1dc4c42d8f8b95340401",
+    "1dc4c42d8f8b95340402",
+    "1dc4c42d8f8b95340403",
+    "1dc4c42d8f8b95340404",
+    "1dc4c42d8f8b95340405"
+  ],
+  "video": "https://www.youtube.com/watch?v=GFITq8Qk9gs&t=9159s"
+}

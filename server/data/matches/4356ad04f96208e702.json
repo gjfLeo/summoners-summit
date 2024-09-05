@@ -5,6 +5,7 @@
   "partIndex": 1,
   "matchIndex": 0,
   "gameVersion": "4.0",
+  "isFinal": true,
   "playerA": {
     "playerId": "9a0149ab002a3b3a",
     "nickname": "icedtea"

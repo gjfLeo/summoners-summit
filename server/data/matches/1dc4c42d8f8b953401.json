@@ -1,0 +1,30 @@
+{
+  "id": "1dc4c42d8f8b953401",
+  "tournamentId": "1dc4c42d8f8b9534",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "9cd4c1c194c57862",
+    "nickname": "zCrimlet"
+  },
+  "playerB": {
+    "playerId": "fe627ab1e99e08b2",
+    "nickname": "Mango"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1403-2103-2204"
+    }
+  ],
+  "gameIds": [
+    "1dc4c42d8f8b95340101",
+    "1dc4c42d8f8b95340102",
+    "1dc4c42d8f8b95340103",
+    "1dc4c42d8f8b95340104"
+  ],
+  "video": "https://www.bilibili.com/video/BV1rw4m1r7ff"
+}

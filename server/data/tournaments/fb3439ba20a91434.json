@@ -1,0 +1,326 @@
+{
+  "id": "fb3439ba20a91434",
+  "name": {
+    "zh": "枫达杯"
+  },
+  "gameVersion": "4.8",
+  "region": "CN",
+  "type": "未分类",
+  "stages": [
+    {
+      "name": {
+        "zh": "突围赛 官方流"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143401",
+            "fb3439ba20a9143402",
+            "fb3439ba20a9143403",
+            "fb3439ba20a9143404"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛官方流 晋级赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143405"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛 共鸣杯流"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143406",
+            "fb3439ba20a9143407",
+            "fb3439ba20a9143408",
+            "fb3439ba20a9143409"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛共鸣杯流 晋级赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143410"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛 寒天之钉杯流"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143411",
+            "fb3439ba20a9143412",
+            "fb3439ba20a9143413",
+            "fb3439ba20a9143414"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛寒天之钉杯流 晋级赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143415"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛 火星杯流"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143416",
+            "fb3439ba20a9143417",
+            "fb3439ba20a9143418",
+            "fb3439ba20a9143419"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛火星杯流 晋级赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-08-10",
+          "matchIds": [
+            "fb3439ba20a9143420"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "淘汰赛（晋级赛败者组）"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-08-15",
+          "matchIds": [
+            "fb3439ba20a9143421",
+            "fb3439ba20a9143422",
+            "fb3439ba20a9143423",
+            "fb3439ba20a9143424"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-08-16",
+          "matchIds": [
+            "fb3439ba20a9143425",
+            "fb3439ba20a9143426",
+            "fb3439ba20a9143427",
+            "fb3439ba20a9143428"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY3"
+          },
+          "date": "2024-08-17",
+          "matchIds": [
+            "fb3439ba20a9143429",
+            "fb3439ba20a9143430",
+            "fb3439ba20a9143431",
+            "fb3439ba20a9143432"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2024-08-18",
+          "matchIds": [
+            "fb3439ba20a9143433"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY4"
+          },
+          "date": "2024-08-18",
+          "matchIds": [
+            "fb3439ba20a9143434"
+          ]
+        }
+      ]
+    }
+  ]
+}

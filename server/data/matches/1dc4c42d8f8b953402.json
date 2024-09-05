@@ -1,0 +1,31 @@
+{
+  "id": "1dc4c42d8f8b953402",
+  "tournamentId": "1dc4c42d8f8b9534",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "dc00e706a92d5317",
+    "nickname": "KDF EnKoe"
+  },
+  "playerB": {
+    "playerId": "a5ace55fade539e2",
+    "nickname": "Dio"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1109-1403-2204"
+    }
+  ],
+  "gameIds": [
+    "1dc4c42d8f8b95340201",
+    "1dc4c42d8f8b95340202",
+    "1dc4c42d8f8b95340203",
+    "1dc4c42d8f8b95340204",
+    "1dc4c42d8f8b95340205"
+  ],
+  "video": "https://www.bilibili.com/video/BV1rw4m1r7ff"
+}

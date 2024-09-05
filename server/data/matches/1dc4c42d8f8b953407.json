@@ -1,0 +1,31 @@
+{
+  "id": "1dc4c42d8f8b953407",
+  "tournamentId": "1dc4c42d8f8b9534",
+  "stageIndex": 0,
+  "partIndex": 3,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "9cd4c1c194c57862",
+    "nickname": "zCrimlet"
+  },
+  "playerB": {
+    "playerId": "a5ace55fade539e2",
+    "nickname": "Dio"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1403-2103-2204",
+      "playerBTeamId": "1109-1403-2204"
+    }
+  ],
+  "gameIds": [
+    "1dc4c42d8f8b95340701",
+    "1dc4c42d8f8b95340702",
+    "1dc4c42d8f8b95340703",
+    "1dc4c42d8f8b95340704",
+    "1dc4c42d8f8b95340705"
+  ],
+  "video": "https://www.youtube.com/watch?v=_0-jypYMArw"
+}

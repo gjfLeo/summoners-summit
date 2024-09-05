@@ -5,12 +5,13 @@
   "partIndex": 1,
   "matchIndex": 0,
   "gameVersion": "4.3",
+  "isFinal": true,
   "playerA": {
-    "playerId": "b6fef7879fd13218",
+    "playerId": "224db7dd49d62bf4",
     "nickname": "Nyahida"
   },
   "playerB": {
-    "playerId": "838211e1f501fe28",
+    "playerId": "352f4f655f625b6b",
     "nickname": "Syou"
   },
   "gameIds": [

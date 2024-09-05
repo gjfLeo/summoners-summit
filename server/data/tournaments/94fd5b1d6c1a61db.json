@@ -1,0 +1,113 @@
+{
+  "id": "94fd5b1d6c1a61db",
+  "name": {
+    "zh": "「小王子杯：大西洋赛区」淘汰赛 (The Prince Cup: ATLANTIC - Knockout Stage)"
+  },
+  "gameVersion": "4.8",
+  "region": "CN",
+  "type": "未分类（外服）",
+  "stages": [
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 12,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "胜者组第1轮 (UB R1)"
+          },
+          "date": "2024-07-27",
+          "matchIds": [
+            "94fd5b1d6c1a61db01",
+            "94fd5b1d6c1a61db02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组第1轮 (LB R1)"
+          },
+          "date": "2024-07-27",
+          "matchIds": [
+            "94fd5b1d6c1a61db03",
+            "94fd5b1d6c1a61db04"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组第2轮 (LB R2)"
+          },
+          "date": "2024-07-28",
+          "matchIds": [
+            "94fd5b1d6c1a61db05",
+            "94fd5b1d6c1a61db06"
+          ]
+        },
+        {
+          "name": {
+            "zh": "胜者组决赛 (UB F)"
+          },
+          "date": "2024-07-28",
+          "matchIds": [
+            "94fd5b1d6c1a61db07"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组半决赛 (LB SF)"
+          },
+          "date": "2024-07-28",
+          "matchIds": [
+            "94fd5b1d6c1a61db08"
+          ]
+        },
+        {
+          "name": {
+            "zh": "败者组决赛 (LB F)"
+          },
+          "date": "2024-07-29",
+          "matchIds": [
+            "94fd5b1d6c1a61db09"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "总决赛 (GF)"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "numCharactersRequired": 15,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": ""
+          },
+          "date": "2024-07-29",
+          "matchIds": [
+            "94fd5b1d6c1a61db10"
+          ]
+        }
+      ]
+    }
+  ]
+}

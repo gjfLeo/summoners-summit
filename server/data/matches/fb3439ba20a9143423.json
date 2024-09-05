@@ -1,0 +1,24 @@
+{
+  "id": "fb3439ba20a9143423",
+  "tournamentId": "fb3439ba20a91434",
+  "stageIndex": 8,
+  "partIndex": 0,
+  "matchIndex": 2,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "06a9c720a7156e07",
+    "nickname": "点点点"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "gameIds": [
+    "fb3439ba20a914342301",
+    "fb3439ba20a914342302",
+    "fb3439ba20a914342303",
+    "fb3439ba20a914342304",
+    "fb3439ba20a914342305"
+  ],
+  "video": "https://www.bilibili.com/video/BV14E4m1d7Tp?p=9"
+}
