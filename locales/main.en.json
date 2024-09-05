@@ -126,14 +126,18 @@
     },
     "cards": "Cards",
     "decks": "Decks",
+    "details": "Lineup Details",
     "gameList": {
-      "opponentCharacters": "Opponent's Character"
+      "opponentCharacters": "Opponent's Character",
+      "title": "Game List"
     },
     "matchups": {
       "followerWinRate": "\"Start Second\" Win Rate",
       "numGames": "Games",
       "opponent": "Opponent",
       "starterWinRate": "\"Start First\" Win Rate",
+      "title": "Matchups",
+      "view": "View Games",
       "winRate": "Winrate"
     },
     "noData": "This lineup has no data in the currently selected game version.",
@@ -143,6 +147,7 @@
       "numBanned": "Banned",
       "numGamesLose": "Game Losses",
       "numGamesWin": "Game Wins",
+      "title": "Stats by Game Version",
       "winRate": "Win Rate"
     },
     "viewDeckDetails": "View deck details"
