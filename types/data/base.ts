@@ -12,6 +12,9 @@ export type TournamentId = z.infer<typeof ZTournamentId>;
 export const ZLocales = z.enum(["zh", "en"]);
 export type Locales = z.infer<typeof ZLocales>;
 
+export const ZRegions = z.enum(["CN", "Atlantic", "Pacific"]);
+export type Region = z.infer<typeof ZRegions>;
+
 export const ZGameVersionId = z.string().regex(/^\d\.\d$/);
 export type GameVersionId = z.infer<typeof ZGameVersionId>;
 

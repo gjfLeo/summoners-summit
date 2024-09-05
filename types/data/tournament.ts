@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ZGameVersionId, ZLocales, ZMatchId } from "./base";
+import { ZGameVersionId, ZLocales, ZMatchId, ZRegions } from "./base";
 
 export const ZTournamentType = z.object({
   value: z.string(),
@@ -53,6 +53,7 @@ export const ZTournament = z.object({
   id: z.string(),
   name: z.record(ZLocales, z.string().trim()),
   gameVersion: ZGameVersionId,
+  region: ZRegions.optional(),
   type: z.string(),
   stages: ZTournamentStage.array(),
 }).strip();

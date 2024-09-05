@@ -189,10 +189,11 @@ export default defineEventHandler(async () => {
     saveTournament(ZTournamentSaveParams.parse({
       id: oldTournament.id,
       name: { zh: oldTournament.name },
-      type,
       gameVersion: oldTournament.gameVersion,
+      region: "CN",
+      type,
       stages,
-    }));
+    } satisfies Tournament));
 
     const tournamentPlayerMap: Record<string, PlayerId> = {};
 
@@ -258,7 +259,7 @@ export default defineEventHandler(async () => {
               stageIndex,
               partIndex,
               matchIndex,
-              isFinal: oldStage.name === "决赛" || oldStage.name === "决赛" ? true : undefined,
+              isFinal: oldStage.name === "决赛" || oldPart.name === "决赛" ? true : undefined,
               playerA: {
                 playerId: tournamentPlayerMap[oldMatch.playerANickname],
                 nickname: oldMatch.playerANickname,

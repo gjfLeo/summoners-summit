@@ -24,6 +24,7 @@ export const ZMatch = z.object({
   matchIndex: z.number(),
   gameVersion: ZGameVersionId,
   isFinal: z.boolean().optional(),
+  isPrePatch: z.boolean().optional(),
   playerA: z.object({
     playerId: ZPlayerId,
     nickname: ZPlayerNickname,
