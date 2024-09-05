@@ -2,6 +2,8 @@
   <NCard :title="currentLocalized(tournament.name)" hoverable class="h-full">
     <template #default>
       <dl class="tournament-dl">
+        <dt>{{ t("terms.region") }}</dt>
+        <dd>{{ currentLocalized(regionByKey[tournament.region].name) }}</dd>
         <dt>{{ t('main.tournament.type') }}</dt>
         <dd>{{ tournament.type }}</dd>
         <dt>{{ t('main.tournament.dateRange') }}</dt>
@@ -25,6 +27,7 @@ defineProps<{
 }>();
 
 const { currentLocalized, t } = useLocales();
+const { regionByKey } = useSharedData();
 </script>
 
 <style scoped>

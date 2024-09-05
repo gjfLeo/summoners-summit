@@ -14,6 +14,7 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
   if (dataPath in dataCache) {
+    // if (dataPath === "tournaments/fb3439ba20a91434") console.log("cache hit", dataCache[dataPath].name);
     return dataCache[dataPath] as R;
   }
 
@@ -23,6 +24,7 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
     data = fse.readJsonSync(filePath) as R;
   }
   dataCache[dataPath] = data;
+  // if (dataPath === "tournaments/fb3439ba20a91434") console.log("cache miss", dataCache[dataPath].name);
   return data;
 }
 

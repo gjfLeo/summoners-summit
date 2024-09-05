@@ -2,7 +2,7 @@
   <div class="mt">
     <NH3 :id="`S${stage._key}`" un-flex="~ gap-2">
       <span>{{ defaultName }}</span>
-      <span v-if="stage.name.zh">{{ stage.name.zh }}</span>
+      <span v-if="currentLocalized(stage.name)">{{ currentLocalized(stage.name) }}</span>
 
       <div class="ml-auto">
         <template v-if="editing">
@@ -75,7 +75,7 @@ const stage = defineModel<TournamentStage>({ required: true });
 const formRef = ref<InstanceType<typeof NForm>>();
 const partFormRefs = ref<InstanceType<typeof AdminTournamentPartForm>[]>([]);
 
-const { t } = useLocales();
+const { t, currentLocalized } = useLocales();
 
 const defaultName = computed(() => t("main.tournament.stageNameDefault", [props.stageIndex + 1]));
 
@@ -91,7 +91,7 @@ const rules = {
   name: {
     trigger: "blur",
     validator: async () => {
-      if (!stage.value.name.zh) {
+      if (!currentLocalized(stage.value.name)) {
         throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.stageName")]));
       }
     },

@@ -25,7 +25,7 @@ export function saveTournament(params: TournamentSaveParams) {
   });
   const tournament: Tournament = {
     ...params,
-    id: params.id || hash(params.gameVersion + params.name.zh),
+    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
     stages: params.stages ?? [],
   };
 

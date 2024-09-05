@@ -16,9 +16,9 @@
             class="inline-block aspect-ratio-200/343 h-30 object-cover"
           />
           <div class="flex flex-col gap-2">
-            <NText :depth="1" class="text-120%">{{ currentLocalized(achievement.name) }}</NText>
-            <NText :depth="2">{{ currentLocalized(achievement.description) }}</NText>
-            <NText :depth="3">{{ currentLocalized(achievement.flavorText) }}</NText>
+            <NText :depth="1">{{ currentLocalized(achievement.name) }}</NText>
+            <NText :depth="2" class="text-sm">{{ currentLocalized(achievement.description) }}</NText>
+            <NText :depth="3" class="text-sm">{{ currentLocalized(achievement.flavorText) }}</NText>
           </div>
         </div>
       </NCard>

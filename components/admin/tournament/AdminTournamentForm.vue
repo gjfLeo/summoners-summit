@@ -29,9 +29,9 @@
       </NGrid>
     </NForm>
     <NDescriptions v-else label-placement="left" :column="3" separator="&emsp;">
-      <NDescriptionsItem :label="t('main.tournament.name')" :span="3">{{ tournament.name.zh }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('main.tournament.name')" :span="3">{{ currentLocalized(tournament.name) }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
-      <NDescriptionsItem :label="t('terms.region')">{{ currentLocalized(regionByKey[tournament.region].name) }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('terms.region')">{{ currentLocalized(regionByKey[tournament.region]?.name) }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
     </NDescriptions>
   </CommonTransition>
@@ -100,7 +100,7 @@ const rules: FormRules = {
   name: {
     trigger: "blur",
     validator: async () => {
-      if (!tournament.value.name.zh) {
+      if (!currentLocalized(tournament.value.name)) {
         throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.name")]));
       }
     },

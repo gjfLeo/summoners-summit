@@ -40,7 +40,7 @@
       "cards": "Card Management",
       "players": "Player Management",
       "ranks": "Player Rank Management",
-      "tournament": "Tournament Management",
+      "tournament": "Tournament Details Management",
       "tournaments": "Tournament Management"
     },
     "format1": "{0} {'|'} {1}",

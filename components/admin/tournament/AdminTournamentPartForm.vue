@@ -2,7 +2,7 @@
   <div class="mt">
     <NH4 v-if="!isOnlyPart" :id="`S${stageKey}P${part._key}`" un-flex="~ gap-2">
       <span>{{ defaultName }}</span>
-      <span v-if="part.name.zh">{{ part.name.zh }}</span>
+      <span v-if="currentLocalized(part.name)">{{ currentLocalized(part.name) }}</span>
 
       <div class="ml-auto" un-flex="~ gap-2">
         <template v-if="editing">
@@ -96,7 +96,7 @@ const part = defineModel<TournamentPart>({ required: true });
 
 const formRef = ref<InstanceType<typeof NForm>>();
 
-const { t } = useLocales();
+const { t, currentLocalized } = useLocales();
 
 const defaultName = computed(() => t("main.tournament.partNameDefault", [props.partIndex + 1]));
 
@@ -107,7 +107,7 @@ const rules = {
   name: {
     trigger: "blur",
     validator: async () => {
-      if (!props.isOnlyPart && !part.value.name.zh) {
+      if (!props.isOnlyPart && !currentLocalized(part.value.name)) {
         throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.partName")]));
       }
     },
