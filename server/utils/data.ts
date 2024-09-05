@@ -2,6 +2,8 @@ import path from "node:path";
 import fs from "node:fs";
 import fse from "fs-extra";
 
+const dataCache: Record<string, unknown> = {};
+
 export function readData<R, P extends string = string>(dataPath: P): R | undefined;
 export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
 export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
@@ -11,11 +13,17 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
   if (dataPath.endsWith(".json")) {
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
-  const filePath = path.resolve("server/data", `${dataPath}.json`);
-  if (!fse.existsSync(filePath)) {
-    return defaultData;
+  if (dataPath in dataCache) {
+    return dataCache[dataPath] as R;
   }
-  return fse.readJsonSync(filePath) as R ?? defaultData;
+
+  let data = defaultData;
+  const filePath = path.resolve("server/data", `${dataPath}.json`);
+  if (fse.existsSync(filePath)) {
+    data = fse.readJsonSync(filePath) as R;
+  }
+  dataCache[dataPath] = data;
+  return data;
 }
 
 export function readDataList<R, P extends string = string>(dataPath: P): R[] {
@@ -24,8 +32,8 @@ export function readDataList<R, P extends string = string>(dataPath: P): R[] {
     .filter(file => file.isFile() && file.name.endsWith(".json"))
     .filter(file => !file.name.startsWith("_"))
     .map((file) => {
-      const filePath = path.resolve(dirPath, file.name);
-      return fse.readJsonSync(filePath) as R;
+      const fileName = path.parse(file.name).name;
+      return readData<R>(path.join(dataPath, fileName)) as R;
     });
 }
 
@@ -36,12 +44,24 @@ export function writeData<R, P extends string = string>(dataPath: P, data: R): v
   if (dataPath.endsWith(".json")) {
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
+  if (dataPath in dataCache) {
+    delete dataCache[dataPath];
+  }
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   fse.ensureDirSync(path.dirname(fullPath));
   fse.writeJsonSync(fullPath, data, { spaces: 2 });
 }
 
 export function deleteData<P extends string = string>(dataPath: P): void {
+  if (dataPath.startsWith("/")) {
+    console.warn("Data path should not start with a slash. It will be treated as relative to the server/data directory.");
+  }
+  if (dataPath.endsWith(".json")) {
+    console.warn("Data path should not end with a .json extension. It will be added automatically.");
+  }
+  if (dataPath in dataCache) {
+    delete dataCache[dataPath];
+  }
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   fse.removeSync(fullPath);
 }
