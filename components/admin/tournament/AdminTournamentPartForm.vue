@@ -45,8 +45,15 @@
               <td>{{ t('admin.tournament.games', [countGames(matchId)]) }}</td>
               <td>{{ t('admin.tournament.decks', [countDecks(matchId), countGames(matchId) * 2]) }}</td>
               <td>
-                <template v-if="matches[matchId].video">{{ t('admin.tournament.matchVideo') }}</template>
-                <template v-else>{{ t('admin.tournament.gameVideos', [countGameVideos(matchId), countGames(matchId)]) }}</template>
+                <div un-flex="~ gap-1 items-center justify-center">
+                  <template v-if="matches[matchId].video">
+                    <div class="i-mingcute:check-line" />
+                    <span>{{ t('admin.tournament.matchVideo') }}</span>
+                  </template>
+                  <template v-else>
+                    <span>{{ t('admin.tournament.gameVideos', [countGameVideos(matchId), countGames(matchId)]) }}</span>
+                  </template>
+                </div>
               </td>
               <td>
                 <CommonIconButton icon="i-mingcute:edit-line" @click="handleEdit(matchId)" />
