@@ -25,8 +25,10 @@
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <GameList :games="games" />
 
-    <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
-    <Deck_SimilarDecks v-bind="{ deckCode, deckList }" />
+    <ClientOnly>
+      <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
+      <Deck_SimilarDecks v-bind="{ deckCode, deckList }" />
+    </ClientOnly>
 
     <SitePageAnchors>
       <NAnchorLink :title="t('main.deck.deckDetail')" href="#deck" />
