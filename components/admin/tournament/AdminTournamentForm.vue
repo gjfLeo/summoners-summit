@@ -20,14 +20,18 @@
         <NFormItemGi :span="6" :label="t('terms.gameVersion')" path="gameVersion">
           <GameVersionSelect v-model:value="tournament.gameVersion" />
         </NFormItemGi>
+        <NFormItemGi :span="6" :label="t('terms.region')" path="region">
+          <FormRegionSelect v-model:value="tournament.region" />
+        </NFormItemGi>
         <NFormItemGi :span="6" :label="t('main.tournament.type')" path="type">
           <AdminTournamentTypeSelect v-model:value="tournament.type" />
         </NFormItemGi>
       </NGrid>
     </NForm>
-    <NDescriptions v-else label-placement="left" :column="1" separator="&emsp;">
-      <NDescriptionsItem :label="t('main.tournament.name')">{{ tournament.name.zh }}</NDescriptionsItem>
+    <NDescriptions v-else label-placement="left" :column="3" separator="&emsp;">
+      <NDescriptionsItem :label="t('main.tournament.name')" :span="3">{{ tournament.name.zh }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('terms.region')">{{ currentLocalized(regionByKey[tournament.region].name) }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
     </NDescriptions>
   </CommonTransition>
@@ -83,8 +87,9 @@ const emit = defineEmits<{
 
 const tournament = defineModel<Tournament>({ required: true });
 
-const { t } = useLocales();
+const { t, currentLocalized } = useLocales();
 const message = useMessage();
+const { regionByKey } = useSharedData();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const stageFormRefs = ref<InstanceType<typeof AdminTournamentStageForm>[]>([]);
@@ -97,6 +102,14 @@ const rules: FormRules = {
     validator: async () => {
       if (!tournament.value.name.zh) {
         throw new Error(t("admin.validate.pleaseInput", [t("main.tournament.name")]));
+      }
+    },
+  },
+  region: {
+    trigger: "change",
+    validator: async () => {
+      if (!tournament.value.region) {
+        throw new Error(t("admin.validate.pleaseSelect", [t("terms.region")]));
       }
     },
   },

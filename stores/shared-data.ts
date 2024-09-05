@@ -15,6 +15,13 @@ const useSharedDataStore = defineStore("shared", () => {
   );
   const tournamentTypeList = computed(() => tournamentTypeListData.value?.tournamentTypeList ?? []);
 
+  const { data: regionListData, refresh: fetchRegionData, status: regionDataStatus } = useAsyncData(
+    "regionList",
+    () => $fetch("/api/v3/regions"),
+  );
+  const regionList = computed(() => regionListData.value?.regionList ?? []);
+  const regionByKey = computed(() => Object.fromEntries(regionList.value.map(region => [region.key, region])));
+
   const { data: cardData, refresh: fetchCardData, status: cardDataStatus } = useAsyncData(
     "cards",
     () => $fetch("/api/v3/cards/getCards"),
@@ -31,6 +38,7 @@ const useSharedDataStore = defineStore("shared", () => {
     return await Promise.all([
       until(gameVersionDataStatus).not.toBe("pending"),
       until(tournamentTypeDataStatus).not.toBe("pending"),
+      until(regionDataStatus).not.toBe("pending"),
       until(cardDataStatus).not.toBe("pending"),
     ]);
   }
@@ -43,6 +51,10 @@ const useSharedDataStore = defineStore("shared", () => {
 
     tournamentTypeList,
     fetchTournamentTypeData,
+
+    regionList,
+    regionByKey,
+    fetchRegionData,
 
     characterCardById,
     characterCardIds,

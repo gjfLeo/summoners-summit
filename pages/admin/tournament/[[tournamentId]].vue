@@ -46,6 +46,7 @@ const tournament = ref<Tournament>({
   id: "",
   name: {},
   gameVersion: "",
+  region: "CN",
   type: "",
   stages: [],
 });

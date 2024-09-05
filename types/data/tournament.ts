@@ -53,7 +53,7 @@ export const ZTournament = z.object({
   id: z.string(),
   name: z.record(ZLocales, z.string().trim()),
   gameVersion: ZGameVersionId,
-  region: ZRegions.optional(),
+  region: ZRegions,
   type: z.string(),
   stages: ZTournamentStage.array(),
 }).strip();
