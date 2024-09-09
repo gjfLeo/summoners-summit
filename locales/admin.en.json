@@ -59,15 +59,16 @@
     "addMatch": "Add Match",
     "addPart": "Add Stage Part",
     "addStage": "Add Stage",
+    "beforeHotfix": "Before hotfix",
     "decks": "{0} / {1} decks",
+    "final": "Final",
     "gameVideos": "{0} / {1} videos",
     "games": "{0} games | {0} game",
     "matchVideo": "Match video",
     "partNamePlaceholder1": "Name of the only part can be omitted",
     "title": "Tournament Information",
     "titleAdd": "Add Tournament",
-    "titleEdit": "Edit Tournament Information",
-    "beforeHotfix": "Before hotfix"
+    "titleEdit": "Edit Tournament Information"
   },
   "validate": {
     "pleaseInput": "Input {0}",

@@ -56,9 +56,14 @@
                 </div>
               </td>
               <td>
-                <template v-if="matches[matchId].isPrePatch">
-                  <span>{{ t('admin.tournament.beforeHotfix') }}</span>
-                </template>
+                <div un-flex="~ gap-2">
+                  <template v-if="matches[matchId].isPrePatch">
+                    <span>{{ t('admin.tournament.beforeHotfix') }}</span>
+                  </template>
+                  <template v-if="matches[matchId].isFinal">
+                    <span>{{ t('admin.tournament.final') }}</span>
+                  </template>
+                </div>
               </td>
               <td>
                 <CommonIconButton icon="i-mingcute:edit-line" @click="handleEdit(matchId)" />

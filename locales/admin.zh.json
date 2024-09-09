@@ -59,15 +59,16 @@
     "addMatch": "添加场次",
     "addPart": "添加阶段分组",
     "addStage": "添加比赛阶段",
+    "beforeHotfix": "热更新前",
     "decks": "{0} / {1} 牌组",
+    "final": "决赛",
     "gameVideos": "{0} / {1} 录像",
     "games": "{0} 局",
     "matchVideo": "场次录像",
     "partNamePlaceholder1": "唯一分组名称可省略",
     "title": "赛事信息",
     "titleAdd": "新增赛事",
-    "titleEdit": "编辑赛事详情",
-    "beforeHotfix": "热更新前"
+    "titleEdit": "编辑赛事详情"
   },
   "validate": {
     "pleaseInput": "请填写{0}",

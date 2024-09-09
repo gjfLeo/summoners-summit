@@ -13,9 +13,11 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
   if (dataPath.endsWith(".json")) {
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
-  if (dataPath in dataCache) {
-    // if (dataPath === "tournaments/fb3439ba20a91434") console.log("cache hit", dataCache[dataPath].name);
-    return dataCache[dataPath] as R;
+
+  if (!import.meta.dev) {
+    if (dataPath in dataCache) {
+      return dataCache[dataPath] as R;
+    }
   }
 
   let data = defaultData;
@@ -23,8 +25,10 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
   if (fse.existsSync(filePath)) {
     data = fse.readJsonSync(filePath) as R;
   }
-  dataCache[dataPath] = data;
-  // if (dataPath === "tournaments/fb3439ba20a91434") console.log("cache miss", dataCache[dataPath].name);
+
+  if (!import.meta.dev) {
+    dataCache[dataPath] = data;
+  }
   return data;
 }
 
@@ -46,8 +50,10 @@ export function writeData<R, P extends string = string>(dataPath: P, data: R): v
   if (dataPath.endsWith(".json")) {
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
-  if (dataPath in dataCache) {
-    delete dataCache[dataPath];
+  if (!import.meta.dev) {
+    if (dataPath in dataCache) {
+      delete dataCache[dataPath];
+    }
   }
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   fse.ensureDirSync(path.dirname(fullPath));
@@ -61,8 +67,10 @@ export function deleteData<P extends string = string>(dataPath: P): void {
   if (dataPath.endsWith(".json")) {
     console.warn("Data path should not end with a .json extension. It will be added automatically.");
   }
-  if (dataPath in dataCache) {
-    delete dataCache[dataPath];
+  if (!import.meta.dev) {
+    if (dataPath in dataCache) {
+      delete dataCache[dataPath];
+    }
   }
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   fse.removeSync(fullPath);

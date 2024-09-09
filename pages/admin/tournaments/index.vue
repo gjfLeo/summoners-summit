@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-for="season in seasons" :key="season">
-      <NH2 :id="`S${season}`">第{{ season }}赛季</NH2>
+      <NH2 :id="`S${season}`">{{ t("main.tournaments.seasonName", [season]) }}</NH2>
       <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
         <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
         <TournamentList>
@@ -25,7 +25,7 @@
     <SitePageAnchors>
       <template v-for="season in seasons" :key="season">
         <NAnchorLink
-          :title="`第\u2006${season}\u2006赛季`"
+          :title="t('main.tournaments.seasonName', [season])"
           :href="`#S${season}`"
         >
           <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">

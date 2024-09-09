@@ -10,9 +10,16 @@ export default defineEventHandler(async (event) => {
 
   const git = simpleGit();
 
-  await git.pull();
-  await git.reset();
-  await git.add(["server/data"]);
-  await git.commit(`data: ${message}\n\nCommitted by data-tools`);
-  await git.push();
+  // await git.pull();
+  // await git.reset();
+
+  try {
+    await git.add(["server/data"]);
+    await git.commit(`data: ${message}\n\nCommitted by data-tools`);
+    await git.push();
+    return responseOk();
+  }
+  catch (error) {
+    return responseError(error);
+  }
 });

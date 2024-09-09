@@ -4,7 +4,7 @@
       <div class="i-mingcute:save-2-line" />
     </template>
   </NButton>
-  <NModal v-model:show="modalVisible" preset="dialog">
+  <NModal v-model:show="modalVisible" preset="dialog" :show-icon="false">
     <template #header>
       提交至代码库
     </template>
@@ -14,7 +14,7 @@
       </NFormItem>
     </template>
     <template #action>
-      <NButton :loading="submitLoading" @click="submit">提交</NButton>
+      <NButton :loading="submitLoading" type="primary" secondary @click="submit">提交</NButton>
       <NButton @click="modalVisible = false">取消</NButton>
     </template>
   </NModal>
@@ -34,14 +34,27 @@ function commit() {
 
 async function submit() {
   submitLoading.value = true;
-  await $fetch("/api/v3/data/commit", {
-    method: "POST",
-    body: {
-      message: commitMessage.value || "更新数据",
-    },
-  });
-  submitLoading.value = false;
-  modalVisible.value = false;
-  message.success("提交成功");
+  try {
+    const res = await $fetch("/api/v3/data/commit", {
+      method: "POST",
+      body: {
+        message: commitMessage.value || "更新数据",
+      },
+    });
+    if (res.success) {
+      message.success("提交成功");
+      modalVisible.value = false;
+    }
+    else {
+      message.error(`请重试：${res.code}`);
+    }
+  }
+  catch (error) {
+    console.error(error);
+    message.error("提交失败");
+  }
+  finally {
+    submitLoading.value = false;
+  }
 }
 </script>

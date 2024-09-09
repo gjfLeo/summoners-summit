@@ -132,6 +132,7 @@ export function saveMatch(params: MatchSaveParams) {
     playerB,
     bans: bans.length ? bans : undefined,
     gameIds: games.map(g => g.id),
+    isFinal: params.isFinal ? true : undefined,
     isPrePatch: params.isPrePatch ? true : undefined,
   };
 

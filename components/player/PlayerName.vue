@@ -1,5 +1,5 @@
 <template>
-  <template v-if="id || link === false">
+  <template v-if="id && link !== false">
     <NuxtLinkLocale :to="`/player/${id}`" no-prefetch>{{ nickname }}</NuxtLinkLocale>
   </template>
   <template v-else>

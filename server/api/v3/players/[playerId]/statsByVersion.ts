@@ -1,5 +1,5 @@
 import { getGameDetail, getGameVersionList, getMatchDetail, getMatchList } from "~/server/service";
-import { getMirroredGameDetail, getMirroredMatch } from "~/utils/match";
+import { getMirroredGameDetail, getMirroredMatchDetail } from "~/utils/match";
 import {
   ZApiPlayerRouterParams as ZRouterParams,
 } from "~/types";
@@ -29,11 +29,10 @@ export default defineEventHandler(async (event) => {
   getMatchList()
     .filter(match => !match.isPrePatch)
     .flatMap((match) => {
-      if (match.playerA.playerId === playerId) return [match];
-      if (match.playerB.playerId === playerId) return [getMirroredMatch(match)];
+      if (match.playerA.playerId === playerId) return [getMatchDetail(match.id)!];
+      if (match.playerB.playerId === playerId) return [getMirroredMatchDetail(getMatchDetail(match.id)!)];
       return [];
     })
-    .map(match => getMatchDetail(match.id)!)
     .forEach((match) => {
       record[match.gameVersion].numMatches++;
       if (match.winner === "A") record[match.gameVersion].numMatchesWin++;
