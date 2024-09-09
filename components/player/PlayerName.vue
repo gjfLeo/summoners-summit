@@ -1,5 +1,5 @@
 <template>
-  <template v-if="id && link !== false">
+  <template v-if="id && link">
     <NuxtLinkLocale :to="`/player/${id}`" no-prefetch>{{ nickname }}</NuxtLinkLocale>
   </template>
   <template v-else>
@@ -8,11 +8,16 @@
 </template>
 
 <script lang="ts" setup>
-defineProps<{
-  id?: string;
-  nickname: string;
-  link?: boolean;
-}>();
+withDefaults(
+  defineProps<{
+    id?: string;
+    nickname: string;
+    link?: boolean;
+  }>(),
+  {
+    link: true,
+  },
+);
 
 const { t } = useLocales();
 </script>
