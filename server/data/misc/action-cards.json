@@ -131,6 +131,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Terror_for_the_Evildoers_Equipment_Card.png"
   },
+  "211121": {
+    "id": "211121",
+    "name": {
+      "zh": "梦晓与决意之刻",
+      "en": "Moment of Waking and Resolve"
+    },
+    "shareId": 410,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Moment_of_Waking_and_Resolve_Equipment_Card.png"
+  },
   "212011": {
     "id": "212011",
     "name": {
@@ -659,6 +671,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/The_Wondrous_Path_of_Truth_Equipment_Card.png"
   },
+  "215101": {
+    "id": "215101",
+    "name": {
+      "zh": "知是留云僊",
+      "en": "They Call Her Cloud Retainer"
+    },
+    "shareId": 411,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/They_Call_Her_Cloud_Retainer_Equipment_Card.png"
+  },
   "216011": {
     "id": "216011",
     "name": {
@@ -946,6 +970,18 @@
     "gameVersion": "4.7",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Lightless_Feeding_Equipment_Card.png"
+  },
+  "222051": {
+    "id": "222051",
+    "name": {
+      "zh": "轻盈水沫",
+      "en": "Featherweight Foam"
+    },
+    "shareId": 412,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Featherweight_Foam_Equipment_Card.png"
   },
   "223011": {
     "id": "223011",
@@ -2147,6 +2183,42 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Deepwood_Memories_Equipment_Card.png"
   },
+  "313001": {
+    "id": "313001",
+    "name": {
+      "zh": "异色猎刀鳐",
+      "en": "Xenochromatic Hunter's Ray"
+    },
+    "shareId": 413,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Xenochromatic_Hunter%27s_Ray_Equipment_Card.png"
+  },
+  "313002": {
+    "id": "313002",
+    "name": {
+      "zh": "匿叶龙",
+      "en": "Yumkasaurus"
+    },
+    "shareId": 414,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Yumkasaurus_Equipment_Card.png"
+  },
+  "313003": {
+    "id": "313003",
+    "name": {
+      "zh": "鳍游龙",
+      "en": "Koholasaurus"
+    },
+    "shareId": 415,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Koholasaurus_Equipment_Card.png"
+  },
   "321001": {
     "id": "321001",
     "name": {
@@ -2398,6 +2470,18 @@
     "gameVersion": "4.7",
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Central_Laboratory_Ruins_Support_Card.png"
+  },
+  "321022": {
+    "id": "321022",
+    "name": {
+      "zh": "圣火竞技场",
+      "en": "Stadium of the Sacred Flame"
+    },
+    "shareId": 416,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Stadium_of_the_Sacred_Flame_Support_Card.png"
   },
   "322001": {
     "id": "322001",
@@ -2723,6 +2807,18 @@
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Serene_Support_Card.png"
   },
+  "322028": {
+    "id": "322028",
+    "name": {
+      "zh": "阿伽娅",
+      "en": "Atea"
+    },
+    "shareId": 417,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Atea_Support_Card.png"
+  },
   "323001": {
     "id": "323001",
     "name": {
@@ -2914,6 +3010,18 @@
     "gameVersion": "4.7",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Vicious_Ancient_Battle_Event_Card.png"
+  },
+  "330009": {
+    "id": "330009",
+    "name": {
+      "zh": "赦免宣告",
+      "en": "Edict of Absolution"
+    },
+    "shareId": 419,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Edict_of_Absolution_Event_Card.png"
   },
   "331101": {
     "id": "331101",
@@ -3550,6 +3658,18 @@
     "gameVersion": "4.8",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Tada!_Event_Card.png"
+  },
+  "332039": {
+    "id": "332039",
+    "name": {
+      "zh": "龙伙伴的聚餐",
+      "en": "Saurian Dining Buddies"
+    },
+    "shareId": 418,
+    "type": "action",
+    "gameVersion": "5.0",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Saurian_Dining_Buddies_Event_Card.png"
   },
   "333001": {
     "id": "333001",

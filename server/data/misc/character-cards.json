@@ -142,6 +142,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Wriothesley_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Wriothesley_TCG_Avatar_Icon.png"
   },
+  "1112": {
+    "id": "1112",
+    "name": {
+      "zh": "菲米尼",
+      "en": "Freminet"
+    },
+    "shareId": 407,
+    "type": "character",
+    "gameVersion": "5.0",
+    "element": "cryo",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Freminet_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Freminet_TCG_Avatar_Icon.png"
+  },
   "1201": {
     "id": "1201",
     "name": {
@@ -714,6 +727,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Faruzan_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Faruzan_TCG_Avatar_Icon.png"
   },
+  "1510": {
+    "id": "1510",
+    "name": {
+      "zh": "闲云",
+      "en": "Xianyun"
+    },
+    "shareId": 408,
+    "type": "character",
+    "gameVersion": "5.0",
+    "element": "anemo",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Xianyun_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Xianyun_TCG_Avatar_Icon.png"
+  },
   "1601": {
     "id": "1601",
     "name": {
@@ -1025,6 +1051,19 @@
     "element": "hydro",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/All-Devouring_Narwhal_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/All-Devouring_Narwhal_TCG_Avatar_Icon.png"
+  },
+  "2205": {
+    "id": "2205",
+    "name": {
+      "zh": "丘丘水行游侠",
+      "en": "Hydro Hilichurl Rogue"
+    },
+    "shareId": 409,
+    "type": "character",
+    "gameVersion": "5.0",
+    "element": "hydro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Hydro_Hilichurl_Rogue_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Hydro_Hilichurl_Rogue_TCG_Avatar_Icon.png"
   },
   "2301": {
     "id": "2301",
