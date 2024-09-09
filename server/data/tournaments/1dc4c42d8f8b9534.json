@@ -1,11 +1,12 @@
 {
   "id": "1dc4c42d8f8b9534",
   "name": {
-    "zh": "「小王子杯：太平洋赛区」淘汰赛 (The Prince Cup: Pacific - Knockout Stage)"
+    "zh": "「小王子杯：太平洋赛区」淘汰赛",
+    "en": "The Prince Cup: Pacific - Knockout Stage"
   },
   "gameVersion": "4.8",
   "region": "Pacific",
-  "type": "未分类（外服）",
+  "type": "地区大赛",
   "stages": [
     {
       "name": {
@@ -24,7 +25,8 @@
       "parts": [
         {
           "name": {
-            "zh": "胜者组第1轮 (UB R1)"
+            "zh": "胜者组第1轮",
+            "en": "UB R1"
           },
           "date": "2024-08-02",
           "matchIds": [
@@ -34,7 +36,8 @@
         },
         {
           "name": {
-            "zh": "败者组第1轮 (LB R1)"
+            "zh": "败者组第1轮",
+            "en": "LB R1"
           },
           "date": "2024-08-02",
           "matchIds": [
@@ -44,7 +47,8 @@
         },
         {
           "name": {
-            "zh": "败者组第2轮 (LB R2)"
+            "zh": "败者组第2轮",
+            "en": "LB R2"
           },
           "date": "2024-08-03",
           "matchIds": [
@@ -54,7 +58,8 @@
         },
         {
           "name": {
-            "zh": "胜者组决赛 (UB F)"
+            "zh": "胜者组决赛",
+            "en": "UB F"
           },
           "date": "2024-08-03",
           "matchIds": [
@@ -63,7 +68,8 @@
         },
         {
           "name": {
-            "zh": "败者组半决赛 (LB SF)"
+            "zh": "败者组半决赛",
+            "en": "LB SF"
           },
           "date": "2024-08-03",
           "matchIds": [
@@ -72,7 +78,8 @@
         },
         {
           "name": {
-            "zh": "败者组决赛 (LB F)"
+            "zh": "败者组决赛",
+            "en": "LB F"
           },
           "date": "2024-08-04",
           "matchIds": [
@@ -83,7 +90,8 @@
     },
     {
       "name": {
-        "zh": "总决赛 (GF)"
+        "zh": "总决赛",
+        "en": "GF"
       },
       "rules": {
         "numGames": 7,

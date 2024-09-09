@@ -1,11 +1,12 @@
 {
   "id": "13de06a12131949f",
   "name": {
-    "zh": "「小王子杯：大西洋赛区」常规赛 (The Prince Cup: ATLANTIC - Regular Season)"
+    "zh": "「小王子杯：大西洋赛区」常规赛",
+    "en": "The Prince Cup: ATLANTIC - Regular Season"
   },
   "gameVersion": "4.6",
-  "region": "CN",
-  "type": "未分类（外服）",
+  "region": "Atlantic",
+  "type": "地区大赛",
   "stages": [
     {
       "name": {
