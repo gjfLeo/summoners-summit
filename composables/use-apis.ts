@@ -74,10 +74,10 @@ export async function useApiGetTeamStatsByVersion(query: GetTeamStatsByVersionPa
   };
 }
 
-export async function useApiGetPlayerStatsRecord(query: GetPlayerStatsRecordParams) {
-  const { data } = await useFetch("/api/v3/players/getStatsRecord", { query });
+export async function useApiGetAllPlayerStats() {
+  const { data } = await useFetch("/api/v3/players/stats");
   return {
-    playerStatsRecord: computed(() => data.value?.playerStatsRecord ?? {}),
+    stats: computed(() => data.value?.success ? data.value.stats : []),
   };
 }
 

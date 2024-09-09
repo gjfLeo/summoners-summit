@@ -3,9 +3,7 @@ import type { PlayerId, PlayerStats } from "~/types";
 import { ZGetPlayerStatsRecordParams } from "~/types";
 import { getMirroredGameDetail, getMirroredMatchDetail } from "~/utils/match";
 
-export default defineEventHandler(async (event) => {
-  const { gameVersion } = await getValidatedQuery(event, ZGetPlayerStatsRecordParams.parse);
-
+export default defineEventHandler(async () => {
   const record: Record<PlayerId, PlayerStats> = {};
   function getRecord(playerId: PlayerId) {
     const player = getPlayer(playerId);
@@ -13,7 +11,7 @@ export default defineEventHandler(async (event) => {
       throw new Error(`Player ${playerId} not found`);
     }
     const { uniqueName, aliases } = player;
-    const rank = getPlayerRank({ playerId, gameVersion });
+    const rank = getPlayerRank({ playerId });
     return record[playerId] ??= {
       playerId,
       uniqueName,
@@ -28,7 +26,6 @@ export default defineEventHandler(async (event) => {
   }
 
   const matches = getMatchList()
-    .filter(match => match.gameVersion === gameVersion)
     .filter(match => !match.isPrePatch)
     .map(match => getMatchDetail(match.id)!)
     .flatMap(match => [match, getMirroredMatchDetail(match)]);
@@ -42,7 +39,6 @@ export default defineEventHandler(async (event) => {
   });
 
   const games = getGameList()
-    .filter(game => game.gameVersion === gameVersion)
     .filter(game => !game.isPrePatch)
     .map(game => getGameDetail(game.id)!)
     .flatMap(game => [game, getMirroredGameDetail(game)]);
@@ -55,5 +51,5 @@ export default defineEventHandler(async (event) => {
     }
   });
 
-  return responseData({ playerStatsRecord: record });
+  return responseData({ stats: Object.values(record) });
 });
