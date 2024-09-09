@@ -5,24 +5,26 @@
   "partIndex": 1,
   "matchIndex": 2,
   "gameVersion": "4.6",
+  "isPrePatch": true,
   "playerA": {
-    "playerId": "57c04f58ef1dff30",
-    "nickname": "Birdy"
+    "playerId": "516a57cb9542e57d",
+    "nickname": "hakio"
   },
   "playerB": {
-    "playerId": "e209046a877e3488",
-    "nickname": "Silkylove"
+    "playerId": "5f6df97eebeb58e2",
+    "nickname": "RobotWizard"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1204-1310-2602",
-      "playerBTeamId": "1109-2203-2304"
+      "playerATeamId": "1104-1202-1402",
+      "playerBTeamId": "1203-2102-2402"
     }
   ],
   "gameIds": [
     "13de06a12131949f0801",
-    "13de06a12131949f0802"
+    "13de06a12131949f0802",
+    "13de06a12131949f0803"
   ],
-  "video": "https://www.youtube.com/live/lY0sML5UwbA?t=9209"
+  "video": "https://www.youtube.com/live/ZN1FLWG2IqI?t=9466"
 }

@@ -3,21 +3,22 @@
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
   "partIndex": 2,
-  "matchIndex": 1,
+  "matchIndex": 2,
   "gameVersion": "4.6",
+  "isPrePatch": true,
   "playerA": {
-    "playerId": "dab6be6ec4ce15cc",
-    "nickname": "RunaTobio"
+    "playerId": "5f6df97eebeb58e2",
+    "nickname": "RobotWizard"
   },
   "playerB": {
-    "playerId": "a0dd39f6c9ee83bd",
-    "nickname": "Ting"
+    "playerId": "516a57cb9542e57d",
+    "nickname": "hakio"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1411-1704-2203",
-      "playerBTeamId": "1106-1203-1506"
+      "playerATeamId": "1203-2102-2402",
+      "playerBTeamId": "1106-1203-1507"
     }
   ],
   "gameIds": [
@@ -25,5 +26,5 @@
     "13de06a12131949f1302",
     "13de06a12131949f1303"
   ],
-  "video": "https://www.youtube.com/live/TxFulNQ-Mos?t=7072"
+  "video": "https://www.youtube.com/live/Dd-WDITDSko?t=9066"
 }

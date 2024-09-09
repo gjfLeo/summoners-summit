@@ -1,0 +1,29 @@
+{
+  "id": "13de06a12131949f39",
+  "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 8,
+  "matchIndex": 2,
+  "gameVersion": "4.6",
+  "playerA": {
+    "playerId": "710b48a035120c6f",
+    "nickname": "RunaTobio"
+  },
+  "playerB": {
+    "playerId": "874e4c84a7d9a961",
+    "nickname": "Pilot"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1411-1704-2203",
+      "playerBTeamId": "1104-1202-1402"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f3901",
+    "13de06a12131949f3902",
+    "13de06a12131949f3903"
+  ],
+  "video": "https://www.youtube.com/live/JXVqEoxRbwE?t=9322"
+}

@@ -21,6 +21,7 @@ export default defineEventHandler(async (event) => {
 
   getGameList()
     .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch)
     .flatMap(game => [game, getMirroredGame(game)])
     .filter(game => game.playerADeck.teamId === teamId)
     .forEach((game) => {

@@ -56,6 +56,11 @@
                 </div>
               </td>
               <td>
+                <template v-if="matches[matchId].isPrePatch">
+                  <span>{{ t('admin.tournament.beforeHotfix') }}</span>
+                </template>
+              </td>
+              <td>
                 <CommonIconButton icon="i-mingcute:edit-line" @click="handleEdit(matchId)" />
               </td>
             </tr>

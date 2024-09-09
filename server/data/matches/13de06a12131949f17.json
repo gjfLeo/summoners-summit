@@ -2,28 +2,27 @@
   "id": "13de06a12131949f17",
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
-  "partIndex": 3,
-  "matchIndex": 0,
+  "partIndex": 4,
+  "matchIndex": 1,
   "gameVersion": "4.6",
   "playerA": {
-    "playerId": "60790eda44ec04ff",
-    "nickname": "upi"
+    "playerId": "d8055b47b69ecb54",
+    "nickname": "MrPillow"
   },
   "playerB": {
-    "playerId": "dab6be6ec4ce15cc",
-    "nickname": "RunaTobio"
+    "playerId": "6e27a90133848f43",
+    "nickname": "Silkylove"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1109-1210-2602",
-      "playerBTeamId": "1109-1210-2602"
+      "playerATeamId": "1203-2102-2402",
+      "playerBTeamId": "1310-1508-1509"
     }
   ],
   "gameIds": [
     "13de06a12131949f1701",
-    "13de06a12131949f1702",
-    "13de06a12131949f1703"
+    "13de06a12131949f1702"
   ],
-  "video": "https://www.youtube.com/live/OLUzXo2yIiI?t=1244"
+  "video": "https://www.youtube.com/live/GKibbRTCCIA?t=5277"
 }

@@ -9,6 +9,7 @@ export default defineEventHandler(async (event) => {
 
   let games = getGameList()
     .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch)
     .flatMap(game => [game, getMirroredGame(game)])
     .filter(game => game.playerADeck.deckCode);
 

@@ -25,6 +25,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const games = getGameList()
+    .filter(game => !game.isPrePatch)
     .flatMap(game => [game, getMirroredGame(game)])
     .filter(game => game.playerADeck.teamId === teamId);
   games.forEach((game) => {
@@ -35,6 +36,7 @@ export default defineEventHandler(async (event) => {
   });
 
   getMatchList()
+    .filter(match => !match.isPrePatch)
     .flatMap(match => [match, getMirroredMatch(match)])
     .filter(match => match.bans?.some(ban => ban.banType === "team" && ban.playerATeamId === teamId))
     .forEach((match) => {

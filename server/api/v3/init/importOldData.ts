@@ -259,6 +259,7 @@ export default defineEventHandler(async () => {
               stageIndex,
               partIndex,
               matchIndex,
+              isPrePatch: "isPrePatch" in oldMatch && oldMatch.isPrePatch ? true : undefined,
               isFinal: oldStage.name === "决赛" || oldPart.name === "决赛" ? true : undefined,
               playerA: {
                 playerId: tournamentPlayerMap[oldMatch.playerANickname],

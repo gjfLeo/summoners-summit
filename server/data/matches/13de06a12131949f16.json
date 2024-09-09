@@ -2,22 +2,22 @@
   "id": "13de06a12131949f16",
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
-  "partIndex": 2,
-  "matchIndex": 4,
+  "partIndex": 4,
+  "matchIndex": 0,
   "gameVersion": "4.6",
   "playerA": {
-    "playerId": "3ee10b1727ec9911",
-    "nickname": "binzu"
+    "playerId": "2dd6a73ebd98f040",
+    "nickname": "Lieil"
   },
   "playerB": {
-    "playerId": "a0dd39f6c9ee83bd",
-    "nickname": "Ting"
+    "playerId": "8dbaae59f62460af",
+    "nickname": "Matt Mario"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1411-1704-2203",
-      "playerBTeamId": "1307-1411-1704"
+      "playerATeamId": "1106-1203-1507",
+      "playerBTeamId": "1109-2203-2304"
     }
   ],
   "gameIds": [
@@ -25,5 +25,5 @@
     "13de06a12131949f1602",
     "13de06a12131949f1603"
   ],
-  "video": "https://www.youtube.com/live/TxFulNQ-Mos?t=23506"
+  "video": "https://www.youtube.com/live/GKibbRTCCIA?t=1374"
 }

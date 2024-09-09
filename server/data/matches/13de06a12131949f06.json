@@ -5,24 +5,26 @@
   "partIndex": 1,
   "matchIndex": 0,
   "gameVersion": "4.6",
+  "isPrePatch": true,
   "playerA": {
-    "playerId": "c5b595ec2fda3617",
-    "nickname": "Matt Mario"
+    "playerId": "0592bbf215ab007d",
+    "nickname": "biluo."
   },
   "playerB": {
-    "playerId": "e209046a877e3488",
-    "nickname": "Silkylove"
+    "playerId": "13ab84108b611d78",
+    "nickname": "Kaori"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1203-2102-2402",
-      "playerBTeamId": "1109-2203-2304"
+      "playerATeamId": "1104-1202-1402",
+      "playerBTeamId": "1310-1508-1509"
     }
   ],
   "gameIds": [
     "13de06a12131949f0601",
-    "13de06a12131949f0602"
+    "13de06a12131949f0602",
+    "13de06a12131949f0603"
   ],
-  "video": "https://www.youtube.com/live/lY0sML5UwbA?t=1422"
+  "video": "https://www.youtube.com/live/ZN1FLWG2IqI?t=1375"
 }

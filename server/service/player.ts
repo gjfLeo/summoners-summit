@@ -100,15 +100,16 @@ export function redirectPlayer(sourceId: PlayerId, targetId: PlayerId): PlayerId
     });
   });
 
-  getMatchList().forEach((match) => {
-    if (match.playerA.playerId === sourceId || match.playerA.playerId === targetId) {
-      match.playerA.playerId = player.id;
-    }
-    if (match.playerB.playerId === sourceId || match.playerB.playerId === targetId) {
-      match.playerB.playerId = player.id;
-    }
-    writeData(`matches/${match.id}`, ZMatch.parse(match));
-  });
+  getMatchList()
+    .forEach((match) => {
+      if (match.playerA.playerId === sourceId || match.playerA.playerId === targetId) {
+        match.playerA.playerId = player.id;
+      }
+      if (match.playerB.playerId === sourceId || match.playerB.playerId === targetId) {
+        match.playerB.playerId = player.id;
+      }
+      writeData(`matches/${match.id}`, ZMatch.parse(match));
+    });
   return player.id;
 }
 

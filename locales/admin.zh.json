@@ -66,7 +66,8 @@
     "partNamePlaceholder1": "唯一分组名称可省略",
     "title": "赛事信息",
     "titleAdd": "新增赛事",
-    "titleEdit": "编辑赛事详情"
+    "titleEdit": "编辑赛事详情",
+    "beforeHotfix": "热更新前"
   },
   "validate": {
     "pleaseInput": "请填写{0}",

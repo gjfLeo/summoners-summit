@@ -2,27 +2,28 @@
   "id": "13de06a12131949f20",
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
-  "partIndex": 3,
-  "matchIndex": 3,
+  "partIndex": 4,
+  "matchIndex": 4,
   "gameVersion": "4.6",
   "playerA": {
-    "playerId": "1021356f8826c4a3",
-    "nickname": "Shin"
+    "playerId": "2dd6a73ebd98f040",
+    "nickname": "Lieil"
   },
   "playerB": {
-    "playerId": "3ee10b1727ec9911",
-    "nickname": "binzu"
+    "playerId": "d8055b47b69ecb54",
+    "nickname": "MrPillow"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1303-2203-2602",
-      "playerBTeamId": "1110-1201-1210"
+      "playerATeamId": "1109-1210-2602",
+      "playerBTeamId": "1104-1202-1402"
     }
   ],
   "gameIds": [
     "13de06a12131949f2001",
-    "13de06a12131949f2002"
+    "13de06a12131949f2002",
+    "13de06a12131949f2003"
   ],
-  "video": "https://www.youtube.com/live/OLUzXo2yIiI?t=16392"
+  "video": "https://www.youtube.com/live/GKibbRTCCIA?t=15837"
 }

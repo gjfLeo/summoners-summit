@@ -27,6 +27,7 @@ export function getTeamStatsRecords(params: GetAllTeamStatsParams): Record<DeckT
 
   const games = getGameList()
     .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch)
     .flatMap(game => [game, getMirroredGame(game)]);
 
   games.forEach((game) => {
@@ -56,7 +57,8 @@ export function getTeamStatsRecords(params: GetAllTeamStatsParams): Record<DeckT
   });
 
   const matches = getMatchList()
-    .filter(match => match.gameVersion === gameVersion);
+    .filter(match => match.gameVersion === gameVersion)
+    .filter(match => !match.isPrePatch);
   matches.flatMap(match => match.bans ?? [])
     .filter(ban => ban.banType === "team")
     .flatMap(ban => [ban.playerATeamId, ban.playerBTeamId])
@@ -72,7 +74,8 @@ export function getTeamMatchupStats(params: GetAllTeamMatchupsParams) {
   const { gameVersion } = params;
 
   const games = getGameList()
-    .filter(game => game.gameVersion === gameVersion);
+    .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch);
 
   // 选择对局数最多的8个阵容
   const numGamesRecord: Record<DeckTeamId, number> = {};
@@ -129,6 +132,7 @@ export function getTeamDecks(params: GetTeamDecksParams) {
 
   const gameDeckList = getGameList()
     .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch)
     .flatMap(game => [game, getMirroredGame(game)])
     .filter(game => game.playerADeck.teamId === teamId)
     .filter(game => game.playerADeck.deckCode)

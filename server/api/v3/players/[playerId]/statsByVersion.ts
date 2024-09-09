@@ -27,6 +27,7 @@ export default defineEventHandler(async (event) => {
   const games: GameDetail[] = [];
 
   getMatchList()
+    .filter(match => !match.isPrePatch)
     .flatMap((match) => {
       if (match.playerA.playerId === playerId) return [match];
       if (match.playerB.playerId === playerId) return [getMirroredMatch(match)];
@@ -40,6 +41,7 @@ export default defineEventHandler(async (event) => {
     });
 
   games
+    .filter(game => !game.isPrePatch)
     .flatMap((game) => {
       if (game.playerA.playerId === playerId) return [game];
       if (game.playerB.playerId === playerId) return [getMirroredGameDetail(game)];

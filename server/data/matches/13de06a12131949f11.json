@@ -2,16 +2,17 @@
   "id": "13de06a12131949f11",
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
-  "partIndex": 1,
-  "matchIndex": 5,
+  "partIndex": 2,
+  "matchIndex": 0,
   "gameVersion": "4.6",
+  "isPrePatch": true,
   "playerA": {
-    "playerId": "be8c71f4bd802b3a",
-    "nickname": "MrPillow"
+    "playerId": "7d36077d0604fb02",
+    "nickname": "DVDia"
   },
   "playerB": {
-    "playerId": "c5b595ec2fda3617",
-    "nickname": "Matt Mario"
+    "playerId": "516a57cb9542e57d",
+    "nickname": "hakio"
   },
   "bans": [
     {
@@ -22,7 +23,8 @@
   ],
   "gameIds": [
     "13de06a12131949f1101",
-    "13de06a12131949f1102"
+    "13de06a12131949f1102",
+    "13de06a12131949f1103"
   ],
-  "video": "https://www.youtube.com/live/lY0sML5UwbA?t=21376"
+  "video": "https://www.youtube.com/live/Dd-WDITDSko?t=1353"
 }

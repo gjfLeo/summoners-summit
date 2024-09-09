@@ -1,12 +1,11 @@
 {
   "id": "1dc4c42d8f8b9534",
   "name": {
-    "zh": "「小王子杯：太平洋赛区」淘汰赛",
-    "en": "The Prince Cup: Pacific - Knockout Stage"
+    "zh": "「小王子杯：太平洋赛区」淘汰赛 (The Prince Cup: Pacific - Knockout Stage)"
   },
   "gameVersion": "4.8",
-  "region": "Pacific",
-  "type": "地区大赛",
+  "region": "CN",
+  "type": "未分类（外服）",
   "stages": [
     {
       "name": {

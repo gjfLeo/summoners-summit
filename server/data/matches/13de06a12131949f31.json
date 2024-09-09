@@ -6,18 +6,18 @@
   "matchIndex": 4,
   "gameVersion": "4.6",
   "playerA": {
-    "playerId": "321c54391ba482fc",
-    "nickname": "llb"
+    "playerId": "65e67d8f4986b332",
+    "nickname": "binzu"
   },
   "playerB": {
-    "playerId": "330532b2b75c445d",
-    "nickname": "9o_o6"
+    "playerId": "f4ffebe1228f45d0",
+    "nickname": "Ting"
   },
   "bans": [
     {
       "banType": "team",
-      "playerATeamId": "1104-1202-1402",
-      "playerBTeamId": "1107-1209-1504"
+      "playerATeamId": "1411-1704-2203",
+      "playerBTeamId": "1307-1411-1704"
     }
   ],
   "gameIds": [
@@ -25,5 +25,5 @@
     "13de06a12131949f3102",
     "13de06a12131949f3103"
   ],
-  "video": "https://www.youtube.com/live/h_M2oJkpHNc?t=26241"
+  "video": "https://www.youtube.com/live/TxFulNQ-Mos?t=23506"
 }

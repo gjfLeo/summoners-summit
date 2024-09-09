@@ -19,5 +19,6 @@ export const ZGame = z.object({
   winner: z.enum(["A", "B", "DRAW-W", "DRAW-L"]).optional(),
   starter: z.enum(["A", "B"]).optional(),
   gameVideo: z.string().optional(),
+  isPrePatch: z.boolean().optional(),
 });
 export type Game = z.infer<typeof ZGame>;

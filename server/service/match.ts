@@ -102,6 +102,7 @@ export function saveMatch(params: MatchSaveParams) {
       },
       id: gameId,
       matchId,
+      isPrePatch: params.isPrePatch ? true : undefined,
     };
     return game;
   });
@@ -131,6 +132,7 @@ export function saveMatch(params: MatchSaveParams) {
     playerB,
     bans: bans.length ? bans : undefined,
     gameIds: games.map(g => g.id),
+    isPrePatch: params.isPrePatch ? true : undefined,
   };
 
   writeData(`matches/${matchId}`, ZMatch.parse(match));

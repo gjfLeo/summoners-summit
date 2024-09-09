@@ -1,0 +1,28 @@
+{
+  "id": "13de06a12131949f47",
+  "tournamentId": "13de06a12131949f",
+  "stageIndex": 0,
+  "partIndex": 11,
+  "matchIndex": 0,
+  "gameVersion": "4.6",
+  "playerA": {
+    "playerId": "69d519ce24299abf",
+    "nickname": "KevinZ"
+  },
+  "playerB": {
+    "playerId": "d87d464888ead2a3",
+    "nickname": "BeYo_OnD"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1110-1201-1210",
+      "playerBTeamId": "1310-1509-2502"
+    }
+  ],
+  "gameIds": [
+    "13de06a12131949f4701",
+    "13de06a12131949f4702"
+  ],
+  "video": "https://www.youtube.com/live/TMqCPKULA3g?t=1180"
+}

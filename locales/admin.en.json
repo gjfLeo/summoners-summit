@@ -66,7 +66,8 @@
     "partNamePlaceholder1": "Name of the only part can be omitted",
     "title": "Tournament Information",
     "titleAdd": "Add Tournament",
-    "titleEdit": "Edit Tournament Information"
+    "titleEdit": "Edit Tournament Information",
+    "beforeHotfix": "Before hotfix"
   },
   "validate": {
     "pleaseInput": "Input {0}",

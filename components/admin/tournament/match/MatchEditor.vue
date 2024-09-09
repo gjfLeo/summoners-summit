@@ -163,6 +163,10 @@
             </tr>
           </TransitionGroup>
         </NTable>
+        <NFormItem>
+          <NCheckbox v-model:checked="match.isPrePatch" />
+          <span class="ml-1">{{ t('admin.tournament.beforeHotfix') }}</span>
+        </NFormItem>
       </NForm>
       <AdminTournamentMatchVideoEditor ref="videoEditor" />
       <AdminTournamentMatchActionCardsEditor ref="actionCardsEditor" />

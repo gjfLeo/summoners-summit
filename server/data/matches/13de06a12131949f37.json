@@ -2,22 +2,22 @@
   "id": "13de06a12131949f37",
   "tournamentId": "13de06a12131949f",
   "stageIndex": 0,
-  "partIndex": 7,
-  "matchIndex": 5,
+  "partIndex": 8,
+  "matchIndex": 0,
   "gameVersion": "4.6",
   "playerA": {
-    "playerId": "321c54391ba482fc",
-    "nickname": "llb"
+    "playerId": "f4ffebe1228f45d0",
+    "nickname": "Ting"
   },
   "playerB": {
-    "playerId": "224db7dd49d62bf4",
-    "nickname": "Nyahida"
+    "playerId": "874e4c84a7d9a961",
+    "nickname": "Pilot"
   },
   "bans": [
     {
       "banType": "team",
       "playerATeamId": "1106-1203-1506",
-      "playerBTeamId": "1106-1203-1507"
+      "playerBTeamId": "1303-2203-2602"
     }
   ],
   "gameIds": [
@@ -25,5 +25,5 @@
     "13de06a12131949f3702",
     "13de06a12131949f3703"
   ],
-  "video": "https://www.youtube.com/live/TMqCPKULA3g?t=22682"
+  "video": "https://www.youtube.com/live/JXVqEoxRbwE?t=1266"
 }

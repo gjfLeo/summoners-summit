@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
   }
 
   getGameList()
+    .filter(game => !game.isPrePatch)
     .forEach((game) => {
       for (const p of ["A", "B"] as const) {
         const deckCode = game[`player${p}Deck`].deckCode;

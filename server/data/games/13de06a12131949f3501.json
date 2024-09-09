@@ -5,22 +5,22 @@
   "playerADeck": {
     "characters": [
       "1203",
-      "1507",
-      "1106"
-    ],
-    "teamId": "1106-1203-1507",
-    "deckCode": "AECxyUAMAJFhOEQVFJFAWYYNCKBg9JcPCkBB9jAQE1EBCDMQE4EwO78TC7HwaMQQDLAA"
-  },
-  "playerBDeck": {
-    "characters": [
       "1506",
-      "1203",
       "1106"
     ],
     "teamId": "1106-1203-1506",
-    "deckCode": "AkCQxAsMAFBgxXwMB5DQyYYNCRBw0ZcTCYGAOJgNE9AB9DAPC0HwCL8QE4FhTDYUDMAA"
+    "deckCode": "AFCwySkMAJBg0XwNBxHQOIYTCYFwWZgVCZCB3TAPE0AB9DMPC2Dw+cQQDIFACMUTDLAA"
+  },
+  "playerBDeck": {
+    "characters": [
+      "1106",
+      "1506",
+      "1203"
+    ],
+    "teamId": "1106-1203-1506",
+    "deckCode": "AFBgxSkMAJCwyXwNBxDQ0YYTCYFwOJcVCZGAWZgNE9AB9DAPC0HwCL8QDIFATMQUDMAA"
   },
   "winner": "B",
-  "starter": "B",
-  "gameVideo": "https://www.youtube.com/live/TMqCPKULA3g?t=15054"
+  "starter": "A",
+  "gameVideo": "https://www.youtube.com/live/OLUzXo2yIiI?t=16392"
 }

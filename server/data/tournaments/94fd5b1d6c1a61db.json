@@ -1,12 +1,11 @@
 {
   "id": "94fd5b1d6c1a61db",
   "name": {
-    "zh": "「小王子杯：大西洋赛区」淘汰赛",
-    "en": "The Prince Cup: ATLANTIC - Knockout Stage"
+    "zh": "「小王子杯：大西洋赛区」淘汰赛 (The Prince Cup: ATLANTIC - Knockout Stage)"
   },
   "gameVersion": "4.8",
-  "region": "Atlantic",
-  "type": "地区大赛",
+  "region": "CN",
+  "type": "未分类（外服）",
   "stages": [
     {
       "name": {
@@ -26,8 +25,7 @@
       "parts": [
         {
           "name": {
-            "zh": "胜者组第1轮",
-            "en": "UB R1"
+            "zh": "胜者组第1轮 (UB R1)"
           },
           "date": "2024-07-27",
           "matchIds": [
@@ -37,8 +35,7 @@
         },
         {
           "name": {
-            "zh": "败者组第1轮",
-            "en": "LB R1"
+            "zh": "败者组第1轮 (LB R1)"
           },
           "date": "2024-07-27",
           "matchIds": [
@@ -48,8 +45,7 @@
         },
         {
           "name": {
-            "zh": "败者组第2轮",
-            "en": "LB R2"
+            "zh": "败者组第2轮 (LB R2)"
           },
           "date": "2024-07-28",
           "matchIds": [
@@ -59,8 +55,7 @@
         },
         {
           "name": {
-            "zh": "胜者组决赛",
-            "en": "UB F"
+            "zh": "胜者组决赛 (UB F)"
           },
           "date": "2024-07-28",
           "matchIds": [
@@ -69,8 +64,7 @@
         },
         {
           "name": {
-            "zh": "败者组半决赛",
-            "en": "LB SF"
+            "zh": "败者组半决赛 (LB SF)"
           },
           "date": "2024-07-28",
           "matchIds": [
@@ -79,8 +73,7 @@
         },
         {
           "name": {
-            "zh": "败者组决赛",
-            "en": "LB F"
+            "zh": "败者组决赛 (LB F)"
           },
           "date": "2024-07-29",
           "matchIds": [
@@ -91,8 +84,7 @@
     },
     {
       "name": {
-        "zh": "总决赛",
-        "en": "GF"
+        "zh": "总决赛 (GF)"
       },
       "rules": {
         "numGames": 7,

@@ -21,7 +21,9 @@ export default defineEventHandler(async (event) => {
     numBanned: 0,
   });
 
-  const games = getGameList().filter(game => game.gameVersion === gameVersion);
+  const games = getGameList()
+    .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch);
   games
     .flatMap(game => [game, getMirroredGame(game)])
     .forEach((game) => {
@@ -32,7 +34,9 @@ export default defineEventHandler(async (event) => {
       });
     });
 
-  const matches = getMatchList().filter(match => match.gameVersion === gameVersion);
+  const matches = getMatchList()
+    .filter(match => match.gameVersion === gameVersion)
+    .filter(match => !match.isPrePatch);
   matches
     .forEach((match) => {
       const playerACharacters: Record<CardId, true> = {};

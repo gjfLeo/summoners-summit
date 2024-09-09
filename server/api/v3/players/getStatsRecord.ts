@@ -29,6 +29,7 @@ export default defineEventHandler(async (event) => {
 
   const matches = getMatchList()
     .filter(match => match.gameVersion === gameVersion)
+    .filter(match => !match.isPrePatch)
     .map(match => getMatchDetail(match.id)!)
     .flatMap(match => [match, getMirroredMatchDetail(match)]);
   matches.forEach((match) => {
@@ -42,6 +43,7 @@ export default defineEventHandler(async (event) => {
 
   const games = getGameList()
     .filter(game => game.gameVersion === gameVersion)
+    .filter(game => !game.isPrePatch)
     .map(game => getGameDetail(game.id)!)
     .flatMap(game => [game, getMirroredGameDetail(game)]);
   games.forEach((game) => {
