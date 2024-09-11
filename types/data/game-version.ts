@@ -4,8 +4,8 @@ import { ZGameVersionId, ZLocales, ZSeasonPhraseId } from "./base";
 export const ZSeasonPhrase = z.object({
   id: ZSeasonPhraseId,
   gameVersions: ZGameVersionId.array(),
-  cardBackName: z.record(ZLocales, z.string()),
-  cardBackDescription: z.record(ZLocales, z.string()),
+  cardBackName: z.record(ZLocales, z.string()).optional(),
+  cardBackDescription: z.record(ZLocales, z.string()).optional(),
 }).strip();
 export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 

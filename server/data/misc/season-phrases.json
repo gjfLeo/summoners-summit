@@ -74,5 +74,11 @@
       "zh": "黄金代表最为辉煌的财富，无论冒险家、矿工还是牌手，都将这色彩视为事业的冠冕……",
       "en": "Gold, the most glorious form that wealth can take. Whether you're an adventurer, miner, or card player, it represents the crowning achievement of your career..."
     }
+  },
+  "3.1": {
+    "id": "3.1",
+    "gameVersions": [
+      "5.0", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6"
+    ]
   }
 }
