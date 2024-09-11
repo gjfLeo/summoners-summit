@@ -79,7 +79,7 @@
 <script lang="ts" setup>
 import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { AdminTournamentStageForm, NForm } from "#components";
-import type { Tournament, TournamentId } from "~/types/data";
+import type { CardId, Tournament, TournamentId } from "~/types/data";
 
 const emit = defineEmits<{
   (e: "save", tournamentId: TournamentId): void;
@@ -170,5 +170,36 @@ function addStage() {
 }
 
 const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
-provide("matchEditor", matchEditor);
+provideLocal("matchEditor", matchEditor);
+
+const actionCardNumUsages = ref<Record<CardId, number>>({});
+provide("actionCardNumUsages", actionCardNumUsages);
+watch(() => tournament.value.gameVersion, async () => {
+  const res = await $fetch("/api/v3/cards/getActionCardStats", {
+    params: { preferredGameVersion: tournament.value.gameVersion },
+  });
+  if (res.success) {
+    actionCardNumUsages.value = Object.fromEntries(
+      res.actionCardStats.map(item => [
+        item.cardId,
+        item.numUsages,
+      ]),
+    );
+  }
+}, { immediate: true });
+const characterCardNumUsages = ref<Record<CardId, number>>({});
+provide("characterCardNumUsages", characterCardNumUsages);
+watch(() => tournament.value.gameVersion, async () => {
+  const res = await $fetch("/api/v3/cards/getCharacterCardStats", {
+    params: { preferredGameVersion: tournament.value.gameVersion },
+  });
+  if (res.success) {
+    characterCardNumUsages.value = Object.fromEntries(
+      res.characterCardStats.map(item => [
+        item.cardId,
+        item.numGames + item.numBanned,
+      ]),
+    );
+  }
+}, { immediate: true });
 </script>

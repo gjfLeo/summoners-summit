@@ -5,11 +5,16 @@ import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
 
 export default defineEventHandler(async (event) => {
-  const { gameVersion, teamId } = await getValidatedQuery(event, ZGetActionCardStatsParams.parse);
+  const { gameVersion, teamId, preferredGameVersion } = await getValidatedQuery(event, ZGetActionCardStatsParams.parse);
 
   let games = getGameList()
-    .filter(game => game.gameVersion === gameVersion)
-    .filter(game => !game.isPrePatch)
+    .filter(game => !game.isPrePatch);
+
+  if (gameVersion) {
+    games = games.filter(game => game.gameVersion === gameVersion);
+  }
+
+  games = games
     .flatMap(game => [game, getMirroredGame(game)])
     .filter(game => game.playerADeck.deckCode);
 
@@ -28,6 +33,7 @@ export default defineEventHandler(async (event) => {
 
   games
     .forEach((game) => {
+      const gameVersionWeight = (preferredGameVersion && game.gameVersion !== preferredGameVersion) ? 0.1 : 1;
       const deckCode = game.playerADeck.deckCode!;
       const cards = decodeDeck(deckCode).actionCards;
       const cardIncluded: Record<CardId, true> = {};
@@ -35,11 +41,11 @@ export default defineEventHandler(async (event) => {
         const recordItem = getRecord(cardId);
         if (!cardIncluded[cardId]) {
           cardIncluded[cardId] = true;
-          recordItem.numGameDecks++;
-          if (game.winner === "A") recordItem.numGameDecksWin++;
+          recordItem.numGameDecks += gameVersionWeight;
+          if (game.winner === "A") recordItem.numGameDecksWin += gameVersionWeight;
         }
-        recordItem.numUsages++;
-        if (game.winner === "A") recordItem.numUsagesWin++;
+        recordItem.numUsages += gameVersionWeight;
+        if (game.winner === "A") recordItem.numUsagesWin += gameVersionWeight;
       });
     });
 

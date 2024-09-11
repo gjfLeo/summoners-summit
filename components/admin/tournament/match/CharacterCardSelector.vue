@@ -32,6 +32,7 @@ const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 const popoverRef = ref<InstanceType<typeof NPopover>>();
 
+const characterCardNumUsages = inject<Ref<Record<CardId, number>>>("characterCardNumUsages", ref({}));
 const options = computed(() => {
   return characterCardIds.value
     .flatMap((cardId) => {
@@ -44,11 +45,7 @@ const options = computed(() => {
         match,
       };
     })
-    .sort((option1, option2) => {
-      if (option1.match[0] === 0 && option2.match[0] !== 0) return -1;
-      if (option2.match[0] === 0 && option1.match[0] !== 0) return 1;
-      return 0;
-    });
+    .sort(sorter(option => characterCardNumUsages.value[option.value] ?? 0)).reverse();
 });
 
 function renderLabel(option: typeof options["value"][number]) {

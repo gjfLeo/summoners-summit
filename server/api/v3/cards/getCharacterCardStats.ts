@@ -1,16 +1,18 @@
 import { z } from "zod";
 import { getGameList, getMatchList } from "~/server/service";
+import { ZGameVersionId } from "~/types";
 import type { CardId, CharacterCardStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
 import { getCharacterCardsByTeamId } from "~/utils/team";
 
 const ZParams = z.object({
-  gameVersion: z.string(),
+  gameVersion: ZGameVersionId.optional(),
+  preferredGameVersion: ZGameVersionId.optional(),
 }).strip();
 
 export default defineEventHandler(async (event) => {
-  const { gameVersion } = await getValidatedQuery(event, ZParams.parse);
+  const { gameVersion, preferredGameVersion } = await getValidatedQuery(event, ZParams.parse);
 
   const record: Record<CardId, CharacterCardStats> = {};
   const getRecord = (cardId: CardId) => (record[cardId] ??= {
@@ -21,24 +23,32 @@ export default defineEventHandler(async (event) => {
     numBanned: 0,
   });
 
-  const games = getGameList()
-    .filter(game => game.gameVersion === gameVersion)
+  let games = getGameList()
     .filter(game => !game.isPrePatch);
+
+  if (gameVersion) {
+    games = games.filter(game => game.gameVersion === gameVersion);
+  }
+
   games
     .flatMap(game => [game, getMirroredGame(game)])
     .forEach((game) => {
       game.playerADeck.characters.forEach((cardId) => {
+        const gameVersionWeight = (preferredGameVersion && game.gameVersion !== preferredGameVersion) ? 0.1 : 1;
         const stats = getRecord(cardId);
-        stats.numGames++;
-        if (game.winner === "A") stats.numGamesWin++;
+        stats.numGames += gameVersionWeight;
+        if (game.winner === "A") stats.numGamesWin += gameVersionWeight;
       });
     });
 
-  const matches = getMatchList()
-    .filter(match => match.gameVersion === gameVersion)
+  let matches = getMatchList()
     .filter(match => !match.isPrePatch);
+  if (gameVersion) {
+    matches = matches.filter(match => match.gameVersion === gameVersion);
+  }
   matches
     .forEach((match) => {
+      const gameVersionWeight = (preferredGameVersion && match.gameVersion !== preferredGameVersion) ? 0.1 : 1;
       const playerACharacters: Record<CardId, true> = {};
       const playerBCharacters: Record<CardId, true> = {};
       match.bans?.forEach((ban) => {
@@ -48,17 +58,17 @@ export default defineEventHandler(async (event) => {
           playerACharacters[ban.playerBCardId] = true;
           playerBCharacters[ban.playerACardId] = true;
           playerBCharacters[ban.playerBCardId] = true;
-          getRecord(ban.playerACardId).numBanned++;
-          getRecord(ban.playerBCardId).numBanned++;
+          getRecord(ban.playerACardId).numBanned += gameVersionWeight;
+          getRecord(ban.playerBCardId).numBanned += gameVersionWeight;
         }
         else {
           getCharacterCardsByTeamId(ban.playerATeamId).forEach((cardId) => {
             playerACharacters[cardId] = true;
-            getRecord(cardId).numBanned++;
+            getRecord(cardId).numBanned += gameVersionWeight;
           });
           getCharacterCardsByTeamId(ban.playerBTeamId).forEach((cardId) => {
             playerBCharacters[cardId] = true;
-            getRecord(cardId).numBanned++;
+            getRecord(cardId).numBanned += gameVersionWeight;
           });
         }
       });
@@ -73,7 +83,7 @@ export default defineEventHandler(async (event) => {
       });
       [...Object.keys(playerACharacters), ...Object.keys(playerBCharacters)]
         .forEach((cardId) => {
-          getRecord(cardId).numMatches++;
+          getRecord(cardId).numMatches += gameVersionWeight;
         });
     });
 

@@ -1,17 +1,20 @@
 <template>
-  <NTooltip placement="bottom" overlap :show-arrow="false">
-    <template #trigger>
-      <NImage
-        class="aspect-[7/12]"
-        :src="src"
-        :alt="cardInfo.name[locale]"
-        preview-disabled
-      />
-    </template>
-    <template #default>
-      <div class="text-sm">{{ cardInfo.name[locale] }}</div>
-    </template>
-  </NTooltip>
+  <div
+    class="aspect-[7/12]"
+  >
+    <NTooltip placement="bottom" overlap :show-arrow="false">
+      <template #trigger>
+        <NImage
+          :src="src"
+          :alt="cardInfo.name[locale]"
+          preview-disabled
+        />
+      </template>
+      <template #default>
+        <div class="text-sm">{{ cardInfo.name[locale] }}</div>
+      </template>
+    </NTooltip>
+  </div>
 </template>
 
 <script lang="ts" setup>

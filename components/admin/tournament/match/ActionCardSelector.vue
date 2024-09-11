@@ -23,6 +23,7 @@ const { actionCardList } = useSharedData();
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 
+const actionCardNumUsages = inject<Ref<Record<CardId, number>>>("actionCardNumUsages", ref({}));
 const options = computed(() => {
   return actionCardList.value
     .flatMap((card) => {
@@ -35,7 +36,8 @@ const options = computed(() => {
         value: card.id,
         match,
       };
-    });
+    })
+    .sort(sorter(option => actionCardNumUsages.value[option.value] ?? 0)).reverse();
 });
 
 function renderLabel(option: typeof options["value"][number]) {
