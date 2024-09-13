@@ -29,6 +29,10 @@
   },
   "name": "Summoners' Summit",
   "notifications": {
+    "changeDomain": {
+      "content": "The domain of this site has been changed, please update your favorite address~",
+      "title": "Notification"
+    },
     "copyDeckCode": {
       "content": "Due to algorithm limitations, there is currently a small chance of generating an invalid sharing code. If you find an invalid share, please contact the maintainer (see footer), thank you for your help!",
       "title": "Deck Share Code Copied"

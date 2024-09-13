@@ -29,6 +29,10 @@
   },
   "name": "召唤之巅",
   "notifications": {
+    "changeDomain": {
+      "content": "本站域名已更换，请更新收藏地址~",
+      "title": "提示"
+    },
     "copyDeckCode": {
       "content": "由于算法限制，目前有小几率生成无效的分享码。如果发现了无效分享码，请联系维护者（查看页脚），谢谢您的帮助！",
       "title": "牌组分享码已复制"
