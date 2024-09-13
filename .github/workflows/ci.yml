@@ -71,6 +71,7 @@ jobs:
         run: pnpm run generate
         env:
           NUXT_APP_BASE_URL: /summoners-summit/
+          NUXT_PUBLIC_NEED_REDIRECT: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      needRedirect: false,
       updateTime: dayjs().add(new Date().getTimezoneOffset() + 480, "minutes").format("YYYY-MM-DD HH:mm:ss"),
     },
   },
