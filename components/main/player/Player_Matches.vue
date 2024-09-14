@@ -1,6 +1,7 @@
 <template>
   <div>
-    <template v-for="match in matchList" :key="match.id">
+    <template v-for="(match, i) in matchList" :key="match.id">
+      <NDivider v-if="i > 0 && match.tournamentId !== matchList[i - 1].tournamentId" />
       <NH3 un-flex="~ gap-2">
         <span>{{ match.gameVersion }}</span>
         <span>{{ currentLocalized(match.tournamentName) }}</span>
