@@ -80,5 +80,22 @@
       "6c3f63dab9956792",
       "357f80d929a918ce"
     ]
+  },
+  {
+    "id": "season2-fonta",
+    "name": {
+      "zh": "层岩巨渊·冠冕",
+      "en": "The Chasm: Crown"
+    },
+    "flavorText": {
+      "zh": "黄金代表最为辉煌的财富，无论冒险家、矿工还是牌手，都将这色彩视为事业的冠冕……",
+      "en": "Gold, the most glorious form that wealth can take. Whether you're an adventurer, miner, or card player, it represents the crowning achievement of your career..."
+    },
+    "description": {
+      "zh": "在全民赛事第二季的小王子杯中取得十六强。"
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/The_Chasm_Crown_Card_Back.png",
+    "playerIds": [
+    ]
   }
 ]
