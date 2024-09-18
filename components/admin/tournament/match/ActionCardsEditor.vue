@@ -51,7 +51,7 @@ const cardSelectorRef = ref<InstanceType<typeof AdminTournamentMatchActionCardSe
 const countSelectorRef = ref<InstanceType<typeof NAutoComplete>>();
 
 async function edit(currentValue: CardId[]) {
-  actionCards.value = [...currentValue];
+  actionCards.value = [...currentValue].sort();
   visible.value = true;
   return new Promise<CardId[]>((resolve, reject) => {
     actionCards.value = currentValue;
@@ -84,6 +84,7 @@ function handleInputCount(value: string) {
   if (!card) return;
   if (count === 1 || count === 2) {
     actionCards.value.push(...Array.from({ length: count }, () => card));
+    actionCards.value.sort();
   }
   cardSelectorRef.value?.clear();
   cardSelectorRef.value?.focus();
