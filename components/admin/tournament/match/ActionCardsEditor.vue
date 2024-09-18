@@ -53,6 +53,11 @@ const countSelectorRef = ref<InstanceType<typeof NAutoComplete>>();
 async function edit(currentValue: CardId[]) {
   actionCards.value = [...currentValue].sort();
   visible.value = true;
+
+  nextTick(() => {
+    cardSelectorRef.value?.clear();
+    cardSelectorRef.value?.focus();
+  });
   return new Promise<CardId[]>((resolve, reject) => {
     actionCards.value = currentValue;
     resolveRef.value = resolve;

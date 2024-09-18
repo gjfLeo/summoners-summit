@@ -1,7 +1,7 @@
 <template>
   <NPopover ref="popoverRef" trigger="click" placement="bottom" @update:show="handlePopoverUpdateShow">
     <template #trigger>
-      <CardAvatar :card="cardId" class="cursor-pointer" />
+      <CardAvatar :card="cardId" class="cursor-pointer bg-light-400 dark:bg-dark-400" />
     </template>
     <template #default>
       <NAutoComplete
