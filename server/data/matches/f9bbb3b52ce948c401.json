@@ -1,0 +1,23 @@
+{
+  "id": "f9bbb3b52ce948c401",
+  "tournamentId": "f9bbb3b52ce948c4",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "4.8",
+  "playerA": {
+    "playerId": "0fbd09c9eec8e0d5",
+    "nickname": "祁音"
+  },
+  "playerB": {
+    "playerId": "efbee6ad6e14556a",
+    "nickname": "湖畔度假区"
+  },
+  "gameIds": [
+    "f9bbb3b52ce948c40101",
+    "f9bbb3b52ce948c40102",
+    "f9bbb3b52ce948c40103",
+    "f9bbb3b52ce948c40104"
+  ],
+  "video": "https://www.bilibili.com/video/BV1jctVeZE1W"
+}

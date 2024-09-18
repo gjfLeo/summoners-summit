@@ -1,0 +1,22 @@
+{
+  "id": "f9bbb3b52ce948c403",
+  "tournamentId": "f9bbb3b52ce948c4",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "4c63f6a25b8a26b8",
+    "nickname": "岚落尘"
+  },
+  "playerB": {
+    "playerId": "84f6604c3420f805",
+    "nickname": "白飞飞"
+  },
+  "gameIds": [
+    "f9bbb3b52ce948c40301",
+    "f9bbb3b52ce948c40302",
+    "f9bbb3b52ce948c40303",
+    "f9bbb3b52ce948c40304"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "f9bbb3b52ce948c4",
+  "name": {
+    "zh": "「逐辉星聚」月话杯"
+  },
+  "gameVersion": "5.0",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 7
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "DAY1"
+          },
+          "date": "2024-09-17",
+          "matchIds": [
+            "f9bbb3b52ce948c401",
+            "f9bbb3b52ce948c402"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-09-18",
+          "matchIds": [
+            "f9bbb3b52ce948c403",
+            "f9bbb3b52ce948c404"
+          ]
+        }
+      ]
+    }
+  ]
+}
