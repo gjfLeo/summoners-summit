@@ -20,6 +20,11 @@
 
 注意项目当前使用 `v3` 分支。
 
+```bash
+git checkout v3
+git pull
+```
+
 ### 2. 安装依赖，并在本地启动项目
 
 需要环境：Node.js 20+，pnpm
