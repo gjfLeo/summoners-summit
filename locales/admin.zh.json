@@ -64,6 +64,16 @@
     "final": "决赛",
     "gameVideos": "{0} / {1} 录像",
     "games": "{0} 局",
+    "match": {
+      "bindPlayerData": "绑定选手数据",
+      "draw": "平",
+      "lose": "负",
+      "player1": "选手1",
+      "player2": "选手2",
+      "result": "结果",
+      "startFirst": "先",
+      "win": "胜"
+    },
     "matchVideo": "场次录像",
     "partNamePlaceholder1": "唯一分组名称可省略",
     "title": "赛事信息",

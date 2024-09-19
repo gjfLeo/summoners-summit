@@ -16,11 +16,11 @@
               <th />
               <th>
                 <div un-grid="~ items-center gap-x-4 gap-y-2" class="grid-cols-[auto_1fr]">
-                  <div un-grid="row-span-2 justify-self-end">选手1</div>
+                  <div un-grid="row-span-2 justify-self-end">{{ t('admin.tournament.match.player1') }}</div>
                   <NFormItem path="playerA.nickname">
                     <NInput
                       v-model:value.trim="match.playerA.nickname"
-                      placeholder="昵称"
+                      :placeholder="t('main.player.nickname')"
                       clearable
                     />
                   </NFormItem>
@@ -28,18 +28,18 @@
                     v-model:value="match.playerA.playerId"
                     :players="players"
                     :nickname="match.playerA.nickname"
-                    placeholder="绑定选手数据"
+                    :placeholder="t('admin.tournament.match.bindPlayerData')"
                   />
                 </div>
               </th>
               <th />
               <th>
                 <div un-grid="~ items-center gap-x-4 gap-y-2" class="grid-cols-[auto_1fr]">
-                  <div un-grid="row-span-2 justify-self-end">选手2</div>
+                  <div un-grid="row-span-2 justify-self-end">{{ t('admin.tournament.match.player2') }}</div>
                   <NFormItem path="playerB.nickname">
                     <NInput
                       v-model:value.trim="match.playerB.nickname"
-                      placeholder="昵称"
+                      :placeholder="t('main.player.nickname')"
                       clearable
                     />
                   </NFormItem>
@@ -47,7 +47,7 @@
                     v-model:value="match.playerB.playerId"
                     :players="players"
                     :nickname="match.playerB.nickname"
-                    placeholder="绑定选手数据"
+                    :placeholder="t('admin.tournament.match.bindPlayerData')"
                   />
                 </div>
               </th>
@@ -75,16 +75,14 @@
               </td>
               <td>
                 <div un-flex="~ gap-2">
-                  <template v-if="match.games.length > 1">
-                    <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteBan(banIndex)">
-                      <CommonIconButton icon="i-mingcute:delete-2-line" danger />
-                    </CommonConfirmButton>
-                  </template>
+                  <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteBan(banIndex)">
+                    <CommonIconButton icon="i-mingcute:delete-2-line" danger />
+                  </CommonConfirmButton>
                 </div>
               </td>
             </tr>
             <tr key="B+">
-              <th class="text-center!">禁用</th>
+              <th class="text-center!">{{ t('main.tournament.ban') }}</th>
               <td :colspan="3">
                 <NButton class="w-full" dashed @click="addBan">
                   <template #icon><div class="i-mingcute:add-line" /></template>
@@ -108,19 +106,19 @@
                   <template #trigger>
                     <CommonTextButton
                       :primary="game.winner === 'DRAW-W' || game.winner === 'DRAW-L'"
-                      text="平"
+                      :text="t('admin.tournament.match.draw')"
                     />
                   </template>
                   <template #default>
                     <div un-flex="~ gap-2">
                       <CommonTextButton
                         :primary="game.winner === 'DRAW-W'"
-                        text="胜"
+                        :text="t('admin.tournament.match.win')"
                         @click="game.winner = 'DRAW-W'"
                       />
                       <CommonTextButton
                         :primary="game.winner === 'DRAW-L'"
-                        text="负"
+                        :text="t('admin.tournament.match.lose')"
                         @click="game.winner = 'DRAW-L'"
                       />
                     </div>
@@ -141,11 +139,9 @@
                     :icon="Boolean(game.gameVideo) ? 'i-mingcute:video-camera-fill' : 'i-mingcute:video-camera-line'"
                     @click="async () => game.gameVideo = await inputVideo(game.gameVideo)"
                   />
-                  <template v-if="match.games.length > 1">
-                    <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
-                      <CommonIconButton icon="i-mingcute:delete-2-line" danger />
-                    </CommonConfirmButton>
-                  </template>
+                  <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
+                    <CommonIconButton icon="i-mingcute:delete-2-line" danger />
+                  </CommonConfirmButton>
                 </div>
               </td>
             </tr>
@@ -160,6 +156,33 @@
                 </NFormItem>
               </td>
               <td />
+            </tr>
+            <tr key="winnerOverride">
+              <th class="text-center!">{{ t('admin.tournament.match.result') }}</th>
+              <td class="text-center">
+                <CommonTextButton
+                  :primary="match.winnerOverride === 'A' || (match.winnerOverride === undefined && computedWinner === 'A')"
+                  :strong="match.winnerOverride === 'A'"
+                  :text="t('admin.tournament.match.win')"
+                  @click="match.winnerOverride = (match.winnerOverride === 'A' ? undefined : 'A')"
+                />
+              </td>
+              <td class="text-center">
+                <CommonTextButton
+                  :primary="match.winnerOverride === 'DRAW' || (match.winnerOverride === undefined && computedWinner === 'DRAW')"
+                  :strong="match.winnerOverride === 'DRAW'"
+                  :text="t('admin.tournament.match.draw')"
+                  @click="match.winnerOverride = (match.winnerOverride === 'DRAW' ? undefined : 'DRAW')"
+                />
+              </td>
+              <td class="text-center">
+                <CommonTextButton
+                  :primary="match.winnerOverride === 'B' || (match.winnerOverride === undefined && computedWinner === 'B')"
+                  :strong="match.winnerOverride === 'B'"
+                  :text="t('admin.tournament.match.win')"
+                  @click="match.winnerOverride = (match.winnerOverride === 'B' ? undefined : 'B')"
+                />
+              </td>
             </tr>
           </TransitionGroup>
         </NTable>
@@ -203,9 +226,6 @@ const formRules: FormRules = {
   "playerB.nickname": { required: true, message: "选手2昵称不能为空", trigger: "input" },
   "games": {
     validator: () => {
-      if (match.value.games.length === 0) {
-        return new Error("至少需要包含1场对局");
-      }
       const i = match.value.games.findIndex(g =>
         g.playerADeck.characters.filter(c => c).length < 3
         || g.playerBDeck.characters.filter(c => c).length < 3,
@@ -313,4 +333,13 @@ function inputVideo(video: string | undefined) {
 
 const actionCardsEditor = ref<InstanceType<typeof AdminTournamentMatchActionCardsEditor>>();
 provide("actionCardsEditor", actionCardsEditor);
+
+const computedWinner = computed(() => {
+  const aWins = match.value.games.filter(g => g.winner === "A").length;
+  const bWins = match.value.games.filter(g => g.winner === "B").length;
+  if (aWins === bWins) {
+    return "DRAW";
+  }
+  return aWins > bWins ? "A" : "B";
+});
 </script>

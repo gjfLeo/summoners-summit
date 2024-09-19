@@ -4,14 +4,14 @@
       :primary="starter === player"
       :strong="starter === player"
       :error="starter === undefined"
-      text="先"
+      :text="t('admin.tournament.match.startFirst')"
       @click="starter = player"
     />
     <CommonTextButton
       :primary="winner === player"
       :strong="winner === player"
       :error="winner === undefined"
-      text="胜"
+      :text="t('admin.tournament.match.win')"
       @click="winner = player"
     />
     <div un-flex="~ gap-1">
@@ -28,7 +28,7 @@
       :error="actionCards.length > 0 && actionCards.length < 30"
       @click="inputActionCards"
     >
-      行动牌 ({{ actionCards.length }})
+      {{ $t('terms.actionCards') }} ({{ actionCards.length }})
     </CommonTextButton>
     <CommonIconButton size="tiny" icon="i-mingcute:copy-line" @click="copyDeck" />
     <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
@@ -38,7 +38,6 @@
 <script lang="ts" setup>
 import type { CardId, Game } from "~/types/data";
 import {
-
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";
 import type { AdminTournamentMatchActionCardsEditor as ActionCardsEditor } from "#components";
@@ -47,6 +46,8 @@ import type { MatchSaveParams } from "~/server/service";
 defineProps<{
   player: "A" | "B";
 }>();
+
+const { t } = useLocales();
 
 const deck = defineModel<MatchSaveParams["games"][number]["playerADeck"]>("deck", { required: true });
 const starter = defineModel<Game["starter"]>("starter", { required: true });
