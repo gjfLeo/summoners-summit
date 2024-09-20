@@ -1,0 +1,23 @@
+{
+  "id": "f9bbb3b52ce948c406",
+  "tournamentId": "f9bbb3b52ce948c4",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "6e2707a45bb0d3f3",
+    "nickname": "卡密sama"
+  },
+  "playerB": {
+    "playerId": "4c63f6a25b8a26b8",
+    "nickname": "岚落尘"
+  },
+  "gameIds": [
+    "f9bbb3b52ce948c40601",
+    "f9bbb3b52ce948c40602",
+    "f9bbb3b52ce948c40603",
+    "f9bbb3b52ce948c40604"
+  ],
+  "video": "https://www.bilibili.com/video/BV11dbwe5EjQ"
+}

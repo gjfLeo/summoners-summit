@@ -1,0 +1,23 @@
+{
+  "id": "3445b904efb0b67407",
+  "tournamentId": "3445b904efb0b674",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "13c2271caa725923",
+    "nickname": "TianJam"
+  },
+  "playerB": {
+    "playerId": "ed4f7ffc6dc90ee7",
+    "nickname": "贝尔格里"
+  },
+  "gameIds": [
+    "3445b904efb0b6740701",
+    "3445b904efb0b6740702",
+    "3445b904efb0b6740703"
+  ],
+  "video": "https://www.bilibili.com/video/BV171bceAEnG"
+}

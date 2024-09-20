@@ -15,8 +15,7 @@
         "numGames": 5,
         "mode": "conquest",
         "submitTeams": {
-          "num": 3,
-          "submitDecks": {}
+          "num": 3
         }
       },
       "parts": [
@@ -38,6 +37,49 @@
           "matchIds": [
             "3445b904efb0b67403",
             "3445b904efb0b67404"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-09-18",
+          "matchIds": [
+            "3445b904efb0b67405",
+            "3445b904efb0b67406"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-09-19",
+          "matchIds": [
+            "3445b904efb0b67407"
           ]
         }
       ]
