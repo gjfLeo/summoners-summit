@@ -68,6 +68,30 @@
           ]
         }
       ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-09-22",
+          "matchIds": [
+            "f9bbb3b52ce948c407"
+          ]
+        }
+      ]
     }
   ]
 }
