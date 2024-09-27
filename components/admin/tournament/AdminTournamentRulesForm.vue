@@ -60,6 +60,7 @@
             <NInputGroup>
               <NInputGroupLabel>至少</NInputGroupLabel>
               <NInputNumber
+                v-model:value="submitTeamsNumCharactersRequired"
                 class="w-4rem"
                 :show-button="false"
                 :min="1"
@@ -166,6 +167,16 @@ const submitTeamsNum = computed<number>({
   set: (v) => {
     if (rules.value.submitTeams) {
       rules.value.submitTeams.num = v;
+    }
+  },
+});
+const submitTeamsNumCharactersRequired = computed<number>({
+  get: () => {
+    return rules.value.submitTeams?.numCharactersRequired ?? submitTeamsNum.value * 3;
+  },
+  set: (v) => {
+    if (rules.value.submitTeams && v <= submitTeamsNum.value * 3) {
+      rules.value.submitTeams.numCharactersRequired = v;
     }
   },
 });
