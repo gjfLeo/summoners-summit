@@ -172,11 +172,16 @@ function addStage() {
 const matchEditor = ref<InstanceType<typeof AdminTournamentMatchEditor>>();
 provideLocal("matchEditor", matchEditor);
 
+const { gameVersionLatest } = useSharedData();
+const preferredGameVersion = computed(() => {
+  return tournament.value.gameVersion || gameVersionLatest.value || undefined;
+});
+
 const actionCardNumUsages = ref<Record<CardId, number>>({});
 provide("actionCardNumUsages", actionCardNumUsages);
-watch(() => tournament.value.gameVersion, async () => {
+watch(preferredGameVersion, async () => {
   const res = await $fetch("/api/v3/cards/getActionCardStats", {
-    params: { preferredGameVersion: tournament.value.gameVersion },
+    params: preferredGameVersion.value ? { preferredGameVersion: preferredGameVersion.value } : undefined,
   });
   if (res.success) {
     actionCardNumUsages.value = Object.fromEntries(
@@ -187,11 +192,12 @@ watch(() => tournament.value.gameVersion, async () => {
     );
   }
 }, { immediate: true });
+
 const characterCardNumUsages = ref<Record<CardId, number>>({});
 provide("characterCardNumUsages", characterCardNumUsages);
-watch(() => tournament.value.gameVersion, async () => {
+watch(preferredGameVersion, async () => {
   const res = await $fetch("/api/v3/cards/getCharacterCardStats", {
-    params: { preferredGameVersion: tournament.value.gameVersion },
+    params: preferredGameVersion.value ? { preferredGameVersion: preferredGameVersion.value } : undefined,
   });
   if (res.success) {
     characterCardNumUsages.value = Object.fromEntries(
