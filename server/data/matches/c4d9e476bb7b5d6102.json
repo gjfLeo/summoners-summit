@@ -1,0 +1,34 @@
+{
+  "id": "c4d9e476bb7b5d6102",
+  "tournamentId": "c4d9e476bb7b5d61",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "a2a041ea65e702b6",
+    "nickname": "云野空悠"
+  },
+  "playerB": {
+    "playerId": "aa76a9c66f6aa428",
+    "nickname": "未咲的小迷弟"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "2304",
+      "playerBCardId": "1305"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1303-2203-2602",
+      "playerBTeamId": "1309-1605-1608"
+    }
+  ],
+  "gameIds": [
+    "c4d9e476bb7b5d610201",
+    "c4d9e476bb7b5d610202",
+    "c4d9e476bb7b5d610203"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Zbx7eTEQm"
+}
