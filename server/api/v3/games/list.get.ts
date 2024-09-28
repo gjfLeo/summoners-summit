@@ -1,4 +1,4 @@
-import { fillGameDetail, getGameList, mirrorGame } from "~/server/service";
+import { fillGameDetail, getGameList } from "~/server/service";
 import { ZGetGameListParams } from "~/types";
 import { getMirroredGameDetail } from "~/utils/match";
 
