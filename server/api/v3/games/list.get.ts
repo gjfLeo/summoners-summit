@@ -1,27 +1,27 @@
 import { fillGameDetail, getGameList, mirrorGame } from "~/server/service";
 import { ZGetGameListParams } from "~/types";
+import { getMirroredGameDetail } from "~/utils/match";
 
 export default defineEventHandler(async (event) => {
   const { gameVersion, deckCode, teamId } = await getValidatedQuery(event, ZGetGameListParams.parse);
 
   let games = getGameList();
+  games = games.filter(game => !game.isPrePatch);
 
   if (gameVersion) {
     games = games.filter(game => game.gameVersion === gameVersion);
   }
 
-  games = games.flatMap(game => [game, mirrorGame(game)]);
+  let gameDetails = games.map(fillGameDetail).flatMap(game => [game, getMirroredGameDetail(game)]);
 
   if (teamId) {
-    games = games.filter(game => game.playerADeck.teamId === teamId);
+    gameDetails = gameDetails.filter(game => game.playerADeck.teamId === teamId);
   }
   if (deckCode) {
-    games = games.filter(game => game.playerADeck.deckCode === deckCode);
+    gameDetails = gameDetails.filter(game => game.playerADeck.deckCode === deckCode);
   }
 
-  games = games.slice(0, 30);
-
-  const gameDetails = games.map(fillGameDetail);
+  gameDetails = gameDetails.slice(0, 30);
 
   return responseData({ games: gameDetails });
 });
