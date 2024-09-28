@@ -15,7 +15,6 @@
 
 <script lang="ts" setup>
 import { divide, format } from "mathjs/number";
-import type { VChart } from "#components";
 import type { ActionCardStats } from "~/types";
 
 const props = defineProps<{
@@ -36,7 +35,7 @@ const data = computed(() => {
       cardId: item.cardId,
       image: actionCardById.value[item.cardId].image,
       numUsages: item.numUsages,
-      pickFrequency: divide(item.numUsages, item.numGameDecks),
+      averageInWin: divide(item.numUsagesWin, item.numGameDecksWin),
     }))
     .sort(sorter("numUsages"))
     .reverse();
@@ -130,7 +129,7 @@ const option = computed<ECOption>(() => {
       {
         gridIndex: 1,
         type: "value",
-        name: t("main.cards.actionBarChart.pickFrequency"),
+        name: t("main.cards.actionBarChart.averageInWin"),
         scale: true,
         inverse: true,
       },
@@ -151,9 +150,9 @@ const option = computed<ECOption>(() => {
         animationDelay: i => i * 1000 / barNum.value,
       },
       {
-        name: "pickFrequency",
+        name: "averageInWin",
         type: "bar",
-        data: data.value.map(item => item.pickFrequency),
+        data: data.value.map(item => item.averageInWin),
         emphasis: {
           focus: "self",
           label: {

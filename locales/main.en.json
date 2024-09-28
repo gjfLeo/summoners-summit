@@ -1,8 +1,8 @@
 {
   "cards": {
     "actionBarChart": {
+      "averageInWin": "AvePicks in Win",
       "numUsages": "Usages in Deck",
-      "pickFrequency": "Pick Frequency",
       "summary": "Calculated from {0} decks."
     },
     "characterBarChart": {

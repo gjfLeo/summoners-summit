@@ -1,8 +1,8 @@
 {
   "cards": {
     "actionBarChart": {
+      "averageInWin": "胜场平均携带",
       "numUsages": "总携带张数",
-      "pickFrequency": "平均张数",
       "summary": "共统计 {0} 套对局牌组"
     },
     "characterBarChart": {
