@@ -19,6 +19,7 @@
         },
         "submitTeams": {
           "num": 3,
+          "numCharactersRequired": 7,
           "banTeams": {
             "num": 1
           }
@@ -26,11 +27,23 @@
       },
       "parts": [
         {
-          "name": {},
+          "name": {
+            "zh": "DAY1"
+          },
           "date": "2024-09-26",
           "matchIds": [
             "c4d9e476bb7b5d6101",
             "c4d9e476bb7b5d6102"
+          ]
+        },
+        {
+          "name": {
+            "zh": "DAY2"
+          },
+          "date": "2024-09-27",
+          "matchIds": [
+            "c4d9e476bb7b5d6103",
+            "c4d9e476bb7b5d6104"
           ]
         }
       ]

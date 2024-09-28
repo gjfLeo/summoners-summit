@@ -1,0 +1,34 @@
+{
+  "id": "c4d9e476bb7b5d6103",
+  "tournamentId": "c4d9e476bb7b5d61",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "4ada218a303f60b0",
+    "nickname": "和大名"
+  },
+  "playerB": {
+    "playerId": "6eb8617cdc04c78f",
+    "nickname": "沙依"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "1305",
+      "playerBCardId": "2304"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1312-2503-2702",
+      "playerBTeamId": "1303-2203-2602"
+    }
+  ],
+  "gameIds": [
+    "c4d9e476bb7b5d610301",
+    "c4d9e476bb7b5d610302",
+    "c4d9e476bb7b5d610303"
+  ],
+  "video": "https://www.bilibili.com/video/BV1MosfeTENC"
+}
