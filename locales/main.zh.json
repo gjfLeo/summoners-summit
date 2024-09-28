@@ -1,8 +1,10 @@
 {
   "cards": {
     "actionBarChart": {
-      "averageInWin": "胜场平均携带",
-      "numUsages": "总携带张数",
+      "averageInWin": "胜场平均携带数",
+      "averageInWinDescription": "胜场平均携带数 = 此牌胜场携带数 ÷ 携带此牌的胜利对局数",
+      "averageNumUsages": "平均携带数",
+      "averageNumUsagesDescription": "平均携带数 = 此牌总携带数 ÷ 总对局数",
       "summary": "共统计 {0} 套对局牌组"
     },
     "characterBarChart": {

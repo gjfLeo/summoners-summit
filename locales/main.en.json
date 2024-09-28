@@ -1,8 +1,10 @@
 {
   "cards": {
     "actionBarChart": {
-      "averageInWin": "AvePicks in Win",
-      "numUsages": "Usages in Deck",
+      "averageInWin": "Avg. Copies in Wins",
+      "averageInWinDescription": "Avg. Copies in Wins = total copies for this card in wins ÷ total wins with this card",
+      "averageNumUsages": "Avg. Copies",
+      "averageNumUsagesDescription": "Avg. Copies = total copies for this card ÷ total games",
       "summary": "Calculated from {0} decks."
     },
     "characterBarChart": {

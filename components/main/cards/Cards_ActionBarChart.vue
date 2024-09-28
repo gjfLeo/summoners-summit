@@ -10,6 +10,10 @@
         :option="option" autoresize
       />
     </div>
+    <div un-flex="~ col" class="mt">
+      <NText :depth="3" class="text-sm">{{ t('main.cards.actionBarChart.averageNumUsagesDescription') }}</NText>
+      <NText :depth="3" class="text-sm">{{ t('main.cards.actionBarChart.averageInWinDescription') }}</NText>
+    </div>
   </div>
 </template>
 
@@ -34,10 +38,10 @@ const data = computed(() => {
     .map(item => ({
       cardId: item.cardId,
       image: actionCardById.value[item.cardId].image,
-      numUsages: item.numUsages,
+      averageNumUsages: item.numUsages / props.numGameDecks,
       averageInWin: divide(item.numUsagesWin, item.numGameDecksWin),
     }))
-    .sort(sorter("numUsages"))
+    .sort(sorter("averageNumUsages"))
     .reverse();
 });
 
@@ -124,7 +128,11 @@ const option = computed<ECOption>(() => {
       {
         gridIndex: 0,
         type: "value",
-        name: t("main.cards.actionBarChart.numUsages"),
+        name: t("main.cards.actionBarChart.averageNumUsages"),
+        max: 2,
+        nameTextStyle: {
+          align: "left",
+        },
       },
       {
         gridIndex: 1,
@@ -132,13 +140,16 @@ const option = computed<ECOption>(() => {
         name: t("main.cards.actionBarChart.averageInWin"),
         scale: true,
         inverse: true,
+        nameTextStyle: {
+          align: "left",
+        },
       },
     ],
     series: [
       {
-        name: "numUsages",
+        name: "averageNumUsages",
         type: "bar",
-        data: data.value.map(item => item.numUsages),
+        data: data.value.map(item => item.averageNumUsages),
         emphasis: {
           focus: "self",
           label: {
