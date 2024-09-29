@@ -1,0 +1,33 @@
+{
+  "id": "c4d9e476bb7b5d6106",
+  "tournamentId": "c4d9e476bb7b5d61",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "6eb8617cdc04c78f",
+    "nickname": "沙依"
+  },
+  "playerB": {
+    "playerId": "aa717943ad3fbd8e",
+    "nickname": "Tonbo"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "2304",
+      "playerBCardId": "2702"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1201-1404-2203",
+      "playerBTeamId": "1111-1209-1305"
+    }
+  ],
+  "gameIds": [
+    "c4d9e476bb7b5d610601",
+    "c4d9e476bb7b5d610602"
+  ],
+  "video": "https://www.bilibili.com/video/BV1qGxreTEoB"
+}
