@@ -46,7 +46,24 @@
       "zh": "在全民赛事第一赛季的小王子杯中取得十六强。"
     },
     "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
-    "playerIds": []
+    "playerIds": [
+      "65e67d8f4986b332",
+      "f9fb00e0830afb6b",
+      "69d519ce24299abf",
+      "e785b00d8f5852ea",
+      "bcd62893d7a086c6",
+      "9cd4c1c194c57862",
+      "ff49c579c15e828e",
+      "e1e56d73f02b66b7",
+      "d2ecbeaa9fd79c91",
+      "0b7880cfb2325438",
+      "5a4b97fc1f8829e3",
+      "b72b25aef63ca940",
+      "33023375a23b4161",
+      "98bfd49942f6a4e5",
+      "e23ff71160853b3b",
+      "b49f29c304c12d1a"
+    ]
   },
   {
     "id": "season2-fonta",
@@ -95,7 +112,6 @@
       "zh": "在全民赛事第二季的小王子杯中取得十六强。"
     },
     "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/The_Chasm_Crown_Card_Back.png",
-    "playerIds": [
-    ]
+    "playerIds": []
   }
 ]
