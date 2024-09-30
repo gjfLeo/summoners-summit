@@ -1,0 +1,37 @@
+{
+  "id": "c4d9e476bb7b5d6107",
+  "tournamentId": "c4d9e476bb7b5d61",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "aa717943ad3fbd8e",
+    "nickname": "Tonbo"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "1303",
+      "playerBCardId": "2402"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1311-1404-2304",
+      "playerBTeamId": "1312-2503-2702"
+    }
+  ],
+  "gameIds": [
+    "c4d9e476bb7b5d610701",
+    "c4d9e476bb7b5d610702",
+    "c4d9e476bb7b5d610703",
+    "c4d9e476bb7b5d610704",
+    "c4d9e476bb7b5d610705"
+  ],
+  "video": "https://www.bilibili.com/video/BV18dxyeeEgq"
+}
