@@ -1,0 +1,28 @@
+{
+  "id": "d3b13f2941df3de904",
+  "tournamentId": "d3b13f2941df3de9",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "4e4b45728ad6a278",
+    "nickname": "灯火阑珊处"
+  },
+  "playerB": {
+    "playerId": "0e3b51f39487ac68",
+    "nickname": "冰红茶丨汐酥"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1309-1605-1608",
+      "playerBTeamId": "1312-2204-2702"
+    }
+  ],
+  "gameIds": [
+    "d3b13f2941df3de90401",
+    "d3b13f2941df3de90402"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Ej4Ke6EPe"
+}
