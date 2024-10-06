@@ -1,0 +1,28 @@
+{
+  "id": "d3b13f2941df3de907",
+  "tournamentId": "d3b13f2941df3de9",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 6,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "208cdbcde762ec4d",
+    "nickname": "T.undying.You"
+  },
+  "playerB": {
+    "playerId": "efbee6ad6e14556a",
+    "nickname": "流星知愿"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1309-1602-1608",
+      "playerBTeamId": "1111-1209-1305"
+    }
+  ],
+  "gameIds": [
+    "d3b13f2941df3de90701",
+    "d3b13f2941df3de90702"
+  ],
+  "video": "https://www.bilibili.com/video/BV18K45eJEkS"
+}
