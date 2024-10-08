@@ -1,0 +1,36 @@
+{
+  "id": "3c97eebc4e8637af",
+  "name": {
+    "zh": "寒天之钉杯"
+  },
+  "gameVersion": "5.0",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 11,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-10-02",
+          "matchIds": [
+            "3c97eebc4e8637af01"
+          ]
+        }
+      ]
+    }
+  ]
+}
