@@ -15,7 +15,10 @@
       <div un-grid="~ cols-4 gap-x-8 gap-y-2" class="mt">
         <div v-for="playerId in achievement.playerIds" :key="playerId" un-flex="~ items-center">
           <span>{{ players.find((player) => player.id === playerId)?.uniqueName }}</span>
-          <CommonIconButton icon="i-mingcute:delete-2-line" danger class="ml" />
+          <CommonIconButton
+            icon="i-mingcute:delete-2-line" danger class="ml"
+            @click="removePlayer(achievement.id, playerId)"
+          />
         </div>
         <NButton primary @click="showAdd(achievement.id)">添加</NButton>
       </div>
@@ -36,6 +39,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { PlayerId } from "~/types";
+
 const { t, currentLocalized } = useLocales();
 useHead({ title: t("site.titles.admin.achievements") });
 
@@ -78,5 +83,22 @@ async function addSubmit() {
     message.error(t(`admin.message.${res.code}`));
   }
   submitLoading.value = false;
+}
+
+async function removePlayer(achievementId: string, playerId: PlayerId) {
+  const res = await $fetch("/api/v3/achievements/removePlayer", {
+    method: "POST",
+    body: {
+      achievementId,
+      playerId,
+    },
+  });
+  if (res.success) {
+    message.success(t("admin.message.SUCCESS"));
+    refresh();
+  }
+  else {
+    message.error(t(`admin.message.${res.code}`));
+  }
 }
 </script>
