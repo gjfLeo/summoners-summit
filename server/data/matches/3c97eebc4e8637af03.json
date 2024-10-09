@@ -1,0 +1,31 @@
+{
+  "id": "3c97eebc4e8637af03",
+  "tournamentId": "3c97eebc4e8637af",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "bd6ea69b8dde8bff",
+    "nickname": "Dr.666"
+  },
+  "playerB": {
+    "playerId": "5bde4d0d5dc062a6",
+    "nickname": "荧"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1411-1510-2203",
+      "playerBTeamId": "1311-1404-2304"
+    }
+  ],
+  "gameIds": [
+    "3c97eebc4e8637af0301",
+    "3c97eebc4e8637af0302",
+    "3c97eebc4e8637af0303",
+    "3c97eebc4e8637af0304",
+    "3c97eebc4e8637af0305"
+  ],
+  "video": "https://www.bilibili.com/video/BV1W2xRenEuf"
+}

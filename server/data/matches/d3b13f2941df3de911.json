@@ -13,6 +13,13 @@
     "playerId": "22f2e64674077cf6",
     "nickname": "三七二十七"
   },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1411-1510-2203",
+      "playerBTeamId": "1411-1510-2203"
+    }
+  ],
   "gameIds": [
     "d3b13f2941df3de91101",
     "d3b13f2941df3de91102",
