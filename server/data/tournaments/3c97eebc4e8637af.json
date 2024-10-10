@@ -44,6 +44,57 @@
           ]
         }
       ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "numCharactersRequired": 11,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-10-04",
+          "matchIds": [
+            "3c97eebc4e8637af05",
+            "3c97eebc4e8637af06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "numCharactersRequired": 13,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-10-05",
+          "matchIds": [
+            "3c97eebc4e8637af07"
+          ]
+        }
+      ]
     }
   ]
 }
