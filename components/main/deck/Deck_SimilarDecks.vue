@@ -4,10 +4,11 @@
 
 <script lang="ts" setup>
 import { abs, divide } from "mathjs/number";
-import type { CardId, DeckCode, GetDeckListResponseItem } from "~/types";
+import type { CardId, DeckCode, DeckTeamId, GetDeckListResponseItem } from "~/types";
 import { CardImage, CommonIconButton, NTooltip, NuxtLinkLocale } from "#components";
 
 const props = defineProps<{
+  teamId: DeckTeamId;
   deckCode: DeckCode;
   deckList: GetDeckListResponseItem[];
 }>();
@@ -26,22 +27,24 @@ const actionCardRecord = computed(() => {
 });
 
 const data = computed(() => {
-  return deckList.value.map((deck) => {
-    const record = { ...actionCardRecord.value };
-    const cards = decodeDeck(deck.deckCode).actionCards;
-    cards.forEach((card) => {
-      record[card] = (record[card] ?? 0) - 1;
-      if (record[card] === 0) {
-        delete record[card];
-      }
-    });
-    return {
-      ...deck,
-      diffs: record,
-      distance: Object.values(record).reduce((acc, cur) => acc + abs(cur), 0),
-      winRate: divide(deck.numGamesWin, deck.numGames),
-    };
-  });
+  return deckList.value
+    .map((deck) => {
+      const record = { ...actionCardRecord.value };
+      const cards = decodeDeck(deck.deckCode).actionCards;
+      cards.forEach((card) => {
+        record[card] = (record[card] ?? 0) - 1;
+        if (record[card] === 0) {
+          delete record[card];
+        }
+      });
+      return {
+        ...deck,
+        diffs: record,
+        distance: Object.values(record).reduce((acc, cur) => acc + abs(cur), 0),
+        winRate: divide(deck.numGamesWin, deck.numGames),
+      };
+    })
+    .filter(item => item.distance <= 10);
 });
 
 const columns: DataTableColumn<typeof data["value"][number]>[] = [
@@ -92,7 +95,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
         trigger: () => h(
           NuxtLinkLocale,
           {
-            to: `/deck/${toBase64Url(row.deckCode)}`,
+            to: `/deck/${props.teamId}/${toBase64Url(row.deckCode)}`,
             prefetch: false,
             class: "flex justify-center",
           },

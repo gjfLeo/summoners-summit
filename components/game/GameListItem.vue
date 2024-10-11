@@ -27,7 +27,11 @@
       <div class="self-center justify-self-start"><TeamAvatars :team="game.playerBDeck.teamId" /></div>
 
       <div class="flex justify-end gap-1 text-sm">
-        <LinkDeck v-if="game.playerADeck.deckCode && showDeckLink" :deck-code="game.playerADeck.deckCode" />
+        <LinkDeck
+          v-if="game.playerADeck.deckCode && showDeckLink"
+          :team-id="game.playerADeck.teamId"
+          :deck-code="game.playerADeck.deckCode"
+        />
         <div v-if="game.starter">{{ game.starter === 'A' ? t('main.gameInfo.firstMove') : t('main.gameInfo.secondMove') }}</div>
         <div :class="{ 'text-orange-500': game.winner === 'A' }">{{ game.winner === 'A' ? t('main.gameInfo.win') : t('main.gameInfo.lose') }}</div>
       </div>
@@ -35,7 +39,11 @@
       <div class="flex justify-start gap-1 text-sm">
         <div :class="{ 'text-orange-500': game.winner === 'B' }">{{ game.winner === 'B' ? t('main.gameInfo.win') : t('main.gameInfo.lose') }}</div>
         <div v-if="game.starter">{{ game.starter === 'B' ? t('main.gameInfo.firstMove') : t('main.gameInfo.secondMove') }}</div>
-        <LinkDeck v-if="game.playerBDeck.deckCode && showDeckLink" :deck-code="game.playerBDeck.deckCode" />
+        <LinkDeck
+          v-if="game.playerBDeck.deckCode && showDeckLink"
+          :team-id="game.playerBDeck.teamId"
+          :deck-code="game.playerBDeck.deckCode"
+        />
       </div>
     </div>
   </NCard>

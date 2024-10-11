@@ -26,7 +26,7 @@
       </div>
 
       <div un-flex="~ items-center gap-4" class="md:ml-auto">
-        <NuxtLinkLocale :to="`/deck/${toBase64Url(deckCode)}`">
+        <NuxtLinkLocale :to="`/deck/${teamId}/${toBase64Url(deckCode)}`">
           <CommonIconButton
             :scale="0.9"
             icon-data-url="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE5IDBIOUM3LjkgMCA3IC45IDcgMnYxNmMwIDEuMS45IDIgMiAyaDEwYzEuMSAwIDItLjkgMi0yVjJjMC0xLjEtLjktMi0yLTJtMCAxOEg5VjJoMTB6TTMgNHYxOGMwIDEuMS45IDIgMiAyaDEydi0ySDVWNHptMTEgMWwtMyA1bDMgNWwzLTV6Ii8+PC9zdmc+"

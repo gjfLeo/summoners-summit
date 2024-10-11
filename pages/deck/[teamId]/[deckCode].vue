@@ -4,7 +4,7 @@
     <div un-grid="~ gap-4 cols-[1fr_auto_1fr]">
       <div />
       <div un-grid="~ gap-2 cols-[repeat(3,minmax(0,5rem))]">
-        <template v-for="(card, i) in deckCards.characterCards" :key="i">
+        <template v-for="(card, i) in characterCards" :key="i">
           <CardAvatar :card="card" class="w-5rem!" />
         </template>
       </div>
@@ -20,14 +20,14 @@
       </div>
     </div>
     <!-- 行动牌 -->
-    <DeckActionList :cards="deckCards.actionCards" class="mt" />
+    <DeckActionList :cards="actionCards" class="mt" />
 
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <GameList :games="games" />
 
     <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
     <ClientOnly>
-      <Deck_SimilarDecks v-bind="{ deckCode, deckList }" />
+      <Deck_SimilarDecks v-bind="{ teamId, deckCode, deckList }" />
     </ClientOnly>
 
     <SitePageAnchors>
@@ -39,22 +39,28 @@
 </template>
 
 <script lang="ts" setup>
-const route = useRoute("deck-deckCode___zh");
+import type { CardId } from "~/types";
+
+const route = useRoute("deck-teamId-deckCode___zh");
+const teamId = route.params.teamId;
 const deckCode = toBase64(route.params.deckCode);
 
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.deck") });
 
-const { awaitData } = useSharedData();
+// const { awaitData } = useSharedData();
 const { decodeDeck } = useDeckEncoder();
 
-await awaitData();
-const deckCards = decodeDeck(deckCode);
-const teamId = getTeamId(deckCards.characterCards);
+const characterCards = ref<CardId[]>([]);
+const actionCards = ref<CardId[]>([]);
+onMounted(() => {
+  const cards = decodeDeck(deckCode);
+  characterCards.value = cards.characterCards;
+  actionCards.value = cards.actionCards;
+});
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
 const { games } = await useApiGetGameList({ deckCode });
-
 const { deckList } = await useApiGetDeckList({ teamId });
 </script>
