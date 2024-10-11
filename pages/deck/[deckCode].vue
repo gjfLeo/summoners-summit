@@ -25,8 +25,8 @@
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <GameList :games="games" />
 
+    <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
     <ClientOnly>
-      <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
       <Deck_SimilarDecks v-bind="{ deckCode, deckList }" />
     </ClientOnly>
 

@@ -25,10 +25,14 @@
     </div>
 
     <NH2 id="stats">{{ t('main.player.stats') }}</NH2>
-    <Player_StatsByVersion v-bind="{ statsByVersion }" />
+    <ClientOnly>
+      <Player_StatsByVersion v-bind="{ statsByVersion }" />
+    </ClientOnly>
 
     <NH2 id="recent">{{ t('main.player.recent') }}</NH2>
-    <Player_Matches v-bind="{ matchList, games }" />
+    <ClientOnly>
+      <Player_Matches v-bind="{ matchList, games }" />
+    </ClientOnly>
 
     <SitePageAnchors>
       <NAnchorLink :title="t('main.player.playerDetail')" :href="`#${player.uniqueName}`">
