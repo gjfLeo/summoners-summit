@@ -68,7 +68,8 @@
           },
           "date": "2024-10-03",
           "matchIds": [
-            "d3b13f2941df3de910"
+            "d3b13f2941df3de910",
+            "d3b13f2941df3de913"
           ]
         }
       ]
@@ -94,6 +95,30 @@
           "matchIds": [
             "d3b13f2941df3de911",
             "d3b13f2941df3de912"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-10-05",
+          "matchIds": [
+            "d3b13f2941df3de914"
           ]
         }
       ]
