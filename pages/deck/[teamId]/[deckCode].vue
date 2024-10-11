@@ -54,6 +54,7 @@ const { decodeDeck } = useDeckEncoder();
 const characterCards = ref<CardId[]>([]);
 const actionCards = ref<CardId[]>([]);
 onMounted(() => {
+  if (!import.meta.client) return;
   const cards = decodeDeck(deckCode);
   characterCards.value = cards.characterCards;
   actionCards.value = cards.actionCards;
