@@ -1,0 +1,35 @@
+{
+  "id": "1b88f2ab14f4136007",
+  "tournamentId": "1b88f2ab14f41360",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.0",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "4dd8fb114ac38579",
+    "nickname": "屹立大地之上"
+  },
+  "playerB": {
+    "playerId": "16ccd135d2f2e5af",
+    "nickname": "蕊梨"
+  },
+  "bans": [
+    {
+      "banType": "character",
+      "playerACardId": "1112",
+      "playerBCardId": "1411"
+    },
+    {
+      "banType": "team",
+      "playerATeamId": "1311-1404-2304",
+      "playerBTeamId": "1310-1313-2405"
+    }
+  ],
+  "gameIds": [
+    "1b88f2ab14f413600701",
+    "1b88f2ab14f413600702",
+    "1b88f2ab14f413600703"
+  ],
+  "video": "https://www.bilibili.com/video/BV1my2wYCEsE?p=4"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "1b88f2ab14f4136006",
+  "tournamentId": "1b88f2ab14f41360",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "16ccd135d2f2e5af",
+    "nickname": "蕊梨"
+  },
+  "playerB": {
+    "playerId": "d2b084af89a32bf5",
+    "nickname": "音尘"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1411-1510-2203",
+      "playerBTeamId": "1411-1510-2203"
+    }
+  ],
+  "gameIds": [
+    "1b88f2ab14f413600601",
+    "1b88f2ab14f413600602"
+  ],
+  "video": "https://www.bilibili.com/video/BV1my2wYCEsE?p=3"
+}
