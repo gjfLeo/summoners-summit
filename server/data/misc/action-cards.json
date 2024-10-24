@@ -779,6 +779,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Undisclosed_Distribution_Channels_Equipment_Card.png"
   },
+  "216091": {
+    "id": "216091",
+    "name": {
+      "zh": "落染五色",
+      "en": "In Five Colors Dyed"
+    },
+    "shareId": 423,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/In_Five_Colors_Dyed_Equipment_Card.png"
+  },
   "217011": {
     "id": "217011",
     "name": {
@@ -1091,6 +1103,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Fatal_Fulmination_Equipment_Card.png"
   },
+  "224061": {
+    "id": "224061",
+    "name": {
+      "zh": "侵雷重闪",
+      "en": "Chain Lightning Cascade"
+    },
+    "shareId": 424,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Chain_Lightning_Cascade_Equipment_Card.png"
+  },
   "225011": {
     "id": "225011",
     "name": {
@@ -1174,6 +1198,18 @@
     "gameVersion": "4.7",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/A_Thousand_Young_Equipment_Card.png"
+  },
+  "227031": {
+    "id": "227031",
+    "name": {
+      "zh": "灵蛇旋嘶",
+      "en": "Spirit Serpent's Swirl"
+    },
+    "shareId": 425,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Spirit_Serpent%27s_Swirl_Equipment_Card.png"
   },
   "311101": {
     "id": "311101",
@@ -1462,6 +1498,18 @@
     "gameVersion": "4.8",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/%22Ultimate_Overlord%27s_Mega_Magic_Sword\"_Equipment_Card.png"
+  },
+  "311309": {
+    "id": "311309",
+    "name": {
+      "zh": "便携动力锯",
+      "en": "Portable Power Saw"
+    },
+    "shareId": 426,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Portable_Power_Saw_Equipment_Card.png"
   },
   "311401": {
     "id": "311401",
@@ -1783,7 +1831,7 @@
     },
     "shareId": 157,
     "type": "action",
-    "gameVersion": "3.7",
+    "gameVersion": "5.1",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Tenacity_of_the_Millelith_Equipment_Card.png"
   },
@@ -1879,7 +1927,7 @@
     },
     "shareId": 304,
     "type": "action",
-    "gameVersion": "4.3",
+    "gameVersion": "5.1",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Gilded_Dreams_Equipment_Card.png"
   },
@@ -2014,6 +2062,18 @@
     "gameVersion": "4.8",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Gladiator%27s_Triumphus_Equipment_Card.png"
+  },
+  "312030": {
+    "id": "312030",
+    "name": {
+      "zh": "指挥的礼帽",
+      "en": "Conductor's Top Hat"
+    },
+    "shareId": 427,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Conductor%27s_Top_Hat_Equipment_Card.png"
   },
   "312101": {
     "id": "312101",
@@ -2219,6 +2279,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Koholasaurus_Equipment_Card.png"
   },
+  "313004": {
+    "id": "313004",
+    "name": {
+      "zh": "嵴锋龙",
+      "en": "Tepetlisaurus"
+    },
+    "shareId": 428,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Tepetlisaurus_Equipment_Card.png"
+  },
   "321001": {
     "id": "321001",
     "name": {
@@ -2287,7 +2359,7 @@
     },
     "shareId": 184,
     "type": "action",
-    "gameVersion": "3.3",
+    "gameVersion": "5.1",
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Favonius_Cathedral_Support_Card.png"
   },
@@ -2482,6 +2554,18 @@
     "gameVersion": "5.0",
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Stadium_of_the_Sacred_Flame_Support_Card.png"
+  },
+  "321023": {
+    "id": "321023",
+    "name": {
+      "zh": "特佩利舞台",
+      "en": "Stage Tepetl"
+    },
+    "shareId": 429,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Stage_Tepetl_Support_Card.png"
   },
   "322001": {
     "id": "322001",
@@ -3607,7 +3691,7 @@
     },
     "shareId": 347,
     "type": "action",
-    "gameVersion": "4.5",
+    "gameVersion": "5.1",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Controlled_Directional_Blast_Event_Card.png"
   },
@@ -3619,7 +3703,7 @@
     },
     "shareId": 360,
     "type": "action",
-    "gameVersion": "4.6",
+    "gameVersion": "5.1",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Underwater_Treasure_Hunt_Event_Card.png"
   },
@@ -3670,6 +3754,18 @@
     "gameVersion": "5.0",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Saurian_Dining_Buddies_Event_Card.png"
+  },
+  "332040": {
+    "id": "332040",
+    "name": {
+      "zh": "镀金旅团的茶歇",
+      "en": "Eremite Teatime"
+    },
+    "shareId": 430,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Eremite_Teatime_Event_Card.png"
   },
   "333001": {
     "id": "333001",
@@ -3850,5 +3946,17 @@
     "gameVersion": "4.6",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Rainbow_Macarons_Event_Card.png"
+  },
+  "333016": {
+    "id": "333016",
+    "name": {
+      "zh": "龙龙饼干",
+      "en": "Saurus Crackers"
+    },
+    "shareId": 431,
+    "type": "action",
+    "gameVersion": "5.1",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Saurus_Crackers_Event_Card.png"
   }
 }

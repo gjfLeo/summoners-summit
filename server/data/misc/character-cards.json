@@ -844,6 +844,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Navia_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Navia_TCG_Avatar_Icon.png"
   },
+  "1609": {
+    "id": "1609",
+    "name": {
+      "zh": "千织",
+      "en": "Chiori"
+    },
+    "shareId": 420,
+    "type": "character",
+    "gameVersion": "5.1",
+    "element": "geo",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Chiori_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Chiori_TCG_Avatar_Icon.png"
+  },
   "1701": {
     "id": "1701",
     "name": {
@@ -1182,6 +1195,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Consecrated_Scorpion_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Consecrated_Scorpion_TCG_Avatar_Icon.png"
   },
+  "2406": {
+    "id": "2406",
+    "name": {
+      "zh": "深渊咏者·紫电",
+      "en": "Abyss Lector: Violet Lightning"
+    },
+    "shareId": 421,
+    "type": "character",
+    "gameVersion": "5.1",
+    "element": "electro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Abyss_Lector_Violet_Lightning_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Abyss_Lector_Violet_Lightning_TCG_Avatar_Icon.png"
+  },
   "2501": {
     "id": "2501",
     "name": {
@@ -1272,5 +1298,18 @@
     "element": "dendro",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Guardian_of_Apep%27s_Oasis_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Guardian_of_Apep%27s_Oasis_TCG_Avatar_Icon.png"
+  },
+  "2703": {
+    "id": "2703",
+    "name": {
+      "zh": "镀金旅团·叶轮舞者",
+      "en": "Eremite Floral Ring-Dancer"
+    },
+    "shareId": 422,
+    "type": "character",
+    "gameVersion": "5.1",
+    "element": "dendro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Eremite_Floral_Ring-Dancer_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eremite_Floral_Ring-Dancer_TCG_Avatar_Icon.png"
   }
 }
