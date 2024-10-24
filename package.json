@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@bg-dev/nuxt-naiveui": "2.0.0-rc.1",
-    "@genshin-db/tcg": "^5.1.8",
+    "@genshin-db/tcg": "^5.1.9",
     "@gjfleo/eslint-config": "^1.0.18",
     "@iconify-json/carbon": "^1.1.37",
     "@iconify-json/mingcute": "^1.1.20",
