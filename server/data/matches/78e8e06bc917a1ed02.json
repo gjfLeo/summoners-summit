@@ -1,0 +1,27 @@
+{
+  "id": "78e8e06bc917a1ed02",
+  "tournamentId": "78e8e06bc917a1ed",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.0",
+  "playerA": {
+    "playerId": "2197cbc9bf71de9a",
+    "nickname": "风曾经为翼"
+  },
+  "playerB": {
+    "playerId": "0fab3cd90d17c667",
+    "nickname": "天命主教德丽莎"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1111-1209-1305",
+      "playerBTeamId": "1404-2303-2304"
+    }
+  ],
+  "gameIds": [
+    "78e8e06bc917a1ed0201",
+    "78e8e06bc917a1ed0202"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "78e8e06bc917a1ed",
+  "name": {
+    "zh": "「燃斗无双」米游社 5.1"
+  },
+  "gameVersion": "5.0",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2024-10-25",
+          "matchIds": [
+            "78e8e06bc917a1ed01",
+            "78e8e06bc917a1ed02"
+          ]
+        }
+      ]
+    }
+  ]
+}
