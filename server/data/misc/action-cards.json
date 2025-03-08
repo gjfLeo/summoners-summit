@@ -467,6 +467,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Vanguard%27s_Coordinated_Tactics_Equipment_Card.png"
   },
+  "213141": {
+    "id": "213141",
+    "name": {
+      "zh": "所有的仇与债皆由我偿…",
+      "en": "All Reprisals and Arrears, Mine to Bear"
+    },
+    "shareId": 456,
+    "type": "action",
+    "gameVersion": "5.4",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/All_Reprisals_and_Arrears,_Mine_to_Bear_Equipment_Card.png"
+  },
   "214011": {
     "id": "214011",
     "name": {
@@ -934,6 +946,18 @@
     "gameVersion": "4.7",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/The_Art_of_Budgeting_Equipment_Card.png"
+  },
+  "217091": {
+    "id": "217091",
+    "name": {
+      "zh": "夜域赐礼·索报皆偿",
+      "en": "Night Realm's Gift: Repaid in Full"
+    },
+    "shareId": 457,
+    "type": "action",
+    "gameVersion": "5.4",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Night_Realm%27s_Gift_Repaid_in_Full_Equipment_Card.png"
   },
   "221011": {
     "id": "221011",
@@ -1435,7 +1459,7 @@
     },
     "shareId": 129,
     "type": "action",
-    "gameVersion": "3.7",
+    "gameVersion": "5.4",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Amos%27_Bow_Equipment_Card.png"
   },
@@ -2711,6 +2735,18 @@
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/People_of_the_Springs_Support_Card.png"
   },
+  "321026": {
+    "id": "321026",
+    "name": {
+      "zh": "「花羽会」",
+      "en": "\"Flower-Feather Clan\""
+    },
+    "shareId": 458,
+    "type": "action",
+    "gameVersion": "5.4",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Flower-Feather_Clan_Support_Card.png"
+  },
   "322001": {
     "id": "322001",
     "name": {
@@ -3947,6 +3983,18 @@
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Abundant_Phlogiston_Event_Card.png"
   },
+  "332043": {
+    "id": "332043",
+    "name": {
+      "zh": "小嵴锋龙！发现宝藏！",
+      "en": "Little Tepetlisaur — Treasure Hunter at Large"
+    },
+    "shareId": 459,
+    "type": "action",
+    "gameVersion": "5.4",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Little_Tepetlisaur_—_Treasure_Hunter_at_Large_Event_Card.png"
+  },
   "333001": {
     "id": "333001",
     "name": {
@@ -4162,5 +4210,17 @@
     "gameVersion": "5.3",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Puff_Pops_Event_Card.png"
+  },
+  "333019": {
+    "id": "333019",
+    "name": {
+      "zh": "温泉时光",
+      "en": "Hot Spring O'Clock"
+    },
+    "shareId": 460,
+    "type": "action",
+    "gameVersion": "5.4",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Hot_Spring_O%27Clock_Event_Card.png"
   }
 }

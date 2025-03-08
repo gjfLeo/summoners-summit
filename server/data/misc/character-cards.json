@@ -506,6 +506,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Chevreuse_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Chevreuse_TCG_Avatar_Icon.png"
   },
+  "1314": {
+    "id": "1314",
+    "name": {
+      "zh": "阿蕾奇诺",
+      "en": "Arlecchino"
+    },
+    "shareId": 454,
+    "type": "character",
+    "gameVersion": "5.4",
+    "element": "pyro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Arlecchino_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Arlecchino_TCG_Avatar_Icon.png"
+  },
   "1401": {
     "id": "1401",
     "name": {
@@ -1012,6 +1025,19 @@
     "element": "dendro",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Kaveh_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Kaveh_TCG_Avatar_Icon.png"
+  },
+  "1709": {
+    "id": "1709",
+    "name": {
+      "zh": "基尼奇",
+      "en": "Kinich"
+    },
+    "shareId": 455,
+    "type": "character",
+    "gameVersion": "5.4",
+    "element": "dendro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Kinich_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Kinich_TCG_Avatar_Icon.png"
   },
   "2101": {
     "id": "2101",
