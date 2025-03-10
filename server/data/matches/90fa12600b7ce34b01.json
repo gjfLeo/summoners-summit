@@ -1,0 +1,22 @@
+{
+  "id": "90fa12600b7ce34b01",
+  "tournamentId": "90fa12600b7ce34b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "d525e45844f51a61",
+    "nickname": "木秀"
+  },
+  "playerB": {
+    "playerId": "5ffe01f5fe9c3c56",
+    "nickname": "筱熙的小迷妹"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "90fa12600b7ce34b0101",
+    "90fa12600b7ce34b0102",
+    "90fa12600b7ce34b0103"
+  ]
+}

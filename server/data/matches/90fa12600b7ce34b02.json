@@ -1,0 +1,22 @@
+{
+  "id": "90fa12600b7ce34b02",
+  "tournamentId": "90fa12600b7ce34b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "208b2b9759314d71",
+    "nickname": "刻晴本晴"
+  },
+  "playerB": {
+    "playerId": "bfc3d1bda8269d93",
+    "nickname": "赵玄机"
+  },
+  "winnerOverride": "A",
+  "gameIds": [
+    "90fa12600b7ce34b0201",
+    "90fa12600b7ce34b0202",
+    "90fa12600b7ce34b0203"
+  ]
+}
