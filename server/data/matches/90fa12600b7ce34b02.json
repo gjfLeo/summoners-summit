@@ -14,6 +14,13 @@
     "nickname": "赵玄机"
   },
   "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1312-1408-2102",
+      "playerBTeamId": "1111-1209-1305"
+    }
+  ],
   "gameIds": [
     "90fa12600b7ce34b0201",
     "90fa12600b7ce34b0202",

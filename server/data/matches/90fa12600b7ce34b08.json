@@ -1,0 +1,28 @@
+{
+  "id": "90fa12600b7ce34b08",
+  "tournamentId": "90fa12600b7ce34b",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 3,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "43bb008c6a98f8d9",
+    "nickname": "Anya"
+  },
+  "playerB": {
+    "playerId": "55f1206193ed656e",
+    "nickname": "Macchiato"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1204-1401-2103",
+      "playerBTeamId": "1303-2401-2602"
+    }
+  ],
+  "gameIds": [
+    "90fa12600b7ce34b0801",
+    "90fa12600b7ce34b0802"
+  ]
+}

@@ -14,6 +14,13 @@
     "nickname": "筱熙的小迷妹"
   },
   "winnerOverride": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1507-2202",
+      "playerBTeamId": "1303-2203-2602"
+    }
+  ],
   "gameIds": [
     "90fa12600b7ce34b0101",
     "90fa12600b7ce34b0102",

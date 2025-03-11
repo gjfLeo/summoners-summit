@@ -1,0 +1,29 @@
+{
+  "id": "90fa12600b7ce34b04",
+  "tournamentId": "90fa12600b7ce34b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "387bcd2928cc0d98",
+    "nickname": "漓"
+  },
+  "playerB": {
+    "playerId": "f64f8b195a6c59a8",
+    "nickname": "错斩小能手"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1507-2202",
+      "playerBTeamId": "1104-1507-2202"
+    }
+  ],
+  "gameIds": [
+    "90fa12600b7ce34b0401",
+    "90fa12600b7ce34b0402",
+    "90fa12600b7ce34b0403"
+  ]
+}

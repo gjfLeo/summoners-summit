@@ -33,7 +33,9 @@
           "date": "2025-03-09",
           "matchIds": [
             "90fa12600b7ce34b01",
-            "90fa12600b7ce34b02"
+            "90fa12600b7ce34b02",
+            "90fa12600b7ce34b03",
+            "90fa12600b7ce34b04"
           ]
         },
         {
@@ -41,6 +43,46 @@
             "zh": "Day2"
           },
           "date": "2025-03-10",
+          "matchIds": [
+            "90fa12600b7ce34b05",
+            "90fa12600b7ce34b06",
+            "90fa12600b7ce34b07",
+            "90fa12600b7ce34b08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-03-11",
+          "matchIds": []
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-03-12",
           "matchIds": []
         }
       ]
