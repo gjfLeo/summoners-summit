@@ -1,0 +1,29 @@
+{
+  "id": "90fa12600b7ce34b10",
+  "tournamentId": "90fa12600b7ce34b",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "5ffe01f5fe9c3c56",
+    "nickname": "筱熙的小迷妹"
+  },
+  "playerB": {
+    "playerId": "43bb008c6a98f8d9",
+    "nickname": "Anya"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1201-1211",
+      "playerBTeamId": "1104-1202-1312"
+    }
+  ],
+  "gameIds": [
+    "90fa12600b7ce34b1001",
+    "90fa12600b7ce34b1002",
+    "90fa12600b7ce34b1003"
+  ]
+}

@@ -75,15 +75,47 @@
           "name": {
             "zh": "Day1"
           },
-          "date": "2025-03-11",
-          "matchIds": []
+          "date": "2025-03-12",
+          "matchIds": [
+            "90fa12600b7ce34b09",
+            "90fa12600b7ce34b10"
+          ]
         },
         {
           "name": {
             "zh": "Day2"
           },
-          "date": "2025-03-12",
-          "matchIds": []
+          "date": "2025-03-13",
+          "matchIds": [
+            "90fa12600b7ce34b11",
+            "90fa12600b7ce34b12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-03-14",
+          "matchIds": [
+            "90fa12600b7ce34b13",
+            "90fa12600b7ce34b14"
+          ]
         }
       ]
     }
