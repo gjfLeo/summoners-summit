@@ -118,6 +118,31 @@
           ]
         }
       ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-03-16",
+          "matchIds": [
+            "90fa12600b7ce34b15"
+          ]
+        }
+      ]
     }
   ]
 }

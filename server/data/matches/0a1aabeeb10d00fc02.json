@@ -1,0 +1,24 @@
+{
+  "id": "0a1aabeeb10d00fc02",
+  "tournamentId": "0a1aabeeb10d00fc",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "ac9aff8927acdfb8",
+    "nickname": "千欲春雪"
+  },
+  "playerB": {
+    "playerId": "28345ff8cfc7aeb1",
+    "nickname": "Dr.Ikaros"
+  },
+  "winnerOverride": "A",
+  "gameIds": [
+    "0a1aabeeb10d00fc0201",
+    "0a1aabeeb10d00fc0202",
+    "0a1aabeeb10d00fc0203",
+    "0a1aabeeb10d00fc0204"
+  ],
+  "video": "https://www.bilibili.com/video/BV1oaXuY4EEy"
+}

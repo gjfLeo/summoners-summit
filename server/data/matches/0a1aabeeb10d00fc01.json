@@ -1,0 +1,25 @@
+{
+  "id": "0a1aabeeb10d00fc01",
+  "tournamentId": "0a1aabeeb10d00fc",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.4",
+  "playerA": {
+    "playerId": "b65544b1858c1475",
+    "nickname": "芙芙得芙"
+  },
+  "playerB": {
+    "playerId": "7814d62fa3e07a5d",
+    "nickname": "子非"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "0a1aabeeb10d00fc0101",
+    "0a1aabeeb10d00fc0102",
+    "0a1aabeeb10d00fc0103",
+    "0a1aabeeb10d00fc0104",
+    "0a1aabeeb10d00fc0105"
+  ],
+  "video": "https://www.bilibili.com/video/BV19BXuYpE7h"
+}
