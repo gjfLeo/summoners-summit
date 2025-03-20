@@ -6,13 +6,13 @@
     </NInputGroup>
     <template v-if="result">
       <!-- 角色牌 -->
-      <div u-grid="~ gap-2 cols-6 md:cols-10">
+      <div un-grid="~ gap-2 cols-6 md:cols-10">
         <template v-for="(card, i) in result.characterCards" :key="i">
           <CardImage :card="card" class="w-100%" />
         </template>
       </div>
       <!-- 行动牌 -->
-      <div u-grid="~ gap-2 cols-6 md:cols-15">
+      <div un-grid="~ gap-2 cols-6 md:cols-15">
         <template v-for="(card, i) in result.actionCards" :key="i">
           <CardImage :card="card" class="w-100%" />
         </template>

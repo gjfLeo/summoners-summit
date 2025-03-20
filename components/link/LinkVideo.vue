@@ -3,7 +3,7 @@
     trigger="hover"
   >
     <template #trigger>
-      <NuxtLinkLocale :to="video" target="_blank" no-prefetch u-flex="~ items-center">
+      <NuxtLinkLocale :to="video" target="_blank" no-prefetch un-flex="~ items-center">
         <CommonIconButton v-bind="iconProps" />
       </NuxtLinkLocale>
     </template>

@@ -1,5 +1,5 @@
 <template>
-  <div u-flex="inline justify-center">
+  <div un-flex="inline justify-center">
     <NTooltip
       v-for="card in cards" :key="card"
       :delay="500"
