@@ -7,9 +7,11 @@ export default defineEventHandler(async () => {
     let changed = false;
     for (const deck of [game.playerADeck, game.playerBDeck]) {
       const deckCode = deck.deckCode;
-      if (deckCode && blockWords.some(word => deckCode.includes(word))) {
+      if (deckCode /* && blockWords.some(word => deckCode.includes(word)) */) {
         deck.deckCode = encodeDeck(decodeDeck(deckCode));
-        changed = true;
+        if (deck.deckCode !== deckCode) {
+          changed = true;
+        }
       }
     }
     if (changed) {
