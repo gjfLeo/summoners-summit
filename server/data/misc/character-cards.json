@@ -922,6 +922,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Chiori_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Chiori_TCG_Avatar_Icon.png"
   },
+  "1610": {
+    "id": "1610",
+    "name": {
+      "zh": "卡齐娜",
+      "en": "Kachina"
+    },
+    "shareId": 461,
+    "type": "character",
+    "gameVersion": "5.5",
+    "element": "geo",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kachina_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Kachina_TCG_Avatar_Icon.png"
+  },
   "1701": {
     "id": "1701",
     "name": {
@@ -1038,6 +1051,19 @@
     "element": "dendro",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Kinich_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Kinich_TCG_Avatar_Icon.png"
+  },
+  "1710": {
+    "id": "1710",
+    "name": {
+      "zh": "艾梅莉埃",
+      "en": "Emilie"
+    },
+    "shareId": 462,
+    "type": "character",
+    "gameVersion": "5.5",
+    "element": "dendro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Emilie_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Emilie_TCG_Avatar_Icon.png"
   },
   "2101": {
     "id": "2101",
