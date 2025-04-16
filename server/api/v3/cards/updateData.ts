@@ -1,6 +1,6 @@
+import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
 import crypto from "node:crypto";
 import { z } from "zod";
-import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZGameVersion, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
 const fandomFilenameOverrides: Record<number, string> = {
@@ -44,7 +44,7 @@ async function getCharacterCardData() {
     matchCategories: true,
     resultLanguage: gdb.Language.ChineseSimplified,
   });
-  const characterCardData = characterCardInfos.flatMap((cardInfo, i) => {
+  const characterCardData = characterCardInfos.flatMap<CharacterCardInfo>((cardInfo, i) => {
     if (!cardInfo) return [];
     if (cardInfo.istransformation) return [];
     return [
@@ -62,7 +62,38 @@ async function getCharacterCardData() {
         avatar: getFandomImageUrl(`${cardInfo.name} TCG Avatar Icon.png`),
       } satisfies CharacterCardInfo),
     ];
-  }).sort((a, b) => Number(a.id) - Number(b.id));
+  });
+
+  characterCardData.push(...[
+    ZCharacterCardInfo.parse({
+      id: ZCardId.parse(1610),
+      name: {
+        zh: "卡齐娜",
+        en: "Kachina",
+      },
+      shareId: 461,
+      type: "character",
+      gameVersion: "5.5",
+      element: "geo",
+      image: getFandomImageUrl("Kachina Character Card.png"),
+      avatar: getFandomImageUrl("Kachina TCG Avatar Icon.png"),
+    }),
+    ZCharacterCardInfo.parse({
+      id: ZCardId.parse(1710),
+      name: {
+        zh: "艾梅莉埃",
+        en: "Emilie",
+      },
+      shareId: 462,
+      type: "character",
+      gameVersion: "5.5",
+      element: "dendro",
+      image: getFandomImageUrl("Emilie Character Card.png"),
+      avatar: getFandomImageUrl("Emilie TCG Avatar Icon.png"),
+    }),
+  ]);
+
+  characterCardData.sort((a, b) => Number(a.id) - Number(b.id));
   return characterCardData;
 }
 
@@ -94,7 +125,12 @@ async function getActionCardData() {
         image: getFandomImageUrl(fandomFilenameOverrides[cardInfo.id] ?? `${cardInfo.name} ${actionType.charAt(0).toUpperCase()}${actionType.slice(1)} Card.png`),
       } satisfies ActionCardInfo),
     ];
-  }).sort((a, b) => Number(a.id) - Number(b.id));
+  });
+
+  actionCardData.push(...[
+  ]);
+
+  actionCardData.sort((a, b) => Number(a.id) - Number(b.id));
   return actionCardData;
 }
 
