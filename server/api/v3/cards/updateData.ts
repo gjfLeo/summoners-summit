@@ -64,8 +64,8 @@ async function getCharacterCardData() {
     ];
   });
 
-  characterCardData.push(...[
-    ZCharacterCardInfo.parse({
+  const manualCardData: CharacterCardInfo[] = [
+    {
       id: ZCardId.parse(1610),
       name: {
         zh: "卡齐娜",
@@ -77,8 +77,8 @@ async function getCharacterCardData() {
       element: "geo",
       image: getFandomImageUrl("Kachina Character Card.png"),
       avatar: getFandomImageUrl("Kachina TCG Avatar Icon.png"),
-    }),
-    ZCharacterCardInfo.parse({
+    },
+    {
       id: ZCardId.parse(1710),
       name: {
         zh: "艾梅莉埃",
@@ -90,8 +90,9 @@ async function getCharacterCardData() {
       element: "dendro",
       image: getFandomImageUrl("Emilie Character Card.png"),
       avatar: getFandomImageUrl("Emilie TCG Avatar Icon.png"),
-    }),
-  ]);
+    },
+  ];
+  characterCardData.push(...manualCardData.map(card => ZCharacterCardInfo.parse(card)));
 
   characterCardData.sort((a, b) => Number(a.id) - Number(b.id));
   return characterCardData;
@@ -107,7 +108,7 @@ async function getActionCardData() {
     matchCategories: true,
     resultLanguage: gdb.Language.ChineseSimplified,
   });
-  const actionCardData = actionCardInfos.flatMap((cardInfo, i) => {
+  const actionCardData = actionCardInfos.flatMap<ActionCardInfo>((cardInfo, i) => {
     if (!cardInfo) return [];
     if (!cardInfo.storytitle) return [];
     const actionType = parseActionCardType(cardInfo.cardtype);
@@ -127,8 +128,81 @@ async function getActionCardData() {
     ];
   });
 
-  actionCardData.push(...[
-  ]);
+  const manualCardData: ActionCardInfo[] = [
+    {
+      id: ZCardId.parse(216101),
+      name: {
+        zh: "夜域赐礼·团结炉心",
+        en: "Night Realm's Gift: Heart of Unity",
+      },
+      shareId: 463,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "equipment",
+      image: getFandomImageUrl("Night Realm's Gift: Heart of Unity Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(217101),
+      name: {
+        zh: "茉洁香迹",
+        en: "Marcotte Sillage",
+      },
+      shareId: 464,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "equipment",
+      image: getFandomImageUrl("Marcotte Sillage Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(313007),
+      name: {
+        zh: "浪船",
+        en: "Waverider",
+      },
+      shareId: 465,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "equipment",
+      image: getFandomImageUrl("Waverider Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(321027),
+      name: {
+        zh: "「烟谜主」",
+        en: '"Masters of the Night-Wind"',
+      },
+      shareId: 466,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "support",
+      image: getFandomImageUrl("Masters of the Night-Wind Support Card.png"),
+    },
+    {
+      id: ZCardId.parse(332044),
+      name: {
+        zh: "以极限之名",
+        en: "In the Name of the Extreme",
+      },
+      shareId: 467,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "event",
+      image: getFandomImageUrl("In the Name of the Extreme Event Card.png"),
+    },
+    {
+      id: ZCardId.parse(333020),
+      name: {
+        zh: "奇瑰之汤",
+        en: "Mystique Soup",
+      },
+      shareId: 468,
+      type: "action",
+      gameVersion: "5.5",
+      actionType: "event",
+      image: getFandomImageUrl("Mystique Soup Event Card.png"),
+    },
+  ];
+  actionCardData.push(...manualCardData.map(card => ZActionCardInfo.parse(card)));
 
   actionCardData.sort((a, b) => Number(a.id) - Number(b.id));
   return actionCardData;
