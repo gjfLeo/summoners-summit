@@ -851,6 +851,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/In_Five_Colors_Dyed_Equipment_Card.png"
   },
+  "216101": {
+    "id": "216101",
+    "name": {
+      "zh": "夜域赐礼·团结炉心",
+      "en": "Night Realm's Gift: Heart of Unity"
+    },
+    "shareId": 463,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Night_Realm%27s_Gift_Heart_of_Unity_Equipment_Card.png"
+  },
   "217011": {
     "id": "217011",
     "name": {
@@ -958,6 +970,18 @@
     "gameVersion": "5.4",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Night_Realm%27s_Gift_Repaid_in_Full_Equipment_Card.png"
+  },
+  "217101": {
+    "id": "217101",
+    "name": {
+      "zh": "茉洁香迹",
+      "en": "Marcotte Sillage"
+    },
+    "shareId": 464,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Marcotte_Sillage_Equipment_Card.png"
   },
   "221011": {
     "id": "221011",
@@ -2435,6 +2459,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Qucusaurus_Equipment_Card.png"
   },
+  "313007": {
+    "id": "313007",
+    "name": {
+      "zh": "浪船",
+      "en": "Waverider"
+    },
+    "shareId": 465,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Waverider_Equipment_Card.png"
+  },
   "321001": {
     "id": "321001",
     "name": {
@@ -2746,6 +2782,18 @@
     "gameVersion": "5.4",
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Flower-Feather_Clan_Support_Card.png"
+  },
+  "321027": {
+    "id": "321027",
+    "name": {
+      "zh": "「烟谜主」",
+      "en": "\"Masters of the Night-Wind\""
+    },
+    "shareId": 466,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Masters_of_the_Night-Wind_Support_Card.png"
   },
   "322001": {
     "id": "322001",
@@ -3995,6 +4043,18 @@
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Little_Tepetlisaur_—_Treasure_Hunter_at_Large_Event_Card.png"
   },
+  "332044": {
+    "id": "332044",
+    "name": {
+      "zh": "以极限之名",
+      "en": "In the Name of the Extreme"
+    },
+    "shareId": 467,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/In_the_Name_of_the_Extreme_Event_Card.png"
+  },
   "333001": {
     "id": "333001",
     "name": {
@@ -4222,5 +4282,17 @@
     "gameVersion": "5.4",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Hot_Spring_O%27Clock_Event_Card.png"
+  },
+  "333020": {
+    "id": "333020",
+    "name": {
+      "zh": "奇瑰之汤",
+      "en": "Mystique Soup"
+    },
+    "shareId": 468,
+    "type": "action",
+    "gameVersion": "5.5",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Mystique_Soup_Event_Card.png"
   }
 }

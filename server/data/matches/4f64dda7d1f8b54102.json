@@ -1,0 +1,25 @@
+{
+  "id": "4f64dda7d1f8b54102",
+  "tournamentId": "4f64dda7d1f8b541",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "29ba999363bb832e",
+    "nickname": "蓝藻"
+  },
+  "playerB": {
+    "playerId": "f53067a0b2b9cc68",
+    "nickname": "LL残存夜桜"
+  },
+  "winnerOverride": "A",
+  "gameIds": [
+    "4f64dda7d1f8b5410201",
+    "4f64dda7d1f8b5410202",
+    "4f64dda7d1f8b5410203",
+    "4f64dda7d1f8b5410204",
+    "4f64dda7d1f8b5410205"
+  ],
+  "video": "https://www.bilibili.com/video/BV1MW5EzDEn2"
+}

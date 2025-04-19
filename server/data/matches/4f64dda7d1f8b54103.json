@@ -1,0 +1,25 @@
+{
+  "id": "4f64dda7d1f8b54103",
+  "tournamentId": "4f64dda7d1f8b541",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "847a54013a0da89b",
+    "nickname": "东家种树书"
+  },
+  "playerB": {
+    "playerId": "61870e6e23aaf25a",
+    "nickname": "巅峰高手素魄魄"
+  },
+  "winnerOverride": "A",
+  "gameIds": [
+    "4f64dda7d1f8b5410301",
+    "4f64dda7d1f8b5410302",
+    "4f64dda7d1f8b5410303",
+    "4f64dda7d1f8b5410304",
+    "4f64dda7d1f8b5410305"
+  ],
+  "video": "https://www.bilibili.com/video/BV16554zZEET"
+}
