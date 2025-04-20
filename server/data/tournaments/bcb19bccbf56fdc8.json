@@ -1,0 +1,51 @@
+{
+  "id": "bcb19bccbf56fdc8",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "5.5",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-04-20",
+          "matchIds": [
+            "bcb19bccbf56fdc801",
+            "bcb19bccbf56fdc802",
+            "bcb19bccbf56fdc803",
+            "bcb19bccbf56fdc804"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-04-21",
+          "matchIds": []
+        }
+      ]
+    }
+  ]
+}

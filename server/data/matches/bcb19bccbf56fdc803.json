@@ -1,0 +1,28 @@
+{
+  "id": "bcb19bccbf56fdc803",
+  "tournamentId": "bcb19bccbf56fdc8",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 2,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "playerB": {
+    "playerId": "d045766d18cacbf8",
+    "nickname": "飞鹰"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1205-1603-1609",
+      "playerBTeamId": "1303-2401-2602"
+    }
+  ],
+  "gameIds": [
+    "bcb19bccbf56fdc80301",
+    "bcb19bccbf56fdc80302"
+  ]
+}

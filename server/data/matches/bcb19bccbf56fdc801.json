@@ -1,0 +1,28 @@
+{
+  "id": "bcb19bccbf56fdc801",
+  "tournamentId": "bcb19bccbf56fdc8",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "61870e6e23aaf25a",
+    "nickname": "巅峰高手素魄魄"
+  },
+  "playerB": {
+    "playerId": "5e69e4790828b5c6",
+    "nickname": "未咲"
+  },
+  "winnerOverride": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1610-1709-2406",
+      "playerBTeamId": "1104-1507-2202"
+    }
+  ],
+  "gameIds": [
+    "bcb19bccbf56fdc80101",
+    "bcb19bccbf56fdc80102"
+  ]
+}

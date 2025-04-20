@@ -1,0 +1,29 @@
+{
+  "id": "bcb19bccbf56fdc804",
+  "tournamentId": "bcb19bccbf56fdc8",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "f4368b8ee00a6d1a",
+    "nickname": "栗子尖"
+  },
+  "playerB": {
+    "playerId": "524245fa19842856",
+    "nickname": "草莓姐姐的迷弟"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1610-1709-2406",
+      "playerBTeamId": "1111-1209-1305"
+    }
+  ],
+  "gameIds": [
+    "bcb19bccbf56fdc80401",
+    "bcb19bccbf56fdc80402",
+    "bcb19bccbf56fdc80403"
+  ]
+}
