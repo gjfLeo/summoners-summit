@@ -1,0 +1,29 @@
+{
+  "id": "bcb19bccbf56fdc812",
+  "tournamentId": "bcb19bccbf56fdc8",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "d1426e65cb53e72d",
+    "nickname": "木瓜豆腐"
+  },
+  "playerB": {
+    "playerId": "df71dc0b703ba126",
+    "nickname": "月满西楼"
+  },
+  "winnerOverride": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1303-2401-2403",
+      "playerBTeamId": "1312-1408-2102"
+    }
+  ],
+  "gameIds": [
+    "bcb19bccbf56fdc81201",
+    "bcb19bccbf56fdc81202",
+    "bcb19bccbf56fdc81203"
+  ]
+}

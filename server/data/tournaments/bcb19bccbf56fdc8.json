@@ -44,7 +44,108 @@
           },
           "date": "2025-04-21",
           "matchIds": [
-            "bcb19bccbf56fdc805"
+            "bcb19bccbf56fdc805",
+            "bcb19bccbf56fdc806",
+            "bcb19bccbf56fdc807",
+            "bcb19bccbf56fdc808"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-04-23",
+          "matchIds": [
+            "bcb19bccbf56fdc809",
+            "bcb19bccbf56fdc810"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-04-24",
+          "matchIds": [
+            "bcb19bccbf56fdc811",
+            "bcb19bccbf56fdc812"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-04-25",
+          "matchIds": [
+            "bcb19bccbf56fdc813",
+            "bcb19bccbf56fdc814"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-04-27",
+          "matchIds": [
+            "bcb19bccbf56fdc815"
           ]
         }
       ]

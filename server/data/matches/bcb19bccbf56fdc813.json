@@ -1,0 +1,31 @@
+{
+  "id": "bcb19bccbf56fdc813",
+  "tournamentId": "bcb19bccbf56fdc8",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.5",
+  "playerA": {
+    "playerId": "5e69e4790828b5c6",
+    "nickname": "未咲"
+  },
+  "playerB": {
+    "playerId": "df71dc0b703ba126",
+    "nickname": "月满西楼"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1307-1411-1503",
+      "playerBTeamId": "1104-1507-2202"
+    }
+  ],
+  "gameIds": [
+    "bcb19bccbf56fdc81301",
+    "bcb19bccbf56fdc81302",
+    "bcb19bccbf56fdc81303",
+    "bcb19bccbf56fdc81304",
+    "bcb19bccbf56fdc81305"
+  ]
+}
