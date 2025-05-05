@@ -1,0 +1,97 @@
+{
+  "id": "6af754d6c38fec19",
+  "name": {
+    "zh": "「逐辉星聚」月话杯"
+  },
+  "gameVersion": "5.5",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-04-29",
+          "matchIds": [
+            "6af754d6c38fec1901",
+            "6af754d6c38fec1902"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-04-30",
+          "matchIds": [
+            "6af754d6c38fec1903",
+            "6af754d6c38fec1904"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-02",
+          "matchIds": [
+            "6af754d6c38fec1905",
+            "6af754d6c38fec1906"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-04",
+          "matchIds": [
+            "6af754d6c38fec1907"
+          ]
+        }
+      ]
+    }
+  ]
+}

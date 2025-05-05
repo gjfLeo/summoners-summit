@@ -1,6 +1,6 @@
 import type { CardInfo, DeckCode } from "~/types";
 
-export const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "hjt", "j8", "jba", "ntr", "pcp", "rbq", "xjp"];
+export const blockWords = ["64", "89", "ba9", "c4", "cag", "gay", "hjt", "j8", "jba", "ntr", "pcp", "rbq", "xjp","gwg"];
 
 /**
  * @param shareIds 33项shareId数组
