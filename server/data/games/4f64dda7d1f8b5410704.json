@@ -9,7 +9,7 @@
       "1504"
     ],
     "teamId": "1107-1209-1504",
-    "deckCode": "ABBx0RgNAjBw3WMOCOAw7ooPCECg9I4PCGDg9pcQCVFxBpMQDGFQO8UdDEGQ1MkLDfAA"
+    "deckCode": "AJBx0RgNAhBw02MNCNAw7ooOCOCg9I4PCEDg9pcPCWFxBZMQC2HwBsUTDLFQ1MkdDEAA"
   },
   "playerBDeck": {
     "characters": [
@@ -18,7 +18,8 @@
       "1608"
     ],
     "teamId": "1310-1608-1610",
-    "deckCode": "EVGRO80TGLHBxI8dHEHw1JcYCfBxtDMcE0Exz1cLFVBwtdsLDmCQtukNDpGgr+oaD/AA"
+    "deckCode": "EWCRts0NGJDB248OGJDx6c8OHKDw6pcPCVFxOzMTE7ExxFccFUFwr7QaC/FQ1LUdC0AA"
   },
-  "winner": "B"
+  "winner": "B",
+  "starter": "B"
 }
