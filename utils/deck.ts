@@ -12,7 +12,7 @@ export const blockWords = [
   "j8",
   "jba",
   "ntr",
-  "pcp",
+  // "pcp", // 似乎已移除
   "rbq",
   "xjp",
 ];
