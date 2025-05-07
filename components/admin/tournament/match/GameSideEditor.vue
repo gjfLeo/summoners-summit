@@ -112,7 +112,7 @@ async function pasteDeck() {
     const text = await navigator.clipboard.readText();
     const pastedDeck = decodeDeck(text);
     deck.value.characters = pastedDeck.characterCards;
-    actionCards.value = pastedDeck.actionCards;
+    actionCards.value = pastedDeck.actionCards.sort();
     message.success("已粘贴");
   }
   catch (e: any) {
