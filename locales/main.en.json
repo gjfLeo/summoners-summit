@@ -162,6 +162,7 @@
   },
   "tools": {
     "decodeDeckCode": {
+      "blockWordWarning": "This deck code contains in-game block word: {0}, which cannot be decoded in game.",
       "decode": "Decode",
       "inputPlaceholder": "Input deck share code"
     }
