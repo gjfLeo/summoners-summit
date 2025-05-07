@@ -162,7 +162,7 @@
   },
   "tools": {
     "decodeDeckCode": {
-      "blockWordWarning": "包含游戏内屏蔽词{0}，在游戏中可能解析失败",
+      "blockWordWarning": "包含疑似游戏内屏蔽词{0}，在游戏中可能解析失败",
       "decode": "解析",
       "inputPlaceholder": "请输入牌组分享码"
     }
