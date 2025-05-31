@@ -675,6 +675,19 @@
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Clorinde_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Clorinde_TCG_Avatar_Icon.png"
   },
+  "1413": {
+    "id": "1413",
+    "name": {
+      "zh": "赛索斯",
+      "en": "Sethos"
+    },
+    "shareId": 469,
+    "type": "character",
+    "gameVersion": "5.6",
+    "element": "electro",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Sethos_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Sethos_TCG_Avatar_Icon.png"
+  },
   "1501": {
     "id": "1501",
     "name": {
@@ -934,6 +947,19 @@
     "element": "geo",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kachina_Character_Card.png",
     "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Kachina_TCG_Avatar_Icon.png"
+  },
+  "1611": {
+    "id": "1611",
+    "name": {
+      "zh": "希诺宁",
+      "en": "Xilonen"
+    },
+    "shareId": 470,
+    "type": "character",
+    "gameVersion": "5.6",
+    "element": "geo",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Xilonen_Character_Card.png",
+    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Xilonen_TCG_Avatar_Icon.png"
   },
   "1701": {
     "id": "1701",

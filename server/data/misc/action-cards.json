@@ -623,6 +623,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Dark-Shattering_Flame_Equipment_Card.png"
   },
+  "214131": {
+    "id": "214131",
+    "name": {
+      "zh": "巡日塔门书",
+      "en": "Pylon of the Sojourning Sun Temple"
+    },
+    "shareId": 471,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Pylon_of_the_Sojourning_Sun_Temple_Equipment_Card.png"
+  },
   "215011": {
     "id": "215011",
     "name": {
@@ -862,6 +874,18 @@
     "gameVersion": "5.5",
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Night_Realm%27s_Gift_Heart_of_Unity_Equipment_Card.png"
+  },
+  "216111": {
+    "id": "216111",
+    "name": {
+      "zh": "丛山锻火驰行",
+      "en": "Tour of Tepeilhuitl"
+    },
+    "shareId": 472,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Tour_of_Tepeilhuitl_Equipment_Card.png"
   },
   "217011": {
     "id": "217011",
@@ -2471,6 +2495,18 @@
     "actionType": "equipment",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Waverider_Equipment_Card.png"
   },
+  "313008": {
+    "id": "313008",
+    "name": {
+      "zh": "突角龙",
+      "en": "Tatankasaurus"
+    },
+    "shareId": 474,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "equipment",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Tatankasaurus_Equipment_Card.png"
+  },
   "321001": {
     "id": "321001",
     "name": {
@@ -2794,6 +2830,18 @@
     "gameVersion": "5.5",
     "actionType": "support",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Masters_of_the_Night-Wind_Support_Card.png"
+  },
+  "321028": {
+    "id": "321028",
+    "name": {
+      "zh": "「沃陆之邦」",
+      "en": "\"Collective of Plenty\""
+    },
+    "shareId": 475,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "support",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Collective_of_Plenty_Support_Card.png"
   },
   "322001": {
     "id": "322001",
@@ -4055,6 +4103,18 @@
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/In_the_Name_of_the_Extreme_Event_Card.png"
   },
+  "332045": {
+    "id": "332045",
+    "name": {
+      "zh": "困困冥想术",
+      "en": "Art of Sleepy Meditation"
+    },
+    "shareId": 476,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Art_of_Sleepy_Meditation_Event_Card.png"
+  },
   "333001": {
     "id": "333001",
     "name": {
@@ -4294,5 +4354,17 @@
     "gameVersion": "5.5",
     "actionType": "event",
     "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Mystique_Soup_Event_Card.png"
+  },
+  "333027": {
+    "id": "333027",
+    "name": {
+      "zh": "纵声欢唱",
+      "en": "Sing Your Heart Out"
+    },
+    "shareId": 477,
+    "type": "action",
+    "gameVersion": "5.6",
+    "actionType": "event",
+    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sing_Your_Heart_Out_Event_Card.png"
   }
 }
