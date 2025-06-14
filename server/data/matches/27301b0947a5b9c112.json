@@ -1,0 +1,31 @@
+{
+  "id": "27301b0947a5b9c112",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 5,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "40817b6c0cd7d5a3",
+    "nickname": "天命主教德丽莎"
+  },
+  "playerB": {
+    "playerId": "54e86d890e0004ef",
+    "nickname": "奥莉"
+  },
+  "winnerOverride": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1310-1608-1610",
+      "playerBTeamId": "1603-1609-2102"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c11201",
+    "27301b0947a5b9c11202",
+    "27301b0947a5b9c11203",
+    "27301b0947a5b9c11204",
+    "27301b0947a5b9c11205"
+  ]
+}
