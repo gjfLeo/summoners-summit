@@ -1,0 +1,30 @@
+{
+  "id": "27301b0947a5b9c106",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "54e86d890e0004ef",
+    "nickname": "奥莉"
+  },
+  "playerB": {
+    "playerId": "357f80d929a918ce",
+    "nickname": "Elaina"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1507-2202",
+      "playerBTeamId": "1310-1608-1610"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c10601",
+    "27301b0947a5b9c10602",
+    "27301b0947a5b9c10603",
+    "27301b0947a5b9c10604"
+  ]
+}

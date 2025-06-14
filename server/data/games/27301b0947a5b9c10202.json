@@ -1,0 +1,26 @@
+{
+  "id": "27301b0947a5b9c10202",
+  "matchId": "27301b0947a5b9c102",
+  "gameVersion": "5.6",
+  "playerADeck": {
+    "characters": [
+      "1213",
+      "1110",
+      "1205"
+    ],
+    "teamId": "1110-1205-1213",
+    "deckCode": "G9ERWE4MAEDRxLYVG6Bg4p0OFCGBiUgPGGERaIEdGzFxEZ4UGdHgabYWC5Fg3L0dC8AA"
+  },
+  "playerBDeck": {
+    "characters": [
+      "1411",
+      "1503",
+      "1307"
+    ],
+    "teamId": "1307-1411-1503",
+    "deckCode": "FZDA0CYNARBx0WMVFqAw9psPFGGBaEgZGGERCoEQG/FwacQWDJFA1MYdDEFg3MkdDMAA"
+  },
+  "winner": "B",
+  "starter": "A",
+  "gameVideo": "https://www.bilibili.com/video/BV18sTCz6EcQ?p=9"
+}

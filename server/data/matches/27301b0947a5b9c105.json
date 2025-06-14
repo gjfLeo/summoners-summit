@@ -1,0 +1,31 @@
+{
+  "id": "27301b0947a5b9c105",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 2,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "d1426e65cb53e72d",
+    "nickname": "木瓜豆腐"
+  },
+  "playerB": {
+    "playerId": "828c6fa4cda2c687",
+    "nickname": "张伯伦"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1310-1608-1610",
+      "playerBTeamId": "1303-2401-2602"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c10501",
+    "27301b0947a5b9c10502",
+    "27301b0947a5b9c10503",
+    "27301b0947a5b9c10504",
+    "27301b0947a5b9c10505"
+  ]
+}

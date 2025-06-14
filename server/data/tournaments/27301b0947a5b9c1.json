@@ -1,0 +1,115 @@
+{
+  "id": "27301b0947a5b9c1",
+  "name": {
+    "zh": "星夜之邀杯",
+    "en": "AstraNox Invitational"
+  },
+  "gameVersion": "5.6",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "淘汰赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-06-09",
+          "matchIds": [
+            "27301b0947a5b9c101",
+            "27301b0947a5b9c102"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-06-10",
+          "matchIds": [
+            "27301b0947a5b9c103",
+            "27301b0947a5b9c104"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day3"
+          },
+          "date": "2025-06-11",
+          "matchIds": [
+            "27301b0947a5b9c105",
+            "27301b0947a5b9c106"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day4"
+          },
+          "date": "2025-06-12",
+          "matchIds": [
+            "27301b0947a5b9c107",
+            "27301b0947a5b9c108"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day5"
+          },
+          "date": "2025-06-13",
+          "matchIds": [
+            "27301b0947a5b9c109",
+            "27301b0947a5b9c110"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day6"
+          },
+          "date": "2025-06-14",
+          "matchIds": []
+        },
+        {
+          "name": {
+            "zh": "Day7"
+          },
+          "date": "2025-06-15",
+          "matchIds": []
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "总决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-06-15",
+          "matchIds": []
+        }
+      ]
+    }
+  ]
+}
