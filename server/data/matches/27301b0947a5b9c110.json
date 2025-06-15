@@ -1,0 +1,30 @@
+{
+  "id": "27301b0947a5b9c110",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 4,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "d1426e65cb53e72d",
+    "nickname": "木瓜豆腐"
+  },
+  "playerB": {
+    "playerId": "f97a71e64f4fa4bc",
+    "nickname": "AIR"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1307-1411-1503",
+      "playerBTeamId": "1213-1412-2303"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c11001",
+    "27301b0947a5b9c11002",
+    "27301b0947a5b9c11003",
+    "27301b0947a5b9c11004"
+  ]
+}

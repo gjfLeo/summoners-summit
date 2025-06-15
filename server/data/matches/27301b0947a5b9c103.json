@@ -1,0 +1,30 @@
+{
+  "id": "27301b0947a5b9c103",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "b72b25aef63ca940",
+    "nickname": "豆沙包"
+  },
+  "playerB": {
+    "playerId": "e1f22e3c57a5845b",
+    "nickname": "RedY"
+  },
+  "winnerOverride": "B",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1603-1609-2102",
+      "playerBTeamId": "1310-1608-1610"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c10301",
+    "27301b0947a5b9c10302",
+    "27301b0947a5b9c10303",
+    "27301b0947a5b9c10304"
+  ]
+}

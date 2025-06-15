@@ -1,0 +1,31 @@
+{
+  "id": "27301b0947a5b9c101",
+  "tournamentId": "27301b0947a5b9c1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "e785b00d8f5852ea",
+    "nickname": "Inzhagi"
+  },
+  "playerB": {
+    "playerId": "13c2271caa725923",
+    "nickname": "无量大蒜"
+  },
+  "winnerOverride": "A",
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1310-1608-1610",
+      "playerBTeamId": "1603-1609-2102"
+    }
+  ],
+  "gameIds": [
+    "27301b0947a5b9c10101",
+    "27301b0947a5b9c10102",
+    "27301b0947a5b9c10103",
+    "27301b0947a5b9c10104",
+    "27301b0947a5b9c10105"
+  ]
+}
