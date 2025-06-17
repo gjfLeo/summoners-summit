@@ -2501,7 +2501,7 @@
       "zh": "突角龙",
       "en": "Tatankasaurus"
     },
-    "shareId": 474,
+    "shareId": 473,
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "equipment",
@@ -2837,7 +2837,7 @@
       "zh": "「沃陆之邦」",
       "en": "\"Collective of Plenty\""
     },
-    "shareId": 475,
+    "shareId": 474,
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "support",
@@ -4109,7 +4109,7 @@
       "zh": "困困冥想术",
       "en": "Art of Sleepy Meditation"
     },
-    "shareId": 476,
+    "shareId": 475,
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "event",
@@ -4361,7 +4361,7 @@
       "zh": "纵声欢唱",
       "en": "Sing Your Heart Out"
     },
-    "shareId": 477,
+    "shareId": 476,
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "event",
