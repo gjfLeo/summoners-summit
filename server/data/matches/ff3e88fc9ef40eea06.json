@@ -1,0 +1,24 @@
+{
+  "id": "ff3e88fc9ef40eea06",
+  "tournamentId": "ff3e88fc9ef40eea",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "73bfb3039bbaf8ac",
+    "nickname": "税慕"
+  },
+  "playerB": {
+    "playerId": "40817b6c0cd7d5a3",
+    "nickname": "天命主教德丽莎"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "ff3e88fc9ef40eea0601",
+    "ff3e88fc9ef40eea0602",
+    "ff3e88fc9ef40eea0603",
+    "ff3e88fc9ef40eea0604"
+  ],
+  "video": "https://www.bilibili.com/video/BV1uVT2z1Ew8"
+}

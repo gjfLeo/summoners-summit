@@ -5,8 +5,8 @@
     "en": "AstraNox Invitational"
   },
   "gameVersion": "5.6",
-  "region": "CN",
-  "type": "积分赛",
+  "region": "CrossRegion",
+  "type": "地区大赛",
   "stages": [
     {
       "name": {
