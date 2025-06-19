@@ -1,0 +1,18 @@
+{
+  "id": "671b545d81b62b1615",
+  "tournamentId": "671b545d81b62b16",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 3,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "020e5ceb552abb6e",
+    "nickname": "薄学"
+  },
+  "playerB": {
+    "playerId": "cce69fea8e67c5ac",
+    "nickname": "ONE"
+  },
+  "winnerOverride": "A",
+  "gameIds": []
+}
