@@ -12,7 +12,7 @@
         "zh": "8进4"
       },
       "rules": {
-        "numGames": 3,
+        "numGames": 5,
         "mode": "conquest",
         "submitTeams": {
           "num": 3,
