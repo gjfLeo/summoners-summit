@@ -1,0 +1,23 @@
+{
+  "id": "d22ec562446d23a205",
+  "tournamentId": "d22ec562446d23a2",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "8df80e09ddf2612d",
+    "nickname": "逐火之荧"
+  },
+  "playerB": {
+    "playerId": "5ea6587d67b33f1f",
+    "nickname": "赤练仙子李莫愁"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "d22ec562446d23a20501",
+    "d22ec562446d23a20502",
+    "d22ec562446d23a20503"
+  ],
+  "video": "https://www.bilibili.com/video/BV1D4M6zvEbF"
+}

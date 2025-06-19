@@ -1,0 +1,25 @@
+{
+  "id": "d22ec562446d23a206",
+  "tournamentId": "d22ec562446d23a2",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "70f9d8f158e2454b",
+    "nickname": "独钓寒江雪"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "winnerOverride": "B",
+  "gameIds": [
+    "d22ec562446d23a20601",
+    "d22ec562446d23a20602",
+    "d22ec562446d23a20603",
+    "d22ec562446d23a20604",
+    "d22ec562446d23a20605"
+  ],
+  "video": "https://www.bilibili.com/video/BV1RcMrzGEVQ"
+}
