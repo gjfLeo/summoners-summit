@@ -117,6 +117,45 @@ async function getCharacterCardData() {
       image: getFandomImageUrl("Xilonen Character Card.png"),
       avatar: getFandomImageUrl("Xilonen TCG Avatar Icon.png"),
     },
+    {
+      id: ZCardId.parse(1114),
+      name: {
+        zh: "茜特菈莉",
+        en: "Citlali",
+      },
+      shareId: 477,
+      type: "character",
+      gameVersion: "5.7",
+      element: "cryo",
+      image: getFandomImageUrl("Citlali Character Card.png"),
+      avatar: getFandomImageUrl("Citlali TCG Avatar Icon.png"),
+    },
+    {
+      id: ZCardId.parse(1315),
+      name: {
+        zh: "玛薇卡",
+        en: "Mavuika",
+      },
+      shareId: 478,
+      type: "character",
+      gameVersion: "5.7",
+      element: "pyro",
+      image: getFandomImageUrl("Mavuika Character Card.png"),
+      avatar: getFandomImageUrl("Mavuika TCG Avatar Icon.png"),
+    },
+    {
+      id: ZCardId.parse(1511),
+      name: {
+        zh: "恰斯卡",
+        en: "Chasca",
+      },
+      shareId: 479,
+      type: "character",
+      gameVersion: "5.7",
+      element: "anemo",
+      image: getFandomImageUrl("Chasca Character Card.png"),
+      avatar: getFandomImageUrl("Chasca TCG Avatar Icon.png"),
+    },
   ];
   characterCardData.push(...manualCardData.map(card => ZCharacterCardInfo.parse(card)));
 
@@ -299,6 +338,90 @@ async function getActionCardData() {
       actionType: "event",
       image: getFandomImageUrl("Sing Your Heart Out Event Card.png"),
     },
+    {
+      id: ZCardId.parse(211141),
+      name: {
+        zh: "五重天的寒雨",
+        en: "Mamaloaco's Frigid Rain",
+      },
+      shareId: 480,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("Mamaloaco's Frigid Rain Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(213151),
+      name: {
+        zh: "「人之名」解放",
+        en: "\"Humanity's Name\" Unfettered",
+      },
+      shareId: 481,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("\"Humanity's Name\" Unfettered Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(213151),
+      name: {
+        zh: "「人之名」解放",
+        en: "\"Humanity's Name\" Unfettered",
+      },
+      shareId: 481,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("\"Humanity's Name\" Unfettered Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(215111),
+      name: {
+        zh: "子弹的戏法",
+        en: "Bullet Trick",
+      },
+      shareId: 482,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("Bullet Trick Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(311509),
+      name: {
+        zh: "船坞长剑",
+        en: "The Dockhand's Assistant",
+      },
+      shareId: 483,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("The Dockhand's Assistant Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(312033),
+      name: {
+        zh: "诸圣的礼冠",
+        en: "Crown of the Saints",
+      },
+      shareId: 484,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("Crown of the Saints Equipment Card.png"),
+    },
+    {
+      id: ZCardId.parse(312034),
+      name: {
+        zh: "烬城勇者绘卷",
+        en: "Scroll of the Hero of Cinder City",
+      },
+      shareId: 485,
+      type: "action",
+      gameVersion: "5.7",
+      actionType: "equipment",
+      image: getFandomImageUrl("Scroll of the Hero of Cinder City Equipment Card.png"),
+    },
   ];
   actionCardData.push(...manualCardData.map(card => ZActionCardInfo.parse(card)));
 
@@ -327,7 +450,9 @@ export default defineEventHandler(async () => {
 
   const versionSet = new Set<string>();
   [...characterCardData, ...actionCardData].forEach((card) => {
-    versionSet.add(card.gameVersion);
+    if (card.gameVersion) {
+      versionSet.add(card.gameVersion);
+    }
   });
   const versionIds = Array.from(versionSet).sort().reverse().filter(v => v.localeCompare("3.7") >= 0);
   const versionData = getVersionData(versionIds);

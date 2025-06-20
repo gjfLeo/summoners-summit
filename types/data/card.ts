@@ -10,7 +10,7 @@ const ZCardInfoBase = z.object({
   name: z.record(ZLocales, z.string()),
   shareId: z.number(),
   type: ZCardType,
-  gameVersion: ZGameVersionId,
+  gameVersion: ZGameVersionId.optional(),
 }).strip();
 
 export const ZCharacterCardInfo = ZCardInfoBase.extend({
