@@ -1,0 +1,20 @@
+{
+  "id": "e4821e4d5def0f3f13",
+  "tournamentId": "e4821e4d5def0f3f",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "0d0fa57e06e04206",
+    "nickname": "雪国Ink"
+  },
+  "playerB": {
+    "playerId": "ac9aff8927acdfb8",
+    "nickname": "千予晴空"
+  },
+  "gameIds": [
+    "e4821e4d5def0f3f1301",
+    "e4821e4d5def0f3f1302"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "e4821e4d5def0f3f06",
+  "tournamentId": "e4821e4d5def0f3f",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 5,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "aa717943ad3fbd8e",
+    "nickname": "Tonbo"
+  },
+  "playerB": {
+    "playerId": "0210597f129267c3",
+    "nickname": "小铭同学"
+  },
+  "gameIds": [
+    "e4821e4d5def0f3f0601",
+    "e4821e4d5def0f3f0602"
+  ]
+}

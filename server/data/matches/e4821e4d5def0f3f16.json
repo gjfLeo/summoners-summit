@@ -1,0 +1,21 @@
+{
+  "id": "e4821e4d5def0f3f16",
+  "tournamentId": "e4821e4d5def0f3f",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "40817b6c0cd7d5a3",
+    "nickname": "天命主教德丽莎"
+  },
+  "playerB": {
+    "playerId": "e3cc88fef0c0e335",
+    "nickname": "小猫你可以吃抹茶芭菲"
+  },
+  "gameIds": [
+    "e4821e4d5def0f3f1601",
+    "e4821e4d5def0f3f1602",
+    "e4821e4d5def0f3f1603"
+  ]
+}

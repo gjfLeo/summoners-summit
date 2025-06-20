@@ -1,7 +1,7 @@
 {
-  "id": "c07b41f76479901a",
+  "id": "e4821e4d5def0f3f",
   "name": {
-    "zh": "星夜之邀杯小王子赛区海选赛"
+    "zh": "星夜之邀杯枫达赛区A组海选赛"
   },
   "gameVersion": "5.6",
   "region": "CrossRegion",
@@ -9,28 +9,32 @@
   "stages": [
     {
       "name": {
-        "zh": "双败分组赛"
+        "zh": "双败淘汰赛"
       },
       "rules": {
         "numGames": 3,
         "mode": "conquest",
         "submitTeams": {
-          "num": 2
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
         }
       },
       "parts": [
         {
           "name": {},
-          "date": "2025-05-20",
+          "date": "2025-05-27",
           "matchIds": [
-            "c07b41f76479901a01",
-            "c07b41f76479901a02",
-            "c07b41f76479901a03",
-            "c07b41f76479901a04",
-            "c07b41f76479901a05",
-            "c07b41f76479901a06",
-            "c07b41f76479901a07",
-            "c07b41f76479901a08"
+            "e4821e4d5def0f3f01",
+            "e4821e4d5def0f3f02",
+            "e4821e4d5def0f3f03",
+            "e4821e4d5def0f3f04",
+            "e4821e4d5def0f3f05",
+            "e4821e4d5def0f3f06",
+            "e4821e4d5def0f3f07",
+            "e4821e4d5def0f3f08"
           ]
         }
       ]
@@ -39,15 +43,26 @@
       "name": {
         "zh": "败者组第1轮"
       },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
       "parts": [
         {
           "name": {},
-          "date": "2025-05-21",
+          "date": "2025-05-28",
           "matchIds": [
-            "c07b41f76479901a09",
-            "c07b41f76479901a10",
-            "c07b41f76479901a11",
-            "c07b41f76479901a12"
+            "e4821e4d5def0f3f09",
+            "e4821e4d5def0f3f10",
+            "e4821e4d5def0f3f11",
+            "e4821e4d5def0f3f12"
           ]
         }
       ]
@@ -59,12 +74,12 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-21",
+          "date": "2025-05-28",
           "matchIds": [
-            "c07b41f76479901a13",
-            "c07b41f76479901a14",
-            "c07b41f76479901a15",
-            "c07b41f76479901a16"
+            "e4821e4d5def0f3f13",
+            "e4821e4d5def0f3f14",
+            "e4821e4d5def0f3f15",
+            "e4821e4d5def0f3f16"
           ]
         }
       ]
@@ -76,12 +91,12 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-22",
+          "date": "2025-05-29",
           "matchIds": [
-            "c07b41f76479901a17",
-            "c07b41f76479901a18",
-            "c07b41f76479901a19",
-            "c07b41f76479901a20"
+            "e4821e4d5def0f3f17",
+            "e4821e4d5def0f3f18",
+            "e4821e4d5def0f3f19",
+            "e4821e4d5def0f3f20"
           ]
         }
       ]
@@ -93,10 +108,10 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-23",
+          "date": "2025-05-30",
           "matchIds": [
-            "c07b41f76479901a21",
-            "c07b41f76479901a22"
+            "e4821e4d5def0f3f21",
+            "e4821e4d5def0f3f22"
           ]
         }
       ]
@@ -108,10 +123,10 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-23",
+          "date": "2025-05-30",
           "matchIds": [
-            "c07b41f76479901a23",
-            "c07b41f76479901a24"
+            "e4821e4d5def0f3f23",
+            "e4821e4d5def0f3f24"
           ]
         }
       ]
@@ -123,10 +138,10 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-24",
+          "date": "2025-05-31",
           "matchIds": [
-            "c07b41f76479901a25",
-            "c07b41f76479901a26"
+            "e4821e4d5def0f3f25",
+            "e4821e4d5def0f3f26"
           ]
         }
       ]
@@ -138,9 +153,9 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-25",
+          "date": "2025-06-02",
           "matchIds": [
-            "c07b41f76479901a27"
+            "e4821e4d5def0f3f27"
           ]
         }
       ]
@@ -152,9 +167,9 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-05-25",
+          "date": "2025-06-01",
           "matchIds": [
-            "c07b41f76479901a28"
+            "e4821e4d5def0f3f28"
           ]
         }
       ]
