@@ -1,13 +1,22 @@
 import crypto from "node:crypto";
 import { z } from "zod";
-import { ZActionCardInfo, ZCardId, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
+import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
+import type { CardVersionData } from "~/types/data/card-version";
+
+async function getLatestCommit() {
+  const res = await fetch("https://gitlab.com/api/v4/projects/Dimbreath%2fAnimeGameData/repository/commits");
+  const commits = await res.json() as { id: string }[];
+  return commits[0].id;
+}
 
 const fandomFilenameOverrides: Record<number, string> = {
   212111: "Hear Me — Let Us Raise the Chalice of Love! Equipment Card.png",
   321024: "Scions of the Canopy Support Card.png",
   321025: "People of the Springs Support Card.png",
   321026: "Flower-Feather Clan Support Card.png",
+  321027: "Masters of the Night-Wind Support Card.png",
+  321028: "Collective of Plenty Support Card.png",
 };
 
 function getFandomImageUrl(filename: string) {
@@ -22,11 +31,14 @@ function getFandomImageUrl(filename: string) {
 }
 
 async function fetchDimBreathData(path: string) {
+  console.log(`Fetching ${path}...`);
   const res = await fetch(`https://gitlab.com/Dimbreath/AnimeGameData/-/raw/master/${path}`);
+  console.log("Done");
   return await res.json();
 }
 
 const ZRawCardType = z.enum([
+  "GCG_CARD_CHARACTER",
   "GCG_CARD_MODIFY",
   "GCG_CARD_ASSIST",
   "GCG_CARD_EVENT",
@@ -41,12 +53,11 @@ const ZRawActionCard = z.object({
   cardType: ZRawCardType,
   tagList: ZRawCardTag.array().transform(tags => tags.filter(tag => tag !== "GCG_TAG_NONE")),
 
-  isHidden: z.boolean(),
+  isHidden: z.boolean().optional(),
   isCanObtain: z.boolean(),
 
   nameTextMapHash: z.number(),
   descTextMapHash: z.number(),
-  descOnTableTextMapHash: z.number(),
 });
 
 async function getShareIdData() {
@@ -54,7 +65,6 @@ async function getShareIdData() {
   const shareIdKey = Object.entries(rawData[0])
     .find(([key, value]) => key.match(/^[A-Z]{11}$/) && value === 1)
     ?.[0];
-  console.log(`shareIdKey: ${shareIdKey}`);
   if (!shareIdKey) {
     throw new Error("Failed to find shareId key");
   }
@@ -63,31 +73,99 @@ async function getShareIdData() {
 type ShareIdData = Awaited<ReturnType<typeof getShareIdData>>;
 
 async function getTextMapData() {
-  const chs = await fetch("https://gitlab.com/Dimbreath/AnimeGameData/-/raw/master/TextMap/TextMapCHS.json");
-  const chsJson = await chs.json() as Record<string, string>;
-  const en = await fetch("https://gitlab.com/Dimbreath/AnimeGameData/-/raw/master/TextMap/TextMapEN.json");
-  const enJson = await en.json() as Record<string, string>;
+  const textMapZh: Record<string, string> = await fetchDimBreathData("TextMap/TextMapCHS.json");
+  const textMapEn: Record<string, string> = await fetchDimBreathData("TextMap/TextMapEN.json");
+
+  for (const key in textMapZh) {
+    if (textMapZh[key] === "#{REALNAME[ID(1)|DELAYHANDLE(true)]}") {
+      textMapZh[key] = textMapZh["59470483"];
+    }
+    if (textMapEn[key] === "#{REALNAME[ID(1)|DELAYHANDLE(true)]}") {
+      textMapEn[key] = textMapEn["59470483"];
+    }
+  }
 
   return Object.fromEntries(
-    Object.entries(chsJson)
+    Object.entries(textMapZh)
       .filter(([_key, zh]) => {
-        return zh.length <= 20;
+        return zh.length <= 15;
       })
       .map(([key, zh]) => {
-        const en = enJson[key];
+        const en = textMapEn[key];
         return [key, { zh, en }];
       }),
   );
-  // return {
-  //   zh: chsJson,
-  //   en: enJson,
-  // };
 }
 type TextMapData = Awaited<ReturnType<typeof getTextMapData>>;
 
+const ignoredKeys = [
+  "skillList",
+  "chooseTargetType",
+  "chooseTargetList",
+  "costList",
+
+  "descOnTableTextMapHash",
+  "buffIconHash",
+  "hintType",
+  "hintValue",
+  "triggerSummonFullHintNum",
+  "tokenToShow",
+  "tokenToShowIconType",
+  "changeToWhichSpecialView",
+  "changeToWhichSpecialViewTokenNum",
+  "stateBuffType",
+  "dvAdjustJsonList",
+  "persistEffectConstraintToken",
+  "persistEffectConstraintSkillIdList",
+  "persistEffectType",
+  "tokenToShowTextId",
+];
+
 async function getCharacterCardData(textMapData: TextMapData, shareIdData: ShareIdData) {
   const rawData: Record<string, any>[] = await fetchDimBreathData("ExcelBinOutput/GCGCharExcelConfigData.json");
-  return [] as Partial<CharacterCardInfo>[];
+
+  Object.keys(rawData[0])
+    .filter(key => key.match(/^[A-Z]{11}$/))
+    .forEach((key) => {
+      ignoredKeys.push(key);
+    });
+
+  const cardList = rawData
+    .map((card) => {
+      for (const key in ignoredKeys) {
+        delete card[ignoredKeys[key]];
+      }
+      return ZRawActionCard.parse(card);
+    })
+    .filter(card => card.isCanObtain && !card.isHidden)
+    .map((card) => {
+      const name = textMapData[card.nameTextMapHash];
+      if (!name || !name.zh || !name.en) {
+        throw new Error(`Invalid nameTextMapHash: ${card.nameTextMapHash}, ${name}`);
+      }
+      // const actionType = parseActionCardType(card.cardType);
+      const shareId = shareIdData[card.id];
+      if (!shareId) {
+        throw new Error(`ShareId not found for card ${card.id}`);
+      }
+      const elementPrefix = "GCG_TAG_ELEMENT_";
+      const element = card.tagList
+        .find(tag => tag.startsWith(elementPrefix))
+        ?.substring(elementPrefix.length)
+        .toLowerCase();
+
+      return ZCharacterCardInfo.parse({
+        id: ZCardId.parse(card.id),
+        name,
+        shareId,
+        type: "character",
+        element,
+        image: getFandomImageUrl(`${name.en} Character Card.png`),
+        avatar: getFandomImageUrl(`${name.en} TCG Avatar Icon.png`),
+      });
+    });
+
+  return cardList;
 }
 
 function parseActionCardType(cardType: string): ActionCardInfo["actionType"] {
@@ -106,28 +184,6 @@ function parseActionCardType(cardType: string): ActionCardInfo["actionType"] {
 async function getActionCardData(textMapData: TextMapData, shareIdData: ShareIdData) {
   const rawData: Record<string, any>[] = await fetchDimBreathData("ExcelBinOutput/GCGCardExcelConfigData.json");
 
-  const ignoredKeys = [
-    "skillList",
-    "chooseTargetType",
-    "chooseTargetList",
-    "costList",
-
-    "buffIconHash",
-    "hintType",
-    "hintValue",
-    "triggerSummonFullHintNum",
-    "tokenToShow",
-    "tokenToShowIconType",
-    "changeToWhichSpecialView",
-    "changeToWhichSpecialViewTokenNum",
-    "stateBuffType",
-    "dvAdjustJsonList",
-    "persistEffectConstraintToken",
-    "persistEffectConstraintSkillIdList",
-    "persistEffectType",
-    "tokenToShowTextId",
-  ];
-
   Object.keys(rawData[0])
     .filter(key => key.match(/^[A-Z]{11}$/))
     .forEach((key) => {
@@ -143,6 +199,7 @@ async function getActionCardData(textMapData: TextMapData, shareIdData: ShareIdD
     })
     .filter(card => card.isCanObtain && !card.isHidden)
     .filter(card => ["GCG_CARD_MODIFY", "GCG_CARD_ASSIST", "GCG_CARD_EVENT"].includes(card.cardType))
+    .filter(card => card.id !== 332047) // TODO 已废弃卡牌，寻找更好的判断方法
     .map((card) => {
       const name = textMapData[card.nameTextMapHash];
       if (!name || !name.zh || !name.en) {
@@ -151,11 +208,15 @@ async function getActionCardData(textMapData: TextMapData, shareIdData: ShareIdD
       const actionType = parseActionCardType(card.cardType);
       const fandomFileName = fandomFilenameOverrides[card.id]
         ?? `${name.en} ${actionType.charAt(0).toUpperCase()}${actionType.slice(1)} Card.png`;
+      const shareId = shareIdData[card.id];
+      if (!shareId) {
+        throw new Error(`ShareId not found for card ${card.id}`);
+      }
 
       return ZActionCardInfo.parse({
         id: ZCardId.parse(card.id),
         name,
-        shareId: shareIdData[card.id],
+        shareId,
         type: "action",
         // gameVersion
         actionType,
@@ -166,43 +227,22 @@ async function getActionCardData(textMapData: TextMapData, shareIdData: ShareIdD
   return cardList;
 }
 
-function getVersionData(maxVersionId: string) {
-  const seasonPhrases = z.record(ZSeasonPhraseId, ZSeasonPhrase).parse(readData("misc/season-phrases"));
-  return Object.values(seasonPhrases)
-    .flatMap((p) => {
-      return p.gameVersions.map((v) => {
-        return {
-          id: v,
-          seasonPhrase: p.id,
-        };
-      });
-    })
-    .filter(v => v.id.localeCompare(maxVersionId) <= 0);
-  // return ZGameVersion.array().parse(
-  //   versionIds.map((vId) => {
-  //     const phrases = Object.values(seasonPhrases).find(p => p.gameVersions.includes(vId));
-  //     return {
-  //       id: vId,
-  //       seasonPhrase: phrases?.id ?? "",
-  //     };
-  //   }),
-  // );
-}
-
 export default defineEventHandler(async () => {
-  const shareIdData = await getShareIdData();
-  const textMapData = await getTextMapData();
-  console.log(`textMapData: ${Object.entries(textMapData).length} entries fetched`);
-  const characterCardData = await getCharacterCardData(textMapData, shareIdData);
-  // writeData("misc/character-cards", Object.fromEntries(characterCardData.map(card => [card.id, card])));
-  const actionCardData = await getActionCardData(textMapData, shareIdData);
-  writeData("misc/action-cards", Object.fromEntries(actionCardData.map(card => [card.id, card])));
+  const cardVersionData = readData<CardVersionData>("misc/card-version", {});
+  const latestCommitId = await getLatestCommit();
+  const needUpdate = cardVersionData.latestCommitId !== latestCommitId;
+  if (needUpdate) {
+    const shareIdData = await getShareIdData();
+    const textMapData = await getTextMapData();
 
-  const versionData = getVersionData("5.6");
-  writeData("misc/game-versions", Object.fromEntries(versionData.map(v => [v.id, v])));
+    const characterCardData = await getCharacterCardData(textMapData, shareIdData);
+    const characterCards = Object.fromEntries(characterCardData.map(card => [card.id, card]));
+    writeData("misc/character-cards", characterCards);
 
-  return responseData({
-    characterCards: Object.fromEntries(characterCardData.map(card => [card.id, card])),
-    actionCardData: Object.fromEntries(actionCardData.map(card => [card.id, card])),
-  });
+    const actionCardData = await getActionCardData(textMapData, shareIdData);
+    const actionCards = Object.fromEntries(actionCardData.map(card => [card.id, card]));
+    writeData("misc/action-cards", actionCards);
+  }
+  writeData("misc/card-version", { latestCommitId });
+  return responseData({ needUpdate });
 });

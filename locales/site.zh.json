@@ -21,7 +21,8 @@
     "tools": "工具",
     "tournamentList": "赛事列表",
     "tournamentTemplate": "赛事模板",
-    "tournaments": "赛事"
+    "tournaments": "赛事",
+    "versions": "版本"
   },
   "messages": {
     "copied": "已复制",

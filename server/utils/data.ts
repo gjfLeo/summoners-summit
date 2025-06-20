@@ -75,3 +75,34 @@ export function deleteData<P extends string = string>(dataPath: P): void {
   const fullPath = path.resolve("server/data", `${dataPath}.json`);
   fse.removeSync(fullPath);
 }
+
+export function readTempData<R, P extends string = string>(dataPath: P): R | undefined;
+export function readTempData<R, P extends string = string>(dataPath: P, defaultData: R): R;
+export function readTempData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
+  if (dataPath.startsWith("/")) {
+    console.warn("Data path should not start with a slash. It will be treated as relative to the server/temp directory.");
+  }
+  if (dataPath.endsWith(".json")) {
+    console.warn("Data path should not end with a .json extension. It will be added automatically.");
+  }
+
+  let data = defaultData;
+  const filePath = path.resolve("server/temp", `${dataPath}.json`);
+  if (fse.existsSync(filePath)) {
+    data = fse.readJsonSync(filePath) as R;
+  }
+
+  return data;
+}
+
+export function writeTempData<R, P extends string = string>(dataPath: P, data: R): void {
+  if (dataPath.startsWith("/")) {
+    console.warn("Data path should not start with a slash. It will be treated as relative to the server/temp directory.");
+  }
+  if (dataPath.endsWith(".json")) {
+    console.warn("Data path should not end with a .json extension. It will be added automatically.");
+  }
+  const fullPath = path.resolve("server/temp", `${dataPath}.json`);
+  fse.ensureDirSync(path.dirname(fullPath));
+  fse.writeJsonSync(fullPath, data, { spaces: 2 });
+}

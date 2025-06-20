@@ -21,7 +21,8 @@
     "tools": "Tools",
     "tournamentList": "Tournament List",
     "tournamentTemplate": "Tournament Templates",
-    "tournaments": "Tournaments"
+    "tournaments": "Tournaments",
+    "versions": "Versions"
   },
   "messages": {
     "copied": "Copied!",

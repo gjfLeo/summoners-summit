@@ -47,11 +47,19 @@ const {
 } = useSharedData();
 
 async function updateData() {
-  await $fetch("/api/v3/cards/updateData");
-  message.success(t("admin.message.SUCCESS"));
-  return Promise.all([
-    fetchCardData(),
-    fetchGameVersionData(),
-  ]);
+  const loading = message.loading(t("admin.action.loading"), { duration: 0 });
+  try {
+    const res = await $fetch("/api/v3/cards/updateData2");
+    loading.destroy();
+    message.success(res.needUpdate ? t("admin.message.SUCCESS") : t("admin.card.noNeedToUpdate"));
+    return Promise.all([
+      fetchCardData(),
+      fetchGameVersionData(),
+    ]);
+  }
+  catch (error) {
+    console.error(error);
+    message.success(t("admin.message.FAILED"));
+  }
 }
 </script>

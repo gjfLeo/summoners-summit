@@ -12,9 +12,10 @@
     "submit": "Submit"
   },
   "card": {
+    "noNeedToUpdate": "No need to update",
     "updateData": "Update card data",
-    "updateDataDescription": "Get the latest card data from the third-party library (genshin-db)",
-    "updateDataWarning": "Note: The version options in the upper right corner will be updated with the card data. In order to prevent the latest version data from being empty, it is best to update it together with the tournament data."
+    "updateDataDescription": "Get the latest card data from the Internet",
+    "updateDataWarning": "Note: This may be slow."
   },
   "match": {
     "addBan": "Add Ban",

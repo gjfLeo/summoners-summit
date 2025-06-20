@@ -50,6 +50,10 @@ const routes: SiteRoute[] = [
         label: "cards",
         to: "/admin/misc/cards",
       },
+      {
+        label: "versions",
+        to: "/admin/misc/versions",
+      },
     ],
   },
 ];
