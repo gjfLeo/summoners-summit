@@ -4,11 +4,12 @@
   "gameVersion": "5.6",
   "playerADeck": {
     "characters": [
-      "1205",
       "1609",
+      "1205",
       "1603"
     ],
-    "teamId": "1205-1603-1609"
+    "teamId": "1205-1603-1609",
+    "deckCode": "GpBA6Q0OAqDA6mgOGvBx71cPFUBx9J4PGWHgisEbDKERujYcE8FgzMYdDEFg1N4dDsAA"
   },
   "playerBDeck": {
     "characters": [
@@ -16,7 +17,9 @@
       "1609",
       "1603"
     ],
-    "teamId": "1603-1609-2102"
+    "teamId": "1603-1609-2102",
+    "deckCode": "EZBR6aQOAqDA6mgPGkBx9IIPGGAg+cEYDKERujYbE6FgzMYcDMFg1MkdDEGQ3N4dDsAA"
   },
-  "winner": "A"
+  "winner": "A",
+  "gameVideo": "https://www.bilibili.com/video/BV1F3jtzqEVA?p=7"
 }

@@ -8,7 +8,8 @@
       "1505",
       "2203"
     ],
-    "teamId": "1109-1505-2203"
+    "teamId": "1109-1505-2203",
+    "deckCode": "EUBw1igNFWHhOGETFIBx2kcPCUBx9DAQE2EBCDMQE4ExO1cTC7Hwir8YGqEA3MQdDMAA"
   },
   "playerBDeck": {
     "characters": [
@@ -16,7 +17,9 @@
       "1505",
       "2203"
     ],
-    "teamId": "1109-1505-2203"
+    "teamId": "1109-1505-2203",
+    "deckCode": "EUBw1igNFWHhOGETFIBx2kcPCUBx9DAQE2EBCDMQE4ExO1cTC7Hwir8YGqEA3MQdDMAA"
   },
-  "winner": "B"
+  "winner": "B",
+  "gameVideo": "https://www.bilibili.com/video/BV1F3jtzqEVA?p=3"
 }

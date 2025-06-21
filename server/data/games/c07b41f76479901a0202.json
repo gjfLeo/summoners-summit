@@ -4,19 +4,21 @@
   "gameVersion": "5.6",
   "playerADeck": {
     "characters": [
-      "1411",
-      "1503",
-      "1307"
-    ],
-    "teamId": "1307-1411-1503"
-  },
-  "playerBDeck": {
-    "characters": [
       "1109",
       "1505",
       "2203"
     ],
-    "teamId": "1109-1505-2203"
+    "teamId": "1109-1505-2203",
+    "deckCode": "EUBw1igNFWHhOGETFIBx2kcPCUBx9DAQE2EBCDMQE4ExO1cTC7Hwir8YGqEA3MQdDMAA"
   },
-  "winner": "A"
+  "playerBDeck": {
+    "characters": [
+      "1411",
+      "1503",
+      "1307"
+    ],
+    "teamId": "1307-1411-1503",
+    "deckCode": "FQDA0SYNARFxWmMPFmAw9psVFLGBaEgZGGERCoEUG9FwacQWDJFA1MYdDEFg3MkdDcAA"
+  },
+  "winner": "B"
 }
