@@ -1,0 +1,21 @@
+{
+  "id": "31f19ebf85a6cd8505",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 4,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "9a0149ab002a3b3a",
+    "nickname": "今天不想吃苹果"
+  },
+  "playerB": {
+    "playerId": "882a5543654bac2c",
+    "nickname": "夙夜千星"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd850501",
+    "31f19ebf85a6cd850502",
+    "31f19ebf85a6cd850503"
+  ]
+}

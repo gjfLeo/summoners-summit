@@ -1,0 +1,21 @@
+{
+  "id": "31f19ebf85a6cd8510",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "abd7531e73a68f32",
+    "nickname": "本吃包"
+  },
+  "playerB": {
+    "playerId": "980eb55272be9530",
+    "nickname": "echo"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd851001",
+    "31f19ebf85a6cd851002",
+    "31f19ebf85a6cd851003"
+  ]
+}

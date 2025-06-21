@@ -1,0 +1,20 @@
+{
+  "id": "31f19ebf85a6cd8523",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 5,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "3819992cb8b26213",
+    "nickname": "陳十一"
+  },
+  "playerB": {
+    "playerId": "e1f22e3c57a5845b",
+    "nickname": "RedY"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd852301",
+    "31f19ebf85a6cd852302"
+  ]
+}

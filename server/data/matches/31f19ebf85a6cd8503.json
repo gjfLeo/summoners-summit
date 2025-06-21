@@ -1,0 +1,21 @@
+{
+  "id": "31f19ebf85a6cd8503",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 2,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "208b2b9759314d71",
+    "nickname": "玖寒逢甘雨"
+  },
+  "playerB": {
+    "playerId": "abd7531e73a68f32",
+    "nickname": "本吃包"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd850301",
+    "31f19ebf85a6cd850302",
+    "31f19ebf85a6cd850303"
+  ]
+}

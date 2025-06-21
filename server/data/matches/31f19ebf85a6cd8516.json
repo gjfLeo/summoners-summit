@@ -1,0 +1,20 @@
+{
+  "id": "31f19ebf85a6cd8516",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "ec9d5910626c2949",
+    "nickname": "仲夏夜之西瓜梦"
+  },
+  "playerB": {
+    "playerId": "16ccd135d2f2e5af",
+    "nickname": "蕊梨"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd851601",
+    "31f19ebf85a6cd851602"
+  ]
+}

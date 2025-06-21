@@ -1,0 +1,21 @@
+{
+  "id": "31f19ebf85a6cd8522",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 4,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "playerB": {
+    "playerId": "980eb55272be9530",
+    "nickname": "echo"
+  },
+  "gameIds": [
+    "31f19ebf85a6cd852201",
+    "31f19ebf85a6cd852202",
+    "31f19ebf85a6cd852203"
+  ]
+}

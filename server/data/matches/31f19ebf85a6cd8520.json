@@ -1,0 +1,18 @@
+{
+  "id": "31f19ebf85a6cd8520",
+  "tournamentId": "31f19ebf85a6cd85",
+  "stageIndex": 3,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "ec9d5910626c2949",
+    "nickname": "仲夏夜之西瓜梦"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "winnerOverride": "B",
+  "gameIds": []
+}

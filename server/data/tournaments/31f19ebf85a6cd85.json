@@ -1,0 +1,156 @@
+{
+  "id": "31f19ebf85a6cd85",
+  "name": {
+    "zh": "星夜之邀杯枫达赛区C组海选赛"
+  },
+  "gameVersion": "5.6",
+  "region": "CrossRegion",
+  "type": "非官方赛事",
+  "stages": [
+    {
+      "name": {
+        "zh": "双败分组赛"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-27",
+          "matchIds": [
+            "31f19ebf85a6cd8501",
+            "31f19ebf85a6cd8502",
+            "31f19ebf85a6cd8503",
+            "31f19ebf85a6cd8504",
+            "31f19ebf85a6cd8505",
+            "31f19ebf85a6cd8506",
+            "31f19ebf85a6cd8507",
+            "31f19ebf85a6cd8508"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组第1轮"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-28",
+          "matchIds": [
+            "31f19ebf85a6cd8509",
+            "31f19ebf85a6cd8510",
+            "31f19ebf85a6cd8511",
+            "31f19ebf85a6cd8512"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "胜者组第1轮"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-28",
+          "matchIds": [
+            "31f19ebf85a6cd8513",
+            "31f19ebf85a6cd8514",
+            "31f19ebf85a6cd8515",
+            "31f19ebf85a6cd8516"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组第2轮"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-29",
+          "matchIds": [
+            "31f19ebf85a6cd8517",
+            "31f19ebf85a6cd8518",
+            "31f19ebf85a6cd8519",
+            "31f19ebf85a6cd8520"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组第3轮"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-30",
+          "matchIds": [
+            "31f19ebf85a6cd8521",
+            "31f19ebf85a6cd8522"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "胜者组半决赛"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-30",
+          "matchIds": [
+            "31f19ebf85a6cd8523",
+            "31f19ebf85a6cd8524"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组半决赛"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-05-31",
+          "matchIds": [
+            "31f19ebf85a6cd8525",
+            "31f19ebf85a6cd8526"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组决赛"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-06-02",
+          "matchIds": [
+            "31f19ebf85a6cd8527"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "胜者组决赛"
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-06-01",
+          "matchIds": [
+            "31f19ebf85a6cd8528"
+          ]
+        }
+      ]
+    }
+  ]
+}
