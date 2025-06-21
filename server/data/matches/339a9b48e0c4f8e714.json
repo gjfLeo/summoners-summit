@@ -1,0 +1,20 @@
+{
+  "id": "339a9b48e0c4f8e714",
+  "tournamentId": "339a9b48e0c4f8e7",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "ff06dcb835fa2d33",
+    "nickname": "DarkLordHtt"
+  },
+  "playerB": {
+    "playerId": "b5a1b545e448bfff",
+    "nickname": "零露Meo"
+  },
+  "gameIds": [
+    "339a9b48e0c4f8e71401",
+    "339a9b48e0c4f8e71402"
+  ]
+}

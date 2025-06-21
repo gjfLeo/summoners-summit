@@ -1,0 +1,21 @@
+{
+  "id": "339a9b48e0c4f8e712",
+  "tournamentId": "339a9b48e0c4f8e7",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "a67dea43d9ff5417",
+    "nickname": "pupa"
+  },
+  "playerB": {
+    "playerId": "f64f8b195a6c59a8",
+    "nickname": "皮皮鸭"
+  },
+  "gameIds": [
+    "339a9b48e0c4f8e71201",
+    "339a9b48e0c4f8e71202",
+    "339a9b48e0c4f8e71203"
+  ]
+}

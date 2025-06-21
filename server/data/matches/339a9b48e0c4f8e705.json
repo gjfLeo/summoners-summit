@@ -1,0 +1,20 @@
+{
+  "id": "339a9b48e0c4f8e705",
+  "tournamentId": "339a9b48e0c4f8e7",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 4,
+  "gameVersion": "5.6",
+  "playerA": {
+    "playerId": "828c6fa4cda2c687",
+    "nickname": "张伯伦"
+  },
+  "playerB": {
+    "playerId": "b5bcc33cce6a2f97",
+    "nickname": "收你们来了"
+  },
+  "gameIds": [
+    "339a9b48e0c4f8e70501",
+    "339a9b48e0c4f8e70502"
+  ]
+}
