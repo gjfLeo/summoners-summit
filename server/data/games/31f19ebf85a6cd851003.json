@@ -8,7 +8,8 @@
       "1203",
       "1703"
     ],
-    "teamId": "1203-1408-1703"
+    "teamId": "1203-1408-1703",
+    "deckCode": "AiAQ8gsPAzAQ85cPFUBx9FcPGFAh9YIPC2Bg9rYbC6HQur0QDKHxDogRDxEQ1PEdD0AA"
   },
   "playerBDeck": {
     "characters": [
@@ -16,7 +17,8 @@
       "1503",
       "1307"
     ],
-    "teamId": "1307-1411-1503"
+    "teamId": "1307-1411-1503",
+    "deckCode": "FZDA0SYNARFxWmMPFkAw9ZsPE2AB9kgWFIGBloEQG6FwacQWDJFA1MYdDEFg3MkdDMAA"
   },
   "winner": "B"
 }
