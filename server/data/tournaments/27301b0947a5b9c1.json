@@ -1,16 +1,16 @@
 {
   "id": "27301b0947a5b9c1",
   "name": {
-    "zh": "星夜之邀杯",
+    "zh": "星夜之邀杯淘汰赛阶段",
     "en": "AstraNox Invitational"
   },
   "gameVersion": "5.6",
   "region": "CrossRegion",
-  "type": "地区大赛",
+  "type": "非官方赛事",
   "stages": [
     {
       "name": {
-        "zh": "淘汰赛"
+        "zh": "总决赛前"
       },
       "rules": {
         "numGames": 5,
