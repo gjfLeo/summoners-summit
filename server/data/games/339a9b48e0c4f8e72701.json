@@ -8,7 +8,8 @@
       "1213",
       "1412"
     ],
-    "teamId": "1213-1412-2303"
+    "teamId": "1213-1412-2303",
+    "deckCode": "EZDRybEVG6DR9i8VErHwW50ZCWHRloEaGSHg07YQC7FgC70QC8Hx1FgdDEFg3MYdDMAA"
   },
   "playerBDeck": {
     "characters": [
@@ -16,7 +17,9 @@
       "1610",
       "1608"
     ],
-    "teamId": "1310-1608-1610"
+    "teamId": "1310-1608-1610",
+    "deckCode": "EZCR280OGJDB6Y8OGKDx6s8PCEBg9JcPCWFxBzMTE7ExO1ccFUFwxLYdC0Fg1NkdDcAA"
   },
-  "winner": "B"
+  "winner": "B",
+  "gameVideo": "https://www.bilibili.com/video/BV18F7bzoEBq?p=8"
 }
