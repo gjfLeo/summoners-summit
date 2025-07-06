@@ -1,7 +1,8 @@
 {
   "id": "e4821e4d5def0f3f",
   "name": {
-    "zh": "星夜之邀杯枫达赛区A组海选赛"
+    "zh": "星夜之邀杯枫达赛区A组海选赛",
+    "en": "AstraNox Invitational - Fonta Regional Qualifier Group A"
   },
   "gameVersion": "5.6",
   "region": "CrossRegion",
@@ -9,7 +10,7 @@
   "stages": [
     {
       "name": {
-        "zh": "双败淘汰赛"
+        "zh": "双败分组赛"
       },
       "rules": {
         "numGames": 3,
