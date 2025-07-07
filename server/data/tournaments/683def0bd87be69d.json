@@ -1,0 +1,32 @@
+{
+  "id": "683def0bd87be69d",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "5.7",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-07-07",
+          "matchIds": []
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-07-08",
+          "matchIds": []
+        }
+      ]
+    }
+  ]
+}

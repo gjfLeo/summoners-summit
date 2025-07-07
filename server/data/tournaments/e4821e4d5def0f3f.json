@@ -72,6 +72,17 @@
       "name": {
         "zh": "胜者组第1轮"
       },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
       "parts": [
         {
           "name": {},
