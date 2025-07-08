@@ -7,9 +7,10 @@
     },
     "shareId": 1,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Ganyu_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Ganyu_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ganyu.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ganyu.webp"
   },
   "1102": {
     "id": "1102",
@@ -19,9 +20,10 @@
     },
     "shareId": 2,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Diona_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Diona_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Diona.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Diona.webp"
   },
   "1103": {
     "id": "1103",
@@ -31,9 +33,10 @@
     },
     "shareId": 3,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Kaeya_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Kaeya_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kaeya.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kaeya.webp"
   },
   "1104": {
     "id": "1104",
@@ -43,9 +46,10 @@
     },
     "shareId": 4,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Chongyun_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Chongyun_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chongyun.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chongyun.webp"
   },
   "1105": {
     "id": "1105",
@@ -55,9 +59,10 @@
     },
     "shareId": 5,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Kamisato_Ayaka_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Kamisato_Ayaka_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ayaka.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ayaka.webp"
   },
   "1106": {
     "id": "1106",
@@ -67,9 +72,10 @@
     },
     "shareId": 6,
     "type": "character",
+    "gameVersion": "3.5",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Eula_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Eula_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Eula.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Eula.webp"
   },
   "1107": {
     "id": "1107",
@@ -79,9 +85,10 @@
     },
     "shareId": 7,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Shenhe_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Shenhe_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shenhe.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shenhe.webp"
   },
   "1108": {
     "id": "1108",
@@ -91,9 +98,10 @@
     },
     "shareId": 8,
     "type": "character",
+    "gameVersion": "4.0",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Qiqi_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Qiqi_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Qiqi.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Qiqi.webp"
   },
   "1109": {
     "id": "1109",
@@ -103,9 +111,10 @@
     },
     "shareId": 279,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Layla_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Layla_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Layla.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Layla.webp"
   },
   "1110": {
     "id": "1110",
@@ -115,9 +124,10 @@
     },
     "shareId": 334,
     "type": "character",
+    "gameVersion": "4.5",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Charlotte_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Charlotte_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Charlotte.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Charlotte.webp"
   },
   "1111": {
     "id": "1111",
@@ -127,9 +137,10 @@
     },
     "shareId": 363,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Wriothesley_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Wriothesley_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Wriothesley.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Wriothesley.webp"
   },
   "1112": {
     "id": "1112",
@@ -139,9 +150,10 @@
     },
     "shareId": 407,
     "type": "character",
+    "gameVersion": "5.0",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Freminet_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Freminet_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Freminet.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Freminet.webp"
   },
   "1113": {
     "id": "1113",
@@ -151,9 +163,10 @@
     },
     "shareId": 432,
     "type": "character",
+    "gameVersion": "5.2",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Rosaria_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Rosaria_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Rosaria.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Rosaria.webp"
   },
   "1114": {
     "id": "1114",
@@ -163,9 +176,10 @@
     },
     "shareId": 477,
     "type": "character",
+    "gameVersion": "5.7",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Citlali_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Citlali_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Citlali.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Citlali.webp"
   },
   "1201": {
     "id": "1201",
@@ -175,9 +189,10 @@
     },
     "shareId": 9,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Barbara_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Barbara_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Barbara.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Barbara.webp"
   },
   "1202": {
     "id": "1202",
@@ -187,9 +202,10 @@
     },
     "shareId": 10,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Xingqiu_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xingqiu.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xingqiu.webp"
   },
   "1203": {
     "id": "1203",
@@ -199,9 +215,10 @@
     },
     "shareId": 11,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Mona_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mona_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mona.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mona.webp"
   },
   "1204": {
     "id": "1204",
@@ -211,9 +228,10 @@
     },
     "shareId": 12,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Tartaglia_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Tartaglia_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tartaglia.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tartaglia.webp"
   },
   "1205": {
     "id": "1205",
@@ -223,9 +241,10 @@
     },
     "shareId": 13,
     "type": "character",
+    "gameVersion": "3.5",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Sangonomiya_Kokomi_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sangonomiya_Kokomi_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kokomi.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kokomi.webp"
   },
   "1206": {
     "id": "1206",
@@ -235,9 +254,10 @@
     },
     "shareId": 14,
     "type": "character",
+    "gameVersion": "3.6",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Kamisato_Ayato_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Kamisato_Ayato_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ayato.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ayato.webp"
   },
   "1207": {
     "id": "1207",
@@ -247,9 +267,10 @@
     },
     "shareId": 15,
     "type": "character",
+    "gameVersion": "3.8",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Candace_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Candace_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Candace.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Candace.webp"
   },
   "1208": {
     "id": "1208",
@@ -259,9 +280,10 @@
     },
     "shareId": 16,
     "type": "character",
+    "gameVersion": "4.2",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Nilou_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Nilou_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Nilou.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Nilou.webp"
   },
   "1209": {
     "id": "1209",
@@ -271,9 +293,10 @@
     },
     "shareId": 280,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Yelan_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Yelan_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yelan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yelan.webp"
   },
   "1210": {
     "id": "1210",
@@ -283,9 +306,10 @@
     },
     "shareId": 335,
     "type": "character",
+    "gameVersion": "4.5",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Neuvillette_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Neuvillette_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Neuvillette.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Neuvillette.webp"
   },
   "1211": {
     "id": "1211",
@@ -295,9 +319,10 @@
     },
     "shareId": 364,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Furina_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Furina_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Furina.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Furina.webp"
   },
   "1213": {
     "id": "1213",
@@ -307,9 +332,10 @@
     },
     "shareId": 433,
     "type": "character",
+    "gameVersion": "5.2",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Sigewinne_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Sigewinne_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sigewinne.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sigewinne.webp"
   },
   "1214": {
     "id": "1214",
@@ -319,9 +345,10 @@
     },
     "shareId": 444,
     "type": "character",
+    "gameVersion": "5.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Mualani_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Mualani_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mualani.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mualani.webp"
   },
   "1301": {
     "id": "1301",
@@ -331,9 +358,10 @@
     },
     "shareId": 17,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Diluc_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Diluc_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Diluc.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Diluc.webp"
   },
   "1302": {
     "id": "1302",
@@ -343,9 +371,10 @@
     },
     "shareId": 18,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Xiangling_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Xiangling_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xiangling.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xiangling.webp"
   },
   "1303": {
     "id": "1303",
@@ -355,9 +384,10 @@
     },
     "shareId": 19,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bennett_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Bennett_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Bennett.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Bennett.webp"
   },
   "1304": {
     "id": "1304",
@@ -367,9 +397,10 @@
     },
     "shareId": 20,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Amber_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Amber_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ambor.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Amber.webp"
   },
   "1305": {
     "id": "1305",
@@ -379,9 +410,10 @@
     },
     "shareId": 21,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Yoimiya_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Yoimiya_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yoimiya.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yoimiya.webp"
   },
   "1306": {
     "id": "1306",
@@ -391,9 +423,10 @@
     },
     "shareId": 22,
     "type": "character",
+    "gameVersion": "3.4",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Klee_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Klee_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Klee.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Klee.webp"
   },
   "1307": {
     "id": "1307",
@@ -403,9 +436,10 @@
     },
     "shareId": 23,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Hu_Tao_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Hu_Tao_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Hutao.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Hutao.webp"
   },
   "1308": {
     "id": "1308",
@@ -415,9 +449,10 @@
     },
     "shareId": 24,
     "type": "character",
+    "gameVersion": "3.8",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Yanfei_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Yanfei_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Feiyan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Feiyan.webp"
   },
   "1309": {
     "id": "1309",
@@ -427,9 +462,10 @@
     },
     "shareId": 25,
     "type": "character",
+    "gameVersion": "4.1",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Dehya_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Dehya_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Dehya.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Dehya.webp"
   },
   "1310": {
     "id": "1310",
@@ -439,9 +475,10 @@
     },
     "shareId": 281,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Lyney_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Lyney_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Liney.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Liney.webp"
   },
   "1311": {
     "id": "1311",
@@ -451,9 +488,10 @@
     },
     "shareId": 319,
     "type": "character",
+    "gameVersion": "4.4",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Thoma_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Thoma_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tohma.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tohma.webp"
   },
   "1312": {
     "id": "1312",
@@ -463,9 +501,10 @@
     },
     "shareId": 365,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Xinyan_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Xinyan_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xinyan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xinyan.webp"
   },
   "1313": {
     "id": "1313",
@@ -475,9 +514,10 @@
     },
     "shareId": 395,
     "type": "character",
+    "gameVersion": "4.8",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Chevreuse_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Chevreuse_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chevreuse.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chevreuse.webp"
   },
   "1314": {
     "id": "1314",
@@ -487,9 +527,10 @@
     },
     "shareId": 454,
     "type": "character",
+    "gameVersion": "5.4",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Arlecchino_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Arlecchino_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Arlecchino.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Arlecchino.webp"
   },
   "1315": {
     "id": "1315",
@@ -499,9 +540,10 @@
     },
     "shareId": 478,
     "type": "character",
+    "gameVersion": "5.7",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Mavuika_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Mavuika_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mavuika.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mavuika.webp"
   },
   "1401": {
     "id": "1401",
@@ -511,9 +553,10 @@
     },
     "shareId": 26,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Fischl_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Fischl_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Fischl.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Fischl.webp"
   },
   "1402": {
     "id": "1402",
@@ -523,9 +566,10 @@
     },
     "shareId": 27,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Razor_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Razor_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Razor.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Razor.webp"
   },
   "1403": {
     "id": "1403",
@@ -535,9 +579,10 @@
     },
     "shareId": 28,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Keqing_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Keqing_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Keqing.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Keqing.webp"
   },
   "1404": {
     "id": "1404",
@@ -547,9 +592,10 @@
     },
     "shareId": 29,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Cyno_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Cyno_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Cyno.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Cyno.webp"
   },
   "1405": {
     "id": "1405",
@@ -559,9 +605,10 @@
     },
     "shareId": 30,
     "type": "character",
+    "gameVersion": "3.4",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Beidou_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Beidou_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Beidou.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Beidou.webp"
   },
   "1406": {
     "id": "1406",
@@ -571,9 +618,10 @@
     },
     "shareId": 31,
     "type": "character",
+    "gameVersion": "3.5",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Kujou_Sara_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Kujou_Sara_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sara.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sara.webp"
   },
   "1407": {
     "id": "1407",
@@ -583,9 +631,10 @@
     },
     "shareId": 32,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Raiden_Shogun_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Raiden_Shogun_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shougun.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shougun.webp"
   },
   "1408": {
     "id": "1408",
@@ -595,9 +644,10 @@
     },
     "shareId": 33,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Yae_Miko_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Yae_Miko_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yae.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yae.webp"
   },
   "1409": {
     "id": "1409",
@@ -607,9 +657,10 @@
     },
     "shareId": 34,
     "type": "character",
+    "gameVersion": "4.0",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Lisa_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Lisa_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Lisa.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Lisa.webp"
   },
   "1410": {
     "id": "1410",
@@ -619,9 +670,10 @@
     },
     "shareId": 35,
     "type": "character",
+    "gameVersion": "4.2",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Dori_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Dori_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Dori.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Dori.webp"
   },
   "1411": {
     "id": "1411",
@@ -631,9 +683,10 @@
     },
     "shareId": 348,
     "type": "character",
+    "gameVersion": "4.6",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Kuki_Shinobu_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Kuki_Shinobu_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shinobu.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shinobu.webp"
   },
   "1412": {
     "id": "1412",
@@ -643,9 +696,10 @@
     },
     "shareId": 445,
     "type": "character",
+    "gameVersion": "5.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Clorinde_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Clorinde_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Clorinde.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Clorinde.webp"
   },
   "1413": {
     "id": "1413",
@@ -655,9 +709,10 @@
     },
     "shareId": 469,
     "type": "character",
+    "gameVersion": "5.6",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Sethos_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Sethos_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sethos.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sethos.webp"
   },
   "1501": {
     "id": "1501",
@@ -667,9 +722,10 @@
     },
     "shareId": 36,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Sucrose_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Sucrose_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sucrose.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sucrose.webp"
   },
   "1502": {
     "id": "1502",
@@ -679,9 +735,10 @@
     },
     "shareId": 37,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Jean_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Jean_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Qin.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Qin.webp"
   },
   "1503": {
     "id": "1503",
@@ -691,9 +748,10 @@
     },
     "shareId": 38,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Venti_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Venti_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Venti.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Venti.webp"
   },
   "1504": {
     "id": "1504",
@@ -703,9 +761,10 @@
     },
     "shareId": 39,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Xiao_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Xiao_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xiao.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xiao.webp"
   },
   "1505": {
     "id": "1505",
@@ -715,9 +774,10 @@
     },
     "shareId": 40,
     "type": "character",
+    "gameVersion": "3.8",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Kaedehara_Kazuha_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Kaedehara_Kazuha_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kazuha.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kazuha.webp"
   },
   "1506": {
     "id": "1506",
@@ -727,9 +787,10 @@
     },
     "shareId": 41,
     "type": "character",
+    "gameVersion": "4.1",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Wanderer_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Wanderer_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Wanderer.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Wanderer.webp"
   },
   "1507": {
     "id": "1507",
@@ -739,9 +800,10 @@
     },
     "shareId": 320,
     "type": "character",
+    "gameVersion": "4.4",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sayu_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Sayu_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sayu.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sayu.webp"
   },
   "1508": {
     "id": "1508",
@@ -751,9 +813,10 @@
     },
     "shareId": 282,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Lynette_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Lynette_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Linette.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Linette.webp"
   },
   "1509": {
     "id": "1509",
@@ -763,9 +826,10 @@
     },
     "shareId": 349,
     "type": "character",
+    "gameVersion": "4.6",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Faruzan_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Faruzan_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Faruzan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Faruzan.webp"
   },
   "1510": {
     "id": "1510",
@@ -775,9 +839,10 @@
     },
     "shareId": 408,
     "type": "character",
+    "gameVersion": "5.0",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Xianyun_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Xianyun_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Liuyun.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Liuyun.webp"
   },
   "1511": {
     "id": "1511",
@@ -787,9 +852,10 @@
     },
     "shareId": 479,
     "type": "character",
+    "gameVersion": "5.7",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Chasca_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Chasca_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chasca.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chasca.webp"
   },
   "1601": {
     "id": "1601",
@@ -799,9 +865,10 @@
     },
     "shareId": 42,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Ningguang_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Ningguang_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ningguang.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ningguang.webp"
   },
   "1602": {
     "id": "1602",
@@ -811,9 +878,10 @@
     },
     "shareId": 43,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Noelle_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Noelle_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Noel.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Noel.webp"
   },
   "1603": {
     "id": "1603",
@@ -823,9 +891,10 @@
     },
     "shareId": 44,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Zhongli_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Zhongli_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Zhongli.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Zhongli.webp"
   },
   "1604": {
     "id": "1604",
@@ -835,9 +904,10 @@
     },
     "shareId": 45,
     "type": "character",
+    "gameVersion": "4.0",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Albedo_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Albedo_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Albedo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_ALbedo.webp"
   },
   "1605": {
     "id": "1605",
@@ -847,9 +917,10 @@
     },
     "shareId": 46,
     "type": "character",
+    "gameVersion": "3.6",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Arataki_Itto_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Arataki_Itto_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Itto.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Itto.webp"
   },
   "1606": {
     "id": "1606",
@@ -859,9 +930,10 @@
     },
     "shareId": 283,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Gorou_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Gorou_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Gorou.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Gorou.webp"
   },
   "1607": {
     "id": "1607",
@@ -871,9 +943,10 @@
     },
     "shareId": 366,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Yun_Jin_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Yun_Jin_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yunjin.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yunjin.webp"
   },
   "1608": {
     "id": "1608",
@@ -883,9 +956,10 @@
     },
     "shareId": 396,
     "type": "character",
+    "gameVersion": "4.8",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Navia_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Navia_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Navia.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Navia.webp"
   },
   "1609": {
     "id": "1609",
@@ -895,9 +969,10 @@
     },
     "shareId": 420,
     "type": "character",
+    "gameVersion": "5.1",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Chiori_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Chiori_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chiori.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chiori.webp"
   },
   "1610": {
     "id": "1610",
@@ -907,9 +982,10 @@
     },
     "shareId": 461,
     "type": "character",
+    "gameVersion": "5.5",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kachina_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Kachina_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kachina.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kachina.webp"
   },
   "1611": {
     "id": "1611",
@@ -919,9 +995,10 @@
     },
     "shareId": 470,
     "type": "character",
+    "gameVersion": "5.6",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Xilonen_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Xilonen_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xilonen.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xilonen.webp"
   },
   "1701": {
     "id": "1701",
@@ -931,9 +1008,10 @@
     },
     "shareId": 47,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Collei_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Collei_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Collei.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Collei.webp"
   },
   "1702": {
     "id": "1702",
@@ -943,9 +1021,10 @@
     },
     "shareId": 48,
     "type": "character",
+    "gameVersion": "3.6",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Tighnari_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Tighnari_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tighnari.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tighnari.webp"
   },
   "1703": {
     "id": "1703",
@@ -955,9 +1034,10 @@
     },
     "shareId": 49,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Nahida_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Nahida_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Nahida.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Nahida.webp"
   },
   "1704": {
     "id": "1704",
@@ -967,9 +1047,10 @@
     },
     "shareId": 50,
     "type": "character",
+    "gameVersion": "4.1",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Yaoyao_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Yaoyao_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yaoyao.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yaoyao.webp"
   },
   "1705": {
     "id": "1705",
@@ -979,9 +1060,10 @@
     },
     "shareId": 51,
     "type": "character",
+    "gameVersion": "4.2",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Baizhu_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Baizhu_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Baizhuer.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Baizhuer.webp"
   },
   "1706": {
     "id": "1706",
@@ -991,9 +1073,10 @@
     },
     "shareId": 284,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Alhaitham_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Alhaitham_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Alhatham.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Alhatham.webp"
   },
   "1707": {
     "id": "1707",
@@ -1003,9 +1086,10 @@
     },
     "shareId": 336,
     "type": "character",
+    "gameVersion": "4.5",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Kirara_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Kirara_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Momoka.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Momoka.webp"
   },
   "1708": {
     "id": "1708",
@@ -1015,9 +1099,10 @@
     },
     "shareId": 367,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Kaveh_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Kaveh_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kaveh.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kaveh.webp"
   },
   "1709": {
     "id": "1709",
@@ -1027,9 +1112,10 @@
     },
     "shareId": 455,
     "type": "character",
+    "gameVersion": "5.4",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Kinich_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Kinich_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kinich.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kinich.webp"
   },
   "1710": {
     "id": "1710",
@@ -1039,9 +1125,10 @@
     },
     "shareId": 462,
     "type": "character",
+    "gameVersion": "5.5",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Emilie_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Emilie_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Emilie.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Emilie.webp"
   },
   "2101": {
     "id": "2101",
@@ -1051,9 +1138,10 @@
     },
     "shareId": 52,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Fatui_Cryo_Cicin_Mage_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Fatui_Cryo_Cicin_Mage_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FatuusMageice.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FatuusMageIce.webp"
   },
   "2102": {
     "id": "2102",
@@ -1063,9 +1151,10 @@
     },
     "shareId": 277,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/La_Signora_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/La_Signora_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_LaSignora.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_LaSignora.webp"
   },
   "2103": {
     "id": "2103",
@@ -1075,9 +1164,10 @@
     },
     "shareId": 321,
     "type": "character",
+    "gameVersion": "4.4",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Cryo_Hypostasis_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Cryo_Hypostasis_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EffigyIce.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EffigyIce.webp"
   },
   "2104": {
     "id": "2104",
@@ -1087,9 +1177,10 @@
     },
     "shareId": 397,
     "type": "character",
+    "gameVersion": "4.8",
     "element": "cryo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Frost_Operative_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Frost_Operative_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EscadronIce.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EscadronIce.webp"
   },
   "2201": {
     "id": "2201",
@@ -1099,9 +1190,10 @@
     },
     "shareId": 53,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Rhodeia_of_Loch_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Rhodeia_of_Loch_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Oceanid.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Oceanid.webp"
   },
   "2202": {
     "id": "2202",
@@ -1111,9 +1203,10 @@
     },
     "shareId": 54,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Mirror_Maiden_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Mirror_Maiden_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Maidenwater.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Maidenwater.webp"
   },
   "2203": {
     "id": "2203",
@@ -1123,9 +1216,10 @@
     },
     "shareId": 350,
     "type": "character",
+    "gameVersion": "4.6",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Abyss_Herald_Wicked_Torrents_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Abyss_Herald_Wicked_Torrents_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_InvokerHeraldWater.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerHeraldWater.webp"
   },
   "2204": {
     "id": "2204",
@@ -1135,9 +1229,10 @@
     },
     "shareId": 368,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/All-Devouring_Narwhal_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/All-Devouring_Narwhal_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Ptahur.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Ptahur.webp"
   },
   "2205": {
     "id": "2205",
@@ -1147,9 +1242,10 @@
     },
     "shareId": 409,
     "type": "character",
+    "gameVersion": "5.0",
     "element": "hydro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Hydro_Hilichurl_Rogue_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Hydro_Hilichurl_Rogue_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HilistrayWater.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HilistrayWater.webp"
   },
   "2301": {
     "id": "2301",
@@ -1159,9 +1255,10 @@
     },
     "shareId": 55,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Fatui_Pyro_Agent_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Fatui_Pyro_Agent_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Fatuus.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Fatuus.webp"
   },
   "2302": {
     "id": "2302",
@@ -1171,9 +1268,10 @@
     },
     "shareId": 56,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Abyss_Lector_Fathomless_Flames_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Abyss_Lector_Fathomless_Flames_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_DeaconFire.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerDeaconFire.webp"
   },
   "2303": {
     "id": "2303",
@@ -1183,9 +1281,10 @@
     },
     "shareId": 285,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Eremite_Scorching_Loremaster_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Eremite_Scorching_Loremaster_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Muscleman.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EremiteOracle.webp"
   },
   "2304": {
     "id": "2304",
@@ -1195,9 +1294,10 @@
     },
     "shareId": 351,
     "type": "character",
+    "gameVersion": "4.6",
     "element": "pyro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Emperor_of_Fire_and_Iron_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Emperor_of_Fire_and_Iron_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HermitCrabPrimo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HermitCrabPrimo.webp"
   },
   "2401": {
     "id": "2401",
@@ -1207,9 +1307,10 @@
     },
     "shareId": 57,
     "type": "character",
+    "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Electro_Hypostasis_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Electro_Hypostasis_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Effigyelectric.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EffigyElectric.webp"
   },
   "2402": {
     "id": "2402",
@@ -1219,9 +1320,10 @@
     },
     "shareId": 286,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Thunder_Manifestation_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Thunder_Manifestation_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Raijin.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Raijin.webp"
   },
   "2403": {
     "id": "2403",
@@ -1231,9 +1333,10 @@
     },
     "shareId": 322,
     "type": "character",
+    "gameVersion": "4.4",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Millennial_Pearl_Seahorse_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Millennial_Pearl_Seahorse_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_SeaHorsePrimo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_SeaHorsePrimo.webp"
   },
   "2404": {
     "id": "2404",
@@ -1243,9 +1346,10 @@
     },
     "shareId": 337,
     "type": "character",
+    "gameVersion": "4.5",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Fatui_Electro_Cicin_Mage_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Fatui_Electro_Cicin_Mage_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FatuusSummoner.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FatuusSummoner.webp"
   },
   "2405": {
     "id": "2405",
@@ -1255,9 +1359,10 @@
     },
     "shareId": 369,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Consecrated_Scorpion_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Consecrated_Scorpion_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_ScorpionSacred.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_ScorpionSacred.webp"
   },
   "2406": {
     "id": "2406",
@@ -1267,9 +1372,10 @@
     },
     "shareId": 421,
     "type": "character",
+    "gameVersion": "5.1",
     "element": "electro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Abyss_Lector_Violet_Lightning_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Abyss_Lector_Violet_Lightning_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_InvokerElectric.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerElectric.webp"
   },
   "2501": {
     "id": "2501",
@@ -1279,9 +1385,10 @@
     },
     "shareId": 58,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Maguu_Kenki_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Maguu_Kenki_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Ningyo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Ningyo.webp"
   },
   "2502": {
     "id": "2502",
@@ -1291,9 +1398,10 @@
     },
     "shareId": 287,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Dvalin_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Dvalin_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Dvalin.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Dvalin.webp"
   },
   "2503": {
     "id": "2503",
@@ -1303,9 +1411,10 @@
     },
     "shareId": 370,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "anemo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Consecrated_Flying_Serpent_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Consecrated_Flying_Serpent_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_ChrysopeleaSacred.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_ChrysopeleaSacred.webp"
   },
   "2601": {
     "id": "2601",
@@ -1315,9 +1424,10 @@
     },
     "shareId": 59,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Stonehide_Lawachurl_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Stonehide_Lawachurl_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Bruterock.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Bruterock.webp"
   },
   "2602": {
     "id": "2602",
@@ -1327,9 +1437,10 @@
     },
     "shareId": 278,
     "type": "character",
+    "gameVersion": "4.3",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Azhdaha_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Azhdaha_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Dahaka.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Dahaka.webp"
   },
   "2603": {
     "id": "2603",
@@ -1339,9 +1450,10 @@
     },
     "shareId": 434,
     "type": "character",
+    "gameVersion": "5.2",
     "element": "geo",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Golden_Wolflord_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Golden_Wolflord_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Planelurker.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Planelurker.webp"
   },
   "2701": {
     "id": "2701",
@@ -1351,9 +1463,10 @@
     },
     "shareId": 60,
     "type": "character",
+    "gameVersion": "3.3",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Jadeplume_Terrorshroom_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Jadeplume_Terrorshroom_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Fungusgrass.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Fungusgrass.webp"
   },
   "2702": {
     "id": "2702",
@@ -1363,9 +1476,10 @@
     },
     "shareId": 371,
     "type": "character",
+    "gameVersion": "4.7",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Guardian_of_Apep%27s_Oasis_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Guardian_of_Apep%27s_Oasis_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Apep.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Apep.webp"
   },
   "2703": {
     "id": "2703",
@@ -1375,8 +1489,9 @@
     },
     "shareId": 422,
     "type": "character",
+    "gameVersion": "5.1",
     "element": "dendro",
-    "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Eremite_Floral_Ring-Dancer_Character_Card.png",
-    "avatar": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eremite_Floral_Ring-Dancer_TCG_Avatar_Icon.png"
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EremiteGrass.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EremiteGrass.webp"
   }
 }

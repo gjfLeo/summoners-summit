@@ -39,6 +39,11 @@
               <NuxtLinkLocale class="underline" to="https://space.bilibili.com/299420735" target="_blank"><NA>George2003</NA></NuxtLinkLocale>
             </span>
           </NText>
+          <NText>
+            <span>
+              卡牌图片等感谢<NuxtLink class="underline" to="https://github.com/guyutongxue"><NA>谷雨同学</NA></NuxtLink>的<NuxtLink class="underline" to="https://github.com/genius-invokation/genius-invokation"><NA>七圣模拟器</NA></NuxtLink>项目。
+            </span>
+          </NText>
           <NText :depth="3">{{ $t('site.footer.lastUpdate', [updateTime]) }}</NText>
         </div>
       </NDrawerContent>

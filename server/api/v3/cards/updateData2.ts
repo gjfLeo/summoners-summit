@@ -1,248 +1,100 @@
-import crypto from "node:crypto";
 import { z } from "zod";
-import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
-import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
-import type { CardVersionData } from "~/types/data/card-version";
+import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
+import type { ActionCardInfo, CharacterCardInfo } from "~/types";
 
-async function getLatestCommit() {
-  const res = await fetch("https://gitlab.com/api/v4/projects/Dimbreath%2fAnimeGameData/repository/commits");
-  const commits = await res.json() as { id: string }[];
-  return commits[0].id;
+const ZGyData = z.array(
+  z.object({
+    id: z.number(),
+    shareId: z.number().optional(),
+    sinceVersion: z.string().optional(),
+    obtainable: z.boolean().optional(),
+    name: z.string(),
+    englishName: z.string().optional(),
+    tags: z.string().array(),
+    cardFace: z.string().optional(),
+    icon: z.string().optional(),
+    category: z.enum(["characters", "action_cards"]),
+    type: z.string().optional(),
+  }),
+);
+type GyData = z.infer<typeof ZGyData>;
+async function fetchGyData(): Promise<GyData> {
+  const res = await fetch("https://assets.gi-tcg.guyutongxue.site/api/v3/data");
+  const data = await res.json();
+  return ZGyData.parse(data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
 }
 
-const fandomFilenameOverrides: Record<number, string> = {
-  212111: "Hear Me — Let Us Raise the Chalice of Love! Equipment Card.png",
-  321024: "Scions of the Canopy Support Card.png",
-  321025: "People of the Springs Support Card.png",
-  321026: "Flower-Feather Clan Support Card.png",
-  321027: "Masters of the Night-Wind Support Card.png",
-  321028: "Collective of Plenty Support Card.png",
-};
-
-function getFandomImageUrl(filename: string) {
-  filename = filename.replaceAll(":", "");
-  filename = filename.replaceAll("?", "");
-  // filename = filename.replaceAll("\"", "");
-  filename = filename.replaceAll(" ", "_");
-  const md5 = crypto.createHash("md5").update(filename).digest("hex");
-  filename = filename.replace("'", "%27");
-  filename = filename.replace("\"", "%22");
-  return `https://static.wikia.nocookie.net/gensin-impact/images/${md5.charAt(0)}/${md5.slice(0, 2)}/${filename}`;
-}
-
-async function fetchDimBreathData(path: string) {
-  console.log(`Fetching ${path}...`);
-  const res = await fetch(`https://gitlab.com/Dimbreath/AnimeGameData/-/raw/master/${path}`);
-  console.log("Done");
-  return await res.json();
-}
-
-const ZRawCardType = z.enum([
-  "GCG_CARD_CHARACTER",
-  "GCG_CARD_MODIFY",
-  "GCG_CARD_ASSIST",
-  "GCG_CARD_EVENT",
-  "GCG_CARD_STATE",
-  "GCG_CARD_ONSTAGE",
-  "GCG_CARD_SUMMON",
-]);
-const ZRawCardTag = z.string();
-const ZRawActionCard = z.object({
-  id: z.number(),
-
-  cardType: ZRawCardType,
-  tagList: ZRawCardTag.array().transform(tags => tags.filter(tag => tag !== "GCG_TAG_NONE")),
-
-  isHidden: z.boolean().optional(),
-  isCanObtain: z.boolean(),
-
-  nameTextMapHash: z.number(),
-  descTextMapHash: z.number(),
-});
-
-async function getShareIdData() {
-  const rawData: Record<string, any>[] = await fetchDimBreathData("ExcelBinOutput/GCGDeckCardExcelConfigData.json");
-  const shareIdKey = Object.entries(rawData[0])
-    .find(([key, value]) => key.match(/^[A-Z]{11}$/) && value === 1)
-    ?.[0];
-  if (!shareIdKey) {
-    throw new Error("Failed to find shareId key");
-  }
-  return Object.fromEntries(rawData.map(item => [item.id as number, item[shareIdKey] as number]));
-}
-type ShareIdData = Awaited<ReturnType<typeof getShareIdData>>;
-
-async function getTextMapData() {
-  const textMapZh: Record<string, string> = await fetchDimBreathData("TextMap/TextMapCHS.json");
-  const textMapEn: Record<string, string> = await fetchDimBreathData("TextMap/TextMapEN.json");
-
-  for (const key in textMapZh) {
-    if (textMapZh[key] === "#{REALNAME[ID(1)|DELAYHANDLE(true)]}") {
-      textMapZh[key] = textMapZh["59470483"];
-    }
-    if (textMapEn[key] === "#{REALNAME[ID(1)|DELAYHANDLE(true)]}") {
-      textMapEn[key] = textMapEn["59470483"];
-    }
-  }
-
-  return Object.fromEntries(
-    Object.entries(textMapZh)
-      .filter(([_key, zh]) => {
-        return zh.length <= 15;
-      })
-      .map(([key, zh]) => {
-        const en = textMapEn[key];
-        return [key, { zh, en }];
-      }),
-  );
-}
-type TextMapData = Awaited<ReturnType<typeof getTextMapData>>;
-
-const ignoredKeys = [
-  "skillList",
-  "chooseTargetType",
-  "chooseTargetList",
-  "costList",
-
-  "descOnTableTextMapHash",
-  "buffIconHash",
-  "hintType",
-  "hintValue",
-  "triggerSummonFullHintNum",
-  "tokenToShow",
-  "tokenToShowIconType",
-  "changeToWhichSpecialView",
-  "changeToWhichSpecialViewTokenNum",
-  "stateBuffType",
-  "dvAdjustJsonList",
-  "persistEffectConstraintToken",
-  "persistEffectConstraintSkillIdList",
-  "persistEffectType",
-  "tokenToShowTextId",
-];
-
-async function getCharacterCardData(textMapData: TextMapData, shareIdData: ShareIdData) {
-  const rawData: Record<string, any>[] = await fetchDimBreathData("ExcelBinOutput/GCGCharExcelConfigData.json");
-
-  Object.keys(rawData[0])
-    .filter(key => key.match(/^[A-Z]{11}$/))
-    .forEach((key) => {
-      ignoredKeys.push(key);
-    });
-
-  const cardList = rawData
-    .map((card) => {
-      for (const key in ignoredKeys) {
-        delete card[ignoredKeys[key]];
-      }
-      return ZRawActionCard.parse(card);
-    })
-    .filter(card => card.isCanObtain && !card.isHidden)
-    .map((card) => {
-      const name = textMapData[card.nameTextMapHash];
-      if (!name || !name.zh || !name.en) {
-        throw new Error(`Invalid nameTextMapHash: ${card.nameTextMapHash}, ${name}`);
-      }
-      // const actionType = parseActionCardType(card.cardType);
-      const shareId = shareIdData[card.id];
-      if (!shareId) {
-        throw new Error(`ShareId not found for card ${card.id}`);
-      }
+async function getCharacterCardData(gyData: GyData) {
+  const cardList = gyData
+    .filter(card => card.category === "characters")
+    .filter(card => card.obtainable)
+    .filter(card => card.shareId)
+    .map<CharacterCardInfo>((card) => {
       const elementPrefix = "GCG_TAG_ELEMENT_";
-      const element = card.tagList
+      const element = card.tags
         .find(tag => tag.startsWith(elementPrefix))
         ?.substring(elementPrefix.length)
-        .toLowerCase();
+        .toLowerCase() as CharacterCardInfo["element"];
+      if (!element) {
+        throw new Error(`Invalid element for card ${card.id} ${card.name}`);
+      }
 
-      return ZCharacterCardInfo.parse({
+      return {
         id: ZCardId.parse(card.id),
-        name,
-        shareId,
+        name: { zh: card.name, en: card.englishName },
+        shareId: card.shareId!,
+        gameVersion: card.sinceVersion?.substring(1, 4),
         type: "character",
         element,
-        image: getFandomImageUrl(`${name.en} Character Card.png`),
-        avatar: getFandomImageUrl(`${name.en} TCG Avatar Icon.png`),
-      });
-    });
+        image: `https://assets.gi-tcg.guyutongxue.site/assets/${card.cardFace}.webp`,
+        avatar: `https://assets.gi-tcg.guyutongxue.site/assets/${card.icon}.webp`,
+      };
+    })
+    .map(card => ZCharacterCardInfo.strict().parse(card));
 
   return cardList;
 }
 
-function parseActionCardType(cardType: string): ActionCardInfo["actionType"] {
-  switch (cardType) {
-    case "GCG_CARD_MODIFY":
-      return "equipment";
-    case "GCG_CARD_ASSIST":
-      return "support";
-    case "GCG_CARD_EVENT":
-      return "event";
-    default:
-      throw new Error(`Invalid cardType: ${cardType}`);
-  }
-}
+const actionTypeMap = {
+  GCG_CARD_MODIFY: "equipment",
+  GCG_CARD_ASSIST: "support",
+  GCG_CARD_EVENT: "event",
+} as const;
 
-async function getActionCardData(textMapData: TextMapData, shareIdData: ShareIdData) {
-  const rawData: Record<string, any>[] = await fetchDimBreathData("ExcelBinOutput/GCGCardExcelConfigData.json");
+async function getActionCardData(gyData: GyData) {
+  const cardList = gyData
+    .filter(card => card.category === "action_cards")
+    .filter(card => card.obtainable)
+    .filter(card => card.shareId)
+    .filter(card => card.type && card.type in actionTypeMap)
+    .map<ActionCardInfo>((card) => {
+      const actionType = actionTypeMap[card.type as keyof typeof actionTypeMap];
 
-  Object.keys(rawData[0])
-    .filter(key => key.match(/^[A-Z]{11}$/))
-    .forEach((key) => {
-      ignoredKeys.push(key);
-    });
-
-  const cardList = rawData
-    .map((card) => {
-      for (const key in ignoredKeys) {
-        delete card[ignoredKeys[key]];
-      }
-      return ZRawActionCard.parse(card);
-    })
-    .filter(card => card.isCanObtain && !card.isHidden)
-    .filter(card => ["GCG_CARD_MODIFY", "GCG_CARD_ASSIST", "GCG_CARD_EVENT"].includes(card.cardType))
-    .filter(card => card.id !== 332047) // TODO 已废弃卡牌，寻找更好的判断方法
-    .map((card) => {
-      const name = textMapData[card.nameTextMapHash];
-      if (!name || !name.zh || !name.en) {
-        throw new Error(`Invalid nameTextMapHash: ${card.nameTextMapHash}, ${name}`);
-      }
-      const actionType = parseActionCardType(card.cardType);
-      const fandomFileName = fandomFilenameOverrides[card.id]
-        ?? `${name.en} ${actionType.charAt(0).toUpperCase()}${actionType.slice(1)} Card.png`;
-      const shareId = shareIdData[card.id];
-      if (!shareId) {
-        throw new Error(`ShareId not found for card ${card.id}`);
-      }
-
-      return ZActionCardInfo.parse({
+      return {
         id: ZCardId.parse(card.id),
-        name,
-        shareId,
+        name: { zh: card.name, en: card.englishName },
+        shareId: card.shareId!,
+        gameVersion: card.sinceVersion?.substring(1, 4),
         type: "action",
-        // gameVersion
         actionType,
-        image: getFandomImageUrl(fandomFileName),
-      });
-    });
+        image: `https://assets.gi-tcg.guyutongxue.site/assets/${card.cardFace}.webp`,
+      };
+    })
+    .map(card => ZActionCardInfo.strict().parse(card)); ;
 
   return cardList;
 }
 
 export default defineEventHandler(async () => {
-  const cardVersionData = readData<CardVersionData>("misc/card-version", {});
-  const latestCommitId = await getLatestCommit();
-  const needUpdate = cardVersionData.latestCommitId !== latestCommitId;
-  if (needUpdate) {
-    const shareIdData = await getShareIdData();
-    const textMapData = await getTextMapData();
+  const gyData = await fetchGyData();
 
-    const characterCardData = await getCharacterCardData(textMapData, shareIdData);
-    const characterCards = Object.fromEntries(characterCardData.map(card => [card.id, card]));
-    writeData("misc/character-cards", characterCards);
+  const characterCardData = await getCharacterCardData(gyData);
+  const characterCards = Object.fromEntries(characterCardData.map(card => [card.id, card]));
+  writeData("misc/character-cards", characterCards);
 
-    const actionCardData = await getActionCardData(textMapData, shareIdData);
-    const actionCards = Object.fromEntries(actionCardData.map(card => [card.id, card]));
-    writeData("misc/action-cards", actionCards);
-  }
-  writeData("misc/card-version", { latestCommitId });
-  return responseData({ needUpdate });
+  const actionCardData = await getActionCardData(gyData);
+  const actionCards = Object.fromEntries(actionCardData.map(card => [card.id, card]));
+  writeData("misc/action-cards", actionCards);
+
+  return responseOk();
 });

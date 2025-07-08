@@ -12,7 +12,6 @@
     "submit": "Submit"
   },
   "card": {
-    "noNeedToUpdate": "No need to update",
     "updateData": "Update card data",
     "updateDataDescription": "Get the latest card data from the Internet",
     "updateDataWarning": "Note: This may be slow."
