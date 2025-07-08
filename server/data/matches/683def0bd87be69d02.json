@@ -1,0 +1,28 @@
+{
+  "id": "683def0bd87be69d02",
+  "tournamentId": "683def0bd87be69d",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.7",
+  "playerA": {
+    "playerId": "6aa965ca6cce902f",
+    "nickname": "绚丽飞飞花"
+  },
+  "playerB": {
+    "playerId": "9de4785d58d2aa3f",
+    "nickname": "植物兄弟蓝雨雨"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1315-1608-1610",
+      "playerBTeamId": "1101-1511-2204"
+    }
+  ],
+  "gameIds": [
+    "683def0bd87be69d0201",
+    "683def0bd87be69d0202",
+    "683def0bd87be69d0203"
+  ]
+}
