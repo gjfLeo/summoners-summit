@@ -40,6 +40,10 @@ export default defineNuxtConfig({
       ignore: ["/admin"],
       failOnError: true,
     },
+    serverAssets: [{
+      baseName: "data",
+      dir: "./data",
+    }],
   },
 
   app: {

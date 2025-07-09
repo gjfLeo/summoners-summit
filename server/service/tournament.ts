@@ -7,8 +7,11 @@ export function getTournament(tournamentId: TournamentId): Tournament | undefine
   return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
 }
 
-export function getTournamentList(): Tournament[] {
-  return ZTournament.array().parse(readDataList<Tournament>("tournaments"));
+export async function getTournamentList(): Promise<Tournament[]> {
+  const tournaments = useStorage("assets:data:tournaments");
+  return (await Promise.all((await tournaments.getKeys())
+    .map(key => tournaments.getItem(key))))
+    .map(t => ZTournament.parse(t));
 }
 
 export const ZTournamentSaveParams = ZTournament.partial({
@@ -62,11 +65,20 @@ function fillTournamentDetail(tournament: Tournament): TournamentDetail {
   };
 }
 
-export function getTournamentDetailBriefList(): TournamentDetailBrief[] {
-  return getTournamentList().map(fillTournamentDetail).map(t => ZTournamentDetailBrief.parse(t));
+export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
+  return (await getTournamentList())
+    .map(fillTournamentDetail)
+    .map(t => ZTournamentDetailBrief.parse(t));
 }
 
 export function getTournamentDetail(tournamentId: TournamentId): TournamentDetail | undefined {
   const tournament = getTournament(tournamentId);
   return tournament ? fillTournamentDetail(tournament) : undefined;
+}
+
+export async function getStorageTournamentList(): Promise<Tournament[]> {
+  const tournaments = useStorage("assets:data:tournaments");
+  return (await Promise.all((await tournaments.getKeys())
+    .map(key => tournaments.getItem(key))))
+    .map(t => ZTournament.parse(t));
 }

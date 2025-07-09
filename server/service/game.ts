@@ -85,3 +85,9 @@ export function mirrorGame(game: Game) {
     starter: mirrorPlayer(game.starter),
   } satisfies Game;
 }
+
+export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
+  const games = useStorage("assets:data:games");
+  return (await Promise.all(matchIds.map(id => games.getItem(`${id}.json`))))
+    .map(m => ZGame.parse(m));
+}

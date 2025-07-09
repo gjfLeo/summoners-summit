@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
 
   const achievements = getPlayerAchievements(playerId);
 
-  const tournaments = getTournamentDetailBriefList();
+  const tournaments = await getTournamentDetailBriefList();
   const champions = tournaments.filter(tournament => tournament.champion?.playerId === playerId)
     .sort((a, b) => b.gameVersion.localeCompare(a.gameVersion))
     .sort((a, b) => {

@@ -9,7 +9,7 @@ const ZParams = z.object({
 export default defineEventHandler(async (event) => {
   const { gameVersion } = await getValidatedQuery(event, ZParams.parse);
 
-  let tournaments = getTournamentDetailBriefList();
+  let tournaments = await getTournamentDetailBriefList();
 
   if (gameVersion) {
     tournaments = tournaments.filter(t => t.gameVersion === gameVersion);

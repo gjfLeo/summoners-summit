@@ -1,7 +1,13 @@
 import { ZGameVersionData } from "~/types";
 import type { GameVersion, GameVersionId } from "~/types";
 
-export function getGameVersionList() {
-  const gameVersionData = ZGameVersionData.parse(readData<Record<GameVersionId, GameVersion>>("misc/game-versions"));
+export async function getGameVersionList(): Promise<GameVersion[]> {
+  const gameVersionStorage = await useStorage("assets:data").getItem("misc:game-versions.json");
+  const gameVersionData = ZGameVersionData.parse(gameVersionStorage);
   return Object.values(gameVersionData).sort((a, b) => b.id.localeCompare(a.id));
+}
+
+export async function getLatestGameVersionId(): Promise<GameVersionId> {
+  const gameVersionList = await getGameVersionList();
+  return gameVersionList[0].id;
 }

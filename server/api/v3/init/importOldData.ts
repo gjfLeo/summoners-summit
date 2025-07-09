@@ -117,7 +117,7 @@ export default defineEventHandler(async () => {
   getMatchList().forEach((match) => {
     deleteData(`matches/${match.id}`);
   });
-  getTournamentList().forEach((tournament) => {
+  (await getTournamentList()).forEach((tournament) => {
     deleteData(`tournaments/${tournament.id}`);
   });
   getPlayerList().filter(player => player.uids.length === 0 && player.aliases.length === 0).forEach((player) => {

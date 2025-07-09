@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   const { teamId } = await getValidatedQuery(event, ZGetTeamStatsByVersionParams.parse);
 
   const statsByVersionRecord: Record<GameVersionId, TeamStatsInVersion> = Object.fromEntries(
-    getGameVersionList().map(gameVersion => [gameVersion.id, {
+    (await getGameVersionList()).map(gameVersion => [gameVersion.id, {
       gameVersion: gameVersion.id,
       numGames: 0,
       numGamesWin: 0,

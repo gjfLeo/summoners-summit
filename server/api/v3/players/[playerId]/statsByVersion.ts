@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
 
   const record: Record<GameVersionId, Item>
     = Object.fromEntries(
-      getGameVersionList().map(gameVersion => [gameVersion.id, {
+      (await getGameVersionList()).map(gameVersion => [gameVersion.id, {
         gameVersion: gameVersion.id,
         numMatches: 0,
         numMatchesWin: 0,

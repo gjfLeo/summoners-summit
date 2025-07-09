@@ -166,3 +166,9 @@ export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
     winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
   };
 }
+
+export async function getMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
+  const matches = useStorage("assets:data:matches");
+  return (await Promise.all(matchIds.map(id => matches.getItem(`${id}.json`))))
+    .map(m => ZMatch.parse(m));
+}

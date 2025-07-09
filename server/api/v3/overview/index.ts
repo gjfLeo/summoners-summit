@@ -3,7 +3,7 @@ import type { GetOverviewResponse, GetOverviewResponseItem } from "~/types/api/s
 
 export default defineEventHandler(async () => {
   const record = Object.fromEntries<GetOverviewResponseItem>(
-    getGameVersionList().map(gameVersion => ([
+    (await getGameVersionList()).map(gameVersion => ([
       gameVersion.id,
       {
         gameVersion: gameVersion.id,
