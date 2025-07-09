@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#222222" },
       ],
       script: [
-        "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";",
+        { textContent: "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";" },
         { async: true, src: "https://www.statcounter.com/counter/counter.js" },
       ],
     },

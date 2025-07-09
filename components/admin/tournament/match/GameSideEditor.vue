@@ -31,7 +31,7 @@
       {{ $t('terms.actionCards') }} ({{ actionCards.length }})
     </CommonTextButton>
     <CommonIconButton size="tiny" icon="i-mingcute:copy-line" @click="copyDeck" />
-    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
+    <CommonIconButton size="tiny" icon="i-mingcute:paste-line" @click="pasteDeck" />
   </div>
 </template>
 
