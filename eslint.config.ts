@@ -2,7 +2,7 @@ import gjfleo from "@gjfleo/eslint-config";
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt().prepend(
-  await gjfleo(
+  gjfleo(
     {
       files: ["locales/*.json"],
       rules: {
