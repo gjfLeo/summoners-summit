@@ -1,7 +1,7 @@
+import type { DeckCode, GameVersionId } from "~/types";
 import { getGameBatch } from "./game";
 import { getMatchBatch } from "./match";
 import { getStorageTournamentList } from "./tournament";
-import type { DeckCode, GameVersionId } from "~/types";
 
 export async function getDeckCodes({ gameVersion }: { gameVersion: GameVersionId }) {
   const tournaments = await getStorageTournamentList();

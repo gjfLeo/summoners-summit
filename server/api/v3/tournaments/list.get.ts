@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { ZGameVersionId } from "~/types";
 import { getTournamentDetailBriefList } from "~/server/service";
+import { ZGameVersionId } from "~/types";
 
 const ZParams = z.object({
   gameVersion: ZGameVersionId.optional(),

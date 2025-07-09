@@ -1,8 +1,8 @@
 import { registerTheme } from "echarts/core";
-import { ROOT_FONT_SIZE_PX } from "~/config/layout";
+import darkTheme from "@/config/echarts/dark";
 
 import lightTheme from "@/config/echarts/light";
-import darkTheme from "@/config/echarts/dark";
+import { ROOT_FONT_SIZE_PX } from "~/config/layout";
 
 export function remToPx(rem: number) {
   return rem * ROOT_FONT_SIZE_PX;

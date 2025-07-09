@@ -19,9 +19,9 @@
 </template>
 
 <script lang="ts" setup>
-import PinyinMatch from "pinyin-match";
-import { CardImage, NAutoComplete, NPopover, NText } from "#components";
 import type { CardId } from "~/types/data";
+import { CardImage, NAutoComplete, NPopover, NText } from "#components";
+import PinyinMatch from "pinyin-match";
 
 const cardId = defineModel<CardId>("modelValue");
 

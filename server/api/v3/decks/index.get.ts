@@ -1,5 +1,5 @@
-import { getGameList } from "~/server/service";
 import type { DeckCode, GetDeckListResponse, GetDeckListResponseItem } from "~/types";
+import { getGameList } from "~/server/service";
 import { ZGetDeckListParams } from "~/types";
 import { sorter } from "~/utils/statistics";
 

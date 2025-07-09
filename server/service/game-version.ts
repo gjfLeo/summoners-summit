@@ -1,5 +1,5 @@
-import { ZGameVersionData } from "~/types";
 import type { GameVersion, GameVersionId } from "~/types";
+import { ZGameVersionData } from "~/types";
 
 export async function getGameVersionList(): Promise<GameVersion[]> {
   const gameVersionStorage = await useStorage("assets:data").getItem("misc:game-versions.json");

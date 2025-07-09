@@ -1,8 +1,8 @@
+import type { Game, GameDetail, GameId } from "~/types";
+import { ZGame } from "~/types";
 import { mirrorPlayer } from "../utils/player";
 import { getMatch } from "./match";
 import { getTournament } from "./tournament";
-import { ZGame } from "~/types";
-import type { Game, GameDetail, GameId } from "~/types";
 
 export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));

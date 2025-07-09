@@ -1,6 +1,6 @@
+import type { ActionCardInfo, CharacterCardInfo } from "~/types";
 import { z } from "zod";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
-import type { ActionCardInfo, CharacterCardInfo } from "~/types";
 
 const ZGyData = z.array(
   z.object({

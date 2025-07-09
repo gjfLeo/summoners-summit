@@ -1,12 +1,12 @@
-import tournamentById from "~/server/data/old/tournamentById.json";
-import matchById from "~/server/data/old/matchById.json";
-import gameById from "~/server/data/old/gameById.json";
-import deckById from "~/server/data/old/deckById.json";
-import playerRedirect from "~/server/data/old/playerRedirect.json";
-
-import type { CardId, Game, PlayerId, Tournament, TournamentRules } from "~/types";
 import type { MatchSaveParams } from "~/server/service";
-import { ZMatchSaveParams, ZTournamentSaveParams, changePlayerUniqueName, encodeDeck, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament } from "~/server/service";
+import type { CardId, Game, PlayerId, Tournament, TournamentRules } from "~/types";
+import deckById from "~/server/data/old/deckById.json";
+import gameById from "~/server/data/old/gameById.json";
+import matchById from "~/server/data/old/matchById.json";
+
+import playerRedirect from "~/server/data/old/playerRedirect.json";
+import tournamentById from "~/server/data/old/tournamentById.json";
+import { changePlayerUniqueName, encodeDeck, getActionCards, getCharacterCards, getGameList, getMatchList, getPlayer, getPlayerList, getTournamentList, redirectPlayer, saveMatch, savePlayer, saveTournament, ZMatchSaveParams, ZTournamentSaveParams } from "~/server/service";
 
 function getTournamentType(old?: string): Tournament["type"] {
   if (!old) return "未分类";
@@ -221,12 +221,12 @@ export default defineEventHandler(async () => {
 
             const bans = "banned" in oldMatch
               ? oldMatch.banned.map<MatchSaveParams["bans"][number]>((oldBan) => {
-                return {
-                  _key: 0,
-                  playerACardIds: oldBan.playerACharacters.map(getCardId),
-                  playerBCardIds: oldBan.playerBCharacters.map(getCardId),
-                };
-              })
+                  return {
+                    _key: 0,
+                    playerACardIds: oldBan.playerACharacters.map(getCardId),
+                    playerBCardIds: oldBan.playerBCharacters.map(getCardId),
+                  };
+                })
               : [];
 
             const games = oldMatch.gameIds.map(gId => gameById[gId as keyof typeof gameById])

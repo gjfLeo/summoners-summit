@@ -1,9 +1,9 @@
-import { getGame, getMatchDetail, getMatchList } from "~/server/service";
 import type {
   Game,
   GameId,
   ApiGetPlayerMatchesResponse as Response,
 } from "~/types";
+import { getGame, getMatchDetail, getMatchList } from "~/server/service";
 import {
   ZApiPlayerRouterParams as ZRouterParams,
 } from "~/types";

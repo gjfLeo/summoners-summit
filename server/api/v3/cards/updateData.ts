@@ -1,6 +1,6 @@
+import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
 import crypto from "node:crypto";
 import { z } from "zod";
-import type { ActionCardInfo, CharacterCardInfo, GameVersionId } from "~/types";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo, ZGameVersion, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
 const fandomFilenameOverrides: Record<number, string> = {

@@ -1,5 +1,5 @@
-import { getPlayer } from "./player";
 import type { GameVersionId, Ranks } from "~/types";
+import { getPlayer } from "./player";
 
 export function getRanks(id: string) {
   return readData<Ranks>(`ranks/${id}`);

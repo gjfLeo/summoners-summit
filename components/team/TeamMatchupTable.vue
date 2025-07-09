@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts" setup>
-import { NButton, NFormItem, NPopover, NSlider } from "naive-ui";
 import type { DataTableColumn, DataTableColumns } from "naive-ui";
-import { divide } from "mathjs/number";
 import { NuxtLinkLocale, TeamAvatars } from "#components";
+import { divide } from "mathjs/number";
+import { NButton, NFormItem, NPopover, NSlider } from "naive-ui";
 
 const { gameVersion } = useGameVersion();
 const { teams, matchupStats } = await useApiGetTeamMatchupStats({ gameVersion: gameVersion.value });

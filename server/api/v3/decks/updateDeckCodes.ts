@@ -1,5 +1,4 @@
 import { decodeDeck, encodeDeck, getGameList, saveGame } from "~/server/service";
-import { blockWords } from "~/utils/deck";
 
 export default defineEventHandler(async () => {
   const games = getGameList();

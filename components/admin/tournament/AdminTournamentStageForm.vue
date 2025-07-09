@@ -58,8 +58,8 @@
 </template>
 
 <script lang="ts" setup>
-import { AdminTournamentPartForm, NForm } from "#components";
 import type { TournamentStage } from "~/types/data";
+import { AdminTournamentPartForm, NForm } from "#components";
 
 const props = defineProps<{
   stageIndex: number;

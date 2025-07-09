@@ -88,9 +88,9 @@
 
 <script lang="ts" setup>
 import type AdminTournamentMatchEditor from "./match/MatchEditor.vue";
-import { NForm } from "#components";
-import type { Game, GameId, Match, MatchId, TournamentPart } from "~/types/data";
 import type { MatchSaveParams } from "~/server/service";
+import type { Game, GameId, Match, MatchId, TournamentPart } from "~/types/data";
+import { NForm } from "#components";
 
 const props = defineProps<{
   stageIndex: number;

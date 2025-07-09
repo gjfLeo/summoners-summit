@@ -202,9 +202,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { MatchId, TournamentId } from "~/types";
 import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
 import type { MatchSaveParams } from "~/server/service";
+import type { MatchId, TournamentId } from "~/types";
 
 const props = defineProps<{
   tournamentId: TournamentId;
@@ -273,7 +273,8 @@ async function confirm() {
   }
   catch (error: any) {
     (error as ValidateError[][])
-      .flatMap(e => e).flatMap(e => e)
+      .flatMap(e => e)
+      .flatMap(e => e)
       .forEach(e => message.warning(e.message!));
     return;
   }

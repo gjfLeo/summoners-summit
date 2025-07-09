@@ -52,8 +52,8 @@
 </template>
 
 <script lang="ts" setup>
-import { NFormItem } from "#components";
 import type { Ranks } from "~/types/data";
+import { NFormItem } from "#components";
 
 const emit = defineEmits<{
   (e: "done", v: Ranks["ranks"]): void;

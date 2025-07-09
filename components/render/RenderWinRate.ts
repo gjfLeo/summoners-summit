@@ -1,5 +1,5 @@
-import { divide } from "mathjs/number";
 import { NTooltip } from "#components";
+import { divide } from "mathjs/number";
 
 export default function renderWinRate(win: number, total: number, winRate?: number) {
   return h(

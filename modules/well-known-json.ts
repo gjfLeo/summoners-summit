@@ -1,5 +1,5 @@
-import { defineEventHandler } from "h3";
 import { addDevServerHandler, defineNuxtModule } from "@nuxt/kit";
+import { defineEventHandler } from "h3";
 
 export default defineNuxtModule({
   meta: {

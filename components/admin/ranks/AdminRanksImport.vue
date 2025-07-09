@@ -26,8 +26,8 @@
 
 <script lang="ts" setup>
 import type { ValidateError } from "async-validator";
-import { NButton, NDataTable, NFormItem, NInput } from "#components";
 import type { Ranks } from "~/types/data";
+import { NButton, NDataTable, NFormItem, NInput } from "#components";
 
 const emit = defineEmits<{
   (e: "done", id: string): void;
@@ -56,30 +56,30 @@ const columns: DataTableColumn<Ranks["ranks"][number]>[] = [
     render: (row, index) => {
       return nicknameEditable.value
         ? h(
-          NInput,
-          {
-            value: row.nickname,
-            onInput: (value) => {
-              row.nickname = value;
-              nicknameNeedConfirm.value[index] = isNicknameNeedConfirm(row.nickname);
+            NInput,
+            {
+              value: row.nickname,
+              onInput: (value) => {
+                row.nickname = value;
+                nicknameNeedConfirm.value[index] = isNicknameNeedConfirm(row.nickname);
+              },
+              status: nicknameNeedConfirm.value[index] ? "warning" : undefined,
             },
-            status: nicknameNeedConfirm.value[index] ? "warning" : undefined,
-          },
-          {
-            suffix: nicknameNeedConfirm.value[index]
-              ? () => h(
-                  NButton,
-                  {
-                    text: true,
-                    onClick: () => {
-                      nicknameNeedConfirm.value[index] = false;
+            {
+              suffix: nicknameNeedConfirm.value[index]
+                ? () => h(
+                    NButton,
+                    {
+                      text: true,
+                      onClick: () => {
+                        nicknameNeedConfirm.value[index] = false;
+                      },
                     },
-                  },
-                  () => h("div", { class: "i-mingcute:check-line" }),
-                )
-              : undefined,
-          },
-        )
+                    () => h("div", { class: "i-mingcute:check-line" }),
+                  )
+                : undefined,
+            },
+          )
         : row.nickname;
     },
   },

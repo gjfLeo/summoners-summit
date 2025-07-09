@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { abs, divide } from "mathjs/number";
 import type { CardId, DeckCode, DeckTeamId, GetDeckListResponseItem } from "~/types";
 import { CardImage, CommonIconButton, NTooltip, NuxtLinkLocale } from "#components";
+import { abs, divide } from "mathjs/number";
 
 const props = defineProps<{
   teamId: DeckTeamId;
@@ -57,19 +57,19 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
       return Object.keys(row.diffs).length === 0
         ? t("main.deck.similarTable.current")
         : h("div", { class: "flex gap-1" }, [
-          ...Object.entries(row.diffs)
-            .filter(([, count]) => count < 0)
-            .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
-              h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-red-6 bg-#ffffffd0 border-rd-tl-1" }, count),
-              h(CardImage, { card }),
-            ])),
-          ...Object.entries(row.diffs)
-            .filter(([, count]) => count > 0)
-            .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
-              h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-blue-6 bg-#ffffffd0 border-rd-tl-1" }, `+${count}`),
-              h(CardImage, { card }),
-            ])),
-        ]);
+            ...Object.entries(row.diffs)
+              .filter(([, count]) => count < 0)
+              .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
+                h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-red-6 bg-#ffffffd0 border-rd-tl-1" }, count),
+                h(CardImage, { card }),
+              ])),
+            ...Object.entries(row.diffs)
+              .filter(([, count]) => count > 0)
+              .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
+                h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-blue-6 bg-#ffffffd0 border-rd-tl-1" }, `+${count}`),
+                h(CardImage, { card }),
+              ])),
+          ]);
     },
   },
   {

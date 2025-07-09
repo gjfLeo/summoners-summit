@@ -77,9 +77,9 @@
 </template>
 
 <script lang="ts" setup>
-import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
-import { AdminTournamentStageForm, NForm } from "#components";
 import type { CardId, Tournament, TournamentId } from "~/types/data";
+import { AdminTournamentStageForm, NForm } from "#components";
+import AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 
 const emit = defineEmits<{
   (e: "save", tournamentId: TournamentId): void;

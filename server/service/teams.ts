@@ -1,9 +1,9 @@
-import { decodeDeck } from "./card";
-import { getGameList } from "./game";
-import { getMatchList } from "./match";
 import type { CardId, DeckCode, DeckTeamId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, GetTeamDecksParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
+import { decodeDeck } from "./card";
+import { getGameList } from "./game";
+import { getMatchList } from "./match";
 
 export function getTeamStatsRecords(params: GetAllTeamStatsParams): Record<DeckTeamId, TeamStats> {
   const { gameVersion } = params;

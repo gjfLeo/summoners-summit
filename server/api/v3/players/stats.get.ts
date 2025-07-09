@@ -1,5 +1,5 @@
-import { getGameDetail, getGameList, getMatchDetail, getMatchList, getPlayer, getPlayerRank } from "~/server/service";
 import type { PlayerId, PlayerStats } from "~/types";
+import { getGameDetail, getGameList, getMatchDetail, getMatchList, getPlayer, getPlayerRank } from "~/server/service";
 import { getMirroredGameDetail, getMirroredMatchDetail } from "~/utils/match";
 
 export default defineEventHandler(async () => {

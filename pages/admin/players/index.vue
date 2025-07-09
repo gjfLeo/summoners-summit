@@ -19,8 +19,8 @@
 </template>
 
 <script lang="tsx" setup>
-import Pinyin from "pinyin-match";
 import { AdminPlayerMergeDialog, AdminPlayerUniqueNameDialog, NButton } from "#components";
+import Pinyin from "pinyin-match";
 
 const { t } = useLocales();
 useHead({ title: t("site.titles.admin.players") });
