@@ -111,6 +111,10 @@ export default defineNuxtConfig({
       { code: "zh", language: "zh-CN", name: "简体中文", isCatchallLocale: true },
       { code: "en", language: "en-US", name: "English" },
     ],
+    restructureDir: "locales",
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 
   echarts: {
