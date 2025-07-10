@@ -1,8 +1,8 @@
 import type { Game, GameDetail, GameId } from "~/types";
 import { ZGame } from "~/types";
 import { mirrorPlayer } from "../utils/player";
-import { getMatch } from "./match";
-import { getTournament } from "./tournament";
+import { getMatch, getStorageMatch } from "./match";
+import { getStorageTournament, getTournament } from "./tournament";
 
 export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));
@@ -63,6 +63,33 @@ export function deleteGame(gameId: GameId) {
 export function fillGameDetail(game: Game) {
   const match = getMatch(game.matchId)!;
   const tournament = getTournament(match.tournamentId)!;
+  const stage = tournament.stages[match.stageIndex];
+  const part = stage.parts[match.partIndex];
+
+  return {
+    ...game,
+    tournamentId: match.tournamentId,
+    tournamentName: tournament.name,
+    gameVersion: tournament.gameVersion,
+
+    stageIndex: match.stageIndex,
+    stageName: stage.name,
+
+    partIndex: match.partIndex,
+    partName: part.name,
+    date: part.date,
+
+    matchIndex: match.matchIndex,
+    matchVideo: match.video,
+    playerA: match.playerA,
+    playerB: match.playerB,
+  } satisfies GameDetail;
+}
+
+export async function fillStorageGameDetail(game: Game): Promise<GameDetail> {
+  const match = (await getStorageMatch(game.matchId))!;
+  const tournament = (await getStorageTournament(match.tournamentId))!;
+
   const stage = tournament.stages[match.stageIndex];
   const part = stage.parts[match.partIndex];
 

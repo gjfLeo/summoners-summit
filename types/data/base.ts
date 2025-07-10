@@ -3,7 +3,7 @@ import { z } from "zod/v4";
 export const ZGameId = z.coerce.string().regex(/^\w{16}\d{4,}$/);
 export type GameId = z.infer<typeof ZGameId>;
 
-export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2,}$/);
+export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2,}$/, "Invalid matchId");
 export type MatchId = z.infer<typeof ZMatchId>;
 
 export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);

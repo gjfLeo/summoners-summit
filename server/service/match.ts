@@ -10,6 +10,12 @@ export function getMatch(matchId: MatchId): Match | undefined {
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
 }
 
+export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
+  const matches = useStorage("assets:data:matches");
+  const match = await matches.getItem(`${matchId}.json`);
+  return match ? ZMatch.parse(match) : undefined;
+}
+
 export function getMatchList(): Match[] {
   return ZMatch.array().parse(readDataList<Match>("matches"));
 }

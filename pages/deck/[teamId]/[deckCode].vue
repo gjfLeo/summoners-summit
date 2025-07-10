@@ -23,7 +23,12 @@
     <DeckActionList :cards="actionCards" class="mt" />
 
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
-    <GameList :games="games" />
+    <template v-if="games && games.length">
+      <GameList :games="games" />
+    </template>
+    <template v-else-if="gamesLoading">
+      <NSpin size="large" />
+    </template>
 
     <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
     <ClientOnly>
@@ -62,5 +67,10 @@ onMounted(() => {
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
-const { games } = await useApiGetGameList({ deckCode });
+const { data: games, pending: gamesLoading } = await useFetch("/api/v4/games", {
+  query: {
+    deckCode: toBase64Url(deckCode),
+    limit: 30,
+  },
+});
 </script>

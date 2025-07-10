@@ -7,6 +7,12 @@ export function getTournament(tournamentId: TournamentId): Tournament | undefine
   return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
 }
 
+export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
+  const tournaments = useStorage("assets:data:tournaments");
+  const tournament = await tournaments.getItem(`${tournamentId}.json`);
+  return tournament ? ZTournament.parse(tournament) : undefined;
+}
+
 export async function getTournamentList(): Promise<Tournament[]> {
   const tournaments = useStorage("assets:data:tournaments");
   return (await Promise.all((await tournaments.getKeys())
