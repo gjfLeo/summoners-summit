@@ -7,7 +7,7 @@ export default defineEventHandler(async () => {
     for (const deck of [game.playerADeck, game.playerBDeck]) {
       const deckCode = deck.deckCode;
       if (deckCode /* && blockWords.some(word => deckCode.includes(word)) */) {
-        deck.deckCode = encodeDeck(decodeDeck(deckCode));
+        deck.deckCode = await encodeDeck(await decodeDeck(deckCode));
         if (deck.deckCode !== deckCode) {
           changed = true;
         }

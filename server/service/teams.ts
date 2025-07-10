@@ -160,18 +160,18 @@ export const getTeamDecksStats = defineCachedFunction(
       numGamesWin: number;
       cardCountRecord: Record<CardId, number>;
     }> = {};
-    decks.forEach((deck) => {
+    for (const deck of decks) {
       const recordItem = decksRecord[deck.deckCode] ??= {
         deckCode: deck.deckCode,
         numGames: 0,
         numGamesWin: 0,
-        cardCountRecord: getActionCardCountRecord(deck.deckCode),
+        cardCountRecord: await getActionCardCountRecord(deck.deckCode),
       };
       recordItem.numGames++;
       if (deck.win) {
         recordItem.numGamesWin++;
       }
-    });
+    }
 
     // 胜利对局的额外加权，0表示不考虑
     const winWeight = 1;

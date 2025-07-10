@@ -1,8 +1,8 @@
 import { getActionCards, getCharacterCards } from "~/server/service";
 
-export default defineEventHandler(() => {
+export default defineEventHandler(async () => {
   return responseData({
-    characterCards: getCharacterCards(),
-    actionCards: getActionCards(),
+    characterCards: await getCharacterCards(),
+    actionCards: await getActionCards(),
   });
 });
