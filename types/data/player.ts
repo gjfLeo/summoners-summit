@@ -33,9 +33,9 @@ export interface PlayerIndex {
 
 export const ZAchievement = z.object({
   id: z.coerce.string().trim(),
-  name: z.record(ZLocales, z.string()),
-  flavorText: z.record(ZLocales, z.string()),
-  description: z.record(ZLocales, z.string()),
+  name: z.partialRecord(ZLocales, z.string()),
+  flavorText: z.partialRecord(ZLocales, z.string()),
+  description: z.partialRecord(ZLocales, z.string()),
   imageUrl: z.string(),
   playerIds: z.array(ZPlayerId),
 }).strip();
