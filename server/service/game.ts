@@ -15,12 +15,19 @@ export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
 
-export async function getStorageGameList(): Promise<Game[]> {
-  const games = useStorage("assets:data:games");
-  const keys = await games.getKeys();
-  const items = await games.getItems(keys);
-  return ZGame.array().parse(items.map(({ value }) => value));
-}
+export const getStorageGameList = defineCachedFunction(
+  async (): Promise<Game[]> => {
+    const games = useStorage("assets:data:games");
+    const keys = await games.getKeys();
+    const items = await games.getItems(keys);
+    return ZGame.array().parse(items.map(({ value }) => value));
+  },
+  {
+    maxAge: 0,
+    validate: () => !import.meta.dev,
+    name: "getStorageGameList",
+  },
+);
 
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
