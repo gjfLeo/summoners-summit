@@ -1,5 +1,5 @@
 import type { Game, GameId } from "~/types";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { getGame, getMatchDetail } from "~/server/service";
 import { ZMatchId } from "~/types";
 

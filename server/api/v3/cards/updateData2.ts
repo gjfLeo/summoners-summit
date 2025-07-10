@@ -1,5 +1,5 @@
 import type { ActionCardInfo, CharacterCardInfo } from "~/types";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
 
 const ZGyData = z.array(
@@ -39,6 +39,10 @@ async function getCharacterCardData(gyData: GyData) {
         throw new Error(`Invalid element for card ${card.id} ${card.name}`);
       }
 
+      if (!card.englishName) {
+        throw new Error(`Invalid english name for card ${card.id} ${card.name}`);
+      }
+
       return {
         id: ZCardId.parse(card.id),
         name: { zh: card.name, en: card.englishName },
@@ -69,6 +73,10 @@ async function getActionCardData(gyData: GyData) {
     .filter(card => card.type && card.type in actionTypeMap)
     .map<ActionCardInfo>((card) => {
       const actionType = actionTypeMap[card.type as keyof typeof actionTypeMap];
+
+      if (!card.englishName) {
+        throw new Error(`Invalid english name for card ${card.id} ${card.name}`);
+      }
 
       return {
         id: ZCardId.parse(card.id),

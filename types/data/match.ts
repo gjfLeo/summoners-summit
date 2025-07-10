@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId, ZGameId, ZGameVersionId, ZMatchId, ZTournamentId } from "./base";
 import { ZDeckTeamId } from "./deck";
 import { ZPlayerId, ZPlayerNickname } from "./player";

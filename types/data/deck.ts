@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId } from "./base";
 
 export const ZDeckCode = z.string().regex(/^[A-Z0-9+/=]{68}$/i);

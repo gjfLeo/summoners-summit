@@ -1,5 +1,5 @@
 import type { DeckCode } from "~/types";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZDeckTeamId } from "~/types";
 
 export const ZGetDeckListParams = z.object({

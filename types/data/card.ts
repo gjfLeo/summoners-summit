@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId, ZGameVersionId, ZLocales } from "./base";
 
 export const ZCardType = z.enum(["character", "action"]);

@@ -1,5 +1,5 @@
 import type { Ban, Game, Match, MatchDetail, MatchId } from "~/types";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayerNickname } from "~/types";
 import { getTeamId } from "~/utils/team";
 import { deleteGame, getGame, saveGame } from "./game";

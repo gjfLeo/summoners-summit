@@ -1,5 +1,5 @@
 import type { CardId, DeckCards, DeckCode } from "~/types";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
 import { decodeDeckToShareIds, encodeDeckFromShareIds } from "~/utils/deck";
 

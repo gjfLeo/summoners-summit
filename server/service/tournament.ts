@@ -1,4 +1,4 @@
-import type { z } from "zod";
+import type { z } from "zod/v4";
 import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
 import { ZTournament, ZTournamentDetailBrief } from "~/types";
 import { getMatchDetail } from "./match";
