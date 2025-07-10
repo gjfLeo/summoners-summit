@@ -1,20 +1,9 @@
 import type { DeckCode, GameVersionId } from "~/types";
-import { getGameBatch } from "./game";
-import { getMatchBatch } from "./match";
-import { getStorageTournamentList } from "./tournament";
+import { getStorageGameList } from "./game";
 
 export async function getDeckCodes({ gameVersion }: { gameVersion: GameVersionId }) {
-  const tournaments = await getStorageTournamentList();
-  const matchIds = tournaments
-    .filter(t => t.gameVersion === gameVersion)
-    .flatMap(t => t.stages)
-    .flatMap(s => s.parts)
-    .flatMap(p => p.matchIds);
-
-  const matches = await getMatchBatch(matchIds);
-  const gameIds = matches.flatMap(m => m.gameIds);
-
-  const games = await getGameBatch(gameIds);
+  const games = (await getStorageGameList())
+    .filter(g => g.gameVersion === gameVersion);
   const decks = games.flatMap(g => [g.playerADeck, g.playerBDeck])
     .filter(d => d.deckCode);
 
