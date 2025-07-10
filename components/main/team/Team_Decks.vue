@@ -1,6 +1,7 @@
 <template>
-  <template v-if="decks.length > 0 && deck">
+  <template v-if="decksData && decksData.length > 0 && deck">
     <DeckActionList :cards="deckCards.actionCards" />
+
     <div un-flex="~ items-center wrap gap-x-4 gap-y-2" class="mt-2">
       <div un-flex="~ items-center gap-2">
         <CommonIconButton
@@ -8,10 +9,10 @@
           :disabled="currentDeckIndex <= 0"
           @click="() => currentDeckIndex--"
         />
-        <span>{{ currentDeckIndex + 1 }} / {{ decks.length }}</span>
+        <span>{{ currentDeckIndex + 1 }} / {{ decksData.length }}</span>
         <CommonIconButton
           icon="i-mingcute:right-line"
-          :disabled="currentDeckIndex >= decks.length - 1"
+          :disabled="currentDeckIndex >= decksData.length - 1"
           @click="() => currentDeckIndex++"
         />
         <div un-flex="~ items-center">
@@ -43,6 +44,9 @@
       </div>
     </div>
   </template>
+  <template v-else-if="decksLoading">
+    <NSpin size="large" />
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -53,13 +57,15 @@ const { gameVersion } = useGameVersion();
 const { t } = useLocales();
 const { decodeDeck } = useDeckEncoder();
 
-const { decks } = await useApiGetTeamDecks({
-  teamId,
-  gameVersion: gameVersion.value,
+const { data: decksData, pending: decksLoading } = await useFetch(`/api/v4/teams/${teamId}/decks-stats`, {
+  query: {
+    gameVersion: gameVersion.value,
+    sortBy: "distanceToAverage",
+  },
 });
 
 const currentDeckIndex = ref(0);
-const deck = computed(() => decks.value[currentDeckIndex.value]);
+const deck = computed(() => decksData.value?.[currentDeckIndex.value]);
 const deckCode = computed(() => deck.value?.deckCode ?? "");
 const deckCards = computed(() => deckCode.value ? decodeDeck(deckCode.value) : { actionCards: [], characterCards: [] });
 

@@ -8,8 +8,18 @@ export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));
 }
 
+/**
+ * @deprecated
+ */
 export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
+}
+
+export async function getStorageGameList(): Promise<Game[]> {
+  const games = useStorage("assets:data:games");
+  const keys = await games.getKeys();
+  const items = await games.getItems(keys);
+  return ZGame.array().parse(items.map(({ value }) => value));
 }
 
 export function getGameDetail(gameId: GameId): GameDetail | undefined {

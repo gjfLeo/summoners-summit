@@ -27,7 +27,7 @@
 
     <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
     <ClientOnly>
-      <Deck_SimilarDecks v-bind="{ teamId, deckCode, deckList }" />
+      <Deck_SimilarDecks v-bind="{ teamId, deckCode }" />
     </ClientOnly>
 
     <SitePageAnchors>
@@ -63,5 +63,4 @@ onMounted(() => {
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
 const { games } = await useApiGetGameList({ deckCode });
-const { deckList } = await useApiGetDeckList({ teamId });
 </script>

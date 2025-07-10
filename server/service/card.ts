@@ -45,3 +45,13 @@ export function decodeDeck(deckCode: DeckCode): DeckCards {
   }
   return decodeDeckCache[deckCode];
 }
+
+export function getActionCardCountRecord(deckCode: DeckCode): Record<CardId, number> {
+  const cards = decodeDeck(deckCode).actionCards;
+  const countRecord: Record<CardId, number> = {};
+  cards.forEach((cardId) => {
+    countRecord[cardId] ??= 0;
+    countRecord[cardId]++;
+  });
+  return countRecord;
+}

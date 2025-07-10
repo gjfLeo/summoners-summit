@@ -1,8 +1,7 @@
-import type { CardId, DeckCode, DeckTeamId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, GetTeamDecksParams, TeamMatchups, TeamStats } from "~/types";
+import type { CardId, DeckCode, DeckTeamId, GameVersionId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, TeamMatchups, TeamStats } from "~/types";
 import { getMirroredGame } from "~/utils/match";
-import { sorter } from "~/utils/statistics";
-import { decodeDeck } from "./card";
-import { getGameList } from "./game";
+import { getActionCardCountRecord } from "./card";
+import { getGameList, getStorageGameList } from "./game";
 import { getMatchList } from "./match";
 
 export function getTeamStatsRecords(params: GetAllTeamStatsParams): Record<DeckTeamId, TeamStats> {
@@ -129,74 +128,73 @@ export function getTeamMatchupStats(params: GetAllTeamMatchupsParams) {
   return { teams, matchupStats };
 }
 
-export function getTeamDecks(params: GetTeamDecksParams) {
-  const winWeight = 2; // 胜率影响因子，1表示不考虑胜率
+/**
+ * 计算胜率时，平局视为负
+ */
+export async function getTeamDecksStats({ gameVersion, teamId }: {
+  teamId: DeckTeamId;
+  gameVersion?: GameVersionId;
+}) {
+  let games = await getStorageGameList();
+  if (gameVersion) {
+    games = games.filter(g => g.gameVersion === gameVersion);
+  }
 
-  const { gameVersion, teamId } = params;
-
-  const gameDeckList = getGameList()
-    .filter(game => game.gameVersion === gameVersion)
-    .filter(game => !game.isPrePatch)
-    .flatMap(game => [game, getMirroredGame(game)])
-    .filter(game => game.playerADeck.teamId === teamId)
-    .filter(game => game.playerADeck.deckCode)
-    .map((game) => {
-      const deckCode = game.playerADeck.deckCode!;
-      const actionCards = decodeDeck(deckCode).actionCards;
-      const cardCountRecords: Record<CardId, number> = {};
-      actionCards.forEach((card) => {
-        cardCountRecords[card] = (cardCountRecords[card] ?? 0) + 1;
-      });
-      return {
-        deckCode,
-        cardCountRecords,
-        win: game.winner === "A",
-      };
-    });
-
-  const cardCountOverall = gameDeckList.reduce<Record<CardId, number>>(
-    (acc, cur) => {
-      Object.entries(cur.cardCountRecords).forEach(([cardId, count]) => {
-        acc[cardId] = (acc[cardId] ?? 0) + count * (cur.win ? winWeight : 1);
-      });
-      return acc;
-    },
-    {},
-  );
-  const cardCountInAverage: Record<CardId, number> = Object.fromEntries(
-    Object.entries(cardCountOverall)
-      .map(([cardId, count]) => [cardId, count / (
-        gameDeckList.length
-        + gameDeckList.filter(game => game.win).length * (winWeight - 1)
-      )]),
-  );
-
-  const deckRecord: Record<DeckCode, {
-    deckCode: DeckCode;
-    games: number;
-    gamesWin: number;
-    distanceToAverage: number;
-  }> = {};
-  gameDeckList.forEach((game) => {
-    const recordItem = deckRecord[game.deckCode] ??= {
-      deckCode: game.deckCode,
-      games: 0,
-      gamesWin: 0,
-      // 欧氏距离
-      // distanceToAverage: Math.sqrt(
-      //   Object.entries(cardCountInAverage)
-      //     .map(([cardId, count]) => (count - (game.cardCountRecords[cardId] ?? 0)) ** 2)
-      //     .reduce((acc, cur) => acc + cur, 0),
-      // ),
-      // 曼哈顿距离
-      distanceToAverage: Object.entries(cardCountInAverage)
-        .map(([cardId, count]) => Math.abs(count - (game.cardCountRecords[cardId] ?? 0)))
-        .reduce((acc, cur) => acc + cur, 0),
-    };
-    recordItem.games++;
-    if (game.win) recordItem.gamesWin++;
+  const decks: { deckCode: DeckCode; win: boolean }[] = [];
+  games.forEach((game) => {
+    for (const p of ["A", "B"] as const) {
+      const deck = game[`player${p}Deck`];
+      if (deck.deckCode && deck.teamId === teamId) {
+        decks.push({
+          deckCode: deck.deckCode,
+          win: game.winner === p,
+        });
+      }
+    }
   });
 
-  const decks = Object.values(deckRecord).sort(sorter("distanceToAverage"));
-  return decks;
+  const decksRecord: Record<DeckCode, {
+    deckCode: DeckCode;
+    numGames: number;
+    numGamesWin: number;
+    cardCountRecord: Record<CardId, number>;
+  }> = {};
+  decks.forEach((deck) => {
+    const recordItem = decksRecord[deck.deckCode] ??= {
+      deckCode: deck.deckCode,
+      numGames: 0,
+      numGamesWin: 0,
+      cardCountRecord: getActionCardCountRecord(deck.deckCode),
+    };
+    recordItem.numGames++;
+    if (deck.win) {
+      recordItem.numGamesWin++;
+    }
+  });
+
+  // 胜利对局的额外加权，0表示不考虑
+  const winWeight = 1;
+  const maxScorePoint = decks.length + decks.filter(d => d.win).length * winWeight;
+  // 卡牌的分数，0 ~ 2
+  const cardScoreRecord: Record<CardId, number> = {};
+  Object.values(decksRecord).forEach((deck) => {
+    const cardCountRecord = deck.cardCountRecord;
+    Object.entries(cardCountRecord)
+      .forEach(([cardId, count]) => {
+        cardScoreRecord[cardId] ??= 0;
+        cardScoreRecord[cardId] += count * (deck.numGames + (deck.numGamesWin * winWeight)) / maxScorePoint;
+      });
+  });
+
+  return Object.values(decksRecord)
+    .map((deck) => {
+      return {
+        deckCode: deck.deckCode as DeckCode,
+        numGames: deck.numGames,
+        numGamesWin: deck.numGamesWin,
+        distanceToAverage: Object.entries(cardScoreRecord)
+          .map(([cardId, score]) => Math.abs(score - (deck.cardCountRecord[cardId] ?? 0)))
+          .reduce((acc, cur) => acc + cur, 0),
+      };
+    });
 }

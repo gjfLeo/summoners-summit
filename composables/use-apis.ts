@@ -1,4 +1,4 @@
-import type { Game, GameDetail, GameId, GameVersionId, GetActionCardStatsParams, GetDeckListParams, GetGameListParams, GetTeamDecksParams, GetTeamStatsByVersionParams, Match, MatchId, PlayerId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
+import type { Game, GameDetail, GameId, GameVersionId, GetActionCardStatsParams, GetGameListParams, GetTeamStatsByVersionParams, Match, MatchId, PlayerId, Tournament, TournamentDetailBrief, TournamentId } from "~/types";
 
 export async function useApiGetTournamentList() {
   const { data, refresh } = await useFetch("/api/v3/tournaments/list", {
@@ -60,13 +60,6 @@ export async function useApiGetActionCardStats(query: GetActionCardStatsParams) 
   };
 }
 
-export async function useApiGetTeamDecks(query: GetTeamDecksParams) {
-  const { data } = await useFetch("/api/v3/teams/getDecks", { query });
-  return {
-    decks: computed(() => data.value?.decks ?? []),
-  };
-}
-
 export async function useApiGetTeamStatsByVersion(query: GetTeamStatsByVersionParams) {
   const { data } = await useFetch("/api/v3/teams/getStatsByVersion", { query });
   return {
@@ -107,12 +100,5 @@ export async function useApiGetOverviewStats() {
   const { data } = await useFetch("/api/v3/overview");
   return {
     overview: computed(() => data.value?.success ? data.value.overview : []),
-  };
-}
-
-export async function useApiGetDeckList(query?: GetDeckListParams) {
-  const { data } = await useFetch("/api/v3/decks", { query });
-  return {
-    deckList: computed(() => data.value?.success ? data.value.deckList : []),
   };
 }
