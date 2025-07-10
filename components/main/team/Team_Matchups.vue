@@ -88,7 +88,7 @@ const columns: DataTableColumn<typeof data.value[0]>[] = [
     render: row => h(
       NuxtLinkLocale,
       {
-        to: `/team/${row.opponentTeamId}/${getGameVersionPath(gameVersion.value)}`,
+        to: { path: `/team/${row.opponentTeamId}/${getGameVersionPath(gameVersion.value)}` },
         prefetch: false,
       },
       () => h(TeamAvatars, { team: row.opponentTeamId }),

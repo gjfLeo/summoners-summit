@@ -15,9 +15,9 @@
           </div>
           <div class="flex items-center gap-2">
             <NText>{{ $t('site.footer.suggestion') }}</NText>
-            <NuxtLinkLocale :to="githubRepositry" target="_blank">
+            <NuxtLink :to="githubRepositry" target="_blank">
               <CommonIconButton icon="i-mingcute:github-line" />
-            </NuxtLinkLocale>
+            </NuxtLink>
             <div class="cursor-pointer" @click="handleQQClick">
               <NTooltip trigger="hover">
                 <template #trigger>
@@ -26,17 +26,17 @@
                 <span>{{ $t('site.footer.qq', [contactQQ]) }}</span>
               </NTooltip>
             </div>
-            <NuxtLinkLocale :to="contactNGAThread" target="_blank">
+            <NuxtLink :to="contactNGAThread" target="_blank">
               <div class="i-nga" />
-            </NuxtLinkLocale>
+            </NuxtLink>
           </div>
           <NText>
             <span>{{ $t('site.footer.thanks') }}</span>
             <span un-flex="inline gap-2">
-              <NuxtLinkLocale class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLinkLocale>
-              <NuxtLinkLocale class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLinkLocale>
-              <NuxtLinkLocale class="underline" to="https://2qb.bio.link/" target="_blank"><NA>TwoQuantumBits</NA></NuxtLinkLocale>
-              <NuxtLinkLocale class="underline" to="https://space.bilibili.com/299420735" target="_blank"><NA>George2003</NA></NuxtLinkLocale>
+              <NuxtLink class="underline" to="https://space.bilibili.com/24336207" target="_blank"><NA>念冰</NA></NuxtLink>
+              <NuxtLink class="underline" to="https://space.bilibili.com/8322668" target="_blank"><NA>自古二楼</NA></NuxtLink>
+              <NuxtLink class="underline" to="https://2qb.bio.link/" target="_blank"><NA>TwoQuantumBits</NA></NuxtLink>
+              <NuxtLink class="underline" to="https://space.bilibili.com/299420735" target="_blank"><NA>George2003</NA></NuxtLink>
             </span>
           </NText>
           <NText>

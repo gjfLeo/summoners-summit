@@ -13,6 +13,6 @@ const { gameVersionList } = await useAsyncSharedData();
 const route = useRoute();
 
 function getLink(version: GameVersion) {
-  return `${route.fullPath}/${getGameVersionPath(version)}`;
+  return { path: `${route.fullPath}/${getGameVersionPath(version)}` };
 }
 </script>

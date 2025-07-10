@@ -12,7 +12,7 @@
         <CommonIconButton icon="i-mingcute:copy-line" @click="copyDeckCode">
           {{ $t('main.deck.copyDeckShareCode') }}
         </CommonIconButton>
-        <NuxtLinkLocale :to="`/team/${teamId}`" prefetch>
+        <NuxtLinkLocale :to="{ path: `/team/${teamId}` }" prefetch>
           <CommonIconButton icon="i-mingcute:group-3-line">
             {{ $t('main.deck.teamDetail') }}
           </CommonIconButton>

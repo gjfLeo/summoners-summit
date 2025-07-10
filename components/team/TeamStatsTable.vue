@@ -64,7 +64,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     render: (row, rowIndex) => h(
       NuxtLinkLocale,
       {
-        to: `/team/${row.teamId}`,
+        to: { path: `/team/${row.teamId}` },
         prefetch: rowIndex < 5,
       },
       () => h(TeamAvatars, { team: row.teamId }),

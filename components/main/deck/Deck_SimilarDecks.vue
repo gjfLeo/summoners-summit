@@ -95,7 +95,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
         trigger: () => h(
           NuxtLinkLocale,
           {
-            to: `/deck/${props.teamId}/${toBase64Url(row.deckCode)}`,
+            to: { path: `/deck/${props.teamId}/${toBase64Url(row.deckCode)}` },
             prefetch: false,
             class: "flex justify-center",
           },

@@ -7,7 +7,7 @@
 
         <TournamentList>
           <template v-for="tournament in list" :key="tournament.id">
-            <NuxtLinkLocale :to="`/tournament/${tournament.id}`">
+            <NuxtLinkLocale :to="{ path: `/tournament/${tournament.id}` }">
               <TournamentListItem :tournament="tournament" />
             </NuxtLinkLocale>
           </template>

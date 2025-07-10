@@ -1,7 +1,7 @@
 <template>
   <template v-if="isDev">
     <template v-if="route.meta.layout === 'admin'">
-      <NuxtLinkLocale to="/" un-flex="~">
+      <NuxtLinkLocale :to="{ path: '/' }" un-flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger><CommonIconButton icon="i-mingcute:exit-line" /></template>
           <template #default>{{ t("admin.action.leaveAdminPage") }}</template>
@@ -9,7 +9,7 @@
       </NuxtLinkLocale>
     </template>
     <template v-else>
-      <NuxtLinkLocale to="/admin" un-flex="~">
+      <NuxtLinkLocale :to="{ path: '/admin' }" un-flex="~">
         <NTooltip :show-arrow="false">
           <template #trigger><CommonIconButton icon="i-mingcute:entrance-line" /></template>
           <template #default>{{ t("admin.action.enterAdminPage") }}</template>
