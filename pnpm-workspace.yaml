@@ -1,3 +1,6 @@
+patchedDependencies:
+  nitropack: patches/nitropack.patch
+
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - esbuild

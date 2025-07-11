@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  nitropack:
+    hash: 79dfde4d2ef4ea621e41b9d37a643765d4865a70546e3a8dbda224bde0d965b1
+    path: patches/nitropack.patch
+
 importers:
 
   .:
@@ -11885,7 +11890,7 @@ snapshots:
       p-wait-for: 5.0.2
       qs: 6.14.0
 
-  nitropack@2.11.13:
+  nitropack@2.11.13(patch_hash=79dfde4d2ef4ea621e41b9d37a643765d4865a70546e3a8dbda224bde0d965b1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.1.10(rollup@4.44.2)
@@ -12086,7 +12091,7 @@ snapshots:
       mlly: 1.7.4
       mocked-exports: 0.1.1
       nanotar: 0.2.0
-      nitropack: 2.11.13
+      nitropack: 2.11.13(patch_hash=79dfde4d2ef4ea621e41b9d37a643765d4865a70546e3a8dbda224bde0d965b1)
       nypm: 0.6.0
       ofetch: 1.4.1
       ohash: 2.0.11
