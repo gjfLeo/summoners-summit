@@ -2,6 +2,7 @@ import type { Game, GameDetail, GameId } from "~/types";
 import { ZGame } from "~/types";
 import { mirrorPlayer } from "../utils/player";
 import { getMatch, getStorageMatch } from "./match";
+import { defineGetRecordStorage } from "./storage";
 import { getStorageTournament, getTournament } from "./tournament";
 
 export function getGame(gameId: GameId): Game | undefined {
@@ -15,19 +16,16 @@ export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
 
-export const getStorageGameList = defineCachedFunction(
-  async (): Promise<Game[]> => {
-    const games = useStorage("assets:data:games");
-    const keys = await games.getKeys();
-    const items = await games.getItems(keys);
-    return ZGame.array().parse(items.map(({ value }) => value));
-  },
-  {
-    maxAge: 0,
-    validate: () => !import.meta.dev,
-    name: "getStorageGameList",
-  },
-);
+const getGameStorage = defineGetRecordStorage("games", ZGame);
+
+export async function getStorageGameList(): Promise<Game[]> {
+  return Object.values(await getGameStorage());
+}
+
+export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
+  const games = await getGameStorage();
+  return matchIds.map(matchId => games[matchId]).filter(Boolean);
+}
 
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
@@ -128,10 +126,4 @@ export function mirrorGame(game: Game) {
     winner: mirrorPlayer(game.winner),
     starter: mirrorPlayer(game.starter),
   } satisfies Game;
-}
-
-export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
-  const games = useStorage("assets:data:games");
-  return (await Promise.all(matchIds.map(id => games.getItem(`${id}.json`))))
-    .map(m => ZGame.parse(m));
 }

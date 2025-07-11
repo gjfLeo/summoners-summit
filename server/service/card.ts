@@ -3,15 +3,13 @@ import { z } from "zod/v4";
 import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
 import { decodeDeckToShareIds, encodeDeckFromShareIds } from "~/utils/deck";
 import { toBase64Url } from "~/utils/encode";
+import { defineGetMiscStorage } from "./storage";
 
-export async function getCharacterCards(): Promise<Record<CardId, CharacterCardInfo>> {
-  const characterCardStorage = await useStorage("assets:data").getItem("misc:character-cards.json");
-  return z.record(ZCardId, ZCharacterCardInfo).parse(characterCardStorage);
-}
-export async function getActionCards(): Promise<Record<CardId, ActionCardInfo>> {
-  const actionCardStorage = await useStorage("assets:data").getItem("misc:action-cards.json");
-  return z.record(ZCardId, ZActionCardInfo).parse(actionCardStorage);
-}
+export const getCharacterCards: () => Promise<Record<CardId, CharacterCardInfo>>
+  = defineGetMiscStorage("character-cards", z.record(ZCardId, ZCharacterCardInfo));
+
+export const getActionCards: () => Promise<Record<CardId, ActionCardInfo>>
+  = defineGetMiscStorage("action-cards", z.record(ZCardId, ZActionCardInfo));
 
 let shareIdByCardId: Record<CardId, number> | null = null;
 let cardIdByShareId: Record<number, CardId> | null = null;

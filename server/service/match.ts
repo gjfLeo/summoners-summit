@@ -4,20 +4,26 @@ import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayer
 import { getTeamId } from "~/utils/team";
 import { deleteGame, getGame, saveGame } from "./game";
 import { bindPlayerNickname } from "./player";
+import { defineGetRecordStorage } from "./storage";
 import { getTournament, saveTournament } from "./tournament";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
 }
 
-export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
-  const matches = useStorage("assets:data:matches");
-  const match = await matches.getItem(`${matchId}.json`);
-  return match ? ZMatch.parse(match) : undefined;
-}
-
 export function getMatchList(): Match[] {
   return ZMatch.array().parse(readDataList<Match>("matches"));
+}
+
+const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
+
+export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
+  const storage = await getMatchStorage();
+  return matchIds.map(matchId => storage[matchId]).filter(Boolean);
+}
+
+export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
+  return (await getMatchStorage())[matchId];
 }
 
 export const ZMatchSaveParams = ZMatch.partial({
@@ -171,10 +177,4 @@ export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
 
     winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
   };
-}
-
-export async function getMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
-  const matches = useStorage("assets:data:matches");
-  return (await Promise.all(matchIds.map(id => matches.getItem(`${id}.json`))))
-    .map(m => ZMatch.parse(m));
 }

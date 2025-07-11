@@ -2,22 +2,19 @@ import type { z } from "zod/v4";
 import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
 import { ZTournament, ZTournamentDetailBrief } from "~/types";
 import { getMatchDetail } from "./match";
+import { defineGetRecordStorage } from "./storage";
 
 export function getTournament(tournamentId: TournamentId): Tournament | undefined {
   return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
 }
 
-export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
-  const tournaments = useStorage("assets:data:tournaments");
-  const tournament = await tournaments.getItem(`${tournamentId}.json`);
-  return tournament ? ZTournament.parse(tournament) : undefined;
-}
+const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
 
-export async function getTournamentList(): Promise<Tournament[]> {
-  const tournaments = useStorage("assets:data:tournaments");
-  return (await Promise.all((await tournaments.getKeys())
-    .map(key => tournaments.getItem(key))))
-    .map(t => ZTournament.parse(t));
+export async function getStorageTournamentList(): Promise<Tournament[]> {
+  return Object.values(await getTournamentStorage());
+}
+export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
+  return (await getTournamentStorage())[tournamentId];
 }
 
 export const ZTournamentSaveParams = ZTournament.partial({
@@ -72,7 +69,7 @@ function fillTournamentDetail(tournament: Tournament): TournamentDetail {
 }
 
 export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
-  return (await getTournamentList())
+  return (await getStorageTournamentList())
     .map(fillTournamentDetail)
     .map(t => ZTournamentDetailBrief.parse(t));
 }
@@ -80,11 +77,4 @@ export async function getTournamentDetailBriefList(): Promise<TournamentDetailBr
 export function getTournamentDetail(tournamentId: TournamentId): TournamentDetail | undefined {
   const tournament = getTournament(tournamentId);
   return tournament ? fillTournamentDetail(tournament) : undefined;
-}
-
-export async function getStorageTournamentList(): Promise<Tournament[]> {
-  const tournaments = useStorage("assets:data:tournaments");
-  return (await Promise.all((await tournaments.getKeys())
-    .map(key => tournaments.getItem(key))))
-    .map(t => ZTournament.parse(t));
 }
