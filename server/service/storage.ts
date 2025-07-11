@@ -18,7 +18,7 @@ export function defineGetRecordStorage<K extends string, V>(
     {
       maxAge: import.meta.dev ? 1 : 0,
       group: "storage",
-      name: "path",
+      name: path,
     },
   );
 }
@@ -35,7 +35,7 @@ export function defineGetMiscStorage<T>(
     {
       maxAge: import.meta.dev ? 1 : 0,
       group: "storage",
-      name: "path",
+      name: path,
     },
   );
 }
