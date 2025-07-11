@@ -11,7 +11,7 @@ export function defineGetRecordStorage<K extends string, V>(
       return Object.fromEntries(
         await Promise.all(keys.map(async (key) => {
           const item = await storage.getItem(key);
-          return [key, zodType.parse(item)];
+          return [key.replace(/\.json$/, ""), zodType.parse(item)];
         })),
       );
     },
