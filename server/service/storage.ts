@@ -6,6 +6,7 @@ export function defineGetRecordStorage<K extends string, V>(
 ): () => Promise<Record<K, V>> {
   return defineCachedFunction(
     async (): Promise<Record<K, V>> => {
+      console.log(`Reading Storage: ${path}`);
       const storage = useStorage(`assets:data:${path}`);
       const keys = await storage.getKeys();
       return Object.fromEntries(
@@ -16,7 +17,7 @@ export function defineGetRecordStorage<K extends string, V>(
       );
     },
     {
-      maxAge: import.meta.dev ? 1 : 0,
+      maxAge: import.meta.dev ? 1 : Infinity,
       group: "storage",
       name: path,
     },
@@ -29,11 +30,12 @@ export function defineGetMiscStorage<T>(
 ): () => Promise<T> {
   return defineCachedFunction(
     async (): Promise<T> => {
+      console.log(`Reading Storage: misc:${path}`);
       const storage = await useStorage("assets:data").getItem(`misc:${path}.json`);
       return zodType.parse(storage);
     },
     {
-      maxAge: import.meta.dev ? 1 : 0,
+      maxAge: import.meta.dev ? 1 : Infinity,
       group: "storage",
       name: path,
     },
