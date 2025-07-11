@@ -6,9 +6,11 @@
     style="background-color: var(--g-header-color);"
   >
     <div un-flex="~ gap-4">
-      <NuxtLinkLocale v-if="localePath($route.path, 'zh') !== '/'" to="/">
-        <CommonIconButton icon="i-mingcute:home-3-line" />
-      </NuxtLinkLocale>
+      <template v-if="localePath({ path: $route.path }, 'zh') !== '/'">
+        <NuxtLinkLocale :to="{ path: '/' }">
+          <CommonIconButton icon="i-mingcute:home-3-line" />
+        </NuxtLinkLocale>
+      </template>
       <CommonIconButton class="md:hidden" icon="i-mingcute:menu-line" @click="showMobileMenu = true" />
     </div>
     <div>
@@ -40,8 +42,8 @@
 </template>
 
 <script lang="tsx" setup>
-import { useSiteMenu } from "~/composables/use-site-menu";
 import type { SiteRoute } from "~/composables/use-site-menu";
+import { useSiteMenu } from "~/composables/use-site-menu";
 
 const props = defineProps<{
   routes: SiteRoute[];

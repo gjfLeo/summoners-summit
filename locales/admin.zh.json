@@ -12,7 +12,6 @@
     "submit": "提交"
   },
   "card": {
-    "noNeedToUpdate": "无需更新",
     "updateData": "更新卡牌数据",
     "updateDataDescription": "获取最新游戏版本的卡牌数据",
     "updateDataWarning": "注意：可能较慢"

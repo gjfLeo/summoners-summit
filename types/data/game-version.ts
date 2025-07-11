@@ -1,11 +1,11 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZGameVersionId, ZLocales, ZSeasonPhraseId } from "./base";
 
 export const ZSeasonPhrase = z.object({
   id: ZSeasonPhraseId,
   gameVersions: ZGameVersionId.array(),
-  cardBackName: z.record(ZLocales, z.string()).optional(),
-  cardBackDescription: z.record(ZLocales, z.string()).optional(),
+  cardBackName: z.partialRecord(ZLocales, z.string()).optional(),
+  cardBackDescription: z.partialRecord(ZLocales, z.string()).optional(),
 }).strip();
 export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 

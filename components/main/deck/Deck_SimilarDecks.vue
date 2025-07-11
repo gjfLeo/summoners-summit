@@ -3,49 +3,86 @@
 </template>
 
 <script lang="ts" setup>
-import { abs, divide } from "mathjs/number";
-import type { CardId, DeckCode, DeckTeamId, GetDeckListResponseItem } from "~/types";
+import type { CardId, DeckCode, DeckTeamId } from "~/types";
 import { CardImage, CommonIconButton, NTooltip, NuxtLinkLocale } from "#components";
+import { abs, divide } from "mathjs/number";
 
 const props = defineProps<{
   teamId: DeckTeamId;
   deckCode: DeckCode;
-  deckList: GetDeckListResponseItem[];
 }>();
-const { deckCode, deckList } = toRefs(props);
+const { teamId, deckCode } = toRefs(props);
 
 const { t } = useLocales();
 const { decodeDeck } = useDeckEncoder();
 
-const actionCardRecord = computed(() => {
-  const cards = decodeDeck(deckCode.value).actionCards;
-  const record: Record<CardId, number> = {};
-  cards.forEach((card) => {
-    record[card] = (record[card] ?? 0) + 1;
-  });
-  return record;
+const { data: decksStatsData } = await useFetch(`/api/v4/teams/${teamId.value}/decks-stats`, {
+  query: {
+    sortBy: "numGames",
+  },
 });
 
+function getCardCountRecord(deckCode: DeckCode): Record<CardId, number> {
+  const cardCountRecord: Record<CardId, number> = {};
+  const cards = decodeDeck(deckCode).actionCards;
+  cards.forEach((cardId) => {
+    cardCountRecord[cardId] ??= 0;
+    cardCountRecord[cardId]++;
+  });
+  return cardCountRecord;
+}
+
+const currentCardCountRecord = computed(() => getCardCountRecord(deckCode.value));
+
 const data = computed(() => {
-  return deckList.value
-    .map((deck) => {
-      const record = { ...actionCardRecord.value };
-      const cards = decodeDeck(deck.deckCode).actionCards;
-      cards.forEach((card) => {
-        record[card] = (record[card] ?? 0) - 1;
-        if (record[card] === 0) {
-          delete record[card];
-        }
-      });
-      return {
-        ...deck,
-        diffs: record,
-        distance: Object.values(record).reduce((acc, cur) => acc + abs(cur), 0),
-        winRate: divide(deck.numGamesWin, deck.numGames),
-      };
-    })
-    .filter(item => item.distance <= 10);
+  return decksStatsData.value?.map((deck) => {
+    const cardCountRecord = getCardCountRecord(deck.deckCode);
+    const diffCardCountRecord = { ...currentCardCountRecord.value };
+    Object.entries(cardCountRecord).forEach(([cardId, count]) => {
+      diffCardCountRecord[cardId] = (diffCardCountRecord[cardId] ?? 0) - count;
+      if (diffCardCountRecord[cardId] === 0) {
+        delete diffCardCountRecord[cardId];
+      }
+    });
+    const distance = Object.values(diffCardCountRecord).reduce((acc, cur) => acc + abs(cur), 0);
+    return {
+      ...deck,
+      winRate: divide(deck.numGamesWin, deck.numGames),
+      diffCardCountRecord,
+      distance,
+    };
+  }) ?? [];
 });
+
+// const actionCardRecord = computed(() => {
+//   const cards = decodeDeck(deckCode.value).actionCards;
+//   const record: Record<CardId, number> = {};
+//   cards.forEach((card) => {
+//     record[card] = (record[card] ?? 0) + 1;
+//   });
+//   return record;
+// });
+
+// const data = computed(() => {
+//   return deckList.value
+//     .map((deck) => {
+//       const record = { ...actionCardRecord.value };
+//       const cards = decodeDeck(deck.deckCode).actionCards;
+//       cards.forEach((card) => {
+//         record[card] = (record[card] ?? 0) - 1;
+//         if (record[card] === 0) {
+//           delete record[card];
+//         }
+//       });
+//       return {
+//         ...deck,
+//         diffs: record,
+//         distance: Object.values(record).reduce((acc, cur) => acc + abs(cur), 0),
+//         winRate: divide(deck.numGamesWin, deck.numGames),
+//       };
+//     })
+//     .filter(item => item.distance <= 10);
+// });
 
 const columns: DataTableColumn<typeof data["value"][number]>[] = [
   {
@@ -54,22 +91,22 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
     defaultSortOrder: "ascend",
     title: t("main.deck.similarTable.deck"),
     render: (row) => {
-      return Object.keys(row.diffs).length === 0
+      return Object.keys(row.diffCardCountRecord).length === 0
         ? t("main.deck.similarTable.current")
         : h("div", { class: "flex gap-1" }, [
-          ...Object.entries(row.diffs)
-            .filter(([, count]) => count < 0)
-            .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
-              h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-red-6 bg-#ffffffd0 border-rd-tl-1" }, count),
-              h(CardImage, { card }),
-            ])),
-          ...Object.entries(row.diffs)
-            .filter(([, count]) => count > 0)
-            .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
-              h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-blue-6 bg-#ffffffd0 border-rd-tl-1" }, `+${count}`),
-              h(CardImage, { card }),
-            ])),
-        ]);
+            ...Object.entries(row.diffCardCountRecord)
+              .filter(([, count]) => count < 0)
+              .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
+                h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-red-6 bg-#ffffffd0 border-rd-tl-1" }, count),
+                h(CardImage, { card }),
+              ])),
+            ...Object.entries(row.diffCardCountRecord)
+              .filter(([, count]) => count > 0)
+              .map(([card, count]) => h("div", { class: "w-8 position-relative" }, [
+                h("div", { class: "position-absolute bottom-0 right-0 p-inline-1 text-xs text-blue-6 bg-#ffffffd0 border-rd-tl-1" }, `+${count}`),
+                h(CardImage, { card }),
+              ])),
+          ]);
     },
   },
   {
@@ -95,7 +132,7 @@ const columns: DataTableColumn<typeof data["value"][number]>[] = [
         trigger: () => h(
           NuxtLinkLocale,
           {
-            to: `/deck/${props.teamId}/${toBase64Url(row.deckCode)}`,
+            to: { path: `/deck/${teamId.value}/${toBase64Url(row.deckCode)}` },
             prefetch: false,
             class: "flex justify-center",
           },

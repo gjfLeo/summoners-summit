@@ -1,6 +1,6 @@
+import type { ActionCardStats, CardId } from "~/types";
 import { decodeDeck, getGameList } from "~/server/service";
 import { ZGetActionCardStatsParams } from "~/types";
-import type { ActionCardStats, CardId } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";
 
@@ -31,23 +31,22 @@ export default defineEventHandler(async (event) => {
     numUsagesWin: 0,
   });
 
-  games
-    .forEach((game) => {
-      const gameVersionWeight = (preferredGameVersion && game.gameVersion !== preferredGameVersion) ? 0.1 : 1;
-      const deckCode = game.playerADeck.deckCode!;
-      const cards = decodeDeck(deckCode).actionCards;
-      const cardIncluded: Record<CardId, true> = {};
-      cards.forEach((cardId) => {
-        const recordItem = getRecord(cardId);
-        if (!cardIncluded[cardId]) {
-          cardIncluded[cardId] = true;
-          recordItem.numGameDecks += gameVersionWeight;
-          if (game.winner === "A") recordItem.numGameDecksWin += gameVersionWeight;
-        }
-        recordItem.numUsages += gameVersionWeight;
-        if (game.winner === "A") recordItem.numUsagesWin += gameVersionWeight;
-      });
+  for (const game of games) {
+    const gameVersionWeight = (preferredGameVersion && game.gameVersion !== preferredGameVersion) ? 0.1 : 1;
+    const deckCode = game.playerADeck.deckCode!;
+    const cards = (await decodeDeck(deckCode)).actionCards;
+    const cardIncluded: Record<CardId, true> = {};
+    cards.forEach((cardId) => {
+      const recordItem = getRecord(cardId);
+      if (!cardIncluded[cardId]) {
+        cardIncluded[cardId] = true;
+        recordItem.numGameDecks += gameVersionWeight;
+        if (game.winner === "A") recordItem.numGameDecksWin += gameVersionWeight;
+      }
+      recordItem.numUsages += gameVersionWeight;
+      if (game.winner === "A") recordItem.numUsagesWin += gameVersionWeight;
     });
+  }
 
   const numGameDecks = games.length;
   const actionCardStats = Object.values(record).sort(sorter("numUsages")).reverse();

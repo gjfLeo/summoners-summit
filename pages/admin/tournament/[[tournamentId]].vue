@@ -1,7 +1,7 @@
 <template>
   <div>
     <NBreadcrumb>
-      <NBreadcrumbItem :href="localePath('/admin/tournaments')">{{ t("site.titles.admin.tournaments") }}</NBreadcrumbItem>
+      <NBreadcrumbItem :href="localePath({ path: '/admin/tournaments' })">{{ t("site.titles.admin.tournaments") }}</NBreadcrumbItem>
       <NBreadcrumbItem>{{ t("site.titles.admin.tournament") }}</NBreadcrumbItem>
     </NBreadcrumb>
 

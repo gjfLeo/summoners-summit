@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZGameVersionId, ZLocales, ZMatchId, ZRegions } from "./base";
 
 export const ZTournamentType = z.object({
@@ -35,7 +35,7 @@ export type TournamentRules = z.infer<typeof ZTournamentRules>;
 
 export const ZTournamentPart = z.object({
   _key: z.number().optional(),
-  name: z.record(ZLocales, z.string().trim()),
+  name: z.partialRecord(ZLocales, z.string().trim()),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   matchIds: ZMatchId.array(),
 }).strip();
@@ -43,7 +43,7 @@ export type TournamentPart = z.infer<typeof ZTournamentPart>;
 
 export const ZTournamentStage = z.object({
   _key: z.number().optional(),
-  name: z.record(ZLocales, z.string().trim()),
+  name: z.partialRecord(ZLocales, z.string().trim()),
   rules: ZTournamentRules.optional(),
   parts: ZTournamentPart.array(),
 }).strip();
@@ -51,7 +51,7 @@ export type TournamentStage = z.infer<typeof ZTournamentStage>;
 
 export const ZTournament = z.object({
   id: z.string(),
-  name: z.record(ZLocales, z.string().trim()),
+  name: z.partialRecord(ZLocales, z.string().trim()),
   gameVersion: ZGameVersionId,
   region: ZRegions,
   type: z.string(),

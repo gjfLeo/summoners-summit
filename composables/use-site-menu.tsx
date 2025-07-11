@@ -21,7 +21,14 @@ const renderLabel: (option: MenuOption | MenuGroupOption) => VNode | string = (o
     ],
   );
   if ("to" in option) {
-    return <NuxtLinkLocale to={option.to as string | undefined} prefetch={false}>{content}</NuxtLinkLocale>;
+    return (
+      <NuxtLinkLocale
+        to={option.to ? { path: option.to as string } : undefined}
+        prefetch={false}
+      >
+        {content}
+      </NuxtLinkLocale>
+    );
   }
   else {
     return content;

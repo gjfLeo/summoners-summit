@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
-import { CommonIconButton, NTooltip, NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
 import type { DeckTeamId, GameDetail, GameVersionId } from "~/types";
+import { CommonIconButton, NTooltip, NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
+import { divide } from "mathjs/number";
 
 const props = defineProps<{
   games: GameDetail[];
@@ -74,7 +74,8 @@ const data = computed(() => {
         followerWinRate: divide(item.numGamesFollowerWin, item.numGamesFollower),
       };
     })
-    .sort(sorter("numGames")).reverse();
+    .sort(sorter("numGames"))
+    .reverse();
 });
 
 const columns: DataTableColumn<typeof data.value[0]>[] = [
@@ -87,7 +88,7 @@ const columns: DataTableColumn<typeof data.value[0]>[] = [
     render: row => h(
       NuxtLinkLocale,
       {
-        to: `/team/${row.opponentTeamId}/${getGameVersionPath(gameVersion.value)}`,
+        to: { path: `/team/${row.opponentTeamId}/${getGameVersionPath(gameVersion.value)}` },
         prefetch: false,
       },
       () => h(TeamAvatars, { team: row.opponentTeamId }),

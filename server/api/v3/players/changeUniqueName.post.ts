@@ -1,5 +1,5 @@
-import { ZPlayer } from "~/types";
 import { changePlayerUniqueName } from "~/server/service";
+import { ZPlayer } from "~/types";
 
 const ZParams = ZPlayer.pick({
   id: true,

@@ -31,17 +31,17 @@
       {{ $t('terms.actionCards') }} ({{ actionCards.length }})
     </CommonTextButton>
     <CommonIconButton size="tiny" icon="i-mingcute:copy-line" @click="copyDeck" />
-    <CommonIconButton size="tiny" icon="i-carbon:paste" @click="pasteDeck" />
+    <CommonIconButton size="tiny" icon="i-mingcute:paste-line" @click="pasteDeck" />
   </div>
 </template>
 
 <script lang="ts" setup>
+import type { AdminTournamentMatchActionCardsEditor as ActionCardsEditor } from "#components";
+import type { MatchSaveParams } from "~/server/service";
 import type { CardId, Game } from "~/types/data";
 import {
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";
-import type { AdminTournamentMatchActionCardsEditor as ActionCardsEditor } from "#components";
-import type { MatchSaveParams } from "~/server/service";
 
 defineProps<{
   player: "A" | "B";

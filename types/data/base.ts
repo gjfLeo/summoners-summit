@@ -1,9 +1,9 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export const ZGameId = z.coerce.string().regex(/^\w{16}\d{4,}$/);
 export type GameId = z.infer<typeof ZGameId>;
 
-export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2,}$/);
+export const ZMatchId = z.coerce.string().regex(/^\w{16}\d{2,}$/, "Invalid matchId");
 export type MatchId = z.infer<typeof ZMatchId>;
 
 export const ZTournamentId = z.coerce.string().regex(/^\w{16}$/);
@@ -21,5 +21,5 @@ export type GameVersionId = z.infer<typeof ZGameVersionId>;
 export const ZSeasonPhraseId = z.string().regex(/^\d\.\d$/);
 export type SeasonPhraseId = z.infer<typeof ZSeasonPhraseId>;
 
-export const ZCardId = z.coerce.string();
+export const ZCardId = z.union([z.string(), z.number()]).transform(String);
 export type CardId = z.infer<typeof ZCardId>;

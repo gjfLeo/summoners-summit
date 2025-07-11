@@ -1,6 +1,6 @@
-import { z } from "zod";
-import { getGame, getMatchDetail } from "~/server/service";
 import type { Game, GameId } from "~/types";
+import { z } from "zod/v4";
+import { getGame, getMatchDetail } from "~/server/service";
 import { ZMatchId } from "~/types";
 
 const ZParams = z.object({

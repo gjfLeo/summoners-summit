@@ -19,9 +19,9 @@
 </template>
 
 <script setup lang="ts">
+import { PlayerName } from "#components";
 import { divide } from "mathjs/number";
 import PinyinMatch from "pinyin-match";
-import { PlayerName } from "#components";
 
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.players") });

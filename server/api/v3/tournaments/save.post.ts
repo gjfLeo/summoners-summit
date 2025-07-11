@@ -1,4 +1,4 @@
-import { ZTournamentSaveParams, saveTournament } from "~/server/service";
+import { saveTournament, ZTournamentSaveParams } from "~/server/service";
 
 export default defineEventHandler(async (event) => {
   const params = await readValidatedBody(event, ZTournamentSaveParams.parse);

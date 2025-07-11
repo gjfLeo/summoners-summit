@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts" setup>
-import { divide, format } from "mathjs/number";
 import type { ActionCardStats } from "~/types";
+import { divide, format } from "mathjs/number";
 
 const props = defineProps<{
   actionCardStats: ActionCardStats[];

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZDeckCode, ZDeckTeamId, ZGameVersionId } from "../../data";
 
 export const ZGetGameListParams = z.object({

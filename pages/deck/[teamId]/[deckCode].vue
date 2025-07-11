@@ -12,7 +12,7 @@
         <CommonIconButton icon="i-mingcute:copy-line" @click="copyDeckCode">
           {{ $t('main.deck.copyDeckShareCode') }}
         </CommonIconButton>
-        <NuxtLinkLocale :to="`/team/${teamId}`" prefetch>
+        <NuxtLinkLocale :to="{ path: `/team/${teamId}` }" prefetch>
           <CommonIconButton icon="i-mingcute:group-3-line">
             {{ $t('main.deck.teamDetail') }}
           </CommonIconButton>
@@ -23,11 +23,16 @@
     <DeckActionList :cards="actionCards" class="mt" />
 
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
-    <GameList :games="games" />
+    <template v-if="games && games.length">
+      <GameList :games="games" />
+    </template>
+    <template v-else-if="gamesLoading">
+      <NSpin size="large" />
+    </template>
 
     <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
     <ClientOnly>
-      <Deck_SimilarDecks v-bind="{ teamId, deckCode, deckList }" />
+      <Deck_SimilarDecks v-bind="{ teamId, deckCode }" />
     </ClientOnly>
 
     <SitePageAnchors>
@@ -62,6 +67,10 @@ onMounted(() => {
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
-const { games } = await useApiGetGameList({ deckCode });
-const { deckList } = await useApiGetDeckList({ teamId });
+const { data: games, pending: gamesLoading } = await useFetch("/api/v4/games", {
+  query: {
+    deckCode: toBase64Url(deckCode),
+    limit: 30,
+  },
+});
 </script>

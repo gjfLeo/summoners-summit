@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId, ZGameVersionId, ZLocales } from "./base";
 
 export const ZCardType = z.enum(["character", "action"]);
@@ -10,7 +10,7 @@ const ZCardInfoBase = z.object({
   name: z.record(ZLocales, z.string()),
   shareId: z.number(),
   type: ZCardType,
-  gameVersion: ZGameVersionId.optional(),
+  gameVersion: ZGameVersionId,
 }).strip();
 
 export const ZCharacterCardInfo = ZCardInfoBase.extend({

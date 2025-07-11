@@ -21,9 +21,9 @@
 <script lang="ts" setup>
 import type { SelectOption, SelectRenderLabel, SelectRenderOption, SelectRenderTag } from "naive-ui";
 
-import PinyinMatch from "pinyin-match";
-import { CardAvatar, NSelect, NTag, NText, NTooltip } from "#components";
 import type { CardId } from "~/types";
+import { CardAvatar, NSelect, NTag, NText, NTooltip } from "#components";
+import PinyinMatch from "pinyin-match";
 
 const props = defineProps<{
   modelValue: CardId[];
@@ -70,14 +70,14 @@ const renderOption: SelectRenderOption = ({ node, option, selected }) => {
       ),
       selected
         ? h(
-          NText,
-          {
-            type: "success",
-            class: ["justify-self-end", "self-end"],
-            style: { "grid-area": "1 / 1 / 2 / 2" },
-          },
-          () => h("div", { class: "i-mingcute:check-line" }),
-        )
+            NText,
+            {
+              type: "success",
+              class: ["justify-self-end", "self-end"],
+              style: { "grid-area": "1 / 1 / 2 / 2" },
+            },
+            () => h("div", { class: "i-mingcute:check-line" }),
+          )
         : undefined,
     ],
   );

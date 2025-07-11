@@ -1,0 +1,8 @@
+patchedDependencies:
+  nitropack: patches/nitropack.patch
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - esbuild
+  - unrs-resolver
+  - vue-demi

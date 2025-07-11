@@ -49,9 +49,9 @@ const {
 async function updateData() {
   const loading = message.loading(t("admin.action.loading"), { duration: 0 });
   try {
-    const res = await $fetch("/api/v3/cards/updateData2");
+    await $fetch("/api/v3/cards/updateData2");
     loading.destroy();
-    message.success(res.needUpdate ? t("admin.message.SUCCESS") : t("admin.card.noNeedToUpdate"));
+    message.success(t("admin.message.SUCCESS"));
     return Promise.all([
       fetchCardData(),
       fetchGameVersionData(),
@@ -59,7 +59,8 @@ async function updateData() {
   }
   catch (error) {
     console.error(error);
-    message.success(t("admin.message.FAILED"));
+    loading.destroy();
+    message.error(t("admin.message.FAILED"));
   }
 }
 </script>

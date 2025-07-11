@@ -4,7 +4,7 @@
       <!-- 赛事和对局名称 -->
       <div class="grid-col-[1/4]">
         <div class="flex items-center justify-between">
-          <NuxtLinkLocale class="text-sm" :to="`/tournament/${game.tournamentId}`" no-prefetch>
+          <NuxtLinkLocale class="text-sm" :to="{ path: `/tournament/${game.tournamentId}` }" no-prefetch>
             {{ game.gameVersion }} {{ currentLocalized(game.tournamentName) }}
           </NuxtLinkLocale>
           <NText :depth="3" class="flex items-center gap-2 text-xs">

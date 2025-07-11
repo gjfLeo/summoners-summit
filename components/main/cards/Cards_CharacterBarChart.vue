@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
 import type { CardId } from "~/types";
+import { divide } from "mathjs/number";
 
 type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
 const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));

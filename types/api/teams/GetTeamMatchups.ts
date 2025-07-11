@@ -1,6 +1,6 @@
-import { z } from "zod";
-import { ZGameVersionId } from "~/types/data";
 import type { DeckTeamId } from "~/types/data";
+import { z } from "zod/v4";
+import { ZGameVersionId } from "~/types/data";
 
 export const ZGetTeamMatchupsParams = z.object({
   gameVersion: ZGameVersionId,

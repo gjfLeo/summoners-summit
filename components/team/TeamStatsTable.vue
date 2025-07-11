@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
 import type { CardId } from "~/types";
 import { NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
+import { divide } from "mathjs/number";
 
 const { gameVersion } = useGameVersion();
 const { teamStatsRecords } = await useApiGetTeamStatsRecords({ gameVersion: gameVersion.value });
@@ -64,7 +64,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     render: (row, rowIndex) => h(
       NuxtLinkLocale,
       {
-        to: `/team/${row.teamId}`,
+        to: { path: `/team/${row.teamId}` },
         prefetch: rowIndex < 5,
       },
       () => h(TeamAvatars, { team: row.teamId }),

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { redirectPlayer } from "~/server/service";
 import { ZPlayerId } from "~/types";
 

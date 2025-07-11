@@ -18,13 +18,14 @@ export default defineConfig({
     presetIcons({ scale: 1 }),
     // presetTypography(),
     presetWebFonts({
+      provider: "none",
       fonts: {
         sans: [
           { name: "LXGW Neo XiHei", provider: "none" },
           { name: "Microsoft YaHei", provider: "none" },
         ],
         mono: [
-          { name: "Ubuntu Mono", provider: "bunny" },
+          { name: "Ubuntu Mono", provider: "none" },
         ],
       },
     }),

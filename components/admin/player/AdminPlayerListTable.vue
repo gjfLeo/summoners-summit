@@ -8,8 +8,8 @@
 </template>
 
 <script lang="tsx" setup>
-import { NButton, NTag } from "#components";
 import type { Player } from "~/types/data";
+import { NButton, NTag } from "#components";
 
 defineProps<{
   data: Player[];

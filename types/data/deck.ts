@@ -1,7 +1,8 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZCardId } from "./base";
 
-export const ZDeckCode = z.string().regex(/^[A-Z0-9+/=]{68}$/i);
+export const ZDeckCode = z.union([z.base64().length(68), z.base64url().length(68)])
+  .transform(s => s.replace(/-/g, "+").replace(/_/g, "/"));
 export const ZDeckTeamId = z.string().regex(/^\d{4}-\d{4}-\d{4}$/);
 export type DeckCode = z.infer<typeof ZDeckCode>;
 export type DeckTeamId = z.infer<typeof ZDeckTeamId>;

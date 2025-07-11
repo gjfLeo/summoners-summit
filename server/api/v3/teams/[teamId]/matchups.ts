@@ -1,5 +1,5 @@
-import { getGameList } from "~/server/service";
 import type { DeckTeamId, GetTeamMatchupsResponse, GetTeamMatchupsResponseItem } from "~/types";
+import { getGameList } from "~/server/service";
 import { ZGetTeamMatchupsParams, ZRouterParamsTeamId } from "~/types";
 import { getMirroredGame } from "~/utils/match";
 import { sorter } from "~/utils/statistics";

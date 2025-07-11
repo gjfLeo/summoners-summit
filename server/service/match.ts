@@ -1,10 +1,11 @@
-import { z } from "zod";
-import { getTournament, saveTournament } from "./tournament";
-import { bindPlayerNickname } from "./player";
-import { deleteGame, getGame, saveGame } from "./game";
 import type { Ban, Game, Match, MatchDetail, MatchId } from "~/types";
+import { z } from "zod/v4";
 import { ZCardId, ZDeckCode, ZGame, ZMatch, ZNullToUndefined, ZPlayerId, ZPlayerNickname } from "~/types";
 import { getTeamId } from "~/utils/team";
+import { deleteGame, getGame, saveGame } from "./game";
+import { bindPlayerNickname } from "./player";
+import { defineGetRecordStorage } from "./storage";
+import { getTournament, saveTournament } from "./tournament";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
@@ -12,6 +13,17 @@ export function getMatch(matchId: MatchId): Match | undefined {
 
 export function getMatchList(): Match[] {
   return ZMatch.array().parse(readDataList<Match>("matches"));
+}
+
+const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
+
+export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
+  const storage = await getMatchStorage();
+  return matchIds.map(matchId => storage[matchId]).filter(Boolean);
+}
+
+export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
+  return (await getMatchStorage())[matchId];
 }
 
 export const ZMatchSaveParams = ZMatch.partial({

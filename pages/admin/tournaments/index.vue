@@ -6,7 +6,7 @@
         <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
         <TournamentList>
           <template v-for="tournament in list" :key="tournament.id">
-            <NuxtLinkLocale :to="`/admin/tournament/${tournament.id}`">
+            <NuxtLinkLocale :to="{ path: `/admin/tournament/${tournament.id}` }">
               <TournamentListItem :tournament="tournament" />
             </NuxtLinkLocale>
           </template>
@@ -69,6 +69,6 @@ const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
 const router = useRouter();
 const localePath = useLocalePath();
 function handleAdd() {
-  router.push(localePath("/admin/tournament"));
+  router.push(localePath({ path: "/admin/tournament" }));
 }
 </script>

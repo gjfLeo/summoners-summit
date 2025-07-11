@@ -1,14 +1,20 @@
-import type { z } from "zod";
-import { getMatchDetail } from "./match";
-import { ZTournament, ZTournamentDetailBrief } from "~/types";
+import type { z } from "zod/v4";
 import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
+import { ZTournament, ZTournamentDetailBrief } from "~/types";
+import { getMatchDetail } from "./match";
+import { defineGetRecordStorage } from "./storage";
 
 export function getTournament(tournamentId: TournamentId): Tournament | undefined {
   return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
 }
 
-export function getTournamentList(): Tournament[] {
-  return ZTournament.array().parse(readDataList<Tournament>("tournaments"));
+const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
+
+export async function getStorageTournamentList(): Promise<Tournament[]> {
+  return Object.values(await getTournamentStorage());
+}
+export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
+  return (await getTournamentStorage())[tournamentId];
 }
 
 export const ZTournamentSaveParams = ZTournament.partial({
@@ -62,8 +68,10 @@ function fillTournamentDetail(tournament: Tournament): TournamentDetail {
   };
 }
 
-export function getTournamentDetailBriefList(): TournamentDetailBrief[] {
-  return getTournamentList().map(fillTournamentDetail).map(t => ZTournamentDetailBrief.parse(t));
+export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
+  return (await getStorageTournamentList())
+    .map(fillTournamentDetail)
+    .map(t => ZTournamentDetailBrief.parse(t));
 }
 
 export function getTournamentDetail(tournamentId: TournamentId): TournamentDetail | undefined {

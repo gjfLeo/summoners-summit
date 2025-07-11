@@ -1,9 +1,9 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { ZGameVersionId, ZTournamentId } from "./base";
-import { ZMatch } from "./match";
 import { ZGame } from "./game";
-import { ZTournament, ZTournamentPart, ZTournamentStage } from "./tournament";
+import { ZMatch } from "./match";
 import { ZPlayerId, ZPlayerNickname } from "./player";
+import { ZTournament, ZTournamentPart, ZTournamentStage } from "./tournament";
 
 export const ZGameDetail = ZGame.extend({
   gameVersion: ZGameVersionId,

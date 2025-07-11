@@ -24,8 +24,8 @@
 </template>
 
 <script lang="ts" setup>
-import { NForm } from "#components";
 import type { Player } from "~/types/data";
+import { NForm } from "#components";
 
 const emit = defineEmits<{
   (e: "done"): void;

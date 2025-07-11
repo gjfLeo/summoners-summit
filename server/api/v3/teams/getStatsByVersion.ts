@@ -1,6 +1,6 @@
-import { getGameList, getGameVersionList, getMatchList } from "~/server/service";
 import type { GameVersionId } from "~/types";
 import type { TeamStatsInVersion } from "~/types/api/teams/GetTeamStatsByVersion";
+import { getGameList, getGameVersionList, getMatchList } from "~/server/service";
 import { ZGetTeamStatsByVersionParams } from "~/types/api/teams/GetTeamStatsByVersion";
 import { getMirroredGame, getMirroredMatch } from "~/utils/match";
 
@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   const { teamId } = await getValidatedQuery(event, ZGetTeamStatsByVersionParams.parse);
 
   const statsByVersionRecord: Record<GameVersionId, TeamStatsInVersion> = Object.fromEntries(
-    getGameVersionList().map(gameVersion => [gameVersion.id, {
+    (await getGameVersionList()).map(gameVersion => [gameVersion.id, {
       gameVersion: gameVersion.id,
       numGames: 0,
       numGamesWin: 0,

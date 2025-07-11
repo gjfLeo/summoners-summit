@@ -12,10 +12,10 @@
 </template>
 
 <script lang="tsx" setup>
-import Pinyin from "pinyin-match";
 import type { SelectRenderLabel, SelectRenderTag } from "naive-ui";
 import type { Player } from "~/types/data";
 import { NText } from "#components";
+import Pinyin from "pinyin-match";
 
 const props = defineProps<{
   players: Player[];

@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-import { divide } from "mathjs/number";
 import type { DataTableCreateSummary } from "naive-ui";
 import type { GetOverviewResponse } from "~/types/api/stub/GetOverview";
+import { divide } from "mathjs/number";
 
 const props = defineProps<GetOverviewResponse>();
 const { overview } = toRefs(props);

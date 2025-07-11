@@ -24,6 +24,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": { prerender: true },
+    "/deck/**": { ssr: false, prerender: false },
+    "/en/deck/**": { ssr: false, prerender: false },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
   },
@@ -40,6 +42,10 @@ export default defineNuxtConfig({
       ignore: ["/admin"],
       failOnError: true,
     },
+    serverAssets: [{
+      baseName: "data",
+      dir: "./data",
+    }],
   },
 
   app: {
@@ -57,7 +63,7 @@ export default defineNuxtConfig({
         { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#222222" },
       ],
       script: [
-        "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";",
+        { textContent: "var sc_project=12936927; var sc_invisible=1; var sc_security=\"22ea8aae\";" },
         { async: true, src: "https://www.statcounter.com/counter/counter.js" },
       ],
     },
@@ -107,6 +113,10 @@ export default defineNuxtConfig({
       { code: "zh", language: "zh-CN", name: "简体中文", isCatchallLocale: true },
       { code: "en", language: "en-US", name: "English" },
     ],
+    restructureDir: "locales",
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 
   echarts: {
