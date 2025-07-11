@@ -1,4 +1,5 @@
 import type { ZodType } from "zod/v4";
+import { runParallel } from "../utils/parallel";
 
 export function defineGetRecordStorage<K extends string, V>(
   path: string,
@@ -8,13 +9,17 @@ export function defineGetRecordStorage<K extends string, V>(
     async (): Promise<Record<K, V>> => {
       console.log(`Reading Storage: ${path}`);
       const storage = useStorage(`assets:data:${path}`);
-      const keys = await storage.getKeys();
-      return Object.fromEntries(
-        await Promise.all(keys.map(async (key) => {
+      const keys = (await storage.getKeys()) as K[];
+      const record: Partial<Record<K, V>> = {};
+      await runParallel(
+        new Set(keys),
+        async (key: K) => {
           const item = await storage.getItem(key);
-          return [key.replace(/\.json$/, ""), zodType.parse(item)];
-        })),
+          record[key] = zodType.parse(item);
+        },
+        { concurrency: 10 },
       );
+      return record as Record<K, V>;
     },
     {
       maxAge: import.meta.dev ? 1 : Infinity,
