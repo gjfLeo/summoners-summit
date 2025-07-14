@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZGameVersionId, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
 function getVersionData(maxVersionId?: string) {

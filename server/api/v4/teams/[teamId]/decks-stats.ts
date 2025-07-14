@@ -1,4 +1,4 @@
-import z from "zod/v4";
+import z from "zod";
 import { getTeamDecksStats } from "~/server/service";
 import { ZDeckTeamId, ZGameVersionId } from "~/types";
 

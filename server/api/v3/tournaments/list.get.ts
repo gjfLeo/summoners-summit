@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { getTournamentDetailBriefList } from "~/server/service";
 import { ZGameVersionId } from "~/types";
 

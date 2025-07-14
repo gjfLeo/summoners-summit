@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 
 export const ZGameId = z.coerce.string().regex(/^\w{16}\d{4,}$/);
 export type GameId = z.infer<typeof ZGameId>;

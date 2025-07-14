@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { getPlayerByUid, savePlayer, saveRanks } from "~/server/service";
 import { ZRanks } from "~/types";
 

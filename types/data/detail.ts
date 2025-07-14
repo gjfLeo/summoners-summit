@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZGameVersionId, ZTournamentId } from "./base";
 import { ZGame } from "./game";
 import { ZMatch } from "./match";

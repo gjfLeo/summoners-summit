@@ -1,4 +1,4 @@
-import type { z } from "zod/v4";
+import type { z } from "zod";
 import type { Player, PlayerId, PlayerIndex } from "~/types/data";
 import { ZMatch, ZPlayer } from "~/types/data";
 import { getMatchList } from "./match";

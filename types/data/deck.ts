@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZCardId } from "./base";
 
 export const ZDeckCode = z.union([z.base64().length(68), z.base64url().length(68)])

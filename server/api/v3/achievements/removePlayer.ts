@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { getAchievementList, saveAchievementList } from "~/server/service";
 import { ZAchievement, ZPlayerId } from "~/types";
 

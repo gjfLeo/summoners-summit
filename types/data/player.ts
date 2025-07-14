@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZLocales } from "./base";
 
 export const ZPlayerId = z.coerce.string().regex(/^\w{16}$/);

@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZGameVersionId, ZLocales, ZMatchId, ZRegions } from "./base";
 
 export const ZTournamentType = z.object({

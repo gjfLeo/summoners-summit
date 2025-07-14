@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { ZGameVersionId, ZLocales, ZSeasonPhraseId } from "./base";
 
 export const ZSeasonPhrase = z.object({

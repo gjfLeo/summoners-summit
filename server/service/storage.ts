@@ -1,4 +1,4 @@
-import type { ZodType } from "zod/v4";
+import type { ZodType } from "zod";
 import { runParallel } from "../utils/parallel";
 
 export function defineGetRecordStorage<K extends string, V>(
