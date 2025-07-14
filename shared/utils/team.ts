@@ -5,3 +5,7 @@ export function getTeamId(characterCards: CardId[]): DeckTeamId {
 export function getCharacterCardsByTeamId(teamId: DeckTeamId): CardId[] {
   return teamId.split("-") as CardId[];
 }
+
+export function normalizeTeamId(teamId: DeckTeamId): DeckTeamId {
+  return teamId.split("-").sort().join("-");
+};
