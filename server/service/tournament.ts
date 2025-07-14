@@ -1,6 +1,4 @@
 import type { z } from "zod";
-import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
-import { ZTournament, ZTournamentDetailBrief } from "~/types";
 import { getMatchDetail } from "./match";
 import { defineGetRecordStorage } from "./storage";
 

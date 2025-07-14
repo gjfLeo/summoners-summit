@@ -1,4 +1,3 @@
-import type { DeckCode, GameVersionId } from "~/types";
 import { getGameBatch } from "./game";
 import { getStorageMatchBatch } from "./match";
 import { getStorageTournamentList } from "./tournament";

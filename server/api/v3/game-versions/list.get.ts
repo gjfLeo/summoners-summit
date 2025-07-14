@@ -1,4 +1,4 @@
-import { getGameVersionList } from "~/server/service";
+import { getGameVersionList } from "~~/server/service";
 
 export default defineEventHandler(async () => {
   const gameVersionList = await getGameVersionList();

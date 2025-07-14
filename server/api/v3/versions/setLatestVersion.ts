@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { ZGameVersionId, ZSeasonPhrase, ZSeasonPhraseId } from "~/types";
 
 function getVersionData(maxVersionId?: string) {
   const seasonPhrases = z.record(ZSeasonPhraseId, ZSeasonPhrase).parse(readData("misc/season-phrases"));

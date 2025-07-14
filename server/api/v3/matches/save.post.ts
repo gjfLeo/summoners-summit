@@ -1,5 +1,4 @@
-import type { MatchId } from "~/types";
-import { saveMatch, ZMatchSaveParams } from "~/server/service";
+import { saveMatch, ZMatchSaveParams } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const params = await readValidatedBody(event, ZMatchSaveParams.parse);

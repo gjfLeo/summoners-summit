@@ -1,15 +1,7 @@
-import type {
-  Game,
-  GameId,
-  ApiGetPlayerMatchesResponse as Response,
-} from "~/types";
-import { getGame, getMatchDetail, getMatchList } from "~/server/service";
-import {
-  ZApiPlayerRouterParams as ZRouterParams,
-} from "~/types";
+import { getGame, getMatchDetail, getMatchList } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
-  const { playerId } = await getValidatedRouterParams(event, ZRouterParams.parse);
+  const { playerId } = await getValidatedRouterParams(event, ZApiPlayerRouterParams.parse);
 
   const matchList = getMatchList()
     .filter(match => match.playerA.playerId === playerId || match.playerB.playerId === playerId)
@@ -22,5 +14,5 @@ export default defineEventHandler(async (event) => {
     .flatMap(match => match.gameIds)
     .forEach(gameId => games[gameId] = getGame(gameId)!);
 
-  return responseData<Response>({ matchList, games });
+  return responseData<ApiGetPlayerMatchesResponse>({ matchList, games });
 });

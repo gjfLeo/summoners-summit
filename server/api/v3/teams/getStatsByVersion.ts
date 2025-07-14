@@ -1,8 +1,4 @@
-import type { GameVersionId } from "~/types";
-import type { TeamStatsInVersion } from "~/types/api/teams/GetTeamStatsByVersion";
-import { getGameList, getGameVersionList, getMatchList } from "~/server/service";
-import { ZGetTeamStatsByVersionParams } from "~/types/api/teams/GetTeamStatsByVersion";
-import { getMirroredGame, getMirroredMatch } from "~/utils/match";
+import { getGameList, getGameVersionList, getMatchList } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const { teamId } = await getValidatedQuery(event, ZGetTeamStatsByVersionParams.parse);

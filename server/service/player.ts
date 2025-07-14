@@ -1,6 +1,4 @@
 import type { z } from "zod";
-import type { Player, PlayerId, PlayerIndex } from "~/types/data";
-import { ZMatch, ZPlayer } from "~/types/data";
 import { getMatchList } from "./match";
 
 export function getPlayer(playerId: PlayerId): Player | undefined {

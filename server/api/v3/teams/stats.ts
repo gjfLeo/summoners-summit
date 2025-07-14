@@ -1,5 +1,4 @@
-import { getTeamStatsRecords } from "~/server/service";
-import { ZGetAllTeamStatsParams } from "~/types";
+import { getTeamStatsRecords } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const query = await getValidatedQuery(event, ZGetAllTeamStatsParams.parse);

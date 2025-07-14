@@ -1,10 +1,7 @@
-import { getPlayer, getPlayerAchievements, getTournamentDetailBriefList } from "~/server/service";
-import {
-  ZApiPlayerRouterParams as ZRouterParams,
-} from "~/types";
+import { getPlayer, getPlayerAchievements, getTournamentDetailBriefList } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
-  const { playerId } = await getValidatedRouterParams(event, ZRouterParams.parse);
+  const { playerId } = await getValidatedRouterParams(event, ZApiPlayerRouterParams.parse);
 
   const player = getPlayer(playerId);
 

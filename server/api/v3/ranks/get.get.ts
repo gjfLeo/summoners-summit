@@ -1,5 +1,4 @@
-import { getRanks } from "~/server/service";
-import { ZRanks } from "~/types";
+import { getRanks } from "~~/server/service";
 
 const ZParams = ZRanks.pick({ id: true });
 

@@ -1,6 +1,5 @@
 import { z } from "zod";
-import { getAchievementList, saveAchievementList } from "~/server/service";
-import { ZAchievement, ZPlayerId } from "~/types";
+import { getAchievementList, saveAchievementList } from "~~/server/service";
 
 const ZParams = z.object({
   achievementId: ZAchievement.shape.id,
