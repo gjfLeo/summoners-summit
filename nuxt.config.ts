@@ -62,7 +62,7 @@ export default defineNuxtConfig({
       meta: {
         title: "召唤之巅API",
       },
-      production: "prerender",
+      production: "runtime",
       route: "/_docs/openapi.json",
       ui: {
         scalar: {
