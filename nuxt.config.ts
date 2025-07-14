@@ -58,6 +58,25 @@ export default defineNuxtConfig({
       baseName: "data",
       dir: "./data",
     }],
+    openAPI: {
+      meta: {
+        title: "召唤之巅API",
+      },
+      production: "prerender",
+      route: "/_docs/openapi.json",
+      ui: {
+        scalar: {
+          route: "/_docs/scalar",
+          theme: "bluePlanet",
+        },
+        swagger: {
+          route: "/_docs/swagger",
+        },
+      },
+    },
+    experimental: {
+      openAPI: true,
+    },
   },
 
   app: {
