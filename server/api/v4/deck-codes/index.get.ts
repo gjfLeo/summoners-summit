@@ -1,8 +1,6 @@
-import type { DeckCode } from "~/types";
 import { z } from "zod";
-import { getGameVersionList } from "~/server/service";
-import { getDeckCodes } from "~/server/service/deck";
-import { ZGameVersionId } from "~/types";
+import { getGameVersionList } from "~~/server/service";
+import { getDeckCodes } from "~~/server/service/deck";
 
 const ZParams = z.object({
   gameVersion: ZGameVersionId.optional(),

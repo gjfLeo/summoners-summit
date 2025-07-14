@@ -1,5 +1,3 @@
-import type { TournamentType } from "~/types";
-
 export default defineEventHandler(() => {
   const tournamentTypeList: TournamentType[] = [
     { value: "积分赛", level: "B" },

@@ -1,5 +1,3 @@
-import type { GameVersion, GameVersionId } from "~/types";
-import { ZGameVersionData } from "~/types";
 import { defineGetMiscStorage } from "./storage";
 
 const getGameVersionData = defineGetMiscStorage("game-versions", ZGameVersionData);

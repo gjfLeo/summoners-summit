@@ -1,4 +1,4 @@
-import { decodeDeck, encodeDeck, getGameList, saveGame } from "~/server/service";
+import { decodeDeck, encodeDeck, getGameList, saveGame } from "~~/server/service";
 
 export default defineEventHandler(async () => {
   const games = getGameList();

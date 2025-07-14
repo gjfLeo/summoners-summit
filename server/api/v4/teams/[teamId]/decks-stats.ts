@@ -1,6 +1,5 @@
 import z from "zod";
-import { getTeamDecksStats } from "~/server/service";
-import { ZDeckTeamId, ZGameVersionId } from "~/types";
+import { getTeamDecksStats } from "~~/server/service";
 
 const ZRouteParams = z.object({
   teamId: ZDeckTeamId,

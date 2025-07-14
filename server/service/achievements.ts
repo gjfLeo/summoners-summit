@@ -1,6 +1,3 @@
-import type { Achievement, PlayerId } from "~/types";
-import { ZAchievement } from "~/types";
-
 export function getAchievementList(): Achievement[] {
   return ZAchievement.array().parse(readData<Achievement[]>("misc/achievements", []));
 }

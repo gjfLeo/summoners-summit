@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     "nuxt-echarts",
   ],
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   runtimeConfig: {
     public: {
       needRedirect: false,
@@ -28,6 +32,14 @@ export default defineNuxtConfig({
     "/en/deck/**": { ssr: false, prerender: false },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
+  },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        noUncheckedIndexedAccess: false,
+      },
+    },
   },
 
   nitro: {

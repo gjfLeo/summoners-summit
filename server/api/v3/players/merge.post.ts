@@ -1,6 +1,5 @@
 import { z } from "zod";
-import { redirectPlayer } from "~/server/service";
-import { ZPlayerId } from "~/types";
+import { redirectPlayer } from "~~/server/service";
 
 const ZParams = z.object({
   sourceId: ZPlayerId,

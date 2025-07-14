@@ -1,6 +1,4 @@
-import { fillGameDetail, getGameList } from "~/server/service";
-import { ZGetGameListParams } from "~/types";
-import { getMirroredGameDetail } from "~/utils/match";
+import { fillGameDetail, getGameList } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const { gameVersion, deckCode, teamId } = await getValidatedQuery(event, ZGetGameListParams.parse);

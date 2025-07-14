@@ -1,7 +1,5 @@
-import type { Game, GameId } from "~/types";
 import { z } from "zod";
-import { getGame, getMatchDetail } from "~/server/service";
-import { ZMatchId } from "~/types";
+import { getGame, getMatchDetail } from "~~/server/service";
 
 const ZParams = z.object({
   id: ZMatchId,
