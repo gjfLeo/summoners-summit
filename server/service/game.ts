@@ -19,6 +19,10 @@ export async function getStorageGameList(): Promise<Game[]> {
   return Object.values(await getGameStorage());
 }
 
+export async function getStorageGame(gameId: GameId): Promise<Game | undefined> {
+  return (await getGameStorage())[gameId];
+}
+
 export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
   const games = await getGameStorage();
   return matchIds.map(matchId => games[matchId]).filter(Boolean);
@@ -86,6 +90,12 @@ export function fillGameDetail(game: Game) {
     playerA: match.playerA,
     playerB: match.playerB,
   } satisfies GameDetail;
+}
+
+export async function getStorageGameDetail(gameId: GameId): Promise<GameDetail | undefined> {
+  const game = await getStorageGame(gameId);
+  if (!game) return;
+  return await fillStorageGameDetail(game);
 }
 
 export async function fillStorageGameDetail(game: Game): Promise<GameDetail> {

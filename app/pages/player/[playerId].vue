@@ -31,7 +31,7 @@
 
     <NH2 id="recent">{{ t('main.player.recent') }}</NH2>
     <ClientOnly>
-      <Player_Matches v-bind="{ matchList, games }" />
+      <!-- <Player_Matches v-bind="{ matchList, games }" /> -->
     </ClientOnly>
 
     <SitePageAnchors>
@@ -49,10 +49,11 @@ const playerId = route.params.playerId;
 
 const { t, currentLocalized } = useLocales();
 
-const { player } = await useApiGetPlayerDetail(playerId);
+const { data: player } = await useFetch(`/api/v4/players/${playerId}/details`);
 
 useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.player") });
 
-const { statsByVersion } = await useApiGetPlayerStatsByVersion(playerId);
-const { matchList, games } = await useApiGetPlayerMatches(playerId);
+const { data: statsByVersion } = await useFetch(`/api/v4/players/${playerId}/stats-by-version`);
+
+// const { matchList, games } = await useApiGetPlayerMatches(playerId);
 </script>

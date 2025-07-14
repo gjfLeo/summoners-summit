@@ -74,24 +74,6 @@ export async function useApiGetAllPlayerStats() {
   };
 }
 
-export async function useApiGetPlayerDetail(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/details`, {
-    deep: true,
-  });
-  return {
-    player: computed(() => data.value?.player),
-  };
-}
-
-export async function useApiGetPlayerStatsByVersion(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/statsByVersion`, {
-    deep: true,
-  });
-  return {
-    statsByVersion: computed(() => data.value?.success ? data.value.statsByVersion : []),
-  };
-}
-
 export async function useApiGetPlayerMatches(playerId: PlayerId) {
   const { data } = await useFetch(`/api/v3/players/${playerId}/matches`, {
     deep: true,

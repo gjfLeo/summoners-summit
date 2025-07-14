@@ -1,7 +1,12 @@
-import { getGameDetail, getGameVersionList, getMatchDetail, getMatchList } from "~~/server/service";
+import z from "zod";
+import { fillStorageGameDetail, fillStorageMatchDetail, getGameBatch, getGameVersionList, getStorageMatchList } from "~~/server/service";
+
+const ZRouteParams = z.object({
+  playerId: ZPlayerId,
+});
 
 export default defineEventHandler(async (event) => {
-  const { playerId } = await getValidatedRouterParams(event, ZApiPlayerRouterParams.parse);
+  const { playerId } = await getValidatedRouterParams(event, ZRouteParams.parse);
 
   const record: Record<GameVersionId, ApiGetPlayerStatsByVersionItem>
     = Object.fromEntries(
@@ -16,18 +21,25 @@ export default defineEventHandler(async (event) => {
 
   const games: GameDetail[] = [];
 
-  getMatchList()
-    .filter(match => !match.isPrePatch)
-    .flatMap((match) => {
-      if (match.playerA.playerId === playerId) return [getMatchDetail(match.id)!];
-      if (match.playerB.playerId === playerId) return [getMirroredMatchDetail(getMatchDetail(match.id)!)];
-      return [];
-    })
-    .forEach((match) => {
-      record[match.gameVersion].numMatches++;
-      if (match.winner === "A") record[match.gameVersion].numMatchesWin++;
-      match.gameIds.forEach(gameId => games.push(getGameDetail(gameId)!));
-    });
+  const matches: MatchDetail[] = [];
+  for (const match of await getStorageMatchList()) {
+    if (match.isPrePatch) continue;
+    if (match.playerA.playerId === playerId) {
+      matches.push((await fillStorageMatchDetail(match.id))!);
+    };
+    if (match.playerB.playerId === playerId) {
+      matches.push(getMirroredMatchDetail((await fillStorageMatchDetail(match.id))!));
+    };
+  }
+  for (const match of matches) {
+    record[match.gameVersion].numMatches++;
+    if (match.winner === "A") {
+      record[match.gameVersion].numMatchesWin++;
+    };
+    for (const game of await getGameBatch(match.gameIds)) {
+      games.push(await fillStorageGameDetail(game));
+    }
+  }
 
   games
     .filter(game => !game.isPrePatch)
@@ -50,5 +62,5 @@ export default defineEventHandler(async (event) => {
     statsByVersion.pop();
   }
 
-  return responseData<ApiGetPlayerStatsByVersionResponse>({ statsByVersion });
+  return statsByVersion;
 });
