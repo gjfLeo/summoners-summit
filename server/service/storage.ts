@@ -10,11 +10,16 @@ export function defineGetRecordStorage<K extends string, V>(
       const keys = await storage.getKeys();
       const record: Partial<Record<K, V>> = {};
       await runParallel(
-        new Set(keys),
+        new Set(keys.filter(key => !key.startsWith("_"))),
         async (key) => {
           const item = await storage.getItem(key);
           const id = key.split(".")[0] as K;
-          record[id] = zodType.parse(item);
+          try {
+            record[id] = zodType.parse(item);
+          }
+          catch (e) {
+            console.error(`Failed to parse ${path} ${key}: ${e}`);
+          }
         },
         { concurrency: 10 },
       );

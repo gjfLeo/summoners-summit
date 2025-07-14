@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { deleteGame, getGame, saveGame } from "./game";
+import { deleteGame, getGame, getGameBatch, saveGame } from "./game";
 import { bindPlayerNickname } from "./player";
 import { defineGetRecordStorage } from "./storage";
-import { getTournament, saveTournament } from "./tournament";
+import { getStorageTournament, getTournament, saveTournament } from "./tournament";
 
 export function getMatch(matchId: MatchId): Match | undefined {
   return ZMatch.parse(readData<Match>(`matches/${matchId}`));
@@ -13,6 +13,11 @@ export function getMatchList(): Match[] {
 }
 
 const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
+
+export async function getStorageMatchList(): Promise<Match[]> {
+  const storage = await getMatchStorage();
+  return Object.values(storage);
+}
 
 export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
   const storage = await getMatchStorage();
@@ -157,6 +162,30 @@ export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
   if (!match) return;
   const tournament = getTournament(match.tournamentId)!;
   const games = match.gameIds.map(gameId => getGame(gameId)!);
+  const aWinDiff = games.reduce((value, game) => {
+    if (game.winner === "A") return value + 1;
+    if (game.winner === "B") return value - 1;
+    return value;
+  }, 0);
+  return {
+    ...match,
+
+    tournamentName: tournament.name,
+    gameVersion: tournament.gameVersion,
+
+    stageName: tournament.stages[match.stageIndex].name,
+    partName: tournament.stages[match.stageIndex].parts[match.partIndex].name,
+    date: tournament.stages[match.stageIndex].parts[match.partIndex].date,
+
+    winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
+  };
+}
+
+export async function fillStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
+  const match = await getStorageMatch(matchId);
+  if (!match) return;
+  const tournament = (await getStorageTournament(match.tournamentId))!;
+  const games = await getGameBatch(match.gameIds);
   const aWinDiff = games.reduce((value, game) => {
     if (game.winner === "A") return value + 1;
     if (game.winner === "B") return value - 1;

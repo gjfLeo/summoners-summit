@@ -51,17 +51,18 @@ const submitLoading = ref(false);
 const inputting = ref(false);
 
 async function show(playerId: Player["id"]) {
-  const res = await $fetch(`/api/v3/players/${playerId}/details`, {
-    method: "GET",
-    params: { id: playerId },
-  });
-  if (!res.success || !res.player) {
-    // message.error(t("admin.message.PLAYER_NOT_FOUND"));
-    message.error(t(`admin.message.${res.code}`));
+  try {
+    const res = await $fetch(`/api/v4/players/${playerId}/details`, {
+      method: "GET",
+    });
+    player.value = res;
+    uniqueName.value = res.uniqueName;
+  }
+  catch {
+    // TODO
+    message.error(t("admin.message.PLAYER_NOT_FOUND"));
     return;
   }
-  player.value = res.player;
-  uniqueName.value = res.player.uniqueName;
   inputting.value = false;
   visible.value = true;
 }

@@ -1,0 +1,53 @@
+import z from "zod";
+import { getPlayerAchievements, getStoragePlayer, getTournamentDetailBriefList } from "~~/server/service";
+
+defineRouteMeta({
+  openAPI: {
+    tags: ["Players"],
+    summary: "查询选手详情",
+    description: "查询指定选手的详细信息。",
+    parameters: [
+      {
+        name: "playerId",
+        in: "path",
+        required: true,
+        description: "选手ID",
+        example: "6e2707a45bb0d3f3",
+      },
+    ],
+  },
+});
+
+const ZRouteParams = z.object({
+  playerId: ZPlayerId,
+});
+
+export default defineEventHandler(async (event) => {
+  const { playerId } = await getValidatedRouterParams(event, ZRouteParams.parse);
+
+  const player = await getStoragePlayer(playerId);
+
+  if (!player) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: errorCodes.PLAYER_NOT_FOUND,
+    });
+  }
+
+  const achievements = await getPlayerAchievements(playerId);
+
+  const tournaments = await getTournamentDetailBriefList();
+  const champions = tournaments.filter(tournament => tournament.champion?.playerId === playerId)
+    .sort((a, b) => b.gameVersion.localeCompare(a.gameVersion))
+    .sort((a, b) => {
+      if (!a.dateRange.start || !b.dateRange.start) {
+        return 0;
+      }
+      return b.dateRange.start.localeCompare(a.dateRange.start);
+    });
+  return {
+    ...player,
+    champions,
+    achievements,
+  };
+});
