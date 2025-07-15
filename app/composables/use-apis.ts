@@ -1,23 +1,3 @@
-export async function useApiGetTournamentList() {
-  const { data, refresh } = await useFetch("/api/v3/tournaments/list", {
-    key: "tournamentList",
-  });
-  return {
-    tournaments: computed<TournamentDetailBrief[]>(() => data.value?.tournaments ?? []),
-    refresh,
-  };
-}
-
-export async function useApiGetTournament(query: { id: TournamentId }) {
-  const { data, refresh } = await useFetch("/api/v3/tournaments/get", { query });
-  return {
-    tournament: computed<Tournament>(() => data.value?.tournament as Tournament),
-    matches: computed<Record<MatchId, Match>>(() => data.value?.matches ?? {}),
-    games: computed<Record<GameId, Game>>(() => data.value?.games ?? {}),
-    refresh,
-  };
-}
-
 export async function useApiGetGameList(params: GetGameListParams) {
   const { data, refresh } = await useFetch("/api/v3/games/list", { params });
   return {

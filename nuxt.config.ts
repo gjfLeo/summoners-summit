@@ -45,6 +45,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    devStorage: {
+      cache: {
+        driver: "memory",
+      },
+    },
     // static: true,
     esbuild: {
       options: {

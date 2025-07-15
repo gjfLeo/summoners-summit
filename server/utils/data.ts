@@ -4,6 +4,7 @@ import fse from "fs-extra";
 
 const dataCache: Record<string, unknown> = {};
 
+/** @deprecated */
 export function readData<R, P extends string = string>(dataPath: P): R | undefined;
 export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
 export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
@@ -32,6 +33,7 @@ export function readData<R, P extends string = string>(dataPath: P, defaultData?
   return data;
 }
 
+/** @deprecated */
 export function readDataList<R, P extends string = string>(dataPath: P): R[] {
   const dirPath = path.resolve("server/data", `${dataPath}`);
   return fs.readdirSync(dirPath, { withFileTypes: true })
