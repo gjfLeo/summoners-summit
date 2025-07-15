@@ -37,12 +37,12 @@
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.tournaments") });
 
-const { tournaments } = await useApiGetTournamentList();
+const { data: tournaments } = await useFetch("/api/v4/tournaments");
 const { gameVersionFullList } = await useAsyncSharedData();
 
 const bySeason = computed(() => {
   const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};
-  tournaments.value.forEach((tournament) => {
+  tournaments.value?.forEach((tournament) => {
     const gameVersionId = tournament.gameVersion;
     const gameVersion = gameVersionFullList.value.find(v => v.id === gameVersionId);
     if (!gameVersion) {

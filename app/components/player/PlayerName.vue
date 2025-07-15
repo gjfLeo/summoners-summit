@@ -1,6 +1,6 @@
 <template>
   <template v-if="id && link">
-    <NuxtLinkLocale :to="{ path: `/player/${id}` }" no-prefetch>{{ nickname }}</NuxtLinkLocale>
+    <NuxtLinkLocale :to="{ path: `/player/${id}` }" prefetch-on="interaction">{{ nickname }}</NuxtLinkLocale>
   </template>
   <template v-else>
     {{ nickname || t('main.player.unknownPlayer') }}

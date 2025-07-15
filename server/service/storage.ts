@@ -6,22 +6,37 @@ export function defineGetRecordStorage<K extends string, V>(
 ): () => Promise<Record<K, V>> {
   return defineCachedFunction(
     async (): Promise<Record<K, V>> => {
+      console.log(`Loading storage ${path}`);
+      console.time(`Loading storage ${path}`);
+
       const storage = useStorage(`assets:data:${path}`);
       const keys = await storage.getKeys();
       const record: Partial<Record<K, V>> = {};
       await runParallel(
-        new Set(keys),
+        new Set(keys.filter(key => !key.startsWith("_"))),
         async (key) => {
           const item = await storage.getItem(key);
           const id = key.split(".")[0] as K;
-          record[id] = zodType.parse(item);
+          try {
+            record[id] = zodType.parse(item);
+          }
+          catch (e) {
+            console.error(`Failed to parse ${path} ${key}: ${e}`);
+          }
         },
         { concurrency: 10 },
       );
-      return record as Record<K, V>;
+
+      console.timeEnd(`Loading storage ${path}`);
+      console.log(`Loaded storage ${path} with ${Object.keys(record).length} items`);
+
+      return Object.fromEntries(
+        Object.entries(record)
+          .sort((a, b) => a[0].localeCompare(b[0])),
+      ) as Record<K, V>;
     },
     {
-      maxAge: import.meta.dev ? 1 : Infinity,
+      maxAge: import.meta.dev ? 2 : 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
     },
@@ -38,7 +53,7 @@ export function defineGetMiscStorage<T>(
       return zodType.parse(storage);
     },
     {
-      maxAge: import.meta.dev ? 1 : Infinity,
+      maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
     },

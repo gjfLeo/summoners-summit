@@ -1,12 +1,29 @@
 import { z } from "zod";
 import { getTournamentDetailBriefList } from "~~/server/service";
 
-const ZParams = z.object({
+defineRouteMeta({
+  openAPI: {
+    tags: ["Tournaments"],
+    summary: "查询赛事列表",
+    description: "根据条件查询赛事列表。",
+    parameters: [
+      {
+        name: "gameVersion",
+        in: "query",
+        required: false,
+        description: "游戏版本",
+        example: "5.0",
+      },
+    ],
+  },
+});
+
+const ZQuery = z.object({
   gameVersion: ZGameVersionId.optional(),
 });
 
 export default defineEventHandler(async (event) => {
-  const { gameVersion } = await getValidatedQuery(event, ZParams.parse);
+  const { gameVersion } = await getValidatedQuery(event, ZQuery.parse);
 
   let tournaments = await getTournamentDetailBriefList();
 
@@ -21,5 +38,5 @@ export default defineEventHandler(async (event) => {
     return b.dateRange.start.localeCompare(a.dateRange.start);
   });
 
-  return responseData({ tournaments });
+  return tournaments;
 });

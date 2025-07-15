@@ -5,7 +5,3 @@ export interface ApiGetPlayerStatsByVersionItem {
   numGames: number;
   numGamesWin: number;
 }
-
-export interface ApiGetPlayerStatsByVersionResponse {
-  statsByVersion: ApiGetPlayerStatsByVersionItem[];
-}

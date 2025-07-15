@@ -5,6 +5,7 @@
         v-model:value="gameVersion"
         :clearable="false"
         :full="false"
+        size="small"
         class="w-6.25rem"
       />
     </template>

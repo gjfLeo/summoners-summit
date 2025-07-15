@@ -30,6 +30,8 @@ export default defineNuxtConfig({
     "/**": { prerender: true },
     "/deck/**": { ssr: false, prerender: false },
     "/en/deck/**": { ssr: false, prerender: false },
+    "/player/**": { ssr: false, prerender: false },
+    "/en/player/**": { ssr: false, prerender: false },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
   },
@@ -43,6 +45,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    devStorage: {
+      cache: {
+        driver: "memory",
+      },
+    },
     // static: true,
     esbuild: {
       options: {

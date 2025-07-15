@@ -1,23 +1,3 @@
-export async function useApiGetTournamentList() {
-  const { data, refresh } = await useFetch("/api/v3/tournaments/list", {
-    key: "tournamentList",
-  });
-  return {
-    tournaments: computed<TournamentDetailBrief[]>(() => data.value?.tournaments ?? []),
-    refresh,
-  };
-}
-
-export async function useApiGetTournament(query: { id: TournamentId }) {
-  const { data, refresh } = await useFetch("/api/v3/tournaments/get", { query });
-  return {
-    tournament: computed<Tournament>(() => data.value?.tournament as Tournament),
-    matches: computed<Record<MatchId, Match>>(() => data.value?.matches ?? {}),
-    games: computed<Record<GameId, Game>>(() => data.value?.games ?? {}),
-    refresh,
-  };
-}
-
 export async function useApiGetGameList(params: GetGameListParams) {
   const { data, refresh } = await useFetch("/api/v3/games/list", { params });
   return {
@@ -71,34 +51,6 @@ export async function useApiGetAllPlayerStats() {
   });
   return {
     stats: computed(() => data.value?.success ? data.value.stats : []),
-  };
-}
-
-export async function useApiGetPlayerDetail(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/details`, {
-    deep: true,
-  });
-  return {
-    player: computed(() => data.value?.player),
-  };
-}
-
-export async function useApiGetPlayerStatsByVersion(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/statsByVersion`, {
-    deep: true,
-  });
-  return {
-    statsByVersion: computed(() => data.value?.success ? data.value.statsByVersion : []),
-  };
-}
-
-export async function useApiGetPlayerMatches(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/matches`, {
-    deep: true,
-  });
-  return {
-    matchList: computed(() => data.value?.success ? data.value.matchList : []),
-    games: computed(() => data.value?.success ? data.value.games : {}),
   };
 }
 

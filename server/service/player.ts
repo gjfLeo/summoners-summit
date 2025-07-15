@@ -1,10 +1,13 @@
 import type { z } from "zod";
 import { getMatchList } from "./match";
+import { defineGetRecordStorage } from "./storage";
 
+/** @deprecated */
 export function getPlayer(playerId: PlayerId): Player | undefined {
   return ZPlayer.optional().parse(readData<Player>(`players/${playerId}`));
 }
 
+/** @deprecated */
 export function getPlayerByUid(uid: string): Player | undefined {
   const playerId = readPlayerIndex().uid[uid];
   return getPlayer(playerId);
@@ -12,6 +15,13 @@ export function getPlayerByUid(uid: string): Player | undefined {
 
 export function getPlayerList(): Player[] {
   return ZPlayer.array().parse(readDataList<Player>("players"));
+}
+
+const getPlayerStorage = defineGetRecordStorage("players", ZPlayer);
+
+export async function getStoragePlayer(playerId: PlayerId) {
+  const storage = await getPlayerStorage();
+  return storage[playerId];
 }
 
 export function deletePlayer(playerId: PlayerId): void {

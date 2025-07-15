@@ -1,27 +1,91 @@
 import { z } from "zod";
-import { deleteGame, getGame, saveGame } from "./game";
+import { deleteGame, getGame, getGameBatch, saveGame } from "./game";
 import { bindPlayerNickname } from "./player";
 import { defineGetRecordStorage } from "./storage";
-import { getTournament, saveTournament } from "./tournament";
-
-export function getMatch(matchId: MatchId): Match | undefined {
-  return ZMatch.parse(readData<Match>(`matches/${matchId}`));
-}
-
-export function getMatchList(): Match[] {
-  return ZMatch.array().parse(readDataList<Match>("matches"));
-}
+import { getStorageTournament, getTournament, saveTournament } from "./tournament";
 
 const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
+
+export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
+  const storage = await getMatchStorage();
+  return storage[matchId];
+}
 
 export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
   const storage = await getMatchStorage();
   return matchIds.map(matchId => storage[matchId]).filter(Boolean);
 }
 
-export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
-  return (await getMatchStorage())[matchId];
+export async function getStorageMatchList(): Promise<Match[]> {
+  const storage = await getMatchStorage();
+  return Object.values(storage);
 }
+
+export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
+  const match = await getStorageMatch(matchId);
+  if (!match) return;
+  return await fillStorageMatchDetail(match);
+}
+export async function fillStorageMatchDetail(match: Match): Promise<MatchDetail> {
+  const tournament = (await getStorageTournament(match.tournamentId))!;
+  const stage = tournament.stages[match.stageIndex];
+  const part = stage.parts[match.partIndex];
+
+  const games = await getGameBatch(match.gameIds);
+  const gamesRecord = Object.fromEntries(games.map(game => [game.id, game]));
+  const winner = getMatchWinner(match, gamesRecord);
+
+  return {
+    ...match,
+
+    tournamentName: tournament.name,
+    gameVersion: tournament.gameVersion,
+    stageName: stage.name,
+    partName: part.name,
+    date: part.date,
+
+    winner,
+  };
+}
+
+// ----------------------------------------------------------------------------
+
+/** @deprecated */
+export function getMatch(matchId: MatchId): Match | undefined {
+  return ZMatch.parse(readData<Match>(`matches/${matchId}`));
+}
+
+/** @deprecated */
+export function getMatchList(): Match[] {
+  return ZMatch.array().parse(readDataList<Match>("matches"));
+}
+
+/** @deprecated */
+export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
+  const match = getMatch(matchId);
+  if (!match) return;
+  const tournament = getTournament(match.tournamentId)!;
+  const games = match.gameIds.map(gameId => getGame(gameId)!);
+  const aWinDiff = games.reduce((value, game) => {
+    if (game.winner === "A") return value + 1;
+    if (game.winner === "B") return value - 1;
+    return value;
+  }, 0);
+  return {
+    ...match,
+
+    tournamentName: tournament.name,
+    gameVersion: tournament.gameVersion,
+
+    stageName: tournament.stages[match.stageIndex].name,
+    partName: tournament.stages[match.stageIndex].parts[match.partIndex].name,
+    date: tournament.stages[match.stageIndex].parts[match.partIndex].date,
+
+    winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
+  };
+}
+
+// ----------------------------------------------------------------------------
 
 export const ZMatchSaveParams = ZMatch.partial({
   id: true,
@@ -150,28 +214,4 @@ export function saveMatch(params: MatchSaveParams) {
   games.forEach(saveGame);
 
   return matchId;
-}
-
-export function getMatchDetail(matchId: MatchId): MatchDetail | undefined {
-  const match = getMatch(matchId);
-  if (!match) return;
-  const tournament = getTournament(match.tournamentId)!;
-  const games = match.gameIds.map(gameId => getGame(gameId)!);
-  const aWinDiff = games.reduce((value, game) => {
-    if (game.winner === "A") return value + 1;
-    if (game.winner === "B") return value - 1;
-    return value;
-  }, 0);
-  return {
-    ...match,
-
-    tournamentName: tournament.name,
-    gameVersion: tournament.gameVersion,
-
-    stageName: tournament.stages[match.stageIndex].name,
-    partName: tournament.stages[match.stageIndex].parts[match.partIndex].name,
-    date: tournament.stages[match.stageIndex].parts[match.partIndex].date,
-
-    winner: match.winnerOverride ?? (aWinDiff > 0 ? "A" : aWinDiff < 0 ? "B" : "DRAW"),
-  };
 }

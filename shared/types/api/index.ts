@@ -2,7 +2,6 @@ export * from "./cards/GetActionCardStats";
 
 export * from "./games/GetGameList";
 
-export * from "./players/GetPlayerMatches";
 export * from "./players/GetPlayerStatsByVersion";
 export * from "./players/GetPlayerStatsRecord";
 export * from "./players/shared";
