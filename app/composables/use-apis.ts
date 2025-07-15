@@ -54,16 +54,6 @@ export async function useApiGetAllPlayerStats() {
   };
 }
 
-export async function useApiGetPlayerMatches(playerId: PlayerId) {
-  const { data } = await useFetch(`/api/v3/players/${playerId}/matches`, {
-    deep: true,
-  });
-  return {
-    matchList: computed(() => data.value?.success ? data.value.matchList : []),
-    games: computed(() => data.value?.success ? data.value.games : {}),
-  };
-}
-
 export async function useApiGetOverviewStats() {
   const { data } = await useFetch("/api/v3/overview", {
     deep: true,

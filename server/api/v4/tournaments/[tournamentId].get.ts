@@ -6,7 +6,7 @@ defineRouteMeta({
   openAPI: {
     tags: ["Tournaments"],
     summary: "查询赛事详情",
-    description: "查询指定赛事详情，及其场次、对局信息。",
+    description: "查询指定赛事详情，和相应的场次、对局信息。",
     parameters: [
       {
         name: "tournamentId",
