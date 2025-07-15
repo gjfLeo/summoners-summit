@@ -24,7 +24,9 @@ export async function getStorageMatchList(): Promise<Match[]> {
 export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
   const match = await getStorageMatch(matchId);
   if (!match) return;
-
+  return await fillStorageMatchDetail(match);
+}
+export async function fillStorageMatchDetail(match: Match): Promise<MatchDetail> {
   const tournament = (await getStorageTournament(match.tournamentId))!;
   const stage = tournament.stages[match.stageIndex];
   const part = stage.parts[match.partIndex];
