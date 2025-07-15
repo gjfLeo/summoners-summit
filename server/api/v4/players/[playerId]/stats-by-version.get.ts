@@ -1,5 +1,5 @@
 import z from "zod";
-import { fillStorageGameDetail, getGameBatch, getGameVersionList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
+import { fillStorageGameDetail, fillStorageMatchDetail, getGameBatch, getGameVersionList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -25,9 +25,10 @@ const ZRouteParams = z.object({
 export default defineEventHandler(async (event) => {
   const { playerId } = await getValidatedRouterParams(event, ZRouteParams.parse);
 
+  const gameVersions = await getGameVersionList();
   const record: Record<GameVersionId, ApiGetPlayerStatsByVersionItem>
     = Object.fromEntries(
-      (await getGameVersionList()).map(gameVersion => [gameVersion.id, {
+      gameVersions.map(gameVersion => [gameVersion.id, {
         gameVersion: gameVersion.id,
         numMatches: 0,
         numMatchesWin: 0,
@@ -38,19 +39,23 @@ export default defineEventHandler(async (event) => {
 
   const games: GameDetail[] = [];
 
-  const matches: MatchDetail[] = [];
-  for (const match of await getStorageMatchList()) {
+  console.time("getStorageMatchList");
+  const matches = await getStorageMatchList();
+  console.timeEnd("getStorageMatchList");
+
+  const matchDetails: MatchDetail[] = [];
+  for (const match of matches) {
     if (match.isPrePatch) continue;
     if (match.playerA.playerId === playerId) {
-      const detail = await getStorageMatchDetail(match.id);
-      matches.push(detail!);
+      const detail = await fillStorageMatchDetail(match);
+      matchDetails.push(detail);
     };
     if (match.playerB.playerId === playerId) {
-      const detail = await getStorageMatchDetail(match.id);
-      matches.push(getMirroredMatchDetail(detail!));
+      const detail = await fillStorageMatchDetail(match);
+      matchDetails.push(getMirroredMatchDetail(detail));
     };
   }
-  for (const match of matches) {
+  for (const match of matchDetails) {
     record[match.gameVersion].numMatches++;
     if (match.winner === "A") {
       record[match.gameVersion].numMatchesWin++;
