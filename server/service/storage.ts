@@ -36,7 +36,7 @@ export function defineGetRecordStorage<K extends string, V>(
       ) as Record<K, V>;
     },
     {
-      maxAge: import.meta.dev ? 2 : Infinity,
+      maxAge: import.meta.dev ? 2 : 0,
       group: "storage",
       name: path,
     },
