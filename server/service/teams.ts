@@ -198,7 +198,7 @@ export const getTeamDecksStats = defineCachedFunction(
       });
   },
   {
-    maxAge: import.meta.dev ? 1 : 0,
+    maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
     name: "getTeamDecksStats",
     getKey: ({ teamId, gameVersion }) =>
       [teamId, gameVersion].filter(Boolean).join(":"),

@@ -36,7 +36,7 @@ export function defineGetRecordStorage<K extends string, V>(
       ) as Record<K, V>;
     },
     {
-      maxAge: import.meta.dev ? 2 : 0,
+      maxAge: import.meta.dev ? 2 : 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
     },
@@ -53,7 +53,7 @@ export function defineGetMiscStorage<T>(
       return zodType.parse(storage);
     },
     {
-      maxAge: import.meta.dev ? 1 : Infinity,
+      maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
     },
