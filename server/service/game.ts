@@ -2,13 +2,12 @@ import { getMatch, getStorageMatch } from "./match";
 import { defineGetRecordStorage } from "./storage";
 import { getStorageTournament, getTournament } from "./tournament";
 
+/** @deprecated */
 export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));
 }
 
-/**
- * @deprecated
- */
+/** @deprecated */
 export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
@@ -28,6 +27,7 @@ export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
   return matchIds.map(matchId => games[matchId]).filter(Boolean);
 }
 
+/** @deprecated */
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
   if (!game) return;
@@ -66,6 +66,7 @@ export function deleteGame(gameId: GameId) {
   deleteData(`games/${gameId}`);
 }
 
+/** @deprecated */
 export function fillGameDetail(game: Game) {
   const match = getMatch(game.matchId)!;
   const tournament = getTournament(match.tournamentId)!;

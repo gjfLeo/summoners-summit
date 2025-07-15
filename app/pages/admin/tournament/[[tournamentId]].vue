@@ -41,8 +41,7 @@ const { t, currentLocalized } = useLocales();
 useHead({ title: t("site.titles.admin.tournament") });
 const localePath = useLocalePath();
 
-const { data, refresh } = await useFetch("/api/v3/tournaments/get", {
-  query: { id: id as string },
+const { data, refresh } = await useFetch(`/api/v4/tournaments/${id}`, {
   immediate: false,
 });
 
@@ -67,7 +66,7 @@ async function queryTournamentDetail(tournamentId?: TournamentId) {
       await navigateTo({ name: route.name });
       return;
     }
-    tournament.value = data.value.tournament;
+    tournament.value = data.value;
     matches.value = data.value.matches;
     games.value = data.value.games;
   }

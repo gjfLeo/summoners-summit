@@ -23,7 +23,10 @@ export function defineGetRecordStorage<K extends string, V>(
         },
         { concurrency: 10 },
       );
-      return record as Record<K, V>;
+      return Object.fromEntries(
+        Object.entries(record)
+          .sort((a, b) => a[0].localeCompare(b[0])),
+      ) as Record<K, V>;
     },
     {
       maxAge: import.meta.dev ? 1 : Infinity,

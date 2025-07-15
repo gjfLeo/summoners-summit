@@ -1,5 +1,5 @@
 import z from "zod";
-import { fillStorageGameDetail, fillStorageMatchDetail, getGameBatch, getGameVersionList, getStorageMatchList } from "~~/server/service";
+import { fillStorageGameDetail, getGameBatch, getGameVersionList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
 
 const ZRouteParams = z.object({
   playerId: ZPlayerId,
@@ -25,10 +25,12 @@ export default defineEventHandler(async (event) => {
   for (const match of await getStorageMatchList()) {
     if (match.isPrePatch) continue;
     if (match.playerA.playerId === playerId) {
-      matches.push((await fillStorageMatchDetail(match.id))!);
+      const detail = await getStorageMatchDetail(match.id);
+      matches.push(detail!);
     };
     if (match.playerB.playerId === playerId) {
-      matches.push(getMirroredMatchDetail((await fillStorageMatchDetail(match.id))!));
+      const detail = await getStorageMatchDetail(match.id);
+      matches.push(getMirroredMatchDetail(detail!));
     };
   }
   for (const match of matches) {

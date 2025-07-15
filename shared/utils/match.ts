@@ -87,3 +87,9 @@ export function getMirroredMatchDetail(match: MatchDetail): MatchDetail {
     winner: getMirroredPlayer(match.winner),
   };
 }
+
+export function getTournamentMatchIds(tournament: Tournament) {
+  return tournament.stages.flatMap((s) => {
+    return s.parts.flatMap(p => p.matchIds);
+  });
+}

@@ -1,5 +1,6 @@
 import { defineGetMiscStorage } from "./storage";
 
+/** @deprecated */
 export function getAchievementList(): Achievement[] {
   return ZAchievement.array().parse(readData<Achievement[]>("misc/achievements", []));
 }
