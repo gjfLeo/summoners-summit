@@ -31,7 +31,7 @@
 
     <NH2 id="recent">{{ t('main.player.recent') }}</NH2>
     <ClientOnly>
-      <!-- <Player_Matches v-bind="{ matchList, games }" /> -->
+      <Player_Matches :matches="matches" />
     </ClientOnly>
 
     <SitePageAnchors>
@@ -55,5 +55,7 @@ useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.pl
 
 const { data: statsByVersion } = await useFetch(`/api/v4/players/${playerId}/stats-by-version`);
 
-// const { matchList, games } = await useApiGetPlayerMatches(playerId);
+const { data: matches } = await useFetch("/api/v4/matches", {
+  query: { playerId, limit: 10 },
+});
 </script>
