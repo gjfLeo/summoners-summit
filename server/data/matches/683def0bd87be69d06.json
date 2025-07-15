@@ -1,17 +1,17 @@
 {
-  "id": "683def0bd87be69d04",
+  "id": "683def0bd87be69d06",
   "tournamentId": "683def0bd87be69d",
   "stageIndex": 0,
-  "partIndex": 0,
-  "matchIndex": 3,
+  "partIndex": 1,
+  "matchIndex": 1,
   "gameVersion": "5.7",
   "playerA": {
-    "playerId": "f64f8b195a6c59a8",
-    "nickname": "绝袋双骄"
+    "playerId": "357f80d929a918ce",
+    "nickname": "Elaina"
   },
   "playerB": {
-    "playerId": "88db119a8f48440c",
-    "nickname": "荧"
+    "playerId": "0a524623700f55ed",
+    "nickname": "凌风吹雨"
   },
   "bans": [
     {
@@ -21,7 +21,7 @@
     }
   ],
   "gameIds": [
-    "683def0bd87be69d0401",
-    "683def0bd87be69d0402"
+    "683def0bd87be69d0601",
+    "683def0bd87be69d0602"
   ]
 }
