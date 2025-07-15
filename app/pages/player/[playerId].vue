@@ -4,8 +4,13 @@
     <NText v-if="player.aliases?.length" class="mt block" :depth="3">
       {{ t('main.player.otherNicknames1', [player.aliases.join("\u2006/\u2006")]) }}
     </NText>
-    <NText v-if="player.champions?.length" class="mt block" :depth="2">
-      {{ t('main.player.championOf', [player.champions.map(tournament => `${tournament.gameVersion} ${currentLocalized(tournament.name)}`).join("\u2006/\u2006")]) }}
+    <NText v-if="championsText || championsLoading" class="mt block" :depth="2">
+      <template v-if="!championsLoading">
+        {{ t('main.player.championOf', [championsText]) }}
+      </template>
+      <template v-else>
+        <NSkeleton text style="max-width: max(50%, 20em);" />
+      </template>
     </NText>
 
     <div v-if="player.achievements?.length">
@@ -30,9 +35,12 @@
     </ClientOnly>
 
     <NH2 id="recent">{{ t('main.player.recent') }}</NH2>
-    <ClientOnly>
+    <template v-if="!matchesLoading">
       <Player_Matches :matches="matches" />
-    </ClientOnly>
+    </template>
+    <template v-else>
+      <NSpin size="large" />
+    </template>
 
     <SitePageAnchors>
       <NAnchorLink :title="t('main.player.playerDetail')" :href="`#${player.uniqueName}`">
@@ -55,7 +63,15 @@ useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.pl
 
 const { data: statsByVersion } = await useFetch(`/api/v4/players/${playerId}/stats-by-version`);
 
-const { data: matches } = await useFetch("/api/v4/matches", {
+const { data: matches, pending: matchesLoading } = useLazyFetch("/api/v4/matches", {
   query: { playerId, limit: 10 },
+});
+
+const { data: champions, pending: championsLoading } = useLazyFetch(`/api/v4/players/${playerId}/champions`);
+const championsText = computed(() => {
+  if (!champions.value) return undefined;
+  return champions.value
+    .map(c => `${c.gameVersion} ${currentLocalized(c.tournamentName)}`)
+    .join("\u2006/\u2006");
 });
 </script>

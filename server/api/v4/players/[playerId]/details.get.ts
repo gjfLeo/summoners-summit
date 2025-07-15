@@ -1,5 +1,5 @@
 import z from "zod";
-import { getPlayerAchievements, getStoragePlayer, getTournamentDetailBriefList } from "~~/server/service";
+import { getPlayerAchievements, getStoragePlayer } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -36,18 +36,8 @@ export default defineEventHandler(async (event) => {
 
   const achievements = await getPlayerAchievements(playerId);
 
-  const tournaments = await getTournamentDetailBriefList();
-  const champions = tournaments.filter(tournament => tournament.champion?.playerId === playerId)
-    .sort((a, b) => b.gameVersion.localeCompare(a.gameVersion))
-    .sort((a, b) => {
-      if (!a.dateRange.start || !b.dateRange.start) {
-        return 0;
-      }
-      return b.dateRange.start.localeCompare(a.dateRange.start);
-    });
   return {
     ...player,
-    champions,
     achievements,
   };
 });
