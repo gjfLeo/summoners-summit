@@ -1,6 +1,23 @@
 import z from "zod";
 import { fillStorageGameDetail, getGameBatch, getGameVersionList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
 
+defineRouteMeta({
+  openAPI: {
+    tags: ["Players"],
+    summary: "查询选手统计数据",
+    description: "查询选手的赛事统计数据，按游戏版本为维度。<p>若选手在某个版本之前或某个版本之后没有参赛记录，多个无数据的版本会被截取（每侧保留一个版本）。中间的空白版本不会省略。</p>",
+    parameters: [
+      {
+        name: "playerId",
+        in: "path",
+        required: true,
+        description: "选手ID",
+        example: "d2b084af89a32bf5",
+      },
+    ],
+  },
+});
+
 const ZRouteParams = z.object({
   playerId: ZPlayerId,
 });
