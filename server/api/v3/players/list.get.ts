@@ -1,4 +1,4 @@
-import { getPlayerList } from "~/server/service";
+import { getPlayerList } from "~~/server/service";
 
 export default defineEventHandler(() => {
   const players = getPlayerList();

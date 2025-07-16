@@ -1,5 +1,5 @@
 import { simpleGit } from "simple-git";
-import { z } from "zod/v4";
+import { z } from "zod";
 
 const schema = z.object({
   message: z.string().default("更新数据"),

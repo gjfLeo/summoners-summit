@@ -1,45 +1,88 @@
-import type { z } from "zod/v4";
-import type { Tournament, TournamentDetail, TournamentDetailBrief, TournamentId } from "~/types";
-import { ZTournament, ZTournamentDetailBrief } from "~/types";
-import { getMatchDetail } from "./match";
+import type { z } from "zod";
+import type { TournamentDetail, TournamentId } from "~~/shared/types";
+import { getGameBatch } from "./game";
+import { getMatchDetail, getStorageMatchBatch } from "./match";
 import { defineGetRecordStorage } from "./storage";
-
-export function getTournament(tournamentId: TournamentId): Tournament | undefined {
-  return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
-}
 
 const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
 
-export async function getStorageTournamentList(): Promise<Tournament[]> {
-  return Object.values(await getTournamentStorage());
-}
 export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
   return (await getTournamentStorage())[tournamentId];
 }
 
-export const ZTournamentSaveParams = ZTournament.partial({
-  id: true,
-  stages: true,
-}).strip();
-type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
-export function saveTournament(params: TournamentSaveParams) {
-  params.stages?.forEach((stage) => {
-    delete stage._key;
-    stage.parts.forEach((part) => {
-      delete part._key;
-    });
-  });
-  const tournament: Tournament = {
-    ...params,
-    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
-    stages: params.stages ?? [],
-  };
-
-  writeData(`tournaments/${tournament.id}`, ZTournament.parse(tournament));
-
-  return tournament.id;
+export async function getStorageTournamentList(): Promise<Tournament[]> {
+  return Object.values(await getTournamentStorage());
 }
 
+export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
+  const tournaments = await getStorageTournamentList();
+  const list: TournamentDetailBrief[] = [];
+  for (const tournament of tournaments) {
+    const detail = await fillStorageTournamentDetail(tournament);
+    list.push(ZTournamentDetailBrief.parse(detail));
+  }
+  return list;
+}
+
+export async function getStorageTournamentDetail(tournamentId: TournamentId): Promise<TournamentDetail | undefined> {
+  const tournament = await getStorageTournament(tournamentId);
+  if (!tournament) return;
+  return await fillStorageTournamentDetail(tournament);
+}
+
+async function fillStorageTournamentDetail(tournament: Tournament): Promise<TournamentDetail> {
+  return {
+    ...tournament,
+    dateRange: getTournamentDateRange(tournament),
+    champion: await getTournamentChampion(tournament),
+  };
+}
+
+function getTournamentDateRange(tournament: Tournament): TournamentDetail["dateRange"] {
+  const firstStage = tournament.stages.length ? tournament.stages[0] : undefined;
+  const lastStage = tournament.stages.length ? tournament.stages[tournament.stages.length - 1] : undefined;
+  const firstPart = firstStage?.parts.length ? firstStage.parts[0] : undefined;
+  const lastPart = lastStage?.parts.length ? lastStage.parts[lastStage.parts.length - 1] : undefined;
+  return {
+    start: firstPart?.date,
+    end: lastPart?.date,
+  };
+}
+
+async function getTournamentChampion(tournament: Tournament): Promise<TournamentDetail["champion"] | undefined> {
+  const matchIds = tournament.stages.toReversed()
+    .flatMap(stage => stage.parts.toReversed())
+    .flatMap(part => part.matchIds.toReversed());
+  const matches = await getStorageMatchBatch(matchIds);
+  for (const match of matches) {
+    if (match && match.isFinal) {
+      const games = await getGameBatch(match.gameIds);
+      const gamesRecord = Object.fromEntries(games.map(game => [game.id, game]));
+      const winner = getMatchWinner(match, gamesRecord);
+      switch (winner) {
+        case "A": return match.playerA;
+        case "B": return match.playerB;
+        default: return undefined;
+      }
+    }
+  }
+  return undefined;
+}
+
+// ----------------------------------------------------------------------------
+
+/** @deprecated */
+export function getTournament(tournamentId: TournamentId): Tournament | undefined {
+  return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
+}
+
+/** @deprecated 注意有一段_key逻辑 */
+export function getTournamentDetail(tournamentId: TournamentId): TournamentDetail | undefined {
+  const tournament = getTournament(tournamentId);
+  return tournament ? fillTournamentDetail(tournament) : undefined;
+}
+
+/** @deprecated 注意有一段_key逻辑 */
 function fillTournamentDetail(tournament: Tournament): TournamentDetail {
   const firstStage = tournament.stages.length ? tournament.stages[0] : undefined;
   const lastStage = tournament.stages.length ? tournament.stages[tournament.stages.length - 1] : undefined;
@@ -68,13 +111,27 @@ function fillTournamentDetail(tournament: Tournament): TournamentDetail {
   };
 }
 
-export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
-  return (await getStorageTournamentList())
-    .map(fillTournamentDetail)
-    .map(t => ZTournamentDetailBrief.parse(t));
-}
+// ----------------------------------------------------------------------------
 
-export function getTournamentDetail(tournamentId: TournamentId): TournamentDetail | undefined {
-  const tournament = getTournament(tournamentId);
-  return tournament ? fillTournamentDetail(tournament) : undefined;
+export const ZTournamentSaveParams = ZTournament.partial({
+  id: true,
+  stages: true,
+}).strip();
+type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
+export function saveTournament(params: TournamentSaveParams) {
+  params.stages?.forEach((stage) => {
+    delete stage._key;
+    stage.parts.forEach((part) => {
+      delete part._key;
+    });
+  });
+  const tournament: Tournament = {
+    ...params,
+    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
+    stages: params.stages ?? [],
+  };
+
+  writeData(`tournaments/${tournament.id}`, ZTournament.parse(tournament));
+
+  return tournament.id;
 }

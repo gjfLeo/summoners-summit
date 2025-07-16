@@ -59,4 +59,7 @@
     "titleBar.inactiveBackground": "#00ff4080",
     "activityBar.background": "#00ff4020",
   },
+  "cSpell.words": [
+    "uids",
+  ],
 }

@@ -1,4 +1,3 @@
-import type { GameVersionId, Ranks } from "~/types";
 import { getPlayer } from "./player";
 
 export function getRanks(id: string) {

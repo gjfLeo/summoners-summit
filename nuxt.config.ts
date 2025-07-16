@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     "nuxt-echarts",
   ],
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   runtimeConfig: {
     public: {
       needRedirect: false,
@@ -26,11 +30,26 @@ export default defineNuxtConfig({
     "/**": { prerender: true },
     "/deck/**": { ssr: false, prerender: false },
     "/en/deck/**": { ssr: false, prerender: false },
+    "/player/**": { ssr: false, prerender: false },
+    "/en/player/**": { ssr: false, prerender: false },
     "/admin/**": { ssr: false, prerender: false },
     "/en/admin/**": { ssr: false, prerender: false },
   },
 
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        noUncheckedIndexedAccess: false,
+      },
+    },
+  },
+
   nitro: {
+    devStorage: {
+      cache: {
+        driver: "memory",
+      },
+    },
     // static: true,
     esbuild: {
       options: {
@@ -46,6 +65,25 @@ export default defineNuxtConfig({
       baseName: "data",
       dir: "./data",
     }],
+    openAPI: {
+      meta: {
+        title: "召唤之巅API",
+      },
+      production: "runtime",
+      route: "/_docs/openapi.json",
+      ui: {
+        scalar: {
+          route: "/_docs/scalar",
+          theme: "bluePlanet",
+        },
+        swagger: {
+          route: "/_docs/swagger",
+        },
+      },
+    },
+    experimental: {
+      openAPI: true,
+    },
   },
 
   app: {

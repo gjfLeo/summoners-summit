@@ -1,6 +1,5 @@
-import { z } from "zod/v4";
-import { getPlayerByUid, savePlayer, saveRanks } from "~/server/service";
-import { ZRanks } from "~/types";
+import { z } from "zod";
+import { getPlayerByUid, savePlayer, saveRanks } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const { ranks } = await readValidatedBody(event, z.object({ ranks: ZRanks }).parse);

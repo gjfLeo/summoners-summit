@@ -1,6 +1,4 @@
-import type { PlayerId, PlayerStats } from "~/types";
-import { getGameDetail, getGameList, getMatchDetail, getMatchList, getPlayer, getPlayerRank } from "~/server/service";
-import { getMirroredGameDetail, getMirroredMatchDetail } from "~/utils/match";
+import { getGameDetail, getGameList, getMatchDetail, getMatchList, getPlayer, getPlayerRank } from "~~/server/service";
 
 export default defineEventHandler(async () => {
   const record: Record<PlayerId, PlayerStats> = {};

@@ -1,17 +1,13 @@
-import type { Game, GameDetail, GameId } from "~/types";
-import { ZGame } from "~/types";
-import { mirrorPlayer } from "../utils/player";
 import { getMatch, getStorageMatch } from "./match";
 import { defineGetRecordStorage } from "./storage";
 import { getStorageTournament, getTournament } from "./tournament";
 
+/** @deprecated */
 export function getGame(gameId: GameId): Game | undefined {
   return ZGame.optional().parse(readData(`games/${gameId}`));
 }
 
-/**
- * @deprecated
- */
+/** @deprecated */
 export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
@@ -22,11 +18,16 @@ export async function getStorageGameList(): Promise<Game[]> {
   return Object.values(await getGameStorage());
 }
 
+export async function getStorageGame(gameId: GameId): Promise<Game | undefined> {
+  return (await getGameStorage())[gameId];
+}
+
 export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
   const games = await getGameStorage();
   return matchIds.map(matchId => games[matchId]).filter(Boolean);
 }
 
+/** @deprecated */
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
   if (!game) return;
@@ -65,6 +66,7 @@ export function deleteGame(gameId: GameId) {
   deleteData(`games/${gameId}`);
 }
 
+/** @deprecated */
 export function fillGameDetail(game: Game) {
   const match = getMatch(game.matchId)!;
   const tournament = getTournament(match.tournamentId)!;
@@ -89,6 +91,12 @@ export function fillGameDetail(game: Game) {
     playerA: match.playerA,
     playerB: match.playerB,
   } satisfies GameDetail;
+}
+
+export async function getStorageGameDetail(gameId: GameId): Promise<GameDetail | undefined> {
+  const game = await getStorageGame(gameId);
+  if (!game) return;
+  return await fillStorageGameDetail(game);
 }
 
 export async function fillStorageGameDetail(game: Game): Promise<GameDetail> {

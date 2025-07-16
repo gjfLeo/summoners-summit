@@ -1,0 +1,28 @@
+{
+  "id": "683def0bd87be69d10",
+  "tournamentId": "683def0bd87be69d",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "5.7",
+  "playerA": {
+    "playerId": "464bf5e9dbec516f",
+    "nickname": "喵帕斯"
+  },
+  "playerB": {
+    "playerId": "9de4785d58d2aa3f",
+    "nickname": "植物兄弟蓝雨雨"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1315-1610-1709",
+      "playerBTeamId": "1109-1511-2204"
+    }
+  ],
+  "gameIds": [
+    "683def0bd87be69d1001",
+    "683def0bd87be69d1002",
+    "683def0bd87be69d1003"
+  ]
+}

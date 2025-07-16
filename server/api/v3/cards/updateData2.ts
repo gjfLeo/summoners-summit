@@ -1,6 +1,4 @@
-import type { ActionCardInfo, CharacterCardInfo } from "~/types";
-import { z } from "zod/v4";
-import { ZActionCardInfo, ZCardId, ZCharacterCardInfo } from "~/types";
+import { z } from "zod";
 
 const ZGyData = z.array(
   z.object({

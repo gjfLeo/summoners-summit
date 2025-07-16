@@ -1,5 +1,3 @@
-import type { CardId, DeckCode, DeckTeamId, GameVersionId, GetAllTeamMatchupsParams, GetAllTeamStatsParams, TeamMatchups, TeamStats } from "~/types";
-import { getMirroredGame } from "~/utils/match";
 import { getActionCardCountRecord } from "./card";
 import { getGameList, getStorageGameList } from "./game";
 import { getMatchList } from "./match";
@@ -200,7 +198,7 @@ export const getTeamDecksStats = defineCachedFunction(
       });
   },
   {
-    maxAge: import.meta.dev ? 1 : 0,
+    maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
     name: "getTeamDecksStats",
     getKey: ({ teamId, gameVersion }) =>
       [teamId, gameVersion].filter(Boolean).join(":"),

@@ -1,5 +1,4 @@
-import type { GetOverviewResponse, GetOverviewResponseItem } from "~/types/api/stub/GetOverview";
-import { getGameList, getGameVersionList } from "~/server/service";
+import { getGameList, getGameVersionList } from "~~/server/service";
 
 export default defineEventHandler(async () => {
   const record = Object.fromEntries<GetOverviewResponseItem>(
