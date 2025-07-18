@@ -11,6 +11,20 @@
       "name": {
         "zh": "16进8"
       },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
       "parts": [
         {
           "name": {
@@ -30,7 +44,108 @@
           },
           "date": "2025-07-08",
           "matchIds": [
-            "683def0bd87be69d05"
+            "683def0bd87be69d05",
+            "683def0bd87be69d06",
+            "683def0bd87be69d07",
+            "683def0bd87be69d08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-07-09",
+          "matchIds": [
+            "683def0bd87be69d09",
+            "683def0bd87be69d10"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-07-10",
+          "matchIds": [
+            "683def0bd87be69d11",
+            "683def0bd87be69d12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-07-11",
+          "matchIds": [
+            "683def0bd87be69d13",
+            "683def0bd87be69d14"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-07-13",
+          "matchIds": [
+            "683def0bd87be69d15"
           ]
         }
       ]
