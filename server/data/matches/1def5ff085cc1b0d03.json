@@ -1,0 +1,23 @@
+{
+  "id": "1def5ff085cc1b0d03",
+  "tournamentId": "1def5ff085cc1b0d",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "5.7",
+  "playerA": {
+    "playerId": "e1f22e3c57a5845b",
+    "nickname": "RedY"
+  },
+  "playerB": {
+    "playerId": "bfc3d1bda8269d93",
+    "nickname": "里里塔"
+  },
+  "gameIds": [
+    "1def5ff085cc1b0d0301",
+    "1def5ff085cc1b0d0302",
+    "1def5ff085cc1b0d0303",
+    "1def5ff085cc1b0d0304"
+  ],
+  "video": "https://www.bilibili.com/video/BV1b2gKzrEpi"
+}
