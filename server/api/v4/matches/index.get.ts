@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { getGameBatch, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
+import { getStorageGameList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -49,7 +49,7 @@ export default defineEventHandler(async (event) => {
   const details: (MatchDetail & { games: Record<GameId, Game> })[] = [];
   for (const match of matches) {
     const detail = (await getStorageMatchDetail(match.id))!;
-    const games = await getGameBatch(match.gameIds);
+    const games = await getStorageGameList(match.gameIds);
     if (playerId && match.playerB.playerId === playerId) {
       details.push({
         ...getMirroredMatchDetail(detail),

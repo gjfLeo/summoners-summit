@@ -1,5 +1,5 @@
 import z from "zod";
-import { fillStorageGameDetail, fillStorageMatchDetail, getGameBatch, getGameVersionList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
+import { fillStorageGameDetail, fillStorageMatchDetail, getGameVersionList, getStorageGameList, getStorageMatchList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -60,7 +60,7 @@ export default defineEventHandler(async (event) => {
     if (match.winner === "A") {
       record[match.gameVersion].numMatchesWin++;
     };
-    for (const game of await getGameBatch(match.gameIds)) {
+    for (const game of await getStorageGameList(match.gameIds)) {
       games.push(await fillStorageGameDetail(game));
     }
   }

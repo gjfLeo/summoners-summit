@@ -1,5 +1,5 @@
 import { getMatch, getStorageMatch } from "./match";
-import { defineGetRecordStorage } from "./storage";
+import { defineRecordStorage } from "./storage";
 import { getStorageTournament, getTournament } from "./tournament";
 
 /** @deprecated */
@@ -12,20 +12,26 @@ export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
 
-const getGameStorage = defineGetRecordStorage("games", ZGame);
+const gameStorage = defineRecordStorage("games", ZGame);
+export const getStorageGame = gameStorage.get;
+export const getStorageGameList = gameStorage.getList;
+export const getStorageGameRecord = gameStorage.getRecord;
+export const clearGameCache = gameStorage.clearCache;
 
-export async function getStorageGameList(): Promise<Game[]> {
-  return Object.values(await getGameStorage());
-}
+// const getGameStorage = defineGetRecordStorage("games", ZGame);
 
-export async function getStorageGame(gameId: GameId): Promise<Game | undefined> {
-  return (await getGameStorage())[gameId];
-}
+// export async function getStorageGameList(): Promise<Game[]> {
+//   return Object.values(await getGameStorage());
+// }
 
-export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
-  const games = await getGameStorage();
-  return matchIds.map(matchId => games[matchId]).filter(Boolean);
-}
+// export async function getStorageGame(gameId: GameId): Promise<Game | undefined> {
+//   return (await getGameStorage())[gameId];
+// }
+
+// export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
+//   const games = await getGameStorage();
+//   return matchIds.map(matchId => games[matchId]).filter(Boolean);
+// }
 
 /** @deprecated */
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
@@ -60,10 +66,12 @@ export function getGameDetail(gameId: GameId): GameDetail | undefined {
 
 export function saveGame(game: Game) {
   writeData(`games/${game.id}`, ZGame.parse(game));
+  return clearGameCache();
 }
 
 export function deleteGame(gameId: GameId) {
   deleteData(`games/${gameId}`);
+  return clearGameCache();
 }
 
 /** @deprecated */

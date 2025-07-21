@@ -1,5 +1,5 @@
-import { getGameBatch } from "./game";
-import { getStorageMatchBatch } from "./match";
+import { getStorageGameList } from "./game";
+import { getStorageMatchList } from "./match";
 import { getStorageTournamentList } from "./tournament";
 
 export async function getDeckCodes({ gameVersion }: { gameVersion: GameVersionId }) {
@@ -10,10 +10,10 @@ export async function getDeckCodes({ gameVersion }: { gameVersion: GameVersionId
     .flatMap(s => s.parts)
     .flatMap(p => p.matchIds);
 
-  const matches = await getStorageMatchBatch(matchIds);
+  const matches = await getStorageMatchList(matchIds);
   const gameIds = matches.flatMap(m => m.gameIds);
 
-  const games = await getGameBatch(gameIds);
+  const games = await getStorageGameList(gameIds);
   const decks = games.flatMap(g => [g.playerADeck, g.playerBDeck])
     .filter(d => d.deckCode);
 

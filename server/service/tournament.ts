@@ -1,18 +1,23 @@
 import type { z } from "zod";
 import type { TournamentDetail, TournamentId } from "~~/shared/types";
-import { getGameBatch } from "./game";
-import { getMatchDetail, getStorageMatchBatch } from "./match";
-import { defineGetRecordStorage } from "./storage";
+import { getStorageGameRecord } from "./game";
+import { getMatchDetail, getStorageMatchList } from "./match";
+import { defineRecordStorage } from "./storage";
 
-const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
+const tournamentStorage = defineRecordStorage("tournaments", ZTournament);
+export const getStorageTournament = tournamentStorage.get;
+export const getStorageTournamentList = tournamentStorage.getList;
+export const clearTournamentCache = tournamentStorage.clearCache;
 
-export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
-  return (await getTournamentStorage())[tournamentId];
-}
+// const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
 
-export async function getStorageTournamentList(): Promise<Tournament[]> {
-  return Object.values(await getTournamentStorage());
-}
+// export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
+//   return (await getTournamentStorage())[tournamentId];
+// }
+
+// export async function getStorageTournamentList(): Promise<Tournament[]> {
+//   return Object.values(await getTournamentStorage());
+// }
 
 export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
   const tournaments = await getStorageTournamentList();
@@ -53,12 +58,11 @@ async function getTournamentChampion(tournament: Tournament): Promise<Tournament
   const matchIds = tournament.stages.toReversed()
     .flatMap(stage => stage.parts.toReversed())
     .flatMap(part => part.matchIds.toReversed());
-  const matches = await getStorageMatchBatch(matchIds);
+  const matches = await getStorageMatchList(matchIds);
   for (const match of matches) {
     if (match && match.isFinal) {
-      const games = await getGameBatch(match.gameIds);
-      const gamesRecord = Object.fromEntries(games.map(game => [game.id, game]));
-      const winner = getMatchWinner(match, gamesRecord);
+      const games = await getStorageGameRecord(match.gameIds);
+      const winner = getMatchWinner(match, games);
       switch (winner) {
         case "A": return match.playerA;
         case "B": return match.playerB;
@@ -133,5 +137,7 @@ export function saveTournament(params: TournamentSaveParams) {
 
   writeData(`tournaments/${tournament.id}`, ZTournament.parse(tournament));
 
+  // TODO await
+  clearTournamentCache();
   return tournament.id;
 }

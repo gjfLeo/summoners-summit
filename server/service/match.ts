@@ -1,25 +1,30 @@
 import { z } from "zod";
-import { deleteGame, getGame, getGameBatch, saveGame } from "./game";
+import { deleteGame, getGame, getStorageGameRecord, saveGame } from "./game";
 import { bindPlayerNickname } from "./player";
-import { defineGetRecordStorage } from "./storage";
+import { defineRecordStorage } from "./storage";
 import { getStorageTournament, getTournament, saveTournament } from "./tournament";
 
-const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
+const matchStorage = defineRecordStorage("matches", ZMatch);
+export const getStorageMatch = matchStorage.get;
+export const getStorageMatchList = matchStorage.getList;
+export const clearMatchCache = matchStorage.clearCache;
 
-export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
-  const storage = await getMatchStorage();
-  return storage[matchId];
-}
+// const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
 
-export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
-  const storage = await getMatchStorage();
-  return matchIds.map(matchId => storage[matchId]).filter(Boolean);
-}
+// export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
+//   const storage = await getMatchStorage();
+//   return storage[matchId];
+// }
 
-export async function getStorageMatchList(): Promise<Match[]> {
-  const storage = await getMatchStorage();
-  return Object.values(storage);
-}
+// export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
+//   const storage = await getMatchStorage();
+//   return matchIds.map(matchId => storage[matchId]).filter(Boolean);
+// }
+
+// export async function getStorageMatchList(): Promise<Match[]> {
+//   const storage = await getMatchStorage();
+//   return Object.values(storage);
+// }
 
 export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
   const match = await getStorageMatch(matchId);
@@ -31,9 +36,8 @@ export async function fillStorageMatchDetail(match: Match): Promise<MatchDetail>
   const stage = tournament.stages[match.stageIndex];
   const part = stage.parts[match.partIndex];
 
-  const games = await getGameBatch(match.gameIds);
-  const gamesRecord = Object.fromEntries(games.map(game => [game.id, game]));
-  const winner = getMatchWinner(match, gamesRecord);
+  const games = await getStorageGameRecord(match.gameIds);
+  const winner = getMatchWinner(match, games);
 
   return {
     ...match,
@@ -213,5 +217,7 @@ export function saveMatch(params: MatchSaveParams) {
   getMatch(matchId)?.gameIds.forEach(gId => deleteGame(gId));
   games.forEach(saveGame);
 
+  // await
+  clearMatchCache();
   return matchId;
 }

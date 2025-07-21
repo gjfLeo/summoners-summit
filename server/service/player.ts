@@ -1,6 +1,6 @@
 import type { z } from "zod";
 import { getMatchList } from "./match";
-import { defineGetRecordStorage } from "./storage";
+import { defineRecordStorage } from "./storage";
 
 /** @deprecated */
 export function getPlayer(playerId: PlayerId): Player | undefined {
@@ -17,14 +17,18 @@ export function getPlayerList(): Player[] {
   return ZPlayer.array().parse(readDataList<Player>("players"));
 }
 
-const getPlayerStorage = defineGetRecordStorage("players", ZPlayer);
+const playerStorage = defineRecordStorage("players", ZPlayer);
+export const getStoragePlayer = playerStorage.get;
+export const clearPlayerCache = playerStorage.clearCache;
 
-export async function getStoragePlayer(playerId: PlayerId) {
-  const storage = await getPlayerStorage();
-  return storage[playerId];
-}
+// const getPlayerStorage = defineGetRecordStorage("players", ZPlayer);
 
-export function deletePlayer(playerId: PlayerId): void {
+// export async function getStoragePlayer(playerId: PlayerId) {
+//   const storage = await getPlayerStorage();
+//   return storage[playerId];
+// }
+
+export function deletePlayer(playerId: PlayerId) {
   const player = getPlayer(playerId);
   if (!player) return;
 
@@ -32,6 +36,7 @@ export function deletePlayer(playerId: PlayerId): void {
     player?.uids.forEach(uid => delete index.uid[uid]);
   });
   deleteData(`players/${playerId}`);
+  return clearPlayerCache();
 }
 
 const _ZSavePlayerParams = ZPlayer.partial({ id: true });
@@ -58,6 +63,8 @@ export function savePlayer(params: SavePlayerParams) {
   });
 
   writeData(`players/${player.id}`, ZPlayer.parse(player));
+  // TODO await
+  clearPlayerCache();
   return player.id;
 }
 

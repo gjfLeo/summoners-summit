@@ -43,6 +43,15 @@ const localePath = useLocalePath();
 
 const { data, refresh } = await useFetch(`/api/v4/tournaments/${id}`, {
   immediate: false,
+  transform: (data) => {
+    data.stages.forEach((stage, stageIndex) => {
+      stage._key = stageIndex;
+      stage.parts.forEach((part, partIndex) => {
+        part._key = partIndex;
+      });
+    });
+    return data;
+  },
 });
 
 const tournament = ref<Tournament>({
