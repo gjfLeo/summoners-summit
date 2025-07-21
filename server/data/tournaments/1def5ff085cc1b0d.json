@@ -1,0 +1,100 @@
+{
+  "id": "1def5ff085cc1b0d",
+  "name": {
+    "zh": "火星杯"
+  },
+  "gameVersion": "5.7",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-07-16",
+          "matchIds": [
+            "1def5ff085cc1b0d01",
+            "1def5ff085cc1b0d02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-07-17",
+          "matchIds": [
+            "1def5ff085cc1b0d03",
+            "1def5ff085cc1b0d04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-07-18",
+          "matchIds": [
+            "1def5ff085cc1b0d05",
+            "1def5ff085cc1b0d06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-07-20",
+          "matchIds": [
+            "1def5ff085cc1b0d07"
+          ]
+        }
+      ]
+    }
+  ]
+}
