@@ -5,12 +5,19 @@ export default defineNitroPlugin((nitroApp) => {
       delete paths[""];
       delete paths["/_docs/scalar"];
       delete paths["/_docs/swagger"];
-      for (const key of Object.keys(paths)) {
-        if (key.startsWith("/api/v3")) {
-          delete paths[key];
-        }
+      for (const [key, value] of Object.entries(paths)) {
         if (key.startsWith("/__nuxt")) {
           delete paths[key];
+        }
+        if (!import.meta.dev) {
+          if (key.startsWith("/api/v3")) {
+            delete paths[key];
+          }
+          for (const method of Object.keys(value as any)) {
+            if (method !== "get") {
+              delete (value as any)[method];
+            }
+          }
         }
       }
     }

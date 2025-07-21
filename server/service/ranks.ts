@@ -1,26 +1,47 @@
-import { getPlayer } from "./player";
+import type { GameVersionId } from "~~/shared/types";
+import { getStoragePlayer } from "./player";
 
-export function getRanks(id: string) {
-  return readData<Ranks>(`ranks/${id}`);
+export async function getRanksIds() {
+  const storage = useStorage("assets:data:ranks");
+  const keys = await storage.getKeys();
+  return keys.map(key => key.replace(".json", ""));
 }
-export function getRanksList() {
-  return readDataList<Ranks>("ranks");
+export async function getRanks(rankId: string) {
+  const storage = useStorage("assets:data:ranks");
+  const ranks = await storage.getItem(`${rankId}.json`);
+  return ZRanks.parse(ranks);
 }
+
+// ----------------------------------------------------------------------------
 
 export function saveRanks(ranks: Ranks) {
   writeData(`ranks/${ranks.id}`, ranks);
 }
 
-export function getPlayerRank(options: { playerId: string; gameVersion?: GameVersionId }) {
-  const { playerId, gameVersion } = options;
-  const player = getPlayer(playerId);
-  if (!player) {
-    throw new Error(errorCodes.PLAYER_NOT_FOUND);
+// ----------------------------------------------------------------------------
+
+export async function getRanksByGameVersion(gameVersion?: GameVersionId) {
+  gameVersion = gameVersion ?? (await getRanksIds()).toSorted().at(-1)!;
+  return await getRanks(gameVersion);
+}
+
+export async function getPlayerRank(player: Player | PlayerId, options: {
+  ranks?: Ranks;
+  gameVersion?: GameVersionId;
+}) {
+  if (typeof player === "string") {
+    const _player = await getStoragePlayer(player);
+    if (!_player) {
+      throw createError({ statusCode: 500, message: `Player ${player} not found` });
+    }
+    player = _player;
   }
 
-  const ranks = gameVersion ? getRanks(gameVersion) : getRanksList().at(-1);
-  if (!ranks) return undefined;
+  const ranks = options.ranks ?? await getRanksByGameVersion(options.gameVersion);
+  if (!ranks) {
+    return undefined;
+  };
 
-  const rank = ranks?.ranks.find(rank => player.uids.includes(rank.uid));
+  const rank = ranks.ranks.find(r => player.uids.includes(r.uid));
   return rank;
 }

@@ -2,6 +2,12 @@ import type { z } from "zod";
 import { getMatchList } from "./match";
 import { defineRecordStorage } from "./storage";
 
+const playerStorage = defineRecordStorage("players", ZPlayer);
+export const getStoragePlayer = playerStorage.get;
+export const clearPlayerCache = playerStorage.clearCache;
+
+// ----------------------------------------------------------------------------
+
 /** @deprecated */
 export function getPlayer(playerId: PlayerId): Player | undefined {
   return ZPlayer.optional().parse(readData<Player>(`players/${playerId}`));
@@ -17,16 +23,7 @@ export function getPlayerList(): Player[] {
   return ZPlayer.array().parse(readDataList<Player>("players"));
 }
 
-const playerStorage = defineRecordStorage("players", ZPlayer);
-export const getStoragePlayer = playerStorage.get;
-export const clearPlayerCache = playerStorage.clearCache;
-
-// const getPlayerStorage = defineGetRecordStorage("players", ZPlayer);
-
-// export async function getStoragePlayer(playerId: PlayerId) {
-//   const storage = await getPlayerStorage();
-//   return storage[playerId];
-// }
+// ----------------------------------------------------------------------------
 
 export function deletePlayer(playerId: PlayerId) {
   const player = getPlayer(playerId);

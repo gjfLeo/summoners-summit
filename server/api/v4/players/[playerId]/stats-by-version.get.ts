@@ -39,9 +39,7 @@ export default defineEventHandler(async (event) => {
 
   const games: GameDetail[] = [];
 
-  console.time("getStorageMatchList");
   const matches = await getStorageMatchList();
-  console.timeEnd("getStorageMatchList");
 
   const matchDetails: MatchDetail[] = [];
   for (const match of matches) {

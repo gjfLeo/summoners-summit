@@ -9,23 +9,6 @@ export const getStorageMatch = matchStorage.get;
 export const getStorageMatchList = matchStorage.getList;
 export const clearMatchCache = matchStorage.clearCache;
 
-// const getMatchStorage = defineGetRecordStorage("matches", ZMatch);
-
-// export async function getStorageMatch(matchId: MatchId): Promise<Match | undefined> {
-//   const storage = await getMatchStorage();
-//   return storage[matchId];
-// }
-
-// export async function getStorageMatchBatch(matchIds: MatchId[]): Promise<Match[]> {
-//   const storage = await getMatchStorage();
-//   return matchIds.map(matchId => storage[matchId]).filter(Boolean);
-// }
-
-// export async function getStorageMatchList(): Promise<Match[]> {
-//   const storage = await getMatchStorage();
-//   return Object.values(storage);
-// }
-
 export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
   const match = await getStorageMatch(matchId);
   if (!match) return;

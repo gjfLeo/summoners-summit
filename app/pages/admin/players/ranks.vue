@@ -34,9 +34,9 @@
 const { t } = useLocales();
 useHead({ title: t("site.titles.admin.ranks") });
 
-const { data, status, refresh } = await useFetch("/api/v3/ranks/ids");
+const { data, status, refresh } = await useFetch("/api/v4/players-ranks");
 
-const rankIds = computed(() => data.value?.rankIds.toReversed() ?? []);
+const rankIds = computed(() => data.value?.map(item => item.id) ?? []);
 const rankId = ref(rankIds.value[0]);
 const ranks = ref<Ranks>();
 const ranksLoading = ref(false);
@@ -44,10 +44,7 @@ const ranksLoading = ref(false);
 watch(rankId, async (rankId) => {
   if (rankIds.value.includes(rankId)) {
     ranksLoading.value = true;
-    const res = await $fetch("/api/v3/ranks/get", {
-      params: { id: rankId },
-    });
-    ranks.value = res.ranks;
+    ranks.value = await $fetch<Ranks>(`/api/v4/players-ranks/${rankId}`);
     ranksLoading.value = false;
   }
 }, { immediate: true });

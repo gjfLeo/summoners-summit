@@ -4,21 +4,25 @@ interface RecordStorage<K extends string, V> {
   get: (key: K) => Promise<V> | undefined;
   getList: (keys?: K[]) => Promise<V[]>;
   getRecord: (keys?: K[]) => Promise<Record<K, V>>;
-  clearCache: () => Promise<void>;
+  clearCache: (keys?: K[]) => Promise<void>;
 }
+
+const groupCharacters = "0123456789abcdefghijklmnopqrstuvwxyz" as const;
 
 export function defineRecordStorage<K extends string, V>(
   path: string,
   zodType: ZodType<V>,
 ): RecordStorage<K, V> {
-  type Params = [{ shouldInvalidateCache?: boolean }?];
-  const getFullRecord = defineCachedFunction<Promise<Record<K, V>>, Params>(
-    async (): Promise<Record<K, V>> => {
+  type Params = [{ group: string; shouldInvalidateCache?: boolean }];
+  const getCachedRecord = defineCachedFunction<Promise<Record<K, V>>, Params>(
+    async ({ group }): Promise<Record<K, V>> => {
+      // const time = Date.now();
       const storage = useStorage(`assets:data:${path}`);
       const keys = await storage.getKeys();
+      const groupKeys = keys.filter(key => key.startsWith(group));
       const record: Partial<Record<K, V>> = {};
       await runParallel(
-        new Set(keys.filter(key => !key.startsWith("_"))),
+        new Set(groupKeys),
         async (key) => {
           const item = await storage.getItem(key);
           const id = key.split(".")[0] as K;
@@ -31,39 +35,50 @@ export function defineRecordStorage<K extends string, V>(
         },
         { concurrency: import.meta.dev ? 100 : 10 },
       );
+      // console.log(`[Storage] ${path}:${group} loaded: ${groupKeys.length} keys in ${Date.now() - time}ms`);
       return Object.fromEntries(
-        Object.entries(record)
-          .sort((a, b) => a[0].localeCompare(b[0])),
+        Object.entries(record).sort((a, b) => a[0].localeCompare(b[0])),
       ) as Record<K, V>;
     },
     {
       maxAge: 0,
       group: "storage",
       name: path,
-      getKey: () => "default",
-      shouldInvalidateCache: ({ shouldInvalidateCache = false } = {}) => shouldInvalidateCache,
+      getKey: ({ group }) => group,
+      shouldInvalidateCache: ({ shouldInvalidateCache = false }) => shouldInvalidateCache,
     },
   );
   async function get(key: K) {
-    const cache = await getFullRecord();
+    const cache = await getCachedRecord({ group: key.at(0) as string });
     return cache[key];
   }
   async function getList(keys?: K[]) {
-    const cache = await getFullRecord();
-    if (!keys) {
-      return Object.values(cache) as V[];
+    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
+    const cache: Partial<Record<K, V[]>> = {};
+    for (const group of groupKeys) {
+      Object.assign(cache, await getCachedRecord({ group }));
     }
-    return keys.map(key => cache[key]);
+    if (keys) {
+      return keys.map(key => cache[key]) as V[];
+    }
+    return Object.values(cache) as V[];
   }
   async function getRecord(keys?: K[]) {
-    const cache = await getFullRecord();
-    if (!keys) {
-      return cache;
+    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
+    const cache: Partial<Record<K, V[]>> = {};
+    for (const group of groupKeys) {
+      Object.assign(cache, await getCachedRecord({ group }));
     }
-    return Object.fromEntries(keys.map(key => [key, cache[key]])) as Record<K, V>;
+    if (keys) {
+      return Object.fromEntries(keys.map(key => [key, cache[key]])) as Record<K, V>;
+    }
+    return cache as Record<K, V>;
   }
-  async function clearCache() {
-    await getFullRecord({ shouldInvalidateCache: true });
+  async function clearCache(keys?: K[]) {
+    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
+    for (const group of groupKeys) {
+      await getCachedRecord({ group, shouldInvalidateCache: true });
+    }
   }
   return {
     get,
@@ -71,61 +86,6 @@ export function defineRecordStorage<K extends string, V>(
     getRecord,
     clearCache,
   };
-}
-
-/** @deprecated */
-export function defineGetRecordStorage<K extends string, V>(
-  path: string,
-  zodType: ZodType<V>,
-): () => Promise<Record<K, V>> {
-  return defineCachedFunction(
-    async (): Promise<Record<K, V>> => {
-      console.log(`Loading storage ${path}`);
-      console.time(`Loading storage ${path}`);
-
-      const storage = useStorage(`assets:data:${path}`);
-      const keys = await storage.getKeys();
-      const record: Partial<Record<K, V>> = {};
-      await runParallel(
-        new Set(keys.filter(key => !key.startsWith("_"))),
-        async (key) => {
-          const item = await storage.getItem(key);
-          const id = key.split(".")[0] as K;
-          try {
-            record[id] = zodType.parse(item);
-          }
-          catch (e) {
-            console.error(`Failed to parse ${path} ${key}: ${e}`);
-          }
-        },
-        { concurrency: 10 },
-      );
-
-      console.timeEnd(`Loading storage ${path}`);
-      console.log(`Loaded storage ${path} with ${Object.keys(record).length} items`);
-
-      return Object.fromEntries(
-        Object.entries(record)
-          .sort((a, b) => a[0].localeCompare(b[0])),
-      ) as Record<K, V>;
-    },
-    {
-      maxAge: import.meta.dev ? 0 : 60 * 60 * 24 * 365,
-      group: "storage",
-      name: path,
-      getKey: () => "default",
-      // validate: () => {
-      //   if (!import.meta.dev) {
-      //     console.log(`Caching storage ${path}`);
-      //     return true;
-      //   }
-      //   else {
-      //     console.log("On dev, not caching");
-      //     return false;
-      //   }
-      // },
-    },
-  );
 }
 
 export function defineGetMiscStorage<T>(
@@ -138,25 +98,10 @@ export function defineGetMiscStorage<T>(
       return zodType.parse(storage);
     },
     {
-      maxAge: import.meta.dev ? 0 : 60 * 60 * 24 * 365,
+      maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
       getKey: () => "default",
-      // validate: () => {
-      //   if (!import.meta.dev) {
-      //     console.log(`Caching storage ${path}`);
-      //     return true;
-      //   }
-      //   else {
-      //     console.log("On dev, not caching");
-      //     return false;
-      //   }
-      // },
     },
   );
-}
-
-export async function clearStorageCache(path: string) {
-  const storage = useStorage(`cache:storage:${path}`);
-  return await storage.clear();
 }

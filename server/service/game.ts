@@ -18,21 +18,6 @@ export const getStorageGameList = gameStorage.getList;
 export const getStorageGameRecord = gameStorage.getRecord;
 export const clearGameCache = gameStorage.clearCache;
 
-// const getGameStorage = defineGetRecordStorage("games", ZGame);
-
-// export async function getStorageGameList(): Promise<Game[]> {
-//   return Object.values(await getGameStorage());
-// }
-
-// export async function getStorageGame(gameId: GameId): Promise<Game | undefined> {
-//   return (await getGameStorage())[gameId];
-// }
-
-// export async function getGameBatch(matchIds: GameId[]): Promise<Game[]> {
-//   const games = await getGameStorage();
-//   return matchIds.map(matchId => games[matchId]).filter(Boolean);
-// }
-
 /** @deprecated */
 export function getGameDetail(gameId: GameId): GameDetail | undefined {
   const game = getGame(gameId);
@@ -66,12 +51,12 @@ export function getGameDetail(gameId: GameId): GameDetail | undefined {
 
 export function saveGame(game: Game) {
   writeData(`games/${game.id}`, ZGame.parse(game));
-  return clearGameCache();
+  return clearGameCache([game.id]);
 }
 
 export function deleteGame(gameId: GameId) {
   deleteData(`games/${gameId}`);
-  return clearGameCache();
+  return clearGameCache([gameId]);
 }
 
 /** @deprecated */

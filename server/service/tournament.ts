@@ -9,16 +9,6 @@ export const getStorageTournament = tournamentStorage.get;
 export const getStorageTournamentList = tournamentStorage.getList;
 export const clearTournamentCache = tournamentStorage.clearCache;
 
-// const getTournamentStorage = defineGetRecordStorage("tournaments", ZTournament);
-
-// export async function getStorageTournament(tournamentId: TournamentId): Promise<Tournament | undefined> {
-//   return (await getTournamentStorage())[tournamentId];
-// }
-
-// export async function getStorageTournamentList(): Promise<Tournament[]> {
-//   return Object.values(await getTournamentStorage());
-// }
-
 export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
   const tournaments = await getStorageTournamentList();
   const list: TournamentDetailBrief[] = [];

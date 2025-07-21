@@ -45,15 +45,6 @@ export async function useApiGetTeamStatsByVersion(query: GetTeamStatsByVersionPa
   };
 }
 
-export async function useApiGetAllPlayerStats() {
-  const { data } = await useFetch("/api/v3/players/stats", {
-    deep: true,
-  });
-  return {
-    stats: computed(() => data.value?.success ? data.value.stats : []),
-  };
-}
-
 export async function useApiGetOverviewStats() {
   const { data } = await useFetch("/api/v3/overview", {
     deep: true,

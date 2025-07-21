@@ -9,12 +9,17 @@
         </NInput>
       </div>
     </div>
-    <NDataTable
-      :columns="columns"
-      :data="data"
-      :scroll-x="1000"
-      max-height="calc(100vh - 18rem)"
-    />
+    <template v-if="!loading">
+      <NDataTable
+        :columns="columns"
+        :data="data"
+        :scroll-x="1000"
+        max-height="calc(100vh - 18rem)"
+      />
+    </template>
+    <template v-else>
+      <NSpin size="large" />
+    </template>
   </div>
 </template>
 
@@ -26,11 +31,14 @@ import PinyinMatch from "pinyin-match";
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.players") });
 
-const { stats: allStats } = await useApiGetAllPlayerStats();
+const { data: playersStats, pending: loading } = await useFetch("/api/v4/players-stats");
 
 const playerFilter = ref<string>("");
-const data = computed(() =>
-  allStats.value
+const data = computed(() => {
+  if (!playersStats.value) {
+    return [];
+  }
+  return playersStats.value
     .filter((stats) => {
       return !playerFilter.value || PinyinMatch.match(stats.uniqueName, playerFilter.value)
         || stats.aliases?.some(name => PinyinMatch.match(name, playerFilter.value));
@@ -40,8 +48,8 @@ const data = computed(() =>
       ...stats,
       matchWinRate: divide(stats.numMatchesWin, stats.numMatches),
       gameWinRate: divide(stats.numGamesWin, stats.numGames),
-    })),
-);
+    }));
+});
 
 const columns: DataTableColumn<typeof data["value"][number]>[] = [
   {
