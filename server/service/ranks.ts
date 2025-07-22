@@ -14,8 +14,9 @@ export async function getRanks(rankId: string) {
 
 // ----------------------------------------------------------------------------
 
-export function saveRanks(ranks: Ranks) {
-  writeData(`ranks/${ranks.id}`, ranks);
+export async function saveRanks(ranks: Ranks) {
+  const data = ZRanks.parse(ranks);
+  await writeDataV2(`ranks/${ranks.id}`, data);
 }
 
 // ----------------------------------------------------------------------------

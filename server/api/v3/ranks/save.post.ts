@@ -3,7 +3,7 @@ import { getPlayerByUid, savePlayer, saveRanks } from "~~/server/service";
 
 export default defineEventHandler(async (event) => {
   const { ranks } = await readValidatedBody(event, z.object({ ranks: ZRanks }).parse);
-  saveRanks(ranks);
+  await saveRanks(ranks);
 
   ranks.ranks.forEach(({ uid, nickname }) => {
     const player = getPlayerByUid(uid);

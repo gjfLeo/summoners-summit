@@ -27,6 +27,92 @@ export function getPlayerList(): Player[] {
 
 // ----------------------------------------------------------------------------
 
+export async function getPlayerByUidV2(uid: string): Promise<Player | undefined> {
+  const index = await readPlayerIndexV2();
+  const playerId = index.uid[uid];
+  return playerId ? await getStoragePlayer(playerId) : undefined;
+}
+
+// ----------------------------------------------------------------------------
+
+const _ZSavePlayerV2Params = ZPlayer.partial({ id: true });
+type SavePlayerV2Params = z.infer<typeof _ZSavePlayerV2Params>;
+
+function generatePlayerId(player: SavePlayerV2Params) {
+  if (player.uids.length > 0) {
+    return hash(player.uids[0]);
+  }
+  return player.id ?? hash();
+}
+
+export async function savePlayerV2(params: SavePlayerV2Params) {
+  const playerId = generatePlayerId(params);
+  // TODO
+  // if (params.id && params.id !== playerId) {
+  //   await redirectPlayerV2(params.id, playerId);
+  // }
+
+  // TODO 通过zod实现
+  const player = {
+    ...params,
+    id: playerId,
+    aliases: [...params.aliases].sort(),
+  };
+  if (!player.ignored) delete player.ignored;
+
+  await updatePlayerIndexV2((index) => {
+    player.uids.forEach((uid) => {
+      index.uid[uid] = player.id;
+    });
+  });
+
+  await writeDataV2(`players/${player.id}`, ZPlayer.parse(player));
+  return player.id;
+}
+
+export async function deletePlayerV2(playerId: PlayerId) {
+  const player = await getStoragePlayer(playerId);
+  if (!player) return;
+
+  return await Promise.all([
+    deleteDataV2(`players/${playerId}`),
+    updatePlayerIndex((index) => {
+      player.uids.forEach(uid => delete index.uid[uid]);
+    }),
+  ]);
+}
+
+export async function saveRanksPlayer(ranks: Ranks) {
+  const playerIdByUid = (await readPlayerIndexV2()).uid;
+
+  const playerIds = ranks.ranks.map(({ uid }) => playerIdByUid[uid]).filter(Boolean);
+  const players = await getStoragePlayerRecord(playerIds);
+
+  await Promise.all(
+    ranks.ranks.map(async ({ uid, nickname }) => {
+      const playerId = playerIdByUid[uid];
+      const player = playerId ? players[playerId] : undefined;
+      if (player) {
+        if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
+          player.aliases = [...player.aliases, nickname];
+          return await savePlayerV2(player);
+        }
+      }
+      else {
+        return await savePlayerV2({
+          uniqueName: nickname,
+          aliases: [],
+          uids: [uid],
+        });
+      }
+    }),
+  );
+
+  return clearPlayerCache(playerIds);
+}
+
+// ----------------------------------------------------------------------------
+
 export function deletePlayer(playerId: PlayerId) {
   const player = getPlayer(playerId);
   if (!player) return;
@@ -173,4 +259,16 @@ function updatePlayerIndex(func: (index: PlayerIndex) => void) {
   const index = readPlayerIndex();
   func(index);
   writeData("players/_index", index);
+}
+
+async function readPlayerIndexV2(): Promise<PlayerIndex> {
+  return Object.assign(
+    { uid: {} },
+    await readDataV2<PlayerIndex>("players/_index", { uid: {} }),
+  );
+}
+async function updatePlayerIndexV2(func: (index: PlayerIndex) => void) {
+  const index = await readPlayerIndexV2();
+  func(index);
+  await writeDataV2("players/_index", index);
 }
