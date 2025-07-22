@@ -35,10 +35,7 @@ export default defineEventHandler(async (event) => {
     }
     const player = await getStoragePlayer(playerId);
     if (!player) {
-      throw createError({
-        statusCode: 500,
-        message: `Player ${playerId} not found`,
-      });
+      throw createError({ statusCode: 500, message: `Player ${playerId} not found` });
     }
     if (player.ignored) {
       return null;

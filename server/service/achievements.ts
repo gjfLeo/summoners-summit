@@ -1,18 +1,18 @@
-/** @deprecated */
-export function getAchievementList(): Achievement[] {
-  return ZAchievement.array().parse(readData<Achievement[]>("misc/achievements", []));
-}
-
-export async function getStorageAchievementList(): Promise<Achievement[]> {
-  const data = await readDataV2("misc/achievements", []);
+export async function getAchievementList(): Promise<Achievement[]> {
+  const data = await readDataV2<Achievement[]>("misc/achievements", []);
   return ZAchievement.array().parse(data);
 }
 
-export function saveAchievementList(achievementList: Achievement[]): void {
-  writeData("misc/achievements", ZAchievement.array().parse(achievementList));
+export async function saveAchievementList(achievements: Achievement[]) {
+  const data = ZAchievement.array().parse(achievements);
+  return await writeDataV2("misc/achievements", data);
 }
 
+// export function saveAchievementList(achievementList: Achievement[]): void {
+//   writeData("misc/achievements", ZAchievement.array().parse(achievementList));
+// }
+
 export async function getPlayerAchievements(playerId: PlayerId): Promise<Achievement[]> {
-  const achievementList = await getStorageAchievementList();
+  const achievementList = await getAchievementList();
   return achievementList.filter(achievement => achievement.playerIds.includes(playerId));
 }

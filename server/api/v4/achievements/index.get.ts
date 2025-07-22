@@ -1,4 +1,4 @@
-import { getStorageAchievementList } from "~~/server/service";
+import { getAchievementList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -9,5 +9,5 @@ defineRouteMeta({
 });
 
 export default defineEventHandler(async () => {
-  return await getStorageAchievementList();
+  return await getAchievementList();
 });

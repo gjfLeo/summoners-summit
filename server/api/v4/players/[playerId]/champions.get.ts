@@ -28,10 +28,7 @@ export default defineEventHandler(async (event) => {
   const player = await getStoragePlayer(playerId);
 
   if (!player) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: errorCodes.PLAYER_NOT_FOUND,
-    });
+    throw createError({ statusCode: 404, message: "Player not found" });
   }
 
   const tournaments = await getTournamentDetailBriefList();

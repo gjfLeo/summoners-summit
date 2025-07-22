@@ -29,10 +29,7 @@ export default defineEventHandler(async (event) => {
   const tournament = await getStorageTournamentDetail(id);
 
   if (!tournament) {
-    throw createError({
-      statusCode: 404,
-      message: "Tournament not found",
-    });
+    throw createError({ statusCode: 404, message: "Tournament not found" });
   }
 
   const matches: Record<MatchId, Match> = {};

@@ -1,6 +1,6 @@
 <template>
-  <div un-flex="~ col gap-4">
-    <NCard v-for="achievement in achievementList" :key="achievement.id">
+  <div v-if="achievements" un-flex="~ col gap-4">
+    <NCard v-for="achievement in achievements" :key="achievement.id">
       <div class="flex items-center gap-4">
         <NImage
           :src="achievement.imageUrl" :alt="currentLocalized(achievement.name)"
@@ -42,9 +42,7 @@
 const { t, currentLocalized } = useLocales();
 useHead({ title: t("site.titles.admin.achievements") });
 
-const { data, refresh } = await useFetch("/api/v3/achievements/getAchievementList");
-
-const achievementList = computed(() => data.value?.achievementList);
+const { data: achievements, refresh } = await useFetch("/api/v4/achievements");
 
 const { data: players } = useLazyFetch("/api/v4/players", {
   query: { includeIgnored: "1" },
@@ -69,35 +67,40 @@ const submitLoading = ref(false);
 const message = useMessage();
 async function addSubmit() {
   submitLoading.value = true;
-  const res = await $fetch("/api/v3/achievements/addPlayers", {
-    method: "POST",
-    body: addForm.value,
-  });
-  if (res.success) {
+  try {
+    await $fetch(`/api/v4/achievements/${addForm.value.achievementId}`, {
+      method: "POST",
+      body: {
+        action: "addPlayers",
+        playerIds: addForm.value.playerIds,
+      },
+    });
     message.success(t("admin.message.SUCCESS"));
     addDialogVisible.value = false;
     refresh();
   }
-  else {
-    message.error(t(`admin.message.${res.code}`));
+  catch (error) {
+    console.error(error);
+    message.error(t("admin.message.FAILED"));
   }
   submitLoading.value = false;
 }
 
 async function removePlayer(achievementId: string, playerId: PlayerId) {
-  const res = await $fetch("/api/v3/achievements/removePlayer", {
-    method: "POST",
-    body: {
-      achievementId,
-      playerId,
-    },
-  });
-  if (res.success) {
+  try {
+    await $fetch(`/api/v4/achievements/${achievementId}`, {
+      method: "POST",
+      body: {
+        action: "removePlayers",
+        playerIds: [playerId],
+      },
+    });
     message.success(t("admin.message.SUCCESS"));
     refresh();
   }
-  else {
-    message.error(t(`admin.message.${res.code}`));
+  catch (error) {
+    console.error(error);
+    message.error(t("admin.message.FAILED"));
   }
 }
 </script>
