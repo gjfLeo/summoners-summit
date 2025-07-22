@@ -1,5 +1,10 @@
 <template>
-  <NDataTable :data="data" :columns="columns" />
+  <template v-if="decksStatsData">
+    <NDataTable :data="data" :columns="columns" />
+  </template>
+  <template v-else>
+    <NSpin size="large" />
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -34,7 +39,10 @@ function getCardCountRecord(deckCode: DeckCode): Record<CardId, number> {
 const currentCardCountRecord = computed(() => getCardCountRecord(deckCode.value));
 
 const data = computed(() => {
-  return decksStatsData.value?.map((deck) => {
+  if (!decksStatsData.value) {
+    return [];
+  }
+  return decksStatsData.value.map((deck) => {
     const cardCountRecord = getCardCountRecord(deck.deckCode);
     const diffCardCountRecord = { ...currentCardCountRecord.value };
     Object.entries(cardCountRecord).forEach(([cardId, count]) => {
@@ -50,7 +58,7 @@ const data = computed(() => {
       diffCardCountRecord,
       distance,
     };
-  }) ?? [];
+  });
 });
 
 // const actionCardRecord = computed(() => {
