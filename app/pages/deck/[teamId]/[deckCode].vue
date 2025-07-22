@@ -65,7 +65,7 @@ onMounted(() => {
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 
-const { data: games, pending: gamesLoading } = await useFetch("/api/v4/games", {
+const { data: games, pending: gamesLoading } = useLazyFetch("/api/v4/games", {
   query: {
     deckCode: toBase64Url(deckCode),
     limit: 30,
