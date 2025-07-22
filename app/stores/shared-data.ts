@@ -24,7 +24,7 @@ const useSharedDataStore = defineStore("shared", () => {
 
   const { data: cardData, refresh: fetchCardData, status: cardDataStatus } = useAsyncData(
     "cards",
-    () => $fetch("/api/v3/cards/getCards"),
+    () => $fetch("/api/v4/cards-data"),
   );
 
   const characterCardById = computed(() => cardData.value?.characterCards ?? {});

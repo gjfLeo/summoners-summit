@@ -142,12 +142,12 @@ function addMatch() {
 const message = useMessage();
 async function handleEdit(matchId: MatchId) {
   const loading = message.loading(t("admin.action.loading"), { duration: 0 });
-  const { match, games } = await $fetch("/api/v3/matches/getDetail", { query: { id: matchId } });
+  const match = await $fetch(`/api/v4/matches/${matchId}`);
   loading.destroy();
   const params = {
     ...match,
     games: match.gameIds.map((gameId, i) => ({
-      ...games[gameId],
+      ...match.games[gameId],
       _key: i,
     })),
     bans: match.bans?.map<MatchSaveParams["bans"][0]>((ban, i) => {

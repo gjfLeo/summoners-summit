@@ -1,11 +1,13 @@
 import { z } from "zod";
-import { defineGetMiscStorage } from "./storage";
 
-export const getCharacterCards: () => Promise<Record<CardId, CharacterCardInfo>>
-  = defineGetMiscStorage("character-cards", z.record(ZCardId, ZCharacterCardInfo));
-
-export const getActionCards: () => Promise<Record<CardId, ActionCardInfo>>
-  = defineGetMiscStorage("action-cards", z.record(ZCardId, ZActionCardInfo));
+export async function getCharacterCards() {
+  const data = await readDataV2("misc/character-cards");
+  return z.record(ZCardId, ZCharacterCardInfo).parse(data);
+}
+export async function getActionCards() {
+  const data = await readDataV2("misc/action-cards");
+  return z.record(ZCardId, ZActionCardInfo).parse(data);
+}
 
 let shareIdByCardId: Record<CardId, number> | null = null;
 let cardIdByShareId: Record<number, CardId> | null = null;
