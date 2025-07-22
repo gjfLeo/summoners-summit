@@ -158,18 +158,34 @@ export const getTeamDecksStats = defineCachedFunction(
       numGamesWin: number;
       cardCountRecord: Record<CardId, number>;
     }> = {};
-    for (const deck of decks) {
-      const recordItem = decksRecord[deck.deckCode] ??= {
-        deckCode: deck.deckCode,
+    async function getRecordItem(deckCode: DeckCode) {
+      if (decksRecord[deckCode]) {
+        return decksRecord[deckCode];
+      }
+      return decksRecord[deckCode] = {
+        deckCode,
         numGames: 0,
         numGamesWin: 0,
-        cardCountRecord: await getActionCardCountRecord(deck.deckCode),
+        cardCountRecord: await getActionCardCountRecord(deckCode),
       };
-      recordItem.numGames++;
-      if (deck.win) {
-        recordItem.numGamesWin++;
-      }
     }
+    await runParallel(
+      new Set(decks.map(d => d.deckCode)),
+      getRecordItem,
+      { concurrency: 10 },
+    );
+
+    await runParallel(
+      new Set(decks),
+      async (deck) => {
+        const recordItem = await getRecordItem(deck.deckCode);
+        recordItem.numGames++;
+        if (deck.win) {
+          recordItem.numGamesWin++;
+        }
+      },
+      { concurrency: 10 },
+    );
 
     // 胜利对局的额外加权，0表示不考虑
     const winWeight = 1;
