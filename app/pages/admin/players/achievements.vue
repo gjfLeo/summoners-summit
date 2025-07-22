@@ -12,15 +12,15 @@
           <NText :depth="3">{{ currentLocalized(achievement.flavorText) }}</NText>
         </div>
       </div>
-      <div un-grid="~ cols-4 gap-x-8 gap-y-2" class="mt">
-        <div v-for="playerId in achievement.playerIds" :key="playerId" un-flex="~ items-center">
-          <span class="min-w-24">{{ players.find((player) => player.id === playerId)?.uniqueName }}</span>
+      <div un-grid="~ cols-4 gap-x-8 gap-y-2 items-center" class="mt">
+        <div v-for="playerId in achievement.playerIds" :key="playerId" un-flex="~ items-center" class="h-8">
+          <span class="min-w-24">{{ players?.find((player) => player.id === playerId)?.uniqueName }}</span>
           <CommonIconButton
             icon="i-mingcute:delete-2-line" danger class="ml"
             @click="removePlayer(achievement.id, playerId)"
           />
         </div>
-        <NButton primary @click="showAdd(achievement.id)">添加</NButton>
+        <NButton primary class="h-8 w-fit" size="small" @click="showAdd(achievement.id)">添加</NButton>
       </div>
     </NCard>
     <NModal
@@ -46,8 +46,9 @@ const { data, refresh } = await useFetch("/api/v3/achievements/getAchievementLis
 
 const achievementList = computed(() => data.value?.achievementList);
 
-const { data: playerData } = await useFetch("/api/v3/players/list");
-const players = computed(() => playerData.value?.players ?? []);
+const { data: players } = useLazyFetch("/api/v4/players", {
+  query: { includeIgnored: "1" },
+});
 
 const addDialogVisible = ref(false);
 const addForm = ref<{

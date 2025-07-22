@@ -4,6 +4,7 @@ import { defineRecordStorage } from "./storage";
 
 const playerStorage = defineRecordStorage("players", ZPlayer);
 export const getStoragePlayer = playerStorage.get;
+export const getStoragePlayerList = playerStorage.getList;
 export const clearPlayerCache = playerStorage.clearCache;
 
 // ----------------------------------------------------------------------------

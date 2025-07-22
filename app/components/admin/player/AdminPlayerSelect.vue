@@ -8,6 +8,7 @@
     :render-tag="renderTag"
     :render-label="renderLabel"
     :placeholder="placeholderOverride"
+    :loading="!players || players.length === 0"
   />
 </template>
 
@@ -17,7 +18,7 @@ import { NText } from "#components";
 import Pinyin from "pinyin-match";
 
 const props = defineProps<{
-  players: Player[];
+  players?: Player[];
   nickname?: string;
   placeholder?: string;
 }>();
@@ -28,6 +29,7 @@ const { t } = useLocales();
 
 // 根据昵称匹配到的ID
 const nicknameBoundIds = computed(() => {
+  if (!props.players) return [];
   const nickname = props.nickname;
   if (!nickname) return [];
   return props.players
@@ -36,8 +38,9 @@ const nicknameBoundIds = computed(() => {
 });
 
 const options = computed(() => {
-  return [...props.players]
-    .sort((p1, p2) => {
+  if (!props.players) return [];
+  return props.players
+    .toSorted((p1, p2) => {
       if (nicknameBoundIds.value.includes(p1.id)) return -1;
       if (nicknameBoundIds.value.includes(p2.id)) return 1;
       return 0;

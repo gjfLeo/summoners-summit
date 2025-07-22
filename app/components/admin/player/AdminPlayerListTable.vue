@@ -2,6 +2,7 @@
   <NDataTable
     :data="data"
     :columns="columns"
+    virtual-scroll
     :loading="loading"
     flex-height
   />

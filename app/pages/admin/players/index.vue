@@ -2,14 +2,16 @@
   <div un-flex="~ col" class="min-h-content" style="gap: 1rem">
     <div un-flex="~ gap-2">
       <div><NInput v-model:value="filterText" clearable /></div>
-      <NButton type="primary" secondary @click="refresh()"><div class="i-mingcute:refresh-1-line" /></NButton>
+      <NButton type="primary" secondary :disabled="loading" @click="refresh()">
+        <div class="i-mingcute:refresh-1-line" />
+      </NButton>
     </div>
     <AdminPlayerListTable
       :data="filteredPlayers"
-      :loading="status === 'pending'"
+      :loading="loading"
       class="flex-table"
       @select-unique-name="playerUniqueNameDialog?.show($event)"
-      @merge-player-data="playerMergeDialog?.show($event, players)"
+      @merge-player-data="playerMergeDialog?.show($event, players!)"
     />
     <div v-show="false">
       <AdminPlayerUniqueNameDialog ref="playerUniqueNameDialog" @done="refresh()" />
@@ -28,13 +30,16 @@ useHead({ title: t("site.titles.admin.players") });
 const playerUniqueNameDialog = ref<InstanceType<typeof AdminPlayerUniqueNameDialog>>();
 const playerMergeDialog = ref<InstanceType<typeof AdminPlayerMergeDialog>>();
 
-const { data, status, refresh } = await useFetch("/api/v3/players/list");
-
-const players = computed(() => data.value?.players ?? []);
+const { data: players, pending: loading, refresh } = useLazyFetch("/api/v4/players", {
+  query: { includeIgnored: "1" },
+});
 
 const filterText = ref("");
 
 const filteredPlayers = computed(() => {
+  if (!players.value) {
+    return [];
+  }
   if (!filterText.value) {
     return players.value;
   }

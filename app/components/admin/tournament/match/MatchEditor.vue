@@ -264,8 +264,9 @@ defineExpose({
   edit,
 });
 
-const { data, refresh: refreshPlayers } = await useFetch("/api/v3/players/list");
-const players = computed(() => data.value?.players ?? []);
+const { data: players, refresh: refreshPlayers } = useLazyFetch("/api/v4/players", {
+  query: { includeIgnored: "1" },
+});
 async function confirm() {
   try {
     await formRef.value?.validate();
