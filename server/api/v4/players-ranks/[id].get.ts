@@ -4,8 +4,8 @@ import { getRanks } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "更新积分榜",
-    description: "根据ID更新积分榜。目前ID即游戏版本。",
+    summary: "查询积分榜",
+    description: "根据ID查询积分榜。目前ID即游戏版本。",
     parameters: [
       {
         name: "id",
