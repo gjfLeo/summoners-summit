@@ -50,6 +50,8 @@
 </template>
 
 <script lang="ts" setup>
+await useAsyncSharedData();
+
 const route = useRoute("team-teamId-gameVersion___zh");
 const teamId = route.params.teamId;
 const { gameVersion } = useGameVersion();

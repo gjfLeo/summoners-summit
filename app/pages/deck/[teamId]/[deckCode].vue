@@ -31,9 +31,7 @@
     </template>
 
     <NH2 id="similar">{{ t('main.deck.similar') }}</NH2>
-    <ClientOnly>
-      <Deck_SimilarDecks v-bind="{ teamId, deckCode }" />
-    </ClientOnly>
+    <Deck_SimilarDecks v-bind="{ teamId, deckCode }" />
 
     <SitePageAnchors>
       <NAnchorLink :title="t('main.deck.deckDetail')" href="#deck" />

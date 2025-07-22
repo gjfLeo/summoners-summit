@@ -20,7 +20,7 @@ const { teamId, deckCode } = toRefs(props);
 const { t } = useLocales();
 const { decodeDeck } = useDeckEncoder();
 
-const { data: decksStatsData } = await useFetch(`/api/v4/teams/${teamId.value}/decks-stats`, {
+const { data: decksStatsData } = useLazyFetch(`/api/v4/teams/${teamId.value}/decks-stats`, {
   query: {
     sortBy: "numGames",
   },
