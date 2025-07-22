@@ -4,7 +4,7 @@ import { getPlayerAchievements, getStoragePlayer } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "查询选手详情",
+    summary: "查询指定选手详细信息",
     description: "查询指定选手的详细信息。",
     parameters: [
       {

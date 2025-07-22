@@ -3,6 +3,7 @@ export default defineNitroPlugin((nitroApp) => {
     if (event.path === "/_docs/openapi.json") {
       const paths = (body as any).paths;
       delete paths[""];
+      delete paths["/api"];
       delete paths["/_docs/scalar"];
       delete paths["/_docs/swagger"];
       for (const [key, value] of Object.entries(paths)) {
