@@ -16,14 +16,24 @@
     <Team_CardUsages />
 
     <NH2 id="matchups">{{ t('main.team.matchups.title') }}</NH2>
-    <Team_Matchups
-      :games="games"
-      :game-version="gameVersion"
-      @view-games="handleViewGames"
-    />
+    <template v-if="games">
+      <Team_Matchups
+        :games="games"
+        :game-version="gameVersion"
+        @view-games="handleViewGames"
+      />
+    </template>
+    <template v-else-if="gamesLoading">
+      <NSpin size="large" />
+    </template>
 
     <NH2 id="games">{{ t('main.team.gameList.title') }}</NH2>
-    <Team_GameList ref="refGameList" :games="games" />
+    <template v-if="games">
+      <Team_GameList ref="refGameList" :games="games" />
+    </template>
+    <template v-else-if="gamesLoading">
+      <NSpin size="large" />
+    </template>
 
     <NH2 id="stats-by-version">{{ t('main.team.statsByVersion.title') }}</NH2>
     <Team_StatsByVersion />
@@ -53,9 +63,11 @@ const teamName = computed(() => characters.value.map(cardId => currentLocalized(
 useHead({ title: t("site.titles.main.team", [teamName.value]) });
 
 const { gameVersion } = useGameVersion();
-const { games } = await useApiGetGameList({
-  gameVersion: gameVersion.value,
-  teamId: teamId.value,
+const { data: games, pending: gamesLoading } = useLazyFetch("/api/v4/games", {
+  query: {
+    gameVersion: gameVersion.value,
+    teamId: teamId.value,
+  },
 });
 
 const refGameList = ref<InstanceType<typeof TeamGameList>>();

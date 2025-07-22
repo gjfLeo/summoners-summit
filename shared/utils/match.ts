@@ -12,7 +12,14 @@ export function getMatchWinner(match: Match, games: Record<GameId, Game>): NonNu
   return "DRAW";
 }
 
-export function getMirroredPlayer<T extends string | undefined>(player: T | "A" | "B"): T | "A" | "B" {
+type CanBeMirrored = Game | GameDetail | Match | MatchDetail;
+export type Mirrored<T extends CanBeMirrored> = { mirrored: true } & T;
+export type MaybeMirrored<T extends CanBeMirrored> = T | Mirrored<T>;
+export function isMirrored<T extends CanBeMirrored>(item: MaybeMirrored<T>): item is Mirrored<T> {
+  return "mirrored" in item;
+}
+
+function getMirroredPlayer<T extends string | undefined>(player: T | "A" | "B"): T | "A" | "B" {
   if (player === "A") {
     return "B";
   }
@@ -22,69 +29,79 @@ export function getMirroredPlayer<T extends string | undefined>(player: T | "A" 
   return player;
 }
 
-export function getMirroredGame(t: Game): Game {
+export function getMirroredGame(original: Game): Mirrored<Game> {
+  if ("mirrored" in original) {
+    throw new Error("Game already mirrored");
+  }
   return {
-    ...t,
-    playerADeck: t.playerBDeck,
-    playerBDeck: t.playerADeck,
-    starter: getMirroredPlayer(t.starter),
-    winner: getMirroredPlayer(t.winner),
+    ...original,
+    playerADeck: original.playerBDeck,
+    playerBDeck: original.playerADeck,
+    starter: getMirroredPlayer(original.starter),
+    winner: getMirroredPlayer(original.winner),
+    mirrored: true,
   };
 }
 
-export function getMirroredGameDetail(game: GameDetail): GameDetail {
+export function getMirroredGameDetail(original: GameDetail): Mirrored<GameDetail> {
+  if ("mirrored" in original) {
+    throw new Error("Game already mirrored");
+  }
   return {
-    ...game,
-    playerA: game.playerB,
-    playerB: game.playerA,
-    playerADeck: game.playerBDeck,
-    playerBDeck: game.playerADeck,
-    starter: getMirroredPlayer(game.starter),
-    winner: getMirroredPlayer(game.winner),
+    ...original,
+    playerA: original.playerB,
+    playerB: original.playerA,
+    playerADeck: original.playerBDeck,
+    playerBDeck: original.playerADeck,
+    starter: getMirroredPlayer(original.starter),
+    winner: getMirroredPlayer(original.winner),
+    mirrored: true,
   };
 }
 
-export function getMirroredMatch(t: Match): Match {
+function getMirroredBan(ban: Ban) {
+  switch (ban.banType) {
+    case "character":
+      return {
+        ...ban,
+        playerACardId: ban.playerBCardId,
+        playerBCardId: ban.playerACardId,
+      };
+    case "team":
+      return {
+        ...ban,
+        playerATeamId: ban.playerBTeamId,
+        playerBTeamId: ban.playerATeamId,
+      };
+  }
+}
+
+export function getMirroredMatch(original: Match): Mirrored<Match> {
+  if ("mirrored" in original) {
+    throw new Error("Match already mirrored");
+  }
   return {
-    ...t,
-    playerA: t.playerB,
-    playerB: t.playerA,
-    bans: t.bans?.map(b => (
-      b.banType === "character"
-        ? {
-            ...b,
-            playerACardId: b.playerBCardId,
-            playerBCardId: b.playerACardId,
-          }
-        : {
-            ...b,
-            playerATeamId: b.playerBTeamId,
-            playerBTeamId: b.playerATeamId,
-          })),
-    winnerOverride: getMirroredPlayer(t.winnerOverride),
+    ...original,
+    playerA: original.playerB,
+    playerB: original.playerA,
+    bans: original.bans?.map(getMirroredBan),
+    winnerOverride: getMirroredPlayer(original.winnerOverride),
+    mirrored: true,
   };
 }
 
-export function getMirroredMatchDetail(match: MatchDetail): MatchDetail {
+export function getMirroredMatchDetail(original: MatchDetail): Mirrored<MatchDetail> {
+  if ("mirrored" in original) {
+    throw new Error("Match already mirrored");
+  }
   return {
-    ...match,
-
-    playerA: match.playerB,
-    playerB: match.playerA,
-    bans: match.bans?.map(b => (
-      b.banType === "character"
-        ? {
-            ...b,
-            playerACardId: b.playerBCardId,
-            playerBCardId: b.playerACardId,
-          }
-        : {
-            ...b,
-            playerATeamId: b.playerBTeamId,
-            playerBTeamId: b.playerATeamId,
-          })),
-    winnerOverride: getMirroredPlayer(match.winnerOverride),
-    winner: getMirroredPlayer(match.winner),
+    ...original,
+    playerA: original.playerB,
+    playerB: original.playerA,
+    bans: original.bans?.map(getMirroredBan),
+    winnerOverride: getMirroredPlayer(original.winnerOverride),
+    winner: getMirroredPlayer(original.winner),
+    mirrored: true,
   };
 }
 

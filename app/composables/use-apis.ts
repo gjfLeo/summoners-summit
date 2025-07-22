@@ -1,11 +1,3 @@
-export async function useApiGetGameList(params: GetGameListParams) {
-  const { data, refresh } = await useFetch("/api/v3/games/list", { params });
-  return {
-    games: computed<GameDetail[]>(() => data.value?.games ?? []),
-    refresh,
-  };
-}
-
 export async function useApiGetTeamStatsRecords(query: { gameVersion: GameVersionId }) {
   const { data } = await useFetch("/api/v3/teams/stats", { query });
   return {

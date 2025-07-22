@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { fillStorageGameDetail, getStorageGameList } from "~~/server/service";
+import { fillStorageGameDetail, getStorageGameList, getStorageMatchRecord, getStorageTournamentRecord } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
     tags: ["Games"],
     summary: "查询对局列表",
-    description: "根据条件查询对局列表。<p>如果指定`teamId`或`deckCode`，符合筛选条件的一方会放在选手A的位置。<p>同时指定<code>teamId</code>或<code>deckCode</code>时筛选可能有问题。",
+    description: "根据条件查询对局列表。<p>如果指定`teamId`或`deckCode`，符合筛选条件的一方会放在选手A的位置。<p>即使对局双方均符合筛选条件，对局也只会出现一次。",
     parameters: [
       {
         name: "teamId",
@@ -83,37 +83,46 @@ const ZQuery = z.object({
 export default defineEventHandler(async (event) => {
   const { teamId, deckCode, gameVersion, limit, offset } = await getValidatedQuery(event, ZQuery.parse);
 
-  let games = await getStorageGameList();
-  if (teamId) {
-    games = games.filter(g => g.playerADeck.teamId === teamId || g.playerBDeck.teamId === teamId);
-  }
-  if (deckCode) {
-    games = games.filter(g => g.playerADeck.deckCode === deckCode || g.playerBDeck.deckCode === deckCode);
-  }
+  let games: MaybeMirrored<Game>[] = await getStorageGameList();
   if (gameVersion) {
     games = games.filter(g => g.gameVersion === gameVersion);
   }
+  if (teamId || deckCode) {
+    games = games.flatMap((g) => {
+      const aValid = (!teamId || g.playerADeck.teamId === teamId)
+        && (!deckCode || g.playerADeck.deckCode === deckCode);
+      if (aValid) {
+        return [g];
+      }
+      const bValid = (!teamId || g.playerBDeck.teamId === teamId)
+        && (!deckCode || g.playerBDeck.deckCode === deckCode);
+      if (bValid) {
+        return [getMirroredGame(g)];
+      }
+      return [];
+    });
+  }
+
+  const total = games.length;
+  games = games.slice(offset, offset + limit);
+
+  const matches = await getStorageMatchRecord(games.map(g => g.matchId));
+  const tournaments = await getStorageTournamentRecord([
+    ...new Set(Object.values(matches).map(m => m.tournamentId)),
+  ]);
 
   const gameDetails = await Promise.all(
-    games
-      .map(async (game) => {
-        const gameDetail = await fillStorageGameDetail(game);
-        if ((teamId && game.playerADeck.teamId === teamId)
-          || (deckCode && game.playerADeck.deckCode === deckCode)) {
-          return gameDetail;
-        }
-        if ((teamId && game.playerBDeck.teamId === teamId)
-          || (deckCode && game.playerBDeck.deckCode === deckCode)) {
-          return getMirroredGameDetail(gameDetail);
-        }
-        return gameDetail;
-      }),
+    games.map(async (g) => {
+      const match = matches[g.matchId];
+      const tournament = tournaments[match.tournamentId];
+      return await fillStorageGameDetail(g, { match, tournament });
+    }),
   );
 
   setHeaders(event, {
-    "X-Pagination-Total": gameDetails.length,
+    "X-Pagination-Total": total,
     "X-Pagination-Limit": limit,
     "X-Pagination-Offset": offset,
   });
-  return gameDetails.slice(offset, offset + limit);
+  return gameDetails;
 });

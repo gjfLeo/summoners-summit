@@ -7,6 +7,7 @@ import { defineRecordStorage } from "./storage";
 const tournamentStorage = defineRecordStorage("tournaments", ZTournament);
 export const getStorageTournament = tournamentStorage.get;
 export const getStorageTournamentList = tournamentStorage.getList;
+export const getStorageTournamentRecord = tournamentStorage.getRecord;
 export const clearTournamentCache = tournamentStorage.clearCache;
 
 export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {

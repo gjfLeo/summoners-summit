@@ -7,6 +7,7 @@ import { getStorageTournament, getTournament, saveTournament } from "./tournamen
 const matchStorage = defineRecordStorage("matches", ZMatch);
 export const getStorageMatch = matchStorage.get;
 export const getStorageMatchList = matchStorage.getList;
+export const getStorageMatchRecord = matchStorage.getRecord;
 export const clearMatchCache = matchStorage.clearCache;
 
 export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDetail | undefined> {
