@@ -41,7 +41,7 @@ export function defineRecordStorage<K extends string, V>(
       ) as Record<K, V>;
     },
     {
-      maxAge: 0,
+      maxAge: 60 * 60 * 24 * 365,
       group: "storage",
       name: path,
       getKey: ({ group }) => group,

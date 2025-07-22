@@ -54,7 +54,7 @@ export const decodeDeck = defineCachedFunction(
     return { characterCards, actionCards };
   },
   {
-    maxAge: 0,
+    maxAge: 60 * 60 * 24 * 365,
     name: "decodeDeck",
     getKey: deckCode => toBase64Url(deckCode),
   },
