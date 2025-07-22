@@ -2,11 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import fse from "fs-extra";
 
+/** @deprecated */
 const dataCache: Record<string, unknown> = {};
 
 /** @deprecated */
 export function readData<R, P extends string = string>(dataPath: P): R | undefined;
+/** @deprecated */
 export function readData<R, P extends string = string>(dataPath: P, defaultData: R): R;
+/** @deprecated */
 export function readData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
   if (dataPath.startsWith("/")) {
     console.warn("Data path should not start with a slash. It will be treated as relative to the server/data directory.");
@@ -45,6 +48,7 @@ export function readDataList<R, P extends string = string>(dataPath: P): R[] {
     });
 }
 
+/** @deprecated */
 export function writeData<R, P extends string = string>(dataPath: P, data: R): void {
   if (dataPath.startsWith("/")) {
     console.warn("Data path should not start with a slash. It will be treated as relative to the server/data directory.");
@@ -62,6 +66,7 @@ export function writeData<R, P extends string = string>(dataPath: P, data: R): v
   fse.writeJsonSync(fullPath, data, { spaces: 2 });
 }
 
+/** @deprecated */
 export function deleteData<P extends string = string>(dataPath: P): void {
   if (dataPath.startsWith("/")) {
     console.warn("Data path should not start with a slash. It will be treated as relative to the server/data directory.");
@@ -78,33 +83,28 @@ export function deleteData<P extends string = string>(dataPath: P): void {
   fse.removeSync(fullPath);
 }
 
-export function readTempData<R, P extends string = string>(dataPath: P): R | undefined;
-export function readTempData<R, P extends string = string>(dataPath: P, defaultData: R): R;
-export function readTempData<R, P extends string = string>(dataPath: P, defaultData?: R): R | undefined {
-  if (dataPath.startsWith("/")) {
-    console.warn("Data path should not start with a slash. It will be treated as relative to the server/temp directory.");
+function useStorageByDataPath(dataPath: string) {
+  if (!dataPath.endsWith(".json")) {
+    dataPath = `${dataPath}.json`;
   }
-  if (dataPath.endsWith(".json")) {
-    console.warn("Data path should not end with a .json extension. It will be added automatically.");
-  }
-
-  let data = defaultData;
-  const filePath = path.resolve("server/temp", `${dataPath}.json`);
-  if (fse.existsSync(filePath)) {
-    data = fse.readJsonSync(filePath) as R;
-  }
-
-  return data;
+  const key = ["assets:data", ...dataPath.split("/")].filter(Boolean).join(":");
+  return useStorage(key);
 }
 
-export function writeTempData<R, P extends string = string>(dataPath: P, data: R): void {
-  if (dataPath.startsWith("/")) {
-    console.warn("Data path should not start with a slash. It will be treated as relative to the server/temp directory.");
-  }
-  if (dataPath.endsWith(".json")) {
-    console.warn("Data path should not end with a .json extension. It will be added automatically.");
-  }
-  const fullPath = path.resolve("server/temp", `${dataPath}.json`);
-  fse.ensureDirSync(path.dirname(fullPath));
-  fse.writeJsonSync(fullPath, data, { spaces: 2 });
+export function readDataV2<R>(dataPath: string): Promise<R | undefined>;
+export function readDataV2<R>(dataPath: string, defaultData: R): Promise<R>;
+export async function readDataV2<R>(dataPath: string, defaultData?: R): Promise<R | undefined> {
+  const storage = useStorageByDataPath(dataPath);
+  const data = await storage.getItem("");
+  return (data as R) ?? defaultData;
+}
+
+export async function writeDataV2<R>(dataPath: string, data: R): Promise<void> {
+  const storage = useStorageByDataPath(dataPath);
+  await storage.setItem("", `${JSON.stringify(data, null, 2)}\n`);
+}
+
+export async function deleteDataV2(dataPath: string): Promise<void> {
+  const storage = useStorageByDataPath(dataPath);
+  await storage.removeItem("");
 }
