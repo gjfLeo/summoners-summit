@@ -88,6 +88,7 @@ export function defineRecordStorage<K extends string, V>(
   };
 }
 
+/** @deprecated */
 export function defineGetMiscStorage<T>(
   path: string,
   zodType: ZodType<T>,

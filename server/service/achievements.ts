@@ -1,12 +1,12 @@
-import { defineGetMiscStorage } from "./storage";
-
 /** @deprecated */
 export function getAchievementList(): Achievement[] {
   return ZAchievement.array().parse(readData<Achievement[]>("misc/achievements", []));
 }
 
-export const getStorageAchievementList: () => Promise<Achievement[]>
-  = defineGetMiscStorage("achievements", ZAchievement.array());
+export async function getStorageAchievementList(): Promise<Achievement[]> {
+  const data = await readDataV2("misc/achievements", []);
+  return ZAchievement.array().parse(data);
+}
 
 export function saveAchievementList(achievementList: Achievement[]): void {
   writeData("misc/achievements", ZAchievement.array().parse(achievementList));
