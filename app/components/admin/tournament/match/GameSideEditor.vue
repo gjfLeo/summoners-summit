@@ -52,9 +52,7 @@ const deck = defineModel<MatchSaveParams["games"][number]["playerADeck"]>("deck"
 const starter = defineModel<Game["starter"]>("starter", { required: true });
 const winner = defineModel<Game["winner"]>("winner", { required: true });
 
-const { awaitData } = useSharedData();
-await awaitData();
-const { encodeDeck, decodeDeck } = useDeckEncoder();
+const { encodeDeck, decodeDeck } = await useAsyncDeckEncoder();
 
 const characterCardSelectorRefs = ref<(InstanceType<typeof CharacterCardSelector> | null)[]>([]);
 const actionCardsEditor = inject<Ref<InstanceType<typeof ActionCardsEditor>>>("actionCardsEditor");

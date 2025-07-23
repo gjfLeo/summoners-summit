@@ -18,7 +18,7 @@ const props = defineProps<{
 const { teamId, deckCode } = toRefs(props);
 
 const { t } = useLocales();
-const { decodeDeck } = useDeckEncoder();
+const { decodeDeck } = await useAsyncDeckEncoder();
 
 const { data: decksStatsData } = useLazyFetch(`/api/v4/teams/${teamId.value}/decks-stats`, {
   query: {

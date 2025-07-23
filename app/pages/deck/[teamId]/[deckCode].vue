@@ -4,7 +4,7 @@
     <div un-grid="~ gap-4 cols-[1fr_auto_1fr]">
       <div />
       <div un-grid="~ gap-2 cols-[repeat(3,minmax(0,5rem))]">
-        <template v-for="(card, i) in characterCards" :key="i">
+        <template v-for="(card, i) in cards.characterCards" :key="i">
           <CardAvatar :card="card" class="w-5rem!" />
         </template>
       </div>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <!-- 行动牌 -->
-    <DeckActionList :cards="actionCards" class="mt" />
+    <DeckActionList :cards="cards.actionCards" class="mt" />
 
     <NH2 id="game-list">{{ t('main.deck.gameList') }}</NH2>
     <template v-if="games && games.length">
@@ -49,17 +49,8 @@ const deckCode = toBase64(route.params.deckCode);
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.deck") });
 
-// const { awaitData } = useSharedData();
-const { decodeDeck } = useDeckEncoder();
-
-const characterCards = ref<CardId[]>([]);
-const actionCards = ref<CardId[]>([]);
-onMounted(() => {
-  if (!import.meta.client) return;
-  const cards = decodeDeck(deckCode);
-  characterCards.value = cards.characterCards;
-  actionCards.value = cards.actionCards;
-});
+const { decodeDeck } = await useAsyncDeckEncoder();
+const cards = decodeDeck(deckCode);
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);
 

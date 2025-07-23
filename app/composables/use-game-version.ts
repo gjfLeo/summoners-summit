@@ -5,10 +5,10 @@ interface UseGameVersionOptions {
 }
 
 export function useGameVersion(options?: UseGameVersionOptions) {
-  const { gameVersionLatest, awaitData } = useSharedData();
+  const { gameVersionLatest, initData } = useSharedData();
   const gameVersion = useLocalStorage<GameVersionId>("gameVersion", gameVersionLatest.value);
 
-  awaitData().then(() => {
+  initData().then(() => {
     if (gameVersion.value === "") {
       gameVersion.value = gameVersionLatest.value;
     }

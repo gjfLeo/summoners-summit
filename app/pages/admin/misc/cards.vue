@@ -42,7 +42,7 @@ const message = useMessage();
 const {
   characterCardIds,
   actionCardIds,
-  fetchCardData,
+  fetchCardsData,
   fetchGameVersionData,
 } = useSharedData();
 
@@ -53,7 +53,7 @@ async function updateData() {
     loading.destroy();
     message.success(t("admin.message.SUCCESS"));
     return Promise.all([
-      fetchCardData(),
+      fetchCardsData(),
       fetchGameVersionData(),
     ]);
   }

@@ -50,14 +50,12 @@
 </template>
 
 <script lang="ts" setup>
-await useAsyncSharedData();
-
 const route = useRoute("team-teamId-gameVersion___zh");
 const teamId = route.params.teamId;
 const { gameVersion } = useGameVersion();
 
 const { t } = useLocales();
-const { decodeDeck } = useDeckEncoder();
+const { decodeDeck } = await useAsyncDeckEncoder();
 
 const { data: decksData, pending: decksLoading } = await useFetch(`/api/v4/teams/${teamId}/decks-stats`, {
   query: {

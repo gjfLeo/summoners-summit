@@ -1,6 +1,7 @@
-import { defineGetMiscStorage } from "./storage";
-
-const getGameVersionData = defineGetMiscStorage("game-versions", ZGameVersionData);
+async function getGameVersionData() {
+  const data = await readDataV2("misc/game-versions");
+  return ZGameVersionData.parse(data);
+}
 
 export async function getGameVersionList(): Promise<GameVersion[]> {
   const gameVersionData = await getGameVersionData();
