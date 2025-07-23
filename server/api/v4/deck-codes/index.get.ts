@@ -50,6 +50,7 @@ export default defineEventHandler(async (event): Promise<DeckCode[]> => {
   }
   else {
     const gameVersionList = await getGameVersionList();
+    gameVersionList.sort((a, b) => b.id.localeCompare(a.id));
     for (const gameVersion of gameVersionList) {
       const deckCodes = await getDeckCodes({ gameVersion: gameVersion.id });
       if (deckCodes.length > 0) {

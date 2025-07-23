@@ -1,22 +1,32 @@
 <template>
-  <div class="h-16rem">
-    <VChart :option="option" autoresize @mouseover="handleMouseover" @mouseout="handleMouseout" />
-  </div>
+  <template v-if="!loading">
+    <div class="h-16rem">
+      <VChart :option="option" autoresize @mouseover="handleMouseover" @mouseout="handleMouseout" />
+    </div>
+  </template>
+  <template v-else>
+    <NSpin size="large" />
+  </template>
 </template>
 
 <script lang="ts" setup>
 import type { ECElementEvent } from "echarts/core";
 import { divide } from "mathjs/number";
 
-const route = useRoute("team-teamId-gameVersion___zh");
-const teamId = route.params.teamId;
+const props = defineProps<{
+  teamId: DeckTeamId;
+  gameVersion: GameVersionId;
+}>();
 
 const { t } = useLocales();
 
-const { statsByVersion } = await useApiGetTeamStatsByVersion({ teamId });
+const { data: gameVersionStats, pending: loading } = useLazyFetch(`/api/v4/teams/${props.teamId}/game-version-stats`);
 
 const data = computed(() => {
-  return statsByVersion.value.map(item => ({
+  if (!gameVersionStats.value) {
+    return [];
+  }
+  return gameVersionStats.value.map(item => ({
     ...item,
     numGamesLose: item.numGames - item.numGamesWin,
     winRate: divide(item.numGamesWin, item.numGames),

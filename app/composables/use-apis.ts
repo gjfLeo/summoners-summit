@@ -30,13 +30,6 @@ export async function useApiGetActionCardStats(query: GetActionCardStatsParams) 
   };
 }
 
-export async function useApiGetTeamStatsByVersion(query: GetTeamStatsByVersionParams) {
-  const { data } = await useFetch("/api/v3/teams/getStatsByVersion", { query });
-  return {
-    statsByVersion: computed(() => data.value?.statsByVersion ?? []),
-  };
-}
-
 export async function useApiGetOverviewStats() {
   const { data } = await useFetch("/api/v3/overview", {
     deep: true,

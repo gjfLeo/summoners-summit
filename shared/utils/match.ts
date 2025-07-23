@@ -1,10 +1,11 @@
-export function getMatchWinner(match: Match, games: Record<GameId, Game>): NonNullable<Match["winnerOverride"]> {
+export function getMatchWinner(match: MaybeMirrored<Match>, games: Record<GameId, MaybeMirrored<Game>>): NonNullable<Match["winnerOverride"]> {
   if (match.winnerOverride) return match.winnerOverride;
-  const abDiff = match.gameIds.map(gameId => games[gameId])
-    .map(game => game.winner)
-    .reduce((diff, winner) => {
-      if (winner === "A") return diff + 1;
-      if (winner === "B") return diff - 1;
+  const abDiff = match.gameIds
+    .map(gameId => games[gameId])
+    .reduce((diff, game) => {
+      const mirrorSame = isMirrored(match) === isMirrored(game);
+      if (game.winner === "A") return diff + (mirrorSame ? 1 : -1);
+      if (game.winner === "B") return diff - (mirrorSame ? 1 : -1);
       return diff;
     }, 0);
   if (abDiff > 0) return "A";
@@ -16,10 +17,10 @@ type CanBeMirrored = Game | GameDetail | Match | MatchDetail;
 export type Mirrored<T extends CanBeMirrored> = { mirrored: true } & T;
 export type MaybeMirrored<T extends CanBeMirrored> = T | Mirrored<T>;
 export function isMirrored<T extends CanBeMirrored>(item: MaybeMirrored<T>): item is Mirrored<T> {
-  return "mirrored" in item;
+  return "mirrored" in item && item.mirrored === true;
 }
 
-function getMirroredPlayer<T extends string | undefined>(player: T | "A" | "B"): T | "A" | "B" {
+export function getMirroredPlayer<T extends string | undefined>(player: T | "A" | "B"): T | "A" | "B" {
   if (player === "A") {
     return "B";
   }

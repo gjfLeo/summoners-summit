@@ -27,7 +27,17 @@ export default defineEventHandler(async (event) => {
 
   const ranks = await getRanksByGameVersion(gameVersion);
 
-  const playerStatsRecord: Record<PlayerId, PlayerStats> = {};
+  const playerStatsRecord: Record<PlayerId, {
+    playerId: PlayerId;
+    uniqueName: string;
+    aliases: string[];
+    numMatches: number;
+    numMatchesWin: number;
+    numGames: number;
+    numGamesWin: number;
+    rank?: number;
+    score?: number;
+  }> = {};
   async function getRecordItem(playerId: PlayerId) {
     const item = playerStatsRecord[playerId];
     if (item) {

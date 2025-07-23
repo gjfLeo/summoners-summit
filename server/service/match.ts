@@ -27,12 +27,19 @@ export async function getStorageMatchDetail(matchId: MatchId): Promise<MatchDeta
   if (!match) return;
   return await fillStorageMatchDetail(match);
 }
-export async function fillStorageMatchDetail(match: Match): Promise<MatchDetail> {
-  const tournament = (await getStorageTournament(match.tournamentId))!;
+
+export async function fillStorageMatchDetail(
+  match: MaybeMirrored<Match>,
+  cache?: {
+    tournament?: Tournament;
+    games?: Record<GameId, Game>;
+  },
+): Promise<MaybeMirrored<MatchDetail>> {
+  const tournament = cache?.tournament ?? (await getStorageTournament(match.tournamentId))!;
   const stage = tournament.stages[match.stageIndex];
   const part = stage.parts[match.partIndex];
 
-  const games = await getStorageGameRecord(match.gameIds);
+  const games = cache?.games ?? (await getStorageGameRecord(match.gameIds));
   const winner = getMatchWinner(match, games);
 
   return {

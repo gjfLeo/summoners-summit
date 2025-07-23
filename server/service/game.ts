@@ -38,11 +38,17 @@ export async function getStorageGameDetail(gameId: GameId): Promise<GameDetail |
   return await fillStorageGameDetail(game);
 }
 
-export async function fillStorageGameDetail(game: MaybeMirrored<Game>, cache?: { match?: Match; tournament?: Tournament }): Promise<MaybeMirrored<GameDetail>> {
+export async function fillStorageGameDetail(
+  game: MaybeMirrored<Game>,
+  cache?: {
+    match?: MaybeMirrored<Match>;
+    tournament?: Tournament;
+  },
+): Promise<MaybeMirrored<GameDetail>> {
   const { match: cacheMatch, tournament: cacheTournament } = cache ?? {};
 
   let match: MaybeMirrored<Match> = cacheMatch ?? (await getStorageMatch(game.matchId))!;
-  if (isMirrored(game)) {
+  if (isMirrored(game) && !isMirrored(match)) {
     match = getMirroredMatch(match);
   }
 

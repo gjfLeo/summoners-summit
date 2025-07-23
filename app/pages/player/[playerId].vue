@@ -61,7 +61,7 @@ const { data: player } = await useFetch(`/api/v4/players/${playerId}/details`);
 
 useHead({ title: player.value ? player.value.uniqueName : t("site.titles.main.player") });
 
-const { data: statsByVersion } = await useFetch(`/api/v4/players/${playerId}/stats-by-version`);
+const { data: statsByVersion } = await useFetch(`/api/v4/players/${playerId}/game-version-stats`);
 
 const { data: matches, pending: matchesLoading } = useLazyFetch("/api/v4/matches", {
   query: { playerId, limit: 10 },

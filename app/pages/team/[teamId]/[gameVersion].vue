@@ -3,10 +3,10 @@
     <div id="team" un-grid="~ md:cols-[auto_1fr] items-end gap-8">
       <div un-grid="~ cols-[repeat(3,minmax(0,8rem))] gap-2">
         <div v-for="cardId in characters" :key="cardId">
-          <CardImage class="" :card="cardId" />
+          <CardImage :card="cardId" />
         </div>
       </div>
-      <Team_BasicStats />
+      <TeamBasicStats v-bind="{ teamId, gameVersion }" />
     </div>
 
     <NH2 id="decks">{{ t('main.team.decks') }}</NH2>
@@ -16,16 +16,7 @@
     <Team_CardUsages />
 
     <NH2 id="matchups">{{ t('main.team.matchups.title') }}</NH2>
-    <template v-if="games">
-      <Team_Matchups
-        :games="games"
-        :game-version="gameVersion"
-        @view-games="handleViewGames"
-      />
-    </template>
-    <template v-else-if="gamesLoading">
-      <NSpin size="large" />
-    </template>
+    <TeamMatchupStats v-bind="{ teamId, gameVersion }" @view-games="handleViewGames" />
 
     <NH2 id="games">{{ t('main.team.gameList.title') }}</NH2>
     <template v-if="games">
@@ -36,7 +27,7 @@
     </template>
 
     <NH2 id="stats-by-version">{{ t('main.team.statsByVersion.title') }}</NH2>
-    <Team_StatsByVersion />
+    <TeamGameVersionStats v-bind="{ teamId, gameVersion }" />
 
     <SitePageAnchors ref="refAnchors">
       <NAnchorLink :title="t('main.team.details')" href="#team" />

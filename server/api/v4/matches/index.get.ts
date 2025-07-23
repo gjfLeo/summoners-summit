@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { getStorageGameList, getStorageMatchDetail, getStorageMatchList } from "~~/server/service";
+import { fillStorageMatchDetail, getStorageGameRecord, getStorageMatchList, getStorageTournamentRecord } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -38,30 +38,44 @@ export default defineEventHandler(async (event) => {
 
   let matches = await getStorageMatchList();
   if (playerId) {
-    matches = matches.filter(m => m.playerA.playerId === playerId || m.playerB.playerId === playerId);
+    matches = matches.flatMap((m) => {
+      if (m.playerA.playerId === playerId) return [m];
+      if (m.playerB.playerId === playerId) return [getMirroredMatch(m)];
+      return [];
+    });
   }
   if (gameVersion) {
     matches = matches.filter(m => m.gameVersion === gameVersion);
   }
   matches = matches.filter(m => m.gameIds.length > 0);
+  matches = matches.sort((a, b) => {
+    if (a.gameVersion !== b.gameVersion) {
+      return b.gameVersion.localeCompare(a.gameVersion);
+    }
+    return a.id.localeCompare(b.id);
+  });
   matches = matches.slice(offset, offset + limit);
 
-  const details: (MatchDetail & { games: Record<GameId, Game> })[] = [];
-  for (const match of matches) {
-    const detail = (await getStorageMatchDetail(match.id))!;
-    const games = await getStorageGameList(match.gameIds);
-    if (playerId && match.playerB.playerId === playerId) {
-      details.push({
-        ...getMirroredMatchDetail(detail),
-        games: Object.fromEntries(games.map(game => [game.id, game])),
+  const tournaments = await getStorageTournamentRecord([...new Set(matches.map(m => m.tournamentId))]);
+  const games = await getStorageGameRecord([...new Set(matches.flatMap(m => m.gameIds))]);
+
+  const details = await Promise.all(
+    matches.map(async (match) => {
+      const matchDetail = await fillStorageMatchDetail(match, {
+        tournament: tournaments[match.tournamentId],
+        games,
       });
-    }
-    else {
-      details.push({
-        ...detail,
-        games: Object.fromEntries(games.map(game => [game.id, getMirroredGame(game)])),
-      });
-    }
-  }
+      return {
+        ...matchDetail,
+        games: Object.fromEntries(
+          matchDetail.gameIds.map((gameId) => {
+            const game = games[gameId];
+            return [gameId, isMirrored(match) ? getMirroredGame(game) : game];
+          }),
+        ),
+      };
+    }),
+  );
+
   return details;
 });

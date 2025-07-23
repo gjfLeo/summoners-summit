@@ -1,9 +1,14 @@
 <template>
-  <NDataTable
-    :data="data"
-    :columns="columns"
-    max-height="24rem"
-  />
+  <template v-if="!loading">
+    <NDataTable
+      :data="data"
+      :columns="columns"
+      max-height="24rem"
+    />
+  </template>
+  <template v-else>
+    <NSpin size="large" />
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -11,60 +16,32 @@ import { CommonIconButton, NTooltip, NuxtLinkLocale, RenderWinRate, TeamAvatars 
 import { divide } from "mathjs/number";
 
 const props = defineProps<{
-  games: GameDetail[];
+  teamId: DeckTeamId;
   gameVersion: GameVersionId;
 }>();
 const emit = defineEmits<{
   (e: "viewGames", teamId: DeckTeamId): void;
 }>();
 
-const { games: gameList, gameVersion } = toRefs(props);
-
 const { t } = useLocales();
 
+const { data: matchupStatsData, pending: loading } = useLazyFetch(`/api/v4/teams/${props.teamId}/matchup-stats`, {
+  query: { gameVersion: props.gameVersion },
+});
+
 const data = computed(() => {
-  const record: Record<DeckTeamId, {
-    opponentTeamId: DeckTeamId;
-    numGames: number;
-    numGamesWin: number;
-    numGamesStarter: number;
-    numGamesStarterWin: number;
-    numGamesFollower: number;
-    numGamesFollowerWin: number;
-  }> = {};
-  function getRecord(teamId: DeckTeamId) {
-    return record[teamId] ??= {
-      opponentTeamId: teamId,
-      numGames: 0,
-      numGamesWin: 0,
-      numGamesStarter: 0,
-      numGamesStarterWin: 0,
-      numGamesFollower: 0,
-      numGamesFollowerWin: 0,
-    };
+  if (!matchupStatsData.value) {
+    return [];
   }
 
-  gameList.value.forEach((game) => {
-    const record = getRecord(game.playerBDeck.teamId);
-    record.numGames++;
-    if (game.winner === "A") {
-      record.numGamesWin++;
-    }
-    if (game.starter === "A") {
-      record.numGamesStarter++;
-      if (game.winner === "A") {
-        record.numGamesStarterWin++;
-      }
-    }
-    if (game.starter === "B") {
-      record.numGamesFollower++;
-      if (game.winner === "A") {
-        record.numGamesFollowerWin++;
-      }
-    }
-  });
-
-  return Object.values(record)
+  return matchupStatsData.value
+    .map((item) => {
+      return {
+        ...item,
+        numGamesFollower: item.numGames - item.numGamesStarter,
+        numGamesFollowerWin: (item.numGames - item.numGamesStarter) - (item.numGamesWin - item.numGamesStarterWin),
+      };
+    })
     .map((item) => {
       return {
         ...item,
@@ -73,8 +50,7 @@ const data = computed(() => {
         followerWinRate: divide(item.numGamesFollowerWin, item.numGamesFollower),
       };
     })
-    .sort(sorter("numGames"))
-    .reverse();
+    .sort((a, b) => b.numGames - a.numGames);
 });
 
 const columns: DataTableColumn<typeof data.value[0]>[] = [
@@ -87,7 +63,7 @@ const columns: DataTableColumn<typeof data.value[0]>[] = [
     render: row => h(
       NuxtLinkLocale,
       {
-        to: { path: `/team/${row.opponentTeamId}/${getGameVersionPath(gameVersion.value)}` },
+        to: { path: `/team/${row.opponentTeamId}/${getGameVersionPath(props.gameVersion)}` },
         prefetch: false,
       },
       () => h(TeamAvatars, { team: row.opponentTeamId }),
