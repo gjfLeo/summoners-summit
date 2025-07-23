@@ -21,7 +21,8 @@ import {
 
 const cardIds = defineModel<CardId[]>("cardIds", { required: true });
 
-const { decodeDeck } = await useAsyncDeckEncoder();
+await useAsyncSharedData();
+const { decodeDeck } = useDeckEncoder();
 
 const characterCardSelectorRefs = ref<(InstanceType<typeof CharacterCardSelector> | null)[]>([]);
 

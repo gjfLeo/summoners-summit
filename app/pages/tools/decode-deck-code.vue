@@ -30,7 +30,8 @@ useHead({ title: t("site.titles.main.decodeDeckCode") });
 
 const message = useMessage();
 
-const { decodeDeck } = await useAsyncDeckEncoder();
+await useAsyncSharedData();
+const { decodeDeck } = useDeckEncoder();
 
 const shareCode = ref("");
 const result = ref<DeckCards>();

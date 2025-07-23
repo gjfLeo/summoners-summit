@@ -49,7 +49,8 @@ const deckCode = toBase64(route.params.deckCode);
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.deck") });
 
-const { decodeDeck } = await useAsyncDeckEncoder();
+await useAsyncSharedData();
+const { decodeDeck } = useDeckEncoder();
 const cards = decodeDeck(deckCode);
 
 const { copy: copyDeckCode } = useCopyDeckCode(deckCode);

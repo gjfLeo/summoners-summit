@@ -34,8 +34,3 @@ export function useDeckEncoder() {
     decodeDeck,
   };
 }
-
-export async function useAsyncDeckEncoder() {
-  await useAsyncSharedData();
-  return useDeckEncoder();
-}

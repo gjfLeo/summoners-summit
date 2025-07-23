@@ -55,7 +55,9 @@ const teamId = route.params.teamId;
 const { gameVersion } = useGameVersion();
 
 const { t } = useLocales();
-const { decodeDeck } = await useAsyncDeckEncoder();
+
+await useAsyncSharedData();
+const { decodeDeck } = useDeckEncoder();
 
 const { data: decksData, pending: decksLoading } = await useFetch(`/api/v4/teams/${teamId}/decks-stats`, {
   query: {
