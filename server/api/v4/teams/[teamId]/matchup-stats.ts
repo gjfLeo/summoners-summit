@@ -95,10 +95,9 @@ const getTeamMatchupStats = defineCachedFunction(
       ));
   },
   {
-    maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
+    maxAge: serverMaxAge,
     name: "getTeamMatchupStats",
-    getKey: ({ teamId, gameVersion }) =>
-      [teamId, gameVersion].filter(Boolean).join(":"),
+    getKey: ({ teamId, gameVersion }) => getKey(teamId, gameVersion),
   },
 );
 

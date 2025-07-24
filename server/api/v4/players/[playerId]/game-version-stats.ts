@@ -101,9 +101,9 @@ const getPlayerGameVersionStats = defineCachedFunction(
     return list;
   },
   {
-    maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
+    maxAge: serverMaxAge,
     name: "getPlayerGameVersionStats",
-    getKey: ({ playerId }) => playerId,
+    getKey: ({ playerId }) => getKey(playerId),
   },
 );
 

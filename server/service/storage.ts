@@ -92,22 +92,3 @@ export function defineRecordStorage<K extends string, V>(
     clearCache,
   };
 }
-
-/** @deprecated */
-export function defineGetMiscStorage<T>(
-  path: string,
-  zodType: ZodType<T>,
-): () => Promise<T> {
-  return defineCachedFunction(
-    async (): Promise<T> => {
-      const storage = await useStorage("assets:data").getItem(`misc:${path}.json`);
-      return zodType.parse(storage);
-    },
-    {
-      maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,
-      group: "storage",
-      name: path,
-      getKey: () => "default",
-    },
-  );
-}

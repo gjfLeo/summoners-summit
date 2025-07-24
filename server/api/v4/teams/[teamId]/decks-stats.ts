@@ -1,5 +1,5 @@
 import z from "zod";
-import { getTeamDecksStats } from "~~/server/service";
+import { getActionCardCountRecord, getStorageGameList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -61,16 +61,112 @@ const ZQuery = z.object({
   sortBy: z.enum(["numGames", "numGamesWin", "distanceToAverage"]).optional(),
 });
 
+/**
+ * 计算胜率时，平局视为负
+ */
+const getTeamDecksStats = defineCachedFunction(
+  async ({ gameVersion, teamId }: {
+    teamId: DeckTeamId;
+    gameVersion?: GameVersionId;
+  }) => {
+    let games = await getStorageGameList();
+    if (gameVersion) {
+      games = games.filter(g => g.gameVersion === gameVersion);
+    }
+
+    const decks: { deckCode: DeckCode; win: boolean }[] = [];
+    games.forEach((game) => {
+      for (const p of ["A", "B"] as const) {
+        const deck = game[`player${p}Deck`];
+        if (deck.deckCode && deck.teamId === teamId) {
+          decks.push({
+            deckCode: deck.deckCode,
+            win: game.winner === p,
+          });
+        }
+      }
+    });
+
+    const decksRecord: Record<DeckCode, {
+      deckCode: DeckCode;
+      numGames: number;
+      numGamesWin: number;
+      cardCountRecord: Record<CardId, number>;
+    }> = {};
+    async function getRecordItem(deckCode: DeckCode) {
+      if (decksRecord[deckCode]) {
+        return decksRecord[deckCode];
+      }
+      return decksRecord[deckCode] = {
+        deckCode,
+        numGames: 0,
+        numGamesWin: 0,
+        cardCountRecord: await getActionCardCountRecord(deckCode),
+      };
+    }
+    await runParallel(
+      new Set(decks.map(d => d.deckCode)),
+      getRecordItem,
+      { concurrency: 10 },
+    );
+
+    await runParallel(
+      new Set(decks),
+      async (deck) => {
+        const recordItem = await getRecordItem(deck.deckCode);
+        recordItem.numGames++;
+        if (deck.win) {
+          recordItem.numGamesWin++;
+        }
+      },
+      { concurrency: 10 },
+    );
+
+    // 胜利对局的额外加权，0表示不考虑
+    const winWeight = 1;
+    const maxScorePoint = decks.length + decks.filter(d => d.win).length * winWeight;
+    // 卡牌的分数，0 ~ 2
+    const cardScoreRecord: Record<CardId, number> = {};
+    Object.values(decksRecord).forEach((deck) => {
+      const cardCountRecord = deck.cardCountRecord;
+      Object.entries(cardCountRecord)
+        .forEach(([cardId, count]) => {
+          cardScoreRecord[cardId] ??= 0;
+          cardScoreRecord[cardId] += count * (deck.numGames + (deck.numGamesWin * winWeight)) / maxScorePoint;
+        });
+    });
+
+    const list = Object.values(decksRecord)
+      .map((deck) => {
+        return {
+          deckCode: deck.deckCode as DeckCode,
+          numGames: deck.numGames,
+          numGamesWin: deck.numGamesWin,
+          distanceToAverage: Object.entries(cardScoreRecord)
+            .map(([cardId, score]) => Math.abs(score - (deck.cardCountRecord[cardId] ?? 0)))
+            .reduce((acc, cur) => acc + cur, 0),
+        };
+      });
+    list.sort(sortBy(
+      { field: "numGames", order: "desc" },
+      { field: "numGamesWin", order: "desc" },
+      { field: "distanceToAverage" },
+      { field: "deckCode" },
+    ));
+    return list;
+  },
+  {
+    maxAge: serverMaxAge,
+    name: "getTeamDecksStats",
+    getKey: ({ teamId, gameVersion }) => getKey(teamId, gameVersion),
+  },
+);
+
 export default defineEventHandler(async (event) => {
   const { teamId } = await getValidatedRouterParams(event, ZRouteParams.parse);
-  const { gameVersion, sortBy } = await getValidatedQuery(event, ZQuery.parse);
+  const { gameVersion } = await getValidatedQuery(event, ZQuery.parse);
 
-  let deckStats = await getTeamDecksStats({ teamId, gameVersion });
-  if (sortBy) {
-    deckStats = deckStats.sort((a, b) => {
-      return (a[sortBy] - b[sortBy]) * (sortBy === "distanceToAverage" ? 1 : -1);
-    });
-  }
+  const deckStats = await getTeamDecksStats({ teamId, gameVersion });
 
   return deckStats;
 });
