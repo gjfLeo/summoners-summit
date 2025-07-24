@@ -45,3 +45,38 @@ export function sorter<T>(valueMapper: (keyof T) | ((data: T) => number | string
     return (a: T, b: T) => subtract(number(a[valueMapper] as any), number(b[valueMapper] as any));
   }
 }
+
+type Field<T extends object> = (keyof T) | ((data: T) => any);
+interface NormalizedRule<T extends object> { field: Field<T>; order?: "asc" | "desc" }
+type SortRule<T extends object> = NormalizedRule<T> | Field<T> | { asc: Field<T> } | { desc: Field<T> };
+export function sortBy<T extends object>(...rules: SortRule<T>[]) {
+  const normalizedRules = rules.map<NormalizedRule<T>>((rule) => {
+    if (typeof rule !== "object") {
+      return { field: rule, order: "asc" };
+    }
+    if ("asc" in rule) {
+      return { field: rule.asc, order: "asc" };
+    }
+    if ("desc" in rule) {
+      return { field: rule.desc, order: "desc" };
+    }
+    return rule;
+  });
+  return (a: T, b: T) => {
+    for (const rule of normalizedRules) {
+      const { field, order } = rule;
+      const aValue = typeof field === "function" ? field(a) : a[field];
+      const bValue = typeof field === "function" ? field(b) : b[field];
+      if (aValue !== bValue) {
+        if (typeof aValue === "number" && typeof bValue === "number") {
+          return order === "desc" ? subtract(bValue, aValue) : subtract(aValue, bValue);
+        }
+        if (typeof aValue === "string" && typeof bValue === "string") {
+          return order === "desc" ? bValue.localeCompare(aValue) : aValue.localeCompare(bValue);
+        }
+        throw new Error(`Unsupported sort type: ${typeof aValue}, ${typeof bValue}`);
+      }
+    }
+    return 0;
+  };
+};

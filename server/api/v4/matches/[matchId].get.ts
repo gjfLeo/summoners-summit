@@ -1,5 +1,5 @@
 import z from "zod";
-import { getStorageGameRecord, getStorageMatchDetail } from "~~/server/service";
+import { fillStorageMatchDetailWithGames, getStorageMatchDetail } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -33,17 +33,5 @@ export default defineEventHandler(async (event) => {
   if (!match) {
     throw createError({ statusCode: 404, message: "Match not found" });
   }
-  const games = await getStorageGameRecord(match.gameIds);
-
-  const result = {
-    ...(match as MaybeMirrored<Match>),
-    games: games as Record<GameId, MaybeMirrored<Game>>,
-  };
-  if (mirrored) {
-    Object.assign(result, getMirroredMatchDetail(match));
-    Object.entries(result.games).forEach(([gameId, game]) => {
-      result.games[gameId] = getMirroredGame(game);
-    });
-  }
-  return result;
+  return await fillStorageMatchDetailWithGames(mirrored ? getMirroredMatch(match) : match);
 });

@@ -55,6 +55,26 @@ export async function fillStorageMatchDetail(
   };
 }
 
+export async function fillStorageMatchDetailWithGames(
+  match: MaybeMirrored<Match>,
+  cache?: {
+    tournament?: Tournament;
+    games?: Record<GameId, Game>;
+  },
+): Promise<MaybeMirrored<MatchDetail> & { games: Record<GameId, MaybeMirrored<Game>> }> {
+  const matchDetail = await fillStorageMatchDetail(match, cache);
+  const games = cache?.games ?? (await getStorageGameRecord(match.gameIds));
+  return {
+    ...matchDetail,
+    games: Object.fromEntries(
+      matchDetail.gameIds.map((gameId) => {
+        const game = games[gameId];
+        return [gameId, isMirrored(matchDetail) ? getMirroredGame(game) : game];
+      }),
+    ),
+  };
+}
+
 // ----------------------------------------------------------------------------
 
 export const ZMatchSaveParams = ZMatch.partial({

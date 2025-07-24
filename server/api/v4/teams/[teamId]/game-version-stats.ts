@@ -80,7 +80,6 @@ const getTeamGameVersionStats = defineCachedFunction(
       if (g.winner === "A") {
         recordItem.numGamesWin++;
       }
-      // TODO 此处似乎有误
       if (g.starter === "A") {
         recordItem.numGamesStarter++;
         if (g.winner === "A") {

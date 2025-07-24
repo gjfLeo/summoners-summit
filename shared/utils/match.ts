@@ -95,6 +95,9 @@ export function getMirroredMatchDetail(original: MatchDetail): Mirrored<MatchDet
   if ("mirrored" in original) {
     throw new Error("Match already mirrored");
   }
+  if ("games" in original) {
+    throw new Error("MatchDetail has games");
+  }
   return {
     ...original,
     playerA: original.playerB,
@@ -103,6 +106,14 @@ export function getMirroredMatchDetail(original: MatchDetail): Mirrored<MatchDet
     winnerOverride: getMirroredPlayer(original.winnerOverride),
     winner: getMirroredPlayer(original.winner),
     mirrored: true,
+    // ..."games" in original
+    //   ? {
+    //       games: Object.fromEntries(
+    //         Object.entries(original.games as Record<GameId, MaybeMirrored<Game>>)
+    //           .map(([gameId, game]) => [gameId, getMirroredGame(game)]),
+    //       ),
+    //     }
+    //   : {},
   };
 }
 

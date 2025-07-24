@@ -39,7 +39,7 @@ const data = computed(() => {
       return {
         ...item,
         numGamesFollower: item.numGames - item.numGamesStarter,
-        numGamesFollowerWin: (item.numGames - item.numGamesStarter) - (item.numGamesWin - item.numGamesStarterWin),
+        numGamesFollowerWin: item.numGamesWin - item.numGamesStarterWin,
       };
     })
     .map((item) => {
@@ -49,8 +49,7 @@ const data = computed(() => {
         starterWinRate: divide(item.numGamesStarterWin, item.numGamesStarter),
         followerWinRate: divide(item.numGamesFollowerWin, item.numGamesFollower),
       };
-    })
-    .sort((a, b) => b.numGames - a.numGames);
+    });
 });
 
 const columns: DataTableColumn<typeof data.value[0]>[] = [

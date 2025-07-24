@@ -87,7 +87,12 @@ const getTeamMatchupStats = defineCachedFunction(
         }
       }
     });
-    return Object.values(record).sort((a, b) => b.numGames - a.numGames);
+    return Object.values(record)
+      .sort(sortBy(
+        { field: "numGames", order: "desc" },
+        { field: "numGamesWin", order: "desc" },
+        { field: "opponentTeamId" },
+      ));
   },
   {
     maxAge: import.meta.dev ? 1 : 60 * 60 * 24 * 365,

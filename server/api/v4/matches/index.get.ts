@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { fillStorageMatchDetail, getStorageGameRecord, getStorageMatchList, getStorageTournamentRecord } from "~~/server/service";
+import { fillStorageMatchDetailWithGames, getStorageGameRecord, getStorageMatchList, getStorageTournamentRecord } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -48,34 +48,25 @@ export default defineEventHandler(async (event) => {
     matches = matches.filter(m => m.gameVersion === gameVersion);
   }
   matches = matches.filter(m => m.gameIds.length > 0);
-  matches = matches.sort((a, b) => {
-    if (a.gameVersion !== b.gameVersion) {
-      return b.gameVersion.localeCompare(a.gameVersion);
-    }
-    return a.id.localeCompare(b.id);
-  });
-  matches = matches.slice(offset, offset + limit);
 
-  const tournaments = await getStorageTournamentRecord([...new Set(matches.map(m => m.tournamentId))]);
-  const games = await getStorageGameRecord([...new Set(matches.flatMap(m => m.gameIds))]);
+  const tournaments = await getStorageTournamentRecord(new Set(matches.map(m => m.tournamentId)));
+  const games = await getStorageGameRecord(matches.flatMap(m => m.gameIds));
 
-  const details = await Promise.all(
-    matches.map(async (match) => {
-      const matchDetail = await fillStorageMatchDetail(match, {
+  let details = await Promise.all(
+    matches.map((match) => {
+      return fillStorageMatchDetailWithGames(match, {
         tournament: tournaments[match.tournamentId],
         games,
       });
-      return {
-        ...matchDetail,
-        games: Object.fromEntries(
-          matchDetail.gameIds.map((gameId) => {
-            const game = games[gameId];
-            return [gameId, isMirrored(match) ? getMirroredGame(game) : game];
-          }),
-        ),
-      };
     }),
   );
+
+  details = details.sort(sortBy(
+    { field: "gameVersion", order: "desc" },
+    { field: "date", order: "desc" },
+    { field: "id" },
+  ));
+  details = details.slice(offset, offset + limit);
 
   return details;
 });

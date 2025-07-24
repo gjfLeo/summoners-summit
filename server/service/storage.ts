@@ -2,9 +2,9 @@ import type { ZodType } from "zod";
 
 interface RecordStorage<K extends string, V> {
   get: (key: K) => Promise<V> | undefined;
-  getList: (keys?: K[]) => Promise<V[]>;
-  getRecord: (keys?: K[]) => Promise<Record<K, V>>;
-  clearCache: (keys?: K[]) => Promise<void>;
+  getList: (keys?: Iterable<K>) => Promise<V[]>;
+  getRecord: (keys?: Iterable<K>) => Promise<Record<K, V>>;
+  clearCache: (keys?: Iterable<K>) => Promise<void>;
 }
 
 const groupCharacters = "0123456789abcdefghijklmnopqrstuvwxyz" as const;
@@ -49,33 +49,38 @@ export function defineRecordStorage<K extends string, V>(
     },
   );
   async function get(key: K) {
-    const cache = await getCachedRecord({ group: key.at(0) as string });
+    const cache = await getCachedRecord({ group: key.at(0)! });
     return cache[key];
   }
-  async function getList(keys?: K[]) {
-    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
-    const cache: Partial<Record<K, V[]>> = {};
+  async function getCacheFromKeys(keys: K[]) {
+    const groupKeys = keys.length > 0
+      ? [...new Set(keys.filter(Boolean).map(key => key.at(0)!))].join("")
+      : groupCharacters;
+    const cache: Partial<Record<K, V>> = {};
     for (const group of groupKeys) {
       Object.assign(cache, await getCachedRecord({ group }));
     }
-    if (keys) {
-      return keys.map(key => cache[key]) as V[];
-    }
-    return Object.values(cache) as V[];
+    return cache;
   }
-  async function getRecord(keys?: K[]) {
-    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
-    const cache: Partial<Record<K, V[]>> = {};
-    for (const group of groupKeys) {
-      Object.assign(cache, await getCachedRecord({ group }));
-    }
-    if (keys) {
-      return Object.fromEntries(keys.map(key => [key, cache[key]])) as Record<K, V>;
-    }
-    return cache as Record<K, V>;
+  async function getList(keys?: Iterable<K>) {
+    const keysArray = Array.from(keys ?? []);
+    const cache = await getCacheFromKeys(keysArray);
+    return keysArray.length > 0
+      ? keysArray.map<V>(k => cache[k]!)
+      : Object.values(cache) as V[];
   }
-  async function clearCache(keys?: K[]) {
-    const groupKeys = keys ? [...new Set(keys.map(key => key.at(0) as string))].join("") : groupCharacters;
+  async function getRecord(keys?: Iterable<K>) {
+    const keysArray = Array.from(keys ?? []);
+    const cache = await getCacheFromKeys(keysArray);
+    return keysArray.length > 0
+      ? Object.fromEntries<V>(keysArray.map(key => [key, cache[key]!])) as Record<K, V>
+      : cache as Record<K, V>;
+  }
+  async function clearCache(keys?: Iterable<K>) {
+    const keysArray = Array.from(keys ?? []);
+    const groupKeys = keysArray.length > 0
+      ? [...new Set(keysArray.filter(Boolean).map(key => key.at(0)!))].join("")
+      : groupCharacters;
     for (const group of groupKeys) {
       await getCachedRecord({ group, shouldInvalidateCache: true });
     }

@@ -103,13 +103,18 @@ export default defineEventHandler(async (event) => {
     });
   }
 
+  games.sort(sortBy(
+    { field: "gameVersion", order: "desc" },
+    { field: "id" },
+  ));
+
   const total = games.length;
   games = games.slice(offset, offset + limit);
 
   const matches = await getStorageMatchRecord(games.map(g => g.matchId));
-  const tournaments = await getStorageTournamentRecord([
-    ...new Set(Object.values(matches).map(m => m.tournamentId)),
-  ]);
+  const tournaments = await getStorageTournamentRecord(
+    new Set(Object.values(matches).map(m => m.tournamentId)),
+  );
 
   const gameDetails = await Promise.all(
     games.map(async (g) => {
