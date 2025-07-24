@@ -55,9 +55,9 @@
   ],
 
   "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#00ff4040",
-    "titleBar.inactiveBackground": "#00ff4080",
-    "activityBar.background": "#00ff4020",
+    "titleBar.activeBackground": "#00ff4010",
+    "titleBar.inactiveBackground": "#00ff4040",
+    "activityBar.background": "#00ff4008",
   },
   "cSpell.words": [
     "uids",
