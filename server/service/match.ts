@@ -77,6 +77,11 @@ export async function fillStorageMatchDetailWithGames(
 
 // ----------------------------------------------------------------------------
 
+export async function writeMatch(match: Match) {
+  const data = ZMatch.parse(match);
+  await writeDataV2(`matches/${match.id}`, data);
+}
+
 export const ZMatchSaveParams = ZMatch.partial({
   id: true,
 }).omit({

@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import { getMatchList } from "./match";
+import { clearMatchCache, getMatchList, getStorageMatchList, writeMatch } from "./match";
 import { defineRecordStorage } from "./storage";
 
 const playerStorage = defineRecordStorage("players", ZPlayer);
@@ -63,7 +63,7 @@ function generatePlayerId(player: SavePlayerV2Params) {
 
 export async function savePlayerV2(params: SavePlayerV2Params, clearCache = true) {
   const newId = generatePlayerId(params);
-  const oldId = params.id;
+  const oldId = params.id !== newId ? params.id : undefined;
 
   const oldPlayer = oldId ? await getStoragePlayer(oldId) : undefined;
   const currentPlayer = await getStoragePlayer(newId);
@@ -73,22 +73,42 @@ export async function savePlayerV2(params: SavePlayerV2Params, clearCache = true
     ...currentPlayer?.uids ?? [],
   ]);
 
-  const newPlayer: Player = {
-    ...params,
-    id: newId,
-    aliases: params.aliases.toSorted(),
-  };
-  if (!newPlayer.ignored) delete newPlayer.ignored;
+  const newPlayer: Player = { ...params, id: newId };
 
   await Promise.all([
     oldId ? deletePlayerOnly(oldId) : null,
     writePlayerOnly(newPlayer),
+    // TODO 可判断是否需要更新索引
     updatePlayerIndexV2((index) => {
       oldUids.forEach(uid => delete index.uid[uid]);
       params.uids.forEach(uid => index.uid[uid] = newId);
     }),
     clearCache ? clearPlayerCache(oldId ? [oldId, newId] : [newId]) : null,
   ]);
+
+  if (oldId) {
+    const matches = await getStorageMatchList();
+    const changedMatches: Match[] = [];
+    matches.forEach((match) => {
+      if (match.playerA.playerId === oldId) {
+        match.playerA.playerId = newId;
+        changedMatches.push(match);
+      }
+      if (match.playerB.playerId === oldId) {
+        match.playerB.playerId = newId;
+        changedMatches.push(match);
+      }
+    });
+    if (changedMatches.length) {
+      throw new Error("match change not supported");
+    }
+    await runParallel(
+      new Set(changedMatches),
+      writeMatch,
+      { concurrency: 10 },
+    );
+    await clearMatchCache(changedMatches.map(m => m.id));
+  }
 
   return newId;
 }
@@ -226,19 +246,13 @@ export function redirectPlayer(sourceId: PlayerId, targetId: PlayerId): PlayerId
   return player.id;
 }
 
-export function changePlayerUniqueName(playerId: PlayerId, nickname: string) {
-  const player = getPlayer(playerId);
-  if (!player) {
-    throw new Error(errorCodes.PLAYER_NOT_FOUND);
-  }
-
-  if (player.uniqueName === nickname) {
+export async function changePlayerUniqueName(player: Player, newUniqueName: string) {
+  if (player.uniqueName === newUniqueName) {
     return;
   }
-
-  player.aliases = [player.uniqueName, ...player.aliases].filter(n => n !== nickname);
-  player.uniqueName = nickname;
-  savePlayer(player);
+  player.aliases = [player.uniqueName, ...player.aliases].filter(n => n !== newUniqueName);
+  player.uniqueName = newUniqueName;
+  await savePlayerV2(player);
 }
 
 export function bindPlayerNickname({ nickname, playerId }: { nickname: string; playerId?: string }) {

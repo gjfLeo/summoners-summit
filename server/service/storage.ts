@@ -85,6 +85,8 @@ export function defineRecordStorage<K extends string, V>(
     for (const group of groupKeys) {
       await getCachedRecord({ group, shouldInvalidateCache: true });
     }
+    await new Promise(resolve => setTimeout(resolve, 100));
+    // console.log(`[Storage] ${path}:${groupKeys} cache cleared`);
   }
   return {
     get,
