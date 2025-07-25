@@ -22,14 +22,6 @@ export async function useApiGetCharacterCardStats(query: { gameVersion: GameVers
   };
 }
 
-export async function useApiGetActionCardStats(query: GetActionCardStatsParams) {
-  const { data } = await useFetch("/api/v3/cards/getActionCardStats", { query });
-  return {
-    actionCardStats: computed(() => data.value?.actionCardStats ?? []),
-    numGameDecks: computed(() => data.value?.numGameDecks ?? 0),
-  };
-}
-
 export async function useApiGetOverviewStats() {
   const { data } = await useFetch("/api/v3/overview", {
     deep: true,

@@ -6,10 +6,12 @@
         <Cards_CharacterPickRateBarChart />
       </NTabPane>
       <NTabPane name="actions" :tab="t('terms.actionCards')">
-        <Cards_ActionBarChart
-          :action-card-stats="actionCardStats"
-          :num-game-decks="numGameDecks"
-        />
+        <template v-if="actionCardsUsages">
+          <Cards_ActionBarChart :action-card-stats="actionCardsUsages" />
+        </template>
+        <template v-else-if="actionCardsUsagesLoading">
+          <NSpin size="large" />
+        </template>
       </NTabPane>
     </NTabs>
   </div>
@@ -26,5 +28,10 @@ provide("characterCardStats", characterCardStats);
 provide("numMatches", numMatches);
 provide("numGames", numGames);
 
-const { actionCardStats, numGameDecks } = await useApiGetActionCardStats({ gameVersion: gameVersion.value });
+const {
+  data: actionCardsUsages,
+  pending: actionCardsUsagesLoading,
+} = await useFetch("/api/v4/action-cards-usages", {
+  query: { gameVersion },
+});
 </script>

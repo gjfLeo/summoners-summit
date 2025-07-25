@@ -38,19 +38,10 @@ const getTeamGameVersionStats = defineCachedFunction(
       return r;
     });
 
-    const record: Record<GameVersionId, {
-      gameVersion: GameVersionId;
-      numGames: number;
-      numGamesWin: number;
-      numGamesStarter: number;
-      numGamesStarterWin: number;
-      numBanned: number;
-    }> = {};
+    const record: Record<GameVersionId, TeamGameVersionStats> = {};
     function getRecordItem(gameVersion: GameVersionId) {
-      if (record[gameVersion]) {
-        return record[gameVersion];
-      }
-      return record[gameVersion] = {
+      if (record[gameVersion]) return record[gameVersion];
+      record[gameVersion] = {
         gameVersion,
         numGames: 0,
         numGamesWin: 0,
@@ -58,6 +49,7 @@ const getTeamGameVersionStats = defineCachedFunction(
         numGamesStarterWin: 0,
         numBanned: 0,
       };
+      return record[gameVersion];
     }
 
     const matches = await getStorageMatchList();

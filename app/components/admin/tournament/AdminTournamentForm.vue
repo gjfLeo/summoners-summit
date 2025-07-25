@@ -176,21 +176,29 @@ const preferredGameVersion = computed(() => {
   return tournament.value.gameVersion || gameVersionLatest.value || undefined;
 });
 
-const actionCardNumUsages = ref<Record<CardId, number>>({});
-provide("actionCardNumUsages", actionCardNumUsages);
-watch(preferredGameVersion, async () => {
-  const res = await $fetch("/api/v3/cards/getActionCardStats", {
-    params: preferredGameVersion.value ? { preferredGameVersion: preferredGameVersion.value } : undefined,
-  });
-  if (res.success) {
-    actionCardNumUsages.value = Object.fromEntries(
-      res.actionCardStats.map(item => [
-        item.cardId,
-        item.numUsages,
-      ]),
-    );
+const { data: actionCardsUsages } = useLazyFetch("/api/v4/action-cards-usages");
+const actionCardsWeight = asyncComputed(async () => {
+  const weight: Record<CardId, number> = Object.fromEntries(
+    (actionCardsUsages.value ?? [])
+      .map(item => [item.cardId, item.numUsages]),
+  );
+  if (preferredGameVersion.value) {
+    try {
+      const res = await $fetch("/api/v4/action-cards-usages", {
+        query: { gameVersion: preferredGameVersion.value },
+      });
+      res.forEach((item) => {
+        weight[item.cardId] ??= 0;
+        weight[item.cardId] += item.numUsages * 10;
+      });
+    }
+    catch (error) {
+      console.error(error);
+    }
   }
-}, { immediate: true });
+  return weight;
+});
+provide("actionCardsWeight", actionCardsWeight);
 
 const characterCardNumUsages = ref<Record<CardId, number>>({});
 provide("characterCardNumUsages", characterCardNumUsages);

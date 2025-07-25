@@ -22,7 +22,7 @@ const { actionCardList } = useSharedData();
 const inputValue = ref("");
 const autoCompleteRef = ref<InstanceType<typeof NAutoComplete>>();
 
-const actionCardNumUsages = inject<Ref<Record<CardId, number>>>("actionCardNumUsages", ref({}));
+const actionCardsWeight = inject<Ref<Record<CardId, number>>>("actionCardsWeight", () => ref({}), true);
 const options = computed(() => {
   return actionCardList.value
     .flatMap((card) => {
@@ -39,7 +39,7 @@ const options = computed(() => {
     .sort((option1, option2) => {
       if (option1.match[0] === 0 && option2.match[0] !== 0) return -1;
       if (option2.match[0] === 0 && option1.match[0] !== 0) return 1;
-      return (actionCardNumUsages.value[option2.value] ?? 0) - (actionCardNumUsages.value[option1.value] ?? 0);
+      return (actionCardsWeight.value[option2.value] ?? 0) - (actionCardsWeight.value[option1.value] ?? 0);
     });
 });
 

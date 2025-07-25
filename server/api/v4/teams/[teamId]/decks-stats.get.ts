@@ -137,9 +137,9 @@ const getTeamDecksStats = defineCachedFunction(
     });
 
     const list = Object.values(decksRecord)
-      .map((deck) => {
+      .map<TeamDeckStats>((deck) => {
         return {
-          deckCode: deck.deckCode as DeckCode,
+          deckCode: deck.deckCode,
           numGames: deck.numGames,
           numGamesWin: deck.numGamesWin,
           distanceToAverage: Object.entries(cardScoreRecord)

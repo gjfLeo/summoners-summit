@@ -21,8 +21,8 @@
 import { divide, format } from "mathjs/number";
 
 const props = defineProps<{
-  actionCardStats: ActionCardStats[];
-  numGameDecks: number;
+  actionCardStats: ActionCardUsages[];
+  numGameDecks?: number;
 }>();
 
 const { t } = useLocales();
@@ -32,12 +32,19 @@ const chart = ref<ComponentPublicInstance>();
 const { height: chartHeight, width: chartWidth } = useElementSize(chart);
 const barNum = computed(() => Math.floor((chartWidth.value - remToPx(3)) / remToPx(3)));
 
+const numGameDecks = computed(() => {
+  if (props.numGameDecks) {
+    return props.numGameDecks;
+  }
+  return props.actionCardStats.reduce((numUsages, item) => numUsages + item.numUsages, 0) / 30;
+});
+
 const data = computed(() => {
   return props.actionCardStats
     .map(item => ({
       cardId: item.cardId,
       image: actionCardById.value[item.cardId].image,
-      averageNumUsages: item.numUsages / props.numGameDecks,
+      averageNumUsages: item.numUsages / numGameDecks.value,
       averageInWin: divide(item.numUsagesWin, item.numGameDecksWin),
     }))
     .sort(sorter("averageNumUsages"))

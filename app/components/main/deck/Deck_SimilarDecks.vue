@@ -21,11 +21,7 @@ const { t } = useLocales();
 await useAsyncSharedData();
 const { decodeDeck } = useDeckEncoder();
 
-const { data: decksStatsData } = useLazyFetch(`/api/v4/teams/${teamId.value}/decks-stats`, {
-  query: {
-    sortBy: "numGames",
-  },
-});
+const { data: decksStatsData } = useLazyFetch(`/api/v4/teams/${teamId.value}/decks-stats`);
 
 function getCardCountRecord(deckCode: DeckCode): Record<CardId, number> {
   const cardCountRecord: Record<CardId, number> = {};

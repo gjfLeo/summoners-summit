@@ -50,24 +50,26 @@
 </template>
 
 <script lang="ts" setup>
-const route = useRoute("team-teamId-gameVersion___zh");
-const teamId = route.params.teamId;
-const { gameVersion } = useGameVersion();
+const props = defineProps<{
+  teamId: DeckTeamId;
+  gameVersion: GameVersionId;
+}>();
 
 const { t } = useLocales();
 
 await useAsyncSharedData();
 const { decodeDeck } = useDeckEncoder();
 
-const { data: decksData, pending: decksLoading } = await useFetch(`/api/v4/teams/${teamId}/decks-stats`, {
+const { data: decksData, pending: decksLoading } = await useFetch(`/api/v4/teams/${props.teamId}/decks-stats`, {
   query: {
-    gameVersion: gameVersion.value,
-    sortBy: "distanceToAverage",
+    gameVersion: props.gameVersion,
   },
 });
 
 const currentDeckIndex = ref(0);
-const deck = computed(() => decksData.value?.[currentDeckIndex.value]);
+const deck = computed(() => {
+  return decksData.value?.toSorted(sortBy("distanceToAverage"))[currentDeckIndex.value];
+});
 const deckCode = computed(() => deck.value?.deckCode ?? "");
 const deckCards = computed(() => deckCode.value ? decodeDeck(deckCode.value) : { actionCards: [], characterCards: [] });
 

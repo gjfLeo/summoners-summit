@@ -10,21 +10,16 @@
     </div>
 
     <NH2 id="decks">{{ t('main.team.decks') }}</NH2>
-    <Team_Decks />
+    <TeamDecks v-bind="{ teamId, gameVersion }" />
 
     <NH2 id="cards">{{ t('main.team.cards') }}</NH2>
-    <Team_CardUsages />
+    <TeamActionCardsUsages v-bind="{ teamId, gameVersion }" />
 
     <NH2 id="matchups">{{ t('main.team.matchups.title') }}</NH2>
     <TeamMatchupStats v-bind="{ teamId, gameVersion }" @view-games="handleViewGames" />
 
     <NH2 id="games">{{ t('main.team.gameList.title') }}</NH2>
-    <template v-if="games">
-      <Team_GameList ref="refGameList" :games="games" />
-    </template>
-    <template v-else-if="gamesLoading">
-      <NSpin size="large" />
-    </template>
+    <TeamGameList ref="refGameList" v-bind="{ teamId, gameVersion }" />
 
     <NH2 id="stats-by-version">{{ t('main.team.statsByVersion.title') }}</NH2>
     <TeamGameVersionStats v-bind="{ teamId, gameVersion }" />
@@ -54,12 +49,6 @@ const teamName = computed(() => characters.value.map(cardId => currentLocalized(
 useHead({ title: t("site.titles.main.team", [teamName.value]) });
 
 const { gameVersion } = useGameVersion();
-const { data: games, pending: gamesLoading } = useLazyFetch("/api/v4/games", {
-  query: {
-    gameVersion: gameVersion.value,
-    teamId: teamId.value,
-  },
-});
 
 const refGameList = ref<InstanceType<typeof TeamGameList>>();
 const refAnchors = ref<InstanceType<typeof SitePageAnchors>>();
