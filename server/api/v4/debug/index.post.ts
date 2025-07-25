@@ -1,12 +1,45 @@
 import z from "zod";
-import { getStorageGameRecord, getStorageMatchRecord, getStorageTournamentList } from "~~/server/service";
+import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache, getStorageGameRecord, getStorageMatchRecord, getStorageTournamentList } from "~~/server/service";
 
-const ZBody = z.object({
-  action: z.string(),
+defineRouteMeta({
+  openAPI: {
+    tags: ["Misc"],
+    description: "调试接口",
+    parameters: [
+      {
+        name: "action",
+        in: "query",
+        description: "操作",
+        required: true,
+        schema: {
+          type: "string",
+          enum: [
+            "clearStorageCache",
+            "findUnusedData",
+          ],
+        },
+      },
+    ],
+  },
+});
+
+const ZQuery = z.object({
+  action: z.enum([
+    "clearStorageCache",
+    "findUnusedData",
+  ]),
 });
 
 export default defineEventHandler(async (event) => {
-  const { action } = await readValidatedBody(event, ZBody.parse);
+  const { action } = await getValidatedQuery(event, ZQuery.parse);
+
+  if (action === "clearStorageCache") {
+    await clearPlayerCache();
+    await clearGameCache();
+    await clearMatchCache();
+    await clearTournamentCache();
+    return {};
+  }
 
   if (action === "findUnusedData") {
     const games = await getStorageGameRecord();

@@ -38,6 +38,22 @@ export async function getPlayerByUidV2(uid: string): Promise<Player | undefined>
 const _ZSavePlayerV2Params = ZPlayer.partial({ id: true });
 type SavePlayerV2Params = z.infer<typeof _ZSavePlayerV2Params>;
 
+async function writePlayerOnly(player: Player) {
+  const data: Player = ZPlayer
+    .transform((player) => {
+      if (!player.ignored) delete player.ignored;
+      return {
+        ...player,
+        aliases: player.aliases.toSorted(),
+      };
+    })
+    .parse(player);
+  await writeDataV2(`players/${player.id}`, data);
+}
+async function deletePlayerOnly(playerId: PlayerId) {
+  await deleteDataV2(`players/${playerId}`);
+}
+
 function generatePlayerId(player: SavePlayerV2Params) {
   if (player.uids.length > 0) {
     return hash(player.uids[0]);
@@ -45,70 +61,67 @@ function generatePlayerId(player: SavePlayerV2Params) {
   return player.id ?? hash();
 }
 
-export async function savePlayerV2(params: SavePlayerV2Params) {
-  const playerId = generatePlayerId(params);
-  // TODO
-  // if (params.id && params.id !== playerId) {
-  //   await redirectPlayerV2(params.id, playerId);
-  // }
+export async function savePlayerV2(params: SavePlayerV2Params, clearCache = true) {
+  const newId = generatePlayerId(params);
+  const oldId = params.id;
 
-  // TODO 通过zod实现
-  const player = {
-    ...params,
-    id: playerId,
-    aliases: [...params.aliases].sort(),
-  };
-  if (!player.ignored) delete player.ignored;
+  const oldPlayer = oldId ? await getStoragePlayer(oldId) : undefined;
+  const currentPlayer = await getStoragePlayer(newId);
 
-  await updatePlayerIndexV2((index) => {
-    player.uids.forEach((uid) => {
-      index.uid[uid] = player.id;
-    });
-  });
-
-  await writeDataV2(`players/${player.id}`, ZPlayer.parse(player));
-  return player.id;
-}
-
-export async function deletePlayerV2(playerId: PlayerId) {
-  const player = await getStoragePlayer(playerId);
-  if (!player) return;
-
-  return await Promise.all([
-    deleteDataV2(`players/${playerId}`),
-    updatePlayerIndex((index) => {
-      player.uids.forEach(uid => delete index.uid[uid]);
-    }),
+  const oldUids = new Set([
+    ...oldPlayer?.uids ?? [],
+    ...currentPlayer?.uids ?? [],
   ]);
+
+  const newPlayer: Player = {
+    ...params,
+    id: newId,
+    aliases: params.aliases.toSorted(),
+  };
+  if (!newPlayer.ignored) delete newPlayer.ignored;
+
+  await Promise.all([
+    oldId ? deletePlayerOnly(oldId) : null,
+    writePlayerOnly(newPlayer),
+    updatePlayerIndexV2((index) => {
+      oldUids.forEach(uid => delete index.uid[uid]);
+      params.uids.forEach(uid => index.uid[uid] = newId);
+    }),
+    clearCache ? clearPlayerCache(oldId ? [oldId, newId] : [newId]) : null,
+  ]);
+
+  return newId;
 }
 
 export async function saveRanksPlayer(ranks: Ranks) {
   const playerIdByUid = (await readPlayerIndexV2()).uid;
+  const existedPlayerIds = ranks.ranks.map(({ uid }) => playerIdByUid[uid]).filter(Boolean);
+  const existedPlayerRecord = await getStoragePlayerRecord(existedPlayerIds);
 
-  const playerIds = ranks.ranks.map(({ uid }) => playerIdByUid[uid]).filter(Boolean);
-  const players = await getStoragePlayerRecord(playerIds);
-
-  await Promise.all(
+  const changedPlayerIds = await Promise.all(
     ranks.ranks.map(async ({ uid, nickname }) => {
       const playerId = playerIdByUid[uid];
-      const player = playerId ? players[playerId] : undefined;
+      const player = playerId ? existedPlayerRecord[playerId] : undefined;
       if (player) {
         if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
-          player.aliases = [...player.aliases, nickname];
-          return await savePlayerV2(player);
+          player.aliases.push(nickname);
+          const id = await savePlayerV2(player, false);
+          return [id];
         }
+        return [];
       }
       else {
-        return await savePlayerV2({
+        const id = await savePlayerV2({
           uniqueName: nickname,
           aliases: [],
           uids: [uid],
-        });
+        }, false);
+        return [id];
       }
     }),
   );
 
-  return clearPlayerCache(playerIds);
+  return clearPlayerCache(changedPlayerIds.flat());
 }
 
 // ----------------------------------------------------------------------------

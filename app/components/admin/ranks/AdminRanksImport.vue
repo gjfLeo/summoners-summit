@@ -139,15 +139,16 @@ async function submit() {
     return;
   }
 
-  await $fetch("/api/v3/ranks/save", {
+  const ranksData: Ranks = {
+    id: id.value,
+    ranks: ranks.value,
+  };
+
+  await $fetch("/api/v4/ranks", {
     method: "POST",
-    body: {
-      ranks: {
-        id: id.value,
-        ranks: ranks.value,
-      },
-    },
+    body: ranksData,
   });
+
   message.success(t("admin.message.SUCCESS"));
   emit("done", id.value);
 }

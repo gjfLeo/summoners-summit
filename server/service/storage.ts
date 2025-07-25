@@ -66,15 +66,16 @@ export function defineRecordStorage<K extends string, V>(
     const keysArray = Array.from(keys ?? []);
     const cache = await getCacheFromKeys(keysArray);
     return keysArray.length > 0
-      ? keysArray.map<V>(k => cache[k]!)
-      : Object.values(cache) as V[];
+      ? keysArray.map(k => cache[k]).filter(Boolean) as V[]
+      : Object.values(cache).filter(Boolean) as V[];
   }
   async function getRecord(keys?: Iterable<K>) {
     const keysArray = Array.from(keys ?? []);
     const cache = await getCacheFromKeys(keysArray);
-    return keysArray.length > 0
-      ? Object.fromEntries<V>(keysArray.map(key => [key, cache[key]!])) as Record<K, V>
-      : cache as Record<K, V>;
+    const entries = keysArray.length > 0
+      ? keysArray.map(key => [key, cache[key]] as [K, V | undefined])
+      : Object.entries<V | undefined>(cache);
+    return Object.fromEntries(entries.filter(([, v]) => Boolean(v))) as Record<K, V>;
   }
   async function clearCache(keys?: Iterable<K>) {
     const keysArray = Array.from(keys ?? []);
