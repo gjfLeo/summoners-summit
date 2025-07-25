@@ -10,6 +10,7 @@
     "thanks": "Thanks to: "
   },
   "menu": {
+    "actions": "Actions",
     "cards": "Cards",
     "decodeDeckCode": "Decode Deck Share Code",
     "others": "Miscellaneous",

@@ -10,6 +10,7 @@
     "thanks": "感谢帮助："
   },
   "menu": {
+    "actions": "操作",
     "cards": "卡牌",
     "decodeDeckCode": "牌组分享码解析",
     "others": "其他",

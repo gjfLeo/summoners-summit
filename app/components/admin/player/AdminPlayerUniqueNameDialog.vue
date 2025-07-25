@@ -72,17 +72,21 @@ async function submit() {
     return;
   };
   submitLoading.value = true;
-  const { success } = await $fetch("/api/v3/players/changeUniqueName", {
-    method: "POST",
-    body: {
-      id: player.value.id,
-      uniqueName: uniqueName.value,
-    },
-  });
-  submitLoading.value = false;
-  if (success) {
+  try {
+    await $fetch(`/api/v4/players/${player.value.id}`, {
+      method: "POST",
+      query: {
+        action: "changeUniqueName",
+        uniqueName: uniqueName.value,
+      },
+    });
+    submitLoading.value = false;
     emit("done");
     visible.value = false;
+  }
+  catch (error) {
+    console.error(error);
+    message.error(t("admin.message.FAILED"));
   }
 }
 
