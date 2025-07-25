@@ -3,7 +3,7 @@ import { getRanksIds } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "查询积分榜列表",
+    summary: "积分榜列表查询",
     description: "查询有记录的积分榜列表，按版本倒序排列。",
   },
 });

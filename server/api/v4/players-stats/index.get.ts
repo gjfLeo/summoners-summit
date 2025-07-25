@@ -4,7 +4,7 @@ import { getPlayerRank, getRanksByGameVersion, getStorageGameRecord, getStorageM
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "查询选手列表和统计数据",
+    summary: "选手列表和统计数据查询",
     description: "查询选手列表和统计数据。<p>若不指定游戏版本，其中的积分榜信息取最新记录的一次积分榜数据。",
     parameters: [
       {

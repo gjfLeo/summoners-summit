@@ -1,7 +1,7 @@
 defineRouteMeta({
   openAPI: {
     tags: ["Misc"],
-    summary: "查询常量配置",
+    summary: "常量配置查询",
     description: "查询常量配置，包含赛事的类型和地区选项。",
   },
 });

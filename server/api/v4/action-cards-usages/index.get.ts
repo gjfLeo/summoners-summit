@@ -1,6 +1,30 @@
 import z from "zod";
 import { decodeDeck, getStorageGameList } from "~~/server/service";
 
+defineRouteMeta({
+  openAPI: {
+    tags: ["Cards"],
+    summary: "行动牌使用数据查询",
+    description: "根据条件查询行动牌使用数据。",
+    parameters: [
+      {
+        name: "teamId",
+        in: "query",
+        description: "阵容ID",
+        required: false,
+        example: "1306-1401-1703",
+      },
+      {
+        name: "gameVersion",
+        in: "query",
+        description: "游戏版本",
+        required: false,
+        example: "3.8",
+      },
+    ],
+  },
+});
+
 const ZQuery = z.object({
   teamId: ZDeckTeamId.optional(),
   gameVersion: ZGameVersionId.optional(),

@@ -4,7 +4,7 @@ import { getGameVersionList, getStorageGameList, getStorageMatchList } from "~~/
 defineRouteMeta({
   openAPI: {
     tags: ["Teams"],
-    summary: "查询阵容数据",
+    summary: "阵容数据查询",
     description: "查询指定阵容的统计数据，根据游戏版本分组。<p>如果一场对局双方均为该阵容，这场对局会被视为两次。",
     parameters: [
       {

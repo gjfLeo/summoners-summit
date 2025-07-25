@@ -4,7 +4,7 @@ import { getStoragePlayer, getTournamentDetailBriefList } from "~~/server/servic
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "查询指定选手夺冠记录",
+    summary: "选手冠军记录查询",
     description: "查询指定选手的获得过的赛事冠军。",
     parameters: [
       {

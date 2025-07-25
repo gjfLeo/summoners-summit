@@ -4,7 +4,7 @@ import { fillStorageMatchDetailWithGames, getStorageGameRecord, getStorageMatchL
 defineRouteMeta({
   openAPI: {
     tags: ["Matches"],
-    summary: "查询场次列表",
+    summary: "场次列表查询",
     description: "根据条件查询场次列表，和相应的对局信息。<p>无对局信息的",
     parameters: [
       {

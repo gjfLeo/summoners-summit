@@ -4,7 +4,7 @@ import { getActionCardCountRecord, getStorageGameList } from "~~/server/service"
 defineRouteMeta({
   openAPI: {
     tags: ["Teams", "Decks"],
-    summary: "查询阵容牌组数据",
+    summary: "阵容牌组数据查询",
     description: "查询特定阵容的牌组和统计数据。",
     parameters: [
       {

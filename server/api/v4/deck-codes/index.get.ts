@@ -5,7 +5,7 @@ import { getDeckCodes } from "~~/server/service/deck";
 defineRouteMeta({
   openAPI: {
     tags: ["Decks"],
-    summary: "查询热门牌组列表",
+    summary: "热门牌组列表查询",
     description: "查询某个版本的牌组分享码列表，按使用次数排序。<br>如果不指定版本，自动取有数据的最新版本。",
     parameters: [
       {

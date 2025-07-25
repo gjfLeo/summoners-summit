@@ -5,7 +5,7 @@ import { getTournamentMatchIds } from "~~/shared/utils/match";
 defineRouteMeta({
   openAPI: {
     tags: ["Tournaments"],
-    summary: "查询赛事详情",
+    summary: "赛事详情查询",
     description: "查询指定赛事详情，和相应的场次、对局信息。",
     parameters: [
       {

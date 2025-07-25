@@ -4,8 +4,8 @@ import { getAchievementList, getStoragePlayerRecord, saveAchievementList } from 
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "修改成就数据",
-    description: "操作特定成就的选手列表",
+    summary: "成就修改",
+    description: "操作指定成就的选手列表。",
     parameters: [
       {
         name: "achievementId",

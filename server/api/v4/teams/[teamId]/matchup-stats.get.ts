@@ -4,7 +4,7 @@ import { getStorageGameList } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Teams"],
-    summary: "查询阵容对阵数据",
+    summary: "阵容对阵数据查询",
     description: "查询指定阵容对战其他阵容的统计数据。",
     parameters: [
       {

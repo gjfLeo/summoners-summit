@@ -3,7 +3,8 @@ import { saveRanks, saveRanksPlayer } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    description: "创建或更新积分榜",
+    summary: "积分榜修改",
+    description: "创建或修改积分榜",
   },
 });
 

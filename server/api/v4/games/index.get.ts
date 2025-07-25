@@ -4,7 +4,7 @@ import { fillStorageGameDetail, getStorageGameList, getStorageMatchRecord, getSt
 defineRouteMeta({
   openAPI: {
     tags: ["Games"],
-    summary: "查询对局列表",
+    summary: "对局列表查询",
     description: "根据条件查询对局列表。<p>如果指定`teamId`或`deckCode`，符合筛选条件的一方会放在选手A的位置。<p>即使对局双方均符合筛选条件，对局也只会出现一次。",
     parameters: [
       {

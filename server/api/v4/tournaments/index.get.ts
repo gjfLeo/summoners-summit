@@ -4,7 +4,7 @@ import { getTournamentDetailBriefList } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Tournaments"],
-    summary: "查询赛事列表",
+    summary: "赛事列表查询",
     description: "根据条件查询赛事列表。",
     parameters: [
       {

@@ -4,7 +4,7 @@ import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache
 defineRouteMeta({
   openAPI: {
     tags: ["Misc"],
-    description: "调试接口",
+    summary: "调试接口",
     parameters: [
       {
         name: "action",

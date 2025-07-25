@@ -4,7 +4,7 @@ import { getStoragePlayerList } from "~~/server/service";
 defineRouteMeta({
   openAPI: {
     tags: ["Players"],
-    summary: "查询选手列表",
+    summary: "选手列表查询",
     description: "查询选手信息列表。<p>一些选手数据被标记为忽略（例如娱乐赛中的双人队伍等），默认清空下不返回。",
     parameters: [
       {
