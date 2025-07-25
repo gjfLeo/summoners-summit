@@ -79,17 +79,21 @@ async function submit() {
   }
 
   submitLoading.value = true;
-  const res = await $fetch("/api/v3/players/merge", {
-    method: "POST",
-    body: form.value,
-  });
-  if (res.success) {
+  try {
+    await $fetch(`/api/v4/players/${form.value.targetId}`, {
+      method: "POST",
+      query: {
+        action: "mergeIn",
+        sourceId: form.value.sourceId,
+      },
+    });
     message.success(t("admin.message.SUCCESS"));
     visible.value = false;
     emit("done");
   }
-  else {
-    message.error(t(`admin.message.${res.code}`));
+  catch (error) {
+    console.error(error);
+    message.error(t("admin.message.FAILED"));
   }
   submitLoading.value = false;
 }

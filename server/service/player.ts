@@ -61,7 +61,15 @@ function generatePlayerId(player: SavePlayerV2Params) {
   return player.id ?? hash();
 }
 
-export async function savePlayerV2(params: SavePlayerV2Params, clearCache = true) {
+export async function savePlayerV2(
+  params: SavePlayerV2Params,
+  options: {
+    clearCache?: boolean;
+    redirectMatches?: boolean;
+  } = {},
+) {
+  const { clearCache = true, redirectMatches = true } = options;
+
   const newId = generatePlayerId(params);
   const oldId = params.id !== newId ? params.id : undefined;
 
@@ -86,28 +94,9 @@ export async function savePlayerV2(params: SavePlayerV2Params, clearCache = true
     clearCache ? clearPlayerCache(oldId ? [oldId, newId] : [newId]) : null,
   ]);
 
-  if (oldId) {
-    const matches = await getStorageMatchList();
-    const changedMatches: Match[] = [];
-    matches.forEach((match) => {
-      if (match.playerA.playerId === oldId) {
-        match.playerA.playerId = newId;
-        changedMatches.push(match);
-      }
-      if (match.playerB.playerId === oldId) {
-        match.playerB.playerId = newId;
-        changedMatches.push(match);
-      }
-    });
-    if (changedMatches.length) {
-      throw new Error("match change not supported");
-    }
-    await runParallel(
-      new Set(changedMatches),
-      writeMatch,
-      { concurrency: 10 },
-    );
-    await clearMatchCache(changedMatches.map(m => m.id));
+  if (oldId && redirectMatches) {
+    throw new Error("redirect matches not supported");
+    // await redirectMatchesToPlayer(newId, oldId);
   }
 
   return newId;
@@ -125,7 +114,7 @@ export async function saveRanksPlayer(ranks: Ranks) {
       if (player) {
         if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
           player.aliases.push(nickname);
-          const id = await savePlayerV2(player, false);
+          const id = await savePlayerV2(player, { clearCache: false });
           return [id];
         }
         return [];
@@ -135,7 +124,7 @@ export async function saveRanksPlayer(ranks: Ranks) {
           uniqueName: nickname,
           aliases: [],
           uids: [uid],
-        }, false);
+        }, { clearCache: false });
         return [id];
       }
     }),
@@ -162,9 +151,9 @@ type SavePlayerParams = z.infer<typeof _ZSavePlayerParams>;
 export function savePlayer(params: SavePlayerParams) {
   const oldId = params.id;
   const newId = params.uids[0] ? hash(params.uids[0]) : (oldId ?? hash());
-  if (oldId && oldId !== newId) {
-    redirectPlayer(oldId, newId);
-  }
+  // if (oldId && oldId !== newId) {
+  //   redirectPlayer(oldId, newId);
+  // }
 
   const player = {
     ...params,
@@ -186,64 +175,65 @@ export function savePlayer(params: SavePlayerParams) {
   return player.id;
 }
 
-export function redirectPlayer(sourceId: PlayerId, targetId: PlayerId): PlayerId {
+export async function mergePlayer(targetPlayer: Player, sourceId: PlayerId): Promise<PlayerId> {
+  const targetId = targetPlayer.id;
   if (sourceId === targetId) {
     return targetId;
   }
-  const sourcePlayer = getPlayer(sourceId);
-  const targetPlayer = getPlayer(targetId);
-
-  if (!sourcePlayer && !targetPlayer) {
-    throw new Error(errorCodes.PLAYER_NOT_FOUND);
-  }
-
+  const sourcePlayer = await getStoragePlayer(sourceId);
   if (!sourcePlayer) {
     return targetId;
   }
 
-  const player: Player = {
-    id: "",
-    uids: [],
-    uniqueName: targetPlayer?.uniqueName ?? sourcePlayer.uniqueName,
-    aliases: [],
-    ignored: targetPlayer?.ignored ?? sourcePlayer.ignored,
+  const newPlayer: SavePlayerV2Params = {
+    id: targetId,
+    uniqueName: targetPlayer.uniqueName,
+    uids: Array.from(new Set([
+      ...targetPlayer.uids,
+      ...sourcePlayer.uids,
+    ])),
+    aliases: Array.from(new Set([
+      ...targetPlayer.aliases,
+      sourcePlayer.uniqueName,
+      ...sourcePlayer.aliases,
+    ])),
+    ignored: targetPlayer.ignored || sourcePlayer.ignored,
   };
 
-  const existsUid: Record<string, true> = {};
-  [...targetPlayer?.uids ?? [], ...sourcePlayer.uids].forEach((uid) => {
-    if (existsUid[uid]) return;
-    player.uids.push(uid);
-    existsUid[uid] = true;
+  await deletePlayerOnly(sourceId);
+  await deletePlayerOnly(targetId);
+  await clearPlayerCache([targetId, sourceId]);
+
+  const newId = await savePlayerV2(newPlayer, { redirectMatches: false });
+  await redirectMatchesToPlayer(newId, targetId, sourceId);
+
+  return newId;
+}
+
+async function redirectMatchesToPlayer(targetId: PlayerId, ...sourceIds: PlayerId[]) {
+  const matches = await getStorageMatchList();
+  const sourceIdRecord = Object.fromEntries(
+    sourceIds
+      .filter(id => id !== targetId)
+      .map(id => [id, true]),
+  );
+  const changedMatches: Match[] = [];
+  matches.forEach((match) => {
+    if (sourceIdRecord[match.playerA.playerId]) {
+      match.playerA.playerId = targetId;
+      changedMatches.push(match);
+    }
+    if (sourceIdRecord[match.playerB.playerId]) {
+      match.playerB.playerId = targetId;
+      changedMatches.push(match);
+    }
   });
-
-  const existsNicknames: Record<string, true> = { [player.uniqueName]: true };
-  [...targetPlayer?.aliases ?? [], sourcePlayer.uniqueName, ...sourcePlayer.aliases].forEach((nickname) => {
-    if (existsNicknames[nickname]) return;
-    player.aliases.push(nickname);
-    existsNicknames[nickname] = true;
-  });
-
-  deletePlayer(sourceId);
-  deletePlayer(targetId);
-  player.id = savePlayer({ ...player, id: undefined });
-
-  updatePlayerIndex((index) => {
-    player.uids.forEach((uid) => {
-      index.uid[uid] = player.id;
-    });
-  });
-
-  getMatchList()
-    .forEach((match) => {
-      if (match.playerA.playerId === sourceId || match.playerA.playerId === targetId) {
-        match.playerA.playerId = player.id;
-      }
-      if (match.playerB.playerId === sourceId || match.playerB.playerId === targetId) {
-        match.playerB.playerId = player.id;
-      }
-      writeData(`matches/${match.id}`, ZMatch.parse(match));
-    });
-  return player.id;
+  await runParallel(
+    new Set(changedMatches),
+    writeMatch,
+    { concurrency: 10 },
+  );
+  await clearMatchCache(changedMatches.map(m => m.id));
 }
 
 export async function changePlayerUniqueName(player: Player, newUniqueName: string) {
@@ -255,6 +245,7 @@ export async function changePlayerUniqueName(player: Player, newUniqueName: stri
   await savePlayerV2(player);
 }
 
+/** @deprecated */
 export function bindPlayerNickname({ nickname, playerId }: { nickname: string; playerId?: string }) {
   const player = playerId ? getPlayer(playerId) : undefined;
   if (!player) {

@@ -1,5 +1,5 @@
 import z from "zod";
-import { changePlayerUniqueName, getStoragePlayer } from "~~/server/service";
+import { changePlayerUniqueName, getStoragePlayer, mergePlayer } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -19,13 +19,19 @@ defineRouteMeta({
         required: true,
         schema: {
           type: "string",
-          enum: ["changeUniqueName"],
+          enum: ["changeUniqueName", "mergeIn"],
         },
       },
       {
         name: "uniqueName",
         in: "query",
         description: "新的选手昵称",
+        required: false,
+      },
+      {
+        name: "sourceId",
+        in: "query",
+        description: "合并（待废弃条目的）的选手ID",
         required: false,
       },
     ],
@@ -37,13 +43,14 @@ const ZRouterParams = z.object({
 });
 
 const ZQuery = z.object({
-  action: z.enum(["changeUniqueName"]),
+  action: z.enum(["changeUniqueName", "mergeIn"]),
   uniqueName: ZPlayerNickname.optional(),
+  sourceId: ZPlayerId.optional(),
 });
 
 export default defineEventHandler(async (event) => {
   const { playerId } = await getValidatedRouterParams(event, ZRouterParams.parse);
-  const { action, uniqueName } = await getValidatedQuery(event, ZQuery.parse);
+  const { action, uniqueName, sourceId } = await getValidatedQuery(event, ZQuery.parse);
 
   const player = await getStoragePlayer(playerId);
   if (!player) {
@@ -55,6 +62,14 @@ export default defineEventHandler(async (event) => {
       throw createError({ statusCode: 400, message: "uniqueName is required" });
     }
     await changePlayerUniqueName(player, uniqueName);
+    return {};
+  }
+
+  if (action === "mergeIn") {
+    if (!sourceId) {
+      throw createError({ statusCode: 400, message: "sourceId is required" });
+    }
+    await mergePlayer(player, sourceId);
     return {};
   }
 
