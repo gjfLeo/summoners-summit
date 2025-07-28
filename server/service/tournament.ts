@@ -1,4 +1,3 @@
-import type { z } from "zod";
 import type { TournamentDetail, TournamentId } from "~~/shared/types";
 import { getStorageGameRecord } from "./game";
 import { getStorageMatchList } from "./match";
@@ -9,6 +8,15 @@ export const getStorageTournament = tournamentStorage.get;
 export const getStorageTournamentList = tournamentStorage.getList;
 export const getStorageTournamentRecord = tournamentStorage.getRecord;
 export const clearTournamentCache = tournamentStorage.clearCache;
+
+// ----------------------------------------------------------------------------
+
+export async function writeTournamentV2(tournament: Tournament) {
+  const data = ZTournament.parse(tournament);
+  writeDataV2(`tournaments/${data.id}`, data);
+}
+
+// ----------------------------------------------------------------------------
 
 export async function getTournamentDetailBriefList(): Promise<TournamentDetailBrief[]> {
   const tournaments = await getStorageTournamentList();
@@ -62,64 +70,4 @@ async function getTournamentChampion(tournament: Tournament): Promise<Tournament
     }
   }
   return undefined;
-}
-
-// ----------------------------------------------------------------------------
-
-/** @deprecated */
-export function getTournament(tournamentId: TournamentId): Tournament | undefined {
-  return ZTournament.optional().parse(readData<Tournament>(`tournaments/${tournamentId}`));
-}
-
-// ----------------------------------------------------------------------------
-
-export const ZTournamentSaveParams = ZTournament.partial({
-  id: true,
-  stages: true,
-}).strip();
-type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
-/** @deprecated */
-export function saveTournament(params: TournamentSaveParams) {
-  params.stages?.forEach((stage) => {
-    delete stage._key;
-    stage.parts.forEach((part) => {
-      delete part._key;
-    });
-  });
-  const tournament: Tournament = {
-    ...params,
-    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
-    stages: params.stages ?? [],
-  };
-
-  writeData(`tournaments/${tournament.id}`, ZTournament.parse(tournament));
-
-  // TODO await
-  clearTournamentCache();
-  return tournament.id;
-}
-
-export async function writeTournamentV2(tournament: Tournament) {
-  const data = ZTournament.parse(tournament);
-  writeDataV2(`tournaments/${data.id}`, data);
-}
-
-export async function saveTournamentV2(
-  params: TournamentSaveParams,
-  options: {
-    clearCache?: boolean;
-  } = {},
-) {
-  const { clearCache = true } = options;
-
-  const tournament: Tournament = {
-    ...params,
-    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
-    stages: params.stages ?? [],
-  };
-  await writeTournamentV2(tournament);
-  if (clearCache) {
-    await clearTournamentCache([tournament.id]);
-  }
-  return tournament.id;
 }

@@ -142,15 +142,13 @@ async function save() {
   messages.forEach(m => message.error(m));
   if (messages.length) return;
 
-  const res = await $fetch("/api/v3/tournaments/save", {
+  const res = await $fetch("/api/v4/tournaments", {
     method: "POST",
     body: tournament.value,
   });
-  if (res.success) {
-    message.success(t("admin.message.SUCCESS"));
-    editing.value = false;
-    emit("save", res.id);
-  }
+  message.success(t("admin.message.SUCCESS"));
+  editing.value = false;
+  emit("save", res.id);
 }
 
 let key = tournament.value.stages.length;

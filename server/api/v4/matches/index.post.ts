@@ -1,4 +1,4 @@
-import { clearGameCache, clearMatchCache, clearPlayerCache, deleteGameV2, getStorageMatch, getStoragePlayer, getStorageTournament, savePlayerV2, saveTournamentV2, writeGameV2, writeMatchV2 } from "~~/server/service";
+import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache, deleteGameV2, getStorageMatch, getStoragePlayer, getStorageTournament, savePlayerV2, writeGameV2, writeMatchV2, writeTournamentV2 } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -87,7 +87,10 @@ async function saveMatchTournament(
     part.matchIds.push(matchId);
     return {
       matchId,
-      todo: saveTournamentV2(tournament),
+      todo: (async function () {
+        await writeTournamentV2(tournament);
+        await clearTournamentCache([tournament.id]);
+      })(),
     };
   }
 }
