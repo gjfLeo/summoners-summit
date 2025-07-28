@@ -3,11 +3,6 @@ import { defineRecordStorage } from "./storage";
 import { getStorageTournament } from "./tournament";
 
 /** @deprecated */
-export function getGame(gameId: GameId): Game | undefined {
-  return ZGame.optional().parse(readData(`games/${gameId}`));
-}
-
-/** @deprecated */
 export function getGameList() {
   return ZGame.array().parse(readDataList("games"));
 }
@@ -20,14 +15,13 @@ export const clearGameCache = gameStorage.clearCache;
 
 // ----------------------------------------------------------------------------
 
-export function saveGame(game: Game) {
-  writeData(`games/${game.id}`, ZGame.parse(game));
-  return clearGameCache([game.id]);
+export function writeGameV2(game: Game) {
+  const data = ZGame.parse(game);
+  writeDataV2(`games/${data.id}`, data);
 }
 
-export function deleteGame(gameId: GameId) {
-  deleteData(`games/${gameId}`);
-  return clearGameCache([gameId]);
+export function deleteGameV2(gameId: GameId) {
+  deleteDataV2(`games/${gameId}`);
 }
 
 // ----------------------------------------------------------------------------

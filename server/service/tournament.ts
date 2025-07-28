@@ -78,6 +78,7 @@ export const ZTournamentSaveParams = ZTournament.partial({
   stages: true,
 }).strip();
 type TournamentSaveParams = z.infer<typeof ZTournamentSaveParams>;
+/** @deprecated */
 export function saveTournament(params: TournamentSaveParams) {
   params.stages?.forEach((stage) => {
     delete stage._key;
@@ -95,5 +96,30 @@ export function saveTournament(params: TournamentSaveParams) {
 
   // TODO await
   clearTournamentCache();
+  return tournament.id;
+}
+
+export async function writeTournamentV2(tournament: Tournament) {
+  const data = ZTournament.parse(tournament);
+  writeDataV2(`tournaments/${data.id}`, data);
+}
+
+export async function saveTournamentV2(
+  params: TournamentSaveParams,
+  options: {
+    clearCache?: boolean;
+  } = {},
+) {
+  const { clearCache = true } = options;
+
+  const tournament: Tournament = {
+    ...params,
+    id: params.id || hash(params.gameVersion + (params.name.zh ?? params.name.en)),
+    stages: params.stages ?? [],
+  };
+  await writeTournamentV2(tournament);
+  if (clearCache) {
+    await clearTournamentCache([tournament.id]);
+  }
   return tournament.id;
 }

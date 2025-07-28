@@ -139,7 +139,7 @@
                     :icon="Boolean(game.gameVideo) ? 'i-mingcute:video-camera-fill' : 'i-mingcute:video-camera-line'"
                     @click="async () => game.gameVideo = await inputVideo(game.gameVideo)"
                   />
-                  <CommonConfirmButton :text="t('admin.action.delete')" @click="deleteGame(gameIndex)">
+                  <CommonConfirmButton :text="t('admin.action.delete')" @click="removeGame(gameIndex)">
                     <CommonIconButton icon="i-mingcute:delete-2-line" danger />
                   </CommonConfirmButton>
                 </div>
@@ -203,7 +203,6 @@
 
 <script lang="ts" setup>
 import type { AdminTournamentMatchActionCardsEditor, AdminTournamentMatchVideoEditor, NForm } from "#components";
-import type { MatchSaveParams } from "~~/server/service";
 
 const props = defineProps<{
   tournamentId: TournamentId;
@@ -217,7 +216,7 @@ const { t } = useLocales();
 const message = useMessage();
 
 const visible = ref(false);
-const match = ref<MatchSaveParams>({} as MatchSaveParams);
+const match = ref<SaveMatchParams>({} as SaveMatchParams);
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const formRules: FormRules = {
@@ -254,7 +253,7 @@ async function create(params: { stageIndex: number; partIndex: number; matchInde
 
   visible.value = true;
 };
-async function edit(params: MatchSaveParams) {
+async function edit(params: SaveMatchParams) {
   match.value = params;
   visible.value = true;
 }
@@ -279,22 +278,18 @@ async function confirm() {
     return;
   }
   try {
-    const res = await $fetch("/api/v3/matches/save", {
+    const res = await $fetch("/api/v4/matches", {
       method: "POST",
       body: match.value,
     });
-    if (res?.success) {
-      message.success(t("admin.message.SUCCESS"));
-      refreshPlayers();
-      emit("done", res.id);
-      visible.value = false;
-    }
-    else {
-      message.error(t(`admin.message.${res?.code}`));
-    }
+    message.success(t("admin.message.SUCCESS"));
+    refreshPlayers();
+    emit("done", res.id);
+    visible.value = false;
   }
   catch (error) {
     console.error(error);
+    message.error(t("admin.message.FAILED"));
   }
 }
 
@@ -314,7 +309,7 @@ function addGame() {
     },
   });
 }
-function deleteGame(gameIndex: number) {
+function removeGame(gameIndex: number) {
   match.value.games.splice(gameIndex, 1);
 }
 function addBan() {

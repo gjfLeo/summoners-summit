@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import { clearMatchCache, getMatchList, getStorageMatchList, writeMatch } from "./match";
+import { clearMatchCache, getStorageMatchList, writeMatchV2 } from "./match";
 import { defineRecordStorage } from "./storage";
 
 const playerStorage = defineRecordStorage("players", ZPlayer);
@@ -230,7 +230,7 @@ async function redirectMatchesToPlayer(targetId: PlayerId, ...sourceIds: PlayerI
   });
   await runParallel(
     new Set(changedMatches),
-    writeMatch,
+    writeMatchV2,
     { concurrency: 10 },
   );
   await clearMatchCache(changedMatches.map(m => m.id));

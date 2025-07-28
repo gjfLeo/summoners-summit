@@ -1,13 +1,6 @@
-import { z } from "zod";
-import { deleteGame, getStorageGameRecord, saveGame } from "./game";
-import { bindPlayerNickname } from "./player";
+import { getStorageGameRecord } from "./game";
 import { defineRecordStorage } from "./storage";
-import { getStorageTournament, getTournament, saveTournament } from "./tournament";
-
-/** @deprecated */
-export function getMatch(matchId: MatchId): Match | undefined {
-  return ZMatch.parse(readData<Match>(`matches/${matchId}`));
-}
+import { getStorageTournament } from "./tournament";
 
 /** @deprecated */
 export function getMatchList(): Match[] {
@@ -19,6 +12,13 @@ export const getStorageMatch = matchStorage.get;
 export const getStorageMatchList = matchStorage.getList;
 export const getStorageMatchRecord = matchStorage.getRecord;
 export const clearMatchCache = matchStorage.clearCache;
+
+// ----------------------------------------------------------------------------
+
+export async function writeMatchV2(match: Match) {
+  const data = ZMatch.parse(match);
+  await writeDataV2(`matches/${match.id}`, data);
+}
 
 // ----------------------------------------------------------------------------
 
@@ -73,142 +73,4 @@ export async function fillStorageMatchDetailWithGames(
       }),
     ),
   };
-}
-
-// ----------------------------------------------------------------------------
-
-export async function writeMatch(match: Match) {
-  const data = ZMatch.parse(match);
-  await writeDataV2(`matches/${match.id}`, data);
-}
-
-export const ZMatchSaveParams = ZMatch.partial({
-  id: true,
-}).omit({
-  gameVersion: true,
-  gameIds: true,
-  bans: true,
-  playerA: true,
-  playerB: true,
-}).extend({
-  playerA: z.object({
-    playerId: ZNullToUndefined(ZPlayerId.optional()),
-    nickname: ZPlayerNickname,
-  }),
-  playerB: z.object({
-    playerId: ZNullToUndefined(ZPlayerId.optional()),
-    nickname: ZPlayerNickname,
-  }),
-
-  bans: z.object({
-    _key: z.number(),
-    playerACardIds: z.union([ZCardId.array().length(1), ZCardId.array().length(3)]),
-    playerBCardIds: z.union([ZCardId.array().length(1), ZCardId.array().length(3)]),
-  }).array(),
-  games: ZGame.omit({
-    id: true,
-    matchId: true,
-    gameVersion: true,
-  }).extend({
-    _key: z.number(),
-    playerADeck: z.object({
-      characters: z.array(ZCardId).length(3),
-      deckCode: ZDeckCode.optional(),
-    }),
-    playerBDeck: z.object({
-      characters: z.array(ZCardId).length(3),
-      deckCode: ZDeckCode.optional(),
-    }),
-  }).array(),
-}).strip();
-export type MatchSaveParams = z.infer<typeof ZMatchSaveParams>;
-export function saveMatch(params: MatchSaveParams) {
-  const tournament = getTournament(params.tournamentId);
-  const matchIds = tournament?.stages[params.stageIndex]?.parts[params.partIndex]?.matchIds;
-  if (!matchIds) {
-    throw new Error("TOURNAMENT_STAGE_OR_PART_NOT_FOUND");
-  }
-  let matchId: MatchId;
-  if (params.id) {
-    if (!matchIds.includes(params.id)) {
-      throw new Error("MATCH_NOT_FOUND");
-    }
-    matchId = params.id;
-  }
-  else {
-    const maxMatchIndex = tournament.stages
-      .flatMap(s => s.parts.flatMap(p => p.matchIds))
-      .map(mId => Number(mId.substring(16)))
-      .reduce((value, id) => Math.max(value, id), 0);
-    matchId = `${tournament.id}${String(maxMatchIndex + 1).padStart(2, "0")}`;
-    params.id = matchId;
-    matchIds.push(matchId);
-    saveTournament(tournament);
-  }
-
-  const playerA = {
-    nickname: params.playerA.nickname,
-    playerId: bindPlayerNickname(params.playerA),
-  };
-  const playerB = {
-    nickname: params.playerB.nickname,
-    playerId: bindPlayerNickname(params.playerB),
-  };
-
-  const games = params.games.map((gameParam, index) => {
-    const gameId = `${matchId}${String(index + 1).padStart(2, "0")}`;
-    const game: Game = {
-      ...gameParam,
-      gameVersion: tournament.gameVersion,
-      playerADeck: {
-        ...gameParam.playerADeck,
-        teamId: getTeamId(gameParam.playerADeck.characters),
-      },
-      playerBDeck: {
-        ...gameParam.playerBDeck,
-        teamId: getTeamId(gameParam.playerBDeck.characters),
-      },
-      id: gameId,
-      matchId,
-      isPrePatch: params.isPrePatch ? true : undefined,
-    };
-    return game;
-  });
-
-  const bans = params.bans.map<Ban>((banRaw) => {
-    if (banRaw.playerACardIds.length === 1) {
-      return {
-        banType: "character",
-        playerACardId: banRaw.playerACardIds[0],
-        playerBCardId: banRaw.playerBCardIds[0],
-      };
-    }
-    else {
-      return {
-        banType: "team",
-        playerATeamId: getTeamId(banRaw.playerACardIds),
-        playerBTeamId: getTeamId(banRaw.playerBCardIds),
-      };
-    }
-  });
-
-  const match: Match = {
-    ...params,
-    id: matchId,
-    gameVersion: tournament.gameVersion,
-    playerA,
-    playerB,
-    bans: bans.length ? bans : undefined,
-    gameIds: games.map(g => g.id),
-    isFinal: params.isFinal ? true : undefined,
-    isPrePatch: params.isPrePatch ? true : undefined,
-  };
-
-  writeData(`matches/${matchId}`, ZMatch.parse(match));
-  getMatch(matchId)?.gameIds.forEach(gId => deleteGame(gId));
-  games.forEach(saveGame);
-
-  // await
-  clearMatchCache();
-  return matchId;
 }
