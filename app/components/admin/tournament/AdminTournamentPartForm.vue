@@ -87,7 +87,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { MatchSaveParams } from "~~/server/service";
 import type AdminTournamentMatchEditor from "./match/MatchEditor.vue";
 import { NForm } from "#components";
 
@@ -150,7 +149,7 @@ async function handleEdit(matchId: MatchId) {
       ...match.games[gameId],
       _key: i,
     })),
-    bans: match.bans?.map<MatchSaveParams["bans"][0]>((ban, i) => {
+    bans: match.bans?.map<SaveMatchParams["bans"][0]>((ban, i) => {
       if (ban.banType === "character") {
         return {
           _key: i,
@@ -166,7 +165,7 @@ async function handleEdit(matchId: MatchId) {
         };
       }
     }) ?? [],
-  } satisfies MatchSaveParams;
+  } satisfies SaveMatchParams;
   matchEditor?.value.edit(params);
 }
 

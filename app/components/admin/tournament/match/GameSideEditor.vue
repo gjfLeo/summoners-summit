@@ -37,7 +37,6 @@
 
 <script lang="ts" setup>
 import type { AdminTournamentMatchActionCardsEditor as ActionCardsEditor } from "#components";
-import type { MatchSaveParams } from "~~/server/service";
 import {
   AdminTournamentMatchCharacterCardSelector as CharacterCardSelector,
 } from "#components";
@@ -48,7 +47,7 @@ defineProps<{
 
 const { t } = useLocales();
 
-const deck = defineModel<MatchSaveParams["games"][number]["playerADeck"]>("deck", { required: true });
+const deck = defineModel<SaveMatchParams["games"][number]["playerADeck"]>("deck", { required: true });
 const starter = defineModel<Game["starter"]>("starter", { required: true });
 const winner = defineModel<Game["winner"]>("winner", { required: true });
 
