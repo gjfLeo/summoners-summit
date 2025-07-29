@@ -8,15 +8,15 @@
 import type { DataTableCreateSummary } from "naive-ui";
 import { divide } from "mathjs/number";
 
-const props = defineProps<{
-  overview: GetOverviewResponseItem[];
-}>();
-const { overview } = toRefs(props);
-
 const { t } = useLocales();
 
+const { data: overviewData } = await useFetch("/api/v4/overview");
+
 const data = computed(() => {
-  return overview.value.map(stats => ({
+  if (!overviewData.value) {
+    return [];
+  }
+  return overviewData.value.map(stats => ({
     key: stats.gameVersion,
     ...stats,
     starterWinRate: divide(stats.numGamesStarterWin, stats.numGamesWithStarter),

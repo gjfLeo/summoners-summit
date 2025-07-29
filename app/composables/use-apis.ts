@@ -21,12 +21,3 @@ export async function useApiGetCharacterCardStats(query: { gameVersion: GameVers
     numMatches: computed(() => data.value?.numMatches ?? 0),
   };
 }
-
-export async function useApiGetOverviewStats() {
-  const { data } = await useFetch("/api/v3/overview", {
-    deep: true,
-  });
-  return {
-    overview: computed(() => data.value?.success ? data.value.overview : []),
-  };
-}
