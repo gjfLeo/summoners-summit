@@ -15,10 +15,6 @@ export default defineNuxtConfig({
     "nuxt-echarts",
   ],
 
-  future: {
-    compatibilityVersion: 4,
-  },
-
   runtimeConfig: {
     public: {
       needRedirect: false,
@@ -152,9 +148,6 @@ export default defineNuxtConfig({
       { code: "en", language: "en-US", name: "English" },
     ],
     restructureDir: "locales",
-    bundle: {
-      optimizeTranslationDirective: false,
-    },
   },
 
   echarts: {
