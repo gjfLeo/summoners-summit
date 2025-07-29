@@ -10,12 +10,10 @@
         Recently, the code of this site has been significantly modified. Feedback is welcome if you encounter any problems.
       </template>
     </div>
-    <Home_Overview :overview="overview" />
+    <HomeOverview />
   </div>
 </template>
 
 <script setup lang="ts">
 const { locale } = useLocales();
-
-const { overview } = await useApiGetOverviewStats();
 </script>

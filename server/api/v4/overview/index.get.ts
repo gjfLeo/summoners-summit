@@ -1,21 +1,23 @@
-import { getGameList, getGameVersionList } from "~~/server/service";
+import { getGameVersionList, getStorageGameList } from "~~/server/service";
 
 export default defineEventHandler(async () => {
-  const record = Object.fromEntries<GetOverviewResponseItem>(
-    (await getGameVersionList()).map(gameVersion => ([
-      gameVersion.id,
-      {
-        gameVersion: gameVersion.id,
+  const gameVersionList = await getGameVersionList();
+  const record = Object.fromEntries(
+    gameVersionList.map((gameVersion) => {
+      const stats = {
+        gameVersion: gameVersion.id as GameVersionId,
         numGames: 0,
         numGamesWithDeck: 0,
         numGamesWithStarter: 0,
         numGamesStarterWin: 0,
-      },
-    ]),
-    ),
+      };
+      return [gameVersion.id, stats];
+    }),
   );
 
-  getGameList()
+  const games = await getStorageGameList();
+
+  games
     .forEach((game) => {
       const recordItem = record[game.gameVersion];
       recordItem.numGames++;
@@ -30,6 +32,7 @@ export default defineEventHandler(async () => {
       }
     });
 
-  const overview = Object.values(record).sort((a, b) => b.gameVersion.localeCompare(a.gameVersion));
-  return responseData<GetOverviewResponse>({ overview });
+  const overview = Object.values(record)
+    .sort(sortBy({ desc: "gameVersion" }));
+  return overview;
 });
