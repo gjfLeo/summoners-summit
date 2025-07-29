@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TeamStatsTable id="team-list" />
+    <TeamsStatsTable id="team-list" />
     <TeamMatchupTable id="matchup-stats" class="mt-8" />
 
     <!-- <SitePageAnchors>

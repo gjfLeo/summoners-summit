@@ -10,7 +10,6 @@ export * from "./stats";
 export * from "./stub/GetOverview";
 
 export * from "./teams/GetAllTeamMatchups";
-export * from "./teams/GetAllTeamStats";
 
 export const ZMatchSaveParams = ZMatch
   .partial({

@@ -1,10 +1,3 @@
-export async function useApiGetTeamStatsRecords(query: { gameVersion: GameVersionId }) {
-  const { data } = await useFetch("/api/v3/teams/stats", { query });
-  return {
-    teamStatsRecords: computed(() => data.value?.teamStatsRecords ?? {}),
-  };
-}
-
 export async function useApiGetTeamMatchupStats(query: { gameVersion: GameVersionId }) {
   const { data } = await useFetch("/api/v3/teams/matchup-stats", { query });
   return {

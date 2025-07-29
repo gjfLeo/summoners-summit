@@ -6,7 +6,7 @@
     <NDataTable
       size="small"
       :columns="columns"
-      :data="teamStatsList"
+      :data="data"
       :scroll-x="1400"
       max-height="calc(100vh - 12rem)"
       class="mt"
@@ -19,38 +19,48 @@ import { NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
 import { divide } from "mathjs/number";
 
 const { gameVersion } = useGameVersion();
-const { teamStatsRecords } = await useApiGetTeamStatsRecords({ gameVersion: gameVersion.value });
 const { t } = useLocales();
+
+const { data: teamsStatsData } = await useFetch("/api/v4/teams-stats", {
+  query: { gameVersion },
+});
 
 const includeCharacters = ref<CardId[]>([]);
 
 const teamStatsList = computed(() => {
-  return Object.values(teamStatsRecords.value)
-    .filter((stats) => {
-      const characters = getCharacterCardsByTeamId(stats.teamId);
-      return includeCharacters.value.every(character => characters.includes(character));
-    })
+  if (!teamsStatsData.value) {
+    return [];
+  }
+  return teamsStatsData.value
     .map((stats) => {
-      const { games, gamesWin, gamesMirror } = stats;
+      const { numGames, numGamesWin, numGamesMirror } = stats;
 
-      const gamesExcludeMirror = games - gamesMirror;
-      const gamesWinExcludeMirror = gamesWin - Math.floor(gamesMirror / 2);
-      const winRateExcludeMirror = divide(gamesWinExcludeMirror, gamesExcludeMirror);
+      const numGamesExcludeMirror = numGames - numGamesMirror;
+      const numGamesWinExcludeMirror = numGamesWin - Math.floor(numGamesMirror / 2);
+      const winRateExcludeMirror = divide(numGamesWinExcludeMirror, numGamesExcludeMirror);
 
       return {
         key: stats.teamId,
         ...stats,
-        bp: games + stats.banned,
-        gamesNetWin: gamesWin - (games - gamesWin),
+        numBP: numGames + stats.numBanned,
+        numGamesNetWin: numGamesWin - (numGames - numGamesWin),
 
-        gamesExcludeMirror,
-        gamesWinExcludeMirror,
+        numGamesExcludeMirror,
+        numGamesWinExcludeMirror,
         winRateExcludeMirror,
 
-        winRate: divide(gamesWin, games),
-        starterWinRate: divide(stats.gamesStarterWin, stats.gamesStarter),
-        followerWinRate: divide(stats.gamesFollowerWin, stats.gamesFollower),
+        winRate: divide(numGamesWin, numGames),
+        starterWinRate: divide(stats.numGamesStarterWin, stats.numGamesStarter),
+        followerWinRate: divide(stats.numGamesFollowerWin, stats.numGamesFollower),
       };
+    });
+});
+
+const data = computed(() => {
+  return teamStatsList.value
+    .filter((stats) => {
+      const characters = getCharacterCardsByTeamId(stats.teamId);
+      return includeCharacters.value.every(character => characters.includes(character));
     });
 });
 
@@ -71,25 +81,25 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
   },
   {
     title: t("main.stats.gamesPlayed"),
-    key: "games",
+    key: "numGames",
     width: "6rem",
     align: "center",
     sorter: "default",
     filterMultiple: false,
     filterOptions: [2, 3, 5, 10].map(v => ({ label: t("main.stats.atLeast", [v]), value: v })),
     defaultFilterOptionValue: null,
-    filter: (value, row) => row.games >= Number(value),
+    filter: (value, row) => row.numGames >= Number(value),
   },
-  ...teamStatsList.value.some(item => item.banned > 0)
+  ...teamStatsList.value.some(item => item.numBanned > 0)
     ? [{
       title: t("main.stats.gamesBanned"),
-      key: "banned",
+      key: "numBanned",
       width: "6rem",
       align: "center",
       sorter: "default",
     }, {
       title: t("main.stats.gamesBP"),
-      key: "bp",
+      key: "numBP",
       width: "6rem",
       align: "center",
       sorter: "default",
@@ -101,11 +111,11 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => RenderWinRate(row.gamesWin, row.games, row.winRate),
+    render: row => RenderWinRate(row.numGamesWin, row.numGames, row.winRate),
   },
   {
     title: t("main.stats.gamesWin"),
-    key: "gamesWin",
+    key: "numGamesWin",
     width: "6rem",
     align: "center",
     defaultSortOrder: "descend",
@@ -113,21 +123,21 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
   },
   {
     title: t("main.stats.gamesNetWin"),
-    key: "gamesNetWin",
+    key: "numGamesNetWin",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
     title: t("main.stats.gamesExcludeMirror"),
-    key: "gamesExcludeMirror",
+    key: "numGamesExcludeMirror",
     width: "6rem",
     align: "center",
     sorter: "default",
   },
   {
     title: t("main.stats.gamesWinExcludeMirror"),
-    key: "gamesWinExcludeMirror",
+    key: "numGamesWinExcludeMirror",
     width: "6rem",
     align: "center",
     sorter: "default",
@@ -138,7 +148,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => RenderWinRate(row.gamesWinExcludeMirror, row.gamesExcludeMirror, row.winRateExcludeMirror),
+    render: row => RenderWinRate(row.numGamesWinExcludeMirror, row.numGamesExcludeMirror, row.winRateExcludeMirror),
   },
   {
     title: t("main.stats.starterWinRate"),
@@ -146,7 +156,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => RenderWinRate(row.gamesStarterWin, row.gamesStarter, row.starterWinRate),
+    render: row => RenderWinRate(row.numGamesStarterWin, row.numGamesStarter, row.starterWinRate),
   },
   {
     title: t("main.stats.followerWinRate"),
@@ -154,7 +164,7 @@ const columns: DataTableColumn<typeof teamStatsList["value"][0]>[] = [
     width: "6rem",
     align: "center",
     sorter: "default",
-    render: row => RenderWinRate(row.gamesFollowerWin, row.gamesFollower, row.followerWinRate),
+    render: row => RenderWinRate(row.numGamesFollowerWin, row.numGamesFollower, row.followerWinRate),
   },
 ];
 
