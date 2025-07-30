@@ -791,6 +791,30 @@
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chasca.webp"
   },
+  "215121": {
+    "id": "215121",
+    "name": {
+      "zh": "舞袂翩兮扬玉霓",
+      "en": "Dance Vestments Billow Like Rainbow Jade"
+    },
+    "shareId": 495,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Lanyan.webp"
+  },
+  "215131": {
+    "id": "215131",
+    "name": {
+      "zh": "奇想天开捕物帐",
+      "en": "Curious Casefiles"
+    },
+    "shareId": 496,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Heizo.webp"
+  },
   "216011": {
     "id": "216011",
     "name": {
@@ -1378,6 +1402,18 @@
     "gameVersion": "5.1",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_EremiteGrass.webp"
+  },
+  "227041": {
+    "id": "227041",
+    "name": {
+      "zh": "饕噬尽吞",
+      "en": "The All-Devourer"
+    },
+    "shareId": 497,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HookwalkerPrimo.webp"
   },
   "311101": {
     "id": "311101",
@@ -2315,6 +2351,30 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_JinchengYongzhe.webp"
   },
+  "312035": {
+    "id": "312035",
+    "name": {
+      "zh": "失冕的宝冠",
+      "en": "Crownless Crown"
+    },
+    "shareId": 498,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Xiasi.webp"
+  },
+  "312036": {
+    "id": "312036",
+    "name": {
+      "zh": "异想零落的圆舞",
+      "en": "Whimsical Dance of the Withered"
+    },
+    "shareId": 499,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Xielve.webp"
+  },
   "312101": {
     "id": "312101",
     "name": {
@@ -2927,6 +2987,30 @@
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Woluzhibang.webp"
   },
+  "321029": {
+    "id": "321029",
+    "name": {
+      "zh": "墨色酒馆",
+      "en": "Calligraphy Tavern"
+    },
+    "shareId": 500,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_MoseJiuguan.webp"
+  },
+  "321030": {
+    "id": "321030",
+    "name": {
+      "zh": "星轨王城",
+      "en": "Constellation Metropole"
+    },
+    "shareId": 501,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_XinguiWangcheng.webp"
+  },
   "322001": {
     "id": "322001",
     "name": {
@@ -3163,7 +3247,7 @@
     },
     "shareId": 213,
     "type": "action",
-    "gameVersion": "3.3",
+    "gameVersion": "4.1",
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Yayoyi.webp"
   },
@@ -3262,6 +3346,30 @@
     "gameVersion": "5.0",
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_AimiTa.webp"
+  },
+  "322029": {
+    "id": "322029",
+    "name": {
+      "zh": "森林的祝福",
+      "en": "Forest Blessing"
+    },
+    "shareId": 502,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_ZhezhiJiazu.webp"
+  },
+  "322030": {
+    "id": "322030",
+    "name": {
+      "zh": "预言女神的礼物",
+      "en": "Gift of the Goddess of Prophecy"
+    },
+    "shareId": 503,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_JimuRen.webp"
   },
   "323001": {
     "id": "323001",
@@ -4246,6 +4354,30 @@
     "gameVersion": "5.7",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_TujiaoLong.webp"
+  },
+  "332049": {
+    "id": "332049",
+    "name": {
+      "zh": "收获时间",
+      "en": "Harvest Time"
+    },
+    "shareId": 504,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Olorun.webp"
+  },
+  "332050": {
+    "id": "332050",
+    "name": {
+      "zh": "很棒，哥们。",
+      "en": "Awesome, Bro"
+    },
+    "shareId": 505,
+    "type": "action",
+    "gameVersion": "5.8",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ifa.webp"
   },
   "333001": {
     "id": "333001",

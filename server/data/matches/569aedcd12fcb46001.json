@@ -1,0 +1,24 @@
+{
+  "id": "569aedcd12fcb46001",
+  "tournamentId": "569aedcd12fcb460",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.7",
+  "playerA": {
+    "playerId": "e2488ee12a6c9f4c",
+    "nickname": "mikasa"
+  },
+  "playerB": {
+    "playerId": "54980de7c75538b6",
+    "nickname": "T.undying.You"
+  },
+  "gameIds": [
+    "569aedcd12fcb4600101",
+    "569aedcd12fcb4600102",
+    "569aedcd12fcb4600103",
+    "569aedcd12fcb4600104",
+    "569aedcd12fcb4600105"
+  ],
+  "video": "https://www.bilibili.com/video/BV1sMgLzbEfW"
+}
