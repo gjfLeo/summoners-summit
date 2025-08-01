@@ -10,7 +10,7 @@ import { divide } from "mathjs/number";
 
 const { t } = useLocales();
 
-const { data: overviewData } = await useFetch("/api/v4/overview");
+const { data: overviewData } = await useFetch("/api/v4/overview-stats");
 
 const data = computed(() => {
   if (!overviewData.value) {

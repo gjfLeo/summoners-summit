@@ -1,5 +1,13 @@
 import { getGameVersionList, getStorageGameList } from "~~/server/service";
 
+defineRouteMeta({
+  openAPI: {
+    tags: ["Misc"],
+    summary: "总览数据查询",
+    description: "查询网站统计的各游戏版本的总览数据",
+  },
+});
+
 export default defineEventHandler(async () => {
   const gameVersionList = await getGameVersionList();
   const record = Object.fromEntries(
