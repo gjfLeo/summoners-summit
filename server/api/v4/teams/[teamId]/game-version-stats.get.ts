@@ -27,6 +27,7 @@ const getTeamGameVersionStats = defineCachedFunction(
     teamId: DeckTeamId;
   }) => {
     let games = await getStorageGameList();
+    games = games.filter(g => !g.isPrePatch);
     games = games.flatMap((g) => {
       const r: MaybeMirrored<Game>[] = [];
       if (g.playerADeck.teamId === teamId) {
@@ -52,7 +53,8 @@ const getTeamGameVersionStats = defineCachedFunction(
       return record[gameVersion];
     }
 
-    const matches = await getStorageMatchList();
+    let matches = await getStorageMatchList();
+    matches = matches.filter(m => !m.isPrePatch);
     matches.forEach((m) => {
       m.bans?.filter(b => b.banType === "team")
         .forEach((ban) => {

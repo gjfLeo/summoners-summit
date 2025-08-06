@@ -42,6 +42,7 @@ async function getTeamsStats({ gameVersion }: {
   }
 
   let games = await getStorageGameList();
+  games = games.filter(g => !g.isPrePatch);
   if (gameVersion) {
     games = games.filter(game => game.gameVersion === gameVersion);
   }
@@ -71,6 +72,7 @@ async function getTeamsStats({ gameVersion }: {
   });
 
   let matches = await getStorageMatchList();
+  matches = matches.filter(m => !m.isPrePatch);
   if (gameVersion) {
     matches = matches.filter(match => match.gameVersion === gameVersion);
   }

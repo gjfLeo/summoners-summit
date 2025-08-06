@@ -36,6 +36,7 @@ const getActionCardsUsages = defineCachedFunction(
     gameVersion?: GameVersionId;
   }) => {
     let games: MaybeMirrored<Game>[] = await getStorageGameList();
+    games = games.filter(g => !g.isPrePatch);
     if (gameVersion) {
       games = games.filter(g => g.gameVersion === gameVersion);
     }
@@ -60,13 +61,7 @@ const getActionCardsUsages = defineCachedFunction(
       }),
     );
 
-    const record: Record<CardId, {
-      cardId: CardId;
-      numGameDecks: 0;
-      numGameDecksWin: 0;
-      numUsages: 0;
-      numUsagesWin: 0;
-    }> = {};
+    const record: Record<CardId, ActionCardUsages> = {};
     function getRecordItem(cardId: CardId) {
       return record[cardId] ?? (record[cardId] = {
         cardId,
