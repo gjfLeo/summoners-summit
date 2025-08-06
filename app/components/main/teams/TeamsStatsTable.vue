@@ -10,7 +10,11 @@
       :scroll-x="1400"
       max-height="calc(100vh - 12rem)"
       class="mt"
-    />
+    >
+      <template #empty>
+        <GameVersionEmpty />
+      </template>
+    </NDataTable>
   </div>
 </template>
 
@@ -18,7 +22,11 @@
 import { NuxtLinkLocale, RenderWinRate, TeamAvatars } from "#components";
 import { divide } from "mathjs/number";
 
-const { gameVersion } = useGameVersion();
+const props = defineProps<{
+  gameVersion: GameVersionId;
+}>();
+const { gameVersion } = toRefs(props);
+
 const { t } = useLocales();
 
 const { data: teamsStatsData } = await useFetch("/api/v4/teams-stats", {

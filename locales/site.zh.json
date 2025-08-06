@@ -27,7 +27,8 @@
   },
   "messages": {
     "copied": "已复制",
-    "doNotShowAgain": "不再提示"
+    "doNotShowAgain": "不再提示",
+    "gameVersionHasNoData": "所选版本暂无数据"
   },
   "name": "召唤之巅",
   "notifications": {

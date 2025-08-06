@@ -27,7 +27,8 @@
   },
   "messages": {
     "copied": "Copied!",
-    "doNotShowAgain": "Don't show again"
+    "doNotShowAgain": "Don't show again",
+    "gameVersionHasNoData": "No data for current version"
   },
   "name": "Summoners' Summit",
   "notifications": {

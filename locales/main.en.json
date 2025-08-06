@@ -158,6 +158,10 @@
     "characterSelectorFocusPlaceholder": "Input to filter",
     "matchupTable": {
       "minGamesNum": "Games"
+    },
+    "anchors": {
+      "teamList": "Team List",
+      "matchupStats": "Matchup Stats"
     }
   },
   "tools": {

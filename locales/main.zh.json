@@ -154,6 +154,10 @@
     "viewDeckDetails": "查看牌组详情"
   },
   "teams": {
+    "anchors": {
+      "teamList": "阵容列表",
+      "matchupStats": "对阵统计"
+    },
     "characterSelectorDefaultPlaceholder": "角色",
     "characterSelectorFocusPlaceholder": "支持拼音和首字母筛选",
     "matchupTable": {
