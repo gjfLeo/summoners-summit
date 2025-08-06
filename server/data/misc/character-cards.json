@@ -857,6 +857,32 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chasca.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chasca.webp"
   },
+  "1512": {
+    "id": "1512",
+    "name": {
+      "zh": "蓝砚",
+      "en": "Lan Yan"
+    },
+    "shareId": 492,
+    "type": "character",
+    "gameVersion": "5.8",
+    "element": "anemo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Lanyan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Lanyan.webp"
+  },
+  "1513": {
+    "id": "1513",
+    "name": {
+      "zh": "鹿野院平藏",
+      "en": "Shikanoin Heizou"
+    },
+    "shareId": 493,
+    "type": "character",
+    "gameVersion": "5.8",
+    "element": "anemo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Heizo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Heizo.webp"
+  },
   "1601": {
     "id": "1601",
     "name": {
@@ -1493,5 +1519,18 @@
     "element": "dendro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EremiteGrass.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EremiteGrass.webp"
+  },
+  "2704": {
+    "id": "2704",
+    "name": {
+      "zh": "贪食匿叶龙山王",
+      "en": "Gluttonous Yumkasaur Mountain King"
+    },
+    "shareId": 494,
+    "type": "character",
+    "gameVersion": "5.8",
+    "element": "dendro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HookwalkerPrimo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HookwalkerPrimo.webp"
   }
 }
