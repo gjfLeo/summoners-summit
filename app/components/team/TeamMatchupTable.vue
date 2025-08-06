@@ -1,10 +1,15 @@
 <template>
-  <NDataTable
-    :columns="columns"
-    :data="matchupStats"
-    :single-line="false"
-    style="--n-td-padding: 2px; --n-th-padding: 8px"
-  />
+  <template v-if="data">
+    <NDataTable
+      :columns="columns"
+      :data="matchupStats"
+      :single-line="false"
+      style="--n-td-padding: 2px; --n-th-padding: 8px"
+    />
+  </template>
+  <template v-else-if="pending">
+    <NSpin size="large" />
+  </template>
 </template>
 
 <script lang="ts" setup>
@@ -14,13 +19,18 @@ import { divide } from "mathjs/number";
 import { NButton, NFormItem, NPopover, NSlider } from "naive-ui";
 
 const { gameVersion } = useGameVersion();
-const { teams, matchupStats } = await useApiGetTeamMatchupStats({ gameVersion: gameVersion.value });
+const { data, pending } = await useFetch("/api/v4/teams-matchup-stats", {
+  query: { gameVersion },
+});
+const teams = computed(() => data.value?.teams ?? []);
+const matchupStats = computed(() => data.value?.matchupStats ?? []);
+
 const { t } = useLocales();
 
 const numGamesThreshold = ref(4);
 const themeVar = useThemeVars();
 
-const columns = computed<DataTableColumns<typeof matchupStats["value"][0]>>(() => [
+const columns = computed<DataTableColumns<TeamMatchupStats>>(() => [
   {
     key: "teamId",
     width: "6rem",

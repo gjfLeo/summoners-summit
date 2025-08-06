@@ -5,5 +5,4 @@ export * from "./game-version";
 export * from "./match";
 export * from "./player";
 export * from "./ranks";
-export * from "./teams";
 export * from "./tournament";

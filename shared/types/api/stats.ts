@@ -19,3 +19,17 @@ export interface TeamStats {
   numGamesMirror: number;
   numBanned: number;
 }
+
+export interface TeamMatchupStats {
+  teamId: DeckTeamId;
+  opponents: {
+    [opponentTeamId: DeckTeamId]: {
+      numGames: number;
+      numGamesWin: number;
+    };
+  };
+  overall: {
+    numGames: number;
+    numGamesWin: number;
+  };
+}
