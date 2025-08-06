@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@10.14.0",
   "scripts": {
-    "build": "nuxi build",
+    "build": "nuxi cleanup && nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "dev": "nuxi dev",
     "generate": "nuxi generate",
