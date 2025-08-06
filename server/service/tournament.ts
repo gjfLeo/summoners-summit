@@ -1,4 +1,5 @@
 import type { TournamentDetail, TournamentId } from "~~/shared/types";
+import z from "zod";
 import { getStorageGameRecord } from "./game";
 import { getStorageMatchList } from "./match";
 import { defineRecordStorage } from "./storage";
@@ -12,7 +13,18 @@ export const clearTournamentCache = tournamentStorage.clearCache;
 // ----------------------------------------------------------------------------
 
 export async function writeTournamentV2(tournament: Tournament) {
-  const data = ZTournament.parse(tournament);
+  const data = z.preprocess(
+    (tournament: Tournament) => {
+      tournament.stages.forEach((stage) => {
+        delete stage._key;
+        stage.parts.forEach((part) => {
+          delete part._key;
+        });
+      });
+      return tournament;
+    },
+    ZTournament,
+  ).parse(tournament);
   writeDataV2(`tournaments/${data.id}`, data);
 }
 

@@ -9,7 +9,6 @@
   "type": "地区大赛",
   "stages": [
     {
-      "_key": 0,
       "name": {
         "zh": "20进8突围赛-第1轮",
         "en": "20-to-8 Breakthrough-Round1"
@@ -27,7 +26,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-16",
           "matchIds": []
@@ -35,7 +33,6 @@
       ]
     },
     {
-      "_key": 1,
       "name": {
         "zh": "20进8突围赛-第2轮",
         "en": "20-to-8 Breakthrough-Round2"
@@ -53,7 +50,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-17",
           "matchIds": []
@@ -61,7 +57,6 @@
       ]
     },
     {
-      "_key": 2,
       "name": {
         "zh": "8强淘汰赛-胜者组半决赛",
         "en": "Knockout Stage-Winners' Semi-finals"
@@ -82,7 +77,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-22",
           "matchIds": []
@@ -90,7 +84,6 @@
       ]
     },
     {
-      "_key": 3,
       "name": {
         "zh": "8强淘汰赛-败者组第1轮",
         "en": "Knockout Stage-Losers' Round1"
@@ -111,7 +104,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-22",
           "matchIds": []
@@ -119,7 +111,6 @@
       ]
     },
     {
-      "_key": 4,
       "name": {
         "zh": "8强淘汰赛-败者组第2轮",
         "en": "Knockout Stage-Losers' Round2"
@@ -140,7 +131,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-23",
           "matchIds": []
@@ -148,7 +138,6 @@
       ]
     },
     {
-      "_key": 5,
       "name": {
         "zh": "8强淘汰赛-胜者组决赛",
         "en": "Knockout Stage-Winners' Final"
@@ -169,7 +158,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-23",
           "matchIds": []
@@ -177,7 +165,6 @@
       ]
     },
     {
-      "_key": 6,
       "name": {
         "zh": "8强淘汰赛-败者组半决赛",
         "en": "Knockout Stage-Losers' Semi-finals"
@@ -198,7 +185,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-23",
           "matchIds": []
@@ -206,7 +192,6 @@
       ]
     },
     {
-      "_key": 7,
       "name": {
         "zh": "8强淘汰赛-败者组决赛",
         "en": "Knockout Stage-Losers' Final"
@@ -227,7 +212,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-24",
           "matchIds": []
@@ -235,7 +219,6 @@
       ]
     },
     {
-      "_key": 8,
       "name": {
         "zh": "8强淘汰赛-总决赛",
         "en": "Knockout Stage-Grand Final"
@@ -256,7 +239,6 @@
       },
       "parts": [
         {
-          "_key": 0,
           "name": {},
           "date": "2025-08-24",
           "matchIds": []
