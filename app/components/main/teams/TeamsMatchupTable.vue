@@ -1,5 +1,5 @@
 <template>
-  <template v-if="data">
+  <template v-if="data && data.teams.length">
     <NDataTable
       :columns="columns"
       :data="matchupStats"
@@ -18,14 +18,18 @@ import { NuxtLinkLocale, TeamAvatars } from "#components";
 import { divide } from "mathjs/number";
 import { NButton, NFormItem, NPopover, NSlider } from "naive-ui";
 
-const { gameVersion } = useGameVersion();
+const props = defineProps<{
+  gameVersion: GameVersionId;
+}>();
+const { gameVersion } = toRefs(props);
+
+const { t } = useLocales();
+
 const { data, pending } = await useFetch("/api/v4/teams-matchup-stats", {
   query: { gameVersion },
 });
 const teams = computed(() => data.value?.teams ?? []);
 const matchupStats = computed(() => data.value?.matchupStats ?? []);
-
-const { t } = useLocales();
 
 const numGamesThreshold = ref(4);
 const themeVar = useThemeVars();

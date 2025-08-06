@@ -1,11 +1,11 @@
 <template>
   <div>
-    <TeamsStatsTable id="team-list" />
-    <TeamMatchupTable id="matchup-stats" class="mt-8" />
+    <TeamsStatsTable v-bind="{ gameVersion }" id="team-list" />
+    <TeamsMatchupTable v-bind="{ gameVersion }" id="matchup-stats" class="mt-8" />
 
     <!-- <SitePageAnchors>
-      <NAnchorLink title="阵容列表" href="#team-list" />
-      <NAnchorLink title="对阵统计" href="#matchup-stats" />
+      <NAnchorLink :title="t('main.teams.anchors.teamList')" href="#team-list" />
+      <NAnchorLink :title="t('main.teams.anchors.matchupStats')" href="#matchup-stats" />
     </SitePageAnchors> -->
   </div>
 </template>
@@ -13,4 +13,6 @@
 <script lang="ts" setup>
 const { t } = useLocales();
 useHead({ title: t("site.titles.main.teams") });
+
+const { gameVersion } = useGameVersion();
 </script>
