@@ -107,30 +107,29 @@ export async function saveRanksPlayer(ranks: Ranks) {
   const existedPlayerIds = ranks.ranks.map(({ uid }) => playerIdByUid[uid]).filter(Boolean);
   const existedPlayerRecord = await getStoragePlayerRecord(existedPlayerIds);
 
-  const changedPlayerIds = await Promise.all(
-    ranks.ranks.map(async ({ uid, nickname }) => {
-      const playerId = playerIdByUid[uid];
-      const player = playerId ? existedPlayerRecord[playerId] : undefined;
-      if (player) {
-        if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
-          player.aliases.push(nickname);
-          const id = await savePlayerV2(player, { clearCache: false });
-          return [id];
-        }
-        return [];
+  const changedPlayerIds = new Set<PlayerId>();
+  for (const { uid, nickname } of ranks.ranks) {
+    const playerId = playerIdByUid[uid];
+    const player = playerId ? existedPlayerRecord[playerId] : undefined;
+    if (player) {
+      if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
+        player.aliases.push(nickname);
+        const id = await savePlayerV2(player, { clearCache: false });
+        changedPlayerIds.add(id);
+        continue;
       }
-      else {
-        const id = await savePlayerV2({
-          uniqueName: nickname,
-          aliases: [],
-          uids: [uid],
-        }, { clearCache: false });
-        return [id];
-      }
-    }),
-  );
+    }
+    else {
+      const id = await savePlayerV2({
+        uniqueName: nickname,
+        aliases: [],
+        uids: [uid],
+      }, { clearCache: false });
+      changedPlayerIds.add(id);
+    }
+  }
 
-  return clearPlayerCache(changedPlayerIds.flat());
+  return clearPlayerCache(changedPlayerIds);
 }
 
 // ----------------------------------------------------------------------------
@@ -288,5 +287,15 @@ async function readPlayerIndexV2(): Promise<PlayerIndex> {
 async function updatePlayerIndexV2(func: (index: PlayerIndex) => void) {
   const index = await readPlayerIndexV2();
   func(index);
+  await writeDataV2("players/_index", index);
+}
+export async function refreshPlayerIndex() {
+  const index: PlayerIndex = { uid: {} };
+  const players = await getStoragePlayerList();
+  players.forEach((player) => {
+    player.uids.forEach((uid) => {
+      index.uid[uid] = player.id;
+    });
+  });
   await writeDataV2("players/_index", index);
 }
