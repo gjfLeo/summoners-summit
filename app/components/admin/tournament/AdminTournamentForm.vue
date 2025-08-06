@@ -198,19 +198,27 @@ const actionCardsWeight = asyncComputed(async () => {
 });
 provide("actionCardsWeight", actionCardsWeight);
 
-const characterCardNumUsages = ref<Record<CardId, number>>({});
-provide("characterCardNumUsages", characterCardNumUsages);
-watch(preferredGameVersion, async () => {
-  const res = await $fetch("/api/v3/cards/getCharacterCardStats", {
-    params: preferredGameVersion.value ? { preferredGameVersion: preferredGameVersion.value } : undefined,
-  });
-  if (res.success) {
-    characterCardNumUsages.value = Object.fromEntries(
-      res.characterCardStats.map(item => [
-        item.cardId,
-        item.numGames + item.numBanned,
-      ]),
-    );
+const { data: characterCardsUsages } = useLazyFetch("/api/v4/character-cards-usages");
+const characterCardsWeight = asyncComputed(async () => {
+  const weight: Record<CardId, number> = Object.fromEntries(
+    (characterCardsUsages.value ?? [])
+      .map(item => [item.cardId, item.numGames]),
+  );
+  if (preferredGameVersion.value) {
+    try {
+      const res = await $fetch("/api/v4/character-cards-usages", {
+        query: { gameVersion: preferredGameVersion.value },
+      });
+      res.forEach((item) => {
+        weight[item.cardId] ??= 0;
+        weight[item.cardId] += item.numGames * 10;
+      });
+    }
+    catch (error) {
+      console.error(error);
+    }
   }
-}, { immediate: true });
+  return weight;
+});
+provide("characterCardsWeight", characterCardsWeight);
 </script>

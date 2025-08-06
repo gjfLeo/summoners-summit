@@ -2,8 +2,13 @@
   <div>
     <NTabs justify-content="space-evenly" type="line" size="large">
       <NTabPane name="characters" :tab="t('terms.characterCards')">
-        <Cards_CharacterBarChart />
-        <Cards_CharacterPickRateBarChart />
+        <template v-if="characterCardsUsages">
+          <CardsCharacterUsageBarChart :usages="characterCardsUsages" :num-matches="numMatches" />
+          <CardsCharacterPickRateBarChart :usages="characterCardsUsages" :num-matches="numMatches" />
+        </template>
+        <template v-else-if="characterCardsUsagesLoading">
+          <NSpin size="large" />
+        </template>
       </NTabPane>
       <NTabPane name="actions" :tab="t('terms.actionCards')">
         <template v-if="actionCardsUsages">
@@ -23,10 +28,18 @@ useHead({ title: t("site.titles.main.cards") });
 
 const { gameVersion } = useGameVersion();
 
-const { characterCardStats, numMatches, numGames } = await useApiGetCharacterCardStats({ gameVersion: gameVersion.value });
-provide("characterCardStats", characterCardStats);
-provide("numMatches", numMatches);
-provide("numGames", numGames);
+const { data: overviewData } = await useFetch("/api/v4/overview-stats");
+const gameVersionOverviewStats = computed(() => {
+  return overviewData.value?.find(g => g.gameVersion === gameVersion.value);
+});
+const numMatches = computed(() => gameVersionOverviewStats.value?.numMatches ?? 0);
+
+const {
+  data: characterCardsUsages,
+  pending: characterCardsUsagesLoading,
+} = await useFetch("/api/v4/character-cards-usages", {
+  query: { gameVersion },
+});
 
 const {
   data: actionCardsUsages,

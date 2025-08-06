@@ -1,4 +1,4 @@
-import { getGameVersionList, getStorageGameList } from "~~/server/service";
+import { getGameVersionList, getStorageGameList, getStorageMatchList } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -18,14 +18,15 @@ export default defineEventHandler(async () => {
         numGamesWithDeck: 0,
         numGamesWithStarter: 0,
         numGamesStarterWin: 0,
+        numMatches: 0,
       };
       return [gameVersion.id, stats];
     }),
   );
 
   const games = await getStorageGameList();
-
   games
+    .filter(g => !g.isPrePatch)
     .forEach((game) => {
       const recordItem = record[game.gameVersion];
       recordItem.numGames++;
@@ -38,6 +39,14 @@ export default defineEventHandler(async () => {
           recordItem.numGamesStarterWin++;
         }
       }
+    });
+
+  const matches = await getStorageMatchList();
+  matches
+    .filter(m => !m.isPrePatch)
+    .forEach((match) => {
+      const recordItem = record[match.gameVersion];
+      recordItem.numMatches++;
     });
 
   const overview = Object.values(record)

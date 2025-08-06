@@ -6,6 +6,14 @@ export interface ActionCardUsages {
   numUsagesWin: number;
 }
 
+export interface CharacterCardUsages {
+  cardId: CardId;
+  numGames: number;
+  numGamesWin: number;
+  numMatches: number;
+  numBanned: number;
+}
+
 export interface TeamDeckStats {
   deckCode: DeckCode;
   numGames: number;

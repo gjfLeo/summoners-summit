@@ -2,9 +2,9 @@
   <NDataTable
     :data="data"
     :columns="columns"
-    virtual-scroll
     :loading="loading"
-    flex-height
+    :flex-height="true"
+    :virtual-scroll="true"
   />
 </template>
 
