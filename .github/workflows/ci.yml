@@ -21,7 +21,7 @@ jobs:
       - uses: pnpm/action-setup@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -37,7 +37,7 @@ jobs:
       - uses: pnpm/action-setup@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -46,43 +46,43 @@ jobs:
       - name: Typecheck
         run: pnpm run typecheck
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          cache: pnpm
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: pnpm/action-setup@v3
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20.x
+  #         cache: pnpm
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            dist
-            .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-build-
-      - name: Install dependencies
-        run: pnpm install
-      - name: Static HTML export with Nuxt
-        run: pnpm run generate
-        env:
-          NUXT_APP_BASE_URL: /summoners-summit/
-          NUXT_PUBLIC_NEED_REDIRECT: true
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+  #     - name: Restore cache
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: |
+  #           dist
+  #           .nuxt
+  #         key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-nuxt-build-
+  #     - name: Install dependencies
+  #       run: pnpm install
+  #     - name: Static HTML export with Nuxt
+  #       run: pnpm run generate
+  #       env:
+  #         NUXT_APP_BASE_URL: /summoners-summit/
+  #         NUXT_PUBLIC_NEED_REDIRECT: true
+  #     - name: Upload artifact
+  #       uses: actions/upload-pages-artifact@v3
+  #       with:
+  #         path: ./dist
 
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v4
+  # deploy:
+  #   needs: build
+  #   permissions:
+  #     pages: write
+  #     id-token: write
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy GitHub Pages site
+  #       uses: actions/deploy-pages@v4
