@@ -39,6 +39,7 @@ const getTeamMatchupStats = defineCachedFunction(
     gameVersion?: GameVersionId;
   }) => {
     let games = await getStorageGameList();
+    games = games.filter(g => !g.isPrePatch);
     if (gameVersion) {
       games = games.filter(g => g.gameVersion === gameVersion);
     }
