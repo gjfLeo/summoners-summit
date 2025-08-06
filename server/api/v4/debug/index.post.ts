@@ -1,5 +1,5 @@
 import z from "zod";
-import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache, getStorageGameRecord, getStorageMatchRecord, getStorageTournamentList } from "~~/server/service";
+import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache, getStorageGameRecord, getStorageMatchRecord, getStoragePlayerList, getStorageTournamentList, refreshPlayerIndex } from "~~/server/service";
 
 defineRouteMeta({
   openAPI: {
@@ -16,6 +16,7 @@ defineRouteMeta({
           enum: [
             "clearStorageCache",
             "findUnusedData",
+            "refreshPlayerIndex",
           ],
         },
       },
@@ -27,6 +28,7 @@ const ZQuery = z.object({
   action: z.enum([
     "clearStorageCache",
     "findUnusedData",
+    "refreshPlayerIndex",
   ]),
 });
 
@@ -60,5 +62,10 @@ export default defineEventHandler(async (event) => {
       games,
       matches,
     };
+  }
+
+  if (action === "refreshPlayerIndex") {
+    await refreshPlayerIndex();
+    return {};
   }
 });
