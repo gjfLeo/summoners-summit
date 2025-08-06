@@ -21,9 +21,11 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 
-type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
-const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));
-const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
+const props = defineProps<{
+  usages: CharacterCardUsages[];
+  numMatches: number;
+}>();
+const { usages: characterCardsUsages, numMatches } = toRefs(props);
 
 const { t } = useLocales();
 const { characterCardById } = await useAsyncSharedData();
@@ -34,14 +36,16 @@ const { height: chartHeight, width: chartWidth } = useElementSize(chart);
 const barNum = computed(() => Math.floor((chartWidth.value - remToPx(3)) / remToPx(3)));
 
 const data = computed(() => {
-  return characterCardStats.value
+  return characterCardsUsages.value
     .map(item => ({
       cardId: item.cardId,
       pickRate: divide(item.numMatches, numMatches.value * 2),
       avatar: characterCardById.value[item.cardId].avatar,
     }))
-    .sort(sorter("pickRate"))
-    .reverse();
+    .sort(sortBy(
+      { field: "pickRate", order: "desc" },
+      { field: "cardId" },
+    ));
 });
 
 const option = computed<ECOption>(() => {

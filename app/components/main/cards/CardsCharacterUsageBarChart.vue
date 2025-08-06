@@ -11,17 +11,22 @@
 <script lang="ts" setup>
 import { divide } from "mathjs/number";
 
-type DataType = Awaited<ReturnType<typeof useApiGetCharacterCardStats>>;
-const characterCardStats = inject<DataType["characterCardStats"]>("characterCardStats", computed(() => []));
-const numMatches = inject<DataType["numMatches"]>("numMatches", computed(() => 0));
-const numGames = inject<DataType["numGames"]>("numGames", computed(() => 0));
+const props = defineProps<{
+  usages: CharacterCardUsages[];
+  numMatches: number;
+}>();
+const { usages: characterCardsUsages, numMatches } = toRefs(props);
 
 const { t, currentLocalized } = useLocales();
 const { characterCardById } = await useAsyncSharedData();
 const themeVars = useThemeVars();
 
+const numGames = computed(() => {
+  return characterCardsUsages.value.reduce((sum, a) => sum + a.numGames, 0) / 6;
+});
+
 const data = computed(() => {
-  return characterCardStats.value
+  return characterCardsUsages.value
     .map(item => ({
       cardId: item.cardId,
       numGames: item.numGames,
@@ -30,8 +35,12 @@ const data = computed(() => {
       numBanned: item.numBanned,
       avatar: characterCardById.value[item.cardId].avatar,
     }))
-    .sort(sorter("numGames"))
-    .reverse();
+    .sort(sortBy(
+      { field: "numGames", order: "desc" },
+      { field: "numGamesWin", order: "desc" },
+      { field: "numBanned", order: "desc" },
+      { field: "cardId" },
+    ));
 });
 
 const option = computed<ECOption>(() => {
