@@ -165,5 +165,21 @@
       "3c655864dbad879c",
       "fad29d1cf9df64e7"
     ]
+  },
+  {
+    "id": "season4-fonta",
+    "name": {
+      "zh": "大赤沙海·冠冕",
+      "en": ""
+    },
+    "flavorText": {
+      "zh": "炽烈阳光映照之下，大赤沙海中流淌的晶莹沙粒宛如散落的黄金。深埋其间的秘宝，更令无数冒险家心驰神往……",
+      "en": ""
+    },
+    "description": {
+      "zh": "在全民赛事第四赛季的「枫达杯·秋」中取得十六强。"
+    },
+    "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
+    "playerIds": []
   }
 ]
