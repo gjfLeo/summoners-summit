@@ -180,6 +180,10 @@
       "zh": "在全民赛事第四赛季的「枫达杯·秋」中取得十六强。"
     },
     "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
-    "playerIds": []
+    "playerIds": [
+      "161c913c3c9475e8",
+      "464bf5e9dbec516f",
+      "357f80d929a918ce"
+    ]
   }
 ]
