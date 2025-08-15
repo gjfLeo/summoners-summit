@@ -10,31 +10,6 @@ export const clearPlayerCache = playerStorage.clearCache;
 
 // ----------------------------------------------------------------------------
 
-/** @deprecated */
-export function getPlayer(playerId: PlayerId): Player | undefined {
-  return ZPlayer.optional().parse(readData<Player>(`players/${playerId}`));
-}
-
-/** @deprecated */
-export function getPlayerByUid(uid: string): Player | undefined {
-  const playerId = readPlayerIndex().uid[uid];
-  return getPlayer(playerId);
-}
-
-export function getPlayerList(): Player[] {
-  return ZPlayer.array().parse(readDataList<Player>("players"));
-}
-
-// ----------------------------------------------------------------------------
-
-export async function getPlayerByUidV2(uid: string): Promise<Player | undefined> {
-  const index = await readPlayerIndexV2();
-  const playerId = index.uid[uid];
-  return playerId ? await getStoragePlayer(playerId) : undefined;
-}
-
-// ----------------------------------------------------------------------------
-
 const _ZSavePlayerV2Params = ZPlayer.partial({ id: true });
 type SavePlayerV2Params = z.infer<typeof _ZSavePlayerV2Params>;
 
@@ -132,48 +107,6 @@ export async function saveRanksPlayer(ranks: Ranks) {
   return clearPlayerCache(changedPlayerIds);
 }
 
-// ----------------------------------------------------------------------------
-
-export function deletePlayer(playerId: PlayerId) {
-  const player = getPlayer(playerId);
-  if (!player) return;
-
-  updatePlayerIndex((index) => {
-    player?.uids.forEach(uid => delete index.uid[uid]);
-  });
-  deleteData(`players/${playerId}`);
-  return clearPlayerCache();
-}
-
-const _ZSavePlayerParams = ZPlayer.partial({ id: true });
-type SavePlayerParams = z.infer<typeof _ZSavePlayerParams>;
-export function savePlayer(params: SavePlayerParams) {
-  const oldId = params.id;
-  const newId = params.uids[0] ? hash(params.uids[0]) : (oldId ?? hash());
-  // if (oldId && oldId !== newId) {
-  //   redirectPlayer(oldId, newId);
-  // }
-
-  const player = {
-    ...params,
-    id: newId,
-    aliases: [...params.aliases].sort(),
-  };
-
-  if (!player.ignored) delete player.ignored;
-
-  updatePlayerIndex((index) => {
-    player.uids.forEach((uid) => {
-      index.uid[uid] = player.id;
-    });
-  });
-
-  writeData(`players/${player.id}`, ZPlayer.parse(player));
-  // TODO await
-  clearPlayerCache();
-  return player.id;
-}
-
 export async function mergePlayer(targetPlayer: Player, sourceId: PlayerId): Promise<PlayerId> {
   const targetId = targetPlayer.id;
   if (sourceId === targetId) {
@@ -242,40 +175,6 @@ export async function changePlayerUniqueName(player: Player, newUniqueName: stri
   player.aliases = [player.uniqueName, ...player.aliases].filter(n => n !== newUniqueName);
   player.uniqueName = newUniqueName;
   await savePlayerV2(player);
-}
-
-/** @deprecated */
-export function bindPlayerNickname({ nickname, playerId }: { nickname: string; playerId?: string }) {
-  const player = playerId ? getPlayer(playerId) : undefined;
-  if (!player) {
-    return savePlayer({
-      uniqueName: nickname,
-      aliases: [],
-      uids: [],
-    });
-  }
-  else {
-    if (player.uniqueName !== nickname && !player.aliases.includes(nickname)) {
-      player.aliases.push(nickname);
-      savePlayer(player);
-      return player.id;
-    }
-    else {
-      return player.id;
-    }
-  }
-}
-
-function readPlayerIndex(): PlayerIndex {
-  return Object.assign(
-    { uid: {} } satisfies PlayerIndex,
-    readData<Partial<PlayerIndex>>("players/_index"),
-  );
-}
-function updatePlayerIndex(func: (index: PlayerIndex) => void) {
-  const index = readPlayerIndex();
-  func(index);
-  writeData("players/_index", index);
 }
 
 async function readPlayerIndexV2(): Promise<PlayerIndex> {
