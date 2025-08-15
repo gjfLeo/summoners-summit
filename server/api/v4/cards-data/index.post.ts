@@ -1,6 +1,28 @@
-import { z } from "zod";
+import z from "zod";
 
-const ZGyData = z.array(
+defineRouteMeta({
+  openAPI: {
+    tags: ["Cards"],
+    summary: "卡牌信息更新",
+    parameters: [
+      {
+        name: "action",
+        in: "query",
+        required: true,
+        schema: {
+          type: "string",
+          enum: ["update"],
+        },
+      },
+    ],
+  },
+});
+
+const zQuery = z.object({
+  action: z.literal("update"),
+});
+
+const zGyData = z.array(
   z.object({
     id: z.number(),
     shareId: z.number().optional(),
@@ -15,11 +37,11 @@ const ZGyData = z.array(
     type: z.string().optional(),
   }),
 );
-type GyData = z.infer<typeof ZGyData>;
+type GyData = z.infer<typeof zGyData>;
 async function fetchGyData(): Promise<GyData> {
   const res = await fetch("https://assets.gi-tcg.guyutongxue.site/api/v3/data");
   const data = await res.json();
-  return ZGyData.parse(data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
+  return zGyData.parse(data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
 }
 
 async function getCharacterCardData(gyData: GyData) {
@@ -91,16 +113,43 @@ async function getActionCardData(gyData: GyData) {
   return cardList;
 }
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
+  const { action } = await getValidatedQuery(event, zQuery.parse);
+  if (action !== "update") {
+    throw createError({ statusCode: 400, message: "Invalid action" });
+  }
+
   const gyData = await fetchGyData();
 
   const characterCardData = await getCharacterCardData(gyData);
   const characterCards = Object.fromEntries(characterCardData.map(card => [card.id, card]));
-  writeData("misc/character-cards", characterCards);
+  await writeDataV2("misc/character-cards", characterCards);
 
   const actionCardData = await getActionCardData(gyData);
   const actionCards = Object.fromEntries(actionCardData.map(card => [card.id, card]));
-  writeData("misc/action-cards", actionCards);
+  await writeDataV2("misc/action-cards", actionCards);
 
-  return responseOk();
+  const maxGameVersionId = characterCardData.reduce(
+    (max, card) => {
+      return max.localeCompare(card.gameVersion) >= 0 ? max : card.gameVersion;
+    },
+    "3.6" as GameVersionId,
+  );
+  const seasonPhrasesRaw = await readDataV2("misc/season-phrases");
+  const seasonPhrases = z.record(ZSeasonPhraseId, ZSeasonPhrase).parse(seasonPhrasesRaw);
+  const versionData = Object.values(seasonPhrases)
+    .flatMap((p) => {
+      return p.gameVersions.map((v) => {
+        return {
+          id: v,
+          seasonPhrase: p.id,
+        };
+      });
+    })
+    .filter(v => v.id.localeCompare(maxGameVersionId) <= 0)
+    .sort((a, b) => b.id.localeCompare(a.id));
+  const gameVersions = Object.fromEntries(versionData.map(v => [v.id, v]));
+  await writeDataV2("misc/game-versions", gameVersions);
+
+  return {};
 });

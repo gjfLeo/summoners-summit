@@ -49,7 +49,10 @@ const {
 async function updateData() {
   const loading = message.loading(t("admin.action.loading"), { duration: 0 });
   try {
-    await $fetch("/api/v3/cards/updateData2");
+    await $fetch("/api/v4/cards-data", {
+      method: "POST",
+      query: { action: "update" },
+    });
     loading.destroy();
     message.success(t("admin.message.SUCCESS"));
     return Promise.all([
