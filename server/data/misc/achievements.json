@@ -10,7 +10,7 @@
       "en": "The splendor of Dragonspine at daybreak, as the symbol of a duelist, symbolizes the \"summit\" of their skill..."
     },
     "description": {
-      "zh": "在全民赛事第一赛季的影幻杯中取得十六强。"
+      "zh": "在全民赛事第一赛季的「影幻杯」中取得十六强。"
     },
     "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
     "playerIds": [
@@ -78,7 +78,7 @@
       "en": "Gold, the most glorious form that wealth can take. Whether you're an adventurer, miner, or card player, it represents the crowning achievement of your career..."
     },
     "description": {
-      "zh": "在全民赛事第二赛季的枫达杯中取得十六强。"
+      "zh": "在全民赛事第二赛季的「枫达杯」中取得十六强。"
     },
     "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/The_Chasm_Crown_Card_Back.png",
     "playerIds": [
@@ -144,7 +144,7 @@
       "en": "The radiance of the Dainichi Mikoshi is the most dazzling sight within Enkanomiya. After overcoming hidden perials, duelists, like a brilliant light beneath the ocean's depths, will find their path forward, no matter the obstacles they face..."
     },
     "description": {
-      "zh": "在全民赛事第三赛季的枫达杯中取得十六强。"
+      "zh": "在全民赛事第三赛季的2025「枫达杯」中取得十六强。"
     },
     "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
     "playerIds": [
@@ -177,14 +177,22 @@
       "en": ""
     },
     "description": {
-      "zh": "在全民赛事第四赛季的「枫达杯·秋」中取得十六强。"
+      "zh": "在全民赛事第四赛季的2025「枫达杯」·秋中取得十二强。"
     },
     "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
     "playerIds": [
       "161c913c3c9475e8",
       "464bf5e9dbec516f",
       "357f80d929a918ce",
-      "2d28c337063c47fd"
+      "2d28c337063c47fd",
+      "8aa88879ee04d4f4",
+      "603631b698cde3a0",
+      "ac9aff8927acdfb8",
+      "02158697c8945138",
+      "d525e45844f51a61",
+      "3e2630113952e34e",
+      "a037eaea7cb46d85",
+      "c9e5b61a9edcc440"
     ]
   }
 ]
