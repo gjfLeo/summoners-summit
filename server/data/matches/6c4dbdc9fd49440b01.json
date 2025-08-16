@@ -1,0 +1,20 @@
+{
+  "id": "6c4dbdc9fd49440b01",
+  "tournamentId": "6c4dbdc9fd49440b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.8",
+  "playerA": {
+    "playerId": "8aa88879ee04d4f4",
+    "nickname": "流萤夜色"
+  },
+  "playerB": {
+    "playerId": "df71dc0b703ba126",
+    "nickname": "月满西楼"
+  },
+  "gameIds": [
+    "6c4dbdc9fd49440b0101",
+    "6c4dbdc9fd49440b0102"
+  ]
+}

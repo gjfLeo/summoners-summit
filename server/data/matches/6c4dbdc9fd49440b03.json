@@ -1,0 +1,20 @@
+{
+  "id": "6c4dbdc9fd49440b03",
+  "tournamentId": "6c4dbdc9fd49440b",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 2,
+  "gameVersion": "5.8",
+  "playerA": {
+    "playerId": "aa717943ad3fbd8e",
+    "nickname": "唐伯柏"
+  },
+  "playerB": {
+    "playerId": "ac9aff8927acdfb8",
+    "nickname": "千予晴空"
+  },
+  "gameIds": [
+    "6c4dbdc9fd49440b0301",
+    "6c4dbdc9fd49440b0302"
+  ]
+}
