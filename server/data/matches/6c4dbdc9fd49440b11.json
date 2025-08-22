@@ -13,6 +13,13 @@
     "playerId": "ac9aff8927acdfb8",
     "nickname": "千予晴空"
   },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1109-1511-2204",
+      "playerBTeamId": "1109-1511-2204"
+    }
+  ],
   "gameIds": [
     "6c4dbdc9fd49440b1101",
     "6c4dbdc9fd49440b1102",

@@ -1,0 +1,17 @@
+{
+  "id": "6c4dbdc9fd49440b15",
+  "tournamentId": "6c4dbdc9fd49440b",
+  "stageIndex": 5,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "5.8",
+  "playerA": {
+    "playerId": "161c913c3c9475e8",
+    "nickname": "叶叁伍"
+  },
+  "playerB": {
+    "playerId": "2d28c337063c47fd",
+    "nickname": "愚者千面"
+  },
+  "gameIds": []
+}

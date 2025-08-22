@@ -13,6 +13,13 @@
     "playerId": "357f80d929a918ce",
     "nickname": "Elaina"
   },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1104-1507-2202",
+      "playerBTeamId": "1114-1609-2304"
+    }
+  ],
   "gameIds": [
     "6c4dbdc9fd49440b1001",
     "6c4dbdc9fd49440b1002",
