@@ -174,8 +174,8 @@ function getMatchBan(raw: SaveMatchParams["bans"][number]): Ban {
   else {
     return {
       banType: "team",
-      playerATeamId: raw.playerACardIds[0],
-      playerBTeamId: raw.playerBCardIds[0],
+      playerATeamId: getTeamId(raw.playerACardIds),
+      playerBTeamId: getTeamId(raw.playerBCardIds),
     };
   }
 }
