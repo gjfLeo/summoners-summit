@@ -13,5 +13,17 @@
     "playerId": "2d28c337063c47fd",
     "nickname": "愚者千面"
   },
-  "gameIds": []
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1114-1609-2304",
+      "playerBTeamId": "2102-2104-2402"
+    }
+  ],
+  "gameIds": [
+    "6c4dbdc9fd49440b1501",
+    "6c4dbdc9fd49440b1502",
+    "6c4dbdc9fd49440b1503",
+    "6c4dbdc9fd49440b1504"
+  ]
 }
