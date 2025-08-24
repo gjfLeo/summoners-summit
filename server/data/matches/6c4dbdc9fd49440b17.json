@@ -6,12 +6,25 @@
   "matchIndex": 0,
   "gameVersion": "5.8",
   "playerA": {
-    "playerId": "357f80d929a918ce",
-    "nickname": "Elaina"
-  },
-  "playerB": {
     "playerId": "2d28c337063c47fd",
     "nickname": "愚者千面"
   },
-  "gameIds": []
+  "playerB": {
+    "playerId": "357f80d929a918ce",
+    "nickname": "Elaina"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1114-1609-2304",
+      "playerBTeamId": "1104-1507-2202"
+    }
+  ],
+  "gameIds": [
+    "6c4dbdc9fd49440b1701",
+    "6c4dbdc9fd49440b1702",
+    "6c4dbdc9fd49440b1703",
+    "6c4dbdc9fd49440b1704",
+    "6c4dbdc9fd49440b1705"
+  ]
 }

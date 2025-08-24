@@ -1,17 +1,32 @@
 {
   "id": "6c4dbdc9fd49440b18",
   "tournamentId": "6c4dbdc9fd49440b",
-  "stageIndex": 7,
+  "stageIndex": 8,
   "partIndex": 0,
   "matchIndex": 0,
   "gameVersion": "5.8",
+  "isFinal": true,
   "playerA": {
+    "playerId": "161c913c3c9475e8",
+    "nickname": "叶叁伍"
+  },
+  "playerB": {
     "playerId": "357f80d929a918ce",
     "nickname": "Elaina"
   },
-  "playerB": {
-    "playerId": "2d28c337063c47fd",
-    "nickname": "愚者千面"
-  },
-  "gameIds": []
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1114-1609-2304",
+      "playerBTeamId": "2102-2104-2402"
+    }
+  ],
+  "gameIds": [
+    "6c4dbdc9fd49440b1801",
+    "6c4dbdc9fd49440b1802",
+    "6c4dbdc9fd49440b1803",
+    "6c4dbdc9fd49440b1804",
+    "6c4dbdc9fd49440b1805",
+    "6c4dbdc9fd49440b1806"
+  ]
 }
