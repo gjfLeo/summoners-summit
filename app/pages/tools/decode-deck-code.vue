@@ -16,7 +16,7 @@
       </div>
       <!-- 行动牌 -->
       <div un-grid="~ gap-2 cols-6 md:cols-15">
-        <template v-for="(card, i) in result.actionCards" :key="i">
+        <template v-for="(card, i) in result.actionCards.toSorted()" :key="i">
           <CardImage :card="card" class="w-100%" />
         </template>
       </div>
