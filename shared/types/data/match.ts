@@ -37,5 +37,6 @@ export const ZMatch = z.object({
   bans: ZBan.array().optional(),
   gameIds: ZGameId.array(),
   video: z.string().optional(),
+  remark: z.string().optional(),
 }).strip();
 export type Match = z.infer<typeof ZMatch>;

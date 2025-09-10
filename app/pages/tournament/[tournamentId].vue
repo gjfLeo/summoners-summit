@@ -34,6 +34,9 @@
               <div>{{ part.date }}</div>
             </div>
           </NH4>
+          <NP v-if="matches[matchId].remark" class="text-sm">
+            {{ matches[matchId].remark }}
+          </NP>
           <TournamentMatchGameList
             :match="matches[matchId]"
             :games="games"

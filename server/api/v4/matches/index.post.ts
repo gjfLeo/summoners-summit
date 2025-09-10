@@ -40,6 +40,7 @@ async function saveMatch(params: SaveMatchParams) {
     gameIds,
     isFinal: params.isFinal ? true : undefined,
     isPrePatch: params.isPrePatch ? true : undefined,
+    remark: params.remark?.trim() ? params.remark.trim() : undefined,
   };
   todos.push((async function () {
     await writeMatchV2(match);

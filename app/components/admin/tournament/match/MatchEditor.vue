@@ -186,6 +186,14 @@
             </tr>
           </TransitionGroup>
         </NTable>
+        <NFormItem class="mt">
+          <NInput
+            v-model:value="match.remark"
+            type="textarea"
+            :autosize="{ minRows: 1, maxRows: 5 }"
+            placeholder="备注"
+          />
+        </NFormItem>
         <NFormItem>
           <NCheckbox v-model:checked="match.isFinal">{{ t('admin.tournament.final') }}</NCheckbox>
           <NCheckbox v-model:checked="match.isPrePatch">{{ t('admin.tournament.beforeHotfix') }}</NCheckbox>
