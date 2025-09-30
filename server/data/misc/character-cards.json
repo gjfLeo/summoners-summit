@@ -714,6 +714,19 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sethos.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sethos.webp"
   },
+  "1414": {
+    "id": "1414",
+    "name": {
+      "zh": "伊安珊",
+      "en": "Iansan"
+    },
+    "shareId": 506,
+    "type": "character",
+    "gameVersion": "6.0",
+    "element": "electro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Iansan.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Iansan.webp"
+  },
   "1501": {
     "id": "1501",
     "name": {
@@ -882,6 +895,19 @@
     "element": "anemo",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Heizo.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Heizo.webp"
+  },
+  "1514": {
+    "id": "1514",
+    "name": {
+      "zh": "梦见月瑞希",
+      "en": "Yumemizuki Mizuki"
+    },
+    "shareId": 507,
+    "type": "character",
+    "gameVersion": "6.0",
+    "element": "anemo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mizuki.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mizuki.webp"
   },
   "1601": {
     "id": "1601",
@@ -1324,6 +1350,19 @@
     "element": "pyro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HermitCrabPrimo.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HermitCrabPrimo.webp"
+  },
+  "2305": {
+    "id": "2305",
+    "name": {
+      "zh": "蚀灭的源焰之主",
+      "en": "Lord of Eroded Primal Fire"
+    },
+    "shareId": 508,
+    "type": "character",
+    "gameVersion": "6.0",
+    "element": "pyro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_TheAbyssXiuhcoatl.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_TheAbyssXiuhcoatl.webp"
   },
   "2401": {
     "id": "2401",

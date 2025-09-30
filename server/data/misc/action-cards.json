@@ -659,6 +659,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Sethos.webp"
   },
+  "214141": {
+    "id": "214141",
+    "name": {
+      "zh": "「沃陆之邦」的训教",
+      "en": "Teachings of the Collective of Plenty"
+    },
+    "shareId": 509,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Iansan.webp"
+  },
   "215011": {
     "id": "215011",
     "name": {
@@ -814,6 +826,18 @@
     "gameVersion": "5.8",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Heizo.webp"
+  },
+  "215141": {
+    "id": "215141",
+    "name": {
+      "zh": "缠忆君影梦相见",
+      "en": "Your Echo I Meet in Dreams"
+    },
+    "shareId": 510,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mizuki.webp"
   },
   "216011": {
     "id": "216011",
@@ -1223,6 +1247,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HermitCrabPrimo.webp"
   },
+  "223051": {
+    "id": "223051",
+    "name": {
+      "zh": "罔极盛怒",
+      "en": "Undying Fury"
+    },
+    "shareId": 511,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_TheAbyssXiuhcoatl.webp"
+  },
   "224011": {
     "id": "224011",
     "name": {
@@ -1618,6 +1654,18 @@
     "gameVersion": "4.7",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jieze.webp"
+  },
+  "311208": {
+    "id": "311208",
+    "name": {
+      "zh": "若水",
+      "en": "Aqua Simulacra"
+    },
+    "shareId": 520,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_RuoShui.webp"
   },
   "311301": {
     "id": "311301",
@@ -2374,6 +2422,42 @@
     "gameVersion": "5.8",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Xielve.webp"
+  },
+  "312037": {
+    "id": "312037",
+    "name": {
+      "zh": "宗室面具",
+      "en": "Royal Masque"
+    },
+    "shareId": 512,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ZongShixiao.webp"
+  },
+  "312038": {
+    "id": "312038",
+    "name": {
+      "zh": "未竟的遐思",
+      "en": "Unfinished Reverie"
+    },
+    "shareId": 513,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiasiDa.webp"
+  },
+  "312039": {
+    "id": "312039",
+    "name": {
+      "zh": "谐律异想断章",
+      "en": "Fragment of Harmonic Whimsy"
+    },
+    "shareId": 514,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XieLveDa.webp"
   },
   "312101": {
     "id": "312101",
@@ -4378,6 +4462,54 @@
     "gameVersion": "5.8",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ifa.webp"
+  },
+  "332051": {
+    "id": "332051",
+    "name": {
+      "zh": "「邪龙」的苏醒",
+      "en": "Fell Dragon's Awakening"
+    },
+    "shareId": 515,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Elong.webp"
+  },
+  "332052": {
+    "id": "332052",
+    "name": {
+      "zh": "旁白的注脚",
+      "en": "Narration Footnotes"
+    },
+    "shareId": 516,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Pangbai.webp"
+  },
+  "332054": {
+    "id": "332054",
+    "name": {
+      "zh": "「魔女M的祝福」",
+      "en": "\"A Blessing From 'M'\""
+    },
+    "shareId": 518,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ElongCry.webp"
+  },
+  "332055": {
+    "id": "332055",
+    "name": {
+      "zh": "「狂欢节奏」",
+      "en": "\"Revelrous Beats\""
+    },
+    "shareId": 519,
+    "type": "action",
+    "gameVersion": "6.0",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xilonen.webp"
   },
   "333001": {
     "id": "333001",
