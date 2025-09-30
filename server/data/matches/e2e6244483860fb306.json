@@ -1,0 +1,27 @@
+{
+  "id": "e2e6244483860fb306",
+  "tournamentId": "e2e6244483860fb3",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "f47c3cff735c39b8",
+    "nickname": "空妲妲大魔王"
+  },
+  "playerB": {
+    "playerId": "28d9801e57584148",
+    "nickname": "夕颜雨汐"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1511-2204-2305",
+      "playerBTeamId": "1511-2204-2305"
+    }
+  ],
+  "gameIds": [
+    "e2e6244483860fb30601",
+    "e2e6244483860fb30602"
+  ]
+}
