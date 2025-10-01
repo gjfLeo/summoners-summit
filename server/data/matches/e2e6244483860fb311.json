@@ -1,0 +1,28 @@
+{
+  "id": "e2e6244483860fb311",
+  "tournamentId": "e2e6244483860fb3",
+  "stageIndex": 1,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "1285d21f8256c268",
+    "nickname": "cc"
+  },
+  "playerB": {
+    "playerId": "f47c3cff735c39b8",
+    "nickname": "空妲妲大魔王"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1310-1709-1710",
+      "playerBTeamId": "1511-2204-2305"
+    }
+  ],
+  "gameIds": [
+    "e2e6244483860fb31101",
+    "e2e6244483860fb31102",
+    "e2e6244483860fb31103"
+  ]
+}
