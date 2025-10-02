@@ -1,6 +1,6 @@
 {
-  "id": "e2e6244483860fb30901",
-  "matchId": "e2e6244483860fb309",
+  "id": "e2e6244483860fb31301",
+  "matchId": "e2e6244483860fb313",
   "gameVersion": "6.0",
   "playerADeck": {
     "characters": [
@@ -18,9 +18,8 @@
       "2102"
     ],
     "teamId": "2102-2104-2402",
-    "deckCode": "GPDR4B4OEQBQ9JcPCUBx9VcPFWBw9sYQDAFgiskQDKGQE9ARDTEQ1NEdDUHQ3N8dDcAA"
+    "deckCode": "GPDR3x4OEQBQ4JcPCUBx9VcPFWBw9r0YDKFgisYQDKGQE8kRDTEA1NEdDUEQ3N0dDcAA"
   },
-  "winner": "A",
-  "starter": "B",
-  "gameVideo": "https://www.bilibili.com/video/BV1kpHWz3Egb"
+  "winner": "B",
+  "starter": "B"
 }
