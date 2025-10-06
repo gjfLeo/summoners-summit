@@ -1,0 +1,24 @@
+{
+  "id": "c9a37597992c30f102",
+  "tournamentId": "c9a37597992c30f1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "54e86d890e0004ef",
+    "nickname": "OllieCrane"
+  },
+  "playerB": {
+    "playerId": "357f80d929a918ce",
+    "nickname": "Elaina"
+  },
+  "gameIds": [
+    "c9a37597992c30f10201",
+    "c9a37597992c30f10202",
+    "c9a37597992c30f10203",
+    "c9a37597992c30f10204",
+    "c9a37597992c30f10205"
+  ],
+  "video": "https://www.bilibili.com/video/BV1rmx7zeEBZ"
+}
