@@ -1,0 +1,24 @@
+{
+  "id": "c9a37597992c30f103",
+  "tournamentId": "c9a37597992c30f1",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "208b2b9759314d71",
+    "nickname": "晴"
+  },
+  "playerB": {
+    "playerId": "34cee4f9cfb2868d",
+    "nickname": "屹立大地之上"
+  },
+  "gameIds": [
+    "c9a37597992c30f10301",
+    "c9a37597992c30f10302",
+    "c9a37597992c30f10303",
+    "c9a37597992c30f10304",
+    "c9a37597992c30f10305"
+  ],
+  "video": "https://www.bilibili.com/video/BV11yx9zGELt"
+}

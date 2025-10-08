@@ -1,0 +1,23 @@
+{
+  "id": "c9a37597992c30f106",
+  "tournamentId": "c9a37597992c30f1",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "1d3886913caeb979",
+    "nickname": "间水月"
+  },
+  "playerB": {
+    "playerId": "208b2b9759314d71",
+    "nickname": "晴"
+  },
+  "gameIds": [
+    "c9a37597992c30f10601",
+    "c9a37597992c30f10602",
+    "c9a37597992c30f10603",
+    "c9a37597992c30f10604"
+  ],
+  "video": "https://www.bilibili.com/video/BV1WZxqzbEWT"
+}
