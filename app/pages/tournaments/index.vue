@@ -2,8 +2,8 @@
   <div>
     <template v-for="season in seasons" :key="season">
       <NH2 :id="`S${season}`">{{ t('main.tournaments.seasonName', [season]) }}</NH2>
-      <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
-        <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
+      <template v-for="(list, gameVersionId) in bySeason[season]" :key="gameVersionId">
+        <NH2 :id="gameVersionId.replace('.', '-')">{{ getGameVersionName(gameVersionId) }}</NH2>
 
         <TournamentList>
           <template v-for="tournament in list" :key="tournament.id">
@@ -21,10 +21,10 @@
           :title="t('main.tournaments.seasonName', [season])"
           :href="`#S${season}`"
         >
-          <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
+          <template v-for="(list, gameVersionId) in bySeason[season]" :key="gameVersionId">
             <NAnchorLink
-              :title="gameVersion"
-              :href="`#${gameVersion.replace('.', '-')}`"
+              :title="getGameVersionName(gameVersionId)"
+              :href="`#${gameVersionId.replace('.', '-')}`"
             />
           </template>
         </NAnchorLink>
@@ -56,4 +56,9 @@ const bySeason = computed(() => {
   return bySeason;
 });
 const seasons = computed(() => Object.keys(bySeason.value).sort().reverse());
+
+function getGameVersionName(gameVersionId: GameVersionId) {
+  const gameVersion = gameVersionFullList.value.find(v => v.id === gameVersionId);
+  return gameVersion?.name ?? gameVersionId;
+}
 </script>

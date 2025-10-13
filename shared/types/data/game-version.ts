@@ -11,6 +11,7 @@ export type SeasonPhrase = z.infer<typeof ZSeasonPhrase>;
 
 export const ZGameVersion = z.object({
   id: ZGameVersionId,
+  name: z.string().optional(),
   seasonPhrase: ZSeasonPhraseId,
 }).strip();
 export type GameVersion = z.infer<typeof ZGameVersion>;

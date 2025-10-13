@@ -20,7 +20,7 @@ const gameVersion = defineModel<string>("value");
 
 const options = computed<SelectOption[]>(() => {
   return gameVersionFullList.value.map(v => ({
-    label: v.id,
+    label: v.name ?? v.id,
     value: v.id,
   }));
 });
