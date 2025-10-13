@@ -69,9 +69,16 @@ async function getTournamentChampion(tournament: Tournament): Promise<Tournament
   const matchIds = tournament.stages.toReversed()
     .flatMap(stage => stage.parts.toReversed())
     .flatMap(part => part.matchIds.toReversed());
+  if (matchIds.length === 0) {
+    return undefined;
+  }
+
   const matches = await getStorageMatchList(matchIds);
   for (const match of matches) {
     if (match && match.isFinal) {
+      if (!match.gameIds.length) {
+        continue;
+      }
       const games = await getStorageGameRecord(match.gameIds);
       const winner = getMatchWinner(match, games);
       switch (winner) {
