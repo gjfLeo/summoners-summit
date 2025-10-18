@@ -1,0 +1,24 @@
+{
+  "id": "f0a584d874178e4506",
+  "tournamentId": "f0a584d874178e45",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "6.0",
+  "playerA": {
+    "playerId": "464bf5e9dbec516f",
+    "nickname": "喵帕斯"
+  },
+  "playerB": {
+    "playerId": "8acfee7b0d53bcf1",
+    "nickname": "莓木燃烧"
+  },
+  "gameIds": [
+    "f0a584d874178e450601",
+    "f0a584d874178e450602",
+    "f0a584d874178e450603",
+    "f0a584d874178e450604",
+    "f0a584d874178e450605"
+  ],
+  "video": "https://www.bilibili.com/video/BV1Z6WJzFE15"
+}
