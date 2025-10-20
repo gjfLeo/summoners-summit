@@ -15,6 +15,8 @@ const { statsByVersion } = toRefs(props);
 
 const { t } = useLocales();
 
+const { getGameVersionName } = await useAsyncSharedData();
+
 const data = computed(() => {
   return statsByVersion.value.map(item => ({
     ...item,
@@ -42,7 +44,7 @@ const option = computed<ECOption>(() => {
     },
     xAxis: {
       type: "category",
-      data: data.value.map(item => item.gameVersion),
+      data: data.value.map(item => getGameVersionName(item.gameVersion)),
       min: "dataMin",
     },
     yAxis: [

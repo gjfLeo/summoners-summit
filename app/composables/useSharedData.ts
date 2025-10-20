@@ -64,6 +64,11 @@ export default function useSharedData() {
     initData: async () => {
       await init;
     },
+
+    getGameVersionName(gameVersionId: GameVersionId) {
+      const gameVersion = sharedData.value.gameVersionList.find(v => v.id === gameVersionId);
+      return gameVersion?.name || gameVersionId;
+    },
   };
 }
 

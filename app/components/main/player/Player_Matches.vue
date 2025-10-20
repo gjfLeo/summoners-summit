@@ -3,7 +3,7 @@
     <template v-for="(match, i) in matches" :key="match.id">
       <NDivider v-if="i > 0 && match.tournamentId !== matches[i - 1].tournamentId" />
       <NH3 un-flex="~ gap-2">
-        <span>{{ match.gameVersion }}</span>
+        <span>{{ getGameVersionName(match.gameVersion) }}</span>
         <span>{{ currentLocalized(match.tournamentName) }}</span>
         <span>{{ currentLocalized(match.stageName) }}</span>
         <span>{{ currentLocalized(match.partName) }}</span>
@@ -20,4 +20,5 @@ const props = defineProps<{
 const { matches } = toRefs(props);
 
 const { currentLocalized } = useLocales();
+const { getGameVersionName } = await useAsyncSharedData();
 </script>
