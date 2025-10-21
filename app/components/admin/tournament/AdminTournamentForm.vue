@@ -30,7 +30,7 @@
     </NForm>
     <NDescriptions v-else label-placement="left" :column="3" separator="&emsp;">
       <NDescriptionsItem :label="t('main.tournament.name')" :span="3">{{ currentLocalized(tournament.name) }}</NDescriptionsItem>
-      <NDescriptionsItem :label="t('terms.gameVersion')">{{ tournament.gameVersion }}</NDescriptionsItem>
+      <NDescriptionsItem :label="t('terms.gameVersion')">{{ getGameVersionName(tournament.gameVersion) }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('terms.region')">{{ currentLocalized(regionByKey[tournament.region]?.name) }}</NDescriptionsItem>
       <NDescriptionsItem :label="t('main.tournament.type')">{{ tournament.type }}</NDescriptionsItem>
     </NDescriptions>
@@ -88,7 +88,7 @@ const tournament = defineModel<Tournament>({ required: true });
 
 const { t, currentLocalized } = useLocales();
 const message = useMessage();
-const { regionByKey } = useSharedData();
+const { regionByKey, getGameVersionName } = await useAsyncSharedData();
 
 const formRef = ref<InstanceType<typeof NForm>>();
 const stageFormRefs = ref<InstanceType<typeof AdminTournamentStageForm>[]>([]);

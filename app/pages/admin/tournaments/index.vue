@@ -3,7 +3,7 @@
     <template v-for="season in seasons" :key="season">
       <NH2 :id="`S${season}`">{{ t("main.tournaments.seasonName", [season]) }}</NH2>
       <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
-        <NH2 :id="gameVersion.replace('.', '-')">{{ gameVersion }}</NH2>
+        <NH2 :id="gameVersion.replace('.', '-')">{{ getGameVersionName(gameVersion) }}</NH2>
         <TournamentList>
           <template v-for="tournament in list" :key="tournament.id">
             <NuxtLinkLocale :to="{ path: `/admin/tournament/${tournament.id}` }">
@@ -30,7 +30,7 @@
         >
           <template v-for="(list, gameVersion) in bySeason[season]" :key="gameVersion">
             <NAnchorLink
-              :title="gameVersion"
+              :title="getGameVersionName(gameVersion)"
               :href="`#${gameVersion.replace('.', '-')}`"
             />
           </template>
@@ -45,7 +45,7 @@ const { t } = useLocales();
 useHead({ title: t("site.titles.admin.tournaments") });
 
 const { data: tournaments } = await useFetch("/api/v4/tournaments");
-const { gameVersionFullList } = await useAsyncSharedData();
+const { gameVersionFullList, getGameVersionName } = await useAsyncSharedData();
 
 const bySeason = computed(() => {
   const bySeason: Record<SeasonPhraseId, Record<GameVersionId, TournamentDetailBrief[]>> = {};

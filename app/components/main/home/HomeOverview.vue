@@ -10,6 +10,8 @@ import { divide } from "mathjs/number";
 
 const { t } = useLocales();
 
+const { getGameVersionName } = await useAsyncSharedData();
+
 const { data: overviewData } = await useFetch("/api/v4/overview-stats");
 
 const data = computed(() => {
@@ -30,6 +32,7 @@ const columns: DataTableColumn<RowType>[] = [
     key: "gameVersion",
     title: t("main.home.overview.gameVersion"),
     align: "center",
+    render: row => getGameVersionName(row.gameVersion),
   },
   {
     key: "numGames",
