@@ -113,6 +113,14 @@ async function getActionCardData(gyData: GyData) {
   return cardList;
 }
 
+const gameVersionNames: Partial<Record<GameVersionId, string>> = {
+  "6.0": "月之一",
+  "6.1": "月之二",
+  "6.2": "月之三",
+  "6.3": "月之四",
+  "6.4": "月之五",
+};
+
 export default defineEventHandler(async (event) => {
   const { action } = await getValidatedQuery(event, zQuery.parse);
   if (action !== "update") {
@@ -143,6 +151,7 @@ export default defineEventHandler(async (event) => {
         return {
           id: v,
           seasonPhrase: p.id,
+          name: gameVersionNames[v],
         };
       });
     })
