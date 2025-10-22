@@ -4,6 +4,7 @@ export const blockWords = [
   "ba9",
   "c4",
   "cag",
+  "flg",
   "gay",
   "gwg",
   "hjt",
