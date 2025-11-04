@@ -671,6 +671,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Iansan.webp"
   },
+  "214151": {
+    "id": "214151",
+    "name": {
+      "zh": "正义英雄的凯旋",
+      "en": "A Hero of Justice's Triumph"
+    },
+    "shareId": 524,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Varesa.webp"
+  },
   "215011": {
     "id": "215011",
     "name": {
@@ -838,6 +850,18 @@
     "gameVersion": "6.0",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mizuki.webp"
+  },
+  "215151": {
+    "id": "215151",
+    "name": {
+      "zh": "温敷战术包扎",
+      "en": "Tactical Warm Compress Bandaging"
+    },
+    "shareId": 525,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ifa.webp"
   },
   "216011": {
     "id": "216011",
@@ -1198,6 +1222,18 @@
     "gameVersion": "5.0",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HilistrayWater.webp"
+  },
+  "222061": {
+    "id": "222061",
+    "name": {
+      "zh": "汇流",
+      "en": "Flow Convergence"
+    },
+    "shareId": 526,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Narcissusborn.webp"
   },
   "223011": {
     "id": "223011",
@@ -1570,6 +1606,18 @@
     "gameVersion": "5.2",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ChunShui.webp"
+  },
+  "311111": {
+    "id": "311111",
+    "name": {
+      "zh": "不灭月华",
+      "en": "Everlasting Moonglow"
+    },
+    "shareId": 527,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Bumieyuehua.webp"
   },
   "311201": {
     "id": "311201",
@@ -2459,6 +2507,30 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XieLveDa.webp"
   },
+  "312040": {
+    "id": "312040",
+    "name": {
+      "zh": "恶龙的单片镜",
+      "en": "Fell Dragon's Monocle"
+    },
+    "shareId": 528,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Shuixianxiao.webp"
+  },
+  "312041": {
+    "id": "312041",
+    "name": {
+      "zh": "昔日宗室之仪",
+      "en": "Noblesse Oblige"
+    },
+    "shareId": 529,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiriZongshi.webp"
+  },
   "312101": {
     "id": "312101",
     "name": {
@@ -3094,6 +3166,18 @@
     "gameVersion": "5.8",
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_XinguiWangcheng.webp"
+  },
+  "321031": {
+    "id": "321031",
+    "name": {
+      "zh": "冒险家协会",
+      "en": "Adventurers' Guild"
+    },
+    "shareId": 530,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Gonghui.webp"
   },
   "322001": {
     "id": "322001",
@@ -4511,6 +4595,18 @@
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xilonen.webp"
   },
+  "332056": {
+    "id": "332056",
+    "name": {
+      "zh": "祀珑在昔，灵锦歆诚",
+      "en": "An Ancient Sacrifice of Sacred Brocade"
+    },
+    "shareId": 531,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fujin.webp"
+  },
   "333001": {
     "id": "333001",
     "name": {
@@ -4774,5 +4870,17 @@
     "gameVersion": "5.7",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_TujiaoLong.webp"
+  },
+  "333029": {
+    "id": "333029",
+    "name": {
+      "zh": "沉玉茶露",
+      "en": "Chenyu Brew"
+    },
+    "shareId": 532,
+    "type": "action",
+    "gameVersion": "6.1",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Chalu.webp"
   }
 }

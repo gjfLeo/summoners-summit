@@ -727,6 +727,19 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Iansan.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Iansan.webp"
   },
+  "1415": {
+    "id": "1415",
+    "name": {
+      "zh": "瓦雷莎",
+      "en": "Varesa"
+    },
+    "shareId": 521,
+    "type": "character",
+    "gameVersion": "6.1",
+    "element": "electro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Varesa.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Varesa.webp"
+  },
   "1501": {
     "id": "1501",
     "name": {
@@ -908,6 +921,19 @@
     "element": "anemo",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mizuki.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mizuki.webp"
+  },
+  "1515": {
+    "id": "1515",
+    "name": {
+      "zh": "伊法",
+      "en": "Ifa"
+    },
+    "shareId": 522,
+    "type": "character",
+    "gameVersion": "6.1",
+    "element": "anemo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ifa.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ifa.webp"
   },
   "1601": {
     "id": "1601",
@@ -1298,6 +1324,19 @@
     "element": "hydro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HilistrayWater.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HilistrayWater.webp"
+  },
+  "2206": {
+    "id": "2206",
+    "name": {
+      "zh": "水形幻人",
+      "en": "Hydro Tulpa"
+    },
+    "shareId": 523,
+    "type": "character",
+    "gameVersion": "6.1",
+    "element": "hydro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Narcissusborn.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Narcissusborn.webp"
   },
   "2301": {
     "id": "2301",
