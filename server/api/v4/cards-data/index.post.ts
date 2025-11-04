@@ -38,10 +38,10 @@ const zGyData = z.array(
   }),
 );
 type GyData = z.infer<typeof zGyData>;
-async function fetchGyData(): Promise<GyData> {
-  const res = await fetch("https://assets.gi-tcg.guyutongxue.site/api/v3/data");
+async function fetchGyData(filename: string): Promise<GyData> {
+  const res = await fetch(`https://gi-tcg-assets-api-hf.guyutongxue.site/api/v4/data/latest/CHS/${filename}`);
   const data = await res.json();
-  return zGyData.parse(data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
+  return zGyData.parse(data.data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
 }
 
 async function getCharacterCardData(gyData: GyData) {
@@ -127,13 +127,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: "Invalid action" });
   }
 
-  const gyData = await fetchGyData();
-
-  const characterCardData = await getCharacterCardData(gyData);
+  const characterCardData = await getCharacterCardData(await fetchGyData("characters"));
   const characterCards = Object.fromEntries(characterCardData.map(card => [card.id, card]));
   await writeDataV2("misc/character-cards", characterCards);
 
-  const actionCardData = await getActionCardData(gyData);
+  const actionCardData = await getActionCardData(await fetchGyData("action_cards"));
   const actionCards = Object.fromEntries(actionCardData.map(card => [card.id, card]));
   await writeDataV2("misc/action-cards", actionCards);
 
