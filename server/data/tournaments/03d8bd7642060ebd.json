@@ -1,0 +1,101 @@
+{
+  "id": "03d8bd7642060ebd",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "6.1",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-11-11",
+          "matchIds": [
+            "03d8bd7642060ebd01",
+            "03d8bd7642060ebd02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-11-12",
+          "matchIds": []
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-11-13",
+          "matchIds": []
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2025-11-17",
+          "matchIds": []
+        }
+      ]
+    }
+  ]
+}
