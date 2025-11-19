@@ -2,8 +2,8 @@
   "id": "03d8bd7642060ebd03",
   "tournamentId": "03d8bd7642060ebd",
   "stageIndex": 0,
-  "partIndex": 0,
-  "matchIndex": 2,
+  "partIndex": 1,
+  "matchIndex": 0,
   "gameVersion": "6.1",
   "playerA": {
     "playerId": "0dac3990ca2e87bb",
