@@ -1,0 +1,25 @@
+{
+  "id": "f75588b08313c9990301",
+  "matchId": "f75588b08313c99903",
+  "gameVersion": "6.1",
+  "playerADeck": {
+    "characters": [
+      "1304",
+      "1315",
+      "1610"
+    ],
+    "teamId": "1304-1315-1610",
+    "deckCode": "AkFC9d8UHbLSTeIVH8IRi5gZFKIyu4UcGaNCBLohHDORBckhDUOBB8ohDWKR3d8eEMEB"
+  },
+  "playerBDeck": {
+    "characters": [
+      "1610",
+      "1315",
+      "2206"
+    ],
+    "teamId": "1315-1610-2206",
+    "deckCode": "HEHRA94QIDGxTOEUHsEQipcYFKGAur0bG6KRA7kgDDKQBMkgDWJwBtsRHhGQ3PQdD8AA"
+  },
+  "winner": "A",
+  "starter": "A"
+}
