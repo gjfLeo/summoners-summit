@@ -1,7 +1,7 @@
 {
-  "id": "f75588b08313c999",
+  "id": "b944fdbde980db87",
   "name": {
-    "zh": "火星杯"
+    "zh": "「逐辉星聚」月话杯"
   },
   "gameVersion": "6.1",
   "region": "CN",
@@ -17,8 +17,7 @@
         "submitTeams": {
           "num": 3,
           "submitDecks": {
-            "maxNumForEachTeam": 1,
-            "maxNumInTotal": 3
+            "maxNumInTotal": 9
           }
         }
       },
@@ -27,21 +26,18 @@
           "name": {
             "zh": "Day1"
           },
-          "date": "2025-11-17",
+          "date": "2025-11-25",
           "matchIds": [
-            "f75588b08313c99901",
-            "f75588b08313c99902"
+            "b944fdbde980db8701",
+            "b944fdbde980db8702"
           ]
         },
         {
           "name": {
             "zh": "Day2"
           },
-          "date": "2025-11-18",
-          "matchIds": [
-            "f75588b08313c99903",
-            "f75588b08313c99904"
-          ]
+          "date": "2025-11-26",
+          "matchIds": []
         }
       ]
     },
@@ -50,24 +46,20 @@
         "zh": "半决赛"
       },
       "rules": {
-        "numGames": 5,
+        "numGames": 3,
         "mode": "conquest",
         "submitTeams": {
           "num": 3,
           "submitDecks": {
-            "maxNumForEachTeam": 1,
-            "maxNumInTotal": 3
+            "maxNumInTotal": 9
           }
         }
       },
       "parts": [
         {
           "name": {},
-          "date": "2025-11-19",
-          "matchIds": [
-            "f75588b08313c99905",
-            "f75588b08313c99906"
-          ]
+          "date": "2025-11-27",
+          "matchIds": []
         }
       ]
     },
@@ -81,18 +73,15 @@
         "submitTeams": {
           "num": 3,
           "submitDecks": {
-            "maxNumForEachTeam": 1,
-            "maxNumInTotal": 3
+            "maxNumInTotal": 9
           }
         }
       },
       "parts": [
         {
           "name": {},
-          "date": "2025-11-21",
-          "matchIds": [
-            "f75588b08313c99907"
-          ]
+          "date": "2025-11-29",
+          "matchIds": []
         }
       ]
     }

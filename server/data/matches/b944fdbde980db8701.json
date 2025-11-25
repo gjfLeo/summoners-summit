@@ -1,0 +1,22 @@
+{
+  "id": "b944fdbde980db8701",
+  "tournamentId": "b944fdbde980db87",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.1",
+  "playerA": {
+    "playerId": "387bcd2928cc0d98",
+    "nickname": "姜雨"
+  },
+  "playerB": {
+    "playerId": "5ea6587d67b33f1f",
+    "nickname": "宙宙的活"
+  },
+  "gameIds": [
+    "b944fdbde980db870101",
+    "b944fdbde980db870102",
+    "b944fdbde980db870103"
+  ],
+  "video": "https://www.bilibili.com/video/BV1bLU9BQEwe"
+}
