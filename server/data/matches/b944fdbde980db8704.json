@@ -1,0 +1,24 @@
+{
+  "id": "b944fdbde980db8704",
+  "tournamentId": "b944fdbde980db87",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "6.1",
+  "playerA": {
+    "playerId": "ab6ae117c2b27978",
+    "nickname": "刻晴的迷妹"
+  },
+  "playerB": {
+    "playerId": "c39f5a561f3c1f71",
+    "nickname": "画"
+  },
+  "gameIds": [
+    "b944fdbde980db870401",
+    "b944fdbde980db870402",
+    "b944fdbde980db870403",
+    "b944fdbde980db870404",
+    "b944fdbde980db870405"
+  ],
+  "video": "https://www.bilibili.com/video/BV1QiUeBiEVe"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "b944fdbde980db8703",
+  "tournamentId": "b944fdbde980db87",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "6.1",
+  "playerA": {
+    "playerId": "48ec6e8be5d36465",
+    "nickname": "梦见日"
+  },
+  "playerB": {
+    "playerId": "9f819ff1861cf88d",
+    "nickname": "铁甲熔火帝皇"
+  },
+  "gameIds": [
+    "b944fdbde980db870301",
+    "b944fdbde980db870302",
+    "b944fdbde980db870303",
+    "b944fdbde980db870304",
+    "b944fdbde980db870305"
+  ],
+  "video": "https://www.bilibili.com/video/BV1SrUeBAEPx"
+}
