@@ -61,8 +61,11 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-11-27",
-          "matchIds": []
+          "date": "2025-11-28",
+          "matchIds": [
+            "b944fdbde980db8705",
+            "b944fdbde980db8706"
+          ]
         }
       ]
     },
@@ -83,8 +86,10 @@
       "parts": [
         {
           "name": {},
-          "date": "2025-11-29",
-          "matchIds": []
+          "date": "2025-11-30",
+          "matchIds": [
+            "b944fdbde980db8707"
+          ]
         }
       ]
     }

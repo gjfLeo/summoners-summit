@@ -1,0 +1,24 @@
+{
+  "id": "b944fdbde980db8705",
+  "tournamentId": "b944fdbde980db87",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.1",
+  "playerA": {
+    "playerId": "9f819ff1861cf88d",
+    "nickname": "铁甲熔火帝皇"
+  },
+  "playerB": {
+    "playerId": "2d28c337063c47fd",
+    "nickname": "愚者千面"
+  },
+  "gameIds": [
+    "b944fdbde980db870501",
+    "b944fdbde980db870502",
+    "b944fdbde980db870503",
+    "b944fdbde980db870504",
+    "b944fdbde980db870505"
+  ],
+  "video": "https://www.bilibili.com/video/BV1ySS7B2EdJ"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "b944fdbde980db8707",
+  "tournamentId": "b944fdbde980db87",
+  "stageIndex": 2,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.1",
+  "isFinal": true,
+  "playerA": {
+    "playerId": "2d28c337063c47fd",
+    "nickname": "愚者千面"
+  },
+  "playerB": {
+    "playerId": "387bcd2928cc0d98",
+    "nickname": "姜雨"
+  },
+  "gameIds": [
+    "b944fdbde980db870701",
+    "b944fdbde980db870702",
+    "b944fdbde980db870703",
+    "b944fdbde980db870704",
+    "b944fdbde980db870705"
+  ],
+  "video": "https://www.bilibili.com/video/BV1D9SqByEww"
+}
