@@ -181,6 +181,19 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Citlali.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Citlali.webp"
   },
+  "1115": {
+    "id": "1115",
+    "name": {
+      "zh": "爱可菲",
+      "en": "Escoffier"
+    },
+    "shareId": 533,
+    "type": "character",
+    "gameVersion": "6.2",
+    "element": "cryo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Escoffier.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Escoffier.webp"
+  },
   "1201": {
     "id": "1201",
     "name": {
@@ -544,6 +557,19 @@
     "element": "pyro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mavuika.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mavuika.webp"
+  },
+  "1316": {
+    "id": "1316",
+    "name": {
+      "zh": "嘉明",
+      "en": "Gaming"
+    },
+    "shareId": 534,
+    "type": "character",
+    "gameVersion": "6.2",
+    "element": "pyro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Gaming.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Gaming.webp"
   },
   "1401": {
     "id": "1401",
@@ -1558,6 +1584,19 @@
     "element": "geo",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Planelurker.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Planelurker.webp"
+  },
+  "2604": {
+    "id": "2604",
+    "name": {
+      "zh": "黑蛇骑士·摧岩之钺",
+      "en": "Black Serpent Knight: Rockbreaker Ax"
+    },
+    "shareId": 535,
+    "type": "character",
+    "gameVersion": "6.2",
+    "element": "geo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_DarkwraithRock.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_DarkwraithRock.webp"
   },
   "2701": {
     "id": "2701",

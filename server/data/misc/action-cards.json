@@ -167,6 +167,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Citlali.webp"
   },
+  "211151": {
+    "id": "211151",
+    "name": {
+      "zh": "虹彩缤纷的甜点茶话",
+      "en": "Tea Parties Bursting With Color"
+    },
+    "shareId": 536,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Escoffier.webp"
+  },
   "212011": {
     "id": "212011",
     "name": {
@@ -502,6 +514,18 @@
     "gameVersion": "5.7",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mavuika.webp"
+  },
+  "213161": {
+    "id": "213161",
+    "name": {
+      "zh": "通明庇佑",
+      "en": "Bringer of Blessing"
+    },
+    "shareId": 537,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Gaming.webp"
   },
   "214011": {
     "id": "214011",
@@ -1438,6 +1462,18 @@
     "gameVersion": "5.2",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Planelurker.webp"
+  },
+  "226041": {
+    "id": "226041",
+    "name": {
+      "zh": "「曾如磐石抵挡黑水奔流…」",
+      "en": "\"Once Stood Against the Tide of Dark Waters Like Bedrock...\""
+    },
+    "shareId": 538,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_DarkwraithRock.webp"
   },
   "227011": {
     "id": "227011",
@@ -2531,6 +2567,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiriZongshi.webp"
   },
+  "312043": {
+    "id": "312043",
+    "name": {
+      "zh": "水仙之梦",
+      "en": "Nymph's Dream"
+    },
+    "shareId": 539,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ShuixianDa.webp"
+  },
   "312101": {
     "id": "312101",
     "name": {
@@ -3539,6 +3587,18 @@
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_JimuRen.webp"
   },
+  "322031": {
+    "id": "322031",
+    "name": {
+      "zh": "西摩尔",
+      "en": "Seymour"
+    },
+    "shareId": 540,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Ximoer.webp"
+  },
   "323001": {
     "id": "323001",
     "name": {
@@ -3766,6 +3826,18 @@
     "gameVersion": "5.7",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yongye.webp"
+  },
+  "330012": {
+    "id": "330012",
+    "name": {
+      "zh": "「沙中遗事」",
+      "en": "Lost Legacies in the Sand"
+    },
+    "shareId": 541,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Dacishuwang.webp"
   },
   "331101": {
     "id": "331101",
@@ -4606,6 +4678,30 @@
     "gameVersion": "6.1",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fujin.webp"
+  },
+  "332057": {
+    "id": "332057",
+    "name": {
+      "zh": "水仙十字大冒险",
+      "en": "The Narzissenkreuz Adventure"
+    },
+    "shareId": 542,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ShuixianMaoxian.webp"
+  },
+  "332058": {
+    "id": "332058",
+    "name": {
+      "zh": "拯救世界的计划",
+      "en": "Plan to Save the World"
+    },
+    "shareId": 543,
+    "type": "action",
+    "gameVersion": "6.2",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yagebu.webp"
   },
   "333001": {
     "id": "333001",
