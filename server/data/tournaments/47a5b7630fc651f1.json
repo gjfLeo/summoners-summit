@@ -1,0 +1,154 @@
+{
+  "id": "47a5b7630fc651f1",
+  "name": {
+    "zh": "共鸣杯"
+  },
+  "gameVersion": "6.2",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "16进8"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2025-12-24",
+          "matchIds": [
+            "47a5b7630fc651f101",
+            "47a5b7630fc651f102",
+            "47a5b7630fc651f103",
+            "47a5b7630fc651f104"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2025-12-25",
+          "matchIds": [
+            "47a5b7630fc651f105",
+            "47a5b7630fc651f106",
+            "47a5b7630fc651f107",
+            "47a5b7630fc651f108"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2026-01-29",
+          "matchIds": [
+            "47a5b7630fc651f109",
+            "47a5b7630fc651f110"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2026-01-30",
+          "matchIds": [
+            "47a5b7630fc651f111",
+            "47a5b7630fc651f112"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-01-01",
+          "matchIds": [
+            "47a5b7630fc651f113",
+            "47a5b7630fc651f114"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-01-03",
+          "matchIds": [
+            "47a5b7630fc651f115"
+          ]
+        }
+      ]
+    }
+  ]
+}

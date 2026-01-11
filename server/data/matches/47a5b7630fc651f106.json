@@ -1,0 +1,27 @@
+{
+  "id": "47a5b7630fc651f106",
+  "tournamentId": "47a5b7630fc651f1",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "41ce7eb71c673ab3",
+    "nickname": "白色小精灵"
+  },
+  "playerB": {
+    "playerId": "e70b96cda4f0ab09",
+    "nickname": "会赢吗"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1115-1310-2206",
+      "playerBTeamId": "1115-1310-2206"
+    }
+  ],
+  "gameIds": [
+    "47a5b7630fc651f10601",
+    "47a5b7630fc651f10602"
+  ]
+}

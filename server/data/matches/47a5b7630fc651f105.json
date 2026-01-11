@@ -1,0 +1,28 @@
+{
+  "id": "47a5b7630fc651f105",
+  "tournamentId": "47a5b7630fc651f1",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 0,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "playerB": {
+    "playerId": "abdd8786ab432971",
+    "nickname": "Ciallo~"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "2102-2104-2402",
+      "playerBTeamId": "1115-1310-2206"
+    }
+  ],
+  "gameIds": [
+    "47a5b7630fc651f10501",
+    "47a5b7630fc651f10502",
+    "47a5b7630fc651f10503"
+  ]
+}
