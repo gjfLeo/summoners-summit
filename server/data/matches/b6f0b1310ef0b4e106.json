@@ -1,0 +1,24 @@
+{
+  "id": "b6f0b1310ef0b4e106",
+  "tournamentId": "b6f0b1310ef0b4e1",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "2d28c337063c47fd",
+    "nickname": "愚者千面"
+  },
+  "playerB": {
+    "playerId": "0dac3990ca2e87bb",
+    "nickname": "三翎七"
+  },
+  "gameIds": [
+    "b6f0b1310ef0b4e10601",
+    "b6f0b1310ef0b4e10602",
+    "b6f0b1310ef0b4e10603",
+    "b6f0b1310ef0b4e10604",
+    "b6f0b1310ef0b4e10605"
+  ],
+  "video": "https://www.bilibili.com/video/BV1NWiuBxEXy"
+}

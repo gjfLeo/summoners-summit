@@ -1,0 +1,24 @@
+{
+  "id": "b6f0b1310ef0b4e101",
+  "tournamentId": "b6f0b1310ef0b4e1",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "0dac3990ca2e87bb",
+    "nickname": "三翎七"
+  },
+  "playerB": {
+    "playerId": "4a02855bfe1d37ff",
+    "nickname": "幻想时间"
+  },
+  "gameIds": [
+    "b6f0b1310ef0b4e10101",
+    "b6f0b1310ef0b4e10102",
+    "b6f0b1310ef0b4e10103",
+    "b6f0b1310ef0b4e10104",
+    "b6f0b1310ef0b4e10105"
+  ],
+  "video": "https://www.bilibili.com/video/BV1y4vxBYErK"
+}

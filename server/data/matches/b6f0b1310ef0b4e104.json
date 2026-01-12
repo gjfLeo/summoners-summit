@@ -1,0 +1,24 @@
+{
+  "id": "b6f0b1310ef0b4e104",
+  "tournamentId": "b6f0b1310ef0b4e1",
+  "stageIndex": 0,
+  "partIndex": 1,
+  "matchIndex": 1,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "12aa27cb21360bb8",
+    "nickname": "看看牌！哥们"
+  },
+  "playerB": {
+    "playerId": "f11f342ebfa77dea",
+    "nickname": "阿拉拉"
+  },
+  "gameIds": [
+    "b6f0b1310ef0b4e10401",
+    "b6f0b1310ef0b4e10402",
+    "b6f0b1310ef0b4e10403",
+    "b6f0b1310ef0b4e10404",
+    "b6f0b1310ef0b4e10405"
+  ],
+  "video": "https://www.bilibili.com/video/BV1mvveBFEa6"
+}
