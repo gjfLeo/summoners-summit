@@ -1,0 +1,23 @@
+{
+  "id": "08becd575f03586b05",
+  "tournamentId": "08becd575f03586b",
+  "stageIndex": 1,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.2",
+  "playerA": {
+    "playerId": "e2488ee12a6c9f4c",
+    "nickname": "mikasa"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "gameIds": [
+    "08becd575f03586b0501",
+    "08becd575f03586b0502",
+    "08becd575f03586b0503",
+    "08becd575f03586b0504"
+  ],
+  "video": "https://www.bilibili.com/video/BV1zJidBCE4f"
+}

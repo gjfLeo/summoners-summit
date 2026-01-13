@@ -1,0 +1,97 @@
+{
+  "id": "08becd575f03586b",
+  "name": {
+    "zh": "「逐辉星聚」月话杯"
+  },
+  "gameVersion": "6.2",
+  "region": "CN",
+  "type": "积分赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "8进4"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {
+            "zh": "Day1"
+          },
+          "date": "2026-01-05",
+          "matchIds": [
+            "08becd575f03586b01",
+            "08becd575f03586b02"
+          ]
+        },
+        {
+          "name": {
+            "zh": "Day2"
+          },
+          "date": "2026-01-06",
+          "matchIds": [
+            "08becd575f03586b03",
+            "08becd575f03586b04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-01-08",
+          "matchIds": [
+            "08becd575f03586b05",
+            "08becd575f03586b06"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumInTotal": 9
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-01-10",
+          "matchIds": [
+            "08becd575f03586b07"
+          ]
+        }
+      ]
+    }
+  ]
+}
