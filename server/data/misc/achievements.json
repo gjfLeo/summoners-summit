@@ -12,7 +12,7 @@
     "description": {
       "zh": "在全民赛事第一赛季的「影幻杯」中取得十六强。"
     },
-    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_02.png",
     "playerIds": [
       "f53067a0b2b9cc68",
       "d2b084af89a32bf5",
@@ -45,7 +45,7 @@
     "description": {
       "zh": "在全民赛事第一赛季的小王子杯中取得十六强。"
     },
-    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Dragonspine_Crown_Card_Back.png",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_02.png",
     "playerIds": [
       "65e67d8f4986b332",
       "f9fb00e0830afb6b",
@@ -80,7 +80,7 @@
     "description": {
       "zh": "在全民赛事第二赛季的「枫达杯」中取得十六强。"
     },
-    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/The_Chasm_Crown_Card_Back.png",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_05.png",
     "playerIds": [
       "828c6fa4cda2c687",
       "0d0fa57e06e04206",
@@ -113,7 +113,7 @@
     "description": {
       "zh": "在全民赛事第二季的小王子杯中取得十六强。"
     },
-    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/The_Chasm_Crown_Card_Back.png",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_05.png",
     "playerIds": [
       "e23ff71160853b3b",
       "9cd4c1c194c57862",
@@ -146,7 +146,7 @@
     "description": {
       "zh": "在全民赛事第三赛季的2025「枫达杯」中取得十六强。"
     },
-    "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_07.png",
     "playerIds": [
       "0dac3990ca2e87bb",
       "a67dea43d9ff5417",
@@ -179,7 +179,7 @@
     "description": {
       "zh": "在全民赛事第四赛季的2025「枫达杯」·秋中取得十二强。"
     },
-    "imageUrl": "https://raw.githubusercontent.com/gjfLeo/assets/refs/heads/genshin-impact/gcg/card-back/Enkanomiya_Crown_Card_Back__Temp.webp",
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_07.png",
     "playerIds": [
       "161c913c3c9475e8",
       "464bf5e9dbec516f",
@@ -193,6 +193,23 @@
       "3e2630113952e34e",
       "a037eaea7cb46d85",
       "c9e5b61a9edcc440"
+    ]
+  },
+  {
+    "id": "season5-fonta",
+    "name": {
+      "zh": "旧日之海·冠冕",
+      "en": ""
+    },
+    "flavorText": {
+      "zh": "闪耀着无尽光辉的黄金宫殿，承载着某位伟大王者的旧梦。当它作为牌手的象征之物时，则代表着对「胜利与荣誉」的渴望……",
+      "en": ""
+    },
+    "description": {
+      "zh": "在全民赛事第五赛季的2026「枫达杯」中取得十二强。"
+    },
+    "imageUrl": "https://fastly.jsdelivr.net/gh/piovium/new-card-img-gen@master/public/assets/cardbacks/UI_Gcg_CardBack_Championship_12.png",
+    "playerIds": [
     ]
   }
 ]
