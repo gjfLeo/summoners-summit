@@ -1,22 +1,22 @@
 {
   "6.3": {
     "id": "6.3",
-    "seasonPhrase": "5.1",
+    "seasonPhrase": "5.2",
     "name": "月之四"
   },
   "6.2": {
     "id": "6.2",
-    "seasonPhrase": "5.0",
+    "seasonPhrase": "5.1",
     "name": "月之三"
   },
   "6.1": {
     "id": "6.1",
-    "seasonPhrase": "5.0",
+    "seasonPhrase": "5.1",
     "name": "月之二"
   },
   "6.0": {
     "id": "6.0",
-    "seasonPhrase": "5.0",
+    "seasonPhrase": "5.1",
     "name": "月之一"
   },
   "5.8": {
