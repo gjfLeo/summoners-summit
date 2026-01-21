@@ -179,6 +179,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Escoffier.webp"
   },
+  "211161": {
+    "id": "211161",
+    "name": {
+      "zh": "湮远",
+      "en": "Far to Fall"
+    },
+    "shareId": 547,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_SkirkNew.webp"
+  },
   "212011": {
     "id": "212011",
     "name": {
@@ -706,6 +718,18 @@
     "gameVersion": "6.1",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Varesa.webp"
+  },
+  "214161": {
+    "id": "214161",
+    "name": {
+      "zh": "林雾间的行迹",
+      "en": "Trails Amidst the Forest Fog"
+    },
+    "shareId": 548,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Olorun.webp"
   },
   "215011": {
     "id": "215011",
@@ -1259,6 +1283,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Narcissusborn.webp"
   },
+  "222071": {
+    "id": "222071",
+    "name": {
+      "zh": "亡水溢流",
+      "en": "Deathly Overflow"
+    },
+    "shareId": 549,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_GatorSacred.webp"
+  },
   "223011": {
     "id": "223011",
     "name": {
@@ -1655,6 +1691,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Bumieyuehua.webp"
   },
+  "311112": {
+    "id": "311112",
+    "name": {
+      "zh": "祭星者之望",
+      "en": "Starcaller's Watch"
+    },
+    "shareId": 550,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jixing.webp"
+  },
   "311201": {
     "id": "311201",
     "name": {
@@ -1858,6 +1906,18 @@
     "gameVersion": "5.1",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_DongliJu.webp"
+  },
+  "311310": {
+    "id": "311310",
+    "name": {
+      "zh": "拾慧铸熔",
+      "en": "Flame-Forged Insight"
+    },
+    "shareId": 551,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Shihui.webp"
   },
   "311401": {
     "id": "311401",
@@ -2578,6 +2638,18 @@
     "gameVersion": "6.2",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ShuixianDa.webp"
+  },
+  "312044": {
+    "id": "312044",
+    "name": {
+      "zh": "被浸染的缨盔",
+      "en": "Dyed Tassel"
+    },
+    "shareId": 552,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Changyexiao.webp"
   },
   "312101": {
     "id": "312101",
@@ -3598,6 +3670,18 @@
     "gameVersion": "6.2",
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Ximoer.webp"
+  },
+  "322032": {
+    "id": "322032",
+    "name": {
+      "zh": "玻娜与「绿松石」",
+      "en": "Bona and Cocouik"
+    },
+    "shareId": 553,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Bona.webp"
   },
   "323001": {
     "id": "323001",
@@ -4643,6 +4727,18 @@
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Pangbai.webp"
   },
+  "332053": {
+    "id": "332053",
+    "name": {
+      "zh": "破碎之海",
+      "en": "Broken Sea"
+    },
+    "shareId": 517,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Elong2.webp"
+  },
   "332054": {
     "id": "332054",
     "name": {
@@ -4702,6 +4798,18 @@
     "gameVersion": "6.2",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yagebu.webp"
+  },
+  "332059": {
+    "id": "332059",
+    "name": {
+      "zh": "「穿越晨霭的冒险」",
+      "en": "\"An Adventure Through the Morning Mist\""
+    },
+    "shareId": 554,
+    "type": "action",
+    "gameVersion": "6.3",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_TiansheChuan.webp"
   },
   "333001": {
     "id": "333001",

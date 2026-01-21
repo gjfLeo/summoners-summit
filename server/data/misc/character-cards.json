@@ -194,6 +194,19 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Escoffier.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Escoffier.webp"
   },
+  "1116": {
+    "id": "1116",
+    "name": {
+      "zh": "丝柯克",
+      "en": "Skirk"
+    },
+    "shareId": 544,
+    "type": "character",
+    "gameVersion": "6.3",
+    "element": "cryo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_SkirkNew.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_SkirkNew.webp"
+  },
   "1201": {
     "id": "1201",
     "name": {
@@ -765,6 +778,19 @@
     "element": "electro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Varesa.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Varesa.webp"
+  },
+  "1416": {
+    "id": "1416",
+    "name": {
+      "zh": "欧洛伦",
+      "en": "Ororon"
+    },
+    "shareId": 545,
+    "type": "character",
+    "gameVersion": "6.3",
+    "element": "electro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Olorun.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Olorun.webp"
   },
   "1501": {
     "id": "1501",
@@ -1363,6 +1389,19 @@
     "element": "hydro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Narcissusborn.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Narcissusborn.webp"
+  },
+  "2207": {
+    "id": "2207",
+    "name": {
+      "zh": "圣骸角鳄",
+      "en": "Consecrated Horned Crocodile"
+    },
+    "shareId": 546,
+    "type": "character",
+    "gameVersion": "6.3",
+    "element": "hydro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_GatorSacred.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_GatorSacred.webp"
   },
   "2301": {
     "id": "2301",
