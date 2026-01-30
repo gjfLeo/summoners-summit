@@ -1,4 +1,5 @@
-import { getStorageGameList } from "./game";
+import { decodeDeck, encodeDeck } from "./card";
+import { getStorageGameList, writeGameV2 } from "./game";
 import { getStorageMatchList } from "./match";
 import { getStorageTournamentList } from "./tournament";
 
@@ -25,4 +26,23 @@ export async function getDeckCodes({ gameVersion }: { gameVersion: GameVersionId
   return Object.entries(deckRecord)
     .sort((a, b) => b[1] - a[1])
     .map(([code]) => code);
+}
+
+export async function updateDeckCodes() {
+  const games = await getStorageGameList();
+  for (const game of games) {
+    let changed = false;
+    for (const deck of [game.playerADeck, game.playerBDeck]) {
+      const deckCode = deck.deckCode;
+      if (deckCode /* && blockWords.some(word => deckCode.includes(word)) */) {
+        deck.deckCode = await encodeDeck(await decodeDeck(deckCode));
+        if (deck.deckCode !== deckCode) {
+          changed = true;
+        }
+      }
+    }
+    if (changed) {
+      writeGameV2(game);
+    }
+  }
 }

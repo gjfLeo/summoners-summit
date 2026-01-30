@@ -14,6 +14,9 @@ export const blockWords = [
   // "pcp", // 似乎已移除
   "rbq",
   "xjp",
+
+  // 疑似外服
+  "ggc",
 ];
 
 /**

@@ -1,5 +1,6 @@
 import z from "zod";
 import { clearGameCache, clearMatchCache, clearPlayerCache, clearTournamentCache, getStorageGameRecord, getStorageMatchRecord, getStorageTournamentList, refreshPlayerIndex } from "~~/server/service";
+import { updateDeckCodes } from "~~/server/service/deck";
 
 defineRouteMeta({
   openAPI: {
@@ -17,6 +18,7 @@ defineRouteMeta({
             "clearStorageCache",
             "findUnusedData",
             "refreshPlayerIndex",
+            "updateDeckCodes",
           ],
         },
       },
@@ -29,6 +31,7 @@ const ZQuery = z.object({
     "clearStorageCache",
     "findUnusedData",
     "refreshPlayerIndex",
+    "updateDeckCodes",
   ]),
 });
 
@@ -66,6 +69,11 @@ export default defineEventHandler(async (event) => {
 
   if (action === "refreshPlayerIndex") {
     await refreshPlayerIndex();
+    return {};
+  }
+
+  if (action === "updateDeckCodes") {
+    await updateDeckCodes();
     return {};
   }
 });
