@@ -1,0 +1,30 @@
+{
+  "id": "fba33768478f60ca13",
+  "tournamentId": "fba33768478f60ca",
+  "stageIndex": 4,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.3",
+  "playerA": {
+    "playerId": "bfa5265fcf509829",
+    "nickname": "卡特皮拉"
+  },
+  "playerB": {
+    "playerId": "e2488ee12a6c9f4c",
+    "nickname": "mikasa"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1115-1310-2206",
+      "playerBTeamId": "1115-1310-2206"
+    }
+  ],
+  "gameIds": [
+    "fba33768478f60ca1301",
+    "fba33768478f60ca1302",
+    "fba33768478f60ca1303",
+    "fba33768478f60ca1304",
+    "fba33768478f60ca1305"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "fba33768478f60ca17",
+  "tournamentId": "fba33768478f60ca",
+  "stageIndex": 7,
+  "partIndex": 0,
+  "matchIndex": 0,
+  "gameVersion": "6.3",
+  "playerA": {
+    "playerId": "34cee4f9cfb2868d",
+    "nickname": "屹立大地之上"
+  },
+  "playerB": {
+    "playerId": "9ceb8fe866303118",
+    "nickname": "Sept"
+  },
+  "bans": [
+    {
+      "banType": "team",
+      "playerATeamId": "1102-2603-2604",
+      "playerBTeamId": "1115-1310-2206"
+    }
+  ],
+  "gameIds": [
+    "fba33768478f60ca1701",
+    "fba33768478f60ca1702",
+    "fba33768478f60ca1703",
+    "fba33768478f60ca1704"
+  ]
+}

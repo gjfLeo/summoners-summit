@@ -1,0 +1,21 @@
+{
+  "id": "fba33768478f60ca02",
+  "tournamentId": "fba33768478f60ca",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 1,
+  "gameVersion": "6.3",
+  "playerA": {
+    "playerId": "672fd10dce5a115f",
+    "nickname": "禁忌知识"
+  },
+  "playerB": {
+    "playerId": "e3cc88fef0c0e335",
+    "nickname": "喵帕斯的小迷妹"
+  },
+  "gameIds": [
+    "fba33768478f60ca0201",
+    "fba33768478f60ca0202",
+    "fba33768478f60ca0203"
+  ]
+}

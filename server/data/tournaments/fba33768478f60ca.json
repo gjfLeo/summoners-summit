@@ -1,0 +1,266 @@
+{
+  "id": "fba33768478f60ca",
+  "name": {
+    "zh": "2026「枫达杯」"
+  },
+  "gameVersion": "6.3",
+  "region": "CN",
+  "type": "地区大赛",
+  "stages": [
+    {
+      "name": {
+        "zh": "突围赛第1轮"
+      },
+      "rules": {
+        "numGames": 3,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 3,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 3
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-01-31",
+          "matchIds": [
+            "fba33768478f60ca01",
+            "fba33768478f60ca02",
+            "fba33768478f60ca03",
+            "fba33768478f60ca04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "突围赛第2轮"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-01",
+          "matchIds": [
+            "fba33768478f60ca05",
+            "fba33768478f60ca06",
+            "fba33768478f60ca07",
+            "fba33768478f60ca08"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "胜者组半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-06",
+          "matchIds": [
+            "fba33768478f60ca09",
+            "fba33768478f60ca10"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组第1轮"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-06",
+          "matchIds": [
+            "fba33768478f60ca11",
+            "fba33768478f60ca12"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组第2轮"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-07",
+          "matchIds": [
+            "fba33768478f60ca13",
+            "fba33768478f60ca14"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "胜者组决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-07",
+          "matchIds": [
+            "fba33768478f60ca15"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组半决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-07",
+          "matchIds": [
+            "fba33768478f60ca16"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "败者组决赛"
+      },
+      "rules": {
+        "numGames": 5,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 4,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 4
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-08",
+          "matchIds": [
+            "fba33768478f60ca17"
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh": "总决赛"
+      },
+      "rules": {
+        "numGames": 7,
+        "mode": "conquest",
+        "submitTeams": {
+          "num": 5,
+          "submitDecks": {
+            "maxNumForEachTeam": 1,
+            "maxNumInTotal": 5
+          },
+          "banTeams": {
+            "num": 1
+          }
+        }
+      },
+      "parts": [
+        {
+          "name": {},
+          "date": "2026-02-08",
+          "matchIds": [
+            "fba33768478f60ca18"
+          ]
+        }
+      ]
+    }
+  ]
+}

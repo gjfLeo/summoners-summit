@@ -1,0 +1,20 @@
+{
+  "id": "fba33768478f60ca04",
+  "tournamentId": "fba33768478f60ca",
+  "stageIndex": 0,
+  "partIndex": 0,
+  "matchIndex": 3,
+  "gameVersion": "6.3",
+  "playerA": {
+    "playerId": "395d9a6173d1c742",
+    "nickname": "响子"
+  },
+  "playerB": {
+    "playerId": "161c913c3c9475e8",
+    "nickname": "叶叁伍"
+  },
+  "gameIds": [
+    "fba33768478f60ca0401",
+    "fba33768478f60ca0402"
+  ]
+}
