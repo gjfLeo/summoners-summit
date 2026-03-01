@@ -207,6 +207,19 @@
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_SkirkNew.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_SkirkNew.webp"
   },
+  "1117": {
+    "id": "1117",
+    "name": {
+      "zh": "米卡",
+      "en": "Mika"
+    },
+    "shareId": 555,
+    "type": "character",
+    "gameVersion": "6.4",
+    "element": "cryo",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mika.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mika.webp"
+  },
   "1201": {
     "id": "1201",
     "name": {
@@ -791,6 +804,19 @@
     "element": "electro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Olorun.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Olorun.webp"
+  },
+  "1417": {
+    "id": "1417",
+    "name": {
+      "zh": "伊涅芙",
+      "en": "Ineffa"
+    },
+    "shareId": 556,
+    "type": "character",
+    "gameVersion": "6.4",
+    "element": "electro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ineffa.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ineffa.webp"
   },
   "1501": {
     "id": "1501",
@@ -1467,6 +1493,19 @@
     "element": "pyro",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_TheAbyssXiuhcoatl.webp",
     "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_TheAbyssXiuhcoatl.webp"
+  },
+  "2306": {
+    "id": "2306",
+    "name": {
+      "zh": "金焰绒翼龙暴君",
+      "en": "Goldflame Qucusaur Tyrant"
+    },
+    "shareId": 557,
+    "type": "character",
+    "gameVersion": "6.4",
+    "element": "pyro",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FlamingoPrimo.webp",
+    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FlamingoPrimo.webp"
   },
   "2401": {
     "id": "2401",

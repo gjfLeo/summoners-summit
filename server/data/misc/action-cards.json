@@ -191,6 +191,18 @@
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_SkirkNew.webp"
   },
+  "211171": {
+    "id": "211171",
+    "name": {
+      "zh": "依随的策援",
+      "en": "Companion's Counsel"
+    },
+    "shareId": 558,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mika.webp"
+  },
   "212011": {
     "id": "212011",
     "name": {
@@ -730,6 +742,18 @@
     "gameVersion": "6.3",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Olorun.webp"
+  },
+  "214171": {
+    "id": "214171",
+    "name": {
+      "zh": "循环整流引擎",
+      "en": "Rectifying Processor"
+    },
+    "shareId": 559,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ineffa.webp"
   },
   "215011": {
     "id": "215011",
@@ -1354,6 +1378,18 @@
     "gameVersion": "6.0",
     "actionType": "equipment",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_TheAbyssXiuhcoatl.webp"
+  },
+  "223061": {
+    "id": "223061",
+    "name": {
+      "zh": "「焰主之祝」",
+      "en": "Flamelord's Blessing"
+    },
+    "shareId": 560,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "equipment",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_FlamingoPrimo.webp"
   },
   "224011": {
     "id": "224011",
@@ -3299,6 +3335,66 @@
     "actionType": "support",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Gonghui.webp"
   },
+  "321035": {
+    "id": "321035",
+    "name": {
+      "zh": "银月之庭",
+      "en": "Silvermoon Hall"
+    },
+    "shareId": 561,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Huatian.webp"
+  },
+  "321036": {
+    "id": "321036",
+    "name": {
+      "zh": "汐印石",
+      "en": "Tideseal Stone"
+    },
+    "shareId": 562,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_KuangLie.webp"
+  },
+  "321037": {
+    "id": "321037",
+    "name": {
+      "zh": "霜月之坊",
+      "en": "Frostmoon Enclave"
+    },
+    "shareId": 563,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Shuangyue.webp"
+  },
+  "321038": {
+    "id": "321038",
+    "name": {
+      "zh": "那夏镇",
+      "en": "Nasha Town"
+    },
+    "shareId": 564,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Naxiazhen.webp"
+  },
+  "321039": {
+    "id": "321039",
+    "name": {
+      "zh": "月矩力试验设计局",
+      "en": "Kuuvahki Experimental Design Bureau"
+    },
+    "shareId": 565,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Yurenzhong.webp"
+  },
   "322001": {
     "id": "322001",
     "name": {
@@ -3922,6 +4018,30 @@
     "gameVersion": "6.2",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Dacishuwang.webp"
+  },
+  "331004": {
+    "id": "331004",
+    "name": {
+      "zh": "元素幻变：超导祝佑",
+      "en": "Elemental Transfiguration: Superconduct Blessing"
+    },
+    "shareId": 566,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Resonance_IceElec.webp"
+  },
+  "331005": {
+    "id": "331005",
+    "name": {
+      "zh": "元素幻变：蒸发祝佑",
+      "en": "Elemental Transfiguration: Vaporize Blessing"
+    },
+    "shareId": 567,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "support",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Resonance_WaterFire.webp"
   },
   "331101": {
     "id": "331101",
@@ -4810,6 +4930,30 @@
     "gameVersion": "6.3",
     "actionType": "event",
     "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_TiansheChuan.webp"
+  },
+  "332060": {
+    "id": "332060",
+    "name": {
+      "zh": "天才的改造法",
+      "en": "Genius's Upgrade Technique"
+    },
+    "shareId": 568,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ainuo.webp"
+  },
+  "332061": {
+    "id": "332061",
+    "name": {
+      "zh": "叮铃哐啷军团",
+      "en": "Clink Clank Legion"
+    },
+    "shareId": 569,
+    "type": "action",
+    "gameVersion": "6.4",
+    "actionType": "event",
+    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ROBO.webp"
   },
   "333001": {
     "id": "333001",
