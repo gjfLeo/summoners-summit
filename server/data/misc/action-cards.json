@@ -9,7 +9,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ganyu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ganyu"
   },
   "211021": {
     "id": "211021",
@@ -21,7 +21,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Diona.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Diona"
   },
   "211031": {
     "id": "211031",
@@ -33,7 +33,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Keaya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Keaya"
   },
   "211041": {
     "id": "211041",
@@ -45,7 +45,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chongyun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Chongyun"
   },
   "211051": {
     "id": "211051",
@@ -57,7 +57,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ayaka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ayaka"
   },
   "211061": {
     "id": "211061",
@@ -69,7 +69,7 @@
     "type": "action",
     "gameVersion": "3.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Eula.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Eula"
   },
   "211071": {
     "id": "211071",
@@ -81,7 +81,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Shenhe.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Shenhe"
   },
   "211081": {
     "id": "211081",
@@ -93,7 +93,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Qiqi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Qiqi"
   },
   "211091": {
     "id": "211091",
@@ -105,7 +105,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Layla.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Layla"
   },
   "211101": {
     "id": "211101",
@@ -117,7 +117,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Charlotte.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Charlotte"
   },
   "211111": {
     "id": "211111",
@@ -129,7 +129,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Wriothesley.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Wriothesley"
   },
   "211121": {
     "id": "211121",
@@ -141,7 +141,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Freminet.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Freminet"
   },
   "211131": {
     "id": "211131",
@@ -153,7 +153,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Rosaria.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Rosaria"
   },
   "211141": {
     "id": "211141",
@@ -165,7 +165,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Citlali.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Citlali"
   },
   "211151": {
     "id": "211151",
@@ -177,7 +177,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Escoffier.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Escoffier"
   },
   "211161": {
     "id": "211161",
@@ -189,7 +189,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_SkirkNew.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_SkirkNew"
   },
   "211171": {
     "id": "211171",
@@ -201,7 +201,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mika.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Mika"
   },
   "212011": {
     "id": "212011",
@@ -213,7 +213,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Barbara.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Barbara"
   },
   "212021": {
     "id": "212021",
@@ -225,7 +225,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Xingqiu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Xingqiu"
   },
   "212031": {
     "id": "212031",
@@ -237,7 +237,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Mona.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Mona"
   },
   "212041": {
     "id": "212041",
@@ -249,7 +249,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Tartaglia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Tartaglia"
   },
   "212051": {
     "id": "212051",
@@ -261,7 +261,7 @@
     "type": "action",
     "gameVersion": "3.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Kokomi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Kokomi"
   },
   "212061": {
     "id": "212061",
@@ -273,7 +273,7 @@
     "type": "action",
     "gameVersion": "3.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Ayato.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Ayato"
   },
   "212071": {
     "id": "212071",
@@ -285,7 +285,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Candace.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Candace"
   },
   "212081": {
     "id": "212081",
@@ -297,7 +297,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Nilou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Nilou"
   },
   "212091": {
     "id": "212091",
@@ -309,7 +309,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Yelan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Yelan"
   },
   "212101": {
     "id": "212101",
@@ -321,7 +321,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Neuvillette.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Neuvillette"
   },
   "212111": {
     "id": "212111",
@@ -333,7 +333,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Furina.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Furina"
   },
   "212131": {
     "id": "212131",
@@ -345,7 +345,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Sigewinne.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Sigewinne"
   },
   "212141": {
     "id": "212141",
@@ -357,7 +357,31 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mualani.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Mualani"
+  },
+  "212151": {
+    "id": "212151",
+    "name": {
+      "zh": "愿一切欢睦陪伴你",
+      "en": "You Shall Go Out With Joy"
+    },
+    "shareId": 573,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Dahlia"
+  },
+  "212161": {
+    "id": "212161",
+    "name": {
+      "zh": "天才之为构造之责任",
+      "en": "The Burden of Creative Genius"
+    },
+    "shareId": 574,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Aino"
   },
   "213011": {
     "id": "213011",
@@ -369,7 +393,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Diluc.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Diluc"
   },
   "213021": {
     "id": "213021",
@@ -381,7 +405,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Xiangling.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Xiangling"
   },
   "213031": {
     "id": "213031",
@@ -393,7 +417,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Bennett.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Bennett"
   },
   "213041": {
     "id": "213041",
@@ -405,7 +429,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Ambor.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Ambor"
   },
   "213051": {
     "id": "213051",
@@ -417,7 +441,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Yoyimiya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Yoyimiya"
   },
   "213061": {
     "id": "213061",
@@ -429,7 +453,7 @@
     "type": "action",
     "gameVersion": "3.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Klee.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Klee"
   },
   "213071": {
     "id": "213071",
@@ -441,7 +465,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Hutao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Hutao"
   },
   "213081": {
     "id": "213081",
@@ -453,7 +477,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Feiyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Feiyan"
   },
   "213091": {
     "id": "213091",
@@ -465,7 +489,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Dehya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Dehya"
   },
   "213101": {
     "id": "213101",
@@ -477,7 +501,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Liney.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Liney"
   },
   "213111": {
     "id": "213111",
@@ -489,7 +513,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Thoma.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Thoma"
   },
   "213121": {
     "id": "213121",
@@ -501,7 +525,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Xinyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Xinyan"
   },
   "213131": {
     "id": "213131",
@@ -513,7 +537,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chevreuse.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Chevreuse"
   },
   "213141": {
     "id": "213141",
@@ -525,7 +549,7 @@
     "type": "action",
     "gameVersion": "5.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Arlecchino.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Arlecchino"
   },
   "213151": {
     "id": "213151",
@@ -537,7 +561,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mavuika.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Mavuika"
   },
   "213161": {
     "id": "213161",
@@ -549,7 +573,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Gaming.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Gaming"
   },
   "214011": {
     "id": "214011",
@@ -561,7 +585,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Fischl.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Fischl"
   },
   "214021": {
     "id": "214021",
@@ -573,7 +597,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Razor.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Razor"
   },
   "214031": {
     "id": "214031",
@@ -585,7 +609,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Keqing.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Keqing"
   },
   "214041": {
     "id": "214041",
@@ -597,7 +621,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Cyno.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Cyno"
   },
   "214051": {
     "id": "214051",
@@ -609,7 +633,7 @@
     "type": "action",
     "gameVersion": "3.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Beidou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Beidou"
   },
   "214061": {
     "id": "214061",
@@ -621,7 +645,7 @@
     "type": "action",
     "gameVersion": "3.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Sara.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Sara"
   },
   "214071": {
     "id": "214071",
@@ -633,7 +657,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Shougun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Shougun"
   },
   "214081": {
     "id": "214081",
@@ -645,7 +669,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Yae.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Yae"
   },
   "214091": {
     "id": "214091",
@@ -657,7 +681,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Lisa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Lisa"
   },
   "214101": {
     "id": "214101",
@@ -669,7 +693,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Dori.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Dori"
   },
   "214111": {
     "id": "214111",
@@ -681,7 +705,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Shinobu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Shinobu"
   },
   "214121": {
     "id": "214121",
@@ -693,7 +717,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Clorinde.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Clorinde"
   },
   "214131": {
     "id": "214131",
@@ -705,7 +729,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Sethos.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Sethos"
   },
   "214141": {
     "id": "214141",
@@ -717,7 +741,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Iansan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Iansan"
   },
   "214151": {
     "id": "214151",
@@ -729,7 +753,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Varesa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Varesa"
   },
   "214161": {
     "id": "214161",
@@ -741,7 +765,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Olorun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Olorun"
   },
   "214171": {
     "id": "214171",
@@ -753,7 +777,19 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ineffa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ineffa"
+  },
+  "214181": {
+    "id": "214181",
+    "name": {
+      "zh": "拨开雪翳之幕",
+      "en": "Part the Veil of Snow"
+    },
+    "shareId": 587,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Flins"
   },
   "215011": {
     "id": "215011",
@@ -765,7 +801,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Sucrose.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Sucrose"
   },
   "215021": {
     "id": "215021",
@@ -777,7 +813,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Qin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Qin"
   },
   "215031": {
     "id": "215031",
@@ -789,7 +825,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Venti.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Venti"
   },
   "215041": {
     "id": "215041",
@@ -801,7 +837,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Xiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Xiao"
   },
   "215051": {
     "id": "215051",
@@ -813,7 +849,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Kazuha.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Kazuha"
   },
   "215061": {
     "id": "215061",
@@ -825,7 +861,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Wanderer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Wanderer"
   },
   "215071": {
     "id": "215071",
@@ -837,7 +873,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Sayu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Sayu"
   },
   "215081": {
     "id": "215081",
@@ -849,7 +885,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Linette.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Linette"
   },
   "215091": {
     "id": "215091",
@@ -861,7 +897,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Faruzan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Faruzan"
   },
   "215101": {
     "id": "215101",
@@ -873,7 +909,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Liuyun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Liuyun"
   },
   "215111": {
     "id": "215111",
@@ -885,7 +921,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chasca.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Chasca"
   },
   "215121": {
     "id": "215121",
@@ -897,7 +933,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Lanyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Lanyan"
   },
   "215131": {
     "id": "215131",
@@ -909,7 +945,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Heizo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Heizo"
   },
   "215141": {
     "id": "215141",
@@ -921,7 +957,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Mizuki.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Mizuki"
   },
   "215151": {
     "id": "215151",
@@ -933,7 +969,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ifa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ifa"
   },
   "216011": {
     "id": "216011",
@@ -945,7 +981,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ningguang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ningguang"
   },
   "216021": {
     "id": "216021",
@@ -957,7 +993,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Noel.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Noel"
   },
   "216031": {
     "id": "216031",
@@ -969,7 +1005,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Zhongli.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Zhongli"
   },
   "216041": {
     "id": "216041",
@@ -981,7 +1017,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Albedo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Albedo"
   },
   "216051": {
     "id": "216051",
@@ -993,7 +1029,7 @@
     "type": "action",
     "gameVersion": "3.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Itto.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Itto"
   },
   "216061": {
     "id": "216061",
@@ -1005,7 +1041,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Gorou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Gorou"
   },
   "216071": {
     "id": "216071",
@@ -1017,7 +1053,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Yunjin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Yunjin"
   },
   "216081": {
     "id": "216081",
@@ -1029,7 +1065,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Navia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Navia"
   },
   "216091": {
     "id": "216091",
@@ -1041,7 +1077,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chiori.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Chiori"
   },
   "216101": {
     "id": "216101",
@@ -1053,7 +1089,7 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Kachina.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Kachina"
   },
   "216111": {
     "id": "216111",
@@ -1065,7 +1101,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Xilonen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Xilonen"
   },
   "217011": {
     "id": "217011",
@@ -1077,7 +1113,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Collei.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Collei"
   },
   "217021": {
     "id": "217021",
@@ -1089,7 +1125,7 @@
     "type": "action",
     "gameVersion": "3.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Tighnari.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Tighnari"
   },
   "217031": {
     "id": "217031",
@@ -1101,7 +1137,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Tighnari.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Tighnari"
   },
   "217041": {
     "id": "217041",
@@ -1113,7 +1149,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Yaoyao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Yaoyao"
   },
   "217051": {
     "id": "217051",
@@ -1125,7 +1161,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Baizhuer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Baizhuer"
   },
   "217061": {
     "id": "217061",
@@ -1137,7 +1173,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Constellation_Alhatham.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Constellation_Alhatham"
   },
   "217071": {
     "id": "217071",
@@ -1149,7 +1185,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Momoka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Momoka"
   },
   "217081": {
     "id": "217081",
@@ -1161,7 +1197,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Kaveh.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Kaveh"
   },
   "217091": {
     "id": "217091",
@@ -1173,7 +1209,7 @@
     "type": "action",
     "gameVersion": "5.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Kinich.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Kinich"
   },
   "217101": {
     "id": "217101",
@@ -1185,7 +1221,19 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Emilie.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Emilie"
+  },
+  "217111": {
+    "id": "217111",
+    "name": {
+      "zh": "「唇啊，为我纺出歌与吟哦」",
+      "en": "\"O Lips, Weave Me Songs and Psalms\""
+    },
+    "shareId": 588,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Lauma"
   },
   "221011": {
     "id": "221011",
@@ -1197,7 +1245,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_MageIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_MageIce"
   },
   "221021": {
     "id": "221021",
@@ -1209,7 +1257,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_LaSignora.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_LaSignora"
   },
   "221031": {
     "id": "221031",
@@ -1221,7 +1269,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_EffigyIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_EffigyIce"
   },
   "221041": {
     "id": "221041",
@@ -1233,7 +1281,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_EscadronIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_EscadronIce"
   },
   "222011": {
     "id": "222011",
@@ -1245,7 +1293,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Chunshui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Chunshui"
   },
   "222021": {
     "id": "222021",
@@ -1257,7 +1305,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Maidenwater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Maidenwater"
   },
   "222031": {
     "id": "222031",
@@ -1269,7 +1317,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_InvokerHeraldWater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_InvokerHeraldWater"
   },
   "222041": {
     "id": "222041",
@@ -1281,7 +1329,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ptahur.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ptahur"
   },
   "222051": {
     "id": "222051",
@@ -1293,7 +1341,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HilistrayWater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_HilistrayWater"
   },
   "222061": {
     "id": "222061",
@@ -1305,7 +1353,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Narcissusborn.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Narcissusborn"
   },
   "222071": {
     "id": "222071",
@@ -1317,7 +1365,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_GatorSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_GatorSacred"
   },
   "223011": {
     "id": "223011",
@@ -1329,7 +1377,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_FatuiPyroAgent.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_FatuiPyroAgent"
   },
   "223021": {
     "id": "223021",
@@ -1341,7 +1389,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_DeaconFire.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_DeaconFire"
   },
   "223031": {
     "id": "223031",
@@ -1353,7 +1401,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Muscleman.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Muscleman"
   },
   "223041": {
     "id": "223041",
@@ -1365,7 +1413,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HermitCrabPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_HermitCrabPrimo"
   },
   "223051": {
     "id": "223051",
@@ -1377,7 +1425,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_TheAbyssXiuhcoatl.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_TheAbyssXiuhcoatl"
   },
   "223061": {
     "id": "223061",
@@ -1389,7 +1437,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_FlamingoPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_FlamingoPrimo"
   },
   "224011": {
     "id": "224011",
@@ -1401,7 +1449,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Effigyelectric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Effigyelectric"
   },
   "224021": {
     "id": "224021",
@@ -1413,7 +1461,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Raijin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Raijin"
   },
   "224031": {
     "id": "224031",
@@ -1425,7 +1473,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_SeaHorsePrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_SeaHorsePrimo"
   },
   "224041": {
     "id": "224041",
@@ -1437,7 +1485,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_FatuusSummoner.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_FatuusSummoner"
   },
   "224051": {
     "id": "224051",
@@ -1449,7 +1497,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_ScorpionSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_ScorpionSacred"
   },
   "224061": {
     "id": "224061",
@@ -1461,7 +1509,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_InvokerElectric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_InvokerElectric"
   },
   "225011": {
     "id": "225011",
@@ -1473,7 +1521,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Ningyo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Ningyo"
   },
   "225021": {
     "id": "225021",
@@ -1485,7 +1533,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Dvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Dvalin"
   },
   "225031": {
     "id": "225031",
@@ -1497,7 +1545,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_ChrysopeleaSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_ChrysopeleaSacred"
   },
   "226011": {
     "id": "226011",
@@ -1509,7 +1557,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Rockbrute.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Rockbrute"
   },
   "226022": {
     "id": "226022",
@@ -1521,7 +1569,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Dahaka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Dahaka"
   },
   "226031": {
     "id": "226031",
@@ -1533,7 +1581,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Planelurker.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Planelurker"
   },
   "226041": {
     "id": "226041",
@@ -1545,7 +1593,19 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_DarkwraithRock.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_DarkwraithRock"
+  },
+  "226051": {
+    "id": "226051",
+    "name": {
+      "zh": "重力场域",
+      "en": "Gravity Field"
+    },
+    "shareId": 589,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Gravitas"
   },
   "227011": {
     "id": "227011",
@@ -1557,7 +1617,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Fungusgrass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Fungusgrass"
   },
   "227021": {
     "id": "227021",
@@ -1569,7 +1629,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_Apep.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_Apep"
   },
   "227031": {
     "id": "227031",
@@ -1581,7 +1641,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_EremiteGrass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_EremiteGrass"
   },
   "227041": {
     "id": "227041",
@@ -1593,7 +1653,19 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Talent_HookwalkerPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_HookwalkerPrimo"
+  },
+  "227051": {
+    "id": "227051",
+    "name": {
+      "zh": "亡草蔽日",
+      "en": "Withered Reeds Eclipse the Sun"
+    },
+    "shareId": 575,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Talent_PantherSacred"
   },
   "311101": {
     "id": "311101",
@@ -1605,7 +1677,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_CatalystIntro.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_CatalystIntro"
   },
   "311102": {
     "id": "311102",
@@ -1617,7 +1689,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_CatalystFossil.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_CatalystFossil"
   },
   "311103": {
     "id": "311103",
@@ -1629,7 +1701,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_CatalystDvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_CatalystDvalin"
   },
   "311104": {
     "id": "311104",
@@ -1641,7 +1713,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Ayus.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Ayus"
   },
   "311105": {
     "id": "311105",
@@ -1653,7 +1725,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Arakalari.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Arakalari"
   },
   "311106": {
     "id": "311106",
@@ -1665,7 +1737,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Yuandian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Yuandian"
   },
   "311107": {
     "id": "311107",
@@ -1677,7 +1749,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Tulaidu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Tulaidu"
   },
   "311108": {
     "id": "311108",
@@ -1689,7 +1761,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Wanshiliuyongdadian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Wanshiliuyongdadian"
   },
   "311109": {
     "id": "311109",
@@ -1701,7 +1773,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jinliujiandu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Jinliujiandu"
   },
   "311110": {
     "id": "311110",
@@ -1713,7 +1785,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ChunShui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_ChunShui"
   },
   "311111": {
     "id": "311111",
@@ -1725,7 +1797,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Bumieyuehua.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Bumieyuehua"
   },
   "311112": {
     "id": "311112",
@@ -1737,7 +1809,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jixing.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Jixing"
   },
   "311201": {
     "id": "311201",
@@ -1749,7 +1821,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_BowCrowfeather.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_BowCrowfeather"
   },
   "311202": {
     "id": "311202",
@@ -1761,7 +1833,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_BowFossil.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_BowFossil"
   },
   "311203": {
     "id": "311203",
@@ -1773,7 +1845,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_BowDvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_BowDvalin"
   },
   "311204": {
     "id": "311204",
@@ -1785,7 +1857,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Amos.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Amos"
   },
   "311205": {
     "id": "311205",
@@ -1797,7 +1869,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Widsith.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Widsith"
   },
   "311206": {
     "id": "311206",
@@ -1809,7 +1881,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Wangxia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Wangxia"
   },
   "311207": {
     "id": "311207",
@@ -1821,7 +1893,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jieze.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Jieze"
   },
   "311208": {
     "id": "311208",
@@ -1833,7 +1905,19 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_RuoShui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_RuoShui"
+  },
+  "311209": {
+    "id": "311209",
+    "name": {
+      "zh": "罗网勾针",
+      "en": "Snare Hook"
+    },
+    "shareId": 576,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Luowang"
   },
   "311301": {
     "id": "311301",
@@ -1845,7 +1929,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ClaymoreTin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_ClaymoreTin"
   },
   "311302": {
     "id": "311302",
@@ -1857,7 +1941,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Fossil.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Fossil"
   },
   "311303": {
     "id": "311303",
@@ -1869,7 +1953,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ClaymoreWolfmound.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_ClaymoreWolfmound"
   },
   "311304": {
     "id": "311304",
@@ -1881,7 +1965,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ClaymoreDvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_ClaymoreDvalin"
   },
   "311305": {
     "id": "311305",
@@ -1893,7 +1977,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Troupe.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Troupe"
   },
   "311306": {
     "id": "311306",
@@ -1905,7 +1989,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Xinbiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Xinbiao"
   },
   "311307": {
     "id": "311307",
@@ -1917,7 +2001,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Shenlinwangqi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Shenlinwangqi"
   },
   "311308": {
     "id": "311308",
@@ -1929,7 +2013,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_BaWangJian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_BaWangJian"
   },
   "311309": {
     "id": "311309",
@@ -1941,7 +2025,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_DongliJu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_DongliJu"
   },
   "311310": {
     "id": "311310",
@@ -1953,7 +2037,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Shihui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Shihui"
   },
   "311401": {
     "id": "311401",
@@ -1965,7 +2049,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_PoleRuby.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_PoleRuby"
   },
   "311402": {
     "id": "311402",
@@ -1977,7 +2061,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_PoleLapis.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_PoleLapis"
   },
   "311403": {
     "id": "311403",
@@ -1989,7 +2073,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_PoleDvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_PoleDvalin"
   },
   "311404": {
     "id": "311404",
@@ -2001,7 +2085,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Kunwu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Kunwu"
   },
   "311405": {
     "id": "311405",
@@ -2013,7 +2097,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Narukami.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Narukami"
   },
   "311406": {
     "id": "311406",
@@ -2025,7 +2109,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Guanyue.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Guanyue"
   },
   "311407": {
     "id": "311407",
@@ -2037,7 +2121,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Hepuyuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Hepuyuan"
   },
   "311408": {
     "id": "311408",
@@ -2049,7 +2133,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Gongyichoubao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Gongyichoubao"
   },
   "311409": {
     "id": "311409",
@@ -2061,7 +2145,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_KanTanQiang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_KanTanQiang"
   },
   "311501": {
     "id": "311501",
@@ -2073,7 +2157,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_SwordDarker.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_SwordDarker"
   },
   "311502": {
     "id": "311502",
@@ -2085,7 +2169,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_SwordFossil.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_SwordFossil"
   },
   "311503": {
     "id": "311503",
@@ -2097,7 +2181,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_SwordFalcon.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_SwordFalcon"
   },
   "311504": {
     "id": "311504",
@@ -2109,7 +2193,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_SwordDvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_SwordDvalin"
   },
   "311505": {
     "id": "311505",
@@ -2121,7 +2205,7 @@
     "type": "action",
     "gameVersion": "3.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Xifengjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Xifengjian"
   },
   "311506": {
     "id": "311506",
@@ -2133,7 +2217,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Caiye.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Caiye"
   },
   "311507": {
     "id": "311507",
@@ -2145,7 +2229,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Yuanmu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Yuanmu"
   },
   "311508": {
     "id": "311508",
@@ -2157,7 +2241,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_Jinshuiliuyong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_Jinshuiliuyong"
   },
   "311509": {
     "id": "311509",
@@ -2169,7 +2253,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_ChuanwuJian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_ChuanwuJian"
   },
   "312001": {
     "id": "312001",
@@ -2181,7 +2265,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_MaoxianjiaDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_MaoxianjiaDanjian"
   },
   "312002": {
     "id": "312002",
@@ -2193,7 +2277,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XingyunerDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_XingyunerDanjian"
   },
   "312003": {
     "id": "312003",
@@ -2205,7 +2289,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_YouyiDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_YouyiDanjian"
   },
   "312004": {
     "id": "312004",
@@ -2217,7 +2301,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_DutuDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_DutuDanjian"
   },
   "312005": {
     "id": "312005",
@@ -2229,7 +2313,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_JiaoguanDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_JiaoguanDanjian"
   },
   "312006": {
     "id": "312006",
@@ -2241,7 +2325,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_LiufangzheDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_LiufangzheDanjian"
   },
   "312007": {
     "id": "312007",
@@ -2253,7 +2337,7 @@
     "type": "action",
     "gameVersion": "3.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Huashi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Huashi"
   },
   "312008": {
     "id": "312008",
@@ -2265,7 +2349,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_JueyuanTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_JueyuanTaozhuang"
   },
   "312009": {
     "id": "312009",
@@ -2277,7 +2361,7 @@
     "type": "action",
     "gameVersion": "3.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Jiangshuai.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Jiangshuai"
   },
   "312010": {
     "id": "312010",
@@ -2289,7 +2373,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_QianyanTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_QianyanTaozhuang"
   },
   "312011": {
     "id": "312011",
@@ -2301,7 +2385,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ChenshaDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ChenshaDanjian"
   },
   "312012": {
     "id": "312012",
@@ -2313,7 +2397,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ChenshaTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ChenshaTaozhuang"
   },
   "312013": {
     "id": "312013",
@@ -2325,7 +2409,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Zhuiyidanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Zhuiyidanjian"
   },
   "312014": {
     "id": "312014",
@@ -2337,7 +2421,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ZhuiyiTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ZhuiyiTaozhuang"
   },
   "312015": {
     "id": "312015",
@@ -2349,7 +2433,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_HaiRanDanJian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_HaiRanDanJian"
   },
   "312016": {
     "id": "312016",
@@ -2361,7 +2445,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Hairantaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Hairantaozhuang"
   },
   "312017": {
     "id": "312017",
@@ -2373,7 +2457,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Chiwangdanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Chiwangdanjian"
   },
   "312018": {
     "id": "312018",
@@ -2385,7 +2469,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Chiwangtao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Chiwangtao"
   },
   "312019": {
     "id": "312019",
@@ -2397,7 +2481,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Yuxiang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Yuxiang"
   },
   "312020": {
     "id": "312020",
@@ -2409,7 +2493,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Yuxiangtao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Yuxiangtao"
   },
   "312021": {
     "id": "312021",
@@ -2421,7 +2505,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Huashen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Huashen"
   },
   "312022": {
     "id": "312022",
@@ -2433,7 +2517,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Huashentao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Huashentao"
   },
   "312023": {
     "id": "312023",
@@ -2445,7 +2529,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_LaobinDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_LaobinDanjian"
   },
   "312024": {
     "id": "312024",
@@ -2457,7 +2541,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ZhuYingDa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ZhuYingDa"
   },
   "312025": {
     "id": "312025",
@@ -2469,7 +2553,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_HuangjinjutuanXiaojian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_HuangjinjutuanXiaojian"
   },
   "312026": {
     "id": "312026",
@@ -2481,7 +2565,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Huangjinjutuanda.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Huangjinjutuanda"
   },
   "312027": {
     "id": "312027",
@@ -2493,7 +2577,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Zijinghuaguan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Zijinghuaguan"
   },
   "312028": {
     "id": "312028",
@@ -2505,7 +2589,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ZijinghuaguanDa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ZijinghuaguanDa"
   },
   "312029": {
     "id": "312029",
@@ -2517,7 +2601,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_JiaoDouShiXiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_JiaoDouShiXiao"
   },
   "312030": {
     "id": "312030",
@@ -2529,7 +2613,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_DadiYuezhang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_DadiYuezhang"
   },
   "312031": {
     "id": "312031",
@@ -2541,7 +2625,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiaoShaoNv.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_XiaoShaoNv"
   },
   "312032": {
     "id": "312032",
@@ -2553,7 +2637,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Mozhanshi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Mozhanshi"
   },
   "312033": {
     "id": "312033",
@@ -2565,7 +2649,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Weapon_HeiyaoXiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Weapon_HeiyaoXiao"
   },
   "312034": {
     "id": "312034",
@@ -2577,7 +2661,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_JinchengYongzhe.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_JinchengYongzhe"
   },
   "312035": {
     "id": "312035",
@@ -2589,7 +2673,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Xiasi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Xiasi"
   },
   "312036": {
     "id": "312036",
@@ -2601,7 +2685,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Xielve.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Xielve"
   },
   "312037": {
     "id": "312037",
@@ -2613,7 +2697,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ZongShixiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ZongShixiao"
   },
   "312038": {
     "id": "312038",
@@ -2625,7 +2709,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiasiDa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_XiasiDa"
   },
   "312039": {
     "id": "312039",
@@ -2637,7 +2721,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XieLveDa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_XieLveDa"
   },
   "312040": {
     "id": "312040",
@@ -2649,7 +2733,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Shuixianxiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Shuixianxiao"
   },
   "312041": {
     "id": "312041",
@@ -2661,7 +2745,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_XiriZongshi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_XiriZongshi"
   },
   "312043": {
     "id": "312043",
@@ -2673,7 +2757,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_ShuixianDa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_ShuixianDa"
   },
   "312044": {
     "id": "312044",
@@ -2685,7 +2769,19 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Changyexiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Changyexiao"
+  },
+  "312045": {
+    "id": "312045",
+    "name": {
+      "zh": "角斗士的终幕礼",
+      "en": "Gladiator's Finale"
+    },
+    "shareId": 590,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_JuedoushiDa"
   },
   "312101": {
     "id": "312101",
@@ -2697,7 +2793,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_BinDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_BinDanjian"
   },
   "312102": {
     "id": "312102",
@@ -2709,7 +2805,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_BinTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_BinTaozhuang"
   },
   "312201": {
     "id": "312201",
@@ -2721,7 +2817,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Shuidanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Shuidanjian"
   },
   "312202": {
     "id": "312202",
@@ -2733,7 +2829,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Shuitaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Shuitaozhuang"
   },
   "312301": {
     "id": "312301",
@@ -2745,7 +2841,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Monvdanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Monvdanjian"
   },
   "312302": {
     "id": "312302",
@@ -2757,7 +2853,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Monvtaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Monvtaozhuang"
   },
   "312401": {
     "id": "312401",
@@ -2769,7 +2865,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Leidanjia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Leidanjia"
   },
   "312402": {
     "id": "312402",
@@ -2781,7 +2877,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_Leitaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_Leitaozhuang"
   },
   "312501": {
     "id": "312501",
@@ -2793,7 +2889,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_FengDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_FengDanjian"
   },
   "312502": {
     "id": "312502",
@@ -2805,7 +2901,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_FengTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_FengTaozhuang"
   },
   "312601": {
     "id": "312601",
@@ -2817,7 +2913,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_YanDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_YanDanjian"
   },
   "312602": {
     "id": "312602",
@@ -2829,7 +2925,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_YanTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_YanTaozhuang"
   },
   "312701": {
     "id": "312701",
@@ -2841,7 +2937,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_CaoDanjian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_CaoDanjian"
   },
   "312702": {
     "id": "312702",
@@ -2853,7 +2949,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Artifact_CaoTaozhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Artifact_CaoTaozhuang"
   },
   "313001": {
     "id": "313001",
@@ -2865,7 +2961,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_LiedaoYao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_LiedaoYao"
   },
   "313002": {
     "id": "313002",
@@ -2877,7 +2973,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_GouzhuaLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_GouzhuaLong"
   },
   "313003": {
     "id": "313003",
@@ -2889,7 +2985,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_QiyouLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_QiyouLong"
   },
   "313004": {
     "id": "313004",
@@ -2901,7 +2997,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_JifengLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_JifengLong"
   },
   "313005": {
     "id": "313005",
@@ -2913,7 +3009,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_MingshiLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_MingshiLong"
   },
   "313006": {
     "id": "313006",
@@ -2925,7 +3021,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_RongyiLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_RongyiLong"
   },
   "313007": {
     "id": "313007",
@@ -2937,7 +3033,7 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_LangChuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_LangChuan"
   },
   "313008": {
     "id": "313008",
@@ -2949,7 +3045,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_TujiaoLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_TujiaoLong"
   },
   "313009": {
     "id": "313009",
@@ -2961,7 +3057,19 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "equipment",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Modify_Vehicle_Xiaokonglong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_Xiaokonglong"
+  },
+  "313010": {
+    "id": "313010",
+    "name": {
+      "zh": "膨膨兽",
+      "en": "Blubberbeast"
+    },
+    "shareId": 577,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "equipment",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Modify_Vehicle_Pengpenshou"
   },
   "321001": {
     "id": "321001",
@@ -2973,7 +3081,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_LiyueHarbor.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_LiyueHarbor"
   },
   "321002": {
     "id": "321002",
@@ -2985,7 +3093,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_MdLibrary.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_MdLibrary"
   },
   "321003": {
     "id": "321003",
@@ -2997,7 +3105,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Qunyuge.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Qunyuge"
   },
   "321004": {
     "id": "321004",
@@ -3009,7 +3117,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Chenxijiuzhuang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Chenxijiuzhuang"
   },
   "321005": {
     "id": "321005",
@@ -3021,7 +3129,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Wangshukezhan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Wangshukezhan"
   },
   "321006": {
     "id": "321006",
@@ -3033,7 +3141,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_FavoniusChurch.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_FavoniusChurch"
   },
   "321007": {
     "id": "321007",
@@ -3045,7 +3153,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Tianshou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Tianshou"
   },
   "321008": {
     "id": "321008",
@@ -3057,7 +3165,7 @@
     "type": "action",
     "gameVersion": "3.6",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Mingshendashe.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Mingshendashe"
   },
   "321009": {
     "id": "321009",
@@ -3069,7 +3177,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Shanhu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Shanhu"
   },
   "321010": {
     "id": "321010",
@@ -3081,7 +3189,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Xumi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Xumi"
   },
   "321011": {
     "id": "321011",
@@ -3093,7 +3201,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Hengna.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Hengna"
   },
   "321012": {
     "id": "321012",
@@ -3105,7 +3213,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Zhengshoui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Zhengshoui"
   },
   "321013": {
     "id": "321013",
@@ -3117,7 +3225,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Huangjinwu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Huangjinwu"
   },
   "321014": {
     "id": "321014",
@@ -3129,7 +3237,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Gandharva.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Gandharva"
   },
   "321015": {
     "id": "321015",
@@ -3141,7 +3249,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Fenglong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Fenglong"
   },
   "321016": {
     "id": "321016",
@@ -3153,7 +3261,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Chuiliu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Chuiliu"
   },
   "321017": {
     "id": "321017",
@@ -3165,7 +3273,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Gejuyuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Gejuyuan"
   },
   "321018": {
     "id": "321018",
@@ -3177,7 +3285,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_BideBao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_BideBao"
   },
   "321019": {
     "id": "321019",
@@ -3189,7 +3297,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Qinglaidao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Qinglaidao"
   },
   "321020": {
     "id": "321020",
@@ -3201,7 +3309,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_ChiWangLin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_ChiWangLin"
   },
   "321021": {
     "id": "321021",
@@ -3213,7 +3321,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_FontaineSci.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_FontaineSci"
   },
   "321022": {
     "id": "321022",
@@ -3225,7 +3333,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_JingjiChang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_JingjiChang"
   },
   "321023": {
     "id": "321023",
@@ -3237,7 +3345,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_DouWuTai.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_DouWuTai"
   },
   "321024": {
     "id": "321024",
@@ -3249,7 +3357,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_XuanmuRen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_XuanmuRen"
   },
   "321025": {
     "id": "321025",
@@ -3261,7 +3369,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_LiuQuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_LiuQuan"
   },
   "321026": {
     "id": "321026",
@@ -3273,7 +3381,7 @@
     "type": "action",
     "gameVersion": "5.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_HuaYu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_HuaYu"
   },
   "321027": {
     "id": "321027",
@@ -3285,7 +3393,7 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_YanmiZhu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_YanmiZhu"
   },
   "321028": {
     "id": "321028",
@@ -3297,7 +3405,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Woluzhibang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Woluzhibang"
   },
   "321029": {
     "id": "321029",
@@ -3309,7 +3417,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_MoseJiuguan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_MoseJiuguan"
   },
   "321030": {
     "id": "321030",
@@ -3321,7 +3429,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_XinguiWangcheng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_XinguiWangcheng"
   },
   "321031": {
     "id": "321031",
@@ -3333,7 +3441,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Gonghui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Gonghui"
   },
   "321035": {
     "id": "321035",
@@ -3345,7 +3453,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Huatian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Huatian"
   },
   "321036": {
     "id": "321036",
@@ -3357,7 +3465,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_KuangLie.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_KuangLie"
   },
   "321037": {
     "id": "321037",
@@ -3369,7 +3477,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Shuangyue.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Shuangyue"
   },
   "321038": {
     "id": "321038",
@@ -3381,7 +3489,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Naxiazhen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Naxiazhen"
   },
   "321039": {
     "id": "321039",
@@ -3393,7 +3501,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Yurenzhong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Yurenzhong"
   },
   "322001": {
     "id": "322001",
@@ -3405,7 +3513,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Paimon.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Paimon"
   },
   "322002": {
     "id": "322002",
@@ -3417,7 +3525,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Katheryne.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Katheryne"
   },
   "322003": {
     "id": "322003",
@@ -3429,7 +3537,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Timaeus.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Timaeus"
   },
   "322004": {
     "id": "322004",
@@ -3441,7 +3549,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Wagner.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Wagner"
   },
   "322005": {
     "id": "322005",
@@ -3453,7 +3561,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Maoshifu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Maoshifu"
   },
   "322006": {
     "id": "322006",
@@ -3465,7 +3573,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_AYuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_AYuan"
   },
   "322007": {
     "id": "322007",
@@ -3477,7 +3585,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Timmy.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Timmy"
   },
   "322008": {
     "id": "322008",
@@ -3489,7 +3597,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_LiBen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_LiBen"
   },
   "322009": {
     "id": "322009",
@@ -3501,7 +3609,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Changjiuye.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Changjiuye"
   },
   "322010": {
     "id": "322010",
@@ -3513,7 +3621,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Aileen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Aileen"
   },
   "322011": {
     "id": "322011",
@@ -3525,7 +3633,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Tiantiezui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Tiantiezui"
   },
   "322012": {
     "id": "322012",
@@ -3537,7 +3645,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Liusu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Liusu"
   },
   "322013": {
     "id": "322013",
@@ -3549,7 +3657,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Huasanli.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Huasanli"
   },
   "322014": {
     "id": "322014",
@@ -3561,7 +3669,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Yingjin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Yingjin"
   },
   "322015": {
     "id": "322015",
@@ -3573,7 +3681,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Xudong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Xudong"
   },
   "322016": {
     "id": "322016",
@@ -3585,7 +3693,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Dina.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Dina"
   },
   "322017": {
     "id": "322017",
@@ -3597,7 +3705,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Lana.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Lana"
   },
   "322018": {
     "id": "322018",
@@ -3609,7 +3717,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Laozhang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Laozhang"
   },
   "322019": {
     "id": "322019",
@@ -3621,7 +3729,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Saileita.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Saileita"
   },
   "322020": {
     "id": "322020",
@@ -3633,7 +3741,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Yayoyi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Yayoyi"
   },
   "322021": {
     "id": "322021",
@@ -3645,7 +3753,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Mamere.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Mamere"
   },
   "322022": {
     "id": "322022",
@@ -3657,7 +3765,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Jeht.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Jeht"
   },
   "322023": {
     "id": "322023",
@@ -3669,7 +3777,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Silver.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Silver"
   },
   "322024": {
     "id": "322024",
@@ -3681,7 +3789,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Taroumaru.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Taroumaru"
   },
   "322025": {
     "id": "322025",
@@ -3693,7 +3801,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Baishoutao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Baishoutao"
   },
   "322026": {
     "id": "322026",
@@ -3705,7 +3813,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_MrArthur.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_MrArthur"
   },
   "322027": {
     "id": "322027",
@@ -3717,7 +3825,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Seling.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Seling"
   },
   "322028": {
     "id": "322028",
@@ -3729,7 +3837,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_AimiTa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_AimiTa"
   },
   "322029": {
     "id": "322029",
@@ -3741,7 +3849,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_ZhezhiJiazu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_ZhezhiJiazu"
   },
   "322030": {
     "id": "322030",
@@ -3753,7 +3861,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_JimuRen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_JimuRen"
   },
   "322031": {
     "id": "322031",
@@ -3765,7 +3873,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Ximoer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Ximoer"
   },
   "322032": {
     "id": "322032",
@@ -3777,7 +3885,31 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_NPC_Bona.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Bona"
+  },
+  "322033": {
+    "id": "322033",
+    "name": {
+      "zh": "乐平波琳",
+      "en": "Lepine-Pauline"
+    },
+    "shareId": 578,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_LPBL"
+  },
+  "322034": {
+    "id": "322034",
+    "name": {
+      "zh": "涅朵奇卡",
+      "en": "Netochka"
+    },
+    "shareId": 591,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_NPC_Nieduoqika"
   },
   "323001": {
     "id": "323001",
@@ -3789,7 +3921,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_ParametricTransformer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_ParametricTransformer"
   },
   "323002": {
     "id": "323002",
@@ -3801,7 +3933,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_NREMenu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_NREMenu"
   },
   "323003": {
     "id": "323003",
@@ -3813,7 +3945,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_Hongye.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_Hongye"
   },
   "323004": {
     "id": "323004",
@@ -3825,7 +3957,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_Xunbao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_Xunbao"
   },
   "323005": {
     "id": "323005",
@@ -3837,7 +3969,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_Seedbox.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_Seedbox"
   },
   "323006": {
     "id": "323006",
@@ -3849,7 +3981,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_Mirror.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_Mirror"
   },
   "323007": {
     "id": "323007",
@@ -3861,7 +3993,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_Liumingshi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_Liumingshi"
   },
   "323008": {
     "id": "323008",
@@ -3873,7 +4005,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Prop_KuSheHeng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Prop_KuSheHeng"
   },
   "330001": {
     "id": "330001",
@@ -3885,7 +4017,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Jiangjun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Jiangjun"
   },
   "330002": {
     "id": "330002",
@@ -3897,7 +4029,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Chuanglong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Chuanglong"
   },
   "330003": {
     "id": "330003",
@@ -3909,7 +4041,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Qingdian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Qingdian"
   },
   "330004": {
     "id": "330004",
@@ -3921,7 +4053,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xinfeng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xinfeng"
   },
   "330005": {
     "id": "330005",
@@ -3933,7 +4065,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Guobahelp.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Guobahelp"
   },
   "330006": {
     "id": "330006",
@@ -3945,7 +4077,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xuanpanyouzui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xuanpanyouzui"
   },
   "330007": {
     "id": "330007",
@@ -3957,7 +4089,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fankang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Fankang"
   },
   "330008": {
     "id": "330008",
@@ -3969,7 +4101,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_LeiShenZhan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_LeiShenZhan"
   },
   "330009": {
     "id": "330009",
@@ -3981,7 +4113,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Wuzui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Wuzui"
   },
   "330010": {
     "id": "330010",
@@ -3993,7 +4125,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ShenyeXunli.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_ShenyeXunli"
   },
   "330011": {
     "id": "330011",
@@ -4005,7 +4137,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yongye.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yongye"
   },
   "330012": {
     "id": "330012",
@@ -4017,7 +4149,19 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Dacishuwang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Dacishuwang"
+  },
+  "330013": {
+    "id": "330013",
+    "name": {
+      "zh": "另一侧的霜月",
+      "en": "The Other Side of the Frostmoon"
+    },
+    "shareId": 594,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "event",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yueyuwu"
   },
   "331004": {
     "id": "331004",
@@ -4029,7 +4173,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Resonance_IceElec.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_IceElec"
   },
   "331005": {
     "id": "331005",
@@ -4041,7 +4185,55 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "support",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Resonance_WaterFire.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_WaterFire"
+  },
+  "331006": {
+    "id": "331006",
+    "name": {
+      "zh": "元素幻变：绽放祝佑",
+      "en": "Elemental Transfiguration: Bloom Blessing"
+    },
+    "shareId": 579,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_WaterGrass"
+  },
+  "331007": {
+    "id": "331007",
+    "name": {
+      "zh": "元素幻变：火岩祝佑",
+      "en": "Elemental Transfiguration: Lava Blessing"
+    },
+    "shareId": 580,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_FireRock"
+  },
+  "331008": {
+    "id": "331008",
+    "name": {
+      "zh": "元素幻变：冰草祝佑",
+      "en": "Elemental Transfiguration: Rimegrass Blessing"
+    },
+    "shareId": 592,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_IceGrass"
+  },
+  "331009": {
+    "id": "331009",
+    "name": {
+      "zh": "元素幻变：雷风祝佑",
+      "en": "Elemental Transfiguration: Stormgale Blessing"
+    },
+    "shareId": 593,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "support",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_WindElec"
   },
   "331101": {
     "id": "331101",
@@ -4053,7 +4245,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Ice.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Ice"
   },
   "331102": {
     "id": "331102",
@@ -4065,7 +4257,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Ice.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Ice"
   },
   "331201": {
     "id": "331201",
@@ -4077,7 +4269,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Water.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Water"
   },
   "331202": {
     "id": "331202",
@@ -4089,7 +4281,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Water.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Water"
   },
   "331301": {
     "id": "331301",
@@ -4101,7 +4293,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Fire.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Fire"
   },
   "331302": {
     "id": "331302",
@@ -4113,7 +4305,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Fire.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Fire"
   },
   "331401": {
     "id": "331401",
@@ -4125,7 +4317,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Electric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Electric"
   },
   "331402": {
     "id": "331402",
@@ -4137,7 +4329,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Electric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Electric"
   },
   "331501": {
     "id": "331501",
@@ -4149,7 +4341,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Wind.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Wind"
   },
   "331502": {
     "id": "331502",
@@ -4161,7 +4353,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Wind.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Wind"
   },
   "331601": {
     "id": "331601",
@@ -4173,7 +4365,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Rock.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Rock"
   },
   "331602": {
     "id": "331602",
@@ -4185,7 +4377,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Rock.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Rock"
   },
   "331701": {
     "id": "331701",
@@ -4197,7 +4389,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceB_Grass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceB_Grass"
   },
   "331702": {
     "id": "331702",
@@ -4209,7 +4401,19 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_ResonanceA_Grass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_ResonanceA_Grass"
+  },
+  "331721": {
+    "id": "331721",
+    "name": {
+      "zh": "月兆·满辉",
+      "en": "Moonsign: Ascendant Gleam"
+    },
+    "shareId": 581,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "event",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Resonance_Moon"
   },
   "331801": {
     "id": "331801",
@@ -4221,7 +4425,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fengyuziyou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Fengyuziyou"
   },
   "331802": {
     "id": "331802",
@@ -4233,7 +4437,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yanyuqiyue.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yanyuqiyue"
   },
   "331803": {
     "id": "331803",
@@ -4245,7 +4449,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Leiyuyongheng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Leiyuyongheng"
   },
   "331804": {
     "id": "331804",
@@ -4257,7 +4461,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Caoyuzhihui.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Caoyuzhihui"
   },
   "331805": {
     "id": "331805",
@@ -4269,7 +4473,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_WaterJustice.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_WaterJustice"
   },
   "331806": {
     "id": "331806",
@@ -4281,7 +4485,19 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_FireWar.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_FireWar"
+  },
+  "331807": {
+    "id": "331807",
+    "name": {
+      "zh": "月与故乡",
+      "en": "Moon and Homeland"
+    },
+    "shareId": 582,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "event",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yueyuleyuan"
   },
   "332001": {
     "id": "332001",
@@ -4293,7 +4509,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_BestAibo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_BestAibo"
   },
   "332002": {
     "id": "332002",
@@ -4305,7 +4521,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Huanbanshijian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Huanbanshijian"
   },
   "332003": {
     "id": "332003",
@@ -4317,7 +4533,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yizhiqiankun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yizhiqiankun"
   },
   "332004": {
     "id": "332004",
@@ -4329,7 +4545,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yunchouweiwo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yunchouweiwo"
   },
   "332005": {
     "id": "332005",
@@ -4341,7 +4557,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Bendayehaimeiyoushu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Bendayehaimeiyoushu"
   },
   "332006": {
     "id": "332006",
@@ -4353,7 +4569,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Jiaogeiwoba.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Jiaogeiwoba"
   },
   "332007": {
     "id": "332007",
@@ -4365,7 +4581,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Heguizhishi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Heguizhishi"
   },
   "332008": {
     "id": "332008",
@@ -4377,7 +4593,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xingtian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xingtian"
   },
   "332009": {
     "id": "332009",
@@ -4389,7 +4605,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Baiezhishu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Baiezhishu"
   },
   "332010": {
     "id": "332010",
@@ -4401,7 +4617,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Zhuwujingtong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Zhuwujingtong"
   },
   "332011": {
     "id": "332011",
@@ -4413,7 +4629,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Shenbaoqiangongzhuci.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Shenbaoqiangongzhuci"
   },
   "332012": {
     "id": "332012",
@@ -4425,7 +4641,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Kuaikuaifengbushu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Kuaikuaifengbushu"
   },
   "332013": {
     "id": "332013",
@@ -4437,7 +4653,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Songniyicheng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Songniyicheng"
   },
   "332014": {
     "id": "332014",
@@ -4449,7 +4665,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Hufazhishi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Hufazhishi"
   },
   "332015": {
     "id": "332015",
@@ -4461,7 +4677,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Abyssdehuhuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Abyssdehuhuan"
   },
   "332016": {
     "id": "332016",
@@ -4473,7 +4689,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yurenzhongi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yurenzhongi"
   },
   "332017": {
     "id": "332017",
@@ -4485,7 +4701,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xialuo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xialuo"
   },
   "332018": {
     "id": "332018",
@@ -4497,7 +4713,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Zhonggongji.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Zhonggongji"
   },
   "332019": {
     "id": "332019",
@@ -4509,7 +4725,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Wennisha.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Wennisha"
   },
   "332020": {
     "id": "332020",
@@ -4521,7 +4737,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yongyuandeyouyi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yongyuandeyouyi"
   },
   "332021": {
     "id": "332021",
@@ -4533,7 +4749,7 @@
     "type": "action",
     "gameVersion": "3.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Dameng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Dameng"
   },
   "332022": {
     "id": "332022",
@@ -4545,7 +4761,7 @@
     "type": "action",
     "gameVersion": "4.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Cangfen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Cangfen"
   },
   "332023": {
     "id": "332023",
@@ -4557,7 +4773,7 @@
     "type": "action",
     "gameVersion": "4.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Heiquan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Heiquan"
   },
   "332024": {
     "id": "332024",
@@ -4569,7 +4785,7 @@
     "type": "action",
     "gameVersion": "4.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Wangfu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Wangfu"
   },
   "332025": {
     "id": "332025",
@@ -4581,7 +4797,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yezhu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yezhu"
   },
   "332026": {
     "id": "332026",
@@ -4593,7 +4809,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Tanta.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Tanta"
   },
   "332027": {
     "id": "332027",
@@ -4605,7 +4821,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Siyeyin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Siyeyin"
   },
   "332028": {
     "id": "332028",
@@ -4617,7 +4833,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fatiaoji.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Fatiaoji"
   },
   "332029": {
     "id": "332029",
@@ -4629,7 +4845,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ganluhua.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Ganluhua"
   },
   "332030": {
     "id": "332030",
@@ -4641,7 +4857,7 @@
     "type": "action",
     "gameVersion": "4.5",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Kexueyuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Kexueyuan"
   },
   "332031": {
     "id": "332031",
@@ -4653,7 +4869,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xunbao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xunbao"
   },
   "332032": {
     "id": "332032",
@@ -4665,7 +4881,7 @@
     "type": "action",
     "gameVersion": "4.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_MagicCount3.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_MagicCount3"
   },
   "332036": {
     "id": "332036",
@@ -4677,7 +4893,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ZhuanQian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_ZhuanQian"
   },
   "332037": {
     "id": "332037",
@@ -4689,7 +4905,7 @@
     "type": "action",
     "gameVersion": "4.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_DengDeng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_DengDeng"
   },
   "332039": {
     "id": "332039",
@@ -4701,7 +4917,7 @@
     "type": "action",
     "gameVersion": "5.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_FeedDrogen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_FeedDrogen"
   },
   "332040": {
     "id": "332040",
@@ -4713,7 +4929,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Caxie.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Caxie"
   },
   "332041": {
     "id": "332041",
@@ -4725,7 +4941,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_QiyouLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_QiyouLong"
   },
   "332042": {
     "id": "332042",
@@ -4737,7 +4953,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ransu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Ransu"
   },
   "332043": {
     "id": "332043",
@@ -4749,7 +4965,7 @@
     "type": "action",
     "gameVersion": "5.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_JifengLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_JifengLong"
   },
   "332044": {
     "id": "332044",
@@ -4761,7 +4977,7 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_NiyeLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_NiyeLong"
   },
   "332045": {
     "id": "332045",
@@ -4773,7 +4989,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_MingshiLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_MingshiLong"
   },
   "332046": {
     "id": "332046",
@@ -4785,7 +5001,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_RongyiLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_RongyiLong"
   },
   "332048": {
     "id": "332048",
@@ -4797,7 +5013,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_TujiaoLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_TujiaoLong"
   },
   "332049": {
     "id": "332049",
@@ -4809,7 +5025,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Olorun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Olorun"
   },
   "332050": {
     "id": "332050",
@@ -4821,7 +5037,7 @@
     "type": "action",
     "gameVersion": "5.8",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ifa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Ifa"
   },
   "332051": {
     "id": "332051",
@@ -4833,7 +5049,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Elong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Elong"
   },
   "332052": {
     "id": "332052",
@@ -4845,7 +5061,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Pangbai.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Pangbai"
   },
   "332053": {
     "id": "332053",
@@ -4857,7 +5073,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Assist_Location_Elong2.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Assist_Location_Elong2"
   },
   "332054": {
     "id": "332054",
@@ -4869,7 +5085,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ElongCry.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_ElongCry"
   },
   "332055": {
     "id": "332055",
@@ -4881,7 +5097,7 @@
     "type": "action",
     "gameVersion": "6.0",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Xilonen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Xilonen"
   },
   "332056": {
     "id": "332056",
@@ -4893,7 +5109,7 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Fujin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Fujin"
   },
   "332057": {
     "id": "332057",
@@ -4905,7 +5121,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ShuixianMaoxian.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_ShuixianMaoxian"
   },
   "332058": {
     "id": "332058",
@@ -4917,7 +5133,7 @@
     "type": "action",
     "gameVersion": "6.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Yagebu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Yagebu"
   },
   "332059": {
     "id": "332059",
@@ -4929,7 +5145,7 @@
     "type": "action",
     "gameVersion": "6.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_TiansheChuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_TiansheChuan"
   },
   "332060": {
     "id": "332060",
@@ -4941,7 +5157,7 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_Ainuo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Ainuo"
   },
   "332061": {
     "id": "332061",
@@ -4953,7 +5169,19 @@
     "type": "action",
     "gameVersion": "6.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Event_ROBO.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_ROBO"
+  },
+  "332062": {
+    "id": "332062",
+    "name": {
+      "zh": "清扫时间",
+      "en": "Cleaning Time"
+    },
+    "shareId": 583,
+    "type": "action",
+    "gameVersion": "6.5",
+    "actionType": "event",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Event_Ineffa"
   },
   "333001": {
     "id": "333001",
@@ -4965,7 +5193,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Jueyunguoba.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Jueyunguoba"
   },
   "333002": {
     "id": "333002",
@@ -4977,7 +5205,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_XTQ.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_XTQ"
   },
   "333003": {
     "id": "333003",
@@ -4989,7 +5217,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Lianhuasu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Lianhuasu"
   },
   "333004": {
     "id": "333004",
@@ -5001,7 +5229,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Beidiyanxunji.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Beidiyanxunji"
   },
   "333005": {
     "id": "333005",
@@ -5013,7 +5241,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Huaniangji.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Huaniangji"
   },
   "333006": {
     "id": "333006",
@@ -5025,7 +5253,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Tudoubin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Tudoubin"
   },
   "333007": {
     "id": "333007",
@@ -5037,7 +5265,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Kaomogupisa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Kaomogupisa"
   },
   "333008": {
     "id": "333008",
@@ -5049,7 +5277,7 @@
     "type": "action",
     "gameVersion": "3.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Bohejuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Bohejuan"
   },
   "333009": {
     "id": "333009",
@@ -5061,7 +5289,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Jiandan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Jiandan"
   },
   "333010": {
     "id": "333010",
@@ -5073,7 +5301,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Cishen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Cishen"
   },
   "333011": {
     "id": "333011",
@@ -5085,7 +5313,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Tangduer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Tangduer"
   },
   "333012": {
     "id": "333012",
@@ -5097,7 +5325,7 @@
     "type": "action",
     "gameVersion": "3.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Huangyou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Huangyou"
   },
   "333013": {
     "id": "333013",
@@ -5109,7 +5337,7 @@
     "type": "action",
     "gameVersion": "4.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Chips.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Chips"
   },
   "333014": {
     "id": "333014",
@@ -5121,7 +5349,7 @@
     "type": "action",
     "gameVersion": "4.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Matsutake.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Matsutake"
   },
   "333015": {
     "id": "333015",
@@ -5133,7 +5361,7 @@
     "type": "action",
     "gameVersion": "4.6",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Macarons.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Macarons"
   },
   "333016": {
     "id": "333016",
@@ -5145,7 +5373,7 @@
     "type": "action",
     "gameVersion": "5.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_LonglongCookie.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_LonglongCookie"
   },
   "333017": {
     "id": "333017",
@@ -5157,7 +5385,7 @@
     "type": "action",
     "gameVersion": "5.2",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Baoshi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Baoshi"
   },
   "333018": {
     "id": "333018",
@@ -5169,7 +5397,7 @@
     "type": "action",
     "gameVersion": "5.3",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_DongDongPengPeng.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_DongDongPengPeng"
   },
   "333019": {
     "id": "333019",
@@ -5181,7 +5409,7 @@
     "type": "action",
     "gameVersion": "5.4",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_WenQuan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_WenQuan"
   },
   "333020": {
     "id": "333020",
@@ -5193,7 +5421,7 @@
     "type": "action",
     "gameVersion": "5.5",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_MingShi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_MingShi"
   },
   "333027": {
     "id": "333027",
@@ -5205,7 +5433,7 @@
     "type": "action",
     "gameVersion": "5.6",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Rongyi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Rongyi"
   },
   "333028": {
     "id": "333028",
@@ -5217,7 +5445,7 @@
     "type": "action",
     "gameVersion": "5.7",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_TujiaoLong.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_TujiaoLong"
   },
   "333029": {
     "id": "333029",
@@ -5229,6 +5457,18 @@
     "type": "action",
     "gameVersion": "6.1",
     "actionType": "event",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Event_Food_Chalu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Chalu"
+  },
+  "333030": {
+    "id": "333030",
+    "name": {
+      "zh": "转盘特调",
+      "en": "Roulette Special"
+    },
+    "shareId": 595,
+    "type": "action",
+    "gameVersion": "6.6",
+    "actionType": "event",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Event_Food_Lunpan"
   }
 }

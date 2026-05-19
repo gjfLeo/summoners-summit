@@ -9,8 +9,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ganyu.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ganyu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ganyu",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ganyu"
   },
   "1102": {
     "id": "1102",
@@ -22,8 +22,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Diona.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Diona.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Diona",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Diona"
   },
   "1103": {
     "id": "1103",
@@ -35,8 +35,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kaeya.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kaeya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kaeya",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kaeya"
   },
   "1104": {
     "id": "1104",
@@ -48,8 +48,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chongyun.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chongyun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Chongyun",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Chongyun"
   },
   "1105": {
     "id": "1105",
@@ -61,8 +61,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ayaka.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ayaka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ayaka",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ayaka"
   },
   "1106": {
     "id": "1106",
@@ -74,8 +74,8 @@
     "type": "character",
     "gameVersion": "3.5",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Eula.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Eula.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Eula",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Eula"
   },
   "1107": {
     "id": "1107",
@@ -87,8 +87,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shenhe.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shenhe.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Shenhe",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Shenhe"
   },
   "1108": {
     "id": "1108",
@@ -100,8 +100,8 @@
     "type": "character",
     "gameVersion": "4.0",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Qiqi.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Qiqi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Qiqi",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Qiqi"
   },
   "1109": {
     "id": "1109",
@@ -113,8 +113,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Layla.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Layla.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Layla",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Layla"
   },
   "1110": {
     "id": "1110",
@@ -126,8 +126,8 @@
     "type": "character",
     "gameVersion": "4.5",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Charlotte.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Charlotte.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Charlotte",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Charlotte"
   },
   "1111": {
     "id": "1111",
@@ -139,8 +139,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Wriothesley.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Wriothesley.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Wriothesley",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Wriothesley"
   },
   "1112": {
     "id": "1112",
@@ -152,8 +152,8 @@
     "type": "character",
     "gameVersion": "5.0",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Freminet.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Freminet.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Freminet",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Freminet"
   },
   "1113": {
     "id": "1113",
@@ -165,8 +165,8 @@
     "type": "character",
     "gameVersion": "5.2",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Rosaria.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Rosaria.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Rosaria",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Rosaria"
   },
   "1114": {
     "id": "1114",
@@ -178,8 +178,8 @@
     "type": "character",
     "gameVersion": "5.7",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Citlali.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Citlali.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Citlali",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Citlali"
   },
   "1115": {
     "id": "1115",
@@ -191,8 +191,8 @@
     "type": "character",
     "gameVersion": "6.2",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Escoffier.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Escoffier.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Escoffier",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Escoffier"
   },
   "1116": {
     "id": "1116",
@@ -204,8 +204,8 @@
     "type": "character",
     "gameVersion": "6.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_SkirkNew.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_SkirkNew.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_SkirkNew",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_SkirkNew"
   },
   "1117": {
     "id": "1117",
@@ -217,8 +217,8 @@
     "type": "character",
     "gameVersion": "6.4",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mika.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mika.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Mika",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Mika"
   },
   "1201": {
     "id": "1201",
@@ -230,8 +230,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Barbara.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Barbara.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Barbara",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Barbara"
   },
   "1202": {
     "id": "1202",
@@ -243,8 +243,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xingqiu.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xingqiu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Xingqiu",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Xingqiu"
   },
   "1203": {
     "id": "1203",
@@ -256,8 +256,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mona.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mona.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Mona",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Mona"
   },
   "1204": {
     "id": "1204",
@@ -269,8 +269,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tartaglia.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tartaglia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Tartaglia",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Tartaglia"
   },
   "1205": {
     "id": "1205",
@@ -282,8 +282,8 @@
     "type": "character",
     "gameVersion": "3.5",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kokomi.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kokomi.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kokomi",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kokomi"
   },
   "1206": {
     "id": "1206",
@@ -295,8 +295,8 @@
     "type": "character",
     "gameVersion": "3.6",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ayato.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ayato.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ayato",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ayato"
   },
   "1207": {
     "id": "1207",
@@ -308,8 +308,8 @@
     "type": "character",
     "gameVersion": "3.8",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Candace.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Candace.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Candace",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Candace"
   },
   "1208": {
     "id": "1208",
@@ -321,8 +321,8 @@
     "type": "character",
     "gameVersion": "4.2",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Nilou.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Nilou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Nilou",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Nilou"
   },
   "1209": {
     "id": "1209",
@@ -334,8 +334,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yelan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yelan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Yelan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Yelan"
   },
   "1210": {
     "id": "1210",
@@ -347,8 +347,8 @@
     "type": "character",
     "gameVersion": "4.5",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Neuvillette.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Neuvillette.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Neuvillette",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Neuvillette"
   },
   "1211": {
     "id": "1211",
@@ -360,8 +360,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Furina.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Furina.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Furina",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Furina"
   },
   "1213": {
     "id": "1213",
@@ -373,8 +373,8 @@
     "type": "character",
     "gameVersion": "5.2",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sigewinne.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sigewinne.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Sigewinne",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Sigewinne"
   },
   "1214": {
     "id": "1214",
@@ -386,8 +386,34 @@
     "type": "character",
     "gameVersion": "5.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mualani.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mualani.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Mualani",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Mualani"
+  },
+  "1215": {
+    "id": "1215",
+    "name": {
+      "zh": "塔利雅",
+      "en": "Dahlia"
+    },
+    "shareId": 570,
+    "type": "character",
+    "gameVersion": "6.5",
+    "element": "hydro",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Dahlia",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Dahlia"
+  },
+  "1216": {
+    "id": "1216",
+    "name": {
+      "zh": "爱诺",
+      "en": "Aino"
+    },
+    "shareId": 571,
+    "type": "character",
+    "gameVersion": "6.5",
+    "element": "hydro",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Aino",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Aino"
   },
   "1301": {
     "id": "1301",
@@ -399,8 +425,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Diluc.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Diluc.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Diluc",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Diluc"
   },
   "1302": {
     "id": "1302",
@@ -412,8 +438,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xiangling.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xiangling.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Xiangling",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Xiangling"
   },
   "1303": {
     "id": "1303",
@@ -425,8 +451,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Bennett.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Bennett.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Bennett",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Bennett"
   },
   "1304": {
     "id": "1304",
@@ -438,8 +464,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ambor.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Amber.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ambor",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Amber"
   },
   "1305": {
     "id": "1305",
@@ -451,8 +477,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yoimiya.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yoimiya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Yoimiya",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Yoimiya"
   },
   "1306": {
     "id": "1306",
@@ -464,8 +490,8 @@
     "type": "character",
     "gameVersion": "3.4",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Klee.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Klee.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Klee",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Klee"
   },
   "1307": {
     "id": "1307",
@@ -477,8 +503,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Hutao.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Hutao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Hutao",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Hutao"
   },
   "1308": {
     "id": "1308",
@@ -490,8 +516,8 @@
     "type": "character",
     "gameVersion": "3.8",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Feiyan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Feiyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Feiyan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Feiyan"
   },
   "1309": {
     "id": "1309",
@@ -503,8 +529,8 @@
     "type": "character",
     "gameVersion": "4.1",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Dehya.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Dehya.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Dehya",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Dehya"
   },
   "1310": {
     "id": "1310",
@@ -516,8 +542,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Liney.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Liney.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Liney",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Liney"
   },
   "1311": {
     "id": "1311",
@@ -529,8 +555,8 @@
     "type": "character",
     "gameVersion": "4.4",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tohma.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tohma.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Tohma",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Tohma"
   },
   "1312": {
     "id": "1312",
@@ -542,8 +568,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xinyan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xinyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Xinyan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Xinyan"
   },
   "1313": {
     "id": "1313",
@@ -555,8 +581,8 @@
     "type": "character",
     "gameVersion": "4.8",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chevreuse.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chevreuse.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Chevreuse",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Chevreuse"
   },
   "1314": {
     "id": "1314",
@@ -568,8 +594,8 @@
     "type": "character",
     "gameVersion": "5.4",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Arlecchino.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Arlecchino.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Arlecchino",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Arlecchino"
   },
   "1315": {
     "id": "1315",
@@ -581,8 +607,8 @@
     "type": "character",
     "gameVersion": "5.7",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mavuika.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mavuika.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Mavuika",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Mavuika"
   },
   "1316": {
     "id": "1316",
@@ -594,8 +620,8 @@
     "type": "character",
     "gameVersion": "6.2",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Gaming.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Gaming.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Gaming",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Gaming"
   },
   "1401": {
     "id": "1401",
@@ -607,8 +633,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Fischl.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Fischl.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Fischl",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Fischl"
   },
   "1402": {
     "id": "1402",
@@ -620,8 +646,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Razor.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Razor.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Razor",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Razor"
   },
   "1403": {
     "id": "1403",
@@ -633,8 +659,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Keqing.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Keqing.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Keqing",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Keqing"
   },
   "1404": {
     "id": "1404",
@@ -646,8 +672,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Cyno.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Cyno.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Cyno",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Cyno"
   },
   "1405": {
     "id": "1405",
@@ -659,8 +685,8 @@
     "type": "character",
     "gameVersion": "3.4",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Beidou.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Beidou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Beidou",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Beidou"
   },
   "1406": {
     "id": "1406",
@@ -672,8 +698,8 @@
     "type": "character",
     "gameVersion": "3.5",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sara.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sara.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Sara",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Sara"
   },
   "1407": {
     "id": "1407",
@@ -685,8 +711,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shougun.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shougun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Shougun",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Shougun"
   },
   "1408": {
     "id": "1408",
@@ -698,8 +724,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yae.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yae.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Yae",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Yae"
   },
   "1409": {
     "id": "1409",
@@ -711,8 +737,8 @@
     "type": "character",
     "gameVersion": "4.0",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Lisa.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Lisa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Lisa",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Lisa"
   },
   "1410": {
     "id": "1410",
@@ -724,8 +750,8 @@
     "type": "character",
     "gameVersion": "4.2",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Dori.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Dori.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Dori",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Dori"
   },
   "1411": {
     "id": "1411",
@@ -737,8 +763,8 @@
     "type": "character",
     "gameVersion": "4.6",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Shinobu.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Shinobu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Shinobu",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Shinobu"
   },
   "1412": {
     "id": "1412",
@@ -750,8 +776,8 @@
     "type": "character",
     "gameVersion": "5.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Clorinde.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Clorinde.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Clorinde",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Clorinde"
   },
   "1413": {
     "id": "1413",
@@ -763,8 +789,8 @@
     "type": "character",
     "gameVersion": "5.6",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sethos.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sethos.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Sethos",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Sethos"
   },
   "1414": {
     "id": "1414",
@@ -776,8 +802,8 @@
     "type": "character",
     "gameVersion": "6.0",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Iansan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Iansan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Iansan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Iansan"
   },
   "1415": {
     "id": "1415",
@@ -789,8 +815,8 @@
     "type": "character",
     "gameVersion": "6.1",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Varesa.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Varesa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Varesa",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Varesa"
   },
   "1416": {
     "id": "1416",
@@ -802,8 +828,8 @@
     "type": "character",
     "gameVersion": "6.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Olorun.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Olorun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Olorun",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Olorun"
   },
   "1417": {
     "id": "1417",
@@ -815,8 +841,21 @@
     "type": "character",
     "gameVersion": "6.4",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ineffa.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ineffa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ineffa",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ineffa"
+  },
+  "1418": {
+    "id": "1418",
+    "name": {
+      "zh": "菲林斯",
+      "en": "Flins"
+    },
+    "shareId": 584,
+    "type": "character",
+    "gameVersion": "6.6",
+    "element": "electro",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Flins",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Flins"
   },
   "1501": {
     "id": "1501",
@@ -828,8 +867,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sucrose.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sucrose.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Sucrose",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Sucrose"
   },
   "1502": {
     "id": "1502",
@@ -841,8 +880,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Qin.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Qin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Qin",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Qin"
   },
   "1503": {
     "id": "1503",
@@ -854,8 +893,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Venti.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Venti.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Venti",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Venti"
   },
   "1504": {
     "id": "1504",
@@ -867,8 +906,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xiao.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xiao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Xiao",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Xiao"
   },
   "1505": {
     "id": "1505",
@@ -880,8 +919,8 @@
     "type": "character",
     "gameVersion": "3.8",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kazuha.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kazuha.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kazuha",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kazuha"
   },
   "1506": {
     "id": "1506",
@@ -893,8 +932,8 @@
     "type": "character",
     "gameVersion": "4.1",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Wanderer.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Wanderer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Wanderer",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Wanderer"
   },
   "1507": {
     "id": "1507",
@@ -906,8 +945,8 @@
     "type": "character",
     "gameVersion": "4.4",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Sayu.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Sayu.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Sayu",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Sayu"
   },
   "1508": {
     "id": "1508",
@@ -919,8 +958,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Linette.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Linette.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Linette",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Linette"
   },
   "1509": {
     "id": "1509",
@@ -932,8 +971,8 @@
     "type": "character",
     "gameVersion": "4.6",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Faruzan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Faruzan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Faruzan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Faruzan"
   },
   "1510": {
     "id": "1510",
@@ -945,8 +984,8 @@
     "type": "character",
     "gameVersion": "5.0",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Liuyun.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Liuyun.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Liuyun",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Liuyun"
   },
   "1511": {
     "id": "1511",
@@ -958,8 +997,8 @@
     "type": "character",
     "gameVersion": "5.7",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chasca.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chasca.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Chasca",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Chasca"
   },
   "1512": {
     "id": "1512",
@@ -971,8 +1010,8 @@
     "type": "character",
     "gameVersion": "5.8",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Lanyan.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Lanyan.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Lanyan",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Lanyan"
   },
   "1513": {
     "id": "1513",
@@ -984,8 +1023,8 @@
     "type": "character",
     "gameVersion": "5.8",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Heizo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Heizo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Heizo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Heizo"
   },
   "1514": {
     "id": "1514",
@@ -997,8 +1036,8 @@
     "type": "character",
     "gameVersion": "6.0",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Mizuki.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Mizuki.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Mizuki",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Mizuki"
   },
   "1515": {
     "id": "1515",
@@ -1010,8 +1049,8 @@
     "type": "character",
     "gameVersion": "6.1",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ifa.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ifa.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ifa",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ifa"
   },
   "1601": {
     "id": "1601",
@@ -1023,8 +1062,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Ningguang.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Ningguang.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Ningguang",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Ningguang"
   },
   "1602": {
     "id": "1602",
@@ -1036,8 +1075,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Noel.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Noel.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Noel",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Noel"
   },
   "1603": {
     "id": "1603",
@@ -1049,8 +1088,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Zhongli.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Zhongli.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Zhongli",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Zhongli"
   },
   "1604": {
     "id": "1604",
@@ -1062,8 +1101,8 @@
     "type": "character",
     "gameVersion": "4.0",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Albedo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_ALbedo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Albedo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_ALbedo"
   },
   "1605": {
     "id": "1605",
@@ -1075,8 +1114,8 @@
     "type": "character",
     "gameVersion": "3.6",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Itto.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Itto.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Itto",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Itto"
   },
   "1606": {
     "id": "1606",
@@ -1088,8 +1127,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Gorou.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Gorou.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Gorou",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Gorou"
   },
   "1607": {
     "id": "1607",
@@ -1101,8 +1140,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yunjin.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yunjin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Yunjin",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Yunjin"
   },
   "1608": {
     "id": "1608",
@@ -1114,8 +1153,8 @@
     "type": "character",
     "gameVersion": "4.8",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Navia.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Navia.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Navia",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Navia"
   },
   "1609": {
     "id": "1609",
@@ -1127,8 +1166,8 @@
     "type": "character",
     "gameVersion": "5.1",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Chiori.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Chiori.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Chiori",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Chiori"
   },
   "1610": {
     "id": "1610",
@@ -1140,8 +1179,8 @@
     "type": "character",
     "gameVersion": "5.5",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kachina.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kachina.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kachina",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kachina"
   },
   "1611": {
     "id": "1611",
@@ -1153,8 +1192,8 @@
     "type": "character",
     "gameVersion": "5.6",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Xilonen.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Xilonen.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Xilonen",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Xilonen"
   },
   "1701": {
     "id": "1701",
@@ -1166,8 +1205,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Collei.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Collei.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Collei",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Collei"
   },
   "1702": {
     "id": "1702",
@@ -1179,8 +1218,8 @@
     "type": "character",
     "gameVersion": "3.6",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Tighnari.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Tighnari.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Tighnari",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Tighnari"
   },
   "1703": {
     "id": "1703",
@@ -1192,8 +1231,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Nahida.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Nahida.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Nahida",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Nahida"
   },
   "1704": {
     "id": "1704",
@@ -1205,8 +1244,8 @@
     "type": "character",
     "gameVersion": "4.1",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Yaoyao.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Yaoyao.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Yaoyao",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Yaoyao"
   },
   "1705": {
     "id": "1705",
@@ -1218,8 +1257,8 @@
     "type": "character",
     "gameVersion": "4.2",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Baizhuer.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Baizhuer.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Baizhuer",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Baizhuer"
   },
   "1706": {
     "id": "1706",
@@ -1231,8 +1270,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Alhatham.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Alhatham.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Alhatham",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Alhatham"
   },
   "1707": {
     "id": "1707",
@@ -1244,8 +1283,8 @@
     "type": "character",
     "gameVersion": "4.5",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Momoka.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Momoka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Momoka",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Momoka"
   },
   "1708": {
     "id": "1708",
@@ -1257,8 +1296,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kaveh.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kaveh.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kaveh",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kaveh"
   },
   "1709": {
     "id": "1709",
@@ -1270,8 +1309,8 @@
     "type": "character",
     "gameVersion": "5.4",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Kinich.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Kinich.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Kinich",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Kinich"
   },
   "1710": {
     "id": "1710",
@@ -1283,8 +1322,21 @@
     "type": "character",
     "gameVersion": "5.5",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Avatar_Emilie.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_AvatarIcon_Emilie.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Emilie",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Emilie"
+  },
+  "1711": {
+    "id": "1711",
+    "name": {
+      "zh": "菈乌玛",
+      "en": "Lauma"
+    },
+    "shareId": 585,
+    "type": "character",
+    "gameVersion": "6.6",
+    "element": "dendro",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Avatar_Lauma",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_AvatarIcon_Lauma"
   },
   "2101": {
     "id": "2101",
@@ -1296,8 +1348,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FatuusMageice.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FatuusMageIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_FatuusMageice",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_FatuusMageIce"
   },
   "2102": {
     "id": "2102",
@@ -1309,8 +1361,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_LaSignora.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_LaSignora.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_LaSignora",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_LaSignora"
   },
   "2103": {
     "id": "2103",
@@ -1322,8 +1374,8 @@
     "type": "character",
     "gameVersion": "4.4",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EffigyIce.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EffigyIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_EffigyIce",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_EffigyIce"
   },
   "2104": {
     "id": "2104",
@@ -1335,8 +1387,8 @@
     "type": "character",
     "gameVersion": "4.8",
     "element": "cryo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EscadronIce.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EscadronIce.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_EscadronIce",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_EscadronIce"
   },
   "2201": {
     "id": "2201",
@@ -1348,8 +1400,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Oceanid.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Oceanid.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Oceanid",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Oceanid"
   },
   "2202": {
     "id": "2202",
@@ -1361,8 +1413,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Maidenwater.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Maidenwater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Maidenwater",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Maidenwater"
   },
   "2203": {
     "id": "2203",
@@ -1374,8 +1426,8 @@
     "type": "character",
     "gameVersion": "4.6",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_InvokerHeraldWater.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerHeraldWater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_InvokerHeraldWater",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_InvokerHeraldWater"
   },
   "2204": {
     "id": "2204",
@@ -1387,8 +1439,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Ptahur.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Ptahur.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Ptahur",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Ptahur"
   },
   "2205": {
     "id": "2205",
@@ -1400,8 +1452,8 @@
     "type": "character",
     "gameVersion": "5.0",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HilistrayWater.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HilistrayWater.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_HilistrayWater",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_HilistrayWater"
   },
   "2206": {
     "id": "2206",
@@ -1413,8 +1465,8 @@
     "type": "character",
     "gameVersion": "6.1",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Narcissusborn.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Narcissusborn.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Narcissusborn",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Narcissusborn"
   },
   "2207": {
     "id": "2207",
@@ -1426,8 +1478,8 @@
     "type": "character",
     "gameVersion": "6.3",
     "element": "hydro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_GatorSacred.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_GatorSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_GatorSacred",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_GatorSacred"
   },
   "2301": {
     "id": "2301",
@@ -1439,8 +1491,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Fatuus.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Fatuus.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Fatuus",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Fatuus"
   },
   "2302": {
     "id": "2302",
@@ -1452,8 +1504,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_DeaconFire.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerDeaconFire.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_DeaconFire",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_InvokerDeaconFire"
   },
   "2303": {
     "id": "2303",
@@ -1465,8 +1517,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Muscleman.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EremiteOracle.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Muscleman",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_EremiteOracle"
   },
   "2304": {
     "id": "2304",
@@ -1478,8 +1530,8 @@
     "type": "character",
     "gameVersion": "4.6",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HermitCrabPrimo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HermitCrabPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_HermitCrabPrimo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_HermitCrabPrimo"
   },
   "2305": {
     "id": "2305",
@@ -1491,8 +1543,8 @@
     "type": "character",
     "gameVersion": "6.0",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_TheAbyssXiuhcoatl.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_TheAbyssXiuhcoatl.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_TheAbyssXiuhcoatl",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_TheAbyssXiuhcoatl"
   },
   "2306": {
     "id": "2306",
@@ -1504,8 +1556,8 @@
     "type": "character",
     "gameVersion": "6.4",
     "element": "pyro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FlamingoPrimo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FlamingoPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_FlamingoPrimo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_FlamingoPrimo"
   },
   "2401": {
     "id": "2401",
@@ -1517,8 +1569,8 @@
     "type": "character",
     "gameVersion": "3.7",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Effigyelectric.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EffigyElectric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Effigyelectric",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_EffigyElectric"
   },
   "2402": {
     "id": "2402",
@@ -1530,8 +1582,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Raijin.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Raijin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Raijin",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Raijin"
   },
   "2403": {
     "id": "2403",
@@ -1543,8 +1595,8 @@
     "type": "character",
     "gameVersion": "4.4",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_SeaHorsePrimo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_SeaHorsePrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_SeaHorsePrimo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_SeaHorsePrimo"
   },
   "2404": {
     "id": "2404",
@@ -1556,8 +1608,8 @@
     "type": "character",
     "gameVersion": "4.5",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_FatuusSummoner.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_FatuusSummoner.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_FatuusSummoner",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_FatuusSummoner"
   },
   "2405": {
     "id": "2405",
@@ -1569,8 +1621,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_ScorpionSacred.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_ScorpionSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_ScorpionSacred",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_ScorpionSacred"
   },
   "2406": {
     "id": "2406",
@@ -1582,8 +1634,8 @@
     "type": "character",
     "gameVersion": "5.1",
     "element": "electro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_InvokerElectric.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_InvokerElectric.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_InvokerElectric",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_InvokerElectric"
   },
   "2501": {
     "id": "2501",
@@ -1595,8 +1647,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Ningyo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Ningyo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Ningyo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Ningyo"
   },
   "2502": {
     "id": "2502",
@@ -1608,8 +1660,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Dvalin.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Dvalin.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Dvalin",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Dvalin"
   },
   "2503": {
     "id": "2503",
@@ -1621,8 +1673,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "anemo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_ChrysopeleaSacred.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_ChrysopeleaSacred.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_ChrysopeleaSacred",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_ChrysopeleaSacred"
   },
   "2601": {
     "id": "2601",
@@ -1634,8 +1686,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Bruterock.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Bruterock.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Bruterock",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Bruterock"
   },
   "2602": {
     "id": "2602",
@@ -1647,8 +1699,8 @@
     "type": "character",
     "gameVersion": "4.3",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Dahaka.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Dahaka.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Dahaka",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Dahaka"
   },
   "2603": {
     "id": "2603",
@@ -1660,8 +1712,8 @@
     "type": "character",
     "gameVersion": "5.2",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Planelurker.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Planelurker.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Planelurker",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Planelurker"
   },
   "2604": {
     "id": "2604",
@@ -1673,8 +1725,21 @@
     "type": "character",
     "gameVersion": "6.2",
     "element": "geo",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_DarkwraithRock.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_DarkwraithRock.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_DarkwraithRock",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_DarkwraithRock"
+  },
+  "2605": {
+    "id": "2605",
+    "name": {
+      "zh": "实验性场力发生装置",
+      "en": "Experimental Field Generator"
+    },
+    "shareId": 586,
+    "type": "character",
+    "gameVersion": "6.6",
+    "element": "geo",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Gravitas",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Gravitas"
   },
   "2701": {
     "id": "2701",
@@ -1686,8 +1751,8 @@
     "type": "character",
     "gameVersion": "3.3",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Fungusgrass.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Fungusgrass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Fungusgrass",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Fungusgrass"
   },
   "2702": {
     "id": "2702",
@@ -1699,8 +1764,8 @@
     "type": "character",
     "gameVersion": "4.7",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_Apep.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_Apep.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_Apep",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_Apep"
   },
   "2703": {
     "id": "2703",
@@ -1712,8 +1777,8 @@
     "type": "character",
     "gameVersion": "5.1",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_EremiteGrass.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_EremiteGrass.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_EremiteGrass",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_EremiteGrass"
   },
   "2704": {
     "id": "2704",
@@ -1725,7 +1790,20 @@
     "type": "character",
     "gameVersion": "5.8",
     "element": "dendro",
-    "image": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_CardFace_Char_Monster_HookwalkerPrimo.webp",
-    "avatar": "https://assets.gi-tcg.guyutongxue.site/assets/UI_Gcg_Char_MonsterIcon_HookwalkerPrimo.webp"
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_HookwalkerPrimo",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_HookwalkerPrimo"
+  },
+  "2705": {
+    "id": "2705",
+    "name": {
+      "zh": "圣骸牙兽",
+      "en": "Consecrated Fanged Beast"
+    },
+    "shareId": 572,
+    "type": "character",
+    "gameVersion": "6.5",
+    "element": "dendro",
+    "image": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_CardFace_Char_Monster_PantherSacred",
+    "avatar": "https://static-data.piovium.org/api/v4/image/raw/UI_Gcg_Char_MonsterIcon_PantherSacred"
   }
 }

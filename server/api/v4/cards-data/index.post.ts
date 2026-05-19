@@ -39,7 +39,7 @@ const zGyData = z.array(
 );
 type GyData = z.infer<typeof zGyData>;
 async function fetchGyData(filename: string): Promise<GyData> {
-  const res = await fetch(`https://gi-tcg-assets-api-hf.guyutongxue.site/api/v4/data/latest/CHS/${filename}`);
+  const res = await fetch(`https://static-data.piovium.org/api/v4/data/latest/CHS/${filename}`);
   const data = await res.json();
   return zGyData.parse(data.data.filter((card: any) => card.category === "characters" || card.category === "action_cards"));
 }
@@ -70,8 +70,8 @@ async function getCharacterCardData(gyData: GyData) {
         gameVersion: card.sinceVersion!.substring(1, 4),
         type: "character",
         element,
-        image: `https://assets.gi-tcg.guyutongxue.site/assets/${card.cardFace}.webp`,
-        avatar: `https://assets.gi-tcg.guyutongxue.site/assets/${card.icon}.webp`,
+        image: `https://static-data.piovium.org/api/v4/image/raw/${card.cardFace}`,
+        avatar: `https://static-data.piovium.org/api/v4/image/raw/${card.icon}`,
       };
     })
     .map(card => ZCharacterCardInfo.strict().parse(card));
@@ -105,10 +105,10 @@ async function getActionCardData(gyData: GyData) {
         gameVersion: card.sinceVersion!.substring(1, 4),
         type: "action",
         actionType,
-        image: `https://assets.gi-tcg.guyutongxue.site/assets/${card.cardFace}.webp`,
+        image: `https://static-data.piovium.org/api/v4/image/raw/${card.cardFace}`,
       };
     })
-    .map(card => ZActionCardInfo.strict().parse(card)); ;
+    .map(card => ZActionCardInfo.strict().parse(card));
 
   return cardList;
 }
